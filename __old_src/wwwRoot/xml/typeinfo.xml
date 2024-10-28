@@ -1,0 +1,336 @@
+<TypeInfo>
+	<ClassInfo>
+		<ClassName id="NoNameMgr">NoNameMgr</ClassName>
+		<InterfaceInfo>
+			<InterfaceName id="INoNameMgr">INoNameMgr</InterfaceName>
+			<MethodInfo>
+				<MethodName id="QueryInterface">QueryInterface</MethodName>
+				<ParameterInfo>
+					<ParameterName id="riid">riid</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="ppvObj">ppvObj</ParameterName>
+					<ParameterType>24</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="AddRef">AddRef</MethodName>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="Release">Release</MethodName>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="GetTypeInfoCount">GetTypeInfoCount</MethodName>
+				<ParameterInfo>
+					<ParameterName id="pctinfo">pctinfo</ParameterName>
+					<ParameterType>23</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="GetTypeInfo">GetTypeInfo</MethodName>
+				<ParameterInfo>
+					<ParameterName id="itinfo">itinfo</ParameterName>
+					<ParameterType>23</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="lcid">lcid</ParameterName>
+					<ParameterType>19</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pptinfo">pptinfo</ParameterName>
+					<ParameterType>24</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="GetIDsOfNames">GetIDsOfNames</MethodName>
+				<ParameterInfo>
+					<ParameterName id="riid">riid</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="rgszNames">rgszNames</ParameterName>
+					<ParameterType>16</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="cNames">cNames</ParameterName>
+					<ParameterType>23</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="lcid">lcid</ParameterName>
+					<ParameterType>19</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="rgdispid">rgdispid</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="Invoke">Invoke</MethodName>
+				<ParameterInfo>
+					<ParameterName id="dispidMember">dispidMember</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="riid">riid</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="lcid">lcid</ParameterName>
+					<ParameterType>19</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="wFlags">wFlags</ParameterName>
+					<ParameterType>18</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pdispparams">pdispparams</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pvarResult">pvarResult</ParameterName>
+					<ParameterType>12</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pexcepinfo">pexcepinfo</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="puArgErr">puArgErr</ParameterName>
+					<ParameterType>23</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="OnStartPage">OnStartPage</MethodName>
+				<ParameterInfo>
+					<ParameterName id="AScriptingContext">AScriptingContext</ParameterName>
+					<ParameterType>13</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="OnEndPage">OnEndPage</MethodName>
+			</MethodInfo>
+		</InterfaceInfo>
+	</ClassInfo>
+	<ClassInfo>
+		<ClassName id="ComtMgr">ComtMgr</ClassName>
+		<InterfaceInfo>
+			<InterfaceName id="IComtMgr">IComtMgr</InterfaceName>
+			<MethodInfo>
+				<MethodName id="QueryInterface">QueryInterface</MethodName>
+				<ParameterInfo>
+					<ParameterName id="riid">riid</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="ppvObj">ppvObj</ParameterName>
+					<ParameterType>24</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="AddRef">AddRef</MethodName>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="Release">Release</MethodName>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="GetTypeInfoCount">GetTypeInfoCount</MethodName>
+				<ParameterInfo>
+					<ParameterName id="pctinfo">pctinfo</ParameterName>
+					<ParameterType>23</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="GetTypeInfo">GetTypeInfo</MethodName>
+				<ParameterInfo>
+					<ParameterName id="itinfo">itinfo</ParameterName>
+					<ParameterType>23</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="lcid">lcid</ParameterName>
+					<ParameterType>19</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pptinfo">pptinfo</ParameterName>
+					<ParameterType>24</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="GetIDsOfNames">GetIDsOfNames</MethodName>
+				<ParameterInfo>
+					<ParameterName id="riid">riid</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="rgszNames">rgszNames</ParameterName>
+					<ParameterType>16</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="cNames">cNames</ParameterName>
+					<ParameterType>23</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="lcid">lcid</ParameterName>
+					<ParameterType>19</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="rgdispid">rgdispid</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="Invoke">Invoke</MethodName>
+				<ParameterInfo>
+					<ParameterName id="dispidMember">dispidMember</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="riid">riid</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="lcid">lcid</ParameterName>
+					<ParameterType>19</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="wFlags">wFlags</ParameterName>
+					<ParameterType>18</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pdispparams">pdispparams</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pvarResult">pvarResult</ParameterName>
+					<ParameterType>12</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pexcepinfo">pexcepinfo</ParameterName>
+					<ParameterType>0</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="puArgErr">puArgErr</ParameterName>
+					<ParameterType>23</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="OnStartPage">OnStartPage</MethodName>
+				<ParameterInfo>
+					<ParameterName id="AScriptingContext">AScriptingContext</ParameterName>
+					<ParameterType>13</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="OnEndPage">OnEndPage</MethodName>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="DoBrowse">DoBrowse</MethodName>
+				<ParameterInfo>
+					<ParameterName id="piAction">piAction</ParameterName>
+					<ParameterType>8</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piComt_grp_code">piComt_grp_code</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="picomt_typ_code">picomt_typ_code</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="poComt_typ_desc">poComt_typ_desc</ParameterName>
+					<ParameterType>12</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="poComt_typ_short_desc">poComt_typ_short_desc</ParameterName>
+					<ParameterType>12</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="poMaop">poMaop</ParameterName>
+					<ParameterType>12</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="poComQty">poComQty</ParameterName>
+					<ParameterType>12</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="DoDelete">DoDelete</MethodName>
+				<ParameterInfo>
+					<ParameterName id="piAction">piAction</ParameterName>
+					<ParameterType>8</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piComt_grp_code">piComt_grp_code</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pi_Comt_typ_code">pi_Comt_typ_code</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="DoInsert">DoInsert</MethodName>
+				<ParameterInfo>
+					<ParameterName id="piAction">piAction</ParameterName>
+					<ParameterType>8</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piComt_grp_code">piComt_grp_code</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pi_Comt_typ_short_desc">pi_Comt_typ_short_desc</ParameterName>
+					<ParameterType>8</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piMaop">piMaop</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piComQty">piComQty</ParameterName>
+					<ParameterType>2</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piComt_typ_desc">piComt_typ_desc</ParameterName>
+					<ParameterType>8</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="po_Comt_typ_code">po_Comt_typ_code</ParameterName>
+					<ParameterType>12</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+			<MethodInfo>
+				<MethodName id="DoUpdate">DoUpdate</MethodName>
+				<ParameterInfo>
+					<ParameterName id="piAction">piAction</ParameterName>
+					<ParameterType>8</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piComt_grp_code">piComt_grp_code</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pi_Comt_typ_short_desc">pi_Comt_typ_short_desc</ParameterName>
+					<ParameterType>8</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piMaop">piMaop</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piComQty">piComQty</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="piComt_typ_desc">piComt_typ_desc</ParameterName>
+					<ParameterType>8</ParameterType>
+				</ParameterInfo>
+				<ParameterInfo>
+					<ParameterName id="pi_Comt_typ_code">pi_Comt_typ_code</ParameterName>
+					<ParameterType>3</ParameterType>
+				</ParameterInfo>
+			</MethodInfo>
+		</InterfaceInfo>
+	</ClassInfo>
+</TypeInfo>

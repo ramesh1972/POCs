@@ -1,0 +1,132 @@
+<HEAD><TITLE>Login</TITLE>
+<META content="Microsoft Visual Studio 6.0" name=GENERATOR>
+<STYLE>
+a {text-decoration:none}
+a:hover { color:#3333FF}
+</STYLE>
+<LINK href="theme.css" rel=StyleSheet>
+<SCRIPT language=javascript>
+function ValidateFormData() {
+	var lEmpID;
+
+	lEmpID = document.frmLogon.ebEmpId.value;
+
+	if (lEmpID == "") {
+		alert("Please enter the Employee ID");
+		return false;
+	}
+
+	if (lEmpID == 0) {
+		alert("Please enter a valid Employee ID");
+		return false;
+	}
+
+	return true;
+}
+
+function ValidateInteger() {
+	if (!((window.event.keyCode >= 48 && window.event.keyCode <= 57) || (window.event.keyCode == 13))) {
+		event.returnValue = 0;
+		alert("Please enter integer only");
+	}
+}
+</SCRIPT>
+</HEAD>
+<BODY leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<SCRIPT language=JavaScript>
+var timerID = null;
+var timerRunning = false;
+
+function gettheDate() {
+	Todays = new Date();
+	TheDate = (Todays.getMonth()+ 1) +"/"+ Todays.getDate() + "/" + Todays.getYear(); 
+
+	return TheDate;
+}
+
+function stopclock (){
+	if(timerRunning)
+		clearTimeout(timerID);
+	timerRunning = false;
+}
+
+function startclock () {
+	stopclock();
+	gettheDate()
+	showtime();
+}
+
+function showtime () {
+	var now = new Date();
+	var hours = now.getHours();
+	var minutes = now.getMinutes();
+	var seconds = now.getSeconds()
+	var timeValue = "" + ((hours >12) ? hours -12 :hours)
+
+	var ldate = gettheDate();
+	
+	timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+	timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+	timeValue += (hours >= 12) ? " P.M." : " A.M."
+	document.all.divTime.innerHTML = "<font style='color:orange'>" + ldate + ", Wednesday" + "</font><BR>" + "<font class='whiteboldtext'><B>" + timeValue + "</font></B>";
+
+	// you could replace the above with this
+	// and have a clock on the status bar:
+	// window.status = timeValue;
+
+	timerID = setTimeout("showtime()",1000);
+	timerRunning = true;
+}
+</SCRIPT>
+
+<STYLE>
+a {text-decoration:none}
+a:hover { color:#3333FF}
+</STYLE>
+<LINK href="theme.css" rel=StyleSheet>
+<TABLE cellPadding=0 cellSpacing=0 width="100%">
+<TBODY>
+<TR>
+<TD align=middle bgColor=black width="20%">
+<DIV id=divTime><FONT style="COLOR: orange">6/5/2002, Wednesday</FONT><BR><FONT class=whiteboldtext><B>3:29:42 P.M.</FONT></B></DIV></TD>
+<TD width="80%"><IMG height=78 src="" width="100%"></TD></TR></TBODY></TABLE>
+<TABLE align=left border=1 cellPadding=0 cellSpacing=0 width="10%">
+<TBODY>
+<TR>
+<TD align=middle bgColor=lightgreen><A href="http://rameshv/w/www.asp?redirectURL=http://190.2.1.22/ps/ts-logon-start.asp"><FONT style="COLOR: blue; TEXT-DECORATION: none">
+<DIV id=oDivLogon style="BACKGROUND: lightblue"><B>Login</B></DIV></FONT></A></TD></TR></TBODY></TABLE></TR></TABLE>
+<SCRIPT language=javascript>
+startclock();
+</SCRIPT>
+
+<SCRIPT language=javascript>
+document.all.oDivLogon.style.background = "lightblue";
+</SCRIPT>
+<BR><BR><BR><BR>
+<CENTER>
+<FORM action=ts-logon-login.asp method=post name=frmLogon onsubmit="return ValidateFormData();">
+<TABLE align=center border=0 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" width="47%">
+<TBODY>
+<TR border="0">
+<TD align=left vAlign=center border="0"><A href="http://rameshv/w/www.asp?redirectURL=http://190.2.1.22/ps/ts-register-start.asp">Register</A> </TD>
+<TD align=right vAlign=center border="0"><A href="http://rameshv/w/www.asp?redirectURL=http://190.2.1.22/ps/ts-register-change-pwd.asp">Change Password</A> </TD></TR></TBODY></TABLE>
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" width="47%">
+<TBODY>
+<TR class=tdbgdark>
+<TD colSpan=2 vAlign=center><SPAN class=whiteboldtext1>Logon </SPAN></TD></TR>
+<TR>
+<TD align=middle class=tdbglight height=16 width="43%">
+<DIV align=left class=blacktext>Employee ID</DIV></TD>
+<TD align=left class=tdbglight height=16 vAlign=top width="57%"><INPUT maxLength=15 name=ebEmpId onkeypress=ValidateInteger(); size=22> </TD></TR>
+<TR>
+<TD align=middle class=tdbglight height=27 width="43%">
+<DIV align=left><FONT class=blacktext>Password</FONT></DIV></TD>
+<TD align=left class=tdbglight height=27 vAlign=top width="57%"><INPUT maxLength=15 name=ebPassword size=22 type=password value=""> </TD></TR></TBODY></TABLE><BR>
+<TABLE align=center border=0 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" width="47%">
+<TBODY>
+<TR>
+<TD align=middle colSpan=2 vAlign=center><INPUT name=slogin style="BACKGROUND-COLOR: aqua" type=submit value=Login> </TD></TR></TBODY></TABLE></FORM></CENTER>
+<SCRIPT language=javascript>
+document.frmLogon.ebEmpId.focus ();
+</SCRIPT>
+</BODY>

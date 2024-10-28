@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+
+<element name='stylesheet' lang='xbl'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblstylesheet.html</reference>
+  Declares a style sheet used by the binding. Using this element is preferred over  using an XML processing instruction. The style rules in the style sheet will only  be applied to the binding, not to other elements in the document.  
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the stylesheet with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='src'>
+  The URL of the style sheet to apply to the binding content.
+</attr>
+</element>

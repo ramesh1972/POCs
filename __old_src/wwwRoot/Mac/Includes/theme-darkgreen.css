@@ -1,0 +1,213 @@
+.title
+{
+    COLOR: #a04338;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 14pt;
+    FONT-WEIGHT: bold
+}
+.heading1
+{
+    COLOR: #a04338;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 12pt;
+    FONT-WEIGHT: bold
+}
+.heading2
+{
+    COLOR: #a04338;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.heading4
+{
+    COLOR: #a04338;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: bold
+}
+.heading3
+{
+    COLOR: #a04338;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+.whiteheading
+{
+    COLOR: white;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 12pt;
+    FONT-WEIGHT: bold
+}
+.lightheading
+{
+    COLOR: #ffe7ce;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.blacktext
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal
+}
+.blacktext2
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: normal
+}
+.ordblacktext
+{
+    COLOR: black;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal
+}
+.whitetext
+{
+    COLOR: white;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: normal
+}
+.blackboldtext
+{
+    COLOR: black;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.tdbgdark
+{
+    BACKGROUND-COLOR: #bd5d31;
+    BACKGROUND-IMAGE: none
+}
+.tdbglight
+{
+    BACKGROUND-COLOR: #ffe7ce
+}
+.tdbgwhite
+{
+    BACKGROUND-COLOR: white
+}
+.highlight
+{
+    COLOR: #660000;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.colorboldtext
+{
+    COLOR: #a04338;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.whiteboldtext
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+.whiteboldtext1
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.blacktext1
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: normal
+}
+.blackboldtext1
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+.colorboldtext1
+{
+    COLOR: #a04338;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+.colortext1
+{
+    COLOR: #353535;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal
+}
+.colortext2
+{
+    COLOR: #353535;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: normal
+}
+.colortext3
+{
+    COLOR: #353535;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: normal
+}
+.tdbglight1
+{
+    BACKGROUND-COLOR: #ffe7ce
+}
+.whitetext1
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: normal
+}
+.colorboldtext2
+{
+    COLOR: #a04338;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: bold
+}
+.whiteboldtext2
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: bold
+}
+.border
+{
+    BORDER-BOTTOM: #bd5d31 1pt;
+    BORDER-LEFT: #bd5d31 1pt solid;
+    BORDER-RIGHT: #bd5d31 1pt solid;
+    BORDER-TOP: #bd5d31 1pt solid
+}
+.border1
+{
+    BORDER-BOTTOM: #bd5d31 1pt solid;
+    BORDER-LEFT: #bd5d31 1pt solid;
+    BORDER-RIGHT: #bd5d31 1pt solid;
+    BORDER-TOP: #bd5d31 1pt
+}
+.border2
+{
+    BORDER-BOTTOM: #bd5d31 1pt solid;
+    BORDER-LEFT: #bd5d31 1pt solid;
+    BORDER-RIGHT: #bd5d31 1pt solid;
+    BORDER-TOP: #bd5d31 1pt solid
+}

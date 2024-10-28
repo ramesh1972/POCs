@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Binding Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Binding 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Binding</h3>
+
+<p>
+  Declares a binding. The id attribute is used to identify a binding and refer to  it within a style sheet via the -moz-binding property. The same binding can be  used to attach to any number of elements.  </p>  <p>  For example the following style property will refer to a binding with an id  of dropbox:  </p>  <pre>  -moz-binding: url ('chrome://myapp/skin/mybindings.xml#dropbox');  </pre>  <p>  A binding element may contain an <a href='ref_xblcontent.html'>content</a> tag, an <a href='ref_xblimplementation.html'>implementation</a> tag,  an <a href='ref_xblhandlers.html'>handlers</a> tag and an <a href='ref_xblresources.html'>resources</a> tag.  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/introxbl.html'>More information about binding<a></p>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_display'>display</a></td>
+<td><a href='#attr_extends'>extends</a></td>
+<td><a href='#attr_id'>id</a></td>
+<td><a href='#attr_inheritstyle'>inheritstyle</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Attributes:</a></h4>
+<div class='ref_apblk'>
+  <h5><a name='attr_display'><span class='attrib'>display</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  This attribute specifies how the tag is displayed. By setting this  attribute, you can have an element have the layout and display  characteristics of an existing element. For example, use the value  'xul:button' to create an element that is displayed like a button. The part  before the colon is a namespace prefix so you must declare the XUL namespace  as well. Not all tags have a unique display type. The following XUL display  types may be used:    <span class="aval">browser</span>,    <span class="aval">button</span>,    <span class="aval">checkbox</span>,    <span class="aval">description</span>,    <span class="aval">editor</span>,    <span class="aval">grippy</span>,    <span class="aval">iframe</span>,    <span class="aval">image</span>,    <span class="aval">label</span>,    <span class="aval">menu</span>,    <span class="aval">menuitem</span>,    <span class="aval">menubar</span>,    <span class="aval">progressmeter</span>,    <span class="aval">radio</span>,    <span class="aval">resizer</span>,    <span class="aval">scrollbar</span>,    <span class="aval">scrollbox</span>,    <span class="aval">spacer</span>,    <span class="aval">splitter</span>,    <span class="aval">titlebar</span>,    <span class="aval">treechildren</span> and    <span class="aval">treecol</span>.  You may also use a number of HTML, MathML and SVG tags.</p>
+  <h5><a name='attr_extends'><span class='attrib'>extends</span></a></h5>
+<p class='aptype'>Type:&nbsp;binding URL</p>  <p>
+  Bindings may inherit content, properties, methods and event handlers from  other bindings. The binding will have the content and implementation of the  parent binding as well as any defined by itself. The extends attribute  should be set to the URI of the binding that it is inheriting from.</p>
+  <h5><a name='attr_id'><span class='attrib'>id</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  A unique identifier so that you can identify the binding with.</p>
+  <h5><a name='attr_inheritstyle'><span class='attrib'>inheritstyle</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If this attribute is set to true, the content in the binding will inherit  style rules from the document the element the binding is bound to. This  means that the stylesheets for the XUL document will not affect the content  inside the binding. If this attribute is false, document stylesheets do not  affect the appearance of the binding content. The default value of this  attribute is true.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

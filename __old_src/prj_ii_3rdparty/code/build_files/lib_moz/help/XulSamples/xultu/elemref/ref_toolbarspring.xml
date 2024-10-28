@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='toolbarspring' spec='Firefox'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_toolbarspring.html</reference>
+  A flexible space between toolbar items.
+
+<implements>nsIAccessibleProvider</implements>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the toolbarspring.
+</prop>
+</element>

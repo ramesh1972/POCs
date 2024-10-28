@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+
+<element name='triple'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/advrules.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_triple.html</reference>
+  A triple can be included inside a rule's conditions element. It is used check  for an assertion within a graph. If such an assertion exists, the rule may  match, assuming that all the conditions match. If the assertion does not exist,  the rule will not match. Both the subject and object attributes may be variables.        The subject of a triple is a RDF resource. In an RDF file this would usually be  an RDF Description element. The predicate would be a child element or property.  For example, for a bookmark resource, the name and URL would be predicates. They  should be specified in their full URI form. The object is the value of the  RDF property.  
+<html><![CDATA[
+<p>  A triple can be included inside a rule's conditions element. It is used check  for an assertion within a graph. If such an assertion exists, the rule may  match, assuming that all the conditions match. If the assertion does not exist,  the rule will not match. Both the subject and object attributes may be variables.  </p>  <p>  The subject of a triple is a RDF resource. In an RDF file this would usually be  an RDF Description element. The predicate would be a child element or property.  For example, for a bookmark resource, the name and URL would be predicates. They  should be specified in their full URI form. The object is the value of the  RDF property.  </p>
+]]></html>
+
+<prop name='object'>
+  The object of a triple. It can be a variable reference, an RDF node URI,  or an RDF literal value.
+</prop>
+<prop name='predicate'>
+  The predicate or property to match. This must be a URI of the property.
+</prop>
+<prop name='subject'>
+  The subject of a triple. It can be a variable reference, an RDF node URI,  or an RDF literal value.
+</prop>
+</element>

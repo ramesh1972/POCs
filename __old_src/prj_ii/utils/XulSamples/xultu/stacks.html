@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="boxfinal.html"> 
+ <link rel="next" href="bulletins.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Stacks and Decks</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 4.1 - Stacks and Decks 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <SPAN CLASS="currentpage">Stacks and Decks</SPAN></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="3.5 - Adding More Elements"
+     href="boxfinal.html">Previous</a>
+
+
+  <a class="nextlink" title="4.2 - Stack Positioning"
+     href="bulletins.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Stacks and Decks</h2>
+
+<P>
+There may be need to display elements as a set of overlapping cards. The
+stack and deck elements can be used for this purpose.
+</P>
+
+<H3>Containers</H3>
+
+<P>
+Each XUL box is a container that can contain any other element. There are a
+number of elements that are specialized types of boxes, such as toolbars and
+tabbed panels. The <A CLASS="tag" HREF="elemref/ref_box.html">box</A> tag creates the simplest box
+with no special properties. However, the specialized types of boxes work just
+like regular boxes in the way they orient the elements inside them, but they
+have additional features.
+</P>
+
+<P>
+In fact, many components can contain other elements. We've already seen that
+buttons may contain other things besides the default. A scroll bar is just a
+special type of box that creates its own elements if you don't provide them.
+It also handles the moving of the scroll bar thumb.
+</P>
+
+<P>
+In the next few sections, we'll introduce some elements that are designed for
+holding other elements. They are all special types of boxes and allow all of
+the attributes of boxes on them.
+</P>
+
+<H3>Stacks</H3>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_stack.html">stack</A> element is a simple box. It works like any
+other box but has the special property that its children are laid out all on
+top of each other. The first child of the stack is drawn underneath, the
+second child is drawn next, followed by the third and so on. Any number of
+elements may be stacked up in a stack.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">orient</SPAN> property has little meaning on a stack
+as children are laid out above each other rather than from side to side. The
+size of the stack is determined by its largest child, but you can use
+the CSS properties <SPAN CLASS="attrib">width</SPAN>,
+<SPAN CLASS="attrib">height</SPAN>, <SPAN CLASS="attrib">min-width</SPAN> and
+other related properties on both the stack and its children.
+</P>
+
+<P>
+The stack element might be used for cases where a status indicator needs to be
+added over an existing element. For example, a progress bar might be created
+using a bar and a label overlaid on top of it.
+</P>
+
+<P>
+One convenient use of the <A CLASS="tag" HREF="elemref/ref_stack.html">stack</A> element however is that
+you could emulate a number of CSS properties with it. For example, you could create
+an effect similar to the <SPAN CLASS="attrib">text-shadow</SPAN> property with the
+following:
+</P>
+
+
+Example 4.1.1:
+<A HREF='examples/ex_stacks_1.xul.txt'>Source</A>
+<A HREF="examples/ex_stacks_1.xul" ONCLICK="window.open('examples/ex_stacks_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;stack&gt;
+  &lt;description value="Shadowed" style="padding-left: 1px; padding-top: 1px; font-size: 15pt"/&gt;
+  &lt;description value="Shadowed" style="color: red; font-size: 15pt;"/&gt;
+&lt;/stack&gt;</PRE></DIV>
+
+
+
+<P>
+Both <A CLASS="tag" HREF="elemref/ref_description.html">description</A> elements create text with a size of 15
+points. The first, however is offset one pixel to the right and down by adding a
+padding to its left and top sides. This has the result of drawing the same text
+'Shadowed' again but slightly offset from the other. The second
+<A CLASS="tag" HREF="elemref/ref_description.html">description</A> element is drawn in red so the effect is
+more visible.
+</P>
+
+<P>
+This method has advantages over using <SPAN CLASS="attrib">text-shadow</SPAN>
+because you could completely style the shadow apart from the main text. It could
+have its own font, underline or size. (You could even make the shadow blink). It
+also useful as Mozilla doesn't currently support CSS text shadowing. A disadvantage
+is that the area taken up by the shadow makes the size of the stack larger.
+Shadowing is very useful for creating the disabled appearance of buttons:
+</P>
+
+
+Example 4.1.2:
+<A HREF='examples/ex_stacks_2.xul.txt'>Source</A>
+<A HREF="examples/ex_stacks_2.xul" ONCLICK="window.open('examples/ex_stacks_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;stack style="background-color: #C0C0C0"&gt;
+  &lt;description value="Disabled" style="color: white; padding-left: 1px; padding-top: 1px;"/&gt;
+  &lt;description value="Disabled" style="color: grey;"/&gt;
+&lt;/stack&gt;</PRE></DIV>
+
+
+
+<P>
+This arrangement of text and shadow colors creates the disabled look under some
+platforms.
+</P>
+
+<P>
+<IMG SRC="images/stacks1.jpg" ALIGN="right" ALT="" WIDTH=173 HEIGHT=53>
+Note that events such as mouse clicks and keypresses are passed to the element
+on the top of the stack, that is, the last element in the stack. That means that
+buttons will only work properly as the last element of the stack.
+</P>
+
+<H3>Decks</H3>
+
+<P>
+A <A CLASS="tag" HREF="elemref/ref_deck.html">deck</A> element also lays out its children on top of each
+other much like the <A CLASS="tag" HREF="elemref/ref_stack.html">stack</A> element, however decks only
+display one of their children at a time. This would be useful for a wizard
+interface where a series of similar panels are displayed in sequence. Rather than
+create separate windows and add navigation buttons to each of them, you would
+create one window and use a deck where the content changes.
+</P>
+
+<P>
+Like stacks, the direct children of the <A CLASS="tag" HREF="elemref/ref_deck.html">deck</A> element
+form the pages of the deck. If there are three children of the
+<A CLASS="tag" HREF="elemref/ref_deck.html">deck</A> element, the deck will have three children.
+The displayed page of the deck can be changed by setting an
+<SPAN CLASS="attrib">selectedIndex</SPAN> attribute on the
+<A CLASS="tag" HREF="elemref/ref_deck.html">deck</A> element. The index is a number that identifies
+which page to display. Pages are numbered starting from zero. So, the
+first child of the deck is page 0, the second is page 1 and so on.
+</P>
+
+<P>
+The following is an example of a deck:
+</P>
+
+
+Example 4.1.3:
+<A HREF='examples/ex_stacks_3.xul.txt'>Source</A>
+<A HREF="examples/ex_stacks_3.xul" ONCLICK="window.open('examples/ex_stacks_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;deck selectedIndex="2"&gt;
+  &lt;description value="This is the first page"/&gt;
+  &lt;button label="This is the second page"/&gt;
+  &lt;box&gt;
+    &lt;description value="This is the third page"/&gt;
+    &lt;button label="This is also the third page"/&gt;
+  &lt;/box&gt;
+&lt;/deck&gt;</PRE></DIV>
+
+
+
+<P>
+Three pages exist here, the default being the third one. The third page
+is a box with two elements inside it. Both the box and the elements inside
+it make up the page. The deck will be as large as the largest child, which
+here should be the third page.
+</P>
+
+<P>
+You can switch pages by using a script to modify the
+<SPAN CLASS="attrib">selectedIndex</SPAN> attribute. More on this in the section
+on events and the DOM.
+</P>
+
+<HR>
+<P>
+<A HREF="bulletins.html">(Next)</A>
+The next section describes how stacks can be used to position child elements.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_stacks_1.xul.txt'>4.1.1</A>
+  <A HREF='examples/ex_stacks_2.xul.txt'>4.1.2</A>
+  <A HREF='examples/ex_stacks_3.xul.txt'>4.1.3</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="3.5 - Adding More Elements"
+     href="boxfinal.html">Previous</a>
+
+
+  <a class="nextlink" title="4.2 - Stack Positioning"
+     href="bulletins.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

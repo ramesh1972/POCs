@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 8.6.1"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script>
+function doScroll()
+{
+  var value = document.getElementById("tbox").value;
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.scrollToRow(value);
+}
+</script>
+
+<tree id="thetree" rows="4">
+  <treecols>
+    <treecol id="row" label="Row" primary="true" flex="1"/>
+  </treecols>
+  <treechildren>
+    <treeitem label="Row 0"/>
+    <treeitem label="Row 1"/>
+    <treeitem label="Row 2"/>
+    <treeitem label="Row 3"/>
+    <treeitem label="Row 4"/>
+    <treeitem label="Row 5"/>
+    <treeitem label="Row 6"/>
+    <treeitem label="Row 7"/>
+    <treeitem label="Row 8"/>
+    <treeitem label="Row 9"/>
+  </treechildren>
+</tree>
+
+<hbox align="center">
+  <label value="Scroll to row:"/>
+  <textbox id="tbox"/>
+  <button label="Scroll" oncommand="doScroll();"/>
+</hbox>
+
+
+</window>
+

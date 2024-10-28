@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+		  "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>Morten's JavaScript Tree Menu -- Install guide -- Making the menu</title>
+
+<script type="text/javascript">
+<!-- hide the script from old browsers
+if((navigator.appName == "Netscape" && parseInt(navigator.appVersion) >= 3 && navigator.userAgent.indexOf("Opera") == -1) || (navigator.appName == "Microsoft Internet Explorer" && parseInt(navigator.appVersion) >= 4) || (navigator.appName == "Opera" && parseInt(navigator.appVersion) >= 5)) {
+
+  for(i = 0; i < parent.frames.length; i++) {
+    if(parent.frames[i].name == "code" && parent.frames[i].MTMLoaded) {
+      parent.frames[i].MTMTrack = true;
+      setTimeout("parent.frames[" + i + "].MTMDisplayMenu()", 250);
+      break;
+    }
+  }
+}
+
+// End of script hiding -->
+</script>
+</head>
+
+<body bgcolor="#ffffff" text="#000000" link="#330099" vlink="#666699" alink="red">
+<h2>Making the menu</h2>
+
+<p>Now it's time to actually make the menu.  It's all done at the bottom of the file &quot;<em>code.html</em>&quot; where the code reads &quot;User-configurable menu&quot;.  You want to delete all the code from there on down to <code>&lt;/script&gt;</code> so you don't get any of my code clobbering up your stuff.</p>
+
+<p>We start off with defining the menu.  It has to be (so aptly) named 'menu', and the first two lines of your menu code should therefore read:</p>
+
+<pre><code>var menu = null;
+menu = new MTMenu();</code></pre>
+
+<p>The reason for specifically setting it to 'null' before calling <code>MTMenu()</code> is to help the browser clean up memory.  Now, we add menu items and sub menus.  This is done mainly by adding menu items using <code>MTMenuItem()</code>, but also through creating separate sub menus and connecting them to their appropriate menu items.</p>
+
+<p>For each menu item you create you can have from one to five options defined.  They are separated with commas in the call to <code>MTMenuItem()</code> and are in order:</p>
+
+<ul>
+  <li><code>text</code> - the text to show in the menu</li>
+  <li><code>URL</code> - the URL the item should point to</li>
+  <li><code>target</code> - the target frame/window of the URL</li>
+  <li><code>tooltip</code> - the tool tip to show for this item</li>
+  <li><code>icon</code> - the image/icon to use</li>
+</ul>
+
+<p>A regular menu item has at least 3 of these defined, while submenus usually have only one (the text).  The exact number of course depends on how much you want to define for each item.  Let's use my own menu as an example, and add the first item (News) to it:</p>
+
+<pre><code>menu.MTMAddItem(new MTMenuItem(&quot;News&quot;, &quot;news.shtml&quot;, &quot;text&quot;, &quot;Latest news and updates&quot;));</code></pre>
+
+<p>I define four of the five arguments.  I want the text in the menu to read <code>&quot;News&quot;</code> therefore it becomes the first argument.  The document I point to is reachable through <code>&quot;news.html&quot;</code> and I supply that as the second argument.  My target frame is named <code>&quot;text&quot;</code> and becomes the third argument.  Lastly I want the tooltip to read <code>&quot;Latest news and updates&quot;</code> and set the fourth argument accordingly.   As you can see each argument is separated with a comma.  Now we can add the second item, &quot;Features etc.&quot;:</p>
+
+<pre><code>menu.MTMAddItem(new MTMenuItem(&quot;Features etc.&quot;, &quot;general/features.shtml&quot;, &quot;text&quot;, &quot;A run-through of the menu's features&quot;));</code></pre>
+
+<p>Adding another item is as simple as calling <code>MTMAddItem()</code> and <code>MTMenuItem()</code> again, just with different arguments.  And again for the third, and again... and so on and so forth.  Then we arrive at an item that should open up a sub menu.  This is done by creating the item as usual, then creating another menu on its own, and lastly by connecting the new menu to the item.  In other words it's a three-step process.  Let's have a look at how my &quot;Install Guide&quot; item was created.  First, I create the menu item:</p>
+
+<pre><code>menu.MTMAddItem(new MTMenuItem(&quot;Install Guide&quot;, &quot;install-guide/index.shtml&quot;, &quot;text&quot;, &quot;General help with menu installation&quot;));</code></pre>
+
+<p>Then I create a new menu called 'installation', which will contain the items in my sub menu, and I add an item to it:</p>
+
+<pre><code>// Submenu, installation
+var installation = null;
+installation = new MTMenu();
+installation.MTMAddItem(new MTMenuItem(&quot;The frameset&quot;, &quot;install-guide/frameset.shtml&quot;, &quot;text&quot;));</code></pre>
+
+<p>I now have a menu called 'installation', and it contains one item. I could've added further items now if I wanted to, but I'll instead skip it for now and hook this sub menu up to the right item in my main menu.  If you're reading this on the web site you should be able to notice that the installation guide is the 7th item in the main menu.  To hook my installation-menu up to the item in the main menu I call <code>MTMakeSubmenu()</code>:</p>
+
+<pre><code>menu.items[6].MTMakeSubmenu(installation);</code></pre>
+
+<p>I take the 7th item of the menu called 'menu', and tell it to hook the menu 'installation' up to itself.  Since we start counting on 0 (zero) the 7th item it represented by the number 6 in the list of items.</p>
+
+<p>In the menu that is used on the web site I use all four possible arguments to <code>MTMakeSubmenu()</code>.  The first one is, as you've already noticed, the menu you want to hook up.  The three others are, in order:</p>
+
+<ul>
+  <li><code>isExpanded</code> - set to true if the sub menu is to be expanded by default</li>
+  <li><code>closedIcon</code> - the icon/image to use when the sub menu is closed</li>
+  <li><code>openIcon</code> - the icon/image to use when the sub menu is open</li>
+</ul>
+
+<p>As you can see you have the possibility of controlling whether the sub menu should be shown as expanded when the user first arrives at the site (set to 'true' or 'false'), and you can also specify separate icons for the sub menu.  This is what I do in the code used on the site, where I specify that the installation guide should be closed and have an open &amp; closed book as its icons.  It is done through the following code:</p>
+
+<pre><code>menu.items[6].MTMakeSubmenu(installation, false, 'book-closed.gif','book-open.gif');</code></pre>
+
+<p>Then I go on adding more items and sub menus to build the complete menu structure.</p>
+
+<p>The obvious question now is of course &quot;How do I create nested sub menus?&quot;  You're not limited to only two levels of items in the menu system, you can have as many levels as you want, and each level can contain as many items and sub menus as you like.</p>
+
+<p>The recipe for creating a nested sub menu is just the same as for creating a sub menu off the first level.  You only need to change one thing, and that is the reference to the item you're hooking a sub menu up to.  Instead of an item on the first level you want an item in the sub menu you created.  Say I wanted to add a sub menu to the 2nd item of my previously created 'installation' menu.  I do that by referring to the 2nd item of said menu, and hook the sub menu to it (in this case the imaginary sub menu 'foobar'):</p>
+
+<pre><code>installation.items[1].MTMakeSubmenu(foobar);</code></pre>
+
+<p>And so the story goes... Hooking a sub menu to the first item of 'foobar' would be done through:</p>
+
+<pre><code>foobar.items[0].MTMakeSubmenu(xyzzy);</code></pre>
+
+<p>...and so on and so forth.  If this was all too confusing I suggest you have a look at the menu structure found in the example sites directories in the downloadable files.  They nest a few levels down, and contain both regular items and sub menu items to show you how to it all.</p>
+
+<p>With the menu set up properly you can continue on to <a href="icon-menu.shtml">checking the icon list</a> where you'll be able to determine the icons used for the menu items.</p>
+</body>
+</html>

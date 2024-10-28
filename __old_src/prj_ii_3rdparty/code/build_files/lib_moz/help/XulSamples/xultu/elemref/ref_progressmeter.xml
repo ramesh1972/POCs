@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+
+<element name='progressmeter'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/progress.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_progressmeter.html</reference>
+  A meter which can be used to display the progress of a lengthy operation.  It is drawn as a bar that is filled as the operation completes. In addition,  an undeterminate progressmeter may be created by setting the mode attribute.  This is used when the length of time to complete an operation is not known  beforehand.  
+
+<example>
+<![CDATA[
+    &lt;progressmeter mode=&quot;determined&quot; value=&quot;50%&quot;/&gt;
+
+]]>
+</example>
+<implements>nsIAccessibleProvider</implements>
+<attr name='mode'>
+  A determined progressmeter is used in cases where you know how long an  operation will take. Undeterminate progressmeters can be used when  you don't and will typically be drawn as a spinning barber pole.
+<value name='determined' default='true'>
+    The progress meter uses its value attribute to determine the amount of
+    the bar that is filled in.
+</value>
+<value name='undetermined'>
+    The progressmeter is undeterminate.
+</value>
+</attr>
+<attr name='value' type='inetger'>
+  A percentage value that specifies the amount of the meter that is filled  in. Because it is a percentage, it ranges from 0 to 100.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the progressmeter.
+</prop>
+<prop name='mode'/>
+<prop name='value'/>
+</element>

@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+
+<element name='image' lang='xbl'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblimage.html</reference>
+  Declares an image resource used by the binding. The image is loaded as soon as the  binding is used. You can use this to preload a number of images for later use.  
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the image with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='src'>
+  The URL of the image to load.
+</attr>
+</element>

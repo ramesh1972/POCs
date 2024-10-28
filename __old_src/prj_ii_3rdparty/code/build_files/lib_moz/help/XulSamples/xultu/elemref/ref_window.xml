@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+
+<element name='window'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/window.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_window.html</reference>
+  Describes the structure of a top-level window. It is the root node of a XUL  document. It is by default a horizontally oriented box. As it is a box, all  box attributes can be used. By default, the window will have a  platform-specific frame around it.        To set an icon for the window, create a platform-specific icon file  &lt;windowid&gt;.ico and/or &lt;windowid&gt;.xpm and place or install these  files into the &lt;mozilla-directory&gt;/chrome/icons/default/ directory.  The &lt;windowid&gt; is the value of the id attribute on the window. This  allows you to have a different icon for each window.     For properties and methods, see the   XUL Window  object.  
+<html><![CDATA[
+<p>  Describes the structure of a top-level window. It is the root node of a XUL  document. It is by default a horizontally oriented box. As it is a box, all  box attributes can be used. By default, the window will have a  platform-specific frame around it.  </p>  <p>  To set an icon for the window, create a platform-specific icon file  &lt;windowid&gt;.ico and/or &lt;windowid&gt;.xpm and place or install these  files into the &lt;mozilla-directory&gt;/chrome/icons/default/ directory.  The &lt;windowid&gt; is the value of the id attribute on the window. This  allows you to have a different icon for each window.  <p>  For properties and methods, see the  <a href='ref_XULWindow.html'>XUL Window</a> object.  </p>
+]]></html>
+
+<attr name='height' type='integer'>
+  Set this property to use a specific height for the window. This property, along  with the width property, would usually be persisted with the persist attribute  so that the next time the user opens the window, the height and width of the  window will be the same as last time.
+</attr>
+<attr name='hidechrome' type='boolean'>
+  Set this attribute to true to have the chrome including the titlebar hidden.
+</attr>
+<attr name='id' type='element id, must be unique in the window'>
+  The window id. This is used to identify the window and to construct the  filename for the icon for the window.
+</attr>
+<attr name='screenX' type='integer'>
+  The horizontal position that the window appears on the screen.
+</attr>
+<attr name='screenY' type='integer'>
+  The vertical position that the window appears on the screen.
+</attr>
+<attr name='sizemode'>
+  The state of the window. The following values may be used:
+<value name='maximized'>
+    The window is maximized, and occupies the full size of the screen.
+</value>
+<value name='minimized'>
+    The window is minimized, or hidden.
+</value>
+<value name='normal' default='true'>
+    The window appears in a normal state at the desired size.
+</value>
+</attr>
+<attr name='title' type='string'>
+  The text to appear on the title bar of the window.
+</attr>
+<attr name='width' type='integer'>
+  Set this property to use a specific width for the window.
+</attr>
+<attr name='windowtype' type='string'>
+  Set to a string which can be used to identify the type of window. This might be  used, for example, to distingush between a browser window and an editor window.  Some of Mozilla's window handling functions use this attribute to group windows  of the same type together.
+</attr>
+</element>

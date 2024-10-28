@@ -1,0 +1,72 @@
+<?xml version='1.0'?>
+
+<element name='checkbox'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/inputs.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_checkbox.html</reference>
+  An element that can be turned on and off. This is most commonly rendered as  a box when the element is off and a box with a check when the element is on.  The user can switch the state of the check box by selecting it with the mouse.  A label, specified with the label attribute may be added beside the check box  to indicate to the user as to its function.  
+
+<example>
+<![CDATA[
+    &lt;checkbox label=&quot;Enable JavaScript&quot; checked=&quot;false&quot;/&gt;
+
+]]>
+</example>
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULCheckboxElement</implements>
+<attr name='accesskey' type='character'>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the checkbox.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the checkbox will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.
+</attr>
+<attr name='checked' type='boolean'>
+  Indicates whether the checkbox is checked or not.
+</attr>
+<attr name='command' type='element id'>
+  Set to an id of a command element that is being observed by the  element.
+</attr>
+<attr name='crop'>
+  If the label of the checkbox is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the checkbox is disabled or not. If this attribute is set to true,  the checkbox is disabled. This is usually drawn with the text in grey. If the checkbox is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the checkbox, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='image' type='image URL'>
+  The URL of the image to appear on the checkbox. If this is attribute is left  out, no image appears. The position of the image is determined by the dir  and orient attributes.
+</attr>
+<attr name='label' type='string'>
+  The label that will appear beside the checkbox. If this is left out, no text appears.  The labels on checkboxes will wrap if there is not enough space.
+</attr>
+<attr name='tabindex' type='integer'>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.
+</attr>
+<prop name='accessKey'/>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the checkbox.
+</prop>
+<prop name='checked' type='boolean'>
+  Indicates whether the checkbox is checked or not. You can change the checked  property to change the state of the checkbox. A CheckboxStateChange event  will be sent to the element when the checkbox is changed either via the  checked property or changed by the user.
+</prop>
+<prop name='command'/>
+<prop name='crop'/>
+<prop name='disabled'/>
+<prop name='image'/>
+<prop name='label'/>
+</element>

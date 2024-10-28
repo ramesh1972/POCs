@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='bindings'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/advrules.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_bindings.html</reference>
+  Should be contained within a rule. Used to specify a set of variable  bindings for a rule. This element should contain one or more binding  elements.  
+
+</element>

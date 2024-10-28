@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+
+<element name='menubar'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/menubar.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_menubar.html</reference>
+  A container that usually contains menu elements. On the Macintosh, the menubar  is displayed along the top of the screen, and all non-menu related elements  inside the menubar will be ignored.  
+
+<implements>nsIAccessibleProvider</implements>
+<attr name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the menubar.
+</attr>
+<attr name='grippyhidden' spec=' Not in Firefox ' type='boolean'>
+  When set to true, the grippy will be hidden. When set to false, the default, the  grippy will be shown.
+</attr>
+<attr name='statusbar' spec=' Firefox Only ' type='id of statusbar element'>
+  If you set this attribute to the id of a statusbar element, the label on  the statusbar will update to the statustext of the items on the menu as the  user moves the mouse over them.
+</attr>
+<prop name='statusbar' spec=' Firefox Only ' type='id of statusbar element'>
+  Gets and sets the value of the statusbar attribute.
+</prop>
+</element>

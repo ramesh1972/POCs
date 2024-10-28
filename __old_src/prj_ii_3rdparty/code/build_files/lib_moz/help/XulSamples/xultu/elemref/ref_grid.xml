@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='grid'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/grids.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_grid.html</reference>
+  A grid is an element that contains both rows and columns elements. It is used  to create a grid of elements. Both the rows and columns are displayed at once  although only one will typically contain content, while the other may provide  size information. Whichever is last in the grid is displayed on top.  
+
+</element>

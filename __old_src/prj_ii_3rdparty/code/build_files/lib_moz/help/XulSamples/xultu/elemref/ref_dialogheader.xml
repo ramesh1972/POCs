@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+
+<element name='dialogheader'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_dialogheader.html</reference>
+  A heading row for a dialog box. This element should be placed inside a  dialog element. The header may have a title and a description.
+
+<attr name='crop'>
+  If the label of the dialogheader is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='description' type='string'>
+  Descriptive text to appear in addition to the dialog title.
+</attr>
+<attr name='title' type='string'>
+  A title for the dialogheader.
+</attr>
+</element>

@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='listhead'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/morelists.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_listhead.html</reference>
+  A header row of a listbox. It is usual to place listheader elements  inside the listhead, one for each column.  
+
+</element>

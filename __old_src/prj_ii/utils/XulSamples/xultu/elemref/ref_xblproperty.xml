@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+
+<element name='property' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblprops.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblproperty.html</reference>
+  Declares a JavaScript property that is added to the element's object. The  property element may have a xbl child element and a xbl  child element to get and set the value of the property respectively.        For example, you might want to add a selected property to a drop-down  box. Properties make it convenient if an object is going to be used a  lot with scripts.        The property element may have content which is code that determines the  initial value of the property.  
+<html><![CDATA[
+<p>  Declares a JavaScript property that is added to the element's object. The  property element may have a xbl child element and a xbl  child element to get and set the value of the property respectively.  </p>  <p>  For example, you might want to add a selected property to a drop-down  box. Properties make it convenient if an object is going to be used a  lot with scripts.  </p>  <p>  The property element may have content which is code that determines the  initial value of the property.  </p>
+]]></html>
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the property with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='name'>
+  The name of the property, which is the name that can be used via a script.  For example, if a property has the name color, it can be accessed with  object.color, where object is a reference to the object.
+</attr>
+<attr name='onget'>
+  The code contained in the onget attribute is called when an attempt is  made to retrieve the value of the property. You may use this attribute  when only a simple script is required. For longer scripts, you should  use the xbl element, which functions similarly. The onget code should  return the value of the property.
+</attr>
+<attr name='onset'>
+  The code contained in the onset attribute is called when an attempt is  made to modify the value of the property. You may use this attribute  when only a simple script is required. For longer scripts, you should  use the xbl element, which functions similarly. Within the code  of the onset attribute, the variable val is set to the value that the  property should be changed to.
+</attr>
+<attr name='readonly'>
+  If set to true, the value of the property cannot be changed. If set  to false, the property may be changed.
+</attr>
+</element>

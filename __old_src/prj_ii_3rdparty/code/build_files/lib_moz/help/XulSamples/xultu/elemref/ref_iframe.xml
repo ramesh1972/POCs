@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+
+<element name='iframe'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/cpanels.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_iframe.html</reference>
+  An inner frame that works much the HTML iframe element. The src attribute can  be used to specify the content of the frame. This content is a separate  document. The children of the iframe are ignored.  
+
+<implements>nsIAccessibleProvider</implements>
+<attr name='src' type='URL'>
+  The URL of the page to appear in the iframe.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the iframe.
+</prop>
+<prop name='contentDocument' type='document'>
+  This read-only property contains the document object in the iframe.
+</prop>
+<prop name='contentWindow' type='window'>
+  This read-only property contains the window object in the iframe.
+</prop>
+<prop name='docShell' type='nsIDocShell'>
+  Returns the XPCOM object that implements the iframe's document  functionality.
+</prop>
+<prop name='webNavigation' type='nsIWebNavigation'>
+  This read-only property contains the nsIWebNavigation object for the document.
+</prop>
+</element>

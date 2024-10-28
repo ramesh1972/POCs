@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="widgettest" title="Widget Test" orient="vertical"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<?xul-overlay href="allelem-overlay.xul"?>
+
+<script src="allelem.js" type="application/x-javascript"/>
+
+<stringbundleset id="stringbundleset">
+  <stringbundle id="stringbundle" src="allelem.properties"/>
+</stringbundleset>
+
+<broadcasterset id="broadcasterset">
+  <broadcaster id="broadcaster_save" disabled="true"/>
+</broadcasterset>
+
+<commandset id="commandset">
+  <command id="command_newdocument" oncommand="doNewDocument();"/>
+</commandset>
+
+<keyset id="keyset">
+  <key id="key_newdocument" modifiers="accel" key="N"
+       command="command_newdocument"/>
+</keyset>
+
+<popupset id="popupset">
+  <popup id="popup">
+    <label id="label_popup" value="Choose one:"/>
+    <button id="button_popup1" label="Yes"/>
+    <button id="button_popup2" label="No"/>
+  </popup>
+  <tooltip id="tooltip_ac">
+    <label id="label_tooltip" value="Enter address"/>
+  </tooltip>
+</popupset>
+
+<toolbox id="toolbox">
+  <menubar id="menubar">
+    <menu id="menu_file" label="File" accesskey="F">
+      <menupopup id="menupopup_file">
+        <menu id="menu_new" label="New" accesskey="N">
+          <menupopup id="menupopup_new">
+            <menuitem id="menuitem_document" label="Document" accesskey="D"
+                      key="key_newdocument" command="command_newdocument"/>
+            <menuitem id="menuitem_image" label="Image" accesskey="I"
+                      oncommand="doNewImage();"/>
+          </menupopup>
+        </menu>
+        <menuitem id="menuitem_save" label="Save" accesskey="S"
+                  observes="broadcaster_save"/>
+        <menuitem id="menuitem_exit" label="Exit" accesskey="X"/>
+      </menupopup>
+    </menu>
+    <menu id="menu_options" label="Options" accesskey="O">
+      <menupopup id="menupopup_options">
+        <menuitem id="menuitem_autosave" label="Auto Save" type="checkbox"
+                   accesskey="A"/>
+        <menuseparator id="menuseparator"/>
+        <menuitem id="menuitem_simple" name="mrd" type="radio" label="Simple"
+                   accesskey="S" checked="true"/>
+        <menuitem id="menuitem_advanced" name="mrd" type="radio" label="Advanced"
+                   accesskey="V"/>
+        <menuitem id="menuitem_expert" name="mrd" type="radio" label="Expert"
+                   accesskey="X"/>
+      </menupopup>
+    </menu>
+    <menu id="menu_people" label="People" accesskey="P"
+          datasources="allelem.rdf" ref="urn:people:root">
+      <template id="template_1">
+        <rule id="rule">
+          <conditions id="conditions">
+            <content id="content" uri="?node"/>
+            <member id="member" container="?node" child="?child"/>
+            <triple id="triple" subject="?child"
+                    predicate="http://www.xulplanet.com/rdf/allelem#Name"
+                    object="?name"/>
+          </conditions>
+          <bindings id="bindings">
+            <binding id="binding" subject="?child"
+                    predicate="http://www.xulplanet.com/rdf/allelem#Title"
+                    object="?title"/>
+          </bindings>
+          <action id="action">
+            <menupopup id="menupopup_template">
+              <menuitem id="menuitem_template" uri="?child" label="?name (?title^)"/>
+            </menupopup>
+          </action>
+        </rule>
+      </template>
+      <menupopup>
+        <menuitem id="menuitem_editpeople" label="Edit People..."/>
+        <menuseparator id="menuseparator_people"/>
+      </menupopup>
+    </menu>
+  </menubar>
+
+  <toolbar id="toolbar">
+    <toolbarbutton id="toolbarbutton_back" label="Back"/>
+    <toolbarbutton id="toolbarbutton_forward" label="Forward"/>
+    <toolbarseparator id="toolbarseparator"/>
+    <textbox id="textbox_autocomplete" tooltip="tooltip_ac"
+             type="autocomplete" searchSessions="history"/>
+  </toolbar>
+
+</toolbox>
+
+<tabbox id="tabbox" flex="1">
+  <tabs id="tabs">
+    <tab id="tab_1" label="Main Widgets"/>
+    <tab id="tab_2" label="Secondary Widgets"/>
+    <tab id="tab_3" label="Trees"/>
+    <tab id="tab_4" label="Frames"/>
+    <tab id="tab_5" label="Inner Widgets"/>
+  </tabs>
+  <tabpanels id="tabpanels" flex="1">
+    <tabpanel id="tabpanel_1" flex="1">
+      <vbox id="vbox" flex="1">
+        <description id="description">
+          The following is a collection of basic XUL widgets. This text
+          is created using a description element.
+        </description>
+        <box id="box" orient="horizontal" flex="1">
+          <groupbox id="groupbox" orient="vertical">
+            <caption id="caption" label="Groupbox"/>
+            <label id="label" value="Label" control="button"/>
+            <button id="button" label="Button"/>
+            <spacer id="spacer" flex="1"/>
+            <checkbox id="checkbox" label="Checkbox"/>
+         </groupbox>
+         <radiogroup id="radiogroup" orient="vertical">
+            <caption id="caption" value="Radiogroup"/>
+            <radio id="radio_1" label="Radio 1" group="radiogroup"/>
+            <radio id="radio_2" label="Radio 2" group="radiogroup"/>
+            <radio id="radio_3" label="Radio 3" group="radiogroup"/>
+         </radiogroup>
+         <vbox id="vbox_others">
+           <label value="Context-click here" context="popup"/>
+           <button id="button_wo" label="Save">
+             <observes id="observes" element="broadcaster_save" attribute="disabled"/>
+           </button>
+           <textbox id="textbox"/>
+         </vbox>
+         <vbox id="vbox_image">
+           <image id="image" src="chrome://global/skin/smiley/smile_n.gif"/>
+         </vbox>
+        </box>
+        <separator id="separator" flex="1"/>
+        <hbox id="hbox">
+          <menulist id="menulist" flex="1">
+            <menupopup id="menupopup_ml">
+              <menuitem id="menuitem_ws1ml1" label="Red"/>
+              <menuitem id="menuitem_ws1ml2" label="Orange"/>
+            </menupopup>
+          </menulist>
+          <menulist id="menulist_editable" editable="true" flex="1">
+            <menupopup id="menupopup_mle">
+              <menuitem id="menuitem_ws1mle1" label="Maple"/>
+              <menuitem id="menuitem_ws1mle2" label="Elm"/>
+            </menupopup>
+          </menulist>
+          <button id="button-menu" type="menu" label="Fruit" flex="1">
+            <menupopup id="menupopup_m">
+              <menuitem id="menuitem_ws1m1" label="Cherry"/>
+              <menuitem id="menuitem_ws1m2" label="Peach"/>
+            </menupopup>
+          </button>
+          <button id="button-menu-button" type="menu-button" label="Flowers"
+                  flex="1">
+            <menupopup id="menupopup_mb">
+              <menuitem id="menuitem_ws1mb1" label="Rose"/>
+              <menuitem id="menuitem_ws1mb2" label="Lilac"/>
+            </menupopup>
+          </button>
+        </hbox>
+      </vbox>
+    </tabpanel>
+    <tabpanel id="tabpanel_2">
+      <grid id="grid" flex="1">
+        <columns id="columns">
+          <column id="column_1" flex="1"/>
+          <column id="column_2" flex="3"/>
+        </columns>
+        <rows id="rows">
+          <row id="row_1" flex="1">
+            <button id="button_grid11" label="Sun"/>
+            <button id="button_grid12" label="Snow"/>
+          </row>
+          <row id="row_2" flex="1">
+            <button id="button_grid21" label="Rain"/>
+            <arrowscrollbox id="arrowscrollbox" orient="vertical"
+                            style="max-height: 12ex;">
+              <label id="label_sb1" value="Very Cold"/>
+              <label id="label_sb2"/>
+              <label id="label_sb4" value="Warm"/>
+            </arrowscrollbox>
+          </row>
+        </rows>
+      </grid>
+      <splitter id="splitter">
+        <grippy id="grippy"/>
+      </splitter>
+      <vbox id="vbox_sd">
+        <stack id="stack" style="min-width: 50px; min-height: 80px;">
+          <label id="label_stack1" value="Label 1 in Stack" left="10" top="10"/>
+          <label id="label_stack2" value="Label 2 in Stack" left="20" top="20"/>
+        </stack>
+        <deck id="deck">
+          <label id="label_deck1" value="Deck Page 1"/>
+          <label id="label_deck2" value="Deck Page 2"/>
+        </deck>
+        <button id="button_deckdown" label="Down"
+                oncommand="document.getElementById('deck').selectedIndex=0;"/>
+        <button id="button_deckup" label="Up"
+                oncommand="document.getElementById('deck').selectedIndex=1;"/>
+      </vbox>
+      <vbox id="vbox_sh">
+        <colorpicker id="colorpicker"/>
+        <progressmeter id="progressmeter_u" mode="undetermined"/>
+        <scrollbar id="scrollbar_h" width="100"/>
+      </vbox>
+      <scrollbar id="scrollbar_v" orient="vertical"/>
+    </tabpanel>
+    <tabpanel id="tabpanel_3" orient="horizontal">
+      <tree id="tree" flex="1">
+        <treecols id="treecols">
+          <treecol id="treecol_1" label="Name" flex="2"/>
+          <splitter id="tree_splitter"/>
+          <treecol id="treecol_2" label="Title" flex="1"/>
+        </treecols>
+        <treechildren id="treechildren">
+          <treeitem id="treeitem_1">
+            <treerow id="treerow_1">
+              <treecell id="treerow_11" label="Fred"/>
+              <treecell id="treerow_12" label="King"/>
+            </treerow>
+          </treeitem>
+          <treeitem id="treeitem_2" container="true" open="true">
+            <treerow id="treerow_2">
+              <treecell id="treerow_21" class="treecell-indent" label="Betty"/>
+              <treecell id="treerow_22" label="Queen"/>
+            </treerow>
+            <treechildren id="treechildren_inner">
+              <treeitem id="treeitem_inner">
+                <treerow id="treerow_inner">
+                  <treecell id="treerow_inner1" class="treecell-indent"
+                            label="Chris"/>
+                  <treecell id="treerow_inner2" label="Prince"/>
+                </treerow>
+              </treeitem>
+            </treechildren>
+          </treeitem>
+        </treechildren>
+      </tree>
+      <listbox id="listbox" flex="1"
+               datasources="allelem.rdf" ref="urn:people:root">
+        <listhead id="listhead">
+          <listheader id="listhead_1" label="Name"/>
+          <listheader id="listhead_2" label="Title"/>
+        </listhead>
+        <listcols id="listcols">
+          <listcol id="listcol_1" flex="1"/>
+          <listcol id="listcol_2" flex="1"/>
+        </listcols>
+
+        <template id="template">
+          <listitem id="listitem" uri="rdf:*">
+            <listcell id="listcell_1"
+                      label="rdf:http://www.xulplanet.com/rdf/allelem#Name"/>
+            <listcell id="listcell_2"
+                            label="rdf:http://www.xulplanet.com/rdf/allelem#Title"/>
+          </listitem>
+        </template>
+      </listbox>
+    </tabpanel>
+    <tabpanel id="tabpanel_4" orient="horizontal">
+      <iframe id="iframe" src="allelem.html"/>
+      <browser id="browser" src="allelem.html"/>
+      <editor id="editor" src="allelem.html"/>
+    </tabpanel>
+    <tabpanel id="tabpanel_5" orient="horizontal" align="top">
+      <grippy id="grippy"/>
+      <toolbargrippy id="toolbargrippy"/>
+      <scrollbarbutton id="scrollbarbutton_d" type="decrement"/>
+      <scrollbarbutton id="scrollbarbutton_i" type="increment"/>
+      <slider id="slider"/>
+      <thumb id="thumb"/>
+      <vbox id="vbox_arb">
+        <autorepeatbutton id="autorepeatbutton_u"  class="up"/>
+        <autorepeatbutton id="autorepeatbutton_d" class="down"/>
+      </vbox>
+    </tabpanel>
+  </tabpanels>
+</tabbox>
+
+<statusbar id="statusbar">
+  <statuspanel id="statuspanel_1">
+    <label id="label_sp1" value="Status"/>
+  </statuspanel>
+  <spacer id="spacer_sp" flex="1"/>
+  <statuspanel id="statuspanel_2">
+    <progressmeter id="progressmeter_d" mode="determined" value="40"/>
+  </statuspanel>
+</statusbar>
+
+</window>
+
+

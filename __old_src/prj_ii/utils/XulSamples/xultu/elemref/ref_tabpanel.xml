@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='tabpanel'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/tabpanel.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_tabpanel.html</reference>
+  A individual panel in a tabpanels element. This element is optional and you may  just use any other container in place of it.  
+
+</element>

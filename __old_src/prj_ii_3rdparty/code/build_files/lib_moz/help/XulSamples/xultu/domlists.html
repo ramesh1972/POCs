@@ -1,0 +1,550 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="dommodify.html"> 
+ <link rel="next" href="boxobject.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Manipulating Lists</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 7.3 - Manipulating Lists 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <SPAN CLASS="currentpage">Manipulating Lists</SPAN></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="7.2 - Modifying a XUL Interface"
+     href="dommodify.html">Previous</a>
+
+
+  <a class="nextlink" title="7.4 - Box Objects"
+     href="boxobject.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Manipulating Lists</h2>
+
+<P>
+The XUL listbox provides a number of specialized methods.
+</P>
+
+<H3>List Manipulation</H3>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_listbox.html">listbox</A> element provides numerous methods
+to retrieve and manipulate its items. Although listboxes may be manipulated
+using the standard DOM functions as well, it is recommended that the specialized
+listbox functions be used instead when possible. These functions are bit
+simpler and will do the right thing.
+</P>
+
+<P>
+The appendItem function is used to append a new item to the end a list. Similar to
+the DOM appendChild function except that it takes a string label, and you do
+not have to worry about where to add it in the list structure. Here is an example:
+</P>
+
+
+Example 7.3.1:
+<A HREF='examples/ex_domlists_1.xul.txt'>Source</A>
+<A HREF="examples/ex_domlists_1.xul" ONCLICK="window.open('examples/ex_domlists_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;script&gt;
+function addItem()
+{
+  document.getElementById('thelist').appendItem("Thursday", "thu");
+}
+&lt;/script&gt;
+
+&lt;listbox id="thelist"/&gt;
+
+&lt;button label="Add" oncommand="addItem();"/&gt;</PRE></DIV>
+
+
+
+<P>
+The appendItem takes two arguments, the label, in this case 'Thursday', and a value
+'thu'. The two arguments correspond to the <SPAN CLASS="attrib">label</SPAN> attribute
+and the <SPAN CLASS="attrib">value</SPAN> attribute on the
+<A CLASS="tag" HREF="elemref/ref_listitem.html">listitem</A> element. The value is used only as an extra optional
+value associated with an item which you might wish to use in a script.
+</P>
+
+<P>
+Similarly, there is also an insertItemAt and a removeItemAt function which inserts a
+new item and removes an existing item respectively. The syntax is as follows:
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+list.insertItemAt(3, "Thursday", "thu");
+list.removeItemAt(3);</PRE></DIV>
+
+
+
+<P>
+The insertItemAt function takes an additional argument, the position to insert the
+new item. The new item is inserted at this index, so, in the example, the new item
+will be added at position 3 while the item previously at that position will now be
+at position 4. Remember that the first item is 0. The removeItemAt function will
+remove the item at a specific index.
+</P>
+
+<P>
+These three methods are also available for several other XUL elements and work in the
+same manner. In fact, these methods are part of the 
+<A HREF="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULSelectControlElement.html">nsIDOMXULSelectControlElement</A>
+interface so any XUL elements which implement this interface have these methods. This
+includes the 
+<A CLASS="tag" HREF="elemref/ref_menulist.html">menulist</A>,
+<A CLASS="tag" HREF="elemref/ref_radiogroup.html">radiogroup</A> and
+<A CLASS="tag" HREF="elemref/ref_tabs.html">tabs</A> elements. For example, to add a new item to a menulist,
+you can use the same syntax as for a listbox. The right kind of element will be
+appended in each situation.
+</P>
+
+<H3>List Selection</H3>
+
+<P>
+The nsIDOMXULSelectControlElement interface provides two additonal properties,
+selectedIndex and selectedItem. The former returns the index of the selected item
+while the latter returns the selected element. For instance the selectedItem of a
+menulist will be the <A CLASS="tag" HREF="elemref/ref_menuitem.html">menuitem</A> that is selected. If no item
+is selected, selectedIndex will return -1, while selectedItem will return null.
+</P>
+
+<P>
+These two properties are commonly inspected during a select event, as in the following
+example:
+</P>
+
+
+Example 7.3.2:
+<A HREF='examples/ex_domlists_2.xul.txt'>Source</A>
+<A HREF="examples/ex_domlists_2.xul" ONCLICK="window.open('examples/ex_domlists_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;listbox id="thelist" onselect="alert(this.selectedItem.label);"&gt;
+  &lt;listitem label="Short"/&gt;
+  &lt;listitem label="Medium"/&gt;
+  &lt;listitem label="Tall"/&gt;
+&lt;/listbox&gt;</PRE></DIV>
+
+
+
+<P>
+The select event is fired for a listbox when an item in the list is selected. The
+select handler here displays an alert containing the label of the selected item in
+the list. Since the select event fired we can assume that an item is selected. In
+other cases, you may wish to check to ensure that selectedItem is not null before
+continuing.
+</P>
+
+<P>
+The select event is also fired when a radio button in a
+<A CLASS="tag" HREF="elemref/ref_radiogroup.html">radiogroup</A> is selected and when a tab is selected in a
+<A CLASS="tag" HREF="elemref/ref_tabs.html">tabs</A> element. However, menulists do not fire the select
+event; instead you can listen to the command event to handle when an item is
+selected.
+</P>
+
+<P>
+For the <A CLASS="tag" HREF="elemref/ref_tabs.html">tabs</A> element, it is often more convenient to use
+functions of the <A CLASS="tag" HREF="elemref/ref_tabbox.html">tabbox</A> element instead. It also has a
+selectedIndex function which will return the index of the selected tab. However,
+to get the selected item, use the tabbox's selectedTab function instead. Or, use
+the selectedPanel function to get the selected panel, that is, return the content
+associated with the tab.
+</P>
+
+<P>
+All of the selection related properties described above may be also be assigned a
+new value to change the selection. In the next example, the selectedIndex property
+of a <A CLASS="tag" HREF="elemref/ref_radiogroup.html">radiogroup</A> element is changed based on the value
+entered in a textbox. This code isn't foolproof though; for example it doesn't check
+if the value entered is out of range. You will want to make sure that you add this
+kind of error checking.
+</P>
+
+
+Example 7.3.3:
+<A HREF='examples/ex_domlists_3.xul.txt'>Source</A>
+<A HREF="examples/ex_domlists_3.xul" ONCLICK="window.open('examples/ex_domlists_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;script&gt;
+function doSelect()
+{
+  var val = document.getElementById('number').value;
+  val = Number(val);
+  if (val != null)
+    document.getElementById('level').selectedIndex = val - 1;
+}
+&lt;/script&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Enter a number from 1 to 3:"/&gt;
+  &lt;textbox id="number"/&gt;
+  &lt;button label="Select" oncommand="doSelect();"/&gt;
+&lt;/hbox&gt;
+
+&lt;radiogroup id="level"&gt;
+  &lt;radio label="Excellent"/&gt;
+  &lt;radio label="Good"/&gt;
+  &lt;radio label="Poor"/&gt;
+&lt;/radiogroup&gt;</PRE></DIV>
+
+
+
+<P>
+Listboxes also support multiple selection and the functions of the
+<A HREF="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</A>
+interface. This interface provides a number of functions specifically for
+handling multiple selection. For example the selectedItems property holds
+a list of the items that are selected, while the selectedCount property holds
+the number of items selected. Typically, you will use these properties to
+iterate over the list and perform some operation for each item. Be careful when
+iterating over the selected items; if you modify the items in the list while
+iterating, the list will change and the selection properties may return different
+values. This is one reason why it is useful to manipulate the list by the item
+rather than by index.
+</P>
+
+<P>
+The following example shows a method of deleting the selected items properly:
+</P>
+
+
+Example 7.3.4:
+<A HREF='examples/ex_domlists_4.xul.txt'>Source</A>
+<A HREF="examples/ex_domlists_4.xul" ONCLICK="window.open('examples/ex_domlists_4.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;script&gt;
+function deleteSelection()
+{
+  var list = document.getElementById('thelist');
+  var count = list.selectedCount;
+  while (count--){
+    var item = list.selectedItems[0];
+    list.removeItemAt(list.getIndexOfItem(item));
+  }
+}
+&lt;/script&gt;
+
+&lt;button label="Delete" oncommand="deleteSelection();"/&gt;
+
+&lt;listbox id="thelist" seltype="multiple"&gt;
+  &lt;listitem label="Cheddar"/&gt;
+  &lt;listitem label="Cheshire"/&gt;
+  &lt;listitem label="Edam"/&gt;
+  &lt;listitem label="Gouda"/&gt;
+  &lt;listitem label="Havartie"/&gt;
+&lt;/listbox&gt;</PRE></DIV>
+
+
+
+<P>
+Inside the while loop, we first get the selected item at index 0. The first
+selected item is always retrieved as the size of the array will decrease as the
+items are removed. Next, we remove the item using the removeItemAt function.
+Since this function requires an index, we can convert between an item and an
+index using the getIndexOfItem function. There is also a corresponding
+getItemAtIndex function to do the reverse.
+</P>
+
+<P>
+The 
+<A HREF="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</A>
+interface also provides methods for modifying the selected items. For instance,
+the addItemToSelection function adds a new item to the set of selected items, without
+clearing the existing selection. The removeItemFromSelection function removes a single
+item from the selection.
+</P>
+
+<H3>List Scrolling</H3>
+
+<P>
+If there are more rows in the listbox than can be displayed, a scroll bar will appear
+to allow the user to scroll the list. The scroll position may be adjusted using a
+couple of listbox methods.
+</P>
+
+<P>
+The scrollToIndex method scrolls to a given row. This listbox will scroll such that
+the row will be the top row visible, unless the row is near the end of the list of
+items. The ensureIndexIsVisible method is similar in that it also scrolls to show a
+row, but this method does not scroll if the item is already visible. Thus, the
+former function is used to scroll to a specific row while the latter is used just to
+make sure that a row is visible. There is also an ensureItemIsVisible that takes an
+item as an argument instead of an index. Compare the effect of both functions at
+different scroll positions in this example:
+</P>
+
+
+Example 7.3.5:
+<A HREF='examples/ex_domlists_5.xul.txt'>Source</A>
+<A HREF="examples/ex_domlists_5.xul" ONCLICK="window.open('examples/ex_domlists_5.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button label="scrollToIndex"
+           oncommand="document.getElementById('thelist').scrollToIndex(4);"/&gt;
+&lt;button label="ensureIndexIsVisible"
+           oncommand="document.getElementById('thelist').ensureIndexIsVisible(4);"/&gt;
+
+&lt;listbox id="thelist" rows="5"&gt;
+  &lt;listitem label="1"/&gt;
+  &lt;listitem label="2"/&gt;
+  &lt;listitem label="3"/&gt;
+  &lt;listitem label="4"/&gt;
+  &lt;listitem label="5"/&gt;
+  &lt;listitem label="6"/&gt;
+  &lt;listitem label="7"/&gt;
+  &lt;listitem label="8"/&gt;
+  &lt;listitem label="9"/&gt;
+  &lt;listitem label="10"/&gt;
+  &lt;listitem label="11"/&gt;
+  &lt;listitem label="12"/&gt;
+&lt;/listbox&gt;</PRE></DIV>
+
+
+
+<HR>
+<P>
+<A HREF="boxobject.html">(Next)</A>
+Next, we'll look at XUL box objects.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_domlists_1.xul.txt'>7.3.1</A>
+  <A HREF='examples/ex_domlists_2.xul.txt'>7.3.2</A>
+  <A HREF='examples/ex_domlists_3.xul.txt'>7.3.3</A>
+  <A HREF='examples/ex_domlists_4.xul.txt'>7.3.4</A>
+  <A HREF='examples/ex_domlists_5.xul.txt'>7.3.5</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="7.2 - Modifying a XUL Interface"
+     href="dommodify.html">Previous</a>
+
+
+  <a class="nextlink" title="7.4 - Box Objects"
+     href="boxobject.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

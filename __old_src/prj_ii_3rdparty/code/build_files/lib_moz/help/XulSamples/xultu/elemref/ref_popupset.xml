@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='popupset'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/popups.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_popupset.html</reference>
+  A container for popup elements. You should declare all popup elements as  children of a popupset. This element does not directly display on screen.  Child popups will be displayed when asked to by other elements.  
+
+</element>

@@ -1,0 +1,186 @@
+<?xml version='1.0'?>
+
+<element name='browser'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_browser.html</reference>
+  A frame which is expected to contain a view of a Web document. It is  similar to an iframe except that it holds a page history and contains  additional methods to manipulate the currently displayed page.        Most of the properties and methods of the browser would rarely be used and can only  be called from chrome URLs. Other URLs will need to use the document and history  objects to change the displayed document.
+<html><![CDATA[
+<p>  A frame which is expected to contain a view of a Web document. It is  similar to an iframe except that it holds a page history and contains  additional methods to manipulate the currently displayed page.  </p>  <p>  Most of the properties and methods of the browser would rarely be used and can only  be called from chrome URLs. Other URLs will need to use the document and history  objects to change the displayed document.</p>
+]]></html>
+
+<implements>nsIAccessibleProvider</implements>
+<attr name='autocompleteenabled' spec=' Firefox only ' type='boolean'>
+  Set to true to enable autocomplete of fields.
+</attr>
+<attr name='autocompletepopup' type='id of popup element'>
+  The id of a popup element used to hold autocomplete results for the browser.
+</attr>
+<attr name='autoscroll' spec=' Firefox only ' type='boolean'>
+  Set to false to disable autoscroll for this browser. If this attribute is set to  true or omitted, autoscroll will be enabled or depending on the user  preference 'general.autoScroll'.
+</attr>
+<attr name='disablehistory' type='boolean'>
+  If false, an arrow button will appear on the end of the textbox which, when  pressed, will open a dropdown menu of all available results. The default  value is true, which will hide the dropdown button.
+</attr>
+<attr name='disablesecurity' type='boolean'>
+  Set this attribute to true to disable the security UI for this browser.  Leave the attribute off to enable it.
+</attr>
+<attr name='homepage' type='string home page URL'>
+  This attribute allows you to set a homepage for the browser element. It does  not have any correlation with the user's browser homepage; instead it is a  convenient property to hold a home page. You can switch to this home page  using the goHome method.
+</attr>
+<attr name='src' type='URL'>
+  The URL of the page to appear in the browser.
+</attr>
+<attr name='type' type='string'>
+  The type of browser, which can be used to set the access of the document  loaded inside the browser. If this is not set, the loaded document has the  same access as the window containing the  .
+<value name='content'>
+    A browser for content. The content that is loaded inside the browser is
+    not allowed to access the chrome above it.
+</value>
+<value name='content-primary'>
+    The primary browser for content. The content that is loaded inside the
+    browser is not allowed to access the chrome above it. For instance, in a
+    web browser, this would be the element that displays the web page. The
+    window for the primary content can be retrieved more conveniently using
+    'window.content'.
+</value>
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the browser.
+</prop>
+<method name='addProgressListener'>
+<prototype> addProgressListener ( listener ) </prototype>
+  
+  Add a progress listener to the browser which will monitor loaded documents. The  progress listener should implement the   nsIWebProgressListener   interface.
+</method>
+<prop name='canGoBack' type='boolean'>
+  This read-only property is true if there is a page to go back to in the session  history and the Back button should be enabled.
+</prop>
+<prop name='canGoForward' type='boolean'>
+  This read-only property is true if there is a page to go forward to in the session  history and the Forward button should be enabled.
+</prop>
+<prop name='contentDocument' type='document'>
+  This read-only property contains the document object in the browser.
+</prop>
+<prop name='contentTitle' type='string'>
+  This read-only property contains the title of the document object in the browser.
+</prop>
+<prop name='contentViewerEdit' type='nsIContentViewerEdit'>
+  This read-only property contains the nsIContentViewerEdit which handles clipboard  operations on the document.
+</prop>
+<prop name='contentViewerFile' type='nsIContentViewerFile'>
+  Reference to the nsIContentViewerFile interface for the document.
+</prop>
+<prop name='contentWindow' type='window'>
+  This read-only property contains the window object in the browser.
+</prop>
+<prop name='currentURI' type='string current URI'>
+  This read-only property contains the currently loaded URL. To change the  URL, use the loadURI method.
+</prop>
+<prop name='docShell' type='nsIDocShell'>
+  This read-only property contains the nsIDocShell object for the document.
+</prop>
+<prop name='documentCharsetInfo' type='nsIDocumentCharsetInfo'>
+  This read-only property contains the nsIDocumentCharsetInfo object for the document  which is used to handle which character set should be used to display the document.
+</prop>
+<method name='goBack'>
+<prototype> goBack ( ) </prototype>
+  
+  Go back one page in the history.
+</method>
+<method name='goForward'>
+<prototype> goForward ( ) </prototype>
+  
+  Go forward one page in the history.
+</method>
+<method name='goHome'>
+<prototype> goHome ( ) </prototype>
+  
+  Load the user's home page into the browser.
+</method>
+<method name='gotoIndex'>
+<prototype> gotoIndex ( index ) </prototype>
+  
+  Navigate to the page in the history with the given index. Use a positive  number to go forward and a negative number to go back.
+</method>
+<prop name='homePage' type='string home page URL'>
+  This property holds the value of the user's home page setting.
+</prop>
+<method name='loadURI'>
+<prototype> loadURI ( uri , referrer , charset ) </prototype>
+  
+  Load a URL into the document, with the given referrer and character set.
+</method>
+<method name='loadURIWithFlags'>
+<prototype> loadURIWithFlags ( uri , flags , referrer , charset ) </prototype>
+  
+  Load a URL into the document, with the specified load flags and the given  referrer and character set. In addition to the flags allowed for the  reloadWithFlags methods, the following flags are also valid:
+<value name='LOAD_FLAGS_IS_REFRESH'>
+    This flag is used when the URL is loaded because of a meta tag refresh or redirect.
+</value>
+<value name='LOAD_FLAGS_IS_LINK'>
+    This flag is used when the URL is loaded because a user clicked on a link. The
+    HTTP Referer header is set accordingly.
+</value>
+<value name='LOAD_FLAGS_BYPASS_HISTORY'>
+    Do not add the URL to the session history.
+</value>
+<value name='LOAD_FLAGS_REPLACE_HISTORY'>
+    Replace the current URL in the session history with a new one. This flag might be
+    used for a redirect.
+</value>
+</method>
+<prop name='markupDocumentViewer' type='nsIMarkupDocumentViewer'>
+  This read-only property contains the nsIMarkupDocumentViewer which is responsible  for drawing the document.
+</prop>
+<prop name='preferences' type='nsIPrefService'>
+  This read-only property contains an nsIPref object for getting and setting user  preferences.
+</prop>
+<method name='reload'>
+<prototype> reload ( ) </prototype>
+  
+  Reloads the document in the browser.
+</method>
+<method name='reloadWithFlags'>
+<prototype> reloadWithFlags ( flags ) </prototype>
+  
+  Reloads the document in the browser with the given load flags. The flags listed below  may be used, which are all constants of the webNavigation property (or the  nsIWebNavigation interface). You may combine flags using a or symbol ( | )
+<value name='LOAD_FLAGS_NONE'>
+    No special flags. The document is loaded normally.
+</value>
+<value name='LOAD_FLAGS_BYPASS_CACHE'>
+    Reload the page, ignoring if it is already in the cache. This is the flag used
+    when the reload button is pressed while the Shift key is held down.
+</value>
+<value name='LOAD_FLAGS_BYPASS_PROXY'>
+    Reload the page, ignoring the proxy server.
+</value>
+<value name='LOAD_FLAGS_CHARSET_CHANGE'>
+    This flag is used if the document needs to be reloaded because the character
+    set changed.
+</value>
+</method>
+<method name='removeProgressListener'>
+<prototype> removeProgressListener ( listener ) </prototype>
+  
+  Remove a progress listener from the browser.
+</method>
+<prop name='securityUI' type='nsISecureBrowserUI'>
+  The readonly property holds an object which may be used to determine the  security level of the loaded document.
+</prop>
+<prop name='sessionHistory' type='nsISHistory'>
+  This read-only property contains the nsISHistory object which holds the session  history.
+</prop>
+<method name='stop'>
+<prototype> stop ( ) </prototype>
+  
+  Equivalent to pressing the Stop button, this method stops the currently loading  document.
+</method>
+<prop name='webBrowserFind' type='nsIWebBrowserFind'>
+  This read-only property contains an nsIWebBrowserFind object which can be used  to search for text in the document.
+</prop>
+<prop name='webNavigation' type='nsIWebNavigation'>
+  This read-only property contains the nsIWebNavigation object for the document.  Most of its methods are callable directly on the browser itself, such as goBack and  goForward. It also contains the load constants used by reloadWithFlags and  loadURIWithFlags.
+</prop>
+<prop name='webProgress' type='nsIWebProgress'>
+  This read-only property contains an nsIWebProgress object which is used to monitor  the progress of a document loading.
+</prop>
+</element>

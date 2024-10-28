@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="templates.html"> 
+ <link rel="next" href="datasrc.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Trees and Templates</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 9.3 - Trees and Templates 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <SPAN CLASS="currentpage">Trees and Templates</SPAN></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="9.2 - Templates"
+     href="templates.html">Previous</a>
+
+
+  <a class="nextlink" title="9.4 - RDF Datasources"
+     href="datasrc.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Trees and Templates</h2>
+
+<P>
+The following describes how to use a template with a tree.
+</P>
+
+<H3>Adding Datasources to Trees</H3>
+
+<P>
+When using a tree, you will often use a template to build its content, to handle
+a large amount of hierarchial data. Using a template with a tree uses very much
+the same syntax as with other elements. You need to add a
+<SPAN CLASS="attrib">datasources</SPAN> and a
+<SPAN CLASS="attrib">ref</SPAN> attribute to the
+<A CLASS="tag" HREF="elemref/ref_tree.html">tree</A> element, which specify the datasource
+and root node to display. Multiple rules can be used to indicate different
+content for different types of data.
+</P>
+
+<P>
+The following example uses the history datasource:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;tree datasources="rdf:history" ref="NC:HistoryByDate"
+          flags="dont-build-content"&gt;</PRE></DIV>
+
+
+
+<P>
+As described in the previous section, the tree may use a tree builder for template
+generation instead of the normal content builder. This means that elements will
+not be created for every row in the tree, making it more efficient. The
+<SPAN CLASS="attrib">flags</SPAN> attribute set to the value
+<SPAN CLASS="aval">dont-build-content</SPAN>, as used in the example above,
+indicates that the tree builder should be used. If you leave the attribute out,
+the content builder will be used. You can see the difference by using Mozilla's
+DOM Inspector on a tree with and without the flag.
+</P>
+
+<P>
+If you do use a content builder instead, note that the content won't generally
+get built until it is needed. With hierarchical trees, the children don't get
+generated until the parent nodes have been opened by the user.
+</P>
+
+<P>
+In the template, there will be one <A CLASS="tag" HREF="elemref/ref_treecell.html">treecell</A> for each column
+in the tree. The cells should have a <SPAN CLASS="attrib">label</SPAN> attribute to
+set the label for the cell. This would normally be set to an RDF property so that
+the label is pulled from the datasource.
+</P>
+
+<P>
+The following example demonstrates a template-built tree, in this case for
+the file system.
+</P>
+
+
+Example 9.3.1:
+<A HREF='examples/ex_treetempl_1.xul.txt'>Source</A>
+<DIV CLASS="examplec"><PRE>&lt;tree id="my-tree" flex="1"
+       datasources="rdf:files" ref="file:///" flags="dont-build-content"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="Name" label="Name" primary="true" flex="1"/&gt;
+    &lt;splitter/&gt;
+    &lt;treecol id="Date" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+    &lt;template&gt;
+      &lt;rule&gt;
+        &lt;treechildren flex="1"&gt;
+          &lt;treeitem uri="rdf:*"&gt;
+            &lt;treerow&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+            &lt;/treerow&gt;
+          &lt;/treeitem&gt;
+        &lt;/treechildren&gt;
+      &lt;/rule&gt;
+    &lt;/template&gt;
+&lt;/tree&gt;</PRE></DIV>
+
+
+
+<P>
+Here, a tree is created with two columns, for the name and date of a file.
+The tree should display a list of the files in the root directory. Only one
+rule is used, but you may add others if needed. Like with other templates,
+the <SPAN CLASS="attrib">uri</SPAN> attribute on an element indicates where
+to start generating content. The two cells grab the name and date from the
+datasource and place the values in the cell labels.
+</P>
+
+<P>
+This example shows why the <SPAN CLASS="attrib">uri</SPAN> attribute becomes
+useful. Notice how it has been placed on the treeitem in the example, even
+though it is not a direct descendant of the rule element. We need to put this
+attribute on only those elements that we want repeated for each resource. Because
+we don't want multiple <A CLASS="tag" HREF="elemref/ref_treechildren.html">treechildren</A> elements, we don't
+put it there. Instead we put the <SPAN CLASS="attrib">uri</SPAN> attributes on the
+<A CLASS="tag" HREF="elemref/ref_treeitem.html">treeitem</A> elements. Effectively, the elements outside
+(or above) the element with the <SPAN CLASS="attrib">uri</SPAN> attribute are
+not duplicated whereas the element with the <SPAN CLASS="attrib">uri</SPAN>  
+attribute and the elements inside it are duplicated for each resource.
+</P>
+
+<P ALIGN="CENTER">
+<IMG SRC="images/rdfoutl1.jpg" ALT="">
+</P>
+
+<P>
+Note in the image that additional child elements below the top-level elements have
+been added automatically. XUL knows how to add child elements when the templates or
+rules contain tree elements or menu elements. It will generate tree elements as  
+nested as necessary based on the available RDF data.
+</P>
+
+<P>
+An interesting part of RDF datasources is that the resource values are only
+determined when the data is needed. This means that values that are deeper in the
+resource hierarchy are not determined until the user navigates to that node in the
+tree. This becomes useful for certain datasources where the data is determined
+dynamically.
+</P>
+
+<H3>Sorting Columns</H3>
+
+<P>
+If you try the previous example, you might note that the list of files is not
+sorted. Trees which generate their data from a datasource have the optional
+ability to sort their data. You can sort either ascending or descending on any
+column. The user may change the sort column and direction by clicking the column
+headers. This sorting feature is not available for trees with static content,
+although you can write a script to sort the data.
+</P>
+
+<P>
+Sorting involves three attributes, which should be placed on the columns. The
+first attribute, <SPAN CLASS="attrib">sort</SPAN>, should be set to an RDF
+property that is used as the sort key. Usually, this would be the same as that
+used in the label of the cell in that column. If you set this on a column, the
+data will be sorted in that column. The user can change the sort direction
+by clicking the column header. If you do not set the
+<SPAN CLASS="attrib">sort</SPAN> attribute on a column, the data cannot be
+sorted by that column.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">sortDirection</SPAN> attribute (note the mixed case)
+is used to set the direction in which the column will be sorted by default.
+Three values are possible:
+</P>
+
+<UL>
+  <LI><SPAN CLASS="aval">ascending</SPAN>: the data is displayed is ascending order.</LI>
+  <LI><SPAN CLASS="aval">descending</SPAN>: the data is displayed is descending order.</LI>
+  <LI><SPAN CLASS="aval">natural</SPAN>: the data is displayed in natural order,
+      which means the order the data is stored in the RDF datasource.</LI>
+</UL>
+
+<P>
+The final attribute, <SPAN CLASS="attrib">sortActive</SPAN> should be set to
+<SPAN CLASS="aval">true</SPAN> for one column, the one that you would like to be
+sorted by default.
+</P>
+
+<P>
+Although the sorting will function correctly with only those attributes, you may
+also use the style class <SPAN CLASS="attrib">sortDirectionIndicator</SPAN> on
+a column that can be sorted. This will cause a small triangle to appear on the
+column header that indicates the direction of the sort. If you don't do this, the
+user may still sort the columns but will have no indication as to which column is
+currently sorted.
+</P>
+
+<P>
+The following example changes the columns in the earlier example to incorporate
+the extra features:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;treecols&gt;
+  &lt;treecol id="Name" label="Name" flex="1" primary="true"
+            class="sortDirectionIndicator" sortActive="true"
+            sortDirection="ascending"
+            sort="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;splitter/&gt;
+  &lt;treecol id="Date" label="Date" flex="1" class="sortDirectionIndicator"
+           sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+&lt;/treecols&gt;</PRE></DIV>
+
+
+
+<H3>Persisting Column State</H3>
+
+<P>
+One additional thing you might want to do is persist which column is
+currently sorted, so that it is remembered between sessions. To do this,
+we use the <SPAN CLASS="attrib">persist</SPAN> attribute on each
+<A CLASS="tag" HREF="elemref/ref_treecol.html">treecol</A> element. There are five attributes of
+columns that need to be persisted, to save the column width,
+the column order, whether the column is visible, which column is currently
+sorted and the sort direction. The following example shows a sample column:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;treecol id="Date" label="Date" flex="1"
+             class="sortDirectionIndicator"
+             persist="width ordinal hidden sortActive sortDirection"
+             sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;</PRE></DIV>
+
+
+
+<H3>Additional Rule Attributes</H3>
+  
+<P>
+There are two additional attributes that can be added to the
+<A CLASS="tag" HREF="elemref/ref_rule.html">rule</A> element that allow it to match in certain
+special circumstances. Both are boolean attributes.
+</P>   
+
+<UL>
+  <LI><DIV CLASS="attrib">iscontainer</DIV>
+      If this attribute is set to <SPAN CLASS="aval">true</SPAN>, then the rule
+      will match all resources that have children. For example, we could use this
+      rule to match bookmark folders. This is convenient as the RDF datasource 
+      does not need to include any special attributes to indicate this.
+  </LI>
+  <LI><DIV CLASS="attrib">isempty</DIV>
+      If this attribute is set to <SPAN CLASS="aval">true</SPAN>, then the rule
+      will match all resources that have no children.
+  </LI>
+</UL>
+
+<P>
+The two attributes above are really the reverse of each other. A resource might
+be a container and be an empty one as well. However, this is different from a
+resource that is not a container. For example, a bookmark folder is a container
+but it might or might not have children. However a single bookmark or separator
+is not a container.
+</P>
+
+<P>
+You can combine these two elements with other attribute matches for more specific
+rules.
+</P>
+
+<HR>
+<P>
+<A HREF="datasrc.html">(Next)</A>
+Next, we'll look at some of the datasources provided by Mozilla.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_treetempl_1.xul.txt'>9.3.1</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="9.2 - Templates"
+     href="templates.html">Previous</a>
+
+
+  <a class="nextlink" title="9.4 - RDF Datasources"
+     href="datasrc.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

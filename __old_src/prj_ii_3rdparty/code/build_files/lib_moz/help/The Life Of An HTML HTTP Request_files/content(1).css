@@ -1,0 +1,306 @@
+BODY {
+	BACKGROUND: #fff; COLOR: #000
+}
+#mainContent {
+	BACKGROUND: #fff; COLOR: #000; LINE-HEIGHT: 1.3
+}
+#side {
+	BACKGROUND: #fff; COLOR: #000; LINE-HEIGHT: 1.3
+}
+.deepLevel #mainContent {
+	LINE-HEIGHT: 1.4
+}
+#nav {
+	LINE-HEIGHT: 1em
+}
+HR {
+	MARGIN: 2em 0px; COLOR: #000; HEIGHT: 1px; BACKGROUND-COLOR: #000
+}
+UNKNOWN {
+	FONT-WEIGHT: bold
+}
+BODY {
+	FONT-SIZE: small; FONT-FAMILY: verdana, sans-serif; voice-family: inherit
+}
+TD {
+	FONT-SIZE: small; FONT-FAMILY: verdana, sans-serif; voice-family: inherit
+}
+TH {
+	FONT-SIZE: small; FONT-FAMILY: verdana, sans-serif; voice-family: inherit
+}
+INPUT {
+	FONT-SIZE: small; FONT-FAMILY: verdana, sans-serif; voice-family: inherit
+}
+H1 {
+	MARGIN: 1em 0px 0.2em; BORDER-BOTTOM: #ccc 1px solid; FONT-FAMILY: arial, verdana, sans-serif
+}
+H2 {
+	MARGIN: 1em 0px 0.2em; BORDER-BOTTOM: #ccc 1px solid; FONT-FAMILY: arial, verdana, sans-serif
+}
+H3 {
+	MARGIN: 1em 0px 0.2em; BORDER-BOTTOM: #ccc 1px solid; FONT-FAMILY: arial, verdana, sans-serif
+}
+H4 {
+	MARGIN: 1em 0px 0.2em; BORDER-BOTTOM: #ccc 1px solid; FONT-FAMILY: arial, verdana, sans-serif
+}
+H5 {
+	MARGIN: 1em 0px 0.2em; BORDER-BOTTOM: #ccc 1px solid; FONT-FAMILY: arial, verdana, sans-serif
+}
+H6 {
+	MARGIN: 1em 0px 0.2em; BORDER-BOTTOM: #ccc 1px solid; FONT-FAMILY: arial, verdana, sans-serif
+}
+LI H1 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+LI H2 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+LI H3 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+LI H4 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+LI H5 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+LI H6 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+#header H1 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+H1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 160%
+}
+H2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 150%
+}
+H3 {
+	FONT-SIZE: 120%
+}
+H4 {
+	FONT-SIZE: 100%
+}
+H5 {
+	FONT-SIZE: 90%
+}
+H6 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 90%; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+:link {
+	COLOR: #039
+}
+:visited {
+	COLOR: #636
+}
+:hover {
+	COLOR: #333
+}
+:hover {
+	COLOR: #333
+}
+:active {
+	COLOR: #000
+}
+:active {
+	COLOR: #000
+}
+.note {
+	COLOR: #666; FONT-STYLE: normal
+}
+.remark {
+	COLOR: #666
+}
+.sidenote {
+	BORDER-RIGHT: #666; BORDER-TOP: #666; BORDER-LEFT: #666; BORDER-BOTTOM: #666
+}
+.key-point:unknown {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; DISPLAY: block; FONT-SIZE: 1px; BACKGROUND: url(../../images/key-point_tr.gif) no-repeat right top; MARGIN: -15px -15px 0px; BORDER-LEFT: medium none; LINE-HEIGHT: 0.1; BORDER-BOTTOM: medium none; HEIGHT: 15px; content: url("../../images/key-point_tl.gif")
+}
+.key-point {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BACKGROUND: url(../../images/key-point_back.gif) #e4ecec repeat-y right 50%; MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.key-point:unknown {
+	CLEAR: both; DISPLAY: block; FONT-SIZE: 1px; BACKGROUND: url(../../images/key-point_br.gif) no-repeat right bottom; MARGIN: -15px; LINE-HEIGHT: 0.1; PADDING-TOP: 15px; HEIGHT: 8px; content: url("../../images/key-point_bl.gif")
+}
+.key-point H2 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 0px; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.key-point H3 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 0px; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.key-point H4 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 0px; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.key-point H5 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 0px; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.news DT {
+	FONT-WEIGHT: normal; COLOR: #666
+}
+.news DT A {
+	FONT-WEIGHT: bold
+}
+UL.compact {
+	PADDING-LEFT: 20px; MARGIN-LEFT: 0px
+}
+KBD {
+	BORDER-RIGHT: #ccc 1px; PADDING-RIGHT: 0.1em; BORDER-TOP: #ccc 1px; PADDING-LEFT: 0.1em; PADDING-BOTTOM: 0.1em; MARGIN: 0.1em; BORDER-LEFT: #ccc 1px; PADDING-TOP: 0.1em; BORDER-BOTTOM: #ccc 1px
+}
+KBD.command {
+	COLOR: #6b5839
+}
+CODE.command {
+	COLOR: #6b5839
+}
+PRE.code {
+	BACKGROUND: #eeecf6
+}
+UNKNOWN {
+	FONT-STYLE: normal
+}
+DIV.example {
+	BORDER-LEFT-COLOR: #554fa0; BORDER-BOTTOM-COLOR: #554fa0; BORDER-TOP-COLOR: #554fa0; BORDER-RIGHT-COLOR: #554fa0
+}
+DIV.example:unknown {
+	COLOR: #666
+}
+TABLE.data THEAD TH {
+	BACKGROUND: #e4ecec; empty-cells: hide
+}
+TABLE.data TH {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+TABLE.data TD {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+TR.odd {
+	BACKGROUND: #f5f5f5
+}
+ADDRESS {
+	COLOR: #666
+}
+.productlist H3 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.key-point H3 {
+	MARGIN: 0px
+}
+#product-desc H2 {
+	FONT-SIZE: 2px; TEXT-INDENT: -700em; LINE-HEIGHT: 2px; HEIGHT: 25px
+}
+#product-desc P {
+	PADDING-LEFT: 170px
+}
+#product-desc UL {
+	PADDING-LEFT: 190px; MARGIN-BOTTOM: 0px
+}
+#product-side {
+	MARGIN-LEFT: 65%
+}
+#product-side UL {
+	PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; MARGIN-LEFT: 0px
+}
+#product-side LI {
+	PADDING-BOTTOM: 0.2em
+}
+#product-desc {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 25px; WIDTH: 60%; COLOR: #4c5c5c; LINE-HEIGHT: 140%; PADDING-TOP: 40px
+}
+.product-firefox {
+	BACKGROUND: url(../../images/product-firefox-screen.png) no-repeat
+}
+.product-thunderbird {
+	BACKGROUND: url(../../images/product-thunderbird-screen.png) no-repeat
+}
+.product-camino {
+	BACKGROUND: url(../../images/product-camino-screen.png) no-repeat
+}
+.product-mozilla {
+	BACKGROUND: url(../../images/product-mozilla-screen.png) no-repeat
+}
+#product-side .download H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 140%; MARGIN: 0px; COLOR: #1d9101
+}
+.download H3 :link {
+	COLOR: #1d9101
+}
+.download H3 :visited {
+	COLOR: #1d9101
+}
+.download H3 :active {
+	COLOR: #1d9101
+}
+.download H3 :active {
+	COLOR: #1d9101
+}
+.download H3 :hover {
+	COLOR: #156b01
+}
+.download H3 :hover {
+	COLOR: #156b01
+}
+.download LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.download UL {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 0px
+}
+.other A:link {
+	COLOR: #666
+}
+.other A:visited {
+	COLOR: #666
+}
+.download .other A:hover {
+	COLOR: #000
+}
+.download:unknown {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; DISPLAY: block; FONT-SIZE: 1px; MARGIN: -15px -15px 0px; BORDER-LEFT: medium none; LINE-HEIGHT: 0.1; BORDER-BOTTOM: medium none; HEIGHT: 15px; content: url("../../images/download_tl.gif")
+}
+.download {
+	PADDING-RIGHT: 45px; PADDING-LEFT: 15px; BACKGROUND: url(../../images/download_back.gif) #c4efa1 no-repeat right top; MARGIN-BOTTOM: 0.5em; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.download:unknown {
+	DISPLAY: block; FONT-SIZE: 1px; BACKGROUND: url(../../images/download_br.gif) no-repeat right bottom; MARGIN: -10px -45px -15px -15px; LINE-HEIGHT: 0.1; PADDING-TOP: 15px; HEIGHT: 8px; content: url("../../images/download_bl.gif")
+}
+.configParent {
+	DISPLAY: block; FONT-SIZE: 85%
+}
+.shop:unknown {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; DISPLAY: block; FONT-SIZE: 1px; MARGIN: -15px -15px 0px; BORDER-LEFT: medium none; LINE-HEIGHT: 0.1; BORDER-BOTTOM: medium none; HEIGHT: 15px; content: url("../../images/shop_tl.gif")
+}
+.shopmoz:unknown {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; DISPLAY: block; FONT-SIZE: 1px; MARGIN: -15px -15px 0px; BORDER-LEFT: medium none; LINE-HEIGHT: 0.1; BORDER-BOTTOM: medium none; HEIGHT: 15px; content: url("../../images/shop_tl.gif")
+}
+.shop {
+	PADDING-RIGHT: 70px; PADDING-LEFT: 15px; BACKGROUND: url(../../images/shop_back.gif) #c0dcdc no-repeat right top; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.shopmoz {
+	PADDING-RIGHT: 70px; PADDING-LEFT: 15px; BACKGROUND: url(../../images/shopmoz_back.gif) #c0dcdc no-repeat right top; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.shop:unknown {
+	DISPLAY: block; FONT-SIZE: 1px; BACKGROUND: url(../../images/shop_br.gif) no-repeat right bottom; MARGIN: -10px -70px -15px -15px; LINE-HEIGHT: 0.1; PADDING-TOP: 15px; HEIGHT: 8px; content: url("../../images/shop_bl.gif")
+}
+.shopmoz:unknown {
+	DISPLAY: block; FONT-SIZE: 1px; BACKGROUND: url(../../images/shop_br.gif) no-repeat right bottom; MARGIN: -10px -70px -15px -15px; LINE-HEIGHT: 0.1; PADDING-TOP: 15px; HEIGHT: 8px; content: url("../../images/shop_bl.gif")
+}
+#ffcentral-desc {
+	BACKGROUND: url(../../products/firefox/t-welcomefirefox.gif) no-repeat; FLOAT: left; WIDTH: 60%; LINE-HEIGHT: 140%
+}
+#ffcentral-desc DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 100px; PADDING-BOTTOM: 0px; PADDING-TOP: 40px
+}
+#ffcentral H3 {
+	MARGIN-TOP: 0px; COLOR: #4c5c5c
+}
+#ffcentral H2 {
+	MARGIN-TOP: 0px; COLOR: #4c5c5c
+}
+#ffcentral P {
+	MARGIN-TOP: 0px; COLOR: #4c5c5c
+}
+#ffcentral UL {
+	MARGIN-TOP: 0px; COLOR: #4c5c5c
+}

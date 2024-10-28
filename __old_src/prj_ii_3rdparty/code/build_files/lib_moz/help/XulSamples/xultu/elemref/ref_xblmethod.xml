@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+
+<element name='method' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblmethods.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblmethod.html</reference>
+  Declares a JavaScript method that is added to the element's object. The  method may take arguments, declared with the xbl element.        For example, an element that allows text to be selected might have  getSelected and setSelected methods.        The example below is a method toUpper that, when called, will make the  value attribute uppercase.  
+<html><![CDATA[
+<p>  Declares a JavaScript method that is added to the element's object. The  method may take arguments, declared with the xbl element.  </p>  <p>  For example, an element that allows text to be selected might have  getSelected and setSelected methods.  </p>  <p>  The example below is a method toUpper that, when called, will make the  value attribute uppercase.  </p>
+]]></html>
+
+<example>
+<![CDATA[
+    &lt;method name=&quot;toUpper&quot;&gt;
+      &lt;body&gt;
+        var v = this.getAttribute(&quot;value&quot;);
+        if (v != null) this.setAttribute(&quot;value&quot;,v.toUpperCase());
+      &lt;/body&gt;
+    &lt;/method&gt;
+
+]]>
+</example>
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the method with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='name'>
+  The name of the method, which is the name used in a script. For example, a  method named setSize can accessed with object.setSize().
+</attr>
+</element>

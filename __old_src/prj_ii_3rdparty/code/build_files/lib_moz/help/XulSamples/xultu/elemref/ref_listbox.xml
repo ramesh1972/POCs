@@ -1,0 +1,193 @@
+<?xml version='1.0'?>
+
+<element name='listbox'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/lists.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_listbox.html</reference>
+  This element is used to create a list of items. This is a simpler version of  a tree. Nested rows are not supported, but a listbox may contain multiple  columns. There are numerous methods which allow the items in the listbox to  be retrieved and modified.        You may specify the number of rows to display in the list using the rows  attribute. Additional rows can be viewed by using a scroll bar. All of the  rows in the listbox are the same height, which is the height of the largest  item in the list.  
+<html><![CDATA[
+<p>  This element is used to create a list of items. This is a simpler version of  a tree. Nested rows are not supported, but a listbox may contain multiple  columns. There are numerous methods which allow the items in the listbox to  be retrieved and modified.  </p>  <p>  You may specify the number of rows to display in the list using the rows  attribute. Additional rows can be viewed by using a scroll bar. All of the  rows in the listbox are the same height, which is the height of the largest  item in the list.  </p>
+]]></html>
+
+<example>
+<![CDATA[
+    &lt;listbox id=&quot;theList&quot;&gt;
+      &lt;listitem label=&quot;Ruby&quot;/&gt;
+      &lt;listitem label=&quot;Emerald&quot;/&gt;
+      &lt;listitem label=&quot;Sapphire&quot;/&gt;
+      &lt;listitem label=&quot;Diamond&quot;/&gt;
+    &lt;/listbox&gt;
+
+]]>
+</example>
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULMultiSelectControlElement</implements>
+<attr name='disableKeyNavigation' type='boolean'>
+  If this attribute is not used, the user can navigate to specific items in  the list by pressing the first the first letter of the item's label. This is  done incrementally, so pressing additional keys will select more specific  items. This feature may be disabled for a listbox by setting this attribute  to true.
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the listbox is disabled or not. If this attribute is set to true,  the listbox is disabled. This is usually drawn with the text in grey. If the listbox is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the listbox, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='rows' type='integer'>
+  The number of rows to display in the list box. If the listbox contains more  than this many rows, a scrollbar will appear which the user can use to  scroll to the other rows. To get the actual number of rows in the listbox,  use the getRowCount method.
+</attr>
+<attr name='seltype'>
+  Used to indicate whether multiple selection is allowed.
+<value name='single'>
+    Only one row may be selected at a time.
+</value>
+<value name='multiple'>
+    Multiple rows may be selected at once.
+</value>
+</attr>
+<attr name='suppressonselect' type='boolean'>
+  If this attribue is not specified, a select event is fired whenever an item  is selected, either by the user or by calling one of the select methods. If  set to true, the select event is never fired.
+</attr>
+<attr name='tabindex' type='integer'>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.
+</attr>
+<attr name='value' type='string'>
+  You can associate a data value with each listitem. It is not used for any  specific purpose but you can access it with a script for your own use.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the listbox.
+</prop>
+<method name='addItemToSelection'>
+<prototype> addItemToSelection ( item ) </prototype>
+  
+  Selects the given item, without deselecting any other items that are already  selected.
+</method>
+<method name='appendItem' returns='listitem element'>
+<prototype> appendItem ( label , value ) </prototype>
+  
+  Creates a new listitem element and adds it to the end of the list box. You  may optionally set a value. The function returns the new item.
+</method>
+<method name='clearSelection'>
+<prototype> clearSelection ( ) </prototype>
+  
+  Deselects all of the items.
+</method>
+<prop name='currentItem' type='listitem element'>
+  Returns the last selected item in the list box, which is only useful in a  multiple selection list box.
+</prop>
+<prop name='disableKeyNavigation' type='boolean'>
+  If this attribute is not used, the user can navigate to specific items in  the list by pressing the first the first letter of the item's label. This is  done incrementally, so pressing additional keys will select more specific  items. This feature may be disabled for a listbox by setting this attribute  to true.
+</prop>
+<prop name='disabled'/>
+<method name='ensureElementIsVisible'>
+<prototype> ensureElementIsVisible ( element ) </prototype>
+  
+  If the element in the list box is not currently visible to the user, the list  box view is scrolled so that it is. If the item is already visible, no  scrolling occurs.
+</method>
+<method name='ensureIndexIsVisible'>
+<prototype> ensureIndexIsVisible ( index ) </prototype>
+  
+  If the item at the specified index is not currently visible to the user,  the list box view is scrolled so that it is. If the item is already visible,  no scrolling occurs.
+</method>
+<method name='getIndexOfFirstVisibleRow' returns='integer'>
+<prototype> getIndexOfFirstVisibleRow ( ) </prototype>
+  
+  Returns the index of the first displayed row in the list box. This is not  the same as the first row. If the view of the list box has been scrolled  down, the function can be used to retrieve the index of the first  row that the user can see.
+</method>
+<method name='getIndexOfItem' returns='integer'>
+<prototype> getIndexOfItem ( item ) </prototype>
+  
+  Returns the zero-based position of the given item. Items are numbered  starting from the first item displayed in the list.
+</method>
+<method name='getItemAtIndex' returns='listitem element'>
+<prototype> getItemAtIndex ( index ) </prototype>
+  
+  Returns the item that is at the position specified by the parameter  index in the list box.
+</method>
+<method name='getNextItem' returns='listitem element'>
+<prototype> getNextItem ( startItem, delta ) </prototype>
+  
+  This method returns a item after another one. The parameter startItem is  the item and delta is the number of items to count to.    getNextItem ( someItem, 2 );     This example, given a item someItem, will return the item 2 rows after  it, or null if no such item exists.
+</method>
+<method name='getNumberOfVisibleRows' returns='integer'>
+<prototype> getNumberOfVisibleRows ( ) </prototype>
+  
+  Returns the number of rows of the list box that are currently visible to  the user.
+</method>
+<method name='getPreviousItem' returns='listitem element'>
+<prototype> getPreviousItem ( startItem, delta ) </prototype>
+  
+  This method returns a item before another one. The parameter startItem is  the item and delta is the number of items to count to.    getPreviousItem ( someItem, 5 );     This example, given a item someItem, will return the item 5 rows before  it, or null if no such item exists.
+</method>
+<method name='getRowCount' returns='integer'>
+<prototype> getRowCount ( ) </prototype>
+  
+  Returns the total number of rows in the list box, regardless of how many  rows are displayed.
+</method>
+<method name='getSelectedItem' returns='listitem element'>
+<prototype> getSelectedItem ( index ) </prototype>
+  
+  When multiple items are selected, you can retrieve each selected item  using this function. The argument index specifies the index in the list  of selected items, not the row number of the item. Thus, getSelectedItem(7)  will return the seventh selected item.
+</method>
+<method name='insertItemAt' returns='listitem element'>
+<prototype> insertItemAt ( index, label , value ) </prototype>
+  
+  Creates a new listitem element and inserts it at a specific position in the  list box. You may optionally set a value. The function returns the new item.
+</method>
+<method name='invertSelection'>
+<prototype> invertSelection ( ) </prototype>
+  
+  Reverses the selected state of all the items. Selected items become  deselected and deselected items become selected.
+</method>
+<prop name='listBoxObject' type='nsIListBoxObject'>
+  The nsIListBoxObject behind the list box. This property is read-only. Most  of the features of the list box object are already available directly in the  listbox, so you will rarely have need to use this box object directly.
+</prop>
+<method name='removeItemAt' returns='listitem element'>
+<prototype> removeItemAt ( index ) </prototype>
+  
+  Removes the child item in the list box at the given index.  The function returns the removed item.
+</method>
+<method name='removeItemFromSelection'>
+<prototype> removeItemFromSelection ( item ) </prototype>
+  
+  Deselects the given item without deselecting other items.
+</method>
+<method name='scrollToIndex'>
+<prototype> scrollToIndex ( index ) </prototype>
+  
+  Scrolls the list box view to the specified index. This is different than  ensureIndexIsVisible because the view is always scrolled.
+</method>
+<prop name='selType'/>
+<method name='selectAll'>
+<prototype> selectAll ( ) </prototype>
+  
+  Selects all of the items. A select event is sent after the selection is made.
+</method>
+<method name='selectItem'>
+<prototype> selectItem ( item ) </prototype>
+  
+  Deselects all of the currently selected items and selects the given item.  A select event is sent after the selection is made.
+</method>
+<method name='selectItemRange'>
+<prototype> selectItemRange ( startItem , endItem ) </prototype>
+  
+  Selects the items in-between two items given as arguments, including the  start and end items. All other items are deselected. This method does  nothing for single-selection list boxes. A select event is sent after the  selection is made.
+</method>
+<prop name='selectedCount' type='integer'>
+  Returns the number of items that are currently selected.
+</prop>
+<prop name='selectedIndex' type='integer'>
+  Returns the index of the currently selected item. You may select an item by  assigning its index to this property. By assigning -1 to this property, all  items will be deselected.
+</prop>
+<prop name='selectedItem' type='listitem element'>
+  Returns the currently selected item. If there are multiple items selected,  the property will hold only the first selected item. To get all of the  selected items, use the selectedItems property. You may select an item by  assigning a listitem element to this property. All other items will be  deselected.
+</prop>
+<prop name='selectedItems' type='array of listitems'>
+  Returns an array of the selected items in the list.
+</prop>
+<method name='timedSelect'>
+<prototype> timedSelect ( item , timeout ) </prototype>
+  
+  Selects the item specified by the argument item after the number of  milliseconds given by the timeout argument. All other items are deselected.
+</method>
+<method name='toggleItemSelection'>
+<prototype> toggleItemSelection ( item ) </prototype>
+  
+  If the specified item is selected, it is deselected. If it is not selected,  it is selected. Other items in the list box that are selected are not affected,  and retain their selected state.
+</method>
+<prop name='value'/>
+</element>

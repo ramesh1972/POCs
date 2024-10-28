@@ -1,0 +1,123 @@
+a.topstory { font-family: verdana, arial, Helvetica, sans-serif; color: #000099; font-size: 15px; font-weight: bold; text-decoration: none; line-height: 20px}
+a:Visited.topstory { font-family: verdana, arial, Helvetica, sans-serif; color: #000099; font-size: 15px; font-weight: bold; text-decoration: none; line-height: 20px}
+a:Hover.topstory { font-family: verdana,arial, Helvetica, verdana, sans-serif; color: #e07000; font-size: 15px; font-weight: bold; text-decoration: underline; line-height: 20px}
+a:Active.topstory { font-family: verdana, arial, Helvetica, sans-serif; color: #333333; font-size: 15px; font-weight: bold; text-decoration: none; line-height: 20px}
+
+a.otherstory { font-family: verdana, arial, Helvetica,  sans-serif; color: #000099; font-size: 12px; font-weight: normal; text-decoration: none; line-height: 15px}
+a:Visited.otherstory { font-family: verdana, arial, Helvetica,  sans-serif; color: #000099; font-size: 12px; font-weight: bold; text-decoration: none; line-height: 15px}
+a:Hover.otherstory { font-family: verdana, arial, Helvetica, sans-serif; color: #e07000; font-size: 12px; font-weight: bold; text-decoration: underline; line-height: 15px}
+a:Active.otherstory { font-family: verdana, arial, Helvetica,  sans-serif; color: #333333; font-size: 12px; font-weight: bold; text-decoration: none; line-height: 15px}
+
+
+A {
+	COLOR: #000099; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000099; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #e07000; TEXT-DECORATION: underline
+}
+A.nounderline {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.nounderline:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.nounderline:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.navi {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.navi:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.navi:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A.footer {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.footer:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.footer:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A.leftnavi1 {
+	COLOR: black; TEXT-DECORATION: none
+}
+A.leftnavi1:visited {
+        COLOR: black; TEXT-DECORATION: none
+}
+A.leftnavi1:hover {
+        COLOR: #0000ff; TEXT-DECORATION: none
+}
+
+A.leftnavi2 {
+        COLOR: black; TEXT-DECORATION: none
+}
+A.leftnavi2:visited {
+        COLOR: black; TEXT-DECORATION: none
+}
+A.leftnavi2:hover {
+        COLOR: #0000ff; TEXT-DECORATION: none
+}
+TD {
+         FONT-SIZE:13px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.default {
+        FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+P {
+FONT-SIZE: 13px; LINE-HEIGHT: 15px;
+}
+
+.bdefault {
+        FONT-WEIGHT: bold; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.smaller {
+        FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.navi {
+        FONT-WEIGHT: bold; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.nushighlight {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; LINE-HEIGHT: 14px
+}
+.textlinks {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline; LINE-HEIGHT: 14px
+}
+.leftnavi {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; LINE-HEIGHT: 14px
+}
+.footer {
+        FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.sectionhead {
+        FONT-WEIGHT: bold; FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.pagehead {
+        FONT-WEIGHT: bold; FONT-SIZE: 24px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.subsectionhead {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.storyhead {
+    FONT-WEIGHT:bold;    FONT-SIZE: 15px; FONT-FAMILY: verdana, Arial, Helvetica, sans-serif; color: #000099
+}
+.nushead {
+        FONT-WEIGHT: bold; FONT-SIZE: 18px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.leftnavi1 {
+        FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; LINE-HEIGHT: 14px
+}
+
+.leftnavi2 {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; LINE-HEIGHT: 14px
+}
+
+.bluebk1 {background:#ffffff;color:000099;}
+
+.bluebk {color:000099;}

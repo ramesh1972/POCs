@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 2.7.3"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<html:div>
+    Would you like to save the following documents?
+    <html:hr/>
+</html:div>   
+Expense Report 1
+What I Did Last Summer
+<button id="yes" label="Yes"/>
+<button id="no" label="No"/>
+
+
+</window>
+

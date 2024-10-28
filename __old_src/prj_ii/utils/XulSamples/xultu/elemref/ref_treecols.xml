@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+
+<element name='treecols'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/trees.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_treecols.html</reference>
+  A group of treecol elements. There should one and only one treecols element  in a tree.  
+
+<implements>nsIAccessibleProvider</implements>
+<attr name='pickertooltiptext' spec=' Moz1.4 ' type='string'>
+  The text for the tooltip on the column picker.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the treecols.
+</prop>
+</element>

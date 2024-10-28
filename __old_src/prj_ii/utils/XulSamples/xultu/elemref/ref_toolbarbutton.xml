@@ -1,0 +1,146 @@
+<?xml version='1.0'?>
+
+<element name='toolbarbutton'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/toolbar.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_toolbarbutton.html</reference>
+  A button that appears on a toolbar. It is equivalent to a regular button  except that it may be rendered differently. Typically, it is expected to  have an image.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULButtonElement</implements>
+<attr name='accesskey' type='character'>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the toolbarbutton.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the toolbarbutton will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.
+</attr>
+<attr name='autoCheck' type='boolean'>
+  If this attribute is true, or left out, the checked state of the button will  be switched each time the button is pressed. If this attribute is false, the  checked state must be adjusted manually.
+</attr>
+<attr name='checkState' type='integer: 0, 1 or 2'>
+  This attribute may be used to create three state buttons, numbered 0, 1 and  2. When in state 0 or 1, pressing the button will switch to the opposite  state. When in state 2, pressing the button will switch to state 0. This  means that the button acts like a checkbox except that there is a third  state which must be set manually by adjusting the check state. If you wish  to have different behavior for how the states are adjusted, set the  autoCheck attribute to false and adjust the state with a script. The type  attribute must be set to 'checkbox' for buttons with a check state.  Constants for the possible values for this attribute are in the   nsIDOMXULButtonElement   interface.
+</attr>
+<attr name='checked' type='boolean'>
+  Indicates whether the button is checked or not. This feature is used for  toggle buttons on a toolbar. You can associate two images, a normal image  and a depressed image, to a toolbar button to create the apperance of the  button being toggled. In the stylesheet, just have a style rule that checks  for the checked attribute.
+</attr>
+<attr name='command' type='element id'>
+  Set to an id of a command element that is being observed by the  element.
+</attr>
+<attr name='crop'>
+  If the label of the toolbarbutton is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='dir'>
+  The direction in which the child elements of the toolbarbutton are placed. 
+<value name='normal'>
+    The elements are placed left to right or top to bottom in the order they
+    appear in the XUL code.
+</value>
+<value name='reverse'>
+    The elements are placed right to left or bottom to top. This is reverse of
+    the order in which they appear in the XUL code.
+</value>
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the toolbarbutton is disabled or not. If this attribute is set to true,  the toolbarbutton is disabled. This is usually drawn with the text in grey. If the toolbarbutton is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the toolbarbutton, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='dlgType'>
+  The dialog type of the button, used only when the button is in a dialog box.  You can use this feature to replace the standard dialog box buttons with custom  buttons, yet the dialog event methods will still function. For example, if the  dlgType is set to 'accept', the button will replace the dialog box's accept  button, which is usually labeled OK. Using this attribute on a button that is  not in a dialog box has no effect. The following values can be used as the dialog type:
+<value name='accept'>
+    The OK button, which will accept the changes when pressed.
+</value>
+<value name='cancel'>
+    The cancel button which will cancel the operation.
+</value>
+<value name='help'>
+    A help button for displaying help about the dialog.
+</value>
+<value name='disclosure'>
+    A button to show more information. This might be a button or a disclosure
+    triangle.
+</value>
+</attr>
+<attr name='group' type='string group name'>
+  Buttons with the same value for their group attribute are put into the same  group. Only one button from each group can be checked at a time. If the user  selects one the radio buttons, the others in the group are unchecked.
+</attr>
+<attr name='image' type='image URL'>
+  The URL of the image to appear on the toolbarbutton. If this is attribute is left  out, no image appears. The position of the image is determined by the dir  and orient attributes.
+</attr>
+<attr name='label' type='string'>
+  The label that will appear on the toolbarbutton. If this is left out, no text appears.
+</attr>
+<attr name='open' type='boolean'>
+  For the menu type buttons, the open attribute is set to true when the menu is  open. The open attribute is not present if the menu is closed.
+</attr>
+<attr name='orient'>
+  Used to specify whether the children of the toolbarbutton are oriented horizontally or  vertically. The default value depends on the element. You can also use the  '-moz-box-orient' style property.
+<value name='horizontal'>
+    Child elements of the toolbarbutton are placed next to each other in a row in the order
+    that they appear in the XUL source.
+</value>
+<value name='vertical'>
+    Child elements of the toolbarbutton are placed under each other in a column in the
+    order that they appear in the XUL source.
+</value>
+</attr>
+<attr name='tabindex' type='integer'>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.
+</attr>
+<attr name='type' type='string'>
+  The type of button. If this attribute is not present, a normal button is created.  You can set the type attribute to the value 'menu' to create a button with a  menu popup. This will typically cause the button to be displayed differently.
+<value name='menu'>
+    Set the type attribute to the value 'menu' to create a button with a
+    menu popup. Place a  menupopup  element inside the button in this case.
+    The user may click anywhere on the button to open and close the menu.
+</value>
+<value name='menu-button'>
+     You can also use the value 'menu-button' to create a button with a
+     menu. Unlike the 'menu' type, this type requires the user to press the
+     arrow to open the menu, but a different command may be invoked when the
+     main part of the button is pressed. This type of button would be used for
+     browser's back and forward buttons.
+</value>
+</attr>
+<attr name='validate'>
+  This attribute indicates whether to load the image from the cache or not.  This would be useful if the images are stored remotely or you plan on swapping  the image frequently. The following values are accepted, or leave out the  attribute entirely for default handling:
+<value name='always'>
+    The image is always checked to see whether it should be reloaded.
+</value>
+<value name='never'>
+    The image will be loaded from the cache if possible.
+</value>
+</attr>
+<prop name='accessKey'/>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the toolbarbutton.
+</prop>
+<prop name='autoCheck'/>
+<prop name='checkState'/>
+<prop name='checked' type='boolean'/>
+<prop name='command'/>
+<prop name='crop'/>
+<prop name='dir'/>
+<prop name='disabled'/>
+<prop name='dlgType'/>
+<prop name='group'/>
+<prop name='image'/>
+<prop name='label'/>
+<prop name='open'/>
+<prop name='orient'/>
+<prop name='type'/>
+</element>

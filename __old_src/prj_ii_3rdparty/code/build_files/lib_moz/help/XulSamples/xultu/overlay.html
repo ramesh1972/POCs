@@ -1,0 +1,645 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="advwiz.html"> 
+ <link rel="next" href="crosspov.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Overlays</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 12.6 - Overlays 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <SPAN CLASS="currentpage">Overlays</SPAN></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.5 - More Wizards"
+     href="advwiz.html">Previous</a>
+
+
+  <a class="nextlink" title="12.7 - Cross Package Overlays"
+     href="crosspov.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Overlays</h2>
+
+<P>
+This section will describe overlays which can be used to separate common
+content.
+</P>
+
+<H3>Using Overlays</H3>
+
+<P>
+In a simple application with only one window, you will generally have only one
+XUL file, along with a script file, a style sheet, a DTD file and perhaps some
+images. Some applications will have a number of dialogs associated with them also.
+These will be stored in separate XUL files. More sophisticated applications will
+contain many windows and dialogs.
+</P>
+
+<P>
+An application that has several windows will have numerous elements or parts of
+the user interface that are common between each window. For example, each of
+Mozilla's components share some common elements. Some of the menus are similar,
+such as the Tools and Help menus, the sidebar is similar, and each window shares
+some common global keyboard shortcuts.
+</P>
+
+<P>
+One could handle this by re-implementing the similar elements and functions in
+each file that are needed. However, this would be difficult to maintain. If you
+decide to change something, you would have to change it in numerous places.
+Instead, it would be better to use a mechanism that allows you to separate the
+common elements and have them shared between windows. You can do this with
+overlays.
+</P>
+
+<P>
+Within an overlay, you may place elements that are shared between all windows
+that use that overlay. Those elements are added into the window at locations
+determined by their ids.
+</P>
+
+<P>
+For example, let's say you want to create a help menu that is shared between
+several windows. The help menu will be placed in an overlay, using the same XUL
+that you would use normally. The menu will be given an
+<SPAN CLASS="attrib">id</SPAN> attribute to identify it. Each window will import
+the overlay using a directive which will be described in a moment. To use the help
+menu as defined in the overlay, you only need to add a single menu element with the
+same value for its <SPAN CLASS="attrib">id</SPAN> attribute as used in the overlay.
+This menu does not need to contain any children as those will be placed in the
+overlay.
+</P>
+
+<P>
+When a window with an overlay is opened, the elements in both the window and the
+overlay with the same ids are combined together. The children of matching elements
+are added to the end of the set of children in the window's element. Attributes
+that are present on the overlay's elements will be applied to the window's elements.
+These details will be explained in more detail later.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+To import an overlay into a window, use the syntax described below. Let's add this
+near the top of the findfiles dialog XUL file.
+</P>
+
+
+<DIV CLASS="sample"><PRE><SPAN STYLE="color: red;">&lt;?xul-overlay href="chrome://findfile/content/helpoverlay.xul"?&gt;</SPAN></PRE></DIV>
+
+
+
+<P>
+This line should be added somewhere near the top of the file, usually just before
+any DTDs are declared. In the example above, the window is importing an overlay
+stored in the file helpoverlay.xul.
+</P>
+
+<P>
+The overlay itself is a XUL file that contains an overlay element instead of a window
+element. Other than that, it is much the same. You can import overlays from inside
+other overlays. Overlays can also have their own stylesheets, DTDs and scripts.
+The example below shows a simple Help menu stored in an overlay.
+</P>
+
+
+Example 12.6.1:
+<A HREF='examples/ex_overlay_1.xul.txt'>Source</A>
+<DIV CLASS="examplec"><PRE>&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE overlay SYSTEM "chrome://findfile/locale/findfile.dtd"&gt;
+
+&lt;overlay id="toverlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;menu id="help-menu"&gt;
+  &lt;menupopup id="help-popup"&gt;
+    &lt;menuitem id="help-contents" label="&amp;contentsCmd.label;"
+              accesskey="&amp;contentsCmd.accesskey;"/&gt;
+    &lt;menuitem id="help-index" label="&amp;indexCmd.label;"
+              accesskey="&amp;indexCmd.accesskey;"/&gt;
+    &lt;menuitem id="help-about" label="&amp;aboutCmd.label;"
+              accesskey="&amp;aboutCmd.accesskey;"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menu&gt;
+
+&lt;/overlay&gt;</PRE></DIV>
+
+
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_overlay.html">overlay</A> element surrounds the overlay content. It
+uses the same namespace as XUL window files. Defined within the overlay is a
+single menu with three items in it. The <SPAN CLASS="attrib">id</SPAN> of this
+menu is <SPAN CLASS="aval">help-menu</SPAN>. This means that its content will be
+added to the window where a similar element exists with the same id value. If
+such an element does not exist, that part of the overlay is ignored. The overlay
+can contain as many elements as necessary. Note that the overlay needs to include
+the DTD file also. We use the same one as the main window here, but normally you
+would create a separate DTD file for each overlay.
+</P>
+
+<P>
+Next, we need to add the help menu to the findfiles dialog window. To do this
+just add a menu with the same id in the right location. The most likely place is
+just after the edit menu.
+</P>
+
+
+<DIV CLASS="sample"><PRE>  &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+    &lt;menupopup id="edit-popup"&gt;
+      &lt;menuitem label="&amp;cutCmd.label;" accesskey="&amp;cutCmd.accesskey;"
+                key="cut_cmd"/&gt;
+      &lt;menuitem label="&amp;copyCmd.label;" accesskey="&amp;copyCmd.accesskey;"
+                key="copy_cmd"/&gt;
+      &lt;menuitem label="&amp;pasteCmd.label;" accesskey="&amp;pasteCmd.accesskey;"
+                key="paste_cmd" disabled="true"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+  <SPAN STYLE="color: red;">&lt;menu id="help-menu" label="&amp;helpCmd.label;"
+        accesskey="&amp;helpCmd.accesskey;"/&gt;</SPAN>
+&lt;/menubar&gt;</PRE></DIV>
+
+
+
+<P>
+Here, the help menu element contains no content. The items from the menu are taken
+from the overlay because the ids match. We can then import the overlay in other
+windows and only have the contents of the help menu defined in one place. We need
+to add some lines to the DTD file as well:
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+ &lt;!ENTITY helpCmd.label "Help"&gt;
+ &lt;!ENTITY helpCmd.accesskey "h"&gt;
+ &lt;!ENTITY contentsCmd.label "Contents"&gt;
+ &lt;!ENTITY indexCmd.label "Index"&gt;
+ &lt;!ENTITY aboutCmd.label "About..."&gt;
+ &lt;!ENTITY contentsCmd.accesskey "c"&gt;
+ &lt;!ENTITY indexCmd.accesskey "i"&gt;
+ &lt;!ENTITY aboutCmd.accesskey "a"&gt;
+ &lt;!ENTITY findfilehelpCmd.label "Find files help"&gt;
+ &lt;!ENTITY findfilehelpCmd.accesskey "f"&gt;</PRE></DIV>
+
+
+
+<P>
+We will use the last two entities in a moment.
+</P>
+
+<P ALIGN="CENTER">
+<IMG SRC="images/overlay1.jpg" ALT="" WIDTH=205 HEIGHT=116>
+</P>
+
+<P>
+We can further reduce the amount of code within the window by putting the attributes
+on the help menu (<SPAN CLASS="attrib">label</SPAN> and
+<SPAN CLASS="attrib">accesskey</SPAN> in this example) in the overlay instead. Those
+attributes will be inherited by the element. If both the element and the window specify
+the same attribute, the value in the overlay will override the element's value.
+</P>
+
+<P>
+Let's change the help menu in this manner.
+</P>
+
+
+<DIV CLASS="sample"><PRE><B>findfile.xul:</B>
+
+<SPAN STYLE="color: red;">&lt;menu id="help-menu"/&gt;</SPAN>
+
+<B>helpoverlay.xul:</B>
+
+&lt;menu id="help-menu" <SPAN STYLE="color: red;">label="&amp;helpCmd.label;"
+       accesskey="&amp;helpCmd.accesskey;"</SPAN>&gt;</PRE></DIV>
+
+
+
+</DIV>
+
+<P>
+If there is content inside both the XUL window and in the overlay, the window's
+content will be used as is and the overlay's content will be appended to the end.
+This following example demonstrates this:
+</P>
+
+
+<DIV CLASS="sample"><PRE><B>stopandgo.xul:</B>
+
+&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?&gt;
+
+&lt;window title="Stop and Go" id="test-window"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;?xul-overlay href="chrome://findfile/content/toverlay.xul"?&gt;
+
+&lt;box id="singlebox"&gt;
+  &lt;button id="gobutton" label="Go"/&gt;
+  &lt;button id="stopbutton" label="Stop"/&gt;
+&lt;/box&gt;
+
+&lt;/window&gt;
+
+<B>toverlay.xul:</B>
+
+&lt;?xml version="1.0"?&gt;
+
+&lt;overlay id="toverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;box id="singlebox"&gt;
+  &lt;button id="backbutton" label="Back"/&gt;
+  &lt;button id="forwardbutton" label="Forward"/&gt;
+&lt;/box&gt;
+
+&lt;/overlay&gt;</PRE></DIV>
+
+
+
+<P ALIGN="CENTER">
+<IMG SRC="images/overlay2.jpg" ALT="" WIDTH=355 HEIGHT=54>
+</P>
+
+<P>
+In this example, the box with the identifier <SPAN CLASS="aval">singlebox</SPAN>
+contains its own content. The elements are combined and the two buttons from the
+overlay are added to the end of the box. 
+</P>
+
+<DIV CLASS="task">
+
+<P>
+We can use this technique in the find files dialog also:
+</P>
+
+
+<DIV CLASS="sample"><PRE><B>findfile.xul:</B>
+
+  <SPAN STYLE="color: red;">&lt;menu id="help-menu"&gt;
+    &lt;menupopup id="help-popup"&gt;
+      &lt;menuitem id="help-findfiles" label="&amp;findfilehelpCmd.label;" accesskey="&amp;findfilehelpCmd.accesskey;"/&gt;
+    &lt;/menupopup&gt;
+   &lt;/menu&gt;</SPAN>
+&lt;/menubar&gt;</PRE></DIV>
+
+
+
+<P>
+The <SPAN CLASS="aval">id</SPAN> attribute of the
+<A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A> element also matches the one in
+the overlay. This will cause the items to be merged into the same
+popup. Overlays will merge items with the same ids even if they are
+inside of other elements.
+</P>
+
+</DIV>
+
+<P ALIGN="CENTER">
+<IMG SRC="images/overlay3.jpg" WIDTH=243 ALT="" HEIGHT=133>
+</P>
+
+<H3>Placing Overlaid Elements</H3>
+
+<P>
+However, we may have wanted to have the menu items from the overlay in the
+previous example placed at the beginning of the menu instead of at the end.
+XUL provides a mechanism that allows you to not only place them at the beginning
+but to put some of the items at the top and others at the bottom (or anywhere
+in-between). This allows you to overlay menus, toolbars and other widgets at the
+exact location that you wish.
+</P>
+
+<P>
+To do this, use the <SPAN CLASS="attrib">insertbefore</SPAN> attribute on
+the menuitems. Its value should be the <SPAN CLASS="attrib">id</SPAN> of
+an element that you want to insert the item before. Alternatively, you
+can use the <SPAN CLASS="attrib">insertafter</SPAN> attribute to indicate
+which element to insert after. These attributes only affect the element the
+attributes are added to. If one element is 'inserted before', the remaining
+elements are still added to the end. If you want to have all the elements
+appear before, you must put the <SPAN CLASS="attrib">insertbefore</SPAN>
+attribute on all elements.
+</P>
+
+<P>
+In addition, you can use the <SPAN CLASS="attrib">position</SPAN> attribute if you
+want to specify a specific index position. The first position is 1.
+</P>
+
+<P>
+Let's say that we wanted the Contents and Index items from the previous example
+to appear before the Find files help item and the About item to appear after. To
+do this we add the <SPAN CLASS="attrib">insertbefore</SPAN> attribute to both the
+Contents and Index menu items. For completeness, you could add an
+<SPAN CLASS="attrib">insertafter</SPAN> attribute on the About menu too, but it
+isn't necessary because it appears at the end by default.
+</P>
+
+<P>
+In the help menu example above, the id of the menu item is
+<SPAN CLASS="aval">help-findfiles</SPAN>. Thus, we need to set the
+<SPAN CLASS="attrib">insertbefore</SPAN> attributes to this id. The example below
+shows the changes:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;menupopup id="help-popup"&gt;
+  &lt;menuitem id="help-contents" label="Contents" <SPAN STYLE="color: red;">insertbefore="help-findfiles"</SPAN>/&gt;
+  &lt;menuitem id="help-index" label="Index" <SPAN STYLE="color: red;">insertbefore="help-findfiles"</SPAN>/&gt;
+  &lt;menuitem id="help-about" label="About..."/&gt;
+&lt;/menupopup&gt;</PRE></DIV>
+
+
+
+<P>
+Now, when a window using the help overlay (such as the find files dialog) is opened,
+the following will occur:
+</P>
+
+<OL>
+  <LI>For all of the items directly in the overlay, that is all the children of the
+      overlay element, an element in the base window is found with the same id. If
+      not found, that element in the overlay is ignored. In this example, the
+      elements with the ids of <SPAN CLASS="aval">help-menu</SPAN> and
+      <SPAN CLASS="aval">help-popup</SPAN> are found.</LI>
+  <LI>If found, the attributes on the overlay's element are copied to the found
+      element.</LI>
+  <LI>The children of the overlay's element, in this case each menuitem, are
+      inserted as children of the base window's element.
+      <UL>
+        <LI>If the overlay's element contains an <SPAN CLASS="attrib">insertafter</SPAN>
+            attribute, the element is added just after the element in the base window
+            with the id that matches the value of this attribute.</LI>
+        <LI>If the overlay's element contains an <SPAN CLASS="attrib">insertbefore</SPAN>
+            attribute, the element is added just before the element in the base window
+            with the id that matches the value of this attribute.</LI>
+        <LI>If the overlay's element contains an <SPAN CLASS="attrib">position</SPAN>
+            attribute, the element is added at the one-based index specified in this
+            attribute.</LI>
+        <LI>Otherwise, the element is added as the last child.</LI>
+      </UL>
+  </LI>
+</OL>
+
+<P>
+Actually, the values of <SPAN CLASS="attrib">insertbefore</SPAN> and
+<SPAN CLASS="attrib">insertafter</SPAN> can be comma-separated lists, in which
+case the first id in the list that is found in the window is used to determine the
+position.
+</P>
+
+<HR>
+<P>
+<A HREF="crosspov.html">(Next)</A>
+Next, we'll find out to apply overlays to windows in different packages.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_overlay_1.xul.txt'>12.6.1</A>
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-overlay.xul.txt'>Source</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.5 - More Wizards"
+     href="advwiz.html">Previous</a>
+
+
+  <a class="nextlink" title="12.7 - Cross Package Overlays"
+     href="crosspov.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

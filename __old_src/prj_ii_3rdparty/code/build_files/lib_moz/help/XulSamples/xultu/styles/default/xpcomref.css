@@ -1,0 +1,61 @@
+.interfaceinfo {
+  margin-left: 1em;
+}
+  
+.attrcomment {
+  margin-left: 1em;
+}
+
+.methodblock {
+  margin-top: 2ex;
+}
+
+dt {
+  margin-top: 2ex;
+}
+
+.dblock {
+  margin-left: 1em;
+  padding: 2px;
+  padding-top: 3px;
+  border: 1px solid black;
+}
+
+.dblock > code {
+  display: block;
+  margin-top: -1px;
+  margin-bottom: 0;
+  padding: 1.5ex 1em;
+  border: 1px solid black;
+}
+
+.constblocks td {
+  padding: 6px;
+}
+
+.groupindex td {
+  padding-left: 3em;
+}
+
+.removed {
+  color: red;
+}
+
+.keepspaces {
+  white-space: pre;
+}
+
+pre {
+  font: sans-serif;
+}
+
+table.dcblock {
+  margin-left: 1em;
+  margin-top: 2px;
+  margin-bottom: 2ex;
+}
+
+table.dcblock td {
+  padding: 1.5ex 1em;
+}
+

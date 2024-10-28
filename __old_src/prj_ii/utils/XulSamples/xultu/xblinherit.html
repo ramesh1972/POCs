@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="xblevents.html"> 
+ <link rel="next" href="xblex.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - XBL Inheritance</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 11.7 - XBL Inheritance 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <SPAN CLASS="currentpage">XBL Inheritance</SPAN></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.6 - Adding Event Handlers"
+     href="xblevents.html">Previous</a>
+
+
+  <a class="nextlink" title="11.8 - XBL Example"
+     href="xblex.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>XBL Inheritance</h2>
+
+<P>
+In this section, we'll look at how to extend existing XBL definitions.
+</P>
+
+<H3>Inheritance</H3>
+
+<P>
+Sometimes you may want to create an XBL widget that is similar to an existing
+one. For example, let's say you want to create an XBL button with a popup. One
+way to create this is to duplicate the existing XBL code for buttons. However,
+it would be better to simply extend the existing button code.
+</P>
+
+<P>
+Any binding can be extended with another. The child binding can add properties,
+methods and event handlers. The child binding will have all the features it defines
+in addition to the features from the binding it inherits from (and any that binding
+inherits from and so on up the tree).
+</P>
+
+<P>
+To extend an existing binding, add an <SPAN CLASS="attrib">extends</SPAN>
+attribute on to the <A CLASS="tag" HREF="elemref/ref_xblbinding.html">binding</A> tag. For example, the
+following binding creates a textbox which adds the text 'http://www' to
+the beginning of its value when the F4 key is pressed.
+</P>
+
+
+Example 11.7.1:
+<A HREF='examples/ex_xblinherit_1.xml.txt'>Source</A>
+<DIV CLASS="example"><PRE>&lt;binding id="textboxwithhttp"
+         extends="chrome://global/content/bindings/textbox.xml#textbox"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="keypress" keycode="VK_F4"&gt;
+      this.value="http://www"+value;
+    &lt;/handler&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+The XBL here extends from the XUL textbox element. The URL given in the
+<SPAN CLASS="attrib">extends</SPAN> attribute above is the URL of the binding
+of the textbox binding. This means that we inherit all of the content and
+behavior provided by the textbox binding. In addition, we add a handler which
+responds to the keypress event.
+</P>
+
+<H3>Autocompleting TextBoxes</H3>
+
+<P>
+The example above is similar to how the URL autocomplete feature works in Mozilla.
+A textbox that supports autocomplete is just one with a XBL binding that extends
+the basic textbox.
+</P>
+
+<P>
+The autocomplete textbox adds extra event handling so that when a URL is typed,
+a menu will pop up with possible completions. You can use it in your own
+applications too. Just create a textbox with two extra attributes.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;textbox type="autocomplete" searchSessions="history"/&gt;</PRE></DIV>
+
+
+
+<P>
+Set the <SPAN CLASS="attrib">type</SPAN> to
+<SPAN CLASS="aval">autocomplete</SPAN> to add the autocomplete feature to an existing
+textbox. Set the <SPAN CLASS="attrib">searchSessions</SPAN> to indicate
+what type of data to look up. In this case, the value <SPAN CLASS="aval">history</SPAN>
+is used, which looks up URLs in the history. (You can also use the value
+<SPAN CLASS="aval">addrbook</SPAN> to look up addresses in the address book.)
+</P>
+
+<HR>
+<P>
+<A HREF="xblex.html">(Next)</A>
+In the next section, we'll see an example XBL-defined widget.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_xblinherit_1.xml.txt'>11.7.1</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.6 - Adding Event Handlers"
+     href="xblevents.html">Previous</a>
+
+
+  <a class="nextlink" title="11.8 - XBL Example"
+     href="xblex.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,521 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="bulletins.html"> 
+ <link rel="next" href="grids.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Tabboxes</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 4.3 - Tabboxes 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <SPAN CLASS="currentpage">Tabboxes</SPAN></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="4.2 - Stack Positioning"
+     href="bulletins.html">Previous</a>
+
+
+  <a class="nextlink" title="4.4 - Grids"
+     href="grids.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Tabboxes</h2>
+
+<P>
+It is common in preference dialogs for tabbed pages to appear. We'll find out
+how to create them here.
+</P>
+
+<H3>Tabboxes</H3>
+
+<P>
+Tabboxes are typically used in an application in the preferences window. A series
+of tabs appears across the top of a window. The user can click each tab to see a
+different set of options. It is useful in cases when you have more options than will
+fit in one screen.
+</P>
+
+<P>
+XUL provides a method to create such dialogs. It involves five new elements, which are
+described briefly here and in more detail below.
+</P>
+
+<UL>
+  <LI><DIV CLASS="tag">tabbox</DIV>
+      The outer box that contains the tabs along the top and the tab pages themselves.
+  </LI>
+  <LI><DIV CLASS="tag">tabs</DIV>
+      The inner box that contains the individual tabs. In other words, this is the row
+      of tabs.
+  </LI>
+  <LI><DIV CLASS="tag">tab</DIV>
+      A specific tab. Clicking on the tab brings the tab page to the front.
+  </LI>
+  <LI><DIV CLASS="tag">tabpanels</DIV>
+      The container for the pages.
+  </LI>
+  <LI><DIV CLASS="tag">tabpanel</DIV>
+      The body of a single page. You would place the content for a page within this
+      element. The first tabpanel corresponds to the first tab, the second tabpanel
+      corresponds to the second tab and so on.
+  </LI>
+</UL>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_tabbox.html">tabbox</A> is the outer element. It consists of two
+children, a <A CLASS="tag" HREF="elemref/ref_tabs.html">tabs</A> element which contains the row of tabs
+and a <A CLASS="tag" HREF="elemref/ref_tabpanels.html">tabpanels</A> elements which contains the tabbed pages.
+</P>
+
+<P>
+Shown below is the general syntax of a tabbox:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;tabbox id="tablist"&gt;
+  &lt;tabs&gt;
+    -- tab elements go here --
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    -- tabpanel elements go here --
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;</PRE></DIV>
+
+
+
+<P>
+The tab elements are placed inside a <A CLASS="tag" HREF="elemref/ref_tabs.html">tabs</A> element
+which is much like a regular box. The <A CLASS="tag" HREF="elemref/ref_tabs.html">tabs</A>
+element itself has been placed inside a <A CLASS="tag" HREF="elemref/ref_tabbox.html">tabbox</A>. The
+<A CLASS="tag" HREF="elemref/ref_tabbox.html">tabbox</A> also contains a <A CLASS="tag" HREF="elemref/ref_tabpanels.html">tabpanels</A>
+element which will appear below the tabs due to the vertical orientation on the
+whole tabbox.
+</P>
+
+<P>
+There is really nothing special about the tab elements that make them different than
+boxes. The difference is that the tabs render slightly differently and only one tab
+panel's contents are visible at once, much like a
+<A CLASS="tag" HREF="elemref/ref_deck.html">deck</A>.
+</P>
+
+<P>
+The content of the individual tab pages should go inside each
+<A CLASS="tag" HREF="elemref/ref_tabpanel.html">tabpanel</A> element. It does not go in the
+<A CLASS="tag" HREF="elemref/ref_tab.html">tab</A> element as that is where the contents of the tab
+along the top go (which could contain any elements itself).
+</P>
+
+<P>
+Each <A CLASS="tag" HREF="elemref/ref_tabpanel.html">tabpanel</A> element becomes a page on the tabbed display.
+The first panel corresponds to the first tab, the second element inside the panel
+corresponds to the second element, and so on. There is a one-to-one relationship
+between each <A CLASS="tag" HREF="elemref/ref_tab.html">tab</A> element and the
+<A CLASS="tag" HREF="elemref/ref_tabpanel.html">tabpanel</A> elements.
+</P>
+
+<P>
+When determining the size of the <A CLASS="tag" HREF="elemref/ref_tabbox.html">tabbox</A>, the size of the
+largest page is used. That means that if there are ten textboxes on one tab page
+and only one on another, the tab page will be sized to fit the one with the ten on
+it as this takes up more room. The area taken up by the tab area does not change
+when the user switches to a new tab page.
+</P>
+
+<P>
+Let's look at an example:
+</P>
+
+
+Example 4.3.1:
+<A HREF='examples/ex_tabpanel_1.xul.txt'>Source</A>
+<A HREF="examples/ex_tabpanel_1.xul" ONCLICK="window.open('examples/ex_tabpanel_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="Mail"/&gt;
+    &lt;tab label="News"/&gt;
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    &lt;tabpanel id="mailtab"&gt;
+      &lt;checkbox label="Automatically check for mail"/&gt;
+    &lt;/tabpanel&gt;
+    &lt;tabpanel id="newstab"&gt;
+      &lt;button label="Clear News Buffer"/&gt;
+    &lt;/tabpanel&gt;
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/tabpanel1.jpg" ALIGN="left" ALT="" WIDTH=210 HEIGHT=89>
+Here, two tabs have been added. The first one labeled Mail and the other labeled
+News. When the user clicks the Mail tab, the contents of the first tab page will
+be displayed. In this case, the box with the check box labeled 'Automatically
+check for mail' will appear in the first tab. The second tab, when clicked, will
+display the box containing the button labeled Clear News Buffer. In the code, the
+two tab pages have been labeled 'Mail' and 'News'.
+</P>
+
+<P>
+The currently selected tab element is given an additional
+<SPAN CLASS="attrib">selected</SPAN> attribute on a
+<A CLASS="tag" HREF="elemref/ref_tab.html">tab</A> element which is set to
+<SPAN CLASS="aval">true</SPAN>. This is used to give the currently selected tab a
+different appearance so that it will look selected. Only one tab will have a true
+value for this attribute at a time.
+</P>
+
+<P>
+Finally, you can change the position of the tabs so that they appear on any
+side of the tab pages. There is no special syntax to do this. You simply
+rearrange the position of the tabs and set the <SPAN CLASS="attrib">orient</SPAN>
+attribute as necessary. Remember that the tab elements are much like regular boxes
+in terms of layout. However, you should probably leave the tabs on top, otherwise
+they might not look very good under particular themes.
+</P>
+
+<P>
+For example, to put the tabs along the left side, change the orientation of the
+<A CLASS="tag" HREF="elemref/ref_tabs.html">tabs</A> so that it is vertical. This is because you want
+the tabs to appear vertically stacked. Also, adjust the
+<A CLASS="tag" HREF="elemref/ref_tabbox.html">tabbox</A> so it has horizontal orientation. This needs to be
+done because you want the tabs to appear beside the tab pages.
+</P>
+
+<P>
+You can place the tabs on the right or bottom side by moving the
+<A CLASS="tag" HREF="elemref/ref_tabs.html">tabs</A> so that it is after the
+<A CLASS="tag" HREF="elemref/ref_tabpanels.html">tabpanels</A>.
+</P>
+
+<H3>Adding Tabs to the Find Files Dialog</H3>
+
+<DIV CLASS="task">
+
+<P>
+Let's add a second panel to the find files dialog. We'll create an Options tab that will
+contain some options for searching. This may not be the best interface for doing this,
+but we'll use it to demonstrate tabs. The label across the top and the search criteria
+box will need to go on the first tab. We'll add some options on the second tab. The
+progress bar and the buttons can stay on the main dialog, outside of the tabs.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;vbox flex="1"&gt;
+
+<SPAN STYLE="color: red;">&lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="Search" selected="true"/&gt;
+    &lt;tab label="Options"/&gt;
+  &lt;/tabs&gt;
+
+  &lt;tabpanels&gt;
+   &lt;tabpanel id="searchpanel" orient="vertical"&gt;</SPAN>
+
+    &lt;description&gt;
+     Enter your search criteria below and select the Find button to begin
+     the search.
+    &lt;/description&gt;
+
+    &lt;spacer style="height: 10px"/&gt;
+
+    &lt;groupbox orient="horizontal"&gt;
+      &lt;caption label="Search Criteria"/&gt;
+
+      &lt;menulist id="searchtype"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Name"/&gt;
+          &lt;menuitem label="Size"/&gt;
+          &lt;menuitem label="Date Modified"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+      &lt;spacer style="width: 10px;"/&gt;
+      &lt;menulist id="searchmode"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Is"/&gt;
+          &lt;menuitem label="Is Not"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+
+      &lt;spacer style="height: 10px"/&gt;
+      &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+
+    &lt;/groupbox&gt;
+   <SPAN STYLE="color: red;">&lt;/tabpanel&gt;
+
+   &lt;tabpanel id="optionspanel" orient="vertical"&gt;
+    &lt;checkbox id="casecheck" label="Case Sensitive Search"/&gt;
+    &lt;checkbox id="wordscheck" label="Match Entire Filename"/&gt;
+   &lt;/tabpanel&gt;
+
+ &lt;/tabpanels&gt;
+&lt;/tabbox&gt;</SPAN></PRE></DIV>
+
+
+
+<P ALIGN="CENTER">
+<IMG SRC="images/tabpanel2.jpg" ALT="" WIDTH=473 HEIGHT=201>
+</P>
+
+<P>
+The tab elements have been placed around the main content of the window. You can
+see the two tabs, Search and Options. Clicking on each one will bring up the
+respective tab pages. As shown by the image, the two options appear on the second
+tab. The first tab looks pretty much like it did before, apart from the tabs
+along the top.
+</P>
+
+</DIV>
+
+<HR>
+<P>
+<A HREF="grids.html">(Next)</A>
+Next, we'll look at how to create grids of content.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_tabpanel_1.xul.txt'>4.3.1</A>
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-tabpanel.xul.txt'>Source</A>
+<A HREF="examples/findfile/findfile-tabpanel.xul" ONCLICK="window.open('examples/findfile/findfile-tabpanel.xul','xulff','chrome,resizable'); return false;">View</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="4.2 - Stack Positioning"
+     href="bulletins.html">Previous</a>
+
+
+  <a class="nextlink" title="4.4 - Grids"
+     href="grids.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

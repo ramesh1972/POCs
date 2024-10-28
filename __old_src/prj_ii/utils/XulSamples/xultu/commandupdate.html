@@ -1,0 +1,433 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="commands.html"> 
+ <link rel="next" href="broadob.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Updating Commands</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 6.6 - Updating Commands 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <SPAN CLASS="currentpage">Updating Commands</SPAN></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.5 - Commands"
+     href="commands.html">Previous</a>
+
+
+  <a class="nextlink" title="6.7 - Broadcasters and Observers"
+     href="broadob.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Updating Commands</h2>
+
+<P>
+In this section, we will look at how to update commands.
+</P>
+
+<H3>Invoking Commands</H3>
+
+<P>
+If a command has an <SPAN CLASS="attrib">oncommand</SPAN> attribute, you can
+just invoke it by using the <SPAN CLASS="attrib">doCommand</SPAN> method of
+the command or an element which is attached to it. For other commands, you
+will need to use a couple of additional lines of code. You will need to use
+these extra steps when invoking commands implemented by a controller. In
+addition, you will need to do this when creating your own menu commands, for
+instance to implement the edit menu commands in your own application.
+</P>
+
+<P>
+Fortunately, the extra code is fairly simple. All we need to do is get the
+needed controller and call the command. A simple way of doing this is the
+following:
+</P>
+
+
+<DIV CLASS="sample"><PRE>var controller = document.commandDispatcher.getControllerForCommand("cmd_paste");
+if (controller && controller.isCommandEnabled("cmd_paste"))
+  controller.doCommand(command);
+}</PRE></DIV>
+
+
+
+<P>
+The code above first retrieves the controller for the 'cmd_paste' command from
+the command dispatcher. Then, it checks to see whether the command is enabled,
+and then executes the command using the <SPAN CLASS="attrib">doCommand</SPAN>
+method of the controller. Note that we don't need to figure out which element
+to use or which controller to use. The command dispatcher handles that part.
+Also, we could just call <SPAN CLASS="attrib">doCommand</SPAN> without
+checking if the command was enabled or not, although we probably shouldn't do
+that.
+</P>
+
+<P>
+Th code above is generic enough that it can be a function that takes a command
+as an argument and executes that command. This function could then be reused
+for all commands. In fact, this is common enough that Mozilla includes a
+library which does just that. If you include the script
+'chrome://global/content/globalOverlay.js' in a XUL file, you can call the
+<SPAN CLASS="attrib">goDoCommand</SPAN> method which executes the command
+passed as the argument. The code for this function is only a few lines long so
+you could include it directly in your code if for some reason you didn't want
+to include the library.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;script src="chrome://global/content/globalOverlay.js"/&gt;
+
+&lt;command id="cmd_paste" oncommand="goDoCommand('cmd_paste');/>
+&lt;button label="Paste" command="cmd_paste"/></PRE></DIV>
+
+
+
+<P>
+The example above will implement a Paste button. It is attached to the command
+which will invoke the command on the necessary controller when called. The
+code above is all you need to implement the functionality of the paste command
+in your application. The only other thing you need to do is ensure that the
+enabled status of the paste command, and therefore the button, is updated at
+the right time, which is described below.
+</P>
+
+<H3>Command Updaters</H3>
+
+<P>
+A command updater is an extra feature of the &lt;commandset&gt; element which
+allows it to update the enabled status of one or more commands when certain
+events happen. You will need to think about when a command is valid and when
+it is not. In addition, you will need to consider when the state could change
+and when the commands should be updated.
+</P>
+
+<P>
+For example, the paste command is valid when a textbox has the focus and there
+is something on the clipboard to paste. The command will become enabled
+whenever a textbox is focused and when the clipboard contents change.
+A command updater will listen for these situations and code can be executed
+which enables and disables commands as necessary.
+</P>
+
+<P>
+A simple command updater looks like this:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;commandset id="updatePasteItem"
+            commandupdater="true"
+            events="focus"
+            oncommandupdate="goUpdateCommand('cmd_paste');"/></PRE></DIV>
+
+
+
+<P>
+A command updater is indicated by using the
+<SPAN CLASS="attrib">commandupdater</SPAN> attribute, which should be set to
+<SPAN CLASS="aval">true</SPAN>. The
+<SPAN CLASS="attrib">events</SPAN> attribute is used to list the events that
+the command updater listens for. You can specify multiple events by separating
+them with commas. In the example above, the command updater listens for the
+focus event. This causes commands to be updated when an element receives the
+focus.
+</P>
+
+<P>
+When a focus event occurs, the code in the
+<SPAN CLASS="attrib">oncommandupdate</SPAN> attribute is called. In the
+example, the <SPAN CLASS="attrib">goUpdateCommand</SPAN> method is called
+which is a function provided by the globalOverlay.js script described earlier.
+It will update the command and enable or disable necessary buttons and menu
+items. The code behind it is fairly simple. It just gets the necessary
+controller, calls its <SPAN CLASS="attrib">isCommandEnabled</SPAN> method,
+and then enables or disables the command. If you have several commands to
+update, call the <SPAN CLASS="attrib">goUpdateCommand</SPAN> method once for
+each command.
+</P>
+
+<P>
+Note that the command updater will receive notifications about all focus
+events on all elements, even if other event handlers respond to the event.
+Essentially, a command updater is like a global event handler.
+</P>
+
+<P>
+Command updaters have a number of events which they can respond to which are
+listed below. It is also possible to create your own.
+</P>
+
+<UL>
+  <LI><STRONG>focus</STRONG>: occurs when the focused element changes.</LI>
+  <LI><STRONG>select</STRONG>: occurs when the selected text changes.</LI>
+  <LI><STRONG>undo</STRONG>: occurs when the undo buffer changes.</LI>
+  <LI><STRONG>clipboard</STRONG>: occurs when the contents of the clipboard changes.</LI>
+</UL>
+
+<P>
+The following example shows the command updaters used in the Mozilla browser
+to update the edit menu commands. The functions used can be found in the
+'chrome://communicator/content/utilityOverlay.js' script.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;commandset id="globalEditMenuItems"
+            commandupdater="true"
+            events="focus"
+            oncommandupdate="goUpdateGlobalEditMenuItems()"/&gt;
+&lt;commandset id="selectEditMenuItems"
+            commandupdater="true"
+            events="select"
+            oncommandupdate="goUpdateSelectEditMenuItems()"/&gt;
+&lt;commandset id="undoEditMenuItems"
+            commandupdater="true"
+            events="undo"
+            oncommandupdate="goUpdateUndoEditMenuItems()"/&gt;
+&lt;commandset id="clipboardEditMenuItems"
+            commandupdater="true"
+            events="clipboard"
+            oncommandupdate="goUpdatePasteMenuItems()"/&gt;</PRE></DIV>
+
+
+
+<HR>
+<P>
+<A HREF="broadob.html">(Next)</A>
+Next, we'll find out how to use observers.
+
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.5 - Commands"
+     href="commands.html">Previous</a>
+
+
+  <a class="nextlink" title="6.7 - Broadcasters and Observers"
+     href="broadob.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

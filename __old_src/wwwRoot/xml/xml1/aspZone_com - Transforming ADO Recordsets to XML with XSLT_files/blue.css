@@ -1,0 +1,48 @@
+TD.banner {
+	BACKGROUND-COLOR: #006699
+}
+TD.topnav {
+	COLOR: #ffffff; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #669999
+}
+TD.leftnav {
+	BACKGROUND-COLOR: #669999
+}
+TD.content {
+	BACKGROUND-COLOR: #ffffff
+}
+.menu {
+	FONT-SIZE: 12pt; COLOR: #ffffff; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #006699; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.menuSmall {
+	FONT-SIZE: 10pt; COLOR: #ffffff; FONT-FAMILY: Verdana; TEXT-DECORATION: none
+}
+.menuSmall:hover {
+	FONT-WEIGHT: bolder; COLOR: #006699
+}
+.menuActive {
+	COLOR: #ffffff; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #3399cc; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.contentBlue {
+	FONT-SIZE: 12pt; COLOR: #003399; FONT-FAMILY: Verdana
+}
+.contentBlueSm {
+	FONT-SIZE: 8pt; COLOR: #003399; FONT-FAMILY: Verdana
+}
+.contentBlueTiny {
+	FONT-SIZE: 6pt; COLOR: #003399; FONT-FAMILY: Verdana
+}
+.contentGreen {
+	FONT-SIZE: 12pt; COLOR: #669999; FONT-FAMILY: Verdana
+}
+.contentWhite {
+	FONT-SIZE: 10pt; COLOR: #ffffff; FONT-FAMILY: Verdana
+}
+.title {
+	FONT-SIZE: 12pt; COLOR: #003399; FONT-FAMILY: Verdana
+}
+.description {
+	FONT-SIZE: 8pt; COLOR: #669999; FONT-FAMILY: Verdana
+}
+.tinylink {
+	FONT-SIZE: 8pt; TEXT-DECORATION: none
+}

@@ -1,0 +1,116 @@
+<?xml version='1.0'?>
+
+<element name='menulist'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/lists.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_menulist.html</reference>
+  An element that can be used for drop-down choice lists. The user may select one  of the elements displayed in the menulist. The currently selected choice is  displayed on the menulist element. To create the drop-down, put a menupopup  inside the menulist containing the choices as menuitem elements.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULMenuListElement</implements>
+<attr name='accesskey' type='character'>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the menulist.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the menulist will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.
+</attr>
+<attr name='crop'>
+  If the label of the menulist is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='disableautoselect' type='boolean'>
+  If this attribute is true or omitted, the selected item on the menu will  update to match what the user entered in the textbox. If the text does not  match any of the items in the list, the menu selection is cleared. If this  attribute is false, the selection is never updated to match the text box.  This attribute applies only to editable menulists.
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the menulist is disabled or not. If this attribute is set to true,  the menulist is disabled. This is usually drawn with the text in grey. If the menulist is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the menulist, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='editable' type='boolean'>
+  Indicates that the value of the menulist can be modified by typing directly  into the value field. This is rendered as a textbox with a drop-down arrow  beside it. The user may enter text into the textbox or select one of the choices  by clicking from the drop-down.
+</attr>
+<attr name='focused' type='boolean'>
+  This attribute is set to true if the menulist element is focused.
+</attr>
+<attr name='image' type='image URL'>
+  The URL of the image to appear on the menulist. If this is attribute is left  out, no image appears. The position of the image is determined by the dir  and orient attributes.
+</attr>
+<attr name='label' type='string'>
+  The label that will appear on the menulist. If this is left out, no text appears.
+</attr>
+<attr name='open' type='boolean'>
+  If true, the menu popup is showing. You can change this value to show or hide the popup.
+</attr>
+<attr name='src' type='image URL'>
+  The URL of the image to appear on the menulist. If this attribute is left  out, no image appears.
+</attr>
+<attr name='tabindex' type='integer'>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.
+</attr>
+<attr name='value' type='string'>
+  The value of the value property of the currently selected item in the menulist.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the menulist.
+</prop>
+<method name='appendItem' returns='menuitem element'>
+<prototype> appendItem ( label , value ) </prototype>
+  
+  Creates a new menuitem element and adds it to the end of the menulist. You  may optionally set a value. The function returns the new item.
+</method>
+<prop name='crop'/>
+<prop name='disableautoselect'/>
+<prop name='disabled'/>
+<prop name='inputField' type='textbox element'>
+  A reference to the textbox element used for editable menu lists. This property is  read only and applies to editable menulists only.
+</prop>
+<method name='insertItemAt' returns='menuitem element'>
+<prototype> insertItemAt ( index, label , value ) </prototype>
+  
+  Creates a new menuitem element and inserts it at a specific position in the  menu. You may optionally set a value.  The function returns the new item.
+</method>
+<prop name='label'/>
+<prop name='menuBoxObject' spec=' Moz1.3 ' type='nsIMenuBoxObject'>
+  A reference to the nsIMenuBoxObject which implements the menu.
+</prop>
+<prop name='menupopup' spec=' Moz1.3 ' type='menupopup element'>
+  A reference to the menupopup used by the menulist. This property is read-only.
+</prop>
+<prop name='open'/>
+<method name='removeAllItems' spec=' Moz1.3 '>
+<prototype> removeAllItems ( ) </prototype>
+  
+  Removes all of the items in the menu.
+</method>
+<method name='removeItemAt' returns='menuitem element'>
+<prototype> removeItemAt ( index ) </prototype>
+  
+  Removes the child item in the menu at the given index.  The function returns the removed item.
+</method>
+<method name='select' spec=' Moz1.3 '>
+<prototype> select ( ) </prototype>
+  
+  Select all the text in the menulist's textbox. This property applies to  editable menulists only.
+</method>
+<prop name='selectedIndex' type='integer'>
+  Holds the index of the currently selected item in the menu. If no item is  currently selected, this will be set to -1. You can select an item by setting  this value.
+</prop>
+<prop name='selectedItem' type='menuitem element'>
+  Holds the element of the menu that is currently selected. If no element is  currently selected, this will be null. Use selectedIndex to retrieve the  position of the selected item in the menu.
+</prop>
+<prop name='src'/>
+<prop name='value'/>
+</element>

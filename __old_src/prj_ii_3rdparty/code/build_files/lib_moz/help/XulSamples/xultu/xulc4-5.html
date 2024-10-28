@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - XUL Tutorial</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+ Changes to XUL 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+  <li><a href="xulc4-5.html">List of major changes</a> to XUL in Mozilla 
+between various versions.</li>
+</ul>
+
+<hr>
+
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+
+
+<p>
+<strong>
+The following changes have been made to XUL between Mozilla 0.9.9 and
+Mozilla 1.0:
+</strong>
+</p>
+
+<ul>
+  <li>The tree and outliner have been merged into a single set of elements.
+      The back end code is from the outliner but the tags are from the tree.
+      It supports inline content, template built content and content from a
+      custom view.
+  </li>
+  <li>The class='menu-button' on a button seems to work again.
+  </li>
+</ul>
+
+<p>
+<strong>
+The following changes have been made to XUL between Mozilla 0.9.8 and
+Mozilla 0.9.9:
+</strong>
+</p>
+
+<ul>
+  <li>The listbox element has been added, which is a simplified tree. It is
+      suitable for basic lists. It supports multiple columns but not nested
+      rows.
+  </li>
+  <li>You should now use the xbl namespace for the inherits attribute in an
+      XBL file.</li>
+</ul>
+
+<p>
+<strong>
+The following changes have been made to XUL between Mozilla 0.9.7 and
+Mozilla 0.9.8:
+</strong>
+</p>
+
+<ul>
+  <li>For template-built outliners, the datasources and ref attributes should now
+      be placed on the outliner element.</li>
+  <li>The outlinerbody element has been renamed to outlinerchildren.</li>
+  <li>The attribute flags="dont-build-content" should be used on the
+      outlinerchildren element for RDF-built content.</li>
+  <li>The columns in the outliner should be surrounded by an outlinercols element.</li>
+  <li>A number of new tree selection methods have been added and some have been
+      removed. For a list, see the
+      <a href="http://www.xulplanet.com/references/elemref/ref_tree.html">element reference</a>.</li>
+  <li>The rows of an outliner should be put inside outlineritem elements.</li>
+  <li>The CSS property <span class="attrib">-moz-border-colors</span> can be used to
+      set a series of colors for each pixel of a wide border. This can be used to draw
+      more complex border styles, reducing the need for extra boxes.
+  </li>
+  <li>The CSS property <span class="attrib">-moz-image-region</span> can be used to
+      grab a specific region of an image and use it for the element's image. This means
+      that memory can be saved as each element can use a different part of the same
+      image.
+  </li>
+</ul>
+
+<p>
+<strong>
+The following changes have been made to XUL between Mozilla 0.9.6 and
+Mozilla 0.9.7:
+</strong>
+</p>
+
+<ul>
+  <li>The syntax for tooltips has changed. Use the
+      <span class="attrib">tooltiptext</span> attribute on an element to set the
+      text for the tooltip on an element.
+  </li>
+  <li>To create a custom style for tooltips, use the <span class="tag">tooltip</span>
+      element, which is a type of box. Set its <span class="attrib">default</span>
+      attribute to <span class="aval">true</span> to use the element as the default
+      for all tooltips in the window.
+  </li>
+  <li>The tree now has a scrollByLines method which can be used to scroll the view
+      by a certain number of rows.
+  </li>
+  <li>In many elements, to disable a feature set with a boolean attribute, leave
+      the attribute out entirely instead of setting the attribute to false. Attributes
+      that work this way include <span class="attrib">checked</span>,
+      <span class="attrib">selected</span>, <span class="attrib">disabled</span>
+      <span class="attrib">open</span>, <span class="attrib">cycler</span>
+      <span class="attrib">enableColumnDrag</span>
+  </li>
+  <li>The method isCellCropped(row,colID) has been added to the outliner box interface
+      (nsIOutlinerBox), which should return true if the text in a cell is cropped.
+  </li>
+  <li>The <span class="attrib">validate</span> attribute can now be used on the
+      <span class="tag">menuitem</span>, <span class="tag">toolbarbutton</span>
+      and <span class="tag">treecell</span> elements.
+  </li>
+</ul>
+
+<p>
+<strong>
+The following changes have been made to XUL between Mozilla 0.9.5 and
+Mozilla 0.9.6:
+</strong>
+</p>
+
+<ul>
+  <li>The <span class="tag">window</span> element now defaults to
+      vertical orientation.</li>
+  <li>The <span class="tag">groupbox</span> element now defaults to vertical
+      orientation.</li>
+  <li>The <span class="tag">page</span> element has been added which is
+      just like <span class="tag">window</span>, except it is intended
+      to be used for XUL files that are intended to be loaded into an
+      iframe.
+  </li>
+  <li>Controls now have a <span class="attrib">value</span> attribute which
+      can be used to hold a value specific to the element that can be used by
+      a script.
+  </li>
+  <li>The deprecated elements <span class="tag">text</span>,
+      <span class="tag">html</span> and <span class="tag">spring</span>
+      have been removed.
+  </li>
+  <li>The deprecated attribute <span class="attrib">autostretch</span> has
+      been removed. Use the <span class="attrib">align</span> attribute instead.
+  </li>
+  <li>The deck element now has two properties, <span class="attrib">selectedIndex</span>
+      to get and set the index of the selected panel, and
+      <span class="attrib">selectedPanel</span> to get the child panel that
+      is currently displayed. The <span class="tag">tabbox</span> and
+      <span class="tag">tabpanels</span> elements also have these
+      properties.
+  </li>
+  <li>The <span class="tag">tabbox</span> has a <span class="attrib">selectedTab</span>
+      property to get the selected <span class="tag">tab</span> element.
+      The <span class="tag">tabs</span> element has a similar property but it called
+      <span class="attrib">selectedItem</span> instead.
+  </li>
+  <li>The <span class="tag">menulist</span>, <span class="tag">radiogroup</span>
+      and <span class="tag">tabs</span> elements now have three additional
+      methods for manipulating child elements:
+      <ul class="attriblist">
+        <li><span class="attrib">appendItem ( label , value )</span>:
+            add a new child item with the given label.
+        </li>
+        <li><span class="attrib">insertItemAt ( index , label , value )</span>:
+            add a new child item at a specific index.
+        </li>
+        <li><span class="attrib">removeItemAt ( index )</span>:
+            removes the child item with the given index.
+        </li>
+      </ul>
+  </li>
+  <li>The <span class="tag">tabbrowser</span> now supports site icons. It also
+       adds several new methods:
+      <ul class="attriblist">
+        <li><span class="attrib">reloadTab ( tab )</span>:
+          reload the content of a given tab.
+        </li>
+        <li><span class="attrib">reloadAllTabs (  )</span>:
+          reload the contents of all of the tabs.
+        </li>
+        <li><span class="attrib">getBrowserForTab ( tab )</span>:
+          get the <span class="tag">browser</span> element for a given tab.
+        </li>
+      </ul>
+  </li>
+  <li>RDF-built outliners can have an additional
+      <span class="attrib">statedatasource</span> attribute on the
+      <span class="tag">outlinerbody</span> element, which indicates a separate
+      datasource to store outliner persistence of which nodes are open or closed.
+      The default is 'rdf:local-store' which is the local store held in the user's
+      profile directory. The attribute is ignored for XUL loaded outside of chrome.
+  </li>
+  <li>The <span class="tag">image</span> element now has a
+      <span class="attrib">validate</span> attribute which can be used to indicate
+      whether the image may be loaded from the cache. It may be set to the
+      value <span class="aval">always</span>, to load the image every time or
+      <span class="aval">never</span> to load from the cache if possible.
+  </li>
+  <li>The <span class="tag">image</span> element now fires the onload and onerror
+      events.
+  </li>
+  <li>The following attributes and properties are valid on all XUL elements:
+    <span class="attrib">align</span>, <span class="attrib">dir</span>,
+    <span class="attrib">flex</span>, <span class="attrib">flexgroup</span>,
+    <span class="attrib">ordinal</span>, <span class="attrib">orient</span>,
+    <span class="attrib">pack</span>, <span class="attrib">hidden</span>,
+    <span class="attrib">collapsed</span>, <span class="attrib">allowevents</span>,
+    <span class="attrib">observes</span>, <span class="attrib">menu</span>,
+    <span class="attrib">contextmenu</span>, <span class="attrib">tooltip</span>,
+    <span class="attrib">width</span>, <span class="attrib">height</span>,
+    <span class="attrib">minwidth</span>, <span class="attrib">minheight</span>,
+    <span class="attrib">maxwidth</span>, <span class="attrib">maxheight</span>,
+    <span class="attrib">persist</span>, <span class="attrib">left</span>,
+    <span class="attrib">top</span>, <span class="attrib">datasources</span>,
+    <span class="attrib">ref</span>, <span class="attrib">tooltiptext</span>,
+    <span class="attrib">statustext</span>
+  </li>
+</ul>
+
+<p>
+<strong>
+The following changes have been made to XUL between Mozilla 0.9.4 and
+Mozilla 0.9.5:
+</strong>
+</p>
+
+<ul>
+  <li>The <span class="tag">menubutton</span> element has been deprecated.
+      It has been replaced with an special type attribute on the
+      <span class="tag">button</span> element.
+      <div class="sample"><pre>
+        &lt;button type="menu-button" label="Choose"&gt;
+          &lt;menupopup&gt;
+            &lt;menuitem label="Audio"/&gt;
+            &lt;menuitem label="Video"/&gt;
+          &lt;/menupopup&gt;
+        &lt;/button&gt;</pre></div>
+  </li>
+  <li>The <span class="tag">toolbarbutton</span> element has been added,
+      which functions just like a regular button except that it is designed
+      for being placed on a toolbar. Themes may display these buttons
+      differently.
+  </li>
+  <li>The <span class="tag">image</span> tag now has a
+      <span class="attrib">src</span> property that holds the image URL.
+  </li>
+  <li>The label on the <span class="tag">radiogroup</span> is now specified
+      with the <span class="tag">caption</span> element.
+  </li>
+  <li>The <span class="tag">radiogroup</span> element defaults to vertical
+      orientation. The <span class="tag">tabbox</span> defaults to vertical
+      orientation. The <span class="tag">tabs</span> element defaults to
+      horizontal orientation.
+  </li>
+  <li>The <span class="tag">tabbrowser</span> element has been added which
+      is just like the <span class="tag">browser</span> element, except that
+      it supports multiple pages displayed in tabs.
+  </li>
+  <li>The <span class="attrib">direction</span> attribute of the
+      <span class="tag">resizer</span> has been renamed to
+      <span class="attrib">resizerdirection</span>.
+  </li>
+  <li>The <span class="tag">popup</span> element has been deprecated. You can
+      instead use the <span class="tag">menupopup</span> for menus and the
+      <span class="tag">tooltip</span> element for tooltips. The new
+      <span class="tag">floatingwindow</span> can be used for floating
+      windows.
+  </li>
+  <li>The <span class="tag">dialog</span> element has been added. This
+      element should be used in place of <span class="tag">window</span>
+      for windows that are dialog boxes. The default OK and Cancel buttons
+      and handling for them are added automatically.
+  </li>
+  <li>The <span class="attrib">accessible</span> property has been added to a
+      number of elements: <span class="tag">button</span>,
+      <span class="tag">checkbox</span>, <span class="tag">image</span>,
+      <span class="tag">label</span> and
+      <span class="tag">description</span>. This property holds an object
+      that handles accessibility for the element.
+  </li>
+  <li>The following attributes and properties have been added to the
+      <span class="tag">button</span> element:
+      <ul class="attriblist">
+        <li><span class="attrib">type</span>: the type of button. Possible
+            values are: <span class="aval">menu</span>,
+            <span class="aval">menu-button</span>,
+            <span class="aval">checkbox</span> and
+            <span class="aval">radio</span>. Leave the attribute out
+            for a normal button.</li>
+        <li><span class="attrib">dlgType</span></li>
+        <li><span class="attrib">group</span></li>
+        <li><span class="attrib">open</span></li>
+        <li><span class="attrib">checked</span></li>
+        <li><span class="attrib">checkState</span></li>
+        <li><span class="attrib">autoCheck</span></li>
+      </ul>
+  </li>
+  <li>The <span class="tag">outliner</span> element now has an attribute and
+      property <span class="attrib">enableColumnDrag</span>. When set to
+      <span class="aval">true</span>, the user may change the order of the
+      columns by dragging them.
+  </li>
+  <li>The following attributes have been added to all popup elements:
+      <ul class="attriblist">
+        <li><span class="attrib">popupBoxObject</span>: the
+            nsIPopupBoxObject that implements the popup.</li>
+        <li><span class="attrib">autoPosition</span></li>
+        <li><span class="attrib">enableKeyboardNavigation(bool)</span></li>
+        <li><span class="attrib">enableRollup(bool)</span></li>
+        <li><span class="attrib">moveTo(x,y)</span>: move the popup to a new
+            position.</li>
+        <li><span class="attrib">sizeTo(width,height)</span>: change the
+            size of the popup.</li>
+      </ul>
+  <li>The <span class="tag">tabs</span> and <span class="tag">tabpanels</span>
+      elements now get sent a 'select' event whenever the currently selected tab
+      changed, either from the user or programmatically.
+  </li>
+  <li>The outliner view object now has an isSeparator function that takes
+      one argument, a row index. This function should return true if a
+      particular row is a separator. A separator will be drawn as a solid
+      horizontal line.
+  </li>
+  <li>The DOM2 TreeWalker interface has been implemented and one can contsruct
+      a TreeWalker by calling the createTreeWalker method of a document.
+  </li>
+
+</ul>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,397 @@
+<?xml version='1.0'?>
+
+<object name='XUL Element'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_XULElement.html</reference>
+  A XUL element. The following lists attribute and properties common to  all XUL elements. Some only have any meaning in particular situations such as  when placed inside a template or overlay.
+
+<implements>nsIDOMElement</implements>
+<implements>nsIDOMEventTarget</implements>
+<implements>nsIDOMNode</implements>
+<implements>nsIDOMXULElement</implements>
+<attr name='align'>
+  The align attribute specifies how child elements of the box are aligned, when  the size of the box is larger than the total size of the children. For boxes that  have horizontal orientation, it specifies how its children will be aligned  vertically. For boxes that have vertical orientation, it is used to specify how  its children are algined horizontally. The pack attribute is related to the alignment  but is used to specify the position in the opposite direction. You  can also specify the value of align using the style property '-moz-box-align'.
+<value name='start'>
+    Child elements are aligned starting from the left or top edge of the box. If
+    the box is larger than the total size of the children, the extra space is
+    placed on the right or bottom side.
+</value>
+<value name='center'>
+    Extra space is split equally along each side of the child elements, resulting
+    the children being placed in the center of the box.
+</value>
+<value name='end'>
+    Child elements are placed on the right or bottom edge of the box. If the box
+    is larger than the total size of the children, the extra space is placed on
+    the left or top side.
+</value>
+<value name='baseline'>
+    This value applies to horizontally oriented boxes only. It causes the child
+    elements to be aligned so that their text labels are lined up.
+</value>
+<value name='stretch' default='true'>
+    The child elements are stretched to fit the size of the box. For a horizontal
+    box, the children are stretched to be the height of the box. For a vertical
+    box, the children are stretched to be the width of the box. If the size of the
+    box changes, the children stretch to fit. Use the flex attribute to create
+    elements that stretch in the opposite direction.
+</value>
+<value name='left'>
+     (Deprecated)  The elements are aligned on their left edges.
+</value>
+<value name='center'>
+     (Deprecated)  The elements are centered horizontally.
+</value>
+<value name='right'>
+     (Deprecated)  The elements are aligned on their right edges.
+</value>
+</attr>
+<attr name='allowevents' type='boolean'>
+  If true, events are passed to children of the element. Otherwise, events are  passed to the element only.
+</attr>
+<attr name='allownegativeassertions' type='boolean'>
+  Valid on any element that has a datasources attribute. When multiple  datasources are used, one may override an assertion from another.  This attribute, if true, which is the default, allows a datasource  to negate an earlier assertion.
+</attr>
+<attr name='class' type='string'>
+  The style class of the element. Multiple classes may be specified by  separating them with spaces.
+</attr>
+<attr name='coalesceduplicatearcs' type='boolean'>
+  Valid on any element that has a datasources attribute. Because RDF  holds a graph of resources, it is possible for there to be several  pointers to the same node. If this attribute is true, which is the  default, duplicate references are skipped. If false, duplicate  references will appear.
+</attr>
+<attr name='collapsed' type='boolean'>
+  If true, then the element is collapsed and does not appear. It is equivalent  to setting the CSS visibility property to 'collapse'.
+</attr>
+<attr name='container' type='boolean'>
+  Set to true if the element is to act as a container which can have child  elements. This would be used for folders. This will be set by the template  builder as needed.
+</attr>
+<attr name='containment' type='URI of an RDF predicate'>
+  This attribute specifies RDF properties that indicate that a resource is a  container. When generating content from a template this is used to determine  which resources from the datasource are containers and thus can have child  nodes and which ones are not containers.      This attribute should be placed on the same element that the datasources and  the ref attribute is on. It may be set to a space-separated list of RDF  properties or resources.
+</attr>
+<attr name='context' type='popup element id'>
+  Should be set to the value of the id of the popup element that should appear  when the user context-clicks on the element. A context-click varies on each  platform. Usually it will be a right click. You can use the special  value '_child' to indicate the first menupopup child of the element.
+</attr>
+<attr name='contextmenu' type='popup element id'>
+  Alternate name for the context attribute, but also has a corresponding  script property 'contextmenu'.
+</attr>
+<attr name='datasources' type='space separated list of datasource URIs'>
+  A space-separated list of datasources that an element's template  will use for content generation. These can be either internal  datasources such as rdf:bookmarks or a URL of an RDF file. The  datasources attribute may be placed on most elements, although it  will usually be found on trees and menupopups. The element should  have a template element as a child.      The specified datasources are combined into a single composite  datasource which holds the data from all of the datasources. This  composite datasource is accesssible via a script through the  database property.      If you plan on adding a datasource to an element but don't want one  to be added right away, set this attribute to 'rdf:null'. This will  make the element so that its contents can be generated from a datasource.  Otherwise, you cannot add one later.
+</attr>
+<attr name='debug' type='boolean'>
+  If true, extra borders are drawn around the element and all its  descendants. This can be used to determine orientation and where  flexible elements are. If debug mode is enabled for a box, horizontal  oriented boxes are displayed with a blue border and vertical boxes  are displayed with a red border. The border above the element will be  straight for non-flexible elements and wavy for flexible elements.
+</attr>
+<attr name='dir'>
+  The direction in which the child elements of the element are placed. 
+<value name='normal'>
+    The elements are placed left to right or top to bottom in the order they
+    appear in the XUL code.
+</value>
+<value name='reverse'>
+    The elements are placed right to left or bottom to top. This is reverse of
+    the order in which they appear in the XUL code.
+</value>
+</attr>
+<attr name='empty' type='boolean'>
+  Set to true if the element is a container that contains no children. This will  be set by the template builder as needed.
+</attr>
+<attr name='equalsize'>
+  This attribute can be used to make the children of the element equal in size.
+<value name='always'>
+    For a horizontally oriented element, this will make all of its children have
+    the width of the widest child. For a vertically oriented element, this will
+    make its children all have the height of the tallest child.
+</value>
+<value name='never' default='true'>
+    All of the children are displayed at the size required by the content or as
+    specified by the width and height attributes or the CSS width and height
+    properties.
+</value>
+</attr>
+<attr name='flags' type='space separated list of the values below'>
+  A set of flags used for miscellaneous purposes. Two flags are defined, which  may be the value of this attribute.
+<value name='dont-test-empty'>
+    For template generated content, the builder will not check that a container
+    is empty.
+</value>
+<value name='dont-build-content'>
+    This flag may be used on a tree to indicate that content elements should not
+    be generated. This results in a performace enhancement, but you will not be
+    able to use the DOM functions to retreive the tree rows.
+</value>
+</attr>
+<attr name='flex' type='integer'>
+  Indicates the flexibility of the element, which indicates how an element's container  distributes remaining empty space among its children. Flexible elements grow and  shrink to fit their given space. Elements with larger flex values will be made  larger than elements with lower flex values, at the ratio determined by the  two elements. The actual value is not relevant unless there are other flexible  elements within the same container.  Once the default sizes of elements in a  box are calculated, the remaining space in the box is divided among the flexible  elements, according to their flex ratios.
+</attr>
+<attr name='height' type='integer'>
+  The height of the element in pixels. It is recommended that the CSS height property  be used instead.
+</attr>
+<attr name='hidden' type='boolean'>
+  If set to true, the element is not displayed. This is similar to setting the  CSS display property to 'none'.
+</attr>
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the element with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='insertafter' type='element id'>
+  When an element is in an overlay, the insertafter attribute specifies the id  of the element in the base window that the element should appear after. This  attribute overrides the insertbefore attribute. This value may be a comma-separated  list of ids, which are scanned and the first one found in the window is used.
+</attr>
+<attr name='insertbefore' type='element id'>
+  When an element is in an overlay, the insertbefore attribute specifies the id  of the element in the base window that the element should appear before. This value  may be a comma-separated list of ids, which are scanned and the first one found in  the window is used.
+</attr>
+<attr name='left' type='integer'>
+  For elements placed within a stack, specifies the position of the  left edge of the element.
+</attr>
+<attr name='maxheight' type='integer'>
+  The maximum height of the element. This corresponds to the max-height CSS property.
+</attr>
+<attr name='maxwidth' type='integer'>
+  The maximum width of the element. This corresponds to the max-width CSS property.
+</attr>
+<attr name='menu' type='popup element id'>
+  Alternate name for the popup attribute, but also has a corresponding  script property 'menu'.
+</attr>
+<attr name='minheight' type='integer'>
+  The minimum height of the element. This corresponds to the min-height CSS property.
+</attr>
+<attr name='minwidth' type='integer'>
+  The minimum width of the element. This corresponds to the min-width CSS property.
+</attr>
+<attr name='mousethrough'>
+  Determines whether mouse events are passed through each element of the  element until one responds to it. If this attribute is not specified, the  value is inherited from the parent of the element.
+<value name='always'>
+    Mouse events are passed to each element in the element starting from the
+    top until one responds to it by returning true from its event handler.
+</value>
+<value name='never' default='true'>
+    Mouse events are only passed to the top element in the element
+</value>
+</attr>
+<attr name='observes' type='broadcaster element id'>
+  Set to an id of a broadcaster element that is being observed by the  element. If an attribute changes in the broadcaster it is also changed  in the observer.
+</attr>
+<attr name='ordinal' type='integer'>
+  An integer which specifies the position of the element within its parent.  By default, elements appear in the order they appear in the XUL code. The  ordinal attribute can be used to change the order. Note the default ordinal  for elements is 1. You can retrieve the displayed order by using the  properties of the boxObject of the container.
+</attr>
+<attr name='orient'>
+  Used to specify whether the children of the element are oriented horizontally or  vertically. The default value depends on the element. You can also use the  '-moz-box-orient' style property.
+<value name='horizontal'>
+    Child elements of the element are placed next to each other in a row in the order
+    that they appear in the XUL source.
+</value>
+<value name='vertical'>
+    Child elements of the element are placed under each other in a column in the
+    order that they appear in the XUL source.
+</value>
+</attr>
+<attr name='pack'>
+  The pack attribute specifies where child elements of the box are placed when  the box is larger that the size of the children. For boxes with horizontal  orientation, it is used to indicate the position of children horizontally.  For boxes with vertical orientation, it is used to indicate the position of  children vertically. The align attribute is used to specify the position in the  opposite direction. You can also specify the value of pack using the style property  '-moz-box-pack'.
+<value name='start' default='true'>
+    Child elements are placed starting from the left or top edge of the box. If
+    the box is larger than the total size of the children, the extra space is
+    placed on the right or bottom side.
+</value>
+<value name='center'>
+    Extra space is split equally along each side of the child elements, resulting
+    the children being placed in the center of the box.
+</value>
+<value name='end'>
+    Child elements are placed on the right or bottom edge of the box. If the box
+    is larger than the total size of the children, the extra space is placed on
+    the left or top side.
+</value>
+</attr>
+<attr name='persist' type='space separated list of attribute names'>
+  A space separated list of attributes that are maintained when the window is  closed. When the window is re-opened, the values of persistent attributes  are restored. In Mozilla, persistent attributes are stored in the per-profile  file localstore.rdf. Persistence can also be stored using the   document.persist   function. In order for persistence to work, the element must also have an id.
+</attr>
+<attr name='popup' type='popup element id'>
+  Should be set to the value of the id of the popup element that should appear  when the user clicks on the element.
+</attr>
+<attr name='position' type='integer'>
+  When an element is in an overlay, the position is an index where the child is  inserted. The position is one-based, so use a value of 1 to place the element at  the beginning. This attribute is ignored if either an insertbefore or insertafter  attribute matches an element.
+</attr>
+<attr name='ref' type='URI of an RDF resource'>
+  For template generated elements, this attribute is used to specify the root  RDF node where content generation begins. This will correspond to the  value of an about attribute on an RDF container. This attribute should be  placed alongside the datasources attribute.
+</attr>
+<attr name='removeelement' type='element id'>
+  When placed on an element in an overlay, it indicates that the element in the  base file should be removed from the window.
+</attr>
+<attr name='sortDirection'>
+  Set this attribute to set the direction that template-generated content is sorted.  Use the sortResource attribute to specify the sort key.
+<value name='ascending'>
+    The data is sorted in ascending order.
+</value>
+<value name='descending'>
+    The data is sorted in descending order.
+</value>
+<value name='natural' default='true'>
+    The data is sorted in natural order, which means the order that it is stored in.
+</value>
+</attr>
+<attr name='sortResource' type='URI of an RDF predicate'>
+  For template-generated content, this specifies the sort key, if you would like  the content to be sorted. The key should be the full URI of the resource to sort  by, for example 'http://home.netscape.com/NC-rdf#Name'. Place this attribute on  the same element as the datasources attribute. Use sortResource2 to specify a  secondary sort key.
+</attr>
+<attr name='sortResource2' type='URI of an RDF predicate'>
+  A secondary key for sorted content.
+</attr>
+<attr name='statustext' type='string'>
+  Used to set the text that appears on the status bar when the user moves the mouse  over the element. Mozilla doesn't adjust the status bar automatically however. This  attribute serves only as a place to keep the text. In Firefox, this text is  automatically placed in the statusbar for menuitems on the menu bar.
+</attr>
+<attr name='style' type='CSS inline style'>
+  CSS style rules to be applied to the element. Syntax is as in the HTML style  attribute. It is preferred to put style rules in style sheets.
+</attr>
+<attr name='template' type='element id'>
+  For template generated elements, this attribute may optionally be placed on  the root node (the element with the datasources attribute) to refer to  a template that exists elsewhere in the XUL code. This template attribute  should be set to the ID of the template element. This might be used to share a  single template between multiple trees or menus. If this attribute is not  specified, there should be a template element directly inside the node.
+</attr>
+<attr name='tooltip' type='tooltip element id'>
+  Should be set to the value of the id of the popup element that should be used  as a tooltip window when the mouse hovers over the element for a moment. The tooltip  will automatically disappear when the mouse is moved. If this attribute is set  to '_child', the first tooltip child element inside the element is used.
+</attr>
+<attr name='tooltiptext' type='string'>
+  Used to set the text which appears in the tooltip when the user moves the  mouse over the element. This can be used instead of setting the tooltip to a  popup for the common case where it contains only text. The toolitp is  displayed in a default tooltip which only displays only a label, however  the default tooltip may be changed by setting the default attribute on a  tooltip element.
+</attr>
+<attr name='top' type='integer'>
+  For elements placed within a stack, specifies the position of the  top edge of the element.
+</attr>
+<attr name='uri' type='string'>
+  For template-generated content, the attribute should be placed on the  element where content generation should begin. Thus, it should be placed  on an element that is a descendant of a template. The value should be set  to rdf:*.    Elements that appear inside the element with the attribute will be  repeated for each node in the RDF datasource. Elements outside will appear  only once.
+</attr>
+<attr name='wait-cursor'>
+  Set this attribute to true to have the cursor switch to a waiting cursor  while the mouse is hovering over it. Usually, you would only use this on the  window element or other top-level elements.
+</attr>
+<attr name='width' type='integer'>
+  The width of the element in pixels. It is recommended that the CSS width property  be used instead.
+</attr>
+<class name='box-inset'>
+  The element is drawn with an inset border around it similar to the inset  type except more noticeable. It will generally have borders like those that  appear around a control such as listbox, with the background white, assuming  the default theme.
+</class>
+<class name='box-padded'>
+  A box with a small amount of padding on each side.
+</class>
+<class name='groove-bottom'>
+  An element with a groove along its bottom edge.
+</class>
+<class name='groove-left'>
+  An element with a groove along its left edge.
+</class>
+<class name='groove-right'>
+  An element with a groove along its right edge.
+</class>
+<class name='groove-top'>
+  An element with a groove along its top edge.
+</class>
+<class name='inset'>
+  The element is drawn with an inset border around it. This causes the element  area to appear inset from the rest of the content.
+</class>
+<class name='outset'>
+  The element is drawn with an outset border around it. This causes the element  area to appear outset from the rest of the content.
+</class>
+<class name='outset-top-bottom'>
+  The element is drawn with an outset border along the top and bottom edges.  This class might be used when the element is part of a set of items in a  row, since borders do not appear between them.
+</class>
+<prop name='align'/>
+<prop name='allowEvents'/>
+<method name='blur'>
+<prototype> blur ( ) </prototype>
+  
+  If the focus is on the element, it is removed. The focus is not automatically  placed on any other element. Essentially, this is used to call the onblur  handler.
+</method>
+<prop name='boxObject' type='nsIBoxObject'>
+  This property is available for elements that are derived from boxes, which  is most displayable XUL elements. You can retrieve the boxObject for non-XUL  elements using the document.getBoxObjectFor method. The boxObject contains a  number of properties, described below.
+</prop>
+<prop name='boxObject.element' type='element'>
+  A reference to the element itself.
+</prop>
+<method name='boxObject.getLookAndFeelMetric' returns='string'>
+<prototype> boxObject.getLookAndFeelMetric ( property ) </prototype>
+  
+  Returns a platform-specific setting named by the property argument.  Typically these would be settings the user would set in their  operating system preferences.  Two values can be used:
+<value name='scrollbarStyle'>
+    Determines the type of scroll bar arrows that are used. This is used
+    on a Macintosh to determine whether the system is configured to display
+    the arrows at one end or both. The four possible return values are
+    doublebottom, double, doubletop, and single.
+</value>
+<value name='thumbStyle'>
+    Determines whether scroll bar thumbs are displayed as a small fixed size
+    box or proportional to the size of the content. The two possible return
+    values are fixed and proportional.
+</value>
+</method>
+<prop name='boxObject.height' type='integer'>
+  The displayed height of the element.
+</prop>
+<prop name='boxObject.screenX' type='integer'>
+  The horizontal position of the element on the screen.
+</prop>
+<prop name='boxObject.screenY' type='integer'>
+  The vertical position of the element on the screen.
+</prop>
+<prop name='boxObject.width' type='integer'>
+  The displayed width of the element.
+</prop>
+<prop name='boxObject.x' type='integer'>
+  The horizontal position of the element on the window. The x and y position  is relative to the window's upper-left corner, or if the XUL is loaded in  a frame, the upper-left corner of the frame.
+</prop>
+<prop name='boxObject.y' type='integer'>
+  The vertical position of the element on the window.
+</prop>
+<prop name='builder' type='nsIXULTemplateBuilder'>
+  For content generated from a template, this is the XPCOM object that is  responsible for generating the content. For scripts it is only necessary in  case you want to force the template content to be regenerated. You may need  to do this if you have adjusted the rules manually. To rebuild the content  call the builder's rebuild method.    For example, given a reference to a tree myTree, this example will rebuild  its content:    myTree.builder.rebuild();
+</prop>
+<prop name='className'>
+  Gets and sets the value of the class attribute.
+</prop>
+<method name='click'>
+<prototype> click ( ) </prototype>
+  
+  Calls the onclick handler for the element.
+</method>
+<prop name='collapsed'/>
+<prop name='contextMenu'/>
+<prop name='controllers' type='nsIControllers'>
+  A controllers list attached to the element. The controllers are used to  respond to commands. The document's command dispatcher will locate  controllers to handle a command by using the focused element's controllers  list.
+</prop>
+<prop name='database' type='nsIRDFCompositeDataSource'>
+  Returns the composite datasource created when all the datasources  of an element are combined. Set to null for elements that do not  have a datasources attribute.
+</prop>
+<prop name='datasources' type='space separated list of datasource URIs'>
+  Gets and sets the value of the datasources attribute. In newer versions of  Mozilla (1.7), the datasources will be reloaded and the template rebuilt.
+</prop>
+<prop name='dir'/>
+<method name='doCommand'>
+<prototype> doCommand ( ) </prototype>
+  
+  Executes the command event for the element.
+</method>
+<prop name='flex'/>
+<method name='focus'>
+<prototype> focus ( ) </prototype>
+  
+  Assigns the focus to the element, if it can accept the focus. The onfocus  handler is called.
+</method>
+<method name='getElementsByAttribute' returns='DOM NodeList'>
+<prototype> getElementsByAttribute ( attrib , value ) </prototype>
+  
+  Returns an array of all the child elements of the element that have the  attribute given by the first argument set to the value given by the second  argument. If the second argument is '*', the attribute may be set to any value.
+</method>
+<prop name='height'/>
+<prop name='hidden'/>
+<prop name='id'/>
+<prop name='left'/>
+<prop name='maxHeight'/>
+<prop name='maxWidth'/>
+<prop name='menu'/>
+<prop name='minHeight'/>
+<prop name='minWidth'/>
+<prop name='observes'/>
+<prop name='ordinal'/>
+<prop name='orient'/>
+<prop name='pack'/>
+<prop name='persist'/>
+<prop name='ref'/>
+<prop name='resource' type='nsIRDFResource'>
+  Returns an RDF resource with the value of the element's ref attribute. If the  ref attribute is not specified, the id attribute is used instead.
+</prop>
+<prop name='statusText'/>
+<prop name='style'/>
+<prop name='tooltip'/>
+<prop name='tooltipText'/>
+<prop name='top'/>
+<prop name='width'/>
+</object>

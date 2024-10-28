@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+
+<element name='command'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/commands.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_command.html</reference>
+  A command element can be used to invoke an operation that can come from multiple  sources. For example, a clipboard paste operation can be invoked from the Edit  menu, a context menu and by pressing a keyboard shortcut. You attach the code  to the command using the oncommand attribute. It will be called no matter how it  is invoked by the user. In addition, disabling the command will automatically  disable the menu items and keyboard shortcuts.        Commands are identified by their id. If you include the script  chrome://global/content/globalOverlay.js in your window, you can use the  function goDoCommand function to invoke the command. Using this function has  the advantage that the command will be sent to the part of the UI which will  respond to it. Typically, this will be the currently focused element. For  example, the following code will sent a paste command (cmd_paste) to the  currently focused element:         goDoCommand("cmd_paste");           Like a broadcaster, commands forward attributes to other elements.  
+<html><![CDATA[
+<p>  A command element can be used to invoke an operation that can come from multiple  sources. For example, a clipboard paste operation can be invoked from the Edit  menu, a context menu and by pressing a keyboard shortcut. You attach the code  to the command using the oncommand attribute. It will be called no matter how it  is invoked by the user. In addition, disabling the command will automatically  disable the menu items and keyboard shortcuts.  </p>  <p>  Commands are identified by their id. If you include the script  chrome://global/content/globalOverlay.js in your window, you can use the  function goDoCommand function to invoke the command. Using this function has  the advantage that the command will be sent to the part of the UI which will  respond to it. Typically, this will be the currently focused element. For  example, the following code will sent a paste command (cmd_paste) to the  currently focused element:  </p>  <p><pre>  goDoCommand("cmd_paste");  </pre>  </p>  <p>  Like a broadcaster, commands forward attributes to other elements.  </p>
+]]></html>
+
+<attr name='disabled' type='boolean'>
+  If you set the disabled attribute to true, any menu items and keys attached to  the command become disabled. If you remove the disabled attribute, the menu  items and keys become enabled.
+</attr>
+<attr name='label' type='string'>
+  The label inherited by the menu items and keys that are attached to the command.
+</attr>
+<attr name='oncommand' type='script code'>
+  This event handler is called when the command is activated. This occurs when a  user selects a menu item or presses a keyboard shortcut attached to the command.
+</attr>
+</element>

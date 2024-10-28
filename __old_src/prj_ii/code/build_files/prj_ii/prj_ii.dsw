@@ -1,0 +1,440 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "client_common"=..\client_common\client_common.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "client_section"=..\client_section\client_section.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "client_user"=.\client_user\client_user.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "comp_descriptor"=..\comp_descriptor\comp_descriptor.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "core_client"=..\core_client\core_client.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "core_common"=..\core_common\core_common.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "core_data"=..\core_data\core_data.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "core_io"=..\core_io\core_io.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "core_server"=..\core_server\core_server.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "data_db"=..\data_db\data_db.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "data_regexp"=..\data_regexp\data_regexp.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "data_types"=..\data_types\data_types.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "data_xml"=..\data_xml\data_xml.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "db_mem"=.\db_mem\db_mem.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "disp_action"=..\disp_action\disp_action.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "disp_event"=..\disp_event\disp_event.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "disp_link"=..\disp_link\disp_link.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "disp_message"=..\disp_message\disp_message.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "disp_msg_descriptor"=.\disp_msg_descriptor\disp_msg_descriptor.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "disp_request"=..\disp_request\disp_request.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ii_common"=..\ii_common\ii_common.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ii_component"=..\ii_component\ii_component.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name prj_ii
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name comp_descriptor
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ii_core"=..\ii_core\ii_core.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ii_component
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ii_dispatcher
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ii_service
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ii_system
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name core_client
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name core_data
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ii_dispatcher"=..\ii_dispatcher\ii_dispatcher.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name disp_request
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ii_component
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name disp_link
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name disp_action
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name disp_event
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name disp_message
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ii_service"=..\ii_service\ii_service.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name srvc_task
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ii_system
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ii_system"=..\ii_system\ii_system.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ii_component
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "prj_ii"=.\prj_ii.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "req_cgi"=..\req_cgi\req_cgi.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "req_exec"=..\req_exec\req_exec.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "srvc_task"=..\srvc_task\srvc_task.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "sys_capacity"=..\sys_capacity\sys_capacity.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

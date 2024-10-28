@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+
+<element name='toolbaritem' spec='Firefox'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_toolbaritem.html</reference>
+  An item that appears on a toolbar. This element should wrap all items  that are not buttons, which should instead be created using the  toolbarbutton element. The element is used, for example, to hold  the url field.
+
+</element>

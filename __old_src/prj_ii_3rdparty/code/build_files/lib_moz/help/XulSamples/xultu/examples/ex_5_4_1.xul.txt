@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 5.4.1"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<arrowscrollbox orient="vertical" flex="1">
+  <button label="Red"/>
+  <button label="Blue"/>
+  <button label="Green"/>
+  <button label="Yellow"/>
+  <button label="Orange"/>
+  <button label="Silver"/>
+  <button label="Lavender"/>
+  <button label="Gold"/>
+  <button label="Turquoise"/>
+  <button label="Peach"/>
+  <button label="Maroon"/>
+  <button label="Black"/>
+</arrowscrollbox>
+
+
+</window>
+

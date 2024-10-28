@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ALLELEM="http://www.xulplanet.com/rdf/allelem#">
+
+   <RDF:Description about="urn:people:Fred">
+     <ALLELEM:Name>Fred</ALLELEM:Name>
+     <ALLELEM:Title>King</ALLELEM:Title>
+   </RDF:Description>
+
+   <RDF:Description about="urn:people:Betty">
+     <ALLELEM:Name>Betty</ALLELEM:Name>
+     <ALLELEM:Title>Queen</ALLELEM:Title>
+   </RDF:Description>
+
+   <RDF:Description about="urn:people:Chris">
+     <ALLELEM:Name>Chris</ALLELEM:Name>
+     <ALLELEM:Title>Prince</ALLELEM:Title>
+   </RDF:Description>
+
+  <RDF:Seq about="urn:people:root">
+    <RDF:li resource="urn:people:Fred"/>
+    <RDF:li resource="urn:people:Betty"/>
+    <RDF:li resource="urn:people:Chris"/>
+  </RDF:Seq>
+<!--
+  <RDF:Seq about="urn:people:Betty">
+    <RDF:li resource="urn:people:Chris"/>
+  </RDF:Seq>
+-->
+
+</RDF:RDF>

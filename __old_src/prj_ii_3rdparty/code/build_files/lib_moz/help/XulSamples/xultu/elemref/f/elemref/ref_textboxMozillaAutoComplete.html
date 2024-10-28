@@ -1,0 +1,691 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Textbox (Mozilla Auto Complete) Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Textbox (Mozilla Auto Complete) 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Textbox (Mozilla Auto Complete)</h3>
+
+<p>
+  This element is created by setting the type attribute of a textbox to 'autocomplete'.  It is used to create a textbox with a popup containing a list of possible completions  for what the user has started to type.  </p>  <p>  The autocomplete functionality is handled through one of more session objects, each  of which can return a set of results given the current value of the textbox. The  sessions can be set using the searchSessions attribute or by calling the addSession  method.</p>
+<div class='aphead'>The textbox (Mozilla Auto Complete) element implements the following interfaces:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIAccessibleProvider.html'>nsIAccessibleProvider</a>&nbsp;&nbsp;
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMenuListElement.html'>nsIDOMXULMenuListElement</a>&nbsp;&nbsp;
+</div>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_alwaysopenpopup'>alwaysopenpopup</a></td>
+<td><a href='#attr_autoFill'>autoFill</a></td>
+<td><a href='#attr_autoFillAfterMatch'>autoFillAfterMatch</a></td>
+<td><a href='#attr_crop'>crop</a></td>
+<td><a href='#attr_disableAutocomplete'>disableAutocomplete</a></td>
+</tr><tr>
+<td><a href='#attr_disabled'>disabled</a></td>
+<td><a href='#attr_disablehistory'>disablehistory</a></td>
+<td><a href='#attr_focused'>focused</a></td>
+<td><a href='#attr_forceComplete'>forceComplete</a></td>
+<td><a href='#attr_ignoreBlurWhileSearching'>ignoreBlurWhileSearching</a></td>
+</tr><tr>
+<td><a href='#attr_inputtooltiptext'>inputtooltiptext</a></td>
+<td><a href='#attr_label'>label</a></td>
+<td><a href='#attr_maxlength'>maxlength</a></td>
+<td><a href='#attr_maxrows'>maxrows</a></td>
+<td><a href='#attr_minResultsForPopup'>minResultsForPopup</a></td>
+</tr><tr>
+<td><a href='#attr_nomatch'>nomatch</a></td>
+<td><a href='#attr_onerrorcommand'>onerrorcommand</a></td>
+<td><a href='#attr_ontextcommand'>ontextcommand</a></td>
+<td><a href='#attr_ontextrevert'>ontextrevert</a></td>
+<td><a href='#attr_open'>open</a></td>
+</tr><tr>
+<td><a href='#attr_searchSessions'>searchSessions</a></td>
+<td><a href='#attr_showCommentColumn'>showCommentColumn</a></td>
+<td><a href='#attr_showpopup'>showpopup</a></td>
+<td><a href='#attr_size'>size</a></td>
+<td><a href='#attr_tabScrolling'>tabScrolling</a></td>
+</tr><tr>
+<td><a href='#attr_tabindex'>tabindex</a></td>
+<td><a href='#attr_timeout'>timeout</a></td>
+<td><a href='#attr_type'>type</a></td>
+<td><a href='#attr_userAction'>userAction</a></td>
+<td><a href='#attr_value'>value</a></td>
+</tr></table>
+</div>
+<div class='aphead'><p>Properties and Methods:</p><table class='apheadbody'><tr>
+<td><a href='#prop_accessible'>accessible</a></td>
+<td><a href='#prop_addSession'>addSession</a></td>
+<td><a href='#prop_alwaysOpenPopup'>alwaysOpenPopup</a></td>
+<td><a href='#prop_autoFill'>autoFill</a></td>
+<td><a href='#prop_autoFillAfterMatch'>autoFillAfterMatch</a></td>
+</tr><tr>
+<td><a href='#prop_clearResults'>clearResults</a></td>
+<td><a href='#prop_crop'>crop</a></td>
+<td><a href='#prop_disableAutocomplete'>disableAutocomplete</a></td>
+<td><a href='#prop_disabled'>disabled</a></td>
+<td><a href='#prop_editable'>editable</a></td>
+</tr><tr>
+<td><a href='#prop_focused'>focused</a></td>
+<td><a href='#prop_forceComplete'>forceComplete</a></td>
+<td><a href='#prop_getDefaultSession'>getDefaultSession</a></td>
+<td><a href='#prop_getResultAt'>getResultAt</a></td>
+<td><a href='#prop_getResultCount'>getResultCount</a></td>
+</tr><tr>
+<td><a href='#prop_getResultValueAt'>getResultValueAt</a></td>
+<td><a href='#prop_getSession'>getSession</a></td>
+<td><a href='#prop_getSessionByName'>getSessionByName</a></td>
+<td><a href='#prop_getSessionResultAt'>getSessionResultAt</a></td>
+<td><a href='#prop_getSessionStatusAt'>getSessionStatusAt</a></td>
+</tr><tr>
+<td><a href='#prop_getSessionValueAt'>getSessionValueAt</a></td>
+<td><a href='#prop_ignoreBlurWhileSearching'>ignoreBlurWhileSearching</a></td>
+<td><a href='#prop_inputField'>inputField</a></td>
+<td><a href='#prop_isSearching'>isSearching</a></td>
+<td><a href='#prop_isWaiting'>isWaiting</a></td>
+</tr><tr>
+<td><a href='#prop_label'>label</a></td>
+<td><a href='#prop_maxLength'>maxLength</a></td>
+<td><a href='#prop_maxRows'>maxRows</a></td>
+<td><a href='#prop_minResultsForPopup'>minResultsForPopup</a></td>
+<td><a href='#prop_noMatch'>noMatch</a></td>
+</tr><tr>
+<td><a href='#prop_open'>open</a></td>
+<td><a href='#prop_removeSession'>removeSession</a></td>
+<td><a href='#prop_resultsPopup'>resultsPopup</a></td>
+<td><a href='#prop_searchSessions'>searchSessions</a></td>
+<td><a href='#prop_select'>select</a></td>
+</tr><tr>
+<td><a href='#prop_selectionEnd'>selectionEnd</a></td>
+<td><a href='#prop_selectionStart'>selectionStart</a></td>
+<td><a href='#prop_sessionCount'>sessionCount</a></td>
+<td><a href='#prop_setSelectionRange'>setSelectionRange</a></td>
+<td><a href='#prop_showCommentColumn'>showCommentColumn</a></td>
+</tr><tr>
+<td><a href='#prop_showPopup'>showPopup</a></td>
+<td><a href='#prop_size'>size</a></td>
+<td><a href='#prop_syncSessions'>syncSessions</a></td>
+<td><a href='#prop_tabScrolling'>tabScrolling</a></td>
+<td><a href='#prop_textLength'>textLength</a></td>
+</tr><tr>
+<td><a href='#prop_timeout'>timeout</a></td>
+<td><a href='#prop_type'>type</a></td>
+<td><a href='#prop_userAction'>userAction</a></td>
+<td><a href='#prop_value'>value</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Attributes:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#attr_align'>align</a><br>
+<a href='ref_XULElement.html#attr_allowevents'>allowevents</a><br>
+<a href='ref_XULElement.html#attr_allownegativeassertions'>allownegativeassertions</a><br>
+<a href='ref_XULElement.html#attr_class'>class</a><br>
+<a href='ref_XULElement.html#attr_coalesceduplicatearcs'>coalesceduplicatearcs</a><br>
+<a href='ref_XULElement.html#attr_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#attr_container'>container</a><br>
+<a href='ref_XULElement.html#attr_containment'>containment</a><br>
+<a href='ref_XULElement.html#attr_context'>context</a><br>
+<a href='ref_XULElement.html#attr_contextmenu'>contextmenu</a><br>
+<a href='ref_XULElement.html#attr_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#attr_debug'>debug</a><br>
+<a href='ref_XULElement.html#attr_dir'>dir</a><br>
+<a href='ref_XULElement.html#attr_empty'>empty</a><br>
+<a href='ref_XULElement.html#attr_equalsize'>equalsize</a><br>
+<a href='ref_XULElement.html#attr_flags'>flags</a><br>
+<a href='ref_XULElement.html#attr_flex'>flex</a><br>
+<a href='ref_XULElement.html#attr_height'>height</a><br>
+<a href='ref_XULElement.html#attr_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#attr_id'>id</a><br>
+<a href='ref_XULElement.html#attr_insertafter'>insertafter</a><br>
+<a href='ref_XULElement.html#attr_insertbefore'>insertbefore</a><br>
+<a href='ref_XULElement.html#attr_left'>left</a><br>
+<a href='ref_XULElement.html#attr_maxheight'>maxheight</a><br>
+<a href='ref_XULElement.html#attr_maxwidth'>maxwidth</a><br>
+<a href='ref_XULElement.html#attr_menu'>menu</a><br>
+<a href='ref_XULElement.html#attr_minheight'>minheight</a><br>
+<a href='ref_XULElement.html#attr_minwidth'>minwidth</a><br>
+<a href='ref_XULElement.html#attr_observes'>observes</a><br>
+<a href='ref_XULElement.html#attr_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#attr_orient'>orient</a><br>
+<a href='ref_XULElement.html#attr_pack'>pack</a><br>
+<a href='ref_XULElement.html#attr_persist'>persist</a><br>
+<a href='ref_XULElement.html#attr_popup'>popup</a><br>
+<a href='ref_XULElement.html#attr_position'>position</a><br>
+<a href='ref_XULElement.html#attr_ref'>ref</a><br>
+<a href='ref_XULElement.html#attr_removeelement'>removeelement</a><br>
+<a href='ref_XULElement.html#attr_sortDirection'>sortDirection</a><br>
+<a href='ref_XULElement.html#attr_sortResource'>sortResource</a><br>
+<a href='ref_XULElement.html#attr_sortResource2'>sortResource2</a><br>
+<a href='ref_XULElement.html#attr_statustext'>statustext</a><br>
+<a href='ref_XULElement.html#attr_style'>style</a><br>
+<a href='ref_XULElement.html#attr_template'>template</a><br>
+<a href='ref_XULElement.html#attr_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#attr_tooltiptext'>tooltiptext</a><br>
+<a href='ref_XULElement.html#attr_top'>top</a><br>
+<a href='ref_XULElement.html#attr_uri'>uri</a><br>
+<a href='ref_XULElement.html#attr_wait-cursor'>wait-cursor</a><br>
+<a href='ref_XULElement.html#attr_width'>width</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='attr_alwaysopenpopup'><span class='attrib'>alwaysopenpopup</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, the autocomplete popup will be displayed even when there are no  matches. If false, the default value, the popup will be hidden.</p>
+  <h5><a name='attr_autoFill'><span class='attrib'>autoFill</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If set to true, the best match will be filled into the textbox as the user  types. If false, the default, the value will not be filled in until the user  selects an item.</p>
+  <h5><a name='attr_autoFillAfterMatch'><span class='attrib'>autoFillAfterMatch</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If set to true, the entire text of the best match will be displayed at the  end of the input. If false, only the text that hasn't been entered yet will  be filled in. The autoFill attribute must be set to true to use this  feature.</p>
+  <h5><a name='attr_crop'><span class='attrib'>crop</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  If the label of the textbox is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is right to left (rtl), the cropping is reversed.</p>
+  <ul>
+    <li><span class='aval'>start</span>:
+          The text will be cropped on its left side. 
+
+</li>
+    <li><span class='aval'>end</span>:
+          The text will be cropped on its right side.
+
+</li>
+    <li><span class='aval'>left</span>:
+          <b>(Deprecated)</b> The text will be cropped on its left side.
+
+</li>
+    <li><span class='aval'>right</span>:
+          <b>(Deprecated)</b> The text will be cropped on its right side.
+
+</li>
+    <li><span class='aval'>center</span>:
+          The text will be cropped on both sides.
+
+</li>
+    <li><span class='aval'>none</span>:
+          The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+
+</li>
+  </ul>
+  <h5><a name='attr_disableAutocomplete'><span class='attrib'>disableAutocomplete</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, the autocomplete behavior will be disabled. You might use a script  to change this attribute. If false, the default, autocomplete is enabled.</p>
+  <h5><a name='attr_disabled'><span class='attrib'>disabled</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Indicates whether the textbox is disabled or not. If this attribute is set to true,  the textbox is disabled. This is usually drawn with the text in grey. If the textbox is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the textbox, leave the attribute out entirely as opposed to  setting the value to false.</p>
+  <h5><a name='attr_disablehistory'><span class='attrib'>disablehistory</span></a></h5>
+  <p>
+  If false, an arrow button will appear on the end of the textbox which, when  pressed, will open a dropdown menu of the history items. The default value  is true, which will hide the dropdown button.</p>
+  <h5><a name='attr_focused'><span class='attrib'>focused</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  This attribute is set to true if the textbox element is focused.</p>
+  <h5><a name='attr_forceComplete'><span class='attrib'>forceComplete</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, the textbox will be filled in with the best match when it loses the  focus. If false, it will only be filled in when the user selects an item.</p>
+  <h5><a name='attr_ignoreBlurWhileSearching'><span class='attrib'>ignoreBlurWhileSearching</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, blur events are ignored while searching, which means that the  autocomplete popup will not disappear.</p>
+  <h5><a name='attr_inputtooltiptext'><span class='attrib'>inputtooltiptext</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  The tooltip text for the textbox.</p>
+  <h5><a name='attr_label'><span class='attrib'>label</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  The label that will appear on the textbox. If this is left out, no text appears.</p>
+  <h5><a name='attr_maxlength'><span class='attrib'>maxlength</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The maximum number of characters that the textbox allows to be entered.</p>
+  <h5><a name='attr_maxrows'><span class='attrib'>maxrows</span></a></h5>
+  <p>
+  The number of rows to show in the results list at a time. A scrollbar will appear  so the user can scroll through the remaining items.</p>
+  <h5><a name='attr_minResultsForPopup'><span class='attrib'>minResultsForPopup</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The minimum number of results that must be returned for the popup to be  displayed.</p>
+  <h5><a name='attr_nomatch'><span class='attrib'>nomatch</span></a></h5>
+  <p>
+  This attribute will be set to true if the last search resulted in no matches.</p>
+  <h5><a name='attr_onerrorcommand'><span class='attrib'>onerrorcommand</span></a></h5>
+  <p>
+  This event handler is called when an error occurs when selecting a result  from the popup.</p>
+  <h5><a name='attr_ontextcommand'><span class='attrib'>ontextcommand</span></a></h5>
+  <p>
+  This event handler is called when a result is selected for the textbox.</p>
+  <h5><a name='attr_ontextrevert'><span class='attrib'>ontextrevert</span></a></h5>
+  <p>
+  This event handler is called when the user presses Escape to revert the  textbox to its original uncompleted value.</p>
+  <h5><a name='attr_open'><span class='attrib'>open</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, the popup is showing. You can change this value to show or hide the popup.</p>
+  <h5><a name='attr_searchSessions'><span class='attrib'>searchSessions</span></a></h5>
+<p class='aptype'>Type:&nbsp;space separated list of session names</p>  <p>
+  Set to a keyword indicating what type of data to look up for autocomplete. You  may set multiple types by separating their names by spaces. The following values  are possible, although custom components may be installed which add others.</p>
+  <ul>
+    <li><span class='aval'>history</span>:
+          The user's URL history is searched.
+
+</li>
+    <li><span class='aval'>addrbook</span>:
+          The user's address book is searched.
+
+</li>
+    <li><span class='aval'>ldap</span>:
+          The user's LDAP directories are searched.
+
+</li>
+  </ul>
+  <h5><a name='attr_showCommentColumn'><span class='attrib'>showCommentColumn</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, a comment column appears in the popup. For the URL history, the comment  column will contain the page titles associated with each URL. The default value  of this property is false.</p>
+  <h5><a name='attr_showpopup'><span class='attrib'>showpopup</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, the popup will be shown. If false, the popup will not be shown, but  the autocomplete results will still be available. You can set this to false  and set the autoFill attribute to true to emulate a Communicator 4.x style  autocomplete textbox. The default value is true.</p>
+  <h5><a name='attr_size'><span class='attrib'>size</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The number of characters that can be displayed in the textbox.</p>
+  <h5><a name='attr_tabScrolling'><span class='attrib'>tabScrolling</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, the user may cycle through the results list by pressing the TAB key.  If false, the default, the TAB key moves the focus to the next element.</p>
+  <h5><a name='attr_tabindex'><span class='attrib'>tabindex</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.</p>
+  <h5><a name='attr_timeout'><span class='attrib'>timeout</span></a></h5>
+  <p>
+  Set to the number of milliseconds to wait between when the users presses a key  and the results list updates. The default value is 50, which is very fast.</p>
+  <h5><a name='attr_type'><span class='attrib'>type</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  Set to the value 'autocomplete' to have an autocomplete textbox.</p>
+  <h5><a name='attr_userAction'><span class='attrib'>userAction</span></a></h5>
+  <p>
+  This attribute will be set to the action the user is currently performing.  Possible values:</p>
+  <ul>
+    <li><span class='aval'>none</span>:
+          The user is not interacting with the textbox.
+
+</li>
+    <li><span class='aval'>typing</span>:
+          The user is typing into the textbox.
+
+</li>
+    <li><span class='aval'>scrolling</span>:
+          The user is scrolling through the textbox.
+
+</li>
+  </ul>
+  <h5><a name='attr_value'><span class='attrib'>value</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  The default value entered in the textbox. The attribute only holds the  default value and is never modified when the user enters text. To get the  updated value, use the value property.</p>
+</div>
+<hr class='propsplit'><h4 class='propslist'><a name='propsblk'>Properties and Methods:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#prop_align'>align</a><br>
+<a href='ref_XULElement.html#prop_allowEvents'>allowEvents</a><br>
+<a href='ref_XULElement.html#prop_blur'>blur</a><br>
+<a href='ref_XULElement.html#prop_boxObject'>boxObject</a><br>
+<a href='ref_XULElement.html#prop_boxObject.element'>boxObject.element</a><br>
+<a href='ref_XULElement.html#prop_boxObject.getLookAndFeelMetric'>boxObject.getLookAndFeelMetric</a><br>
+<a href='ref_XULElement.html#prop_boxObject.height'>boxObject.height</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenX'>boxObject.screenX</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenY'>boxObject.screenY</a><br>
+<a href='ref_XULElement.html#prop_boxObject.width'>boxObject.width</a><br>
+<a href='ref_XULElement.html#prop_boxObject.x'>boxObject.x</a><br>
+<a href='ref_XULElement.html#prop_boxObject.y'>boxObject.y</a><br>
+<a href='ref_XULElement.html#prop_builder'>builder</a><br>
+<a href='ref_XULElement.html#prop_className'>className</a><br>
+<a href='ref_XULElement.html#prop_click'>click</a><br>
+<a href='ref_XULElement.html#prop_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#prop_contextMenu'>contextMenu</a><br>
+<a href='ref_XULElement.html#prop_controllers'>controllers</a><br>
+<a href='ref_XULElement.html#prop_database'>database</a><br>
+<a href='ref_XULElement.html#prop_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#prop_dir'>dir</a><br>
+<a href='ref_XULElement.html#prop_doCommand'>doCommand</a><br>
+<a href='ref_XULElement.html#prop_flex'>flex</a><br>
+<a href='ref_XULElement.html#prop_focus'>focus</a><br>
+<a href='ref_XULElement.html#prop_getElementsByAttribute'>getElementsByAttribute</a><br>
+<a href='ref_XULElement.html#prop_height'>height</a><br>
+<a href='ref_XULElement.html#prop_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#prop_id'>id</a><br>
+<a href='ref_XULElement.html#prop_left'>left</a><br>
+<a href='ref_XULElement.html#prop_maxHeight'>maxHeight</a><br>
+<a href='ref_XULElement.html#prop_maxWidth'>maxWidth</a><br>
+<a href='ref_XULElement.html#prop_menu'>menu</a><br>
+<a href='ref_XULElement.html#prop_minHeight'>minHeight</a><br>
+<a href='ref_XULElement.html#prop_minWidth'>minWidth</a><br>
+<a href='ref_XULElement.html#prop_observes'>observes</a><br>
+<a href='ref_XULElement.html#prop_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#prop_orient'>orient</a><br>
+<a href='ref_XULElement.html#prop_pack'>pack</a><br>
+<a href='ref_XULElement.html#prop_persist'>persist</a><br>
+<a href='ref_XULElement.html#prop_ref'>ref</a><br>
+<a href='ref_XULElement.html#prop_resource'>resource</a><br>
+<a href='ref_XULElement.html#prop_statusText'>statusText</a><br>
+<a href='ref_XULElement.html#prop_style'>style</a><br>
+<a href='ref_XULElement.html#prop_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#prop_tooltipText'>tooltipText</a><br>
+<a href='ref_XULElement.html#prop_top'>top</a><br>
+<a href='ref_XULElement.html#prop_width'>width</a><br>
+</p>
+<p>Inherited from Element:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_addEventListener'>addEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_appendChild'>appendChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_attributes'>attributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_childNodes'>childNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_cloneNode'>cloneNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_dispatchEvent'>dispatchEvent</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_firstChild'>firstChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttribute'>getAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNS'>getAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNode'>getAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNodeNS'>getAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagName'>getElementsByTagName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagNameNS'>getElementsByTagNameNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttribute'>hasAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributeNS'>hasAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributes'>hasAttributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasChildNodes'>hasChildNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_insertBefore'>insertBefore</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_isSupported'>isSupported</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_lastChild'>lastChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_localName'>localName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_namespaceURI'>namespaceURI</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nextSibling'>nextSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeName'>nodeName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeType'>nodeType</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeValue'>nodeValue</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_normalize'>normalize</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_ownerDocument'>ownerDocument</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_parentNode'>parentNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_prefix'>prefix</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_previousSibling'>previousSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttribute'>removeAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNS'>removeAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNode'>removeAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeChild'>removeChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeEventListener'>removeEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_replaceChild'>replaceChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttribute'>setAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNS'>setAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNode'>setAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNodeNS'>setAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_tagName'>tagName</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='prop_accessible'><span class='attrib'>accessible</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIAccessible.html'>nsIAccessible</a></p>  <p>
+  Returns the accessibility object for the textbox.</p>
+  <h5><a name='prop_addSession'><span class='attrib'> addSession ( session ) </span></a></h5>
+  <p>
+  
+  Adds a new session object to the autocomplete widget. This can be used to  create a customized autocomplete results list. The argument should be an object  which implements the nsIAutoCompleteSession interface.</p>
+  <h5><a name='prop_alwaysOpenPopup'><span class='attrib'>alwaysOpenPopup</span></a></h5>
+<p>Gets and sets the value of the alwaysopenpopup attribute.</p>
+  <h5><a name='prop_autoFill'><span class='attrib'>autoFill</span></a></h5>
+<p>Gets and sets the value of the autoFill attribute.</p>
+  <h5><a name='prop_autoFillAfterMatch'><span class='attrib'>autoFillAfterMatch</span></a></h5>
+<p>Gets and sets the value of the autoFillAfterMatch attribute.</p>
+  <h5><a name='prop_clearResults'><span class='attrib'> clearResults ( ) </span></a></h5>
+  <p>
+  
+  Clears the results list.</p>
+  <h5><a name='prop_crop'><span class='attrib'>crop</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the crop attribute.</p>
+  <h5><a name='prop_disableAutocomplete'><span class='attrib'>disableAutocomplete</span></a></h5>
+<p>Gets and sets the value of the disableAutocomplete attribute.</p>
+  <h5><a name='prop_disabled'><span class='attrib'>disabled</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p><p>Gets and sets the value of the disabled attribute.</p>
+  <h5><a name='prop_editable'><span class='attrib'>editable</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Autocomplete fields are editable so this property always returns true.</p>
+  <h5><a name='prop_focused'><span class='attrib'>focused</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p><p>Gets and sets the value of the focused attribute.</p>
+  <h5><a name='prop_forceComplete'><span class='attrib'>forceComplete</span></a></h5>
+<p>Gets and sets the value of the forceComplete attribute.</p>
+  <h5><a name='prop_getDefaultSession'><span class='attrib'> getDefaultSession ( ) </span></a></h5>
+  <p>
+  
+  Returns the name of the first session with available results.</p>
+  <h5><a name='prop_getResultAt'><span class='attrib'> getResultAt ( index ) </span></a></h5>
+  <p>
+  
+  Returns the result item at the specified index. The item will be a value  of type nsIAutoCompleteItem.</p>
+  <h5><a name='prop_getResultCount'><span class='attrib'> getResultCount ( session ) </span></a></h5>
+  <p>
+  
+  Returns the number of results. (The session argument is currently ignored).</p>
+  <h5><a name='prop_getResultValueAt'><span class='attrib'> getResultValueAt ( index ) </span></a></h5>
+  <p>
+  
+  Returns the result value at the specified index. The item will correspond  to the text of that item that appears in the popup.</p>
+  <h5><a name='prop_getSession'><span class='attrib'> getSession ( index ) </span></a></h5>
+  <p>
+  
+  Returns the session object with the given index. This will return an object  of type nsIAutoCompleteSession.</p>
+  <h5><a name='prop_getSessionByName'><span class='attrib'> getSessionByName ( name ) </span></a></h5>
+  <p>
+  
+  Returns the session object with the given name. This will return an object  of type nsIAutoCompleteSession.</p>
+  <h5><a name='prop_getSessionResultAt'><span class='attrib'> getSessionResultAt ( session , index ) </span></a></h5>
+  <p>
+  
+  Returns the result item at the specified index for a specific session.</p>
+  <h5><a name='prop_getSessionStatusAt'><span class='attrib'> getSessionStatusAt ( index ) </span></a></h5>
+  <p>
+  
+  Returns the status for the session object with the given index.</p>
+  <h5><a name='prop_getSessionValueAt'><span class='attrib'> getSessionValueAt ( session , index ) </span></a></h5>
+  <p>
+  
+  Returns the result value at the specified index for a specific session.</p>
+  <h5><a name='prop_ignoreBlurWhileSearching'><span class='attrib'>ignoreBlurWhileSearching</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, blur events are ignored while searching, which means that the  autocomplete popup will not disappear.</p>
+  <h5><a name='prop_inputField'><span class='attrib'>inputField</span></a></h5>
+<p class='aptype'>Type:&nbsp;textbox element</p>  <p>
+  In Mozilla, the XUL textbox is implemented as a wrapper around an HTML  input element. This read only property holds a reference to this inner input  element.</p>
+  <h5><a name='prop_isSearching'><span class='attrib'>isSearching</span></a></h5>
+  <p>
+  This property is set to true while a search is occuring.</p>
+  <h5><a name='prop_isWaiting'><span class='attrib'>isWaiting</span></a></h5>
+  <p>
+  This property is set to true during the period while waiting for the timeout   between the time when a user has pressed a key and a search is performed.</p>
+  <h5><a name='prop_label'><span class='attrib'>label</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the label attribute.</p>
+  <h5><a name='prop_maxLength'><span class='attrib'>maxLength</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The maximum number of characters that the textbox allows to be entered.</p>
+  <h5><a name='prop_maxRows'><span class='attrib'>maxRows</span></a></h5>
+<p>Gets and sets the value of the maxrows attribute.</p>
+  <h5><a name='prop_minResultsForPopup'><span class='attrib'>minResultsForPopup</span></a></h5>
+<p>Gets and sets the value of the minResultsForPopup attribute.</p>
+  <h5><a name='prop_noMatch'><span class='attrib'>noMatch</span></a></h5>
+  <p>
+  This property will be set to true if the last search resulted in no matches.</p>
+  <h5><a name='prop_open'><span class='attrib'>open</span></a></h5>
+<p>Gets and sets the value of the open attribute.</p>
+  <h5><a name='prop_removeSession'><span class='attrib'> removeSession ( session ) </span></a></h5>
+  <p>
+  
+  Removes a session object from the autocomplete widget. The argument should be an  object which implements the nsIAutoCompleteSession interface.</p>
+  <h5><a name='prop_resultsPopup'><span class='attrib'>resultsPopup</span></a></h5>
+  <p>
+  This property is set to the popup element that displays the results.</p>
+  <h5><a name='prop_searchSessions'><span class='attrib'>searchSessions</span></a></h5>
+<p class='aptype'>Type:&nbsp;space separated list of session names</p>  <p>
+  Set to a keyword indicating what type of data to look up for autocomplete. You  may set multiple types by separating their names by spaces. The following values  are possible, although custom components may be installed which add others.</p>
+  <ul>
+    <li><span class='aval'>history</span>:
+          The user's URL history is searched.
+
+</li>
+    <li><span class='aval'>addrbook</span>:
+          The user's address book is searched.
+
+</li>
+    <li><span class='aval'>ldap</span>:
+          The user's LDAP directories are searched.
+
+</li>
+  </ul>
+  <h5><a name='prop_select'><span class='attrib'> select ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Select all the text in the textbox.</p>
+  <h5><a name='prop_selectionEnd'><span class='attrib'>selectionEnd</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  Get or modify the end of the selected portion of the field's text. Use  in conjuction with the selectionEnd property. The value specifies the index of  the character after the selection. If this value is equal to the selectionStart  property, no text is selected, but the value indicates the position of the  caret (cursor) within the textbox.</p>
+  <h5><a name='prop_selectionStart'><span class='attrib'>selectionStart</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  Get or modify the beginning of the selected portion of the field's text. Use  in conjuction with the selectionEmd property. The value specifies the index of  the first selected character.</p>
+  <h5><a name='prop_sessionCount'><span class='attrib'>sessionCount</span></a></h5>
+  <p>
+  Holds the number of sessions.</p>
+  <h5><a name='prop_setSelectionRange'><span class='attrib'> setSelectionRange ( start , end ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Sets the selected portion of the textbox, where the start argument is the  index of the first character to select and the end argument is the index of the  character after the selection. Set both arguments to the same value to move the  cursor to the corresponding position without selecting text.</p>
+  <h5><a name='prop_showCommentColumn'><span class='attrib'>showCommentColumn</span></a></h5>
+<p>Gets and sets the value of the showCommentColumn attribute.</p>
+  <h5><a name='prop_showPopup'><span class='attrib'>showPopup</span></a></h5>
+<p>Gets and sets the value of the showpopup attribute.</p>
+  <h5><a name='prop_size'><span class='attrib'>size</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The number of characters that can be displayed in the textbox.</p>
+  <h5><a name='prop_syncSessions'><span class='attrib'> syncSessions ( autoCompleteElement ) </span></a></h5>
+  <p>
+  
+  Copy the sessions from another autocomplete element.</p>
+  <h5><a name='prop_tabScrolling'><span class='attrib'>tabScrolling</span></a></h5>
+<p>Gets and sets the value of the tabScrolling attribute.</p>
+  <h5><a name='prop_textLength'><span class='attrib'>textLength</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  Holds the length of the text entered in the textbox. This property is read only.</p>
+  <h5><a name='prop_timeout'><span class='attrib'>timeout</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p><p>Gets and sets the value of the timeout attribute.</p>
+  <h5><a name='prop_type'><span class='attrib'>type</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  Set to the value 'autocomplete' to have an autocomplete textbox.</p>
+  <h5><a name='prop_userAction'><span class='attrib'>userAction</span></a></h5>
+<p>Gets and sets the value of the userAction attribute.</p>
+  <h5><a name='prop_value'><span class='attrib'>value</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  Returns the text entered into the textbox. You can set this property to  change the text in the textbox.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

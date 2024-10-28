@@ -1,0 +1,112 @@
+A {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #e07000; TEXT-DECORATION: underline
+}
+A.nounderline {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.nounderline:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.nounderline:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.navi {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.navi:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.navi:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A.footer {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.footer:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.footer:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+TD {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.default {
+        FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+P {
+FONT-SIZE: 11px;LINE-HEIGHT: 15px;
+}
+
+.bdefault {
+        FONT-WEIGHT: bold; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.smaller {
+        FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.navi {
+        FONT-WEIGHT: bold; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.leftnavi {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; LINE-HEIGHT: 14px
+}
+.footer {
+        FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.sectionhead {
+        FONT-WEIGHT: bold; FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.pagehead {
+        FONT-WEIGHT: bold; FONT-SIZE: 24px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.subsectionhead {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.storyhead {
+        FONT-SIZE: 16px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.editionhead {
+        FONT-WEIGHT: bold; FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.leadhead {
+        FONT-SIZE: 16px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.leadblurb {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.indexsectionhead {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.hltstoryhead {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.otherstoryhead {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; LINE-HEIGHT: 14px
+}
+.topnavi {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; LINE-HEIGHT: 14px
+}
+.bottomnavi {
+        FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; LINE-HEIGHT: 14px
+}
+.printpagehead {
+        FONT-WEIGHT: bold; FONT-SIZE: 20px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.fromprinthead {
+        FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ednsectionhead {
+        FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.weatherhead {
+        FONT-SIZE: 16px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.weathercondition {
+        FONT-WEIGHT: bold; FONT-SIZE: 14px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}

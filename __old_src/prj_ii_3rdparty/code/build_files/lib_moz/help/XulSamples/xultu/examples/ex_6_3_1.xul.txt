@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 6.3.1"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<tree flex="1">
+  <treecols>
+    <treecol id="nameColumn" label="Name" flex="1"/>
+    <treecol id="addressColumn" label="Address" flex="2"/>
+  </treecols>
+  <treechildren/>
+</tree>
+
+
+</window>
+

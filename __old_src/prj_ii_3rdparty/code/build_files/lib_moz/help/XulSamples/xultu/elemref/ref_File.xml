@@ -1,0 +1,116 @@
+<?xml version='1.0'?>
+
+<object name='File'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xpiadv.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_File.html</reference>
+  The File object can be used to manipulate files. Like the Install functions, the  functions of the File object only assign an operation to be performed once the  installation has begun.      Most functions take a file or folder as an argument. This  argument must be one returned by the   Install.getFolder  function.        This object is only available in an installation script.  
+<html><![CDATA[
+<p>  The File object can be used to manipulate files. Like the Install functions, the  functions of the File object only assign an operation to be performed once the  installation has begun.</p>  <p>  Most functions take a file or folder as an argument. This  argument must be one returned by the  <a href="ref_Install.html#prop_getFolder">Install.getFolder</a> function.  </p>  <p>  This object is only available in an installation script.  </p>
+]]></html>
+
+<method name='copy'>
+<prototype> copy ( source , dest ) </prototype>
+  
+  Assigns a file to be copied. The file specified by source is copied to the location  specified by dest.
+</method>
+<method name='dirCreate'>
+<prototype> dirCreate ( folder ) </prototype>
+  
+  Assigns the directory referred to by the folder argument to be created. This folder must  have been returned by the Install.getFolder function.
+</method>
+<method name='dirGetParent'>
+<prototype> dirGetParent ( folder ) </prototype>
+  
+  Returns the parent directory of the folder argument. This folder must have  been returned by the Install.getFolder function.
+</method>
+<method name='dirRemove'>
+<prototype> dirRemove ( folder , recurse ) </prototype>
+  
+  Assigns the directory referred to by the folder argument to be removed. If recurse is set  to true, the directory is deleted recursively. If false, the directory is only deleted if  it is empty.
+</method>
+<method name='dirRename'>
+<prototype> dirRename ( folder , newname ) </prototype>
+  
+  Assigns the directory referred to by the folder argument to be renamed. The newname  argument should be set to a string that contains the new name of the directory.
+</method>
+<method name='diskSpaceAvailable'>
+<prototype> diskSpaceAvailable ( folder ) </prototype>
+  
+  Returns the number of bytes of available space on the disk on which the given folder  is located on.
+</method>
+<method name='execute'>
+<prototype> execute ( file , args ) </prototype>
+  
+  Assigns a file to be executed during the installation. You may optionally specify arguments.  This function is not the same as the   Install.execute  function. That function runs  files from inside the installer archive only. This function is used to run files which  are already on disk.
+</method>
+<method name='exists'>
+<prototype> exists ( file ) </prototype>
+  
+  Returns true if the file exists.
+</method>
+<method name='isDirectory'>
+<prototype> isDirectory ( folder ) </prototype>
+  
+  Returns true if the given folder is a reference to a directory.
+</method>
+<method name='isFile'>
+<prototype> isFile ( file ) </prototype>
+  
+  Returns true if the given folder is a reference to a file.
+</method>
+<method name='macAlias'>
+<prototype> macAlias ( sourceFolder , sourceFile , aliasFolder ) </prototype>
+  
+  Assigns a Macintosh shortcut to another file be created. On non-Macintosh systems, this  function does nothing. Arguments are as follows:               sourceFolder  Refers to the folder containing the file which the alias points                               to. This argument must be returned by getFolder.             sourceFile  A string that holds the filename of the alias.             aliasFolder  Refers to the location of the new alias. This argument must be                            returned by getFolder.        
+</method>
+<method name='modDate'>
+<prototype> modDate ( file ) </prototype>
+  
+  Returns the last modified date of the given file. The date is returned as a number,  which you can then pass to the JavaScript Date object.
+</method>
+<method name='modDateChanged'>
+<prototype> modDateChanged ( file , date ) </prototype>
+  
+  Returns true if last modified date of the given file is different than the date  given by the second argument. This might be used to compare versions of files.
+</method>
+<method name='move'>
+<prototype> move ( source , dest ) </prototype>
+  
+  Assigns a file given by source to be moved to a different location given by dest.
+</method>
+<method name='nativeVersion'>
+<prototype> nativeVersion ( file ) </prototype>
+  
+
+</method>
+<method name='remove'>
+<prototype> remove ( file ) </prototype>
+  
+  Assigns a file to be removed.
+</method>
+<method name='rename'>
+<prototype> rename ( file , newname ) </prototype>
+  
+  Assigns the file referred to by the file argument to be renamed. The newname  argument should be set to a string that contains the new name of the file.
+</method>
+<method name='size'>
+<prototype> size ( file ) </prototype>
+  
+  Returns the size in bytes of the given file.
+</method>
+<method name='unixLink'>
+<prototype> unixLink ( source , flags ) </prototype>
+  
+
+</method>
+<method name='windowsRegisterServer'>
+<prototype> windowsRegisterServer ( folder ) </prototype>
+  
+  Used to register Windows COM servers. The argument folder should refer to the library  file.
+</method>
+<method name='windowsShortcut'>
+<prototype> windowsShortcut ( target , shortcut , desc , workingDir , args , icon , iconid ) </prototype>
+  
+  Assigns a Windows shortcut to another file to be created. On non-Windows systems, this  function does nothing. Arguments are as follows:               target  A string that holds the target of the shortcut.             shortcut  A string that holds the path and filename of the shortcut.             desc  The description of the shortcut.             workingDir  The working directory of the shortcut, when it is executed,                             assuming that the shortcut points to an executable file.             args  The arguments passed to the shortcut when executed.             icon  A string that holds the path of the file that contains the shortcut's                       icon.             iconid  The ID of the icon within the icon file.        
+</method>
+</object>

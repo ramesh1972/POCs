@@ -1,0 +1,197 @@
+<html>
+<head>
+<title>Morten's JavaScript Tree Menu - Code</title>
+
+<script type="text/javascript" src="mtmcode.js">
+</script>
+
+<script type="text/javascript">
+// Morten's JavaScript Tree Menu
+// version 2.3.0, dated 2001-04-30
+// http://www.treemenu.com/
+
+// Copyright (c) 2001, Morten Wang & contributors
+// All rights reserved.
+
+// This software is released under the BSD License which should accompany
+// it in the file "COPYING".  If you do not have this file you can access
+// the license through the WWW at http://www.treemenu.com/license.txt
+
+/******************************************************************************
+* User-configurable options.                                                  *
+******************************************************************************/
+
+// Menu table width, either a pixel-value (number) or a percentage value.
+var MTMTableWidth = "100%";
+
+// Name of the frame where the menu is to appear.
+var MTMenuFrame = "menu";
+
+// Variable for determining how a sub-menu gets a plus-sign.
+// "Never" means it never gets a plus sign, "Always" means always,
+// "Submenu" means when it contains another submenu.
+var MTMSubsGetPlus = "Always";
+
+// variable that defines whether the menu emulates the behaviour of
+// Windows Explorer
+var MTMEmulateWE = false;
+
+// Directory of menu images/icons
+var MTMenuImageDirectory = "menu-images/";
+
+// Variables for controlling colors in the menu document.
+// Regular BODY atttributes as in HTML documents.
+var MTMBGColor = "#ffffff";
+var MTMBackground = "";
+var MTMTextColor = "#000000";
+
+// color for all menu items
+var MTMLinkColor = "#330099";
+
+// Hover color, when the mouse is over a menu link
+var MTMAhoverColor = "#990000";
+
+// Foreground color for the tracking & clicked submenu item
+var MTMTrackColor ="#000000";
+var MTMSubExpandColor = "#666699";
+var MTMSubClosedColor = "#666699";
+
+// All options regarding the root text and it's icon
+var MTMRootIcon = "menu_new_root.gif";
+var MTMenuText = "Site contents:";
+var MTMRootColor = "#000000";
+var MTMRootFont = "Arial, Helvetica, sans-serif";
+var MTMRootCSSize = "84%";
+var MTMRootFontSize = "-1";
+
+// Font for menu items.
+var MTMenuFont = "Arial, Helvetica, sans-serif";
+var MTMenuCSSize = "84%";
+var MTMenuFontSize = "-1";
+
+// Variables for style sheet usage
+// 'true' means use a linked style sheet.
+var MTMLinkedSS = false;
+var MTMSSHREF = "style/menu.css";
+
+// Additional style sheet properties if you're not using a linked style sheet.
+// See the documentation for details on IDs, classes & elements used in the menu.
+// Empty string if not used.
+var MTMExtraCSS = "";
+
+// Header & footer, these are plain HTML.
+// Leave them to be "" if you're not using them
+
+var MTMHeader = "";
+var MTMFooter = "";
+
+// Whether you want an open sub-menu to close automagically
+// when another sub-menu is opened.  'true' means auto-close
+var MTMSubsAutoClose = false;
+
+// This variable controls how long it will take for the menu
+// to appear if the tracking code in the content frame has
+// failed to display the menu. Number if in tenths of a second
+// (1/10) so 10 means "wait 1 second".
+var MTMTimeOut = 15;
+
+// Cookie usage.  First is use cookie (yes/no, true/false).
+// Second is cookie name to use.
+// Third is how many days we want the cookie to be stored.
+
+var MTMUseCookies = false;
+var MTMCookieName = "MTMCookie";
+var MTMCookieDays = 3;
+
+// Tool tips.  A true/false-value defining whether the support
+// for tool tips should exist or not.
+var MTMUseToolTips = true;
+
+/******************************************************************************
+* User-configurable list of icons.                                            *
+******************************************************************************/
+
+var MTMIconList = null;
+MTMIconList = new IconList();
+MTMIconList.addIcon(new MTMIcon("menu_link_external.gif", "http://", "pre"));
+MTMIconList.addIcon(new MTMIcon("menu_link_pdf.gif", ".pdf", "post"));
+
+/******************************************************************************
+* User-configurable menu.                                                     *
+******************************************************************************/
+
+// Main menu.
+
+var menu = null;
+menu = new MTMenu();
+menu.MTMAddItem(new MTMenuItem("News", "menu/news.html", "text"));
+menu.MTMAddItem(new MTMenuItem("Features etc.", "menu/features.html", "text"));
+menu.MTMAddItem(new MTMenuItem("Supp. browsers", "menu/supported_browsers.html", "text"));
+menu.MTMAddItem(new MTMenuItem("Why use it?", "menu/why_mine.html", "text"));
+menu.MTMAddItem(new MTMenuItem("Sites in use", "menu/in_use.html", "text"));
+menu.MTMAddItem(new MTMenuItem("Download", "menu/download.html", "text"));
+menu.MTMAddItem(new MTMenuItem("Install Guide", "menu/install-guide.html", "text"));
+menu.MTMAddItem(new MTMenuItem("Support"));
+menu.MTMAddItem(new MTMenuItem("Contributions", "menu/contribs.html", "text"));
+menu.MTMAddItem(new MTMenuItem("Notes from the author", "menu/author-notes.html", "text"));
+menu.MTMAddItem(new MTMenuItem("Things learned", "menu/things.html", "text"));
+menu.MTMAddItem(new MTMenuItem("How it works", "menu/how-it-works.html", "text"));
+
+menu.MTMAddItem(new MTMenuItem("Morten's pages"));
+menu.MTMAddItem(new MTMenuItem("M. Hall's pages"));
+menu.MTMAddItem(new MTMenuItem("Home", "main.html", "text"));  
+
+// Submenu, installation
+
+var installation = null;
+installation = new MTMenu();
+installation.MTMAddItem(new MTMenuItem("The frameset", "menu/frameset.html", "text"));
+installation.MTMAddItem(new MTMenuItem("Setting options", "menu/options.html", "text"));
+installation.MTMAddItem(new MTMenuItem("Making the menu", "menu/making.html", "text"));
+installation.MTMAddItem(new MTMenuItem("Adding icons", "menu/check_icons.html", "text"));
+installation.MTMAddItem(new MTMenuItem("Finishing up", "menu/finish.html", "text"));
+menu.items[6].MTMakeSubmenu(installation);
+
+// Submenu, support
+
+var support = null;
+support = new MTMenu();
+support.MTMAddItem(new MTMenuItem("Known bugs", "menu/bugs.html", "text"));
+support.MTMAddItem(new MTMenuItem("Wish list", "menu/wish_list.html", "text"));
+support.MTMAddItem(new MTMenuItem("Mailing list", "menu/mailing_list.html", "text"));
+support.MTMAddItem(new MTMenuItem("Author", "feedback.html", "text"));
+menu.items[7].MTMakeSubmenu(support);
+
+// Submenu, links to my own pages.
+
+var morten = null;
+morten = new MTMenu();
+morten.MTMAddItem(new MTMenuItem("Home page", "../", "_top"));
+morten.MTMAddItem(new MTMenuItem("Who Am I?", "../me/", "_top"));
+morten.MTMAddItem(new MTMenuItem("Backgammon", "../gammon/", "_top"));
+morten.MTMAddItem(new MTMenuItem("Humour", "../jokes/", "_top"));
+morten.MTMAddItem(new MTMenuItem("Programming", "../programming/", "_top"));
+morten.MTMAddItem(new MTMenuItem("Guitar", "../guitar/", "_top"));
+morten.MTMAddItem(new MTMenuItem("Other side", "http://www.geocities.com/~nettrom/", "_top"));
+menu.items[12].MTMakeSubmenu(morten);
+
+// Submenu, links to detailed explanation
+var details = null;
+details = new MTMenu();
+details.MTMAddItem(new MTMenuItem("The menu code", "menu/how-it-works/part-1.html", "text"));
+details.MTMAddItem(new MTMenuItem("A sample menu", "menu/how-it-works/part-2.html", "text"));
+details.MTMAddItem(new MTMenuItem("Global variables", "menu/how-it-works/part-3.html", "text"));
+details.MTMAddItem(new MTMenuItem("User's options", "menu/how-it-works/part-4.html", "text"));
+details.MTMAddItem(new MTMenuItem("M. Hall's pages"));
+menu.items[11].MTMakeSubmenu(details);
+
+// Submenu, links to Mike Hall's pages.
+var mike_hall = null;
+mike_hall = new MTMenu();
+mike_hall.MTMAddItem(new MTMenuItem("Home page", "http://www.brainjar.com/", "_top"));
+details.items[4].MTMakeSubmenu(mike_hall);
+</script>
+</head>
+<body onload="MTMStartMenu()" bgcolor="#ffffff" text="#000000" link="#330099" vlink="#666699" alink="#990000">
+</body>
+</html>

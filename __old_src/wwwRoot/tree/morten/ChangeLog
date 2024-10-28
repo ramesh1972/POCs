@@ -1,0 +1,20 @@
+Changes to Morten's JavaScript Tree Menu v2.3.0 (2001-04-30):
+
+	- MTMSubsGetPlus is now a tri-state option with three possible values;
+	  always, never and submenu.
+	- Cookie support is added, saving the state of the menu for a specified
+	  number of days.  Limits the tree to around 4000 items.
+	- Support for Netscape 6 and partial support for Opera 5.
+	- Arguments to MTMakeSubmenu() to define whether the sub menu is expanded
+	  as well as icons for open & closed state.
+	- Re-written the inline style sheet so it does not duplicate any
+	  information already found in the HTML code.
+	- Status bar message changed to "Expand/Collapse " and the item's text.
+	  Any link with a URL to a document will have said URL shown in the
+	  status bar instead of any message provided by the menu.
+	- Variables for headers & footers (HTML) in the menu document.
+	- Tracking of local files in Microsoft Internet Explorer fixed.
+	- Fixed a bug in which the menu didn't track URLs with query strings.
+	- Tooltips, through usage of the TITLE attribute.
+	- General code changes going towards object orientation and code that
+	  is more flexible and easier to work with.

@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+
+<element name='image'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/textimage.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_image.html</reference>
+  An element that displays an image, much like the HTML img element. The src  attribute can be used to specify the URL of the image.  
+
+<example>
+<![CDATA[
+    &lt;image src='my-face.png' width='60' height='80'/&gt;
+
+]]>
+</example>
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULImageElement</implements>
+<attr name='onerror' type='script code'>
+  This event is sent to an image element when an error occurs loading the image.
+</attr>
+<attr name='onload' type='script code'>
+  This event handler will be called on the image element when the image has  finished loading. This applies whether the image is applied via the src  attribute or the list-style-image style property. If you change the image,  the event will fire again when the new image loads. This event will not bubble  up the element tree.
+</attr>
+<attr name='src' type='image URL'>
+  The URL of the image to appear on the image. If this attribute is left  out, no image appears.
+</attr>
+<attr name='validate'>
+  This attribute indicates whether to load the image from the cache or not.  This would be useful if the images are stored remotely or you plan on swapping  the image frequently. The following values are accepted, or leave out the  attribute entirely for default handling:
+<value name='always'>
+    The image is always checked to see whether it should be reloaded.
+</value>
+<value name='never'>
+    The image will be loaded from the cache if possible.
+</value>
+</attr>
+<class name='alert-icon'>
+  Class that adds a alert icon. This typically looks like an exclamation mark.  This and the other icon classes may be used by image elements or other  elements which can have an image.
+</class>
+<class name='error-icon'>
+  Class that adds a error icon. This will typically be a red X icon.
+</class>
+<class name='message-icon'>
+  Class that adds a message box icon.
+</class>
+<class name='question-icon'>
+  Class that adds a question icon, which usually looks like a question mark.
+</class>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the image.
+</prop>
+<prop name='src'/>
+</element>

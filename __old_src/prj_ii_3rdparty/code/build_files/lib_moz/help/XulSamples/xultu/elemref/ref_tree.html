@@ -1,0 +1,381 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Tree Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Tree 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Tree</h3>
+
+<p>
+  A container which can be used to hold a tabular or hierarchical set of rows  of elements. The tree may contain any number of rows and any number of  columns. Each row of the tree may contain child rows which are displayed  indented from the parent. Unlike other elements, the data to display inside  the tree is not specified using tags, but is determined from a view object.  The view object implements the  <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a>  interface. The view is queried for the data to appear in the tree.   There are several ways in which trees are used, as listed below. The second  column lists the interfaces available via the tree's view property. The  third column indicates whether treeitem element are used.  <table border="1">    <tr>      <th>Tree Type</th>      <th>View Interfaces</th>      <th>Has DOM Nodes</th>      <th>Description</th>    </tr>    <tr>      <td>Content Tree</td>      <td>        <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a>,        <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeContentView.html">nsITreeContentView</a>      </td>      <td>Yes</td>      <td>This tree has <a href='ref_treeitem.html'>treeitem</a> elements placed within the <a href='ref_treechildren.html'>treechildren</a>          element. In this situation, a content view (which implements the          interface nsITreeContentView) which is a more specialized type of          view, uses the <a href='ref_treeitem.html'>treeitem</a> elements and their descendants to          determine the data to display in the tree. However, the treeitems          are not displayed directly; they are used only as data to the          content view. However, the content view will automatically update          the tree if treeitems are changed.      </td>    </tr>    <tr>      <td>RDF Tree</td>      <td>        <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a>,        <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIXULTreeBuilder.html">nsIXULTreeBuilder</a>      </td>      <td>No</td>      <td>This tree is generated from an RDF datasource. It is used when a          tree has a datasources attribute, and has 'dont-build-content' in          its flags attribute. For this tree, the data comes directly from           the RDF datasource. DOM treeitems are not created. Even though the          template uses treeitem elements to define the content, DOM nodes for          these elements are not created. This is the type that should be used          for RDF generated trees with lots of rows.      </td>    </tr>    <tr>      <td>RDF Content Tree</td>      <td>        <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a>,        <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIXULTreeBuilder.html">nsIXULTreeBuilder</a>        <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeContentView.html">nsITreeContentView</a>      </td>      <td>Yes</td>      <td>This tree is generated from an RDF datasource. It is similar to the          previous type but is used when the tree does not have          'dont-build-content' in its flags attribute. DOM treeitems are          created, so you can access the data using RDF functions or DOM          functions. This type is suitable for RDF generated trees with a          fairly small number of rows.      </td>    </tr>    <tr>      <td>Custom View Tree</td>      <td>        <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a>      </td>      <td>No</td>      <td>For this tree you implement the nsITreeView interface yourself. The          tree's data is retrieved from this custom view. The custom view          should be attached to the tree by setting its view property.      </td>    </tr>  </table>  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/trees.html'>More information about tree<a></p>
+<div class='aphead'>The tree element implements the following interfaces:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIAccessibleProvider.html'>nsIAccessibleProvider</a>&nbsp;&nbsp;
+</div>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_alternatingbackground'>alternatingbackground</a></td>
+<td><a href='#attr_disableKeyNavigation'>disableKeyNavigation</a></td>
+<td><a href='#attr_enableColumnDrag'>enableColumnDrag</a></td>
+<td><a href='#attr_flags'>flags</a></td>
+<td><a href='#attr_hidecolumnpicker'>hidecolumnpicker</a></td>
+</tr><tr>
+<td><a href='#attr_onselect'>onselect</a></td>
+<td><a href='#attr_rows'>rows</a></td>
+<td><a href='#attr_seltype'>seltype</a></td>
+<td><a href='#attr_statedatasource'>statedatasource</a></td>
+</tr></table>
+</div>
+<div class='aphead'><p>Properties and Methods:</p><table class='apheadbody'><tr>
+<td><a href='#prop_accessible'>accessible</a></td>
+<td><a href='#prop_builderView'>builderView</a></td>
+<td><a href='#prop_contentView'>contentView</a></td>
+<td><a href='#prop_currentIndex'>currentIndex</a></td>
+<td><a href='#prop_disableKeyNavigation'>disableKeyNavigation</a></td>
+</tr><tr>
+<td><a href='#prop_enableColumnDrag'>enableColumnDrag</a></td>
+<td><a href='#prop_firstOrdinalColumn'>firstOrdinalColumn</a></td>
+<td><a href='#prop_selstyle'>selstyle</a></td>
+<td><a href='#prop_treeBoxObject'>treeBoxObject</a></td>
+<td><a href='#prop_view'>view</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Attributes:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#attr_align'>align</a><br>
+<a href='ref_XULElement.html#attr_allowevents'>allowevents</a><br>
+<a href='ref_XULElement.html#attr_allownegativeassertions'>allownegativeassertions</a><br>
+<a href='ref_XULElement.html#attr_class'>class</a><br>
+<a href='ref_XULElement.html#attr_coalesceduplicatearcs'>coalesceduplicatearcs</a><br>
+<a href='ref_XULElement.html#attr_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#attr_container'>container</a><br>
+<a href='ref_XULElement.html#attr_containment'>containment</a><br>
+<a href='ref_XULElement.html#attr_context'>context</a><br>
+<a href='ref_XULElement.html#attr_contextmenu'>contextmenu</a><br>
+<a href='ref_XULElement.html#attr_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#attr_debug'>debug</a><br>
+<a href='ref_XULElement.html#attr_dir'>dir</a><br>
+<a href='ref_XULElement.html#attr_empty'>empty</a><br>
+<a href='ref_XULElement.html#attr_equalsize'>equalsize</a><br>
+<a href='ref_XULElement.html#attr_flags'>flags</a><br>
+<a href='ref_XULElement.html#attr_flex'>flex</a><br>
+<a href='ref_XULElement.html#attr_height'>height</a><br>
+<a href='ref_XULElement.html#attr_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#attr_id'>id</a><br>
+<a href='ref_XULElement.html#attr_insertafter'>insertafter</a><br>
+<a href='ref_XULElement.html#attr_insertbefore'>insertbefore</a><br>
+<a href='ref_XULElement.html#attr_left'>left</a><br>
+<a href='ref_XULElement.html#attr_maxheight'>maxheight</a><br>
+<a href='ref_XULElement.html#attr_maxwidth'>maxwidth</a><br>
+<a href='ref_XULElement.html#attr_menu'>menu</a><br>
+<a href='ref_XULElement.html#attr_minheight'>minheight</a><br>
+<a href='ref_XULElement.html#attr_minwidth'>minwidth</a><br>
+<a href='ref_XULElement.html#attr_mousethrough'>mousethrough</a><br>
+<a href='ref_XULElement.html#attr_observes'>observes</a><br>
+<a href='ref_XULElement.html#attr_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#attr_orient'>orient</a><br>
+<a href='ref_XULElement.html#attr_pack'>pack</a><br>
+<a href='ref_XULElement.html#attr_persist'>persist</a><br>
+<a href='ref_XULElement.html#attr_popup'>popup</a><br>
+<a href='ref_XULElement.html#attr_position'>position</a><br>
+<a href='ref_XULElement.html#attr_ref'>ref</a><br>
+<a href='ref_XULElement.html#attr_removeelement'>removeelement</a><br>
+<a href='ref_XULElement.html#attr_sortDirection'>sortDirection</a><br>
+<a href='ref_XULElement.html#attr_sortResource'>sortResource</a><br>
+<a href='ref_XULElement.html#attr_sortResource2'>sortResource2</a><br>
+<a href='ref_XULElement.html#attr_statustext'>statustext</a><br>
+<a href='ref_XULElement.html#attr_style'>style</a><br>
+<a href='ref_XULElement.html#attr_template'>template</a><br>
+<a href='ref_XULElement.html#attr_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#attr_tooltiptext'>tooltiptext</a><br>
+<a href='ref_XULElement.html#attr_top'>top</a><br>
+<a href='ref_XULElement.html#attr_uri'>uri</a><br>
+<a href='ref_XULElement.html#attr_wait-cursor'>wait-cursor</a><br>
+<a href='ref_XULElement.html#attr_width'>width</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='attr_alternatingbackground'><span class='attrib'>alternatingbackground</span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Moz1.7 </span></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, the background of the tree's rows will alternate between two  colors.</p>
+  <h5><a name='attr_disableKeyNavigation'><span class='attrib'>disableKeyNavigation</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If this attribute is not used, the user can navigate to specific items in  the tree by pressing the first the first letter of the item's label. This is  done incrementally, so pressing additional keys will select more specific  items. This feature may be disabled for a tree by setting this attribute to  true.</p>
+  <h5><a name='attr_enableColumnDrag'><span class='attrib'>enableColumnDrag</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  When set to 'true', the user may drag the column headers around to change the  order that they are displayed in.</p>
+  <h5><a name='attr_flags'><span class='attrib'>flags</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  Set this attribute to 'dont-build-content' for a template generated tree. For  trees that have their content placed directly inside the tree or have a custom  view object, this flag should not be used.</p>
+  <h5><a name='attr_hidecolumnpicker'><span class='attrib'>hidecolumnpicker</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  When set to false, a drop-down will appear in the upper right corner of the  tree, which the user may use to show and hide columns. When set to true,  the column picker will be hidden. The default value is false.</p>
+  <h5><a name='attr_onselect'><span class='attrib'>onselect</span></a></h5>
+<p class='aptype'>Type:&nbsp;script code</p>  <p>
+  This event is sent to an tree when a row is selected, or whenever the  selection changes. The user can select multiple rows by holding down Shift or  Control and click on a row. The onselect event will be sent for each item added  or removed to the selection.</p>
+  <h5><a name='attr_rows'><span class='attrib'>rows</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The number of rows to display in the tree.</p>
+  <h5><a name='attr_seltype'><span class='attrib'>seltype</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  Used to indicate whether multiple selection is allowed.</p>
+  <ul>
+    <li><span class='aval'>single</span>:
+          Only one row may be selected at a time.
+
+</li>
+    <li><span class='aval-default'>multiple</span>:
+          Multiple rows may be selected at once.
+
+</li>
+  </ul>
+  <h5><a name='attr_statedatasource'><span class='attrib'>statedatasource</span></a></h5>
+<p class='aptype'>Type:&nbsp;datasource URI</p>  <p>
+  Chrome XUL may specify an RDF datasource to use to store tree state  information. This is used to hold which tree items are open and which items  are collapsed. This information will be remembered for the next time the  XUL file is opened. If you do not specify this attribute, state information  will be stored in the local store (rdf:local-store).</p>
+</div>
+<hr class='propsplit'><h4 class='propslist'><a name='propsblk'>Properties and Methods:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#prop_align'>align</a><br>
+<a href='ref_XULElement.html#prop_allowEvents'>allowEvents</a><br>
+<a href='ref_XULElement.html#prop_blur'>blur</a><br>
+<a href='ref_XULElement.html#prop_boxObject'>boxObject</a><br>
+<a href='ref_XULElement.html#prop_boxObject.element'>boxObject.element</a><br>
+<a href='ref_XULElement.html#prop_boxObject.getLookAndFeelMetric'>boxObject.getLookAndFeelMetric</a><br>
+<a href='ref_XULElement.html#prop_boxObject.height'>boxObject.height</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenX'>boxObject.screenX</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenY'>boxObject.screenY</a><br>
+<a href='ref_XULElement.html#prop_boxObject.width'>boxObject.width</a><br>
+<a href='ref_XULElement.html#prop_boxObject.x'>boxObject.x</a><br>
+<a href='ref_XULElement.html#prop_boxObject.y'>boxObject.y</a><br>
+<a href='ref_XULElement.html#prop_builder'>builder</a><br>
+<a href='ref_XULElement.html#prop_className'>className</a><br>
+<a href='ref_XULElement.html#prop_click'>click</a><br>
+<a href='ref_XULElement.html#prop_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#prop_contextMenu'>contextMenu</a><br>
+<a href='ref_XULElement.html#prop_controllers'>controllers</a><br>
+<a href='ref_XULElement.html#prop_database'>database</a><br>
+<a href='ref_XULElement.html#prop_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#prop_dir'>dir</a><br>
+<a href='ref_XULElement.html#prop_doCommand'>doCommand</a><br>
+<a href='ref_XULElement.html#prop_flex'>flex</a><br>
+<a href='ref_XULElement.html#prop_focus'>focus</a><br>
+<a href='ref_XULElement.html#prop_getElementsByAttribute'>getElementsByAttribute</a><br>
+<a href='ref_XULElement.html#prop_height'>height</a><br>
+<a href='ref_XULElement.html#prop_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#prop_id'>id</a><br>
+<a href='ref_XULElement.html#prop_left'>left</a><br>
+<a href='ref_XULElement.html#prop_maxHeight'>maxHeight</a><br>
+<a href='ref_XULElement.html#prop_maxWidth'>maxWidth</a><br>
+<a href='ref_XULElement.html#prop_menu'>menu</a><br>
+<a href='ref_XULElement.html#prop_minHeight'>minHeight</a><br>
+<a href='ref_XULElement.html#prop_minWidth'>minWidth</a><br>
+<a href='ref_XULElement.html#prop_observes'>observes</a><br>
+<a href='ref_XULElement.html#prop_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#prop_orient'>orient</a><br>
+<a href='ref_XULElement.html#prop_pack'>pack</a><br>
+<a href='ref_XULElement.html#prop_persist'>persist</a><br>
+<a href='ref_XULElement.html#prop_ref'>ref</a><br>
+<a href='ref_XULElement.html#prop_resource'>resource</a><br>
+<a href='ref_XULElement.html#prop_statusText'>statusText</a><br>
+<a href='ref_XULElement.html#prop_style'>style</a><br>
+<a href='ref_XULElement.html#prop_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#prop_tooltipText'>tooltipText</a><br>
+<a href='ref_XULElement.html#prop_top'>top</a><br>
+<a href='ref_XULElement.html#prop_width'>width</a><br>
+</p>
+<p>Inherited from Element:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_addEventListener'>addEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_appendChild'>appendChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_attributes'>attributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_childNodes'>childNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_cloneNode'>cloneNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_dispatchEvent'>dispatchEvent</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_firstChild'>firstChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttribute'>getAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNS'>getAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNode'>getAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNodeNS'>getAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagName'>getElementsByTagName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagNameNS'>getElementsByTagNameNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttribute'>hasAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributeNS'>hasAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributes'>hasAttributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasChildNodes'>hasChildNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_insertBefore'>insertBefore</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_isSupported'>isSupported</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_lastChild'>lastChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_localName'>localName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_namespaceURI'>namespaceURI</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nextSibling'>nextSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeName'>nodeName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeType'>nodeType</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeValue'>nodeValue</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_normalize'>normalize</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_ownerDocument'>ownerDocument</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_parentNode'>parentNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_prefix'>prefix</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_previousSibling'>previousSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttribute'>removeAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNS'>removeAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNode'>removeAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeChild'>removeChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeEventListener'>removeEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_replaceChild'>replaceChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttribute'>setAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNS'>setAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNode'>setAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNodeNS'>setAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_tagName'>tagName</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='prop_accessible'><span class='attrib'>accessible</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIAccessible.html'>nsIAccessible</a></p>  <p>
+  Returns the accessibility object for the tree.</p>
+  <h5><a name='prop_builderView'><span class='attrib'>builderView</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIXULTreeBuilder.html'>nsIXULTreeBuilder</a></p>  <p>
+  A reference to the tree builder which constructed the tree data. The builder  provides access to the RDF resources for each row in the tree, and allows  sorting the data by column. In newer versions of Mozilla, the builderView  property is actually a synonym for the view property, since the two  interfaces are flattened together into a single interface in JavaScript.  This property is read only.</p>
+  <h5><a name='prop_contentView'><span class='attrib'>contentView</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeContentView.html'>nsITreeContentView</a></p>  <p>
+  For trees built with a content builder - that is, those that do not have   flags="dont-build-content" set -- the contentView will be a reference to the  <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeContentView.html">nsITreeContentView</a>  for the tree. This interface lets you retrieve the DOM element corresponding  to a given a row index and vice versa. For trees that are not built with a  content builder, the functions of nsITreeContentView will not be available,  since there are no DOM nodes to retrieve. In newer versions of Mozilla, the  contentView property is actually a synonym for the view property, since the  two interfaces are flattened together into a single interface in JavaScript.  This property is read only.</p>
+  <h5><a name='prop_currentIndex'><span class='attrib'>currentIndex</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  Set to the index of the currently focused row in the tree. If no row is  focused, the value will be -1. For multiple selection trees, the current index  is the last row selected. Do not use this property to change the selection.  Instead, use the methods of the  <a href="http://www.xulplanet.com/references/objref/TreeSelection.html">TreeSelection</a>  object available via tree.view.selection.</p>
+  <h5><a name='prop_disableKeyNavigation'><span class='attrib'>disableKeyNavigation</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If this attribute is not used, the user can navigate to specific items in  the tree by pressing the first the first letter of the item's label. This is  done incrementally, so pressing additional keys will select more specific  items. This feature may be disabled for a tree by setting this attribute to  true.</p>
+  <h5><a name='prop_enableColumnDrag'><span class='attrib'>enableColumnDrag</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  When set to 'true', the user may drag the column headers around to change the  order that they are displayed in.</p>
+  <h5><a name='prop_firstOrdinalColumn'><span class='attrib'>firstOrdinalColumn</span></a></h5>
+<p class='aptype'>Type:&nbsp;treecol element</p>  <p>
+  A reference to the first treecol element, which or may not be the first column  displayed in the tree.</p>
+  <h5><a name='prop_selstyle'><span class='attrib'>selstyle</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  If set to the value 'primary', only the label of the primary column will be  highlighted when an item in the tree is selected. Otherwise, the entire row  will be highlighted. To see the difference, compare the selection style in  the folder list and the message list in Mozilla mail.</p>
+  <h5><a name='prop_treeBoxObject'><span class='attrib'>treeBoxObject</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeBoxObject.html'>nsITreeBoxObject</a></p>  <p>
+  The box object is responsible for rendering the tree on the window. This  object implements the  <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeBoxObject.html">nsITreeBoxObject</a>  interface and contains functions for retrieving the cells at certain coordinates,  redrawing cells and scrolling the tree. This property is equivalent to the  boxObject property.</p>
+  <h5><a name='prop_view'><span class='attrib'>view</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html'>nsITreeView</a></p>  <p>
+  The view for the tree, which is the object which generates the data to be  displayed. You can assign an object which implements nsITreeView to this  property. Trees built from RDF or those which use treeitems directly will  already have a view. Functions available in the view allow one to retrieve  the data within the cells, and determine which rows are nested within  others. For a complete list of view functions, see the  <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a>  interface.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

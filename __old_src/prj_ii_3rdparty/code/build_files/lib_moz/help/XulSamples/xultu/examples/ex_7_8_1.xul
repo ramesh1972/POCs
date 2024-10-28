@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 7.8.1"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<broadcasterset>
+  <broadcaster id="back_command" label="Back" disabled="true"/>
+</broadcasterset>
+
+<keyset>
+  <key id="back_key" modifiers="accel" key="[" observes="back_command"/>
+</keyset>
+
+<toolbox>
+  <menubar id="back-menubar">
+     <menu id="back_menu" observes="back_command"/>
+  </menubar>
+</toolbox>
+
+<button id="back_button" observes="back_command"/>
+
+
+
+</window>
+

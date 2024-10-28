@@ -1,0 +1,92 @@
+<?xml version='1.0'?>
+
+<element name='wizard'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/wizard.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_wizard.html</reference>
+  This element is used to construct a step-by-step wizard found in some  applications to guide users through a task. It is used for a window with  several steps contained on several pages. This element provides the header  and buttons along the bottom, and also handles navigation between the pages.  Each page should be constructed using a wizardpage. The pages are  displayed in the order that they are placed in the wizard, unless you use  the next and pageid attributes on the pages to change the sequence. The  wizard will rendered in a manner suitable for the user's selected theme and  platform. In newer versions of Mozilla, a statusbar may be placed directly  inside the wizard element which will be shared among all pages.  
+
+<attr name='firstpage' type='boolean'>
+  True if the wizard is on the first page.
+</attr>
+<attr name='lastpage' type='boolean'>
+  True if the wizard is on the last page.
+</attr>
+<attr name='onwizardback' type='script code'>
+  This should be set to code which is called when the user presses the  Back button. Return true to allow the previous page to be displayed and  false to disallow moving back a page. Use the canRewind property to indicate  to the user (by disabling the Back button) that they cannot go back a page.
+</attr>
+<attr name='onwizardcancel' type='script code'>
+  This should be set to code which is called when the user presses the  Cancel button. Return true to allow the wizard to be cancelled, and close the  wizard, or return false to prevent the wizard from being cancelled. Use the  canCancel property to indicate to the user (by disabling the Cancel button)  that they cannot cancel.
+</attr>
+<attr name='onwizardfinish' type='script code'>
+  This should be set to code which is called when the user presses the  Finish button, which would appear in place of the Next button on the last page  of the wizard. Return true to allow the wizard to be closed, accepting any values  entered on the pages, or return false to prevent the wizard from being closed.  Use the canAdvance property to indicate to the user (by disabling the Finish button)  that they cannot end the wizard.
+</attr>
+<attr name='onwizardnext' type='script code'>
+  This should be set to code which is called when the user presses the  Next button. Return true to allow the next page to be displayed and  false to disallow moving to the next page. Use the canAdvance property to  indicate to the user (by disabling the Next button) that they cannot go to the  next page.
+</attr>
+<attr name='pagestep' type='integer'>
+  The index of the current page.
+</attr>
+<attr name='title' type='string'>
+  The title that appears at the top of the wizard. This is overriden by the label  attribute on the individual pages.
+</attr>
+<method name='advance'>
+<prototype> advance ( pageID ) </prototype>
+  
+  Call this function to go to the next page. It is equivalent to pressing the next  button. The canAdvance property must be set to true for the page to be changed. The  code in the onwizardnext attribute is called before the page is changed. You may  supply as the argument to the advance function a page index to jump to. Supply null  as the argument to go to the next page in sequence.
+</method>
+<prop name='canAdvance' type='boolean'>
+  This property is set to true if the user can press the Next button to go to  the next page. If this property is false, the user cannot navigate to the next  page. Set this property to true to indicate that the user can go to the next page.  Set to false to disallow moving to the next page. This has the effect of enabling  or disabling the Next button, or, on the last page of the wizard, the Finish button.
+</prop>
+<prop name='canRewind' type='boolean'>
+  This property is set to true if the user can press the Next button to go to  the next page. If this property is false, the user cannot navigate to the next  page. Set this property to true to indicate that the user can go back a page. Set  to false to disallow moving to the previous page. This has the effect of enabling  or disabling the Back button.
+</prop>
+<method name='cancel'>
+<prototype> cancel ( ) </prototype>
+  
+  This function can be called to cancel the wizard and close it. The code in the  onwizardcancel attribute is called before the wizard is cancelled.
+</method>
+<prop name='currentPage' type='wizardpage element'>
+  This property returns the wizardpage element that is currently displayed.  You can modify this value to change the current page.
+</prop>
+<method name='getButton' returns='button element'>
+<prototype> getButton ( type ) </prototype>
+  
+  This method returns the wizard button of the specific type, which should be  either "back", "next", "finish" or "cancel".
+</method>
+<method name='getPageById' returns='wizardpage element'>
+<prototype> getPageById ( pageID ) </prototype>
+  
+  Returns the wizardpage element corresponding to the specified page ID.
+</method>
+<method name='goTo'>
+<prototype> goTo ( pageID ) </prototype>
+  
+  This function is used to change which page is currently displayed, specified by the  argument pageID. The page will be changed regardless of the value of canAdvance or  canRewind. The onwizardback and onwizardnext code is not called when using this  function.
+</method>
+<prop name='onFirstPage' type='boolean'>
+  This property is set to true if the user is on the first page, which may or  may not be the first index.
+</prop>
+<prop name='onLastPage' type='boolean'>
+  This property is set to true if the user is on the last page of the wizard.
+</prop>
+<prop name='pageCount' type='integer'>
+  This property holds the number of pages in the wizard.
+</prop>
+<prop name='pageIndex' type='integer'>
+  This property returns the index of the currently selected page. You can  change the selected page by modifying this property.
+</prop>
+<prop name='pageStep' type='integer'>
+  This property returns the number of pages that the user has navigated through  so far, meaning that the user would press the Back button this many times to  go back to the beginning. This property is different than pageIndex, because  pages are not necessarily navigated in order.
+</prop>
+<method name='rewind'>
+<prototype> rewind ( ) </prototype>
+  
+  Call this function to go back a page. It is equivalent to pressing the back button.  The canRewind property must be set to true for the page to be changed. The  code in the onwizardback attribute is called before the page is changed.
+</method>
+<prop name='title' type='string'>
+  The title that appears at the top of the wizard. This is overriden by the label  attribute on the individual pages.
+</prop>
+<prop name='wizardPages' type='DOM NodeList of wizardpage elements'>
+  This property holds the list of wizardpage elements in the wizard.
+</prop>
+</element>

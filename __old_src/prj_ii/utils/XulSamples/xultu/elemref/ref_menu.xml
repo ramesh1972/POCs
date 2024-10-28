@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+
+<element name='menu'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/menubar.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_menu.html</reference>
+  An element, much like a button, that is placed on a menu bar. When the user  clicks the menu element, the child menupopup of the menu will be displayed.  This element is also used to create submenus.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULSelectControlItemElement</implements>
+<attr name='acceltext' type='string'>
+  Text that appears beside beside the menu label to indicate the shortcut key  (accelerator key) to use to invoke the command. If this value is set, it  overrides an assigned key set in the key attribute. This attribute does not  apply to menus directly on the menubar.
+</attr>
+<attr name='accesskey' type='character'>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the menu.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the menu will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.
+</attr>
+<attr name='allowevents' type='boolean'>
+  If true, events are passed to children of the menu. Otherwise, events are  passed to the menu only.
+</attr>
+<attr name='crop'>
+  If the label of the menu is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the menu is disabled or not. If this attribute is set to true,  the menu is disabled. This is usually drawn with the text in grey. If the menu is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the menu, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='key' type='key element id'>
+  The id of a key element that is used as the menu command's shortcut key.  If used, text will be displayed beside the menu label to indicate which  keys can be pressed to invoke the command. Normally, you would not set a  key on a menu element.
+</attr>
+<attr name='label' type='string'>
+  The label that will appear on the menu. If this is left out, no text appears.
+</attr>
+<attr name='menuactive' type='boolean'>
+  This attribute is set on an item in a menu when it is being hovered over.  Typcially, the theme will use this to highlight the item. A  DOMMenuItemActive event will be sent to the item when the item is hovered  over, and a DOMMenuItemInactive event will be sent to the item when the  selection moves away.
+</attr>
+<attr name='open' type='boolean'>
+  This attribute is set on the menu when it is open. To open the menu, call  the showPopup method of the menupopup.
+</attr>
+<attr name='sizetopopup' type='string'>
+  Indicates how the menu width and the popup width are determined. If the  sizetopopup attribute is left out, the menu will be its preferred width and  the popup may extend outside of this width, unaffected by the maximum width  of the menu itself.
+<value name='always'>
+    If set to always, the menu's width will be the same as that necessary for
+    the menupopup. If the menu has a maximum width, the popup will also be
+    this width.
+</value>
+</attr>
+<attr name='value' type='string'>
+  A value associated with the menu. You may use it in a script for your own  purposes.
+</attr>
+<prop name='value' type='string'>
+  A value associated with the menu. You may use it in a script for your own  purposes.
+</prop>
+</element>

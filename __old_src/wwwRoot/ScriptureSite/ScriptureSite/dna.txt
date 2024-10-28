@@ -1,0 +1,12 @@
+<script language=javascript>
+	var dna[x] = "Name,ID,ParentID,Position,Status,ClassType,StructureType,DataType,Value/_ID">
+	var dna[10] = "ScriptureRecord,10,1,1,Clean,ScriptureState,Struct,NodePtr,11";
+	var dna[11] = "ScriptName,11,10,1,Clean,Property,SingleValue,String,OmManthra";
+	var dna[12] = "ScriptOrgLang,12,10,2,Clean,Property,SingleValue,String,Sanskrit";
+	var dna[13] = "ScriptOthLang,13,10,3,Clean,Property,SingleValue,String,Tamil";
+	var dna[14] = "ScriptVerLang,14,10,4,Clean,Property,SingleValue,String,Telugu";
+	var dna[15] = "ScriptStanzaCount,15,10,5,Clean,Property,SingleValue,Integer,10";
+	var dna[16] = "ScriptLinesPerStanza,16,10,6,Clean,Property,SingleValue,Integer,4";
+	var dna[17] = "ScriptReciteProc,17,10,7,Clean,Property,SingleValue,Text,11 times every morning.";
+	var dna[18] = "ScriptOriginHow,18,10,8,Clean,Property,SingleValue,Text,they came from the fires";
+</script>

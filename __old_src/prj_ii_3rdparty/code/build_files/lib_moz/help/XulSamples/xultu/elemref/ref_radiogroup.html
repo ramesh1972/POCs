@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Radiogroup Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Radiogroup 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Radiogroup</h3>
+
+<p>
+  A group of radio buttons. Only one radio button inside the group can be  selected at a time. The <a href='ref_radio.html'>radio</a> buttons may either direct children of the  radiogroup or descendants. Place the radiogroup inside a <a href='ref_groupbox.html'>groupbox</a> if you  would like a border or <a href='ref_caption.html'>caption</a> around the group. The radiogroup defaults  to vertical orientation.  </p>  <p>  To set the radio button that will be selected by default, set the selected  attribute of a child radio element.  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/inputs.html'>More information about radiogroup<a></p>
+<div class='aphead'>The radiogroup element implements the following interfaces:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIAccessibleProvider.html'>nsIAccessibleProvider</a>&nbsp;&nbsp;
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULSelectControlElement.html'>nsIDOMXULSelectControlElement</a>&nbsp;&nbsp;
+</div>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_disabled'>disabled</a></td>
+<td><a href='#attr_focused'>focused</a></td>
+<td><a href='#attr_tabindex'>tabindex</a></td>
+<td><a href='#attr_value'>value</a></td>
+</tr></table>
+</div>
+<div class='aphead'><p>Properties and Methods:</p><table class='apheadbody'><tr>
+<td><a href='#prop_accessible'>accessible</a></td>
+<td><a href='#prop_appendItem'>appendItem</a></td>
+<td><a href='#prop_checkAdjacentElement'>checkAdjacentElement</a></td>
+<td><a href='#prop_disabled'>disabled</a></td>
+<td><a href='#prop_focusedItem'>focusedItem</a></td>
+</tr><tr>
+<td><a href='#prop_insertItemAt'>insertItemAt</a></td>
+<td><a href='#prop_removeItemAt'>removeItemAt</a></td>
+<td><a href='#prop_selectedIndex'>selectedIndex</a></td>
+<td><a href='#prop_selectedItem'>selectedItem</a></td>
+<td><a href='#prop_value'>value</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Attributes:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#attr_align'>align</a><br>
+<a href='ref_XULElement.html#attr_allowevents'>allowevents</a><br>
+<a href='ref_XULElement.html#attr_allownegativeassertions'>allownegativeassertions</a><br>
+<a href='ref_XULElement.html#attr_class'>class</a><br>
+<a href='ref_XULElement.html#attr_coalesceduplicatearcs'>coalesceduplicatearcs</a><br>
+<a href='ref_XULElement.html#attr_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#attr_container'>container</a><br>
+<a href='ref_XULElement.html#attr_containment'>containment</a><br>
+<a href='ref_XULElement.html#attr_context'>context</a><br>
+<a href='ref_XULElement.html#attr_contextmenu'>contextmenu</a><br>
+<a href='ref_XULElement.html#attr_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#attr_debug'>debug</a><br>
+<a href='ref_XULElement.html#attr_dir'>dir</a><br>
+<a href='ref_XULElement.html#attr_empty'>empty</a><br>
+<a href='ref_XULElement.html#attr_equalsize'>equalsize</a><br>
+<a href='ref_XULElement.html#attr_flags'>flags</a><br>
+<a href='ref_XULElement.html#attr_flex'>flex</a><br>
+<a href='ref_XULElement.html#attr_height'>height</a><br>
+<a href='ref_XULElement.html#attr_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#attr_id'>id</a><br>
+<a href='ref_XULElement.html#attr_insertafter'>insertafter</a><br>
+<a href='ref_XULElement.html#attr_insertbefore'>insertbefore</a><br>
+<a href='ref_XULElement.html#attr_left'>left</a><br>
+<a href='ref_XULElement.html#attr_maxheight'>maxheight</a><br>
+<a href='ref_XULElement.html#attr_maxwidth'>maxwidth</a><br>
+<a href='ref_XULElement.html#attr_menu'>menu</a><br>
+<a href='ref_XULElement.html#attr_minheight'>minheight</a><br>
+<a href='ref_XULElement.html#attr_minwidth'>minwidth</a><br>
+<a href='ref_XULElement.html#attr_mousethrough'>mousethrough</a><br>
+<a href='ref_XULElement.html#attr_observes'>observes</a><br>
+<a href='ref_XULElement.html#attr_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#attr_orient'>orient</a><br>
+<a href='ref_XULElement.html#attr_pack'>pack</a><br>
+<a href='ref_XULElement.html#attr_persist'>persist</a><br>
+<a href='ref_XULElement.html#attr_popup'>popup</a><br>
+<a href='ref_XULElement.html#attr_position'>position</a><br>
+<a href='ref_XULElement.html#attr_ref'>ref</a><br>
+<a href='ref_XULElement.html#attr_removeelement'>removeelement</a><br>
+<a href='ref_XULElement.html#attr_sortDirection'>sortDirection</a><br>
+<a href='ref_XULElement.html#attr_sortResource'>sortResource</a><br>
+<a href='ref_XULElement.html#attr_sortResource2'>sortResource2</a><br>
+<a href='ref_XULElement.html#attr_statustext'>statustext</a><br>
+<a href='ref_XULElement.html#attr_style'>style</a><br>
+<a href='ref_XULElement.html#attr_template'>template</a><br>
+<a href='ref_XULElement.html#attr_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#attr_tooltiptext'>tooltiptext</a><br>
+<a href='ref_XULElement.html#attr_top'>top</a><br>
+<a href='ref_XULElement.html#attr_uri'>uri</a><br>
+<a href='ref_XULElement.html#attr_wait-cursor'>wait-cursor</a><br>
+<a href='ref_XULElement.html#attr_width'>width</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='attr_disabled'><span class='attrib'>disabled</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Indicates whether the radiogroup is disabled or not. If this attribute is set to true,  the radiogroup is disabled. This is usually drawn with the text in grey. If the radiogroup is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the radiogroup, leave the attribute out entirely as opposed to  setting the value to false.</p>
+  <h5><a name='attr_focused'><span class='attrib'>focused</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  This attribute is set to true if the radiogroup element is focused.</p>
+  <h5><a name='attr_tabindex'><span class='attrib'>tabindex</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.</p>
+  <h5><a name='attr_value'><span class='attrib'>value</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  Returns the value property of the currently selected radio button. To  change the selection, use the selectedIndex or selectedItem property.</p>
+</div>
+<hr class='propsplit'><h4 class='propslist'><a name='propsblk'>Properties and Methods:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#prop_align'>align</a><br>
+<a href='ref_XULElement.html#prop_allowEvents'>allowEvents</a><br>
+<a href='ref_XULElement.html#prop_blur'>blur</a><br>
+<a href='ref_XULElement.html#prop_boxObject'>boxObject</a><br>
+<a href='ref_XULElement.html#prop_boxObject.element'>boxObject.element</a><br>
+<a href='ref_XULElement.html#prop_boxObject.getLookAndFeelMetric'>boxObject.getLookAndFeelMetric</a><br>
+<a href='ref_XULElement.html#prop_boxObject.height'>boxObject.height</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenX'>boxObject.screenX</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenY'>boxObject.screenY</a><br>
+<a href='ref_XULElement.html#prop_boxObject.width'>boxObject.width</a><br>
+<a href='ref_XULElement.html#prop_boxObject.x'>boxObject.x</a><br>
+<a href='ref_XULElement.html#prop_boxObject.y'>boxObject.y</a><br>
+<a href='ref_XULElement.html#prop_builder'>builder</a><br>
+<a href='ref_XULElement.html#prop_className'>className</a><br>
+<a href='ref_XULElement.html#prop_click'>click</a><br>
+<a href='ref_XULElement.html#prop_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#prop_contextMenu'>contextMenu</a><br>
+<a href='ref_XULElement.html#prop_controllers'>controllers</a><br>
+<a href='ref_XULElement.html#prop_database'>database</a><br>
+<a href='ref_XULElement.html#prop_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#prop_dir'>dir</a><br>
+<a href='ref_XULElement.html#prop_doCommand'>doCommand</a><br>
+<a href='ref_XULElement.html#prop_flex'>flex</a><br>
+<a href='ref_XULElement.html#prop_focus'>focus</a><br>
+<a href='ref_XULElement.html#prop_getElementsByAttribute'>getElementsByAttribute</a><br>
+<a href='ref_XULElement.html#prop_height'>height</a><br>
+<a href='ref_XULElement.html#prop_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#prop_id'>id</a><br>
+<a href='ref_XULElement.html#prop_left'>left</a><br>
+<a href='ref_XULElement.html#prop_maxHeight'>maxHeight</a><br>
+<a href='ref_XULElement.html#prop_maxWidth'>maxWidth</a><br>
+<a href='ref_XULElement.html#prop_menu'>menu</a><br>
+<a href='ref_XULElement.html#prop_minHeight'>minHeight</a><br>
+<a href='ref_XULElement.html#prop_minWidth'>minWidth</a><br>
+<a href='ref_XULElement.html#prop_observes'>observes</a><br>
+<a href='ref_XULElement.html#prop_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#prop_orient'>orient</a><br>
+<a href='ref_XULElement.html#prop_pack'>pack</a><br>
+<a href='ref_XULElement.html#prop_persist'>persist</a><br>
+<a href='ref_XULElement.html#prop_ref'>ref</a><br>
+<a href='ref_XULElement.html#prop_resource'>resource</a><br>
+<a href='ref_XULElement.html#prop_statusText'>statusText</a><br>
+<a href='ref_XULElement.html#prop_style'>style</a><br>
+<a href='ref_XULElement.html#prop_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#prop_tooltipText'>tooltipText</a><br>
+<a href='ref_XULElement.html#prop_top'>top</a><br>
+<a href='ref_XULElement.html#prop_width'>width</a><br>
+</p>
+<p>Inherited from Element:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_addEventListener'>addEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_appendChild'>appendChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_attributes'>attributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_childNodes'>childNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_cloneNode'>cloneNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_dispatchEvent'>dispatchEvent</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_firstChild'>firstChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttribute'>getAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNS'>getAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNode'>getAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNodeNS'>getAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagName'>getElementsByTagName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagNameNS'>getElementsByTagNameNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttribute'>hasAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributeNS'>hasAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributes'>hasAttributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasChildNodes'>hasChildNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_insertBefore'>insertBefore</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_isSupported'>isSupported</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_lastChild'>lastChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_localName'>localName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_namespaceURI'>namespaceURI</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nextSibling'>nextSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeName'>nodeName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeType'>nodeType</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeValue'>nodeValue</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_normalize'>normalize</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_ownerDocument'>ownerDocument</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_parentNode'>parentNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_prefix'>prefix</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_previousSibling'>previousSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttribute'>removeAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNS'>removeAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNode'>removeAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeChild'>removeChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeEventListener'>removeEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_replaceChild'>replaceChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttribute'>setAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNS'>setAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNode'>setAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNodeNS'>setAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_tagName'>tagName</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='prop_accessible'><span class='attrib'>accessible</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIAccessible.html'>nsIAccessible</a></p>  <p>
+  Returns the accessibility object for the radiogroup.</p>
+  <h5><a name='prop_appendItem'><span class='attrib'> appendItem ( label , value ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;radio element</p>  <p>
+  
+  Creates a new <a href='ref_radio.html'>radio</a> element and adds it to the end of the radiogroup. You  may optionally set a value. The function returns the new item.</p>
+  <h5><a name='prop_checkAdjacentElement'><span class='attrib'> checkAdjacentElement ( dir ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Deselects the currently selected radio button in the group and selects the one  adjacent to it. If the argument dir is true, the next radio button is selected.  If it is false, the previous radio button is selected.</p>
+  <h5><a name='prop_disabled'><span class='attrib'>disabled</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p><p>Gets and sets the value of the disabled attribute.</p>
+  <h5><a name='prop_focusedItem'><span class='attrib'>focusedItem</span></a></h5>
+<p class='aptype'>Type:&nbsp;radio element</p>  <p>
+  Holds the currently focused item in the radiogroup, which may or may not be  the same as the selected one. You can change the focused item by setting this  property.</p>
+  <h5><a name='prop_insertItemAt'><span class='attrib'> insertItemAt ( index, label , value ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;radio element</p>  <p>
+  
+  Creates a new <a href='ref_radio.html'>radio</a> element and inserts it at a specific position in the  radiogroup. You may optionally set a value. The function returns the new item.</p>
+  <h5><a name='prop_removeItemAt'><span class='attrib'> removeItemAt ( index ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;radio element</p>  <p>
+  
+  Removes the child item in the radiogroup at the given index.  The function returns the removed item.</p>
+  <h5><a name='prop_selectedIndex'><span class='attrib'>selectedIndex</span></a></h5>
+<p class='aptype'>Type:&nbsp;radio element</p>  <p>
+  Holds the index of the currently selected item in the radiogroup. If no item  is currently selected, this value will be set to -1.. You can select an item  by setting this value.</p>
+  <h5><a name='prop_selectedItem'><span class='attrib'>selectedItem</span></a></h5>
+<p class='aptype'>Type:&nbsp;radio element</p>  <p>
+  Holds the currently selected item in the radiogroup. If no item is currently  selected, this value will be null. You can select an item by setting this  value. A RadioStateChange event will be sent to the selected radio button  when it is changed either via this property, the selectedIndex property, or  changed by the user.</p>
+  <h5><a name='prop_value'><span class='attrib'>value</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the value attribute.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,117 @@
+<!--
+/*==========================
+ASK US STYLES
+========================== */
+/*submit button*/
+.SBut,.SBut1{color:#00C;font-weight:bold;width:auto;margin:0 .2em;}
+.SBut1{overflow:visible;padding:0 .4em;}
+
+/*footerLinks.tag*/
+.mtb3{margin: 3px 0;}
+
+/*footerQueryBox.tag*/
+.bq1{ padding: 10px 0 0 0;}
+.bq2 {padding:5px 0 0 20px;}
+
+/*QUERYBOX*.tag*/
+.pt5{padding-top:5px;}
+.pb5{padding-bottom:5px;}
+
+/*SEARCHBAR.tag*/
+.mb10{margin-bottom:10px;}
+.vab{vertical-align:bottom;}
+
+/*ADULTFILTER.tag*/
+.mb7{margin-bottom:7px;}
+
+/*SponsoredTitle.tag; google_sponsored.jsp (pictures and web)*/
+.nu{text-decoration:none;}
+.gsp{margin-bottom:0px;}
+.p1_4{padding:1px 4px;}
+.mt3{margin-top: 3px;}
+.m10_0_2_0{margin: 10px 0 2px 0}
+
+/*HeaderLinks.tag*/
+.p2{padding:2px;}
+.nw{white-space:nowrap;}
+
+/*StylesWeb.tag*/
+.mb16{margin-bottom:16px;}
+.m10_0_16 {margin: 10px 0 16px 0}
+.m10_0_8_0 {margin: 10px 0 8px 0}
+.p0_0_5_0{padding: 0 0 5px 0}
+.o1 { padding: 0 0 0px 10px;  width: 75%;}
+.g1 { padding: 0 0 0px 10px;  width: 75%;}
+.tb1{border-collapse: collapse;}
+.fl{float:left;clear:left;}
+.fr{float:right;}
+.cl1{clear:both;line-height:0px;width:200px;}
+.tp{top:0}
+
+/*binocularsInclude.jsp*/
+.bb{margin-bottom:-3px;}/*weird workaround to force bottom alignment of binocs image*/
+
+/*relatedsearch_31.jsp*/
+#rss{
+    float:right;
+    width: 20%;
+    min-width: 100px;
+}
+.nu_rs{text-decoration:none;}
+.nu_rs:hover{text-decoration:underline;}
+.p5_0{padding: 5px 0;}
+.rss_h{padding:0px; font-size: 1.23em; color:#C00;}
+
+/*spellcheck.jsp*/
+.sp{ margin: 3px 0 12px 0;}
+.spb{ margin: 12px 0 12px 0;}
+
+/*teoma.jsp*/
+.prel{position: relative;}
+.nd{display:none;}
+.m_i {margin-left: 40px;}
+
+/*pagingStrip.jsp*/
+.op{text-align:center; padding:30px 0 30px 0;}
+
+/*errorNullResults.tag, errorZeroResults.tag */
+.epd{ padding:10px; margin-bottom:10px;}
+
+/* taboo.jsp */
+.p10{ padding:10px;}
+
+/*pictureDisclaimer.tag, *pictures/header.jsp */
+.m1{margin:7px 0;}
+
+/* =========================
+SMART ANSWERS ONLY
+========================== */
+/*stylesShared.css*/
+#sa a.L2:visited,#sa a.L3:visited,#sa a.L4:visited,#sa a.LX:visited { color:#33c; }
+#sa .at { float:right;display:block;padding:0;margin:0 1px 0 0; }
+#sa a.at { text-decoration:none; }
+#sa a.at:hover { text-decoration:underline; }
+
+/*stocks_dat.tag*/
+.vat{vertical-align:top;}
+.st2{padding:0 10px;}
+.st3{padding:0 2px;}
+
+/*map.tag*/
+#sa .map { display:block;border:1px solid #999; }
+
+/* =========================
+US ONLY
+========================== */
+/* pricegrabber.tag */
+.pg2{margin-bottom:5px;}
+/*whitepagesDisclaimer.jsp*/
+.wp1{margin-bottom:-5px;}/*weird workaround to force vertical alignment of logos/text*/
+
+
+/* =========================
+Picture padding - SA + reply page
+========================== */
+.pp10{padding:0 10px 10px 0;}
+
+-->

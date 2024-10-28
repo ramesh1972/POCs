@@ -1,0 +1,275 @@
+<?xml version='1.0'?>
+
+<item>
+<reference>http://www.xulplanet.com/reference/elemref/ref_StyleProperties.html</reference>
+  The following lists some of the custom style properties that Mozilla supports.  
+
+<prop name='-moz-appearance'>
+  Used to cause an element to take its border, background style and size from the  operating system's theme. This causes XUL elements to be drawn similar to the  way the user's system draws such elements. This currently only has an effect on  Windows XP and Mac OS X.
+</prop>
+<prop name='-moz-background-clip' spec=' Moz1.2 '>
+  Indicates whether the background, either the color or image, should extend  into the border area of the element. This property is similar to the CSS3   background-clip   property.
+<value name='border'>
+    The background extends into the border of the element. It will be drawn
+    behind the border.
+</value>
+<value name='padding'>
+    The background does not extend into the border.
+</value>
+</prop>
+<prop name='-moz-background-inline-policy' spec=' Moz1.3 '>
+  Specifies how the background image of an inline element is determined when  the content of the inline element wraps onto multiple lines.
+<value name='bounding-box'>
+</value>
+<value name='continuous'>
+    The background image wraps around on to each line as if the text had no
+    line breaks. For example, if the image is 500 pixels and the inline box is
+    300 pixels, the first 300 pixels of the image appears on the first line,
+    and the last 200 pixels followed by the first 100 pixels of the image
+    appear on the second line. The image repeats until the end of the content.
+</value>
+<value name='each-box'>
+</value>
+</prop>
+<prop name='-moz-background-origin' spec=' Moz1.2 '>
+  Determines how the background-position property is determined.  This property is similar to the CSS3   background-origin   property.
+<value name='content'>
+    The position is relative to the content.
+</value>
+<value name='border'>
+    The position is relative to the border.
+</value>
+<value name='padding'>
+    The position is relative to the padding.
+</value>
+</prop>
+<prop name='-moz-binding'>
+  Used to specify an XBL binding to use for the element. The property should be a  URL of an XBL file containing the binding. The URL should contain an anchor to  point to a specific binding with the XBL file, referenced by its id attribute.
+</prop>
+<prop name='-moz-border-bottom-colors'>
+  Sets the border colors for the bottom edge. It should be set to a list  of colors. When an element has a border that is larger than a single  pixel, each line of pixels uses the next color specified in this  property. This eliminates the need for nested boxes. If the border  is wider than the number of colors specified for this property, the  remaining part of the border is the color specified by the border  property.
+</prop>
+<prop name='-moz-border-left-colors'>
+  Sets the border colors for the bottom edge. See the -moz-border-colors-bottom  property for more information.
+</prop>
+<prop name='-moz-border-radius'>
+  This property can be used to give borders rounded corners. This should be set  to a numeric value indicating the amount of rounding to use. You must use a unit  (usually px for pixels). A higher number makes the border rounder.
+</prop>
+<prop name='-moz-border-radius-bottomleft'>
+  Sets the rounding of the lower left corner of the border.
+</prop>
+<prop name='-moz-border-radius-bottomright'>
+  Sets the rounding of the lower right corner of the border.
+</prop>
+<prop name='-moz-border-radius-topleft'>
+  Sets the rounding of the upper left corner of the border.
+</prop>
+<prop name='-moz-border-radius-topright'>
+  Sets the rounding of the upper right corner of the border.
+</prop>
+<prop name='-moz-border-right-colors'>
+  Sets the border colors for the right edge. See the -moz-border-colors-bottom  property for more information.
+</prop>
+<prop name='-moz-border-top-colors'>
+  Sets the border colors for the top edge. See the -moz-border-colors-bottom  property for more information.
+</prop>
+<prop name='-moz-box-align'>
+  The align attribute specifies how child elements of the box are aligned, when  the size of the box is larger than the total size of the children. For boxes that  have horizontal orientation, it specifies how its children will be aligned  vertically. For boxes that have vertical orientation, it is used to specify how  its children are algined horizontally. The pack attribute is related to the alignment  but is used to specify the position in the opposite direction. You  can also specify the value of align using the style property '-moz-box-align'.
+<value name='start'>
+    Child elements are align starting from the left or top edge of the box. If
+    the box is larger than the total size of the children, the extra space is
+    placed on the right or bottom side.
+</value>
+<value name='center'>
+    Extra space is split equally along each side of the child elements, resulting
+    the children being placed in the center of the box.
+</value>
+<value name='end'>
+    Child elements are placed on the right or bottom edge of the box. If the box
+    is larger than the total size of the children, the extra space is placed on
+    the left or top side.
+</value>
+<value name='baseline'>
+    This value applies to horizontally oriented boxes only. It causes the child
+    elements to be aligned so that their text labels are lined up.
+</value>
+<value name='stretch' default='true'>
+    The child elements are stretched to fit the size of the box. For a horizontal
+    box, the children are stretched to be the height of the box. For a vertical
+    box, the children are stretched to be the width of the box. If the size of the
+    box changes, the children stretch to fit. Use the flex attribute to create
+    elements that stretch in the opposite direction.
+</value>
+</prop>
+<prop name='-moz-box-direction'>
+  Specifies the direction in the which the children of a box are placed.
+<value name='normal' default='true'>
+    Children are placed either from left to right or top to bottom in the
+    order the elements appear in the XUL source or document tree.
+</value>
+<value name='reverse'>
+    Children are placed either from right to left or bottom to top in the
+    order the elements appear in the XUL source or document tree.
+</value>
+</prop>
+<prop name='-moz-box-flex'>
+  Indicates the flexibility of an element. Flexible elements grow and shrink  to fit their given space. The actual value is not relevant unless there are  other flexible elements within the same container. Elements with larger  flex values will grow more than elements with lower flex values, at the  ratio determined by the two elements.
+</prop>
+<prop name='-moz-box-ordinal-group'>
+  Indicates the ordinal group the element belongs to. Elements with a lower  ordinal group are displayed before those with a higher ordinal group.
+</prop>
+<prop name='-moz-box-orient'>
+  This is the corresponding style property for a XUL element's orient attribute.  For elements that are types of boxes, it determines whether the children are  laid out horizontally or vertically.
+<value name='horizontal' default='true'>
+    The children of the element are placed horizontally in a row.
+</value>
+<value name='vertical'>
+    The children of the element are placed vertically in a column.
+</value>
+</prop>
+<prop name='-moz-box-pack'>
+  The pack attribute specifies where child elements of the box are placed when  the box is larger that the size of the children. For boxes with horizontal  orientation, it is used to indicate the position of children horizontally.  For boxes with vertical orientation, it is used to indicate the position of  children vertically. The align attribute is used to specify the position in the  opposite direction. You can also specify the value of pack using the style property  '-moz-box-pack'.
+<value name='start' default='true'>
+    Child elements are placed starting from the left or top edge of the box. If
+    the box is larger than the total size of the children, the extra space is
+    placed on the right or bottom side.
+</value>
+<value name='center'>
+    Extra space is split equally along each side of the child elements, resulting
+    the children being placed in the center of the box.
+</value>
+<value name='end'>
+    Child elements are placed on the right or bottom edge of the box. If the box
+    is larger than the total size of the children, the extra space is placed on
+    the left or top side.
+</value>
+</prop>
+<prop name='-moz-box-sizing'>
+  This property determines how the width and height of the element is calculated.  It affects the width and height properties.
+<value name='content-box'>
+    The width and height properties specify the size of the element including the
+    padding.
+</value>
+<value name='border-box'>
+    The width and height properties specify the size of the element including the
+    padding and border.
+</value>
+<value name='padding-box'>
+    The width and height properties specify the size of the element. The padding,
+    border and margin are added outside of this size.
+</value>
+</prop>
+<prop name='-moz-image-region'>
+  For elements that have an image, this property sets the area of the image  that is used. You can set multiple elements to use the same image but use  a different region of the image, reducing the amount of memory required.  You can change this property to simulate animation. The syntax is similar  to the clip property. All four values are relative to the upper left corner  of the image.        -moz-image-region: rect(top, right, bottom, left);   
+</prop>
+<prop name='-moz-key-equivalent'>
+</prop>
+<prop name='-moz-opacity'>
+  This property can be used to make an element partially transparent. Any content  behind the element will be partially visible. This should be a decimal number  between 0 and 1, where 0 means invisible and 1 means fully opaque. Thus, 0.5  means half-way between. Newer versions of Mozilla (1.7 and later) support  the CSS3 property 'opacity'.
+</prop>
+<prop name='-moz-outline'>
+  This property can be used to set the outline of the element. An outline is  like a border but has some differences in the way it is drawn. This is similar to  the CSS2 outline property which Mozilla does not currently support.
+</prop>
+<prop name='-moz-outline-color'>
+  Sets the color of the outline.
+</prop>
+<prop name='-moz-outline-radius'>
+  This property can be used to give outlines rounded corners. This should be set  to a numeric value indicating the amount of rounding to use. You must use a unit  (usually px for pixels). A higher number makes the outline rounder.
+</prop>
+<prop name='-moz-outline-radius-bottomleft'>
+  Sets the rounding of the lower left corner of the outline.
+</prop>
+<prop name='-moz-outline-radius-bottomright'>
+  Sets the rounding of the lower right corner of the outline.
+</prop>
+<prop name='-moz-outline-radius-topleft'>
+  Sets the rounding of the upper left corner of the outline.
+</prop>
+<prop name='-moz-outline-radius-topright'>
+  Sets the rounding of the upper right corner of the outline.
+</prop>
+<prop name='-moz-outline-style'>
+  Sets the style of the border, which can have the same values as the border-style  property.
+</prop>
+<prop name='-moz-outline-width'>
+  Sets the width of the outline.
+</prop>
+<prop name='-moz-user-focus'>
+  Used to indicate whether the element can have the focus. By setting this to  'ignore', you can disable focusing the element, which means that the user will  not be able to activate the element. The element will be skipped in the tab  sequence. A similar property 'user-focus' has been proposed for CSS3.
+<value name='ignore'>
+    The element does not accept the keyboard focus and will be skipped in the
+    tab order.
+</value>
+<value name='normal'>
+    The element can accept the keyboard focus.
+</value>
+</prop>
+<prop name='-moz-user-input'>
+  This can be used to indicate whether the value of the element can be modifed.  This mainly applies to textboxes.
+<value name='disabled'>
+    The user cannot edit the value of the textbox. The user may still select text
+    in the textbox.
+</value>
+<value name='enabled'>
+    The user can edit the value of the textbox.
+</value>
+</prop>
+<prop name='-moz-user-select'>
+  Used to indicate whether the text of the element can be selected. This doesn't  have any affect on content loaded as chrome, except in textboxes. A similar  property 'user-select' has been proposed for CSS3.
+<value name='none'>
+    The text of the element cannot be selected.
+</value>
+<value name='normal'>
+    The text can be selected by the user.
+</value>
+</prop>
+<prop name='display'>
+  Although the display property is part of standard CSS, some additional values  are allowed, for the XUL layout styles. You can use these values for non-XUL  elements too, although they may produce unusual results.
+<value name='-moz-box'>
+    Child elements are laid out horizontally or vertically.
+</value>
+<value name='-moz-inline-box'>
+</value>
+<value name='-moz-grid'>
+    Child elements are laid out as a XUL  grid .
+</value>
+<value name='-moz-inline-grid'>
+</value>
+<value name='-moz-grid-group'>
+    Child elements are laid out as a group of grid columns or rows. This is the
+    layout used by the  rows  and  columns  elements. You can use the orientation
+    (-moz-box-orient) to set which direction. Rows would normally have vertical
+    orientation and columns would have a horizontal orientation.
+</value>
+<value name='-moz-grid-line'>
+    Child elements are laid out as a single column or row of a grid. You can use
+    the orientation (-moz-box-orient) to set which direction.
+</value>
+<value name='-moz-stack'>
+    Child elements are laid out one on top of each other like the XUL  stack 
+    element.
+</value>
+<value name='-moz-inline-stack'>
+</value>
+<value name='-moz-deck'>
+    Child elements are laid out one on top of each other like the XUL  deck 
+    element. Unlike a stack, only the top element is displayed.
+</value>
+<value name='-moz-popup'>
+</value>
+<value name='-moz-groupbox'>
+</value>
+</prop>
+<prop name='overflow'>
+  Mozilla supports some additional values for the overflow property that are not  in standard CSS. The overflow property is used to specify what happens when the  content is too large for the container.
+<value name='-moz-scrollbars-horizontal'>
+    Indicates that horizontal scrollbars should appear.
+</value>
+<value name='-moz-scrollbars-vertical'>
+    Indicates that vertical scrollbars should appear.
+</value>
+<value name='-moz-scrollbars-none'>
+    Indicates that no scrollbars should appear.
+</value>
+</prop>
+</item>

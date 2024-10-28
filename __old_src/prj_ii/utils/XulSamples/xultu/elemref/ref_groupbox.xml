@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<element name='groupbox'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/titledbox.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_groupbox.html</reference>
+  A box that draws a frame around it, intended to group a set of elements  together. If a caption element is placed inside the groupbox, it will be  used as a caption which appears along the top of the groupbox.  
+
+<implements>nsIAccessibleProvider</implements>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the groupbox.
+</prop>
+</element>

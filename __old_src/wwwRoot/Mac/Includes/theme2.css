@@ -1,0 +1,240 @@
+.title
+{
+    COLOR: #630000;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 14pt;
+    FONT-WEIGHT: bold
+}
+.heading1
+{
+    COLOR: #630000;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 12pt;
+    FONT-WEIGHT: bold
+}
+.heading2
+{
+    COLOR: #630000;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.heading4
+{
+    COLOR: #630000;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: bold
+}
+.heading3
+{
+    COLOR: #630000;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+.whiteheading
+{
+    COLOR: white;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 12pt;
+    FONT-WEIGHT: bold
+}
+.lightheading
+{
+    COLOR: #e9d3be;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.blacktext
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal
+}
+.blacktext2
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: normal
+}
+.ordblacktext
+{
+    COLOR: black;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal
+}
+.whitetext
+{
+    COLOR: white;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: normal
+}
+.blackboldtext
+{
+    COLOR: #000000;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.tdbgdark
+{
+    BACKGROUND-COLOR: #630000;
+    BACKGROUND-IMAGE: none
+}
+.tdbglight
+{
+    BACKGROUND-COLOR: #e9d3be
+}
+.tdbgwhite
+{
+    BACKGROUND-COLOR: white
+}
+.highlight
+{
+    COLOR: #369100;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.colorboldtext
+{
+    COLOR: #630000;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.whiteboldtext
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+.whiteboldtext1
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.blacktext1
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: normal
+}
+.blackboldtext1
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+.colorboldtext1
+{
+    COLOR: #630000;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+.colortext1
+{
+    COLOR: #630000;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal
+}
+.colortext2
+{
+    COLOR: #630000;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: normal
+}
+.colortext3
+{
+    COLOR: #630000;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: normal
+}
+.tdbglight1
+{
+    BACKGROUND-COLOR: #e9d3be
+}
+.whitetext1
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: normal
+}
+.colorboldtext2
+{
+    COLOR: #630000;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: bold
+}
+.whiteboldtext2
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: bold
+}
+.border
+{
+    BORDER-BOTTOM: #005d00 1pt;
+    BORDER-LEFT: #005d00 1pt solid;
+    BORDER-RIGHT: #005d00 1pt solid;
+    BORDER-TOP: #005d00 1pt solid
+}
+.border1
+{
+    BORDER-BOTTOM: #005d00 1pt solid;
+    BORDER-LEFT: #005d00 1pt solid;
+    BORDER-RIGHT: #005d00 1pt solid;
+    BORDER-TOP: #005d00 1pt
+}
+.border2
+{
+    BORDER-BOTTOM: #005d00 1pt solid;
+    BORDER-LEFT: #005d00 1pt solid;
+    BORDER-RIGHT: #005d00 1pt solid;
+    BORDER-TOP: #005d00 1pt solid
+}
+.border3
+{
+    BORDER-BOTTOM: #005d00 thin;
+    BORDER-LEFT: #005d00 thin;
+    BORDER-RIGHT: #005d00 thin solid;
+    BORDER-TOP: #005d00 thin
+}
+.BlueBold
+{
+    COLOR: navy;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: bold
+}
+.Blueheading1
+{
+    COLOR: navy;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-WEIGHT: bold
+}
+.Blueheading2
+{
+    COLOR: navy;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}

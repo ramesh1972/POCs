@@ -1,0 +1,92 @@
+// JavaScript pixel caller
+// Version: 1.02
+// Created: 7/21/2005, v1.00
+// Updated: 7/27/2005, v1.01
+// - added comments
+// Updated: 12/29/2005, v1.02
+// - changed NC_csk variable to AT_csk
+// Authors: Joseph Ho & Ben Starbird, AtlasSolutions.com
+
+
+
+/**************************************************
+* Begin Try/Catch
+**************************************************/
+try{
+
+
+/**************************************************
+* Array Declarations
+*
+* Create array objects to hold non-secure and 
+* secure pixel URLs.
+* 
+**************************************************/
+var AT_pxls = new Array();
+var AT_spxls = new Array();
+var AT_tags = new Array();
+var AT_imgs = new Array();
+
+
+/**************************************************
+* Pixel URLs
+*
+* Replace URL1, sURL1, URL2, sURL2, etc. with URLs.
+* 
+* AT_pxls - non-secure (http:) pixels, enclosed in 
+* quotes and separated by commas
+* 
+* AT_spxls - secure (https:) pixels, enclosed in 
+* quotes and separated by commas
+* 
+**************************************************/
+AT_pxls = ['http://switch.atdmt.com/action/searchresults_1day','http://switch.atdmt.com/action/searchresults_5day','http://a.tribalfusion.com/ti.ad?client=47853&ev=1'];
+AT_spxls = ['sURL1','sURL2','sURL3'];
+
+
+/**************************************************
+* Protocol Check
+*
+* Determines protocol (http:/https:) and references
+* the appropriate non-secure or secure pixel URLs
+* 
+**************************************************/
+AT_lp = location.protocol;
+if(AT_lp == 'file:' || AT_lp == 'http:')
+{
+	AT_tags = AT_pxls;
+}
+else
+{
+	AT_tags = AT_spxls;
+}
+
+
+/**************************************************
+* Call Pixels
+*
+* Loops through the array of URL strings, calling 
+* the appropriate pixel tags
+* 
+**************************************************/
+for(var AT_i=0; AT_i<AT_tags.length; AT_i++)
+{
+	AT_imgs[AT_i] = new Image();
+	AT_imgs[AT_i].src = AT_tags[AT_i];
+}
+
+
+/**************************************************
+* Variable Check
+*
+* The existence of the variable AT_csk indicates 
+* whether this file ran to completion
+* 
+**************************************************/
+AT_csk='Test';
+
+
+/**************************************************
+* End Try/Catch
+**************************************************/
+}catch(NC_e){AT_csk='Error';}

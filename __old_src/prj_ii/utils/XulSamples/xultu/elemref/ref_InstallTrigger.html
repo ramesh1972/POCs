@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - InstallTrigger Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ InstallTrigger 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">InstallTrigger</h3>
+
+<p>
+  Used to trigger an installation of a component. The component should be  an XPI file containing the files to installed. The XPI file will be downloaded  and the install.js script within the installer will be executed. This object  is a global object and its methods can be called directly.  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/xpinstall.html'>More information about InstallTrigger<a></p>
+<div class='aphead'><p>Properties and Methods:</p><table class='apheadbody'><tr>
+<td><a href='#prop_compareVersion'>compareVersion</a></td>
+<td><a href='#prop_enabled'>enabled</a></td>
+<td><a href='#prop_getVersion'>getVersion</a></td>
+<td><a href='#prop_install'>install</a></td>
+<td><a href='#prop_installChrome'>installChrome</a></td>
+</tr><tr>
+<td><a href='#prop_startSoftwareUpdate'>startSoftwareUpdate</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='propsblk'>Properties and Methods:</a></h4>
+<div class='ref_apblk'>
+  <h5><a name='prop_compareVersion'><span class='attrib'> compareVersion ( String name , String version )<br>compareVersion ( String name , String version , major , minor , release , build ) </span></a></h5>
+  <p>
+  
+  Compares the version of a package being installed with the current version installed.  You can either pass in a string as the version or a set of up to four integers,  representing each part of the version.  </p>  <p>  If you don't supply all four integers, the missing values default to 0. The string  version is a set of numbers separated by periods, as in 4.2.5 which is major  version 4, minor version 2 and release 5.  </p>  <p>  The compareVersion function returns a value which determines what value is different.  The following table describes possible return values:  </p>  <table>    <tr><td><b>Constant</b></td><td><b>Value</b></td><td><b>Description</b></td></tr>    <tr><td>EQUAL</td><td>0</td><td>The versions are the same.</td></tr>    <tr><td>BLD_DIFF</td><td>1</td><td>The current installation has a higher build version number.</td></tr>    <tr><td>BLD_DIFF_MINUS</td><td>-1</td><td>The current installation has a lower build version number.</td></tr>    <tr><td>REL_DIFF</td><td>2</td><td>The current installation has a higher release version number.</td></tr>    <tr><td>REL_DIFF_MINUS</td><td>-2</td><td>The current installation has a lower release version number.</td></tr>    <tr><td>MINOR_DIFF</td><td>3</td><td>The current installation has a higher minor version number.</td></tr>    <tr><td>MINOR_DIFF_MINUS</td><td>-3</td><td>The current installation has a lower minor version number.</td></tr>    <tr><td>MAJOR_DIFF</td><td>4</td><td>The current installation has a higher major version number.</td></tr>    <tr><td>MAJOR_DIFF_MINUS</td><td>-4</td><td>The current installation has a lower major version number.</td></tr>  </table></p>
+  <h5><a name='prop_enabled'><span class='attrib'> enabled ( ) </span></a></h5>
+  <p>
+  
+  Returns true if installs are enabled. This corresponds to the value of the  Mozilla preference 'xpinstall.enabled'.</p>
+  <h5><a name='prop_getVersion'><span class='attrib'> getVersion ( component ) </span></a></h5>
+  <p>
+  
+  Returns the version of a component currently installed as a string. Returns null  if the component is not installed.</p>
+  <h5><a name='prop_install'><span class='attrib'> install ( arr , notifyFunction ) </span></a></h5>
+  <p>
+  
+  Starts an installation. The first argument is an array of packages to be installed.</p>  <p>The notifyFunction is a callback function which you may define which is called  when an installation is complete or when an error occurs. The callback function takes  two arguments, the first will be the URL of the package that was installed and the  second is an integer which will be zero if successful and non-zero if an error occured.  The special value 999 indicates that the user must restart their system before the  installation can complete (usually due to locked files).</p>  <p>You will typically install only one package but you may install as many as you  wish. A dialog box will be presented to the user to confirm the installation. The  example below will install two packages</p>  <p><pre>xpi["Calculator"] = "calc.xpi";<br>xpi["PictureViewer"] = "pict.xpi";<br>InstallTrigger.install(xpi , myCallbackFunction);</pre>  </p>  <p>Two packages, the Calculator and PictureViewer are installed. The XPI files are     URLs relative to the script triggering the installation.</p>
+  <h5><a name='prop_installChrome'><span class='attrib'> installChrome ( type , url, name ) </span></a></h5>
+  <p>
+  
+  Installs a new chrome package. This function is a shorthand for the more  general install function. The following values are valid for the type:  <ul>    <li>InstallTrigger.SKIN - Install a new skin</li>    <li>InstallTrigger.LOCALE - Install a new locale</li>    <li>InstallTrigger.CONTENT - Install a new content package</li>  </ul></p>
+  <h5><a name='prop_startSoftwareUpdate'><span class='attrib'> startSoftwareUpdate ( url , flags ) </span></a></h5>
+  <p>
+  
+  Starts a software installation. The first argument is the URL of the installation  archive file. The second argument is used for flags, which is currently unused.  The function is simply a shorthand for the install function when only one component  is being installed and no callback function is desired.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

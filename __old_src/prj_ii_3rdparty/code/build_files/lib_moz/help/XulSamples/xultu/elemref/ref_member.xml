@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+
+<element name='member'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/advrules.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_member.html</reference>
+  Used within a rule's conditions element to match elements that are containers  or are contained within another element. Both the container and child  attributes may use variables.  
+
+<prop name='child'>
+  A variable reference to a node that is expected to be a child of the  element that is referred to by the container element.
+</prop>
+<prop name='container'>
+  A variable reference to a node that is expected to be a container. If the  variable is the same as the uri attribute on the content element, the  resource must be a container element in order to match.
+</prop>
+</element>

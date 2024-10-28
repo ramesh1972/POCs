@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+
+<element name='treeseparator'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_treeseparator.html</reference>
+  Used to place a seperator row in a tree.  
+
+<attr name='properties' type='space separated list of property names'>
+  Sets the properties of the treeseparator, which can be used to style the  separator.
+</attr>
+</element>

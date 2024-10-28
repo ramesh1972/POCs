@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="dialogs.html"> 
+ <link rel="next" href="wizard.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Open and Save Dialogs</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 12.3 - Open and Save Dialogs 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <SPAN CLASS="currentpage">Open and Save Dialogs</SPAN></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.2 - Creating Dialogs"
+     href="dialogs.html">Previous</a>
+
+
+  <a class="nextlink" title="12.4 - Creating a Wizard"
+     href="wizard.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Open and Save Dialogs</h2>
+
+<P>
+A common type of dialog in one where the user can select a file to
+open or save.
+</P>
+
+<H3>File Pickers</H3>
+
+<P>
+A file picker is a dialog that allows the user to select a file. It is most
+commonly used for the Open and Save As menu commands, but you can use it any
+place in which the user needs to select a file. The XPCOM interface nsIFilePicker
+is used to implement a file picker.
+</P>
+
+<P>
+You can use the file picker in one of three modes:
+</P>
+
+<UL>
+  <LI>Open: the user is asked to select a file for opening.</LI>
+  <LI>Get Folder: the user is asked to select a folder (directory).</LI>
+  <LI>Save: the user is asked to select the name to save a file to.</LI>
+</UL>
+
+<P>
+The appearance of the dialog will be different for each type and will vary on
+each platform. Once the user selects a file or folder, it can be read from or
+written to.
+</P>
+
+<P>
+The file picker interface nsIFilePicker is responsible for displaying a dialog in
+one the three modes. You can set a number a features of the dialog by using the
+interface. When the dialog is closed, you can use the interface functions to get
+the file that was selected.
+</P>
+
+<P>
+To begin, you need to create a file picker component and initialize it.
+</P>
+
+
+<DIV CLASS="sample"><PRE>var nsIFilePicker = Components.interfaces.nsIFilePicker;
+var fp = Components.classes["@mozilla.org/filepicker;1"]
+        .createInstance(nsIFilePicker);
+fp.init(window, "Select a File", nsIFilePicker.modeOpen);</PRE></DIV>
+
+
+
+<P>
+First, a new file picker object is created and stored in the variable 'fp'. The
+'init' function is used to initialize the file picker. This function takes three
+arguments, the window that is opening the dialog, the title of the dialog and the
+mode. The mode here is 'modeOpen' which is used for an Open dialog. You can also
+use 'modeGetFolder' and 'modeSave' for the other two modes. These modes are constants
+of the nsIFilePicker interface.
+</P>
+
+<P>
+There are two features you can set of the dialog before it is displayed. The first
+is the default directory that is displayed when the dialog is opened. The second is
+a filter that indicates the list of file types that are displayed in the dialog. This
+would be used, for example, to hide all but HTML files.
+</P>
+
+<P>
+You can set the default directory by setting the
+<SPAN CLASS="attrib">displayDirectory</SPAN> property of the file picker object to a
+directory. The directory should be an nsILocalFile object. If you do not set this, a
+suitable default will be selected for you. To add filters, call the appendFilters
+function to set the file types that you wish to have displayed.
+</P>
+
+
+<DIV CLASS="sample"><PRE>fp.appendFilters(nsIFilePicker.filterHTML | nsIFilePicker.filterImages);
+fp.appendFilters(nsIFilePicker.filterText | nsIFilePicker.filterAll);</PRE></DIV>
+
+
+
+<P>
+The first example will add filters for HTML and for image files. The user will only
+be able to select those types of files. The manner in which this is done is platform
+specific. On some platforms, each filter will be separate and the user can choose
+between HTML files and image files. The second example will add filters for text
+files and for all files. The user therefore has the option to display text files
+only or all files. 
+</P>
+
+<P>
+You can also use 'filterXML' and 'filterXUL' to filter for XML and XUL files. If you
+would like to filter for custom files, you can use the appendFilter function to do
+this:
+</P>
+
+
+<DIV CLASS="sample"><PRE>fp.appendFilter("Audio Files","*.wav; *.mp3");</PRE></DIV>
+
+
+
+<P>
+This line will add a filter for Wave and MP3 audio files. The first argument is
+the title of the file type and the second is a semicolon-seperated list of file
+masks. You can add more masks or fewer masks as needed. You can call appendFilter
+as many times as necessary to add additional filters. The order you add them
+determines their priority. Typically, the first one added is selected by default.
+</P>
+
+<P>
+Finally, you can show the dialog by calling the show function. It takes no
+arguments but returns a status code that indicates what the user selected. Note
+that the function does not return until the user has selected a file. The function
+returns one of three constants:
+</P>
+
+<UL>
+  <LI>returnOK: the user selected a file and pressed OK. The file the user selected
+      will be stored in the file picker's <SPAN CLASS="attrib">file</SPAN> property.</LI>
+  <LI>returnCancel: the user pressed Cancel.</LI>
+  <LI>returnReplace: in the save mode, this return value identifies that the user
+      selected a file to be replaced. (returnOK will be returned when the user entered
+      the name of a new file.)</LI>
+</UL>
+
+<P>
+You should check the return value and then get the file object from the file picker
+using the <SPAN CLASS="attrib">file</SPAN> property.
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+var res = fp.show();
+if (res == nsIFilePicker.returnOK){
+  var thefile = fp.file;
+  // --- do something with the file here ---
+}</PRE></DIV>
+
+
+
+<HR>
+<P>
+<A HREF="wizard.html">(Next)</A>
+Next, we'll see how to create a wizard.
+
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.2 - Creating Dialogs"
+     href="dialogs.html">Previous</a>
+
+
+  <a class="nextlink" title="12.4 - Creating a Wizard"
+     href="wizard.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

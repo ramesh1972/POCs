@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<element name='rdf:window-mediator'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xpcomex.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_rdfwindow-mediator.html</reference>
+  This datasource holds a list of all of the open windows. Use a ref value of  NC:WindowMediatorRoot in a template.  
+
+<attr name=' Name (http://home.netscape.com/NC-rdf#Name) '>
+  
+  The title of the window.
+</attr>
+</element>

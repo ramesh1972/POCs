@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Handler Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Handler 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Handler</h3>
+
+<p>
+  Specifies event handlers which the XBL element responds to. You can provide  default handling which can be overriden by an appropriate handler on the  bound element. When the event occurs, the code contained in the action  attribute or, if the action is not present, the content of the handler tag is  executed.  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/xblevents.html'>More information about handler<a></p>
+<p><strong>Example:</strong></p>
+<p><pre>    &lt;handler event=&quot;keydown&quot; keycode=&quot;VK_F3&quot;&gt;
+      alert('You pressed the F3 key! Good for you!');
+    &lt;/handler&gt;
+</pre></p>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_action'>action</a></td>
+<td><a href='#attr_button'>button</a></td>
+<td><a href='#attr_charcode'>charcode</a></td>
+<td><a href='#attr_clickcount'>clickcount</a></td>
+<td><a href='#attr_command'>command</a></td>
+</tr><tr>
+<td><a href='#attr_event'>event</a></td>
+<td><a href='#attr_id'>id</a></td>
+<td><a href='#attr_keycode'>keycode</a></td>
+<td><a href='#attr_modifiers'>modifiers</a></td>
+<td><a href='#attr_phase'>phase</a></td>
+</tr><tr>
+<td><a href='#attr_preventdefault'>preventdefault</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Attributes:</a></h4>
+<div class='ref_apblk'>
+  <h5><a name='attr_action'><span class='attrib'>action</span></a></h5>
+  <p>
+  The code contained in the action value is executed when the event occurs.</p>
+  <h5><a name='attr_button'><span class='attrib'>button</span></a></h5>
+  <p>
+  If set, the action is only called when the given mouse button is pressed. If  this attribute is not used, it does not matter which button is pressed.</p>
+  <ul>
+    <li><span class='aval'>0</span>:
+          the left mouse button
+
+</li>
+    <li><span class='aval'>1</span>:
+          the middle mouse button
+
+</li>
+    <li><span class='aval'>2</span>:
+          the right mouse button
+
+</li>
+  </ul>
+  <h5><a name='attr_charcode'><span class='attrib'>charcode</span></a></h5>
+  <p>
+  If set, the action is only called when the given character is pressed.  If the key is not pressed, the event is ignored by this handler. If this  attribute is not present and there is no keycode attribute, the handler  is called no matter which key is pressed.</p>
+  <h5><a name='attr_clickcount'><span class='attrib'>clickcount</span></a></h5>
+  <p>
+  Set to the number of mouse clicks that must occur for the action to be called.  For example, if set to 2, the handler only get called on a double click of the  mouse. Mozilla supports values 1, 2 and 3. The default is 1.</p>
+  <h5><a name='attr_command'><span class='attrib'>command</span></a></h5>
+  <p>
+  The id of a command to invoke when the event occurs. If used in a  non-chrome document, the entire handler will be ignored.</p>
+  <h5><a name='attr_event'><span class='attrib'>event</span></a></h5>
+  <p>
+  The event that the handler listens to. When the event occurs on the bound  element, the code in the action attribute is executed. Two special events  exist, bindingattached, which is called when the binding is bound to an  element, and bindingdetached, which is called when the binding is removed  from an element.</p>
+  <h5><a name='attr_id'><span class='attrib'>id</span></a></h5>
+<p class='aptype'>Type:&nbsp;element id, must be unique in the window</p>  <p>
+  A unique identifier so that you can identify the handler with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.</p>
+  <h5><a name='attr_keycode'><span class='attrib'>keycode</span></a></h5>
+  <p>
+  If set, the action is only called for a key event when the key with the  given code is pressed.</p>
+  <h5><a name='attr_modifiers'><span class='attrib'>modifiers</span></a></h5>
+<p class='aptype'>Type:&nbsp;space separated list of the values below</p>  <p>
+  A list of modifier keys that should be pressed to invoke the event. Multiple  keys may be separated by spaces or commas. Keys will map to other keys on  platforms that do not have them.</p>
+  <ul>
+    <li><span class='aval'>shift</span>:
+          The Shift key.
+
+</li>
+    <li><span class='aval'>alt</span>:
+          The Alt key. On the Macintosh, this is the Option key.
+
+</li>
+    <li><span class='aval'>meta</span>:
+          The Meta key. On the Macintosh, this is the Command key.
+
+</li>
+    <li><span class='aval'>control</span>:
+          The Control key.
+
+</li>
+    <li><span class='aval'>accel</span>:
+          The key used for keyboard shortcuts on the user's platform. Usually, this would
+    be the value you would use.
+
+</li>
+    <li><span class='aval'>accesskey</span>:
+          The menu access key.
+
+</li>
+  </ul>
+  <h5><a name='attr_phase'><span class='attrib'>phase</span></a></h5>
+  <p>
+  The event phase where the handler is invoked. This should be set to the  value 'capturing' to indicate during the event capturing phase, 'target'  to indicate at the target element or left out entirely for the bubbling  phase. (A value of 'target' only works in Mozilla 1.4 and later.)</p>
+  <h5><a name='attr_preventdefault'><span class='attrib'>preventdefault</span></a></h5>
+  <p>
+  If set to true, the default action of the event is not performed.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

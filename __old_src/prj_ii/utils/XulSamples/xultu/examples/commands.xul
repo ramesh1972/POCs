@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="controller-example" title="Controller Example" onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script>
+function init()
+{
+  var list = document.getElementById("theList");
+
+  var listController = {
+    supportsCommand : function(cmd){ return (cmd == "cmd_delete"); },
+    isCommandEnabled : function(cmd){
+      if (cmd == "cmd_delete") return (list.selectedItem != null);
+      return false;
+    },
+    doCommand : function(cmd){
+      list.removeItemAt(list.selectedIndex);
+    },
+    onEvent : function(evt){ }
+  };
+
+  list.controllers.appendController(listController);
+}
+</script>
+
+<listbox id="theList">
+  <listitem label="Ocean"/>
+  <listitem label="Desert"/>
+  <listitem label="Jungle"/>
+  <listitem label="Swamp"/>
+</listbox>
+
+</window>

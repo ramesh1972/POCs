@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+
+<element name='resizer'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_resizer.html</reference>
+  An element used for window resizing. If you place a custom resizing button  inside the resizer, the user will be able to resize the window by dragging  it. The resizer will send a command event after the resize is complete.
+
+<attr name='dir'>
+  The direction that the window is resized.
+<value name='left'>
+    Resized to the left.
+</value>
+<value name='right'>
+    Resized to the right.
+</value>
+<value name='top'>
+    Resized up.
+</value>
+<value name='bottom'>
+    Resized down.
+</value>
+<value name='bottomleft'>
+    Resized down and to the left.
+</value>
+<value name='bottomright'>
+    Resized down and to the right.
+</value>
+<value name='topleft' default='true'>
+    Resized up and to the left.
+</value>
+<value name='topright'>
+    Resized up and to the right.
+</value>
+</attr>
+</element>

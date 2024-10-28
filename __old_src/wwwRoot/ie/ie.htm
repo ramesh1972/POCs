@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+     var parentwin = document.parentWindow.menuArguments;
+     var doc = parentwin.document;
+     var sel = doc.selection;
+     var rng = sel.createRange();
+     var str = new String(rng.text);
+     if(str.length == 0)
+         rng.text = "HELLO, MIND!";
+     else
+         rng.text =  str.toUpperCase();
+ 
+</script>
+</HEAD>
+<BODY>
+
+
+</BODY>
+</HTML>

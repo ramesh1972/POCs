@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="xblex.html"> 
+ <link rel="next" href="dialogs.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Features of a Window</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 12.1 - Features of a Window 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <SPAN CLASS="currentpage">Features of a Window</SPAN></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.8 - XBL Example"
+     href="xblex.html">Previous</a>
+
+
+  <a class="nextlink" title="12.2 - Creating Dialogs"
+     href="dialogs.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Features of a Window</h2>
+
+<P>
+We've already seen some features of windows. We'll look at some more
+in this section.
+</P>
+
+<H3>Creating Another Window</H3>
+   
+<P>
+You can create a second window for your application in the same manner as you
+would create the first one. Just create a second XUL file with the window code
+in it. As in HTML, you can use the window.open function to open the second window.
+This function will return a reference to the newly opened window. You can use
+this reference to call functions of the other window.
+</P>
+   
+<P>
+The open function takes three arguments. The first is the URL of the file you wish
+to open. The second is an internal name of the window. The third is a list of
+display flags. The flag 'chrome' is important to open the window as a chrome file.
+If you do not add the 'chrome' flag, the file will open up as the content in a
+browser window.
+</P>
+   
+<P>
+For example:
+
+
+<DIV CLASS="sample"><PRE>window.open("chrome://findfile/content/findfile.xul","findfile","chrome");</PRE></DIV>
+
+
+
+<H3>Specifying the Width and Height</H3>
+
+<P>
+You should have noticed that whenever elements were added to a window,
+the window's width expanded to fit the new elements. The window is really just
+a box which is flexible and defaults to vertical orientation. You can also
+specify the width and height directly on the <A CLASS="tag" HREF="elemref/ref_window.html">window</A>
+tag. This, of course, causes the window to be displayed in a specific size.
+If you leave it out, the size is determined by the elements that are in it.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;window
+  id="findfile-window"
+  title="Find Files"
+  width="400"
+  height="450"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;</PRE></DIV>
+
+
+
+<P>
+In this example, the window will open with a width of 400 pixels and a height
+of 450 pixels. Even if there aren't enough elements to fit this size, the
+window will still open at this size and there will be blank space in the
+remaining area. If there are too many elements, the window will not be large
+enough to fit the elements. The user will have to resize the dialog. You
+have to be careful when specifying a width and height that the window is not
+too small or too big.
+<P>
+
+<P>
+Note that you must specify both the width and the height. If you only specify
+one, the other will be set to 0. To have the window set its size automatically,
+leave both the width and height out.
+</P>
+
+<P>
+The width and height only specify the initial size of the window. The user
+may still resize the window to another size, assuming that the window is resizable.
+</P>
+
+<H3>Other Window Features</H3>
+
+<P>
+The flags below can be passed as part of the third argument to the window.open
+function. Your operating system may not support all of them. You can also use
+any of the pre-existing flags, which you should find in a JavaScript reference.
+You may disable a feature by setting it to 'no', for example 'dialog=no'.
+</P>
+
+<UL>
+  <LI><B>alwaysLowered</B><BR>
+      The window will always appear behind other windows.</LI>
+  <LI><B>alwaysRaised</B><BR>
+      The window will always appear above other windows.</LI>
+  <LI><B>centerscreen</B><BR>
+      The window will be centered on the screen when it is opened.</LI>
+  <LI><B>dependent</B><BR>
+      The window will always appear relative to the window that opened it. If
+      the window that opened the new window is moved, the new window is moved
+      relative to it.</LI>
+  <LI><B>dialog</B><BR>
+      The window is a dialog box, which may appear differently.</LI>
+  <LI><B>modal</B><BR>
+      The dialog is modal. The window that opened the modal window can't be
+      interacted with until the modal window is closed.
+  <LI><B>resizable</B><BR>
+      The user can resize the window.
+</UL>
+
+<H3>Debugging a Window</H3>
+
+<P>
+Another feature that is useful only during development is to enable the
+debugging mode of a window. To do this, add a <SPAN CLASS="attrib">debug</SPAN>
+attribute to the window and set it to <SPAN CLASS="aval">true</SPAN>. This will
+cause the window to display the boxes and spacer so you can see what is happening.
+The example below shows how to use it.
+
+
+<DIV CLASS="sample"><PRE>&lt;window
+  id="findfile-window"
+  title="Find Files"
+  debug="true"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;</PRE></DIV>
+
+
+
+<P>
+The image below shows the effect when applied to a simple window.
+</P>
+
+<P ALIGN="CENTER">
+<IMG SRC="images/featwin1.jpg" ALT="" WIDTH=353 HEIGHT=312>
+<P>
+
+<UL>
+  <LI>Blue boxes indicate horizontal boxes.</LI>
+  <LI>Red boxes indicate vertical boxes. You can see that the entire
+      window is also a vertical box.</LI>
+  <LI>Zigzags show where there are flexible elements. In this case, the
+      spacer is flexible so a zigzag appears above it.</LI>
+  <LI>Lines show where inflexible elements are, in this case the text,
+      the input field and the buttons.</LI>
+  <LI>White square boxes indicate the edges of elements.</LI>
+</UL>
+
+<P>
+In the image, you might notice a number of additional boxes in place. This
+is because each XUL element is made up of a number of boxes itself, defined
+with XBL. You can normally ignore these. You can specify the
+<SPAN CLASS="attrib">debug</SPAN> attribute on any box, not just on a window.
+</P>
+
+<HR>
+<P>
+<A HREF="dialogs.html">(Next)</A>
+Next, we'll look at how to open secondary dialogs.
+
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.8 - XBL Example"
+     href="xblex.html">Previous</a>
+
+
+  <a class="nextlink" title="12.2 - Creating Dialogs"
+     href="dialogs.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

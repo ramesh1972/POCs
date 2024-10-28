@@ -1,0 +1,445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="xblcontent.html"> 
+ <link rel="next" href="xblprops.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - XBL Attribute Inheritance</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 11.3 - XBL Attribute Inheritance 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <SPAN CLASS="currentpage">XBL Attribute Inheritance</SPAN></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.2 - Anonymous Content"
+     href="xblcontent.html">Previous</a>
+
+
+  <a class="nextlink" title="11.4 - Adding Properties"
+     href="xblprops.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>XBL Attribute Inheritance</h2>
+
+<P>
+In this section we'll see how attributes can be inherited.
+</P>
+
+<H3>Inherited Attributes</H3>
+
+<P>
+XBL allows us to build composite widgets while hiding their actual implementation.
+However, with the features mentioned so far, the anonymous content is always created
+in the same way. It would be useful to add attributes to the bound elements that
+modify the inner elements. For example:
+</P>
+
+
+<DIV CLASS="sample"><PRE><B>XUL:</B>
+
+&lt;searchbox/&gt;
+
+<B>XBL:</B>
+
+&lt;binding id="searchBinding"&gt;
+  &lt;content&gt;
+    &lt;xul:textbox/&gt;
+    &lt;xul:button label="Search"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+In the example, the <SPAN CLASS="attrib">label</SPAN> attribute has been placed
+directly on the <A CLASS="tag" HREF="elemref/ref_button.html">button</A> element. The problem with this
+is that the label would be the same every time the binding was used. In this
+case, it would be preferable if the attribute could be specified on the
+searchbox instead. XBL provides an <SPAN CLASS="attrib">inherits</SPAN> attribute
+which can be used to inherit attributes from the bound element. It should be
+placed on the element that should inherit an attribute from the outer element,
+in this case the button. Its value should be set to a comma-separated list of
+attribute names that are to be inherited.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;xul:textbox xbl:inherits="flex"/&gt;
+&lt;xul:button xbl:inherits="label"/&gt;</PRE></DIV>
+
+
+
+<P>
+When the content is generated, the <A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> grabs the
+<SPAN CLASS="attrib">flex</SPAN> attribute from the searchbox and the
+<A CLASS="tag" HREF="elemref/ref_button.html">button</A> grabs the
+<SPAN CLASS="attrib">label</SPAN> attribute from the searchbox. This allows both
+the flexibility of the textbox and the label of the button to be different for
+each use of the binding. In addition, changing the value of the attributes on
+the searchbox with a script will update the textbox and button also. You can add
+the <SPAN CLASS="attrib">inherits</SPAN> attribute to as many elements as you wish,
+to inherit any number of attributes.
+</P>
+
+<P>
+Note how the <SPAN CLASS="attrib">inherits</SPAN> attribute has been placed in
+the XBL namespace, by prefixing it with 'xbl:'. The namespace should be declared
+somewhere earlier, usually on the <A CLASS="tag" HREF="elemref/ref_xblbindings.html">bindings</A> element. The
+next example demonstrates this.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;bindings xmlns:xbl="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;xbl:binding id="buttonBinding"&gt;
+  &lt;xbl:content&gt;
+    &lt;xul:button label="OK" xbl:inherits="label"/&gt;
+  &lt;/xbl:content&gt;
+&lt;/xbl:binding&gt;</PRE></DIV>
+
+
+
+<P>
+In this example, the button inherits the <SPAN CLASS="attrib">label</SPAN>
+attribute, but this attribute is also given a value directly in the XBL.
+This technique is used to set the default value if the attribute is not
+present. This button will inherit its <SPAN CLASS="attrib">label</SPAN>
+attribute from the outer element. However, if no <SPAN CLASS="attrib">label</SPAN>
+is present, it will be given a default value of <SPAN CLASS="aval">OK</SPAN>.
+</P>
+
+<P>
+There may be times where two generated elements need to inherit from an attribute
+that has the same name. For example, to create a labeled textbox (a textbox with a
+text description beside it) out of a <A CLASS="tag" HREF="elemref/ref_label.html">label</A> and a
+<A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> element, the label will need to inherit
+its text from the <SPAN CLASS="attrib">value</SPAN> attribute and the textbox
+will also need to inherit its default value from the
+<SPAN CLASS="attrib">value</SPAN> attribute as well. To solve this, we will need
+to use a different attribute and map it to the same one. The following demonstrates
+this:
+</P>
+
+
+<DIV CLASS="sample"><PRE><B>XUL:</B>
+
+&lt;box class="labeledtextbox" title="Enter some text:" value="OK"/&gt;
+
+<B>CSS:</B>
+
+box.labeledtextbox {
+    -moz-binding: url('chrome://example/skin/example.xml#labeledtextbox');
+}
+
+<B>XBL:</B>
+
+&lt;binding id="labeledtextbox"&gt;
+  &lt;content&gt;
+    &lt;xul:label xbl:inherits="value=title"/&gt;
+    &lt;xul:textbox xbl:inherits="value"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> inherits the
+<SPAN CLASS="attrib">value</SPAN> attribute directly. To set the
+<SPAN CLASS="attrib">value</SPAN> attribute on the label, we need to use a
+different attribute name and map it to the value. The
+<SPAN CLASS="attrib">inherits</SPAN> attribute on the label grabs the
+<SPAN CLASS="attrib">title</SPAN> attribute from the labeledtextbox and maps it
+to the <SPAN CLASS="attrib">value</SPAN> attribute of the
+<A CLASS="tag" HREF="elemref/ref_label.html">label</A> element. The syntax
+&lt;inner attribute&gt;=&lt;outer attribute&gt; is used to map one attribute to
+another. Here is another example:
+</P>
+
+
+<DIV CLASS="sample"><PRE><B>XUL:</B>
+
+&lt;box class="okcancel" oktitle="OK" canceltitle="Cancel" image="happy.png"/&gt;
+
+<B>CSS:</B>
+
+box.okcancel {
+    -moz-binding: url('chrome://example/skin/example.xml#okcancel');
+}
+
+<B>XBL:</B>
+
+&lt;binding id="okcancel"&gt;
+  &lt;content&gt;
+    &lt;xul:button xbl:inherits="label=oktitle,image"/&gt;
+    &lt;xul:button xbl:inherits="label=canceltitle"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+The value of the <SPAN CLASS="attrib">oktitle</SPAN> attribute is mapped to
+the <SPAN CLASS="attrib">label</SPAN> attribute of the first button. The
+<SPAN CLASS="attrib">canceltitle</SPAN> attribute is mapped to the
+<SPAN CLASS="attrib">label</SPAN> attribute of the second button. The first
+button also inherits the <SPAN CLASS="attrib">image</SPAN> attribute. The result
+is as follows:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;box class="okcancel" oktitle="OK" canceltitle="Cancel" image="happy.png"&gt;
+  &lt;button label="OK" image="happy.png"/&gt;
+  &lt;button label="Cancel"/&gt;
+&lt;/box&gt;</PRE></DIV>
+
+
+
+<P>
+Note that the attributes are duplicated on the inner (anonymous) content. Changing
+the attributes on the box with the <SPAN CLASS="aval">okcancel</SPAN> class will
+automatically change the values on the buttons. You may also have noticed that we
+just made up our own attribute names. This is valid in XUL.
+</P>
+
+<HR>
+<P>
+<A HREF="xblprops.html">(Next)</A>
+In the next section, we look at adding properties, methods and events to a binding.
+
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.2 - Anonymous Content"
+     href="xblcontent.html">Previous</a>
+
+
+  <a class="nextlink" title="11.4 - Adding Properties"
+     href="xblprops.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window
+  id="test-window"
+  title="Things"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+ <tree id="treeset" seltype="multiple" flex="1">
+
+  <treecols>
+    <treecol id="name" label="Things" primary="true" flex="1"/>
+  </treecols>
+
+  <treechildren>
+   <treeitem item="most" container="true" open="true">
+     <treerow>
+       <treecell label="My Most Favourite Things"/>
+     </treerow>
+     <treechildren> 
+       <treeitem id="m1">
+         <treerow>
+           <treecell label="Raindrops on roses"/>
+         </treerow>
+       </treeitem>
+       <treeitem id="m2">
+         <treerow>
+           <treecell label="Warm woolen mittens"/>
+         </treerow>
+       </treeitem>
+       <treeitem id="m3">
+         <treerow>
+           <treecell label="Brown paper packages"/>
+         </treerow>
+       </treeitem>
+     </treechildren>
+   </treeitem>
+   <treeitem item="least" container="true" open="true">
+     <treerow>
+       <treecell label="My Least Favourite Things"/>
+     </treerow>
+     <treechildren> 
+       <treeitem id="l1">
+         <treerow>
+           <treecell label="Scratching forks on dishes"/>
+         </treerow>
+       </treeitem>
+       <treeitem id="l2">
+         <treerow>
+           <treecell label="Broken down buses"/>
+         </treerow>
+       </treeitem>
+       <treeitem id="l3">
+         <treerow>
+           <treecell label="Rotten old bananas"/>
+         </treerow>
+       </treeitem>
+       <treeitem id="l4">
+         <treerow>
+           <treecell label="Mosquitoes in summer"/>
+         </treerow>
+       </treeitem>
+     </treechildren>
+   </treeitem>
+   <treeitem item="noopinion" container="true" open="true">
+     <treerow>
+       <treecell label="Things I Really Have No Opinion Of"/>
+     </treerow>
+     <treechildren> 
+       <treeitem id="n1">
+         <treerow>
+           <treecell label="Elvis memorabilia"/>
+         </treerow>
+       </treeitem>
+       <treeitem id="n2">
+         <treerow>
+           <treecell label="Chimney sweepers"/>
+         </treerow>
+       </treeitem>
+     </treechildren>
+   </treeitem>
+
+  </treechildren>
+         
+ </tree>
+
+</window>
+

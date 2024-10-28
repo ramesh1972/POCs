@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='columns'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/grids.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_columns.html</reference>
+  Defines the columns of a grid. Each child of a columns element should be a  column element.  
+
+</element>

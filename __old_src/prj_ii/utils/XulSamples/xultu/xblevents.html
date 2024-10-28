@@ -1,0 +1,486 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="xblmethods.html"> 
+ <link rel="next" href="xblinherit.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Adding Event Handlers</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 11.6 - Adding Event Handlers 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <SPAN CLASS="currentpage">Adding Event Handlers</SPAN></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.5 - Adding Methods"
+     href="xblmethods.html">Previous</a>
+
+
+  <a class="nextlink" title="11.7 - XBL Inheritance"
+     href="xblinherit.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Adding Event Handlers</h2>
+
+<P>
+Next, we'll find out how to add event handlers to XBL-defined elements.
+</P>
+
+<H3>Event Handlers</H3>
+
+<P>
+As you might expect, mouse clicks, key presses and other events are passed to
+each of the elements inside the content. However, you may wish to trap the events
+and handle them in a special way. You can add event handlers to the elements
+inside the content if needed. The last example in the previous section demonstrated
+this. In that example, <SPAN CLASS="attrib">oncommand</SPAN> handlers were added to
+some buttons.
+</P>
+
+<P>
+However, you may want to add an event handler to the entire contents, that is, all
+the elements defined in the <A CLASS="tag" HREF="elemref/ref_xblcontent.html">content</A> tag. This could be
+useful when trapping the focus and blur events. To define an event handler, use
+the <A CLASS="tag" HREF="elemref/ref_xblhandler.html">handler</A> element. Each will describe the action taken
+for a single event handler. You can use more than one handler if necessary. If an
+event does not match any of the <A CLASS="tag" HREF="elemref/ref_xblhandler.html">handler</A> events, it is
+simply passed to the inner content as usual.
+</P>
+
+<P>
+The general handler syntax is as follows:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;binding id="binding-name"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="event-name" action="script"/&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+Place all of your handlers within the <A CLASS="tag" HREF="elemref/ref_xblhandlers.html">handlers</A> element.
+Each <A CLASS="tag" HREF="elemref/ref_xblhandler.html">handler</A> element defines the action taken for a
+particular event specified by its <SPAN CLASS="attrib">event</SPAN> attribute.
+Valid event types are those supported by XUL and JavaScript, such as
+<SPAN CLASS="aval">click</SPAN> and <SPAN CLASS="aval">focus</SPAN>. Use the event
+name without the 'on' in front of it.
+</P>
+
+<P>
+A common reason to set handlers is to modify the custom properties when an event
+occurs. For example, a custom checkbox might have a checked property which needs
+to be changed when the user clicks the checkbox:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;handlers&gt;
+  &lt;handler event="mouseup" action="this.checked=!this.checked"/&gt;
+&lt;/handlers&gt;</PRE></DIV>
+
+
+
+<P>
+When the user clicks and releases the mouse button over the check box, the
+<SPAN CLASS="aval">mouseup</SPAN> event is sent to it, and the handler
+defined here is called, causing the state of the checked property to be
+reversed. Similarly, you may wish to change a property when the element is
+focused. You will need to add handlers to adjust the properties whenever input
+from the mouse or keyboard would require it.
+</P>
+
+<P>
+For mouse events, you can use the <SPAN CLASS="attrib">button</SPAN> attribute
+to have the handler only trap events that occur from a certain button. Without
+this attribute, the handler traps all events regardless of the button that was
+pressed. The <SPAN CLASS="attrib">button</SPAN> attribute should be set to
+either <SPAN CLASS="aval">0</SPAN> for the left mouse button,
+<SPAN CLASS="aval">1</SPAN> for the middle mouse button or
+<SPAN CLASS="aval">2</SPAN> for the right mouse button.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;handlers&gt;
+  &lt;handler event="click" button="0" action="alert('Left button pressed');"/&gt;
+  &lt;handler event="mouseup" button="1" action="alert('Middle button pressed')"/&gt;
+  &lt;handler event="click" button="2" action="alert('Right button pressed');"/&gt;
+&lt;/handlers&gt;</PRE></DIV>
+
+
+
+<P>
+For key events, you can use a number of attributes similar to those for the
+<A CLASS="tag" HREF="elemref/ref_key.html">key</A> element to match a specific key and match only when
+certain modifer keys are pressed. The previous example could be extended so that
+the checked property of the check box is changed when the space bar is pressed.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;handlers&gt;
+  &lt;handler event="keypress" key=" " action="this.checked=!checked"/&gt;
+&lt;/handlers&gt;</PRE></DIV>
+
+
+
+<P>
+You can also use the <SPAN CLASS="attrib">keycode</SPAN> attribute to check for
+non-printable keys. The <A HREF="keyshort.html">section on keyboard shortcuts</A>
+provides more information. The modifier keys can be checked by adding a
+<SPAN CLASS="attrib">modifiers</SPAN> attribute. This should be set to one of the
+values set below:
+
+<UL>
+  <LI><DIV CLASS="attrib">alt</DIV>
+      The user must press the Alt key.
+  </LI>
+  <LI><DIV CLASS="attrib">control</DIV>
+      The user must press the Control key.
+  </LI>
+  <LI><DIV CLASS="attrib">meta</DIV>
+      The user must press the Meta key.
+  </LI>
+  <LI><DIV CLASS="attrib">shift</DIV>
+      The user must press the Shift key.
+  </LI>
+  <LI><DIV CLASS="attrib">accel</DIV>
+      The user must press the special modifier key that is usually used for keyboard
+      shortcuts on their platform.
+  </LI>
+</UL>
+
+<P>
+If set, the handler is only called when the modifier is pressed. You can require
+multiple modifier keys by separating them with spaces.
+</P>
+
+<P>
+The following alternate syntax can be used when the code in a handler is more complex:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;binding id="binding-name"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="event-name"&gt;
+      -- handler code goes here --
+    &lt;/handler&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<H3>Handlers Example</H3>
+
+<P>
+The following example adds some key handlers to create a very primitive
+local clipboard:
+</P>
+
+
+Example 11.6.1:
+<A HREF='examples/ex_xblevents_1.xml.txt'>Source</A>
+<DIV CLASS="example"><PRE>&lt;binding id="clipbox"&gt;
+  &lt;content&gt;
+    &lt;xul:textbox/&gt;
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;field name="clipboard"/&gt;
+  &lt;/implementation&gt;
+  &lt;handlers&gt;
+    &lt;handler event="keypress" key="x" modifiers="control"
+      action="this.clipboard=document.getAnonymousNodes(this)[0].value; document.getAnonymousNodes(this)[0].value='';"/&gt;
+    &lt;handler event="keypress" key="c" modifiers="control"
+      action="this.clipboard=document.getAnonymousNodes(this)[0].value;"/&gt;
+    &lt;handler event="keypress" key="v" modifiers="control"
+      action="document.getAnonymousNodes(this)[0].value=this.clipboard ? this.clipboard : '';"/&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+The content is a single textbox. A field <SPAN CLASS="attrib">clipboard</SPAN>
+has been added to it to store the clipboard contents. This does mean that the clipboard
+operations are limited to this single textbox. However, each one will have its own
+buffer.
+</P>
+
+<P>
+Three handlers have been added, one for cut, one for copy and the other for paste.
+Each has its own keystroke that invokes it. The first handler is the cut operation and
+is invoked when the Control key is pressed along with the x key. The script within
+the <SPAN CLASS="attrib">action</SPAN> attribute is used to cut the text from the
+textbox and put it into the clipboard field. For simplicity, the entire text is
+cut and not just the selected text. The code works as follows:
+</P>
+
+<OL>
+  <LI><PRE>this.clipboard=document.getAnonymousNodes(this)[0].value;</PRE>
+      The first element of the anonymous content array is retrieved which gives a
+      reference to the <A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> element, which happens to
+      be the first (and only) element within the <A CLASS="tag" HREF="elemref/ref_xblcontent.html">content</A>
+      element. The value property is retrieved which will provide the text within the
+      textbox. This is then assigned to the clipboard field. The result is copying
+      the text in the textbox into this special clipboard.<BR>
+  </LI>
+  <LI><PRE>document.getAnonymousNodes(this)[0].value=''</PRE>
+      The text of the <A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> is then assigned a value of
+      a null string. This effectively clears the text in the textbox.<BR>
+  </LI>
+</OL>
+
+<P>
+A copy operation is similar but does not the clear the text afterwards. Pasting is
+the opposite where the value of the textbox is assigned from the value in the clipboard
+field. If we were creating a real implementation of these clipboard keyboard shortcuts,
+we would probably use the real clipboard interface and handle the current selection
+as well.
+</P>
+
+<HR>
+<P>
+<A HREF="xblinherit.html">(Next)</A>
+In the next section, we'll see how to extend existing XBL definitions.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_xblevents_1.xml.txt'>11.6.1</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.5 - Adding Methods"
+     href="xblmethods.html">Previous</a>
+
+
+  <a class="nextlink" title="11.7 - XBL Inheritance"
+     href="xblinherit.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

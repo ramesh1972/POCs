@@ -1,0 +1,133 @@
+<?xml version='1.0'?>
+
+<element name='textbox'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/inputs.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_textbox.html</reference>
+  A text input field in which the user can enter text. It is similar to the  HTML input element. Only one line of text is displayed by default. The  multiline attribute can be specified to display a field with multiple rows.  
+
+<example>
+<![CDATA[
+    &lt;label control=&quot;your-name&quot; value=&quot;Enter your name:&quot;/&gt;
+    &lt;textbox id=&quot;your-name&quot;/&gt;
+
+]]>
+</example>
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULTextboxElement</implements>
+<attr name='cols' type='integer'>
+  The number of columns in the textarea. 
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the textbox is disabled or not. If this attribute is set to true,  the textbox is disabled. This is usually drawn with the text in grey. If the textbox is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the textbox, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='maxlength' type='integer'>
+  The maximum number of characters that the textbox allows to be entered.
+</attr>
+<attr name='multiline' type='boolean'>
+  If true, the textbox displays multiple lines. If the user presses ENTER, a new  line is started. If false, the textbox only allows entry of one line.
+</attr>
+<attr name='onchange' type='script code'>
+  This event is sent when the value of the textbox is changed.  The event is not sent until the focus is moved to another element.
+</attr>
+<attr name='oninput' type='script code'>
+  This event is sent when a user enters text in a textbox. This event  is only called when the text displayed would change, thus it is not called  when the user presses non-displayable keys.
+</attr>
+<attr name='readonly' type='boolean'>
+  If set to true, then the user cannot modify the value of the textbox. However, the  value may still be modified by a script.
+</attr>
+<attr name='rows' type='integer'>
+  The number of rows in the textarea.
+</attr>
+<attr name='size' type='integer'>
+  The number of characters that can be displayed in the textbox.
+</attr>
+<attr name='tabindex' type='integer'>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.
+</attr>
+<attr name='timeout' type='integer'>
+  For timed textboxes, the number of milliseconds before the timer fires a  command event. The timer starts after the user types a character. If the  user types another character, the timer resets.
+</attr>
+<attr name='type'>
+  You can set the type attribute to one of the values below for a more  specialized type of textbox. Don't set the type if you wish to use a regular  textbox.
+<value name='autocomplete'>
+    A textbox that supports autocomplete. For more information about
+    autocomplete textboxes, see the autocomplete documentation
+    ( Mozilla )
+    ( Firefox )
+</value>
+<value name='password'>
+    A textbox that hides what is typed, used for entering passwords.
+</value>
+<value name='timed'>
+    This textbox will fire a command event after the user types characters and
+    a certain time has passed. The delay is set with the timeout attribute.
+    You might use this type, for instance, to update information elsewhere in
+    the window as the user types, without the need for continuous updates
+    since the timer will not fire if the user types more keys in the meantime.
+    The command event will also fire if the user presses the return key.
+</value>
+</attr>
+<attr name='value' type='string'>
+  The default value entered in the textbox. The attribute only holds the  default value and is never modified when the user enters text. To get the  updated value, use the value property.
+</attr>
+<attr name='wrap' type='string'>
+  Set this attribute to the value 'off' to disable word wrapping in the textbox.  If this attribute is not specified, word wrapping is enabled.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the textbox.
+</prop>
+<prop name='disabled'/>
+<prop name='inputField' type='textbox element'>
+  In Mozilla, the XUL textbox is implemented as a wrapper around an HTML  input element. This read only property holds a reference to this inner input  element.
+</prop>
+<prop name='maxLength' type='integer'>
+  The maximum number of characters that the textbox allows to be entered.
+</prop>
+<prop name='readonly'/>
+<method name='select'>
+<prototype> select ( ) </prototype>
+  
+  Select all the text in the textbox.
+</method>
+<prop name='selectionEnd' type='integer'>
+  Get or modify the end of the selected portion of the field's text. Use  in conjuction with the selectionEnd property. The value specifies the index of  the character after the selection. If this value is equal to the selectionStart  property, no text is selected, but the value indicates the position of the  caret (cursor) within the textbox.
+</prop>
+<prop name='selectionStart' type='integer'>
+  Get or modify the beginning of the selected portion of the field's text. Use  in conjuction with the selectionEnd property. The value specifies the index of  the first selected character.
+</prop>
+<method name='setSelectionRange'>
+<prototype> setSelectionRange ( start , end ) </prototype>
+  
+  Sets the selected portion of the textbox, where the start argument is the  index of the first character to select and the end argument is the index of the  character after the selection. Set both arguments to the same value to move the  cursor to the corresponding position without selecting text.
+</method>
+<prop name='size' type='integer'>
+  The number of characters that can be displayed in the textbox.
+</prop>
+<prop name='textLength' type='integer'>
+  Holds the length of the text entered in the textbox. This property is read only.
+</prop>
+<prop name='timeout'/>
+<prop name='type'>
+  You can set the type attribute to one of the values below for a more  specialized type of textbox. Don't set the type if you wish to use a regular  textbox.
+<value name='autocomplete'>
+    A textbox that supports autocomplete. For more information about
+    autocomplete textboxes, see the autocomplete documentation
+    ( Mozilla )
+    ( Firefox )
+</value>
+<value name='password'>
+    A textbox that hides what is typed, used for entering passwords.
+</value>
+<value name='timed'>
+    This textbox will fire a command event after the user types characters and
+    a certain time has passed. The delay is set with the timeout attribute.
+    You might use this type, for instance, to update information elsewhere in
+    the window as the user types, without the need for continuous updates
+    since the timer will not fire if the user types more keys in the meantime.
+    The command event will also fire if the user presses the return key.
+</value>
+</prop>
+<prop name='value' type='string'>
+  Returns the text entered into the textbox. You can set this property to  change the text in the textbox.
+</prop>
+</element>

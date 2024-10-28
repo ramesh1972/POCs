@@ -1,0 +1,96 @@
+<?xml version='1.0'?>
+
+<element name='treecol'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/trees.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_treecol.html</reference>
+  A column of a tree. It displays the column header and holds the size and other  information about the column. You can also place splitter elements between the  columns to allow column resizing. You should always place an id attribute on  a treecol element to ensure that the column positioning is handled properly.   
+
+<implements>nsIAccessibleProvider</implements>
+<attr name='crop'>
+  If the label of the treecol is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='cycler' type='boolean'>
+  If true, then the column is a cycler column. In the case, clicking on a cell  in the column will alternate its state between on and off. This is used, for  example, in a mail window, for a column that indicates that the message is  read or unread with a small mark in the cell. If the cycler attribute is not  set, the cell is a regular text cell.
+</attr>
+<attr name='dragging' type='boolean'>
+  This attribute will be set to true if the column is being dragged. This  attribute is set automatically; you shouldn't adjust it yourself.
+</attr>
+<attr name='fixed' type='boolean'>
+  If true, the size of the column in the tree cannot be adjusted by the user.  Any splitters to either side will resize those columns while keeping the  fixed column at a constant size. If false or not specified, the user can  adjust the size of the column, typically by dragging the column header with  the mouse.
+</attr>
+<attr name='hidden' type='boolean'>
+  This attribute, when set to true, hides the column. The user can show the  column by selecting it from a drop-down at the end of the column header row.
+</attr>
+<attr name='hideheader' type='boolean'>
+  Set this to true to indicate that the tree column header should be displayed  without any column header styling.
+</attr>
+<attr name='ignoreincolumnpicker' type='boolean'>
+  If true, the column does not appear in the column picker.
+</attr>
+<attr name='label' type='string'>
+  The label that will appear on the treecol. If this is left out, no text appears.
+</attr>
+<attr name='primary' type='boolean'>
+  If set to true, the column will have indentation and twisties drawn to the left  of it to indicate the hierarchy level of the rows. If no column has the primary  attribute set to true, the tree may still contain nested rows, although no  indication will be given to the user.
+</attr>
+<attr name='sort' type='URI of an RDF predicate'>
+  Set this to a RDF property to have the data in the column sorted based on  that property. The property will usually be the same as that of the cell  label.
+</attr>
+<attr name='sortActive' type='boolean'>
+  This should be set to true for the column which should be sorted by default.
+</attr>
+<attr name='sortDirection'>
+  Set this attribute to set the direction the column is sorted. The user may  change the sort direction by clicking the column headers.
+<value name='ascending' default='true'>
+    The data is sorted in ascending order.
+</value>
+<value name='descending'>
+    The data is sorted in descending order.
+</value>
+<value name='natural'>
+    The data is sorted in natural order, which means the order that it is stored in.
+</value>
+</attr>
+<attr name='src' type='image URL'>
+  Set this attribute to have the tree column use an image for the header  instead of a label. Set this to the URL of an image to appear on the tree  column header. If this attribute is left out, no image appears and the  label is used instead. The class 'treecol-image' must be used on the  treecol element for the image to appear. You cannot have both an image and  a label.
+</attr>
+<attr name='type'>
+  The type of tree column. The default is a text column that displays the content  as text.
+<value name='checkbox'>
+    The content of the columns are checkboxes.
+</value>
+<value name='progressmeter'>
+    The content of the columns are a progress meters. This is used in Mozilla's
+    download manager window.
+</value>
+<value name='text' default='true'>
+    The content of the columns is text.
+</value>
+</attr>
+<class name='treecol-image'>
+  Use this class to have an image appear on the tree column header. Specify  the image using the src attribute.
+</class>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the treecol.
+</prop>
+</element>

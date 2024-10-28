@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="crosspov.html"> 
+ <link rel="next" href="xpiscript.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Creating an Installer</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 13.1 - Creating an Installer 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <SPAN CLASS="currentpage">Creating an Installer</SPAN></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.7 - Cross Package Overlays"
+     href="crosspov.html">Previous</a>
+
+
+  <a class="nextlink" title="13.2 - Install Scripts"
+     href="xpiscript.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Creating an Installer</h2>
+
+<P>
+This section will describe packaging a XUL application into an installer.
+</P>
+
+<H3>XPInstall Packages</H3>
+
+<P>
+Mozilla provides a mechanism which can be used to package XUL windows, scripts,
+skins and other files into single file installers. You can place this installer
+file somewhere for users to download. A simple script can be used to have the package
+downloaded and installed. This mechanism is called XPInstall (Cross platform Install).
+</P>
+
+<P>
+XPInstall installers are packaged into JAR files. Inside the JAR file, you can add
+all the various files that you want to have installed. In addition, installers should
+contain an install script (a file named install.js) which can be used to script the
+installation process. This script has access to various install functions which can
+be used to install files and components.
+</P>
+
+<P>
+The JAR file installers typically have the extension .xpi (pronounced zippy) to
+distinguish them from other archives. The installers will be usually used to install
+Mozilla components such as new skins, plugins and new packages.
+</P>
+
+<P>
+There are several steps involved in launching an installer and installing components.
+These are described step by step below.
+</P>
+
+<OL>
+  <LI>Create a Web page from which the user can download the software to be
+      installed. This page will contain an install trigger which is a small
+      piece of script which launches the install.</LI>
+  <LI>The user is presented with a dialog which indicates the package being installed.
+      It is possible for the install trigger to launch multiple installers. In this
+      case, they will be presented in a list. The user may choose to continue or
+      cancel.</LI>
+  <LI>If the user chooses to continue, the installer XPI file is downloaded. A progress
+      bar is displayed to the user during this process.</LI>
+  <LI>The file install.js is extracted from the install archive and executed. This
+      script will call install functions which will indicate which files from the archive
+      should be installed.</LI>
+  <LI>Once the script is complete, the new package has been installed. If multiple
+      packages are being installed, their scripts will run in sequence.</LI>
+</OL>
+
+<H3>Install Triggers</H3>
+
+<P>
+As indicated above, the install process is started by an install trigger. This involves
+the use of the special global object InstallTrigger. It contains a number of methods
+which can be used to start an installation. You can use this object in local or remote
+content, meaning that it is suitable for a download from a Web site.
+</P>
+
+<P>
+Let's create an example install trigger. This involves the use of the function
+InstallTrigger.install. This function takes two arguments, the first is a list of
+packages to install, and the second is a callback function which will be called when
+the installation is complete. Here is an example:
+</P>
+
+
+<DIV CLASS="sample"><PRE>function doneFn ( name , result ){
+  alert("The package " + name + " was installed with a result of " + result);
+}
+
+var xpi = new Object();
+xpi["Calendar"] = "calendar.xpi";
+InstallTrigger.install(xpi,doneFn);</PRE></DIV>
+
+
+
+<P>
+First, we define a callback function doneFn which will be called when the install
+is complete. You can name the function whatever you like of course. This function
+has two arguments. The first is the name of the package that was just installed. This
+is important if you are installing multiple components. The second argument is a result
+code. If the result is 0, the installation completed successfully. If the result is
+non-zero, an error occured and the value is an error code. The function doneFn here
+just displays an alert box to the user. 
+</P>
+
+<P>
+Next, we create an array xpi which will hold the name (Calendar) and URL (calendar.xpi)
+of the installer. You can add an additional similar such line for each package you
+wish to have installed. Finally, we call the install function.
+</P>
+
+<P>
+When this section of script is executed, the file calendar.xpi will be installed.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+Let's try this with the find files dialog.
+</P>
+
+
+<DIV CLASS="sample"><PRE>function doneFn ( name , result ){
+  if (result) alert("An error occured: " + result);
+}
+
+var xpi = new Object();
+xpi["Find Files"] = "findfile.xpi";
+InstallTrigger.install(xpi,doneFn);</PRE></DIV>
+
+
+
+</DIV>
+
+<H3>The XPI Archive</H3>
+
+<P>
+The installer XPI file is required to contain one file called install.js which is a
+JavaScript file which is executed during the installation. The remaining files are
+the files to be installed. These files will typically be placed inside a directory
+in the archive but they do not have to be. For chrome files, they might be structured
+like the chrome directory.
+</P>
+
+<P>
+Often, the only files placed in an XPI archive will be the install script (install.js)
+and a JAR file. This JAR file contains all of the files used by your application.
+The components provided with Mozilla are stored in this manner.
+</P>
+
+<P>
+Because the XPI file is just a special ZIP file, you can create it and add files to it
+using a zip utility.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+For the find files dialog, we'll create a structure in the archive much like the
+following:
+</P>
+
+<PRE>
+install.js
+findfile
+  content
+    contents.rdf
+    findfile.xul
+    findfile.js
+  skin
+    contents.rdf
+    findfile.css
+  locale
+    contents.rdf
+    findfile.dtd
+</PRE>
+
+</DIV>
+
+<P>
+A directory has been added for each part of the package, the content, the skin and the
+locale. The contents.rdf files have also been added because they will be needed to
+register the chrome files.
+</P>
+
+<HR>
+<P>
+<A HREF="xpiscript.html">(Next)</A>
+Next, we'll look further at the install script.
+
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.7 - Cross Package Overlays"
+     href="crosspov.html">Previous</a>
+
+
+  <a class="nextlink" title="13.2 - Install Scripts"
+     href="xpiscript.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

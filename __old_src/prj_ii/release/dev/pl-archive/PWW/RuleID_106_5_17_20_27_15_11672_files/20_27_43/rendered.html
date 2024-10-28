@@ -1,0 +1,558 @@
+<html><head></head>
+<body>
+<link rel="SHORTCUT ICON" href="http://india.gov.in/favicon.ico"><style type="text/css">
+<!--
+body,td,th {
+	margin-left: 5px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: verdana;
+	font-size: 11px;
+	color: #000000;
+}
+.globgcolor {
+	background-color: #D1D5BC;
+}
+.ver10pxblack {
+	font-family: Verdana;
+	font-size: 10px;
+	color: #000000;
+}
+.ver11pxwhtbld {
+	font-family: verdana;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+.ver10pxblack1 {font-family: verdana;font-size: 10px;color: #000000;}
+.bottomgraycolor {background-color: #575757;}
+.ver10pxwht {font-family: verdana;font-size: 10px;font-weight:bold;color: #ffffff;}
+.ver10pxwhtbld {font-family: verdana;font-size: 10px;color: #ffffff;font-weight: bold;}
+.heading {
+	font-family: verdana;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.headingm {
+	font-family: arial;
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.ver11pxblack {font-family: verdana;font-size: 11px;color: #000000;}
+.headingnews {
+	font-family: arial;
+	font-size: 16px;
+	color: #727FC7;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.ver10pxblackpg {font-family: verdana;font-size: 10px;color: #000000;display: block;position: static;width: 540px;left: 14px;top: 5px;text-align: left;padding: 3px;}
+.indent {
+	padding-left: 10px;
+}
+.ver11pxwht {font-family: verdana;font-size: 11px;color: #ffffff;}
+.ver11pxwhtbld1 {font-family: verdana;font-size: 11px;color: #ffffff;font-weight: bold;}
+.logininput {height:17px;font-family: verdana;font-size: 10px;width:80px;border: 1px outset #A4B4C1;}
+.headingmCopy {
+	font-family: arial;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.ingrey {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 10px; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Verdana
+}
+-->
+</style><script language="JavaScript" src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/pressrel_eng.js"></script><script language="JavaScript" src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/news_eng.js"></script><script language="JavaScript" src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/weather_daily.js"></script><script language="JavaScript" src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/md5.js"></script><script language="JavaScript">
+	function sho_wth_c()
+	{
+		var wth = "";
+		
+		wth += '<table align=right width="93%" border="0" cellpadding="0" cellspacing="0" bgcolor="#D1D5BC">';
+		wth += '<tr class="ver9pxblack"><td class="ver9pxblack" width="54%"></td><td class="ver9pxblack" width="23%"><strong>Max</strong></td><td class="ver9pxblack" width="23%"><strong>Min</strong></td></tr>';
+		wth += '<tr><td colspan="3" height="3"></td></tr>';
+daily_weather.sort();
+		for(i=0; i<noofitems; i++)
+		{
+		//	if(i == 0)
+		//		j = 2;
+		//	else if(i == 1)
+		//		j = 3;
+		//	else if(i == 2)
+		//		j = 1;
+		//	else if(i == 3)
+		//		j = 0;
+		j=i;	
+			wth += '<tr><td class="ver10pxblackbld">'+daily_weather[j][0]+'</td><td class="ver10pxblack">'+daily_weather[j][1]+'</td><td class="ver10pxblack">'+daily_weather[j][2]+'</td></tr>';
+			wth += '<tr><td colspan="2" height="3"></td></tr>';
+		}
+		wth += '</table>';
+		
+		document.getElementById("wth").innerHTML=wth;
+		document.getElementById('img_weather').src="limages/weatherlogo.gif"
+		document.getElementById('img_weatherbg_c').background="images/weatherbg.gif";
+		document.getElementById('img_weatherbg_f').background="";
+		document.getElementById("wth_r_c").bgColor="#D1D5BC";
+		document.getElementById("wth_r_f").bgColor="#BFC4A2";
+		document.getElementById("wth_r_f").background="images/weathercellbg.gif";
+		document.getElementById("wth_r_c").background="";
+	}
+	
+	function faren(x)
+	{
+		return Math.round(((9 * x) / 5) + 32);
+	}
+	
+	function sho_wth_f()
+	{
+		var wth = "";
+		
+		wth += '<table align=right width="93%" border="0" cellpadding="0" cellspacing="0" bgcolor="#D1D5BC">';
+		wth += '<tr class="ver9pxblack"><td class="ver9pxblack" width="54%"></td><td class="ver9pxblack" width="23%"><strong>Max</strong></td><td class="ver9pxblack" width="23%"><strong>Min</strong></td></tr>';
+		wth += '<tr><td colspan="3" height="3"></td></tr>';
+		daily_weather.sort();
+		for(i=0; i<noofitems; i++)
+		{
+	//		if(i == 0)
+	//			j = 2;
+	//		else if(i == 1)
+	//			j = 3;
+	//		else if(i == 2)
+	//			j = 1;
+	//		else if(i == 3)
+	//			j = 0;
+	j=i;		
+			wth += '<tr><td class="ver10pxblackbld">'+daily_weather[j][0]+'</td><td class="ver10pxblack">'+faren(daily_weather[j][1])+'</td><td class="ver10pxblack">'+faren(daily_weather[j][2])+'</td></tr>';
+			wth += '<tr><td colspan="2" height="3"></td></tr>';
+		}
+		wth += '</table>';
+		
+		document.getElementById("wth").innerHTML=wth;
+		document.getElementById('img_weather').src="limages/weatherlogo1.gif"
+		document.getElementById('img_weatherbg_f').background="images/weatherbg.gif";
+		document.getElementById('img_weatherbg_c').background="";
+		document.getElementById("wth_r_c").bgColor="#BFC4A2"; 
+		document.getElementById("wth_r_f").bgColor="#D1D5BC";
+		document.getElementById("wth_r_c").background="images/weathercellbg.gif";
+		document.getElementById("wth_r_f").background="";
+	}
+
+	function other_srv(id)
+	{
+		document.frm1.service.value=id;
+		document.frm1.action="howdo/otherservice_details.php";
+		document.frm1.submit();										
+	}
+
+	function sub_it(id)
+	{
+		document.frm1.service.value=id;
+		document.frm1.submit();
+	}
+	
+	
+// Not Being Used	
+	function MM_openBrWindow(theURL,winName,features) 
+	{ 
+  		window.open(theURL,winName,features);
+	}
+
+	var swidth=323;
+	var sheight=115;
+	var sspeed=1;
+	var wholemessage="<ul>";
+	
+	for(i=0; i<theSummaries.length; i++)
+	{
+		if(i==theSummaries.length-1)
+		{
+			wholemessage=wholemessage+"<li><a class='ver10pxblack' href='outerwin.htm?id="+theSiteLinks[i] +"' target='_blank'>"+theSummaries[i]+"</a></li>";
+		}
+		else
+		{
+			wholemessage=wholemessage+"<li><a class='ver10pxblack' href='outerwin.htm?id="+theSiteLinks[i] +"' target='_blank'>"+theSummaries[i]+"</a><br><br></li>";
+		}
+	}
+	
+	wholemessage = wholemessage+"</ul>";
+	
+	function start()
+	{
+		if (document.all) return;
+		if (document.getElementById)
+		{
+			document.getElementById("slider").style.visibility="show";
+			ns6marquee(document.getElementById('slider'));
+		}
+		else if(document.layers)
+		{
+			document.slider1.visibility="show";
+			ns4marquee(document.slider1.document.slider2);
+		}
+	}
+	
+	function ns4marquee(whichlayer)
+	{
+		ns4layer=eval(whichlayer);
+		ns4layer.document.write(wholemessage);
+		ns4layer.document.close();
+		sizeup=ns4layer.document.height/2;
+		ns4layer.top-=sizeup/2;
+		ns4slide();
+	}
+	
+	function ns4slide()
+	{
+		if (ns4layer.top>=sizeup*(-1))
+		{
+			ns4layer.top-=sspeed;
+			setTimeout("ns4slide()",100);
+		}
+		else
+		{
+			ns4layer.top=sheight/2;
+			ns4slide();
+		}
+	}
+	
+	function ns6marquee(whichdiv)
+	{
+		ns6div=eval(whichdiv);
+		ns6div.innerHTML=wholemessage;
+		ns6div.style.top=sheight/2;
+		sizeup=sheight/2;
+		ns6slide();
+	}
+	
+	function ns6slide()
+	{
+		if (parseInt(ns6div.style.top)>=sizeup*(-1))
+		{
+			ns6div.style.top=parseInt(ns6div.style.top)-sspeed;
+			setTimeout("ns6slide()",100);
+		}
+		else
+		{
+			ns6div.style.top=sheight/2;
+			ns6slide();
+		}
+	}
+	
+	var lcl = new Date();
+	
+	function synctime(x)
+	{
+		lcl = new Date(x);
+		shdate();
+	}
+	
+	function shdate()
+	{
+		if (!document.layers && !document.all && !document.getElementById)
+			return;
+		
+		mnth = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+		var dd=lcl.getDate();
+		var mm=lcl.getMonth();
+		var yy=lcl.getFullYear();
+		dtdp = "<font size='1' face='verdana' >"+dd+" "+mnth[mm]+" "+yy+", </font>";
+		
+		if (document.layers)
+		{
+			document.layers.live_date.document.write(dtdp);
+			document.layers.live_date.document.close();
+		}
+		else if (document.all)
+		{
+			live_date.innerHTML=dtdp;
+		}
+		else if (document.getElementById)
+		{
+			document.getElementById("live_date").innerHTML=dtdp;
+		}
+	}
+
+	function show5()
+	{
+		if (!document.layers && !document.all && !document.getElementById)
+			return;
+		
+		lcl.setSeconds(lcl.getSeconds()+1);
+		
+	 	var hours=lcl.getHours();
+	 	var minutes=lcl.getMinutes();
+	 	var seconds=lcl.getSeconds();
+		var dn="PM";
+		
+		if (minutes<=9)
+	 		minutes="0"+minutes;
+	 	if (seconds<=9)
+	 		seconds="0"+seconds;
+
+	 	myclock="<font size='1' face='verdana' >"+hours+":"+minutes+":"+seconds+" IST</font>";
+		
+		if (document.layers)
+		{
+			document.layers.live_clock.document.write(myclock);
+			document.layers.live_clock.document.close();
+		}
+		else if (document.all)
+		{
+			live_clock.innerHTML=myclock;
+		}
+		else if (document.getElementById)
+		{
+			document.getElementById("live_clock").innerHTML=myclock;
+		}
+		
+		setTimeout("show5()", 1000);
+	}
+	
+	function ufc()
+	{
+		document.frmlogin.userid.value = "";
+		document.frmlogin.userid.focus();
+	}
+	
+	function pfc()
+	{
+		document.getElementById("ps1").style.display = "none";
+		document.getElementById("ps2").style.display = "";
+		document.frmlogin.passwd.focus();
+	}
+	
+	function trim(str) 
+	{
+		res="";
+	
+		for(var i=0; i< str.length; i++) 
+		{
+			if (str.charAt(i) != " ") 
+			{
+				res +=str.charAt(i);
+			}
+		}
+	   
+		return res;
+	}
+	
+	function chkbadchar(str)
+	{
+		badch = new Array(" select "," drop ","--"," insert "," delete ","<",">","#");
+		
+		for (var k=0;k<8;k++)
+		{
+			if (str.toLowerCase().indexOf(badch[k]) != -1)
+			{
+				alert ("Invalid characters found, Please Re-Enter");
+				return false;
+			}
+		}
+		return true;	
+	}
+	
+	function chksplcharald(str)
+	{
+		alphabets="abcdefghijklmnopqrstuvwxyz0123456789-+_.?@$%/&*,;'(){}[]`~!^| \t\r\n";
+		
+		for(i=0;i<str.length;i++)
+		{
+			if(alphabets.indexOf(str.toLowerCase().charAt(i)) == -1)
+			{
+				alert ("Invalid characters found, Please Re-Enter");
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	function verify()
+	{
+		if(trim(document.frmlogin.userid.value) == "" || document.frmlogin.userid.value == "User ID")
+		{
+			alert("Please enter your User ID");
+			document.frmlogin.userid.focus();
+			return false;
+		}
+		else
+		{
+			if(!chkbadchar(document.frmlogin.userid.value) || !chksplcharald(document.frmlogin.userid.value))
+			{
+				document.frmlogin.userid.focus();
+				return false;
+			}
+		}
+		
+		if(trim(document.frmlogin.passwd.value) == "")
+		{
+			alert("Please enter your Password");
+			return false;
+		}
+		else
+		{
+			if(!chkbadchar(document.frmlogin.passwd.value) || !chksplcharald(document.frmlogin.passwd.value))
+			{
+				return false;
+			}
+		}
+		
+		document.frmlogin.passwd.value = md5(document.frmlogin.passwd.value);
+		return true;		
+	}
+	
+	function hide_opinion()
+	{
+		document.getElementById('ifr_op').style.display='none';
+		document.getElementById('ifr_op').style.visibility='hidden';
+	}
+
+function validate_It()
+{ 
+
+var i,f=0;
+temp= new String(document.reqdfields.userscope.value);
+if(document.reqdfields.userscope.value == "")
+{
+alert(" Search field is empty \nEnter Search word/phrases and try again");
+return false;
+}
+for(i=0;i<temp.length;i++)
+{
+if( temp[i]!=' ') 
+{
+f=1;
+break;
+} 
+else
+continue;
+} 
+if(f==0)
+{ alert(" Search field is empty \nEnter Search word/phrases and try again");
+return false;
+}
+submit_It();
+return true;
+}//function
+
+function submit_It(){
+document.reqdfields.scope.value = "( URL <CONTAINS>" + document.reqdfields.siteurl.value + " ) <AND> ( " +
+document.reqdfields.userscope.value + " )";
+document.reqdfields.my_doc.value=document.reqdfields.userscope.value;
+document.reqdfields.action="http://search.nic.in/compass";
+document.reqdfields.submit();
+return true;
+}
+
+function addBookmark(url,title) { 
+if (window.sidebar) { 
+window.sidebar.addPanel(title, url,""); 
+} else if( document.all ) { 
+window.external.AddFavorite( url, title); 
+} else if( window.opera && window.print ) { 
+return true;
+} else if( document.layers ) {
+window.alert( 'Please click OK and then press Ctrl+D to create a bookmark or \n click Bookmarks | Add Bookmark' );
+} else {
+window.alert( 'Please use your browser\'s bookmarking facility to create a bookmark' );
+}
+}
+</script><script language="JavaScript">
+								if (document.all)
+								{
+									document.writeln('<marquee id="ieslider" scrollAmount=1 width=323 height=115 direction=up style="border:0;">');
+									document.writeln(wholemessage);
+									ieslider.onmouseover = new Function("ieslider.scrollAmount=0");
+									ieslider.onmouseout = new Function("if (document.readyState == 'complete') ieslider.scrollAmount=1");
+									document.write('</marquee>');
+								}
+
+								if (document.getElementById && !document.all)
+								{
+									document.write('<div style="position:relative;overflow:hidden;width:321;height:113;clip:rect(0 323 115 0);border:0px;" onMouseOver="sspeed=0;" onMouseOut="sspeed=1;">');
+									document.write('<div id="slider" style="position:relative;width:&{swidth};">');
+									document.write('</div></div>');
+								}
+						  </script><script language="JavaScript">
+					shdate();
+					show5();
+				  </script><script language="JavaScript">
+							for(i=0; i<3 && i< pibtitle.length; i++)
+							{
+								var str = "";
+								
+								if (pibtitle[i].length > 58)
+								{
+									str = pibtitle[i].substring(0, 55)+"...";
+								}
+								else
+								{
+									str = pibtitle[i];
+								}
+								
+								document.write("<tr><td width='10' valign='top' align='center'><img src='images/ht1arr6pre.gif' alt='.' width='3' height='9'></td><td width='183' align='left' class='ver10pxblack'><a href='outerwin.htm?id="+piblink[i]+"' target='_blank' class='ver10pxblack'>"+str+"</a></td></tr><tr><td colspan=2 height=4></td></tr>");
+							}
+						</script><script language="JavaScript">
+					  	sho_wth_c();
+					    </script><table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="1" width="207">
+                    <tbody><tr>
+                      <td class="headingmCopy" bgcolor="#6483c3"><a href="http://www.india.gov.in/govt.php" class="headingmCopy">Government</a></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#aabfe6"><table align="center" bgcolor="#aabfe6" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tbody><tr>
+                            <td align="center" width="20"><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/ht1arr6.gif" alt="." height="5" width="3"></td>
+                            <td colspan="2" class="ver10pxblack" align="left"><a href="http://www.india.gov.in/govt/constitutions_india.php" class="ver10pxblack">Constitution of India </a></td>
+                          </tr>
+                          <tr>
+                            <td align="center" width="20"><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/ht1arr6.gif" alt="." height="5" width="3"></td>
+                            <td colspan="2" class="ver10pxblack" align="left"><a href="http://www.india.gov.in/govt/whoswho.php" class="ver10pxblack">Who's Who</a></td>
+                          </tr>
+                          <tr>
+                            <td align="center"><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/ht1arr6.gif" alt="." height="5" width="3"></td>
+                            <td colspan="2" class="ver10pxblack" align="left"><a href="http://www.india.gov.in/govt/parliament.php" class="ver10pxblack">Parliament</a></td>
+                          </tr>
+                          <tr>
+                            <td align="center"><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/ht1arr6.gif" alt="." height="5" width="3"></td>
+                            <td colspan="2" align="left"><a href="http://www.india.gov.in/outerwin.htm?id=http://goidirectory.nic.in/" target="_blank" class="ver10pxblack">Government Websites</a></td>
+                          </tr>
+                          <tr>
+                            <td align="center"><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/ht1arr6.gif" alt="." height="5" width="3"></td>
+                            <td class="ver10pxblack" align="left"><a href="http://www.india.gov.in/govt/rules.php" class="ver10pxblack">Rules</a></td>
+                            <td rowspan="4" align="right" valign="bottom" width="96"><a href="http://www.india.gov.in/govt/empcorner.php"><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/ht1empcorner.gif" alt="Employees Corner" border="0" height="30" width="74"></a>  </td>
+                          </tr>
+                          <tr>
+                            <td align="center" width="20"><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/ht1arr6.gif" alt="." height="5" width="3"></td>
+                            <td class="ver10pxblack" align="left" width="89"><a href="http://www.india.gov.in/govt/acts.php" class="ver10pxblack">Acts</a></td>
+                          </tr>
+                          <tr>
+                            <td align="center" width="20"><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/ht1arr6.gif" alt="." height="5" width="3"></td>
+                            <td class="ver10pxblack" align="left"><a href="http://www.india.gov.in/govt/policies.php" class="ver10pxblack">Policies</a></td>
+                          </tr>
+                          <tr>
+                            <td align="center" width="20"><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_20_27_15_11672_files/20_27_43/ht1arr6.gif" alt="." height="5" width="3"></td>
+                            <td class="ver10pxblack" align="left"><a href="http://www.india.gov.in/govt/schemes.php" class="ver10pxblack">Schemes</a></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" align="center" height="5"></td>
+                            </tr>
+                      </tbody></table></td>
+                    </tr>
+                </tbody></table></body></html>

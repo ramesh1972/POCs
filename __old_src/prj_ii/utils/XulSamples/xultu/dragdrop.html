@@ -1,0 +1,218 @@
+<?php
+
+  $pagebase="<a href='http://www.xulplanet.com/tutorials/'>Tutorials</a> &gt; " .
+    "<a href='http://www.xulplanet.com/tutorials/xultu/'>XUL Tutorial</a>";
+  $pagetitle="8.5 - Drag and Drop";
+  $customsidebar = "xultu-sidebar.php";
+
+
+
+  include "../../lib/header.php";
+ ?>
+
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="8.4 - Using the Clipboard"
+     href="clipboard.html">Previous</a>
+
+
+  <a class="nextlink" title="8.6 - Drag and Drop JavaScript Wrapper"
+     href="dragwrap.html">Next</a>
+
+</div>
+
+
+
+<h2>Drag and Drop</h2>
+
+<P>
+This section describes how to implement objects that can be dragged around
+and dropped onto other objects.
+</P>
+
+<H3>The Drag and Drop Interface</H3>
+
+<P>
+Many user interfaces allow one to drag particular objects around within the
+interface. For example, dragging files to other directories, or dragging an
+icon to another window to open the document it refers to. Mozilla and XUL
+provide a number of events that can handle when the user attempts to drag
+objects around.
+</P>
+
+<P>
+A user can start dragging by holding down the mouse button and moving the
+mouse. The drag stops when the user releases the mouse. Event handlers are
+called when the user starts and ends dragging, and at various points
+in-between.
+</P>
+
+<P>
+Mozilla implements dragging by using a drag session. When a user requests to
+drag something that can be dragged, a drag session should be started. The
+drag session handles updating the mouse cursor and where the object should
+be dropped. If something cannot be dragged, it should not start a drag
+session. Because the user generally has only one mouse, only one drag session
+is in use at a time.
+</P>
+
+<P>
+Note that drag sessions can be created from within Mozilla itself or from
+other applications. Mozilla will translate the data being dragged as needed.
+</P>
+
+<P>
+The list below describes the event handlers that can be called, which may be
+placed on any element. You only need to put values for the handlers where you
+need to do something when the event occurs.
+</P>
+
+<UL>
+  <LI><DIV CLASS="attrib">ondraggesture</DIV>
+      Called when the user starts dragging the element, which normally happens
+      when the user holds down the mouse button and moves the mouse. The script
+      in this handler should set up a drag session.</LI>
+  <LI><DIV CLASS="attrib">ondragover</DIV>
+      This event handler is called for an element when something is being
+      dragged over top of it. If the object can be dropped on the element, the
+      drag session should be notified.</LI>
+  <LI><DIV CLASS="attrib">ondragenter</DIV>
+      Called for an element when the mouse pointer first moves over the element
+      while something is being dragged. This might be used to change the
+      appearance of the element to indicate to the user that the object can be
+      dropped on it.</LI>
+  <LI><DIV CLASS="attrib">ondragexit</DIV>
+      Called for an element when the mouse pointer moves out of an element while
+      something is being dragged. The is also called after a drop is complete so
+      that an element has a chance to remove any highlighting or other indication.
+      </LI>
+  <LI><DIV CLASS="attrib">ondragdrop</DIV>
+      This event handler is called for an element when something is dropped on
+      the element. At this point, the user has already released the mouse button.
+      The element can simply ignore the event or can handle it some way, such as
+      pasting the dragged object into itself.
+      </LI>
+</UL>
+
+<P>
+There are two ways that drag and drop events can be handled. This first invloves
+using the drag and drop XPCOM interfaces directly. The second is to use a
+JavaScript wrapper object that handles some of this for you. This wrapper is
+contained in the widget-toolkit (or global) package.
+</P>
+
+<H3>XPCOM Drag and Drop</H3>
+
+<P>
+Two interfaces are used to support drag and drop. The first is a drag service,
+nsIDragService and the second is the drag session, nsIDragSession.
+</P>
+
+<P>
+The nsIDragService is responsible for creating drag sessions when a drag starts,
+and removing the drag session when the drag is complete. The function
+'invokeDragSession' should be called to start a drag inside an
+<SPAN CLASS="attrib">ondraggesture</SPAN> event handler. Once this function is
+called, a drag has started.
+</P>
+
+<P>
+The function invokeDragSession takes four parameters, as described below:
+</P>
+
+
+<DIV CLASS="sample"><PRE>invokeDragSession(element,transferableArray,region,actions);</PRE></DIV>
+
+
+
+<UL>
+  <LI><B>element</B><BR>
+      A reference to the element that is being dragged. This can be retrieved
+      by getting the property event.target during the event handler.</LI>
+  <LI><B>transferableArray</B><BR>
+      An array of nsITransferable objects, one for each item being dragged.
+      An array is used because you might want to drag several objects at once,
+      such as a set of files.</LI>
+  <LI><B>region</B><BR>
+      A region used for feedback indication. This should usually be set to
+      null.</LI>
+  <LI><B>actions</B><BR>
+      The actions that the drag uses. This should be set to one of the following
+      constants, or several added together. The action can be changed during the
+      drag depending on what is being dragged over.
+      <UL>
+        <LI><B>nsIDragSession.DRAGDROP_ACTION_NONE</B><BR>
+            Used to indicate that no drag is valid.</LI>
+        <LI><B>nsIDragSession.DRAGDROP_ACTION_COPY</B><BR>
+            The item being dragged should be copied to its dropped location.</LI>
+        <LI><B>nsIDragSession.DRAGDROP_ACTION_MOVE</B><BR>
+            The item being dragged should be moved to its dropped location.</LI>
+        <LI><B>nsIDragSession.DRAGDROP_ACTION_LINK</B><BR>
+            A link (or shortcut or alias) to the item being dragged should be
+            created in the dropped location.</LI>
+     </UL></LI>
+</UL>
+
+<P>
+The interface nsIDragService also provides the function 'getCurrentSession' which
+can be called from within the drag event handlers to get and modify the state of
+the drag. The function returns an object that implements nsIDragSession.
+</P>
+
+<P>
+The interface nsIDragSession is used to get and set properties of the drag that
+is currently occuring. The following properties and methods are available:
+</P>
+
+<UL>
+  <LI><B>canDrop</B><BR>
+      Set this property to 'true' if the element the mouse is currently over can
+      accept the object currently being dragged to be dropped on it. Set
+      the value to 'false' if it doesn't make sense to drop the object on it. This
+      should be changed in the <SPAN CLASS="attrib">ondragover</SPAN> and
+      <SPAN CLASS="attrib">ondragenter</SPAN> event handlers.</LI>
+  <LI><B>dragAction</B><BR>
+      Set to the current action to be performed, which should be one or more
+      of the constants described earlier. This can be used to provide extra
+      feedback to the user.</LI>
+  <LI><B>numDropItems</B><BR>
+      The number of items being dragged. For example, this will be set to 5
+      if five bookmarks are being dragged.</LI>
+  <LI><B>getData (transfer,index)</B><BR>
+      Get the data being dragged. The first argument should be an nsITransferable
+      object to hold the data. The second argument, index, should be the index
+      of the item to return.</LI>
+  <LI><B>sourceDocument</B><BR>
+      The document where the drag started.</LI>
+  <LI><B>sourceNode</B><BR>
+      The DOM node where the drag started.</LI>
+  <LI><B>isDataFlavorSupported(flavor)</B><BR>
+      Returns true if the data being dragged contains data of the specified
+      flavor.</LI>
+</UL>
+
+<HR>
+<P>
+<A HREF="dragwrap.html">(Next)</A>
+In the next section, we'll see how to use the JavaScript wrapper for drag and drop.
+
+</P>
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="8.4 - Using the Clipboard"
+     href="clipboard.html">Previous</a>
+
+
+  <a class="nextlink" title="8.6 - Drag and Drop JavaScript Wrapper"
+     href="dragwrap.html">Next</a>
+
+</div>
+
+
+<?php include "../../comments/comments.php"; ?>
+
+<?php include "../../lib/footer.php" ?>
+
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 5.4.1"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<popupset>
+  <popup id="clipmenu">
+    <menuitem label="Cut"/>
+    <menuitem label="Copy"/>
+    <menuitem label="Paste"/>
+  </popup>
+</popupset>
+
+<box context="clipmenu">
+  <description value="Context click for menu"/>
+</box>
+
+
+</window>
+

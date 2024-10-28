@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+
+<element name='rdf:history'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/datasrc.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_rdfhistory.html</reference>
+  The history datasource holds a list of the pages that the user has visited. It is  available in two forms, a flat list by using NC:HistoryRoot and organized by day  by using NC:HistoryByDate. In this latter form, items are stored in one of seven  folders, storing URLs visited in each of the recent seven days. URLs visited earlier  are placed in the last folder.  
+
+<attr name=' Date (http://home.netscape.com/NC-rdf#Date) '>
+  
+  Holds the date when the user last visited the URL.
+</attr>
+<attr name=' FirstVisitDate (http://home.netscape.com/NC-rdf#FirstVisitDate) '>
+  
+  Holds the date when the user first visited the URL.
+</attr>
+<attr name=' Hostname (http://home.netscape.com/NC-rdf#Hostname) '>
+  
+  The hostname part of the URL.
+</attr>
+<attr name=' Name (http://home.netscape.com/NC-rdf#Name) '>
+  
+  The name of the resource. This will be the title of the page.
+</attr>
+<attr name=' Referrer (http://home.netscape.com/NC-rdf#Referrer) '>
+  
+  The referrer of the URL, which is, in general, the URL of the page which  contained the link to this one.
+</attr>
+<attr name=' URL (http://home.netscape.com/NC-rdf#URL) '>
+  
+  The URL for the resource. This will be the URL that is opened when a user double-clicks  on the entry in a tree.
+</attr>
+<attr name=' VisitCount (http://home.netscape.com/NC-rdf#VisitCount) '>
+  
+  Holds the number of times that the user has visited the URL.
+</attr>
+</element>

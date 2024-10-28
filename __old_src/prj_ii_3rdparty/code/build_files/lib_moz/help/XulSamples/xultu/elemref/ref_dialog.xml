@@ -1,0 +1,93 @@
+<?xml version='1.0'?>
+
+<element name='dialog'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/dialogs.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_dialog.html</reference>
+  This element should be used in place of the window element for dialog boxes.  The buttons attribute may be used to set which buttons should appear in the  dialog box. These buttons will be placed in the correct locations for the  user's platform.  
+
+<attr name='buttonalign' type='string'>
+  The value of the 'align' attribute for the box containing the buttons.
+</attr>
+<attr name='buttondir' type='string'>
+  The value of the 'dir' attribute for the box containing the buttons.
+</attr>
+<attr name='buttonorient' type='string'>
+  The value of the 'orient' attribute for the box containing the buttons.
+</attr>
+<attr name='buttonpack' type='string'>
+  The value of the 'pack' attribute for the box containing the buttons.
+</attr>
+<attr name='buttons' type='comma-separated list of the values below'>
+  A comma-separated list of buttons to appear on the dialog box. The buttons will  be placed in suitable locations for the user's platform and basic event handling  will be performed automatically. The following values can be used in the list:
+<value name='accept'>
+    The OK button, which will accept the changes when pressed. This button will also
+    be the default button.
+</value>
+<value name='cancel'>
+    The cancel button which will cancel the operation.
+</value>
+<value name='help'>
+    A help button for displaying help about the dialog.
+</value>
+<value name='disclosure'>
+    A button to show more information. This might be a button or a disclosure
+    triangle.
+</value>
+</attr>
+<attr name='ondialogaccept' type='script code'>
+  The code in this attribute is called when the OK button is pressed, or when  the acceptDialog function is called.
+</attr>
+<attr name='ondialogcancel' type='script code'>
+  The code in this attribute is called when the Cancel button is pressed, or when  the cancelDialog function is called.
+</attr>
+<attr name='ondialogdisclosure' type='script code'>
+  The code in this attribute is called when the disclosure button is pressed.
+</attr>
+<attr name='ondialoghelp' type='script code'>
+  The code in this attribute is called when the Help button is pressed.
+</attr>
+<attr name='title' type='string'>
+  The text to appear on the title bar of the dialog box.
+</attr>
+<method name='acceptDialog'>
+<prototype> acceptDialog ( ) </prototype>
+  
+  Accepts the dialog and closes it, similar to pressing the OK button.
+</method>
+<prop name='buttons' type='comma-separated list of the values below'>
+  A comma-separated list of buttons to appear on the dialog box. The buttons will  be placed in suitable locations for the user's platform and basic event handling  will be performed automatically. The following values can be used in the list:
+<value name='accept'>
+    The OK button, which will accept the changes when pressed. This button will also
+    be the default button.
+</value>
+<value name='cancel'>
+    The cancel button which will cancel the operation.
+</value>
+<value name='help'>
+    A help button for displaying help about the dialog.
+</value>
+<value name='disclosure'>
+    A button to show more information. This might be a button or a disclosure
+    triangle.
+</value>
+</prop>
+<method name='cancelDialog'>
+<prototype> cancelDialog ( ) </prototype>
+  
+  Cancels the dialog and closes it, similar to pressing the Cancel button.
+</method>
+<prop name='centerWindowOnScreen' type='no return value'>
+  Centers the dialog on the screen.
+</prop>
+<prop name='enterDefaultAlways' type='boolean'>
+  If set to true, pressing enter will always close the dialog, no matter which  element is focused. If false, pressing Enter while another button is focused  will not cause the dialog to close.
+</prop>
+<method name='getButton' returns='button element'>
+<prototype> getButton ( type ) </prototype>
+  
+  Returns the button element in the dialog corresponding to the given type.
+</method>
+<prop name='moveToAlertPosition' type='no return value'>
+  Moves and resizes the dialog to a position and size suitable for an alert box.
+</prop>
+</element>

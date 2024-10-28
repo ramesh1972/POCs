@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+		  "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>Morten's JavaScript Tree Menu -- CSS-related properties</title>
+
+<script type="text/javascript">
+<!-- hide the script from old browsers
+if((navigator.appName == "Netscape" && parseInt(navigator.appVersion) >= 3 && navigator.userAgent.indexOf("Opera") == -1) || (navigator.appName == "Microsoft Internet Explorer" && parseInt(navigator.appVersion) >= 4) || (navigator.appName == "Opera" && parseInt(navigator.appVersion) >= 5)) {
+
+  for(i = 0; i < parent.frames.length; i++) {
+    if(parent.frames[i].name == "code" && parent.frames[i].MTMLoaded) {
+      parent.frames[i].MTMTrack = true;
+      setTimeout("parent.frames[" + i + "].MTMDisplayMenu()", 250);
+      break;
+    }
+  }
+}
+
+// End of script hiding -->
+</script>
+</head>
+
+<body bgcolor="#ffffff" text="#000000" link="#330099" vlink="#666699" alink="red">
+<h2>CSS-related properties</h2>
+
+<p>If you're either going to use your own linked style sheet, or want to tweak the layout of the menu through the <code>MTMExtraCSS</code> option, this is the right place to be.  Here's a run-down of all the CSS-related properties in the menu.  If you want to have a look at the output code for yourself you can choose &quot;View Source&quot; in the menu frame in the most common browsers.  That should give away most clues as to what the HTML code actually looks like.</p>
+
+<p>Apart from that there's one ID used, for the text next to the root icon, and three classes for some menu items.  The <code>ID</code> for the root text is <code>root</code>, so the corresponding CSS code becomes <code>#root { /* any CSS rules here */ }</code></p>
+
+<p>The three classes are all connected to the links.  It's one for the tracked item, one for a sub menu that was opened, and one for a sub menu that was closed.  The class names are <code>tracked</code>, <code>subexpanded</code> and <code>subclosed</code> respectively.  The corresponding CSS code becomes <code>a.tracked { /* CSS */ }</code>, <code>a.subexpanded { /* CSS */ }</code> and <code>a.subclosed { /* CSS */ }</code> respectively.</p>
+
+<h3>Example style sheet</h3>
+
+<p>This example style sheet is actually the inline style sheet as it is written by the code on my web site:</p>
+
+<pre><code>body {
+	color:#000000;
+}
+#root {
+	color:#000000;
+	background:transparent;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:84%;
+}
+a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:84%;
+	text-decoration:none;
+	color:#330099;
+	background:transparent;
+}
+a:hover {
+	color:#990000;
+	background:transparent;
+}
+a.tracked {
+	color:#000000;
+	background:transparent;
+}
+a.subexpanded {
+	color:#666699;
+	background:transparent;
+}
+a.subclosed {
+	color:#666699;
+	background:transparent;
+}</code></pre>
+
+<p>That's it.  Have fun! :)</p>
+</body>
+</html>

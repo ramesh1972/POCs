@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+
+<element name='statusbarpanel'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_statusbarpanel.html</reference>
+  An individual element of a statusbar. This is a special type of button  which is drawn differently. Unlike normal buttons, a statusbarpanel can only  have a label or an image but not both. This element is often used with a  short label or icon to indicate status, for instance whether the user is  online or whether there are new messages.  
+
+<attr name='crop'>
+  If the label of the statusbarpanel is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='label' type='string'>
+  The label that will appear on the statusbarpanel. If this is left out, no text appears.
+</attr>
+<attr name='src' type='image URL'>
+  The URL of the image to appear on the statusbarpanel. If this attribute is left  out, no image appears.
+</attr>
+<class name='statusbarpanel-iconic'>
+  Use this class to have an image appear on the statusbarpanel. Specify the  image using the src attribute. The image will appear instead of the label.
+</class>
+<class name='statusbarpanel-menu-iconic'>
+  Use this class to have an image appear on the statusbarpanel, and also allow  a popup menu. Specify the image using the src attribute, and place a  <a href='ref_menupopup.html'>menupopup</a> element inside the statusbarpanel. The image will appear instead  of the label.
+</class>
+<prop name='label'/>
+<prop name='src'/>
+</element>

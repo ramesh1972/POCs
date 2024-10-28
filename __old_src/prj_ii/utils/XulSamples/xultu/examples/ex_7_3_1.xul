@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 7.3.1"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<menubar id="sample-menubar">
+  <menu id="file-menu" label="File" accesskey="f">
+    <menupopup id="file-popup">
+      <menuitem id="close-command" label="Close" accesskey="c"/>
+    </menupopup>
+  </menu>
+</menubar>
+
+
+</window>
+

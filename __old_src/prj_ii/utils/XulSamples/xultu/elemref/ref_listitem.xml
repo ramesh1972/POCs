@@ -1,0 +1,83 @@
+<?xml version='1.0'?>
+
+<element name='listitem'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/lists.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_listitem.html</reference>
+  A single row in a list box. The text of the listitem is specified either  using listcell elements, or by placing a label attribute directly on the  listitem element. You may also place other elements inside the listitem for  more complex content.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULSelectControlItemElement</implements>
+<attr name='accesskey' type='character'>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the listitem.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the listitem will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.
+</attr>
+<attr name='checked' type='boolean'>
+  Indicates whether the listitem is checked or not.
+</attr>
+<attr name='command' type='element id'>
+  Set to an id of a command element that is being observed by the  element.
+</attr>
+<attr name='crop'>
+  If the label of the listitem is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='current' type='boolean'>
+  This attribute will be set to true if the listitem is the current item. This  is typically used by a theme to customize the focus ring. To change the  currently selected item in a listbox, use the listbox property selectedItem.
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the listitem is disabled or not. If this attribute is set to true,  the listitem is disabled. This is usually drawn with the text in grey. If the listitem is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the listitem, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='image' type='image URL'>
+  The URL of the image to appear on the listitem. If this is attribute is left  out, no image appears. The position of the image is determined by the dir  and orient attributes. You must use the class 'listitem-iconic' to have an  image appear.
+</attr>
+<attr name='label' type='string'>
+  The label that will appear on the listitem. If this is left out, no text appears.
+</attr>
+<attr name='selected' type='boolean'>
+  Indicates whether the listitem is selected or not. This property is read  only. To change the selection, set either the selectedIndex or selectedItem  property of the containing listbox.
+</attr>
+<attr name='type' type='string'>
+  You can make an item in a listbox a checkbox by setting this attribute to  the value 'checkbox'.
+</attr>
+<attr name='value' type='string'>
+  A value associated with the listitem. You may use it in a script for your own  purposes.
+</attr>
+<class name='listitem-iconic'>
+  Use this class to have an image appear on the listitem. Specify the image  using the image attribute.
+</class>
+<prop name='accessKey'/>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the listitem.
+</prop>
+<prop name='checked' type='boolean'>
+  For checkbox type listitems, indicates whether the listitem is checked or  not. You can change the checked property to change the state of the  listitem. A CheckboxStateChange event will be sent to the listitem when it  is changed either via the checked property or changed by the user.
+</prop>
+<prop name='control' type='listbox element'>
+  A reference to the listitem's containing listbox.
+</prop>
+<prop name='crop'/>
+<prop name='current'/>
+<prop name='disabled'/>
+<prop name='image'/>
+<prop name='label'/>
+<prop name='selected'/>
+<prop name='value'/>
+</element>

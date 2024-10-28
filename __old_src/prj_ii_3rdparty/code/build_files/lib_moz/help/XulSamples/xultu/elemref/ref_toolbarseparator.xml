@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='toolbarseparator'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_toolbarseparator.html</reference>
+  Creates a separator between a group of toolbar buttons. It is functionally equivalent  to a normal separator but some themes may apply a different appearance.  
+
+<implements>nsIAccessibleProvider</implements>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the toolbarseparator.
+</prop>
+</element>

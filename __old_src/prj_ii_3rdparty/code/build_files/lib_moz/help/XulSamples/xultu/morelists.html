@@ -1,0 +1,430 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="grids.html"> 
+ <link rel="next" href="trees.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - More Listbox Features</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 6.2 - More Listbox Features 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+  <li><a href="xulc4-5.html">List of major changes</a> to XUL in Mozilla 
+between various versions.</li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI><A HREF="intro.html">Introduction</A></LI>
+    <LI><A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI><A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI><A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI><A HREF="window.html">Creating a Window</A></LI>
+    <LI><A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI><A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI><A HREF="inputs.html">Input Controls</A></LI>
+    <LI><A HREF="lists.html">List Controls</A></LI>
+    <LI><A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI><A HREF="springs.html">Using Spacers</A></LI>
+    <LI><A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI><A HREF="boxes.html">The Box Model</A></LI>
+    <LI><A HREF="boxstyle.html">Window Element Positioning</A></LI>
+    <LI><A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI><A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI><A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Common Elements
+  <OL>
+    <LI><A HREF="progress.html">Progress Meters</A></LI>
+    <LI><A HREF="scroll.html">Scroll Bars</A></LI>
+    <LI><A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI><A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI><A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI><A HREF="toolbar.html">Toolbars</A></LI>
+    <LI><A HREF="cpanels.html">Content Panels</A></LI>
+    <LI><A HREF="splitter.html">Splitters</A></LI>
+    <LI><A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Menus
+  <OL>
+    <LI><A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI><A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI><A HREF="popups.html">Popup Menus</A></LI>
+    <LI><A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Grids, Trees and RDF
+  <OL>
+    <LI><A HREF="grids.html">Grids</A></LI>
+    <LI><SPAN CLASS="currentpage">More Listbox Features</SPAN></LI>
+    <LI><A HREF="trees.html">Trees</A></LI>
+    <LI><A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI><A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI><A HREF="templates.html">Templates</A></LI>
+    <LI><A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI><A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI><A HREF="advrules.html">Advanced Rules</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI><A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI><A HREF="dom.html">Document Object Model</A></LI>
+    <LI><A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI><A HREF="focus.html">Focus and Selection</A></LI>
+    <LI><A HREF="seltree.html">Tree Selection</A></LI>
+    <LI><A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI><A HREF="commands.html">Commands</A></LI>
+    <LI><A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI><A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">XPCOM and XPConnect
+  <OL>
+    <LI><A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI><A HREF="xpcomex.html">XPCOM Examples</A></LI>
+    <LI><A HREF="rdfscript.html">Manipulating RDF Datasources</A></LI>
+    <LI><A HREF="clipboard.html">Using the Clipboard</A></LI>
+    <LI><A HREF="dragdrop.html">Drag and Drop</A></LI>
+    <LI><A HREF="dragwrap.html">Drag and Drop JavaScript Wrapper</A></LI>
+    <LI><A HREF="dragex.html">Drag and Drop Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI><A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI><A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI><A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI><A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI><A HREF="locale.html">Localization</A></LI>
+    <LI><A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI><A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI><A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI><A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI><A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI><A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI><A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI><A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI><A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI><A HREF="featwin.html">Features of a Window</A></LI>
+    <LI><A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI><A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI><A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI><A HREF="advwiz.html">More Wizards</A></LI>
+    <LI><A HREF="overlay.html">Overlays</A></LI>
+    <LI><A HREF="crosspov.html">Dynamic Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI><A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI><A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI><A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.1 - Grids"
+     href="grids.html">Previous</a>
+
+
+  <a class="nextlink" title="6.3 - Trees"
+     href="trees.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>More Listbox Features</h2>
+
+<P>
+The listbox element was described in an <A HREF="lists.html">earlier section</A>.
+It has a number of additional features that are described below.
+</P>
+
+<H3>Multi-Column List Boxes</H3>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_listbox.html">listbox</A> element is used to create a list of items
+from which the user can select one or more items from. It is internally created
+in Mozilla using a grid. It simply uses a set of custom tags and adds code to
+handle selection automatically. You might use it when you need a grid with
+selectable rows.
+</P>
+
+<P>
+Because it is a grid, it supports multiple columns. Each cell may have arbitrary
+content within it, although usually only text is used. In a listbox, the content
+always goes in the rows, unlike a grid where the content may be placed either
+in the rows or the columns. The syntax is similar but different tags are used.
+The following table lists the equivalent tags in a listbox:
+</P>
+
+<TABLE ALIGN="CENTER" BORDER="1">
+<TR>
+  <TD>Description</TD><TD>Tag in a Grid</TD><TD>Tag in a Listbox</TD>
+</TR>
+<TR>
+  <TD>Outer element</TD><TD>grid</TD><TD>listbox</TD>
+</TR>
+<TR>
+  <TD>A group of columns</TD><TD>columns</TD><TD>listcols</TD>
+</TR>
+<TR>
+  <TD>A single column</TD><TD>column</TD><TD>listcol</TD>
+</TR>
+<TR>
+  <TD>A group of rows</TD><TD>rows</TD><TD>( no equivalent )</TD>
+</TR>
+<TR>
+  <TD>A single row</TD><TD>row</TD><TD>listitem</TD>
+</TR>
+<TR>
+  <TD>A single cell</TD><TD>( no equivalent )</TD><TD>listcell</TD>
+</TR>
+</TABLE>
+
+<P>
+List boxes have no equivalent of the grid's <A CLASS="tag" HREF="elemref/ref_rows.html">rows</A>
+element. Actually, there is an equivalent, but it is created automatically
+and placed in the list box for you. It is also hidden so you don't even
+need to know it is there.
+</P>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_listcell.html">listcell</A> element may be used for each cell in the
+grid. To specify the text content of a cell, place a <SPAN CLASS="attrib">label</SPAN>
+attribute on a <A CLASS="tag" HREF="elemref/ref_listcell.html">listcell</A>. For the simple case where
+there is only one column, you may also place the <SPAN CLASS="attrib">label</SPAN>
+attributes directly on the <A CLASS="tag" HREF="elemref/ref_listitem.html">listitem</A> elements and leave
+the <A CLASS="tag" HREF="elemref/ref_listcell.html">listcell</A> elements out entirely.
+</P>
+
+<P>
+When the user selects an item, the entire row is selected. You cannot have a single
+cell selected.
+</P>
+
+<P>
+The following example is of a listbox with two columns and three rows:
+</P>
+
+
+Example 6.2.1:
+<A HREF='examples/ex_morelists_1.xul.txt'>Source</A>
+<A HREF="examples/ex_morelists_1.xul" ONCLICK="window.open('examples/ex_morelists_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;listbox&gt;
+  &lt;listcols&gt;
+    &lt;listcol flex="1"/&gt;
+    &lt;listcol flex="2"/&gt;
+  &lt;/listcols&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="George"/&gt;
+    &lt;listcell label="House Painter"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen"/&gt;
+    &lt;listcell label="Candle Maker"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger"/&gt;
+    &lt;listcell label="Swashbuckler"/&gt;
+  &lt;/listitem&gt;
+&lt;/listbox&gt;</PRE></DIV>
+
+
+
+<P>
+This list box has two columns, the second one being twice as flexible as the first
+one. If you shrink the size horizontally, the labels on the cells will crop
+themselves automatically. As with other elements, you can use the
+<SPAN CLASS="attrib">crop</SPAN> attribute on the cells or items to control the
+cropping.
+</P>
+
+<H3>Header Rows</H3>
+
+<P>
+List boxes also allow a special header row to be used. This is much like a regular
+row except that it is displayed differently. You would use this to create
+column headers. Two new elements are used.
+</P>
+
+<P>
+<IMG SRC="images/morelists1.jpg" ALIGN=RIGHT ALT="" WIDTH=216 HEIGHT=103>
+The <A CLASS="tag" HREF="elemref/ref_listhead.html">listhead</A> element is used for the header rows, just
+as the <A CLASS="tag" HREF="elemref/ref_listitem.html">listitem</A> element is used for regular rows. The
+header row is not a normal row however, so using a script to get the first row
+in the list box will skip the header row.
+</P>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_listheader.html">listheader</A> element is used for each cell in the
+header row. Use the <SPAN CLASS="attrib">label</SPAN> to set the label for
+the header cell.
+</P>
+
+<P>
+Here is the earlier example with a header row:
+</P>
+
+
+Example 6.2.2:
+<A HREF='examples/ex_morelists_2.xul.txt'>Source</A>
+<A HREF="examples/ex_morelists_2.xul" ONCLICK="window.open('examples/ex_morelists_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;listbox&gt;
+  &lt;listhead&gt;
+    &lt;listheader label="Name"/&gt;
+    &lt;listheader label="Occupation"/&gt;
+  &lt;/listhead&gt;
+
+  &lt;listcols&gt;
+    &lt;listcol flex="1"/&gt;
+    &lt;listcol flex="2"/&gt;
+  &lt;/listcols&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="George"/&gt;
+    &lt;listcell label="House Painter"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen"/&gt;
+    &lt;listcell label="Candle Maker"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger"/&gt;
+    &lt;listcell label="Swashbuckler"/&gt;
+  &lt;/listitem&gt;
+&lt;/listbox&gt;</PRE></DIV>
+
+
+
+<HR>
+<P>
+<A HREF="trees.html">(Next)</A>
+Next, we'll look at how to create trees.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_morelists_1.xul.txt'>6.2.1</A>
+  <A HREF='examples/ex_morelists_2.xul.txt'>6.2.2</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.1 - Grids"
+     href="grids.html">Previous</a>
+
+
+  <a class="nextlink" title="6.3 - Trees"
+     href="trees.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,696 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="intrordf.html"> 
+ <link rel="next" href="treetempl.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Templates</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 9.2 - Templates 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <SPAN CLASS="currentpage">Templates</SPAN></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="9.1 - Introduction to RDF"
+     href="intrordf.html">Previous</a>
+
+
+  <a class="nextlink" title="9.3 - Trees and Templates"
+     href="treetempl.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Templates</h2>
+
+<P>
+In this section, we'll find out how to populate elements with data.
+</P>
+
+<H3>Populating Elements</H3>
+
+<P>
+XUL provides a method in which we create elements from data supplied by RDF,
+either from an RDF file or from an internal datasource. Numerous datasources
+are provided with Mozilla such as bookmarks, history and mail messages. More
+details on these will be provided in the next section.
+</P>
+
+<P>
+Usually, elements such as treeitems and menuitems will be populated with data.
+However, you can use other elements if you want although they are more useful
+for specialized cases. Nevertheless, we'll start with these other elements
+because trees and menus require more code.
+</P>
+
+<P>
+To allow the creation of elements based on RDF data, you need to provide a
+simple template which will be duplicated for each element that is created.
+Essentially, you provide only the first element and the remaining elements
+are constructed based on the first one.
+</P>
+
+<P>
+The template is created using the <A CLASS="tag" HREF="elemref/ref_template.html">template</A> element.
+Inside it, you can place the elements that you want to use for each constructed
+element. The <A CLASS="tag" HREF="elemref/ref_template.html">template</A> element should be placed inside
+the container that will contain the constructed elements. For example, if you
+are using a tree, you should place the <A CLASS="tag" HREF="elemref/ref_template.html">template</A> element
+inside a <A CLASS="tag" HREF="elemref/ref_tree.html">tree</A> element.
+</P>
+
+<P>
+This is better explained with an example. Let's take a simple example where we
+want to create a button for each top-level bookmark. Mozilla provides a
+bookmarks datasource so it can be used to get the data. This example will only get
+the top-level bookmarks (or bookmark folders) as we're going to create buttons.
+For child bookmarks, we would need to use an element that displays a hierarchy
+such as a tree or menu.
+</P>
+
+<DIV CLASS="note">
+This example and any others that reference internal RDF datasources will
+only work if you load them from a chrome URL. For security reasons, Mozilla
+doesn't allow access to them from other sources.
+</DIV>
+
+<P>
+To view this example, you will need to create a chrome package and load the file
+from there. You can then enter the chrome URL into the browser URL field.
+</P>
+
+
+Example 9.2.1:
+<A HREF='examples/ex_templates_1.xul.txt'>Source</A>
+<DIV CLASS="examplec"><PRE>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/templates1.jpg" ALIGN="right" ALT="" WIDTH=107 HEIGHT=166>
+Here, a vertical box has been created that will contain a column of buttons, one
+for each top-level bookmark. You can see that the <A CLASS="tag" HREF="elemref/ref_template.html">template</A>
+contains a single <A CLASS="tag" HREF="elemref/ref_button.html">button</A>. This single button is used
+as a basis for all the buttons that need to be created. You can see in the image
+that the set of buttons has been created, one for each bookmark.
+</P>
+
+<P> 
+Try adding a bookmark in the browser while you have the example window open.
+You'll notice that the buttons in the example get updated instantly. (You may have
+to focus the window for it to change.)
+</P>
+
+<P>
+The template itself is placed inside a vertical box. The box has two special
+attributes that allow it to be used for templates, which are used to specify
+where the data comes from. The first attribute on the box is the
+<SPAN CLASS="attrib">datasources</SPAN> attribute. This is used to declare
+what RDF datasource will be providing the data to create the elements. In this
+case, <SPAN CLASS="aval">rdf:bookmarks</SPAN> is used. You can probably guess
+that this means to use the bookmarks datasource. This datasource is provided
+by Mozilla. To use your own datasource, specify the URL of an RDF file for
+the <SPAN CLASS="attrib">datasources</SPAN> attribute, as indicated in the
+example below:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;box datasources="chrome://zoo/content/animals.rdf"
+     ref="http://www.some-fictitious-zoo.com/all-animals"></PRE></DIV>
+
+
+
+<P>
+You can even specify multiple datasources at a time by separating them with
+a space in the attribute value. This can be used to display data from
+multiple sources.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">ref</SPAN> attribute indicates where in the datasource
+you would like to retrieve data from. In the case of the bookmarks, the value
+<SPAN CLASS="aval">NC:BookmarksRoot</SPAN> is used to indicate the root of the
+bookmarks hierarchy. Other values that you can use will depend on the datasource
+you are using. If you are using your own RDF file as a datasource, the value will
+correspond to the value of an <SPAN CLASS="attrib">about</SPAN> attribute on
+an RDF <SPAN CLASS=" tag">Bag</SPAN>, <SPAN CLASS=" tag">Seq</SPAN> or
+<SPAN CLASS=" tag">Alt</SPAN> element.
+</P>
+
+<P>
+By adding these two attributes to the box above, it allows the generation of
+elements using the template. However, the elements inside the template need
+to be declared differently. You may notice in the example above that the
+<A CLASS="tag" HREF="elemref/ref_button.html">button</A> has a
+<SPAN CLASS="attrib">uri</SPAN> attribute and an unusual value for the
+<SPAN CLASS="attrib">label</SPAN> attribute.
+</P>
+
+<P>
+An attribute value inside the template that begins with 'rdf:' indicates that
+the value should be taken from the datasource. In the example earlier, this is the
+case for the <SPAN CLASS="attrib">label</SPAN> attribute. The remainder of the
+value refers to the name property is the datasource. It is constructed by taking
+the namespace URL used by the datasource and appending the property name. If you
+don't understand this, try re-reading the last part of the previous section. It
+explains how resources in RDF can be referred to. Here, we only use the name of
+the bookmark but numerous other fields are available.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">label</SPAN> of the buttons is set to this special URI
+because we want the labels on the buttons to be set to the names of the bookmarks.
+We could have put a URI in any of the attributes of the
+<A CLASS="tag" HREF="elemref/ref_button.html">button</A>, or any other element. The values of these
+attributes are replaced with data supplied by the datasource which, in this case,
+is the bookmarks. So we end up with the labels on the buttons set to the names of the
+bookmarks.
+</P>
+
+<P>
+The example below shows how we might set other attributes of a button using a datasource.
+Of course, this assumes that the datasource supplies the appropriate resources. If a
+particular one is not found, the value of the attribute will be set to an empty string.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;button class="rdf:http://www.example.com/rdf#class"
+        uri="rdf:*"
+        label="rdf:http://www.example.com/rdf#name"/&gt;
+        crop="rdf:http://www.example.com/rdf#crop"/&gt;</PRE></DIV>
+
+
+
+<P>
+As you can see, you can dynamically generate lists of elements with the attributes
+provided by a separate datasource.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">uri</SPAN> attribute is used to specify the element where
+content generation will begin. Content earlier will only be generated once whereas
+content inside will be generated for each resource. We'll see more about this when
+we get to creating templates for trees.
+</P>
+
+<P>
+By adding these features to the container the template is in, which in this case is
+a box, and to the elements inside the template, we can generate various interesting
+lists of content from external data. We can of course put more than one element
+inside a template and add the special RDF references to the attributes on any of
+the elements. The example below demonstrates this.
+</P>
+
+
+Example 9.2.2:
+<A HREF='examples/ex_templates_2.xul.txt'>Source</A>
+<DIV CLASS="examplec"><PRE>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;vbox uri="rdf:*"&gt;
+      &lt;button label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+      &lt;label value="rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+    &lt;/vbox&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<P>
+This creates a vertical box with a button and a label for each bookmark. The
+button will have the name of the bookmark and the label will have the URL.
+</P>
+
+<P>
+The new elements that are created are functionally no different from ones that
+you put directly in the XUL file. The <SPAN CLASS="attrib">id</SPAN> attribute
+is added to every element created through a template which is set to a value
+which identifies the resource. You can use this to identify the resource.
+</P>
+
+<P>
+You can also specify mutliple resource values in the same attribute by separating
+them with a space, as in the example below. <a href="templateex.html">More
+about resource syntax</A>.
+</P>
+
+
+Example 9.2.3:
+<A HREF='examples/ex_templates_3.xul.txt'>Source</A>
+<DIV CLASS="examplec"><PRE>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot"
+     flex="1"&gt;
+  &lt;template&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<H3>How Templates are Built</H3>
+
+<P>
+When an element has a <SPAN CLASS="attrib">datasources</SPAN> attribute, it
+indicates that the element is expected to be built from a template. Note that it
+isn't the <A CLASS="tag" HREF="elemref/ref_template.html">template</A> tag that determines whether content
+is built, it is the <SPAN CLASS="attrib">datasources</SPAN> attribute. When this
+attribute is present, an object called a Builder is added to the element. It is
+this object that is responsible for building the content from the template. In
+JavaScript you can access the builder object with the
+<SPAN CLASS="attrib">builder</SPAN> property, although usually you would only need
+to do this to have the builder regenerate the content in situations where it is
+not done automatically.
+</P>
+
+<P>
+There are two different types of builders. The first is a content builder and is
+used in most situations, and the other is a tree builder which is used only for
+trees.
+</P>
+
+<P>
+The content builder takes the content inside the <A CLASS="tag" HREF="elemref/ref_template.html">template</A>
+element and duplicates it for each row. For instance, if the user had ten
+bookmarks in the example above, ten <A CLASS="tag" HREF="elemref/ref_label.html">label</A> elements would
+be created and added as children of the <A CLASS="tag" HREF="elemref/ref_vbox.html">vbox</A> element. If
+you were to use DOM functions to traverse the tree, you will find these elements
+there and can query their properties. These elements get displayed, but the
+<A CLASS="tag" HREF="elemref/ref_template.html">template</A> itself is not displayed, although it still
+exists the the document tree. In addition, the <SPAN CLASS="attrib">id</SPAN> of
+each of the labels will be set to the RDF resource for that row.
+</P>
+
+<P>
+The content builder always starts at the place where uri="rdf:*" is specfied. If
+the <SPAN CLASS="attrib">uri</SPAN> attribute is placed on an element lower in
+the element tree, the elements outside are only created once. In the example below,
+one <A CLASS="tag" HREF="elemref/ref_hbox.html">hbox</A> will be created and it will be filled with
+a label for each item.
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+&lt;template&gt;
+  &lt;hbox&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/hbox&gt;
+&lt;/template&gt;</PRE></DIV>
+
+
+
+<P>
+If there is other content inside the element with the
+<SPAN CLASS="attrib">datasources</SPAN> attribute but outside the template, that
+content will also appear. This way, you can mix static content and dynamic
+content from a template.
+</P>
+
+<P>
+The tree builder, on the other hand, doesn't generate the DOM elements for the
+rows. Instead, it gets the data directly from the RDF datasource whenever it needs
+it. Since trees are often expected to display thousands of rows of data, this is
+much more efficient. Creating an element for every cell would be too costly.
+However, the tradeoff is that trees may only display text, and, since no elements
+are created, you can't use CSS properties to style tree cells in the same way.
+</P>
+
+<P>
+The tree builder is only used for trees. Other elements use only the content
+builder. This isn't a problem though, since other elements such as menus wouldn't
+be expected to display too many items. It's also possible to use the content
+builder for trees as well, and a <A CLASS="tag" HREF="elemref/ref_treeitem.html">treeitem</A> element and
+related elements will be created for each row.
+</P>
+
+<H3>Rules</H3>
+
+<P>
+In the image of the earlier example, you may have noticed that the third button
+is simply a button with hyphens on it. This is a separator in the bookmark list.
+In the way that we have been using it, the RDF bookmarks datasource supplies the
+separators as if they were just regular bookmarks. What we would really like to
+do is add a small amount of spacing instead of a button for separator resources.
+That means that we want to have two different types of content be created, one
+type for regular bookmarks and a second type for separators.
+</P>
+
+<P>
+We can do this by using the <A CLASS="tag" HREF="elemref/ref_rule.html">rule</A> element. We define a
+rule for each variation of elements that we want to have created. In our case,
+we would need a rule for bookmarks and a rule for separators. Attributes placed
+on the <A CLASS="tag" HREF="elemref/ref_rule.html">rule</A> element determine which rules apply to
+which RDF resource.
+</P>
+
+<P>
+When scanning for which rule applies to the data, each <A CLASS="tag" HREF="elemref/ref_rule.html">rule</A>
+element is checked in sequence for a match. That means that the order in which you
+define rules is important. Earlier rules will override later rules.
+</P>
+
+<P>
+The following example demonstrates the earlier example with two rules:
+</P>
+
+<!-- no header here on example -->
+
+Example 9.2.4:
+<A HREF='examples/ex_templates_4.xul.txt'>Source</A>
+<DIV CLASS="examplec"><PRE>&lt;window
+  id="example-window"
+  title="Bookmarks List"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+ &lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+   &lt;template&gt;
+
+    &lt;rule rdf:type="http://home.netscape.com/NC-rdf#BookmarkSeparator"&gt;
+     &lt;spacer uri="rdf:*" height="16"/&gt;
+    &lt;/rule&gt;
+
+    &lt;rule&gt;
+      &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+    &lt;/rule&gt;
+  
+  &lt;/template&gt;
+ &lt;/vbox&gt;
+
+&lt;/window&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/templates2.jpg" ALIGN="right" ALT="" WIDTH=107 HEIGHT=154>
+By using two rules, we have allowed the contents of the template to be selectively
+generated. In the first <A CLASS="tag" HREF="elemref/ref_rule.html">rule</A>, bookmark separators are
+selected, as can be seen by the <SPAN CLASS="attrib">rdf:type</SPAN> attribute.
+The second <A CLASS="tag" HREF="elemref/ref_rule.html">rule</A> does not have any attributes so all data
+matches it.
+</P>
+
+<P>
+All of the attributes placed on the <A CLASS="tag" HREF="elemref/ref_rule.html">rule</A> tag are used as
+match criteria. In this case, the bookmarks datasource supplies a
+<SPAN CLASS="attrib">rdf:type</SPAN> property to distinguish separators. This
+attribute is set to a special value for separators in the RDF bookmarks datasource.
+This is how we can distinguish them from non-separators. You can use a similar
+technique for any attribute that might be on an RDF
+<SPAN CLASS="attrib">Description</SPAN> element.
+</P>
+
+<P>
+The special URL value given in the example above for the first rule is used for
+separators. That means that separators will follow rule one and generate a
+<A CLASS="tag" HREF="elemref/ref_spacer.html">spacer</A> element, which will display a 16 pixel gap.
+Elements that are not separators will not match rule one and will fall through
+to rule two. Rule two does not have any attributes on it. This means that it will
+match all data. This is, of course, what we want to have happen to the rest of the
+data.
+</P>
+
+<P>
+You should also have noticed that because we wanted to get an attribute from the
+RDF namespace (<SPAN CLASS="attrib">rdf:type</SPAN>), we needed to add the
+namespace declaration to the <A CLASS="tag" HREF="elemref/ref_window.html">window</A> tag. If we didn't do
+this, the attribute would be looked for in the XUL namespace. Because it does not
+exist there, the rule will not match. If you use attributes in your own custom
+namespace, you need to add the namespace declaration in order to match them.
+</P>
+
+<P>
+You should be able to guess what would happen if the second rule was removed. The
+result would be a single spacer displayed but no bookmarks because they don't match
+any of the rules.
+</P>
+
+<P>
+Put simply, a rule matches if all of the attributes placed on the
+<A CLASS="tag" HREF="elemref/ref_rule.html">rule</A> element match the corresponding attributes
+on the RDF resource. In the case of an RDF file, the resources would be the
+<SPAN CLASS=" tag">Description</SPAN> elements.
+</P>
+
+<P>
+There are some small exceptions however. You cannot match based on the
+attributes <SPAN CLASS="attrib">id</SPAN>, <SPAN CLASS="attrib">rdf:property</SPAN>
+or <SPAN CLASS="attrib">rdf:instanceOf</SPAN>. Because you can just use your own
+attributes with your own namespace, it probably doesn't really matter anyway.
+</P>
+
+<P>
+Note that a template with no rules in it, as in the first example, is really
+equivalent functionally to a template with a single rule with no attributes.
+</P>
+
+<HR>   
+<P>
+<A HREF="treetempl.html">(Next)</A>
+Next, we'll look at using templates with trees.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_templates_1.xul.txt'>9.2.1</A>
+  <A HREF='examples/ex_templates_2.xul.txt'>9.2.2</A>
+  <A HREF='examples/ex_templates_3.xul.txt'>9.2.3</A>
+  <A HREF='examples/ex_templates_4.xul.txt'>9.2.4</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="9.1 - Introduction to RDF"
+     href="intrordf.html">Previous</a>
+
+
+  <a class="nextlink" title="9.3 - Trees and Templates"
+     href="treetempl.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

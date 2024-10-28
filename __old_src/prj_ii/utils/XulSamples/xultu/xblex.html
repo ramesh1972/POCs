@@ -1,0 +1,573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="xblinherit.html"> 
+ <link rel="next" href="featwin.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - XBL Example</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 11.8 - XBL Example 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <SPAN CLASS="currentpage">XBL Example</SPAN></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.7 - XBL Inheritance"
+     href="xblinherit.html">Previous</a>
+
+
+  <a class="nextlink" title="12.1 - Features of a Window"
+     href="featwin.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>XBL Example</h2>
+
+<P>
+This section will describe an example XBL element.
+</P>
+
+<H3>A Slideshow Element</H3>
+
+<P>
+Let's construct a full example of an XBL element. This will be a widget that
+stores a deck of objects, each displayed one at a time. Navigation buttons
+along the bottom will allow the user to cycle through the objects while a text
+widget between the buttons will display the current page. You could put
+anything within the pages, however, this widget might be useful for a set of
+images. We'll call this a slideshow element.
+</P>
+
+<P>
+First, let's determine what elements need to go in the XBL content. Because we
+want page flipping, a <A CLASS="tag" HREF="elemref/ref_deck.html">deck</A> element would be the most
+suitable to hold the page content. The content of the pages will be specified
+in the XUL file, not in XBL, but we'll need to add it inside the deck. The
+<A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> tag will need to be used. Along the bottom,
+we'll need a button to go the previous page, a text widget to display the
+current page number, and a button to go to the next page. 
+</P>
+
+
+Example 11.8.1:
+<A HREF='examples/ex_xblex_1.xml.txt'>Source</A>
+<DIV CLASS="example"><PRE>&lt;binding id="slideshow"&gt;
+  &lt;content&gt;
+    &lt;xul:vbox flex="1"&gt;
+      &lt;xul:deck xbl:inherits="selectedIndex" selectedIndex="0" flex="1"&gt;
+        &lt;children/&gt;
+      &lt;/xul:deck&gt;
+      &lt;xul:hbox&gt;
+        &lt;xul:button xbl:inherits="label=previoustext"/&gt;
+        &lt;xul:label flex="1"/&gt;
+        &lt;xul:button xbl:inherits="label=nexttext"/&gt;
+      &lt;/xul:hbox&gt;
+    &lt;/xul:vbox&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+This binding creates the slideshow structure that we want. The
+<SPAN CLASS="attrib">flex</SPAN> attribute has been added to a number of
+elements so that it stretches in the right way. The
+<SPAN CLASS="attrib">label</SPAN> attributes on the two buttons inherit
+their values from the bound element. Here, they inherit from two custom
+attributes, <SPAN CLASS="attrib">previoustext</SPAN> and
+<SPAN CLASS="attrib">nexttext</SPAN>. This makes it easy to change the
+labels on the buttons. The children of the element that the XBL is bound
+to will be placed inside the <A CLASS="tag" HREF="elemref/ref_deck.html">deck</A>. The
+<SPAN CLASS="attrib">selectedIndex</SPAN> is inherited by the deck, so we
+may set the initial page in the XUL.
+</P>
+
+<P>
+The following XUL file produces the result in the image.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;box class="slideshow" previoustext="Previous" nexttext="Next" flex="1"&gt;
+  &lt;button label="Button 1"/&gt;
+  &lt;checkbox label="Checkbox 2"/&gt;
+  &lt;textbox/&gt;
+&lt;/box&gt;</PRE></DIV>
+
+
+
+<P>
+The style sheet used here is:
+
+
+<DIV CLASS="sample"><PRE>.slideshow {
+  -moz-binding: url("slideshow.xml#slideshow");
+}</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/xblex1.jpg" ALIGN="right" ALT="" WIDTH=195 HEIGHT=82>
+The first button, 'Button 1'  has been used as the first page of the deck.
+The <A CLASS="tag" HREF="elemref/ref_label.html">label</A> widget has not appeared as no
+<SPAN CLASS="attrib">value</SPAN> has been specified for it. We could set a
+value, but instead it will calculated later.
+</P>
+
+<P>
+Next, a property that holds the current page will be added. When getting this
+custom property, it will need to retrieve the value of the
+<SPAN CLASS="attrib">selectedIndex</SPAN> attribute of the deck, which holds the
+number of the currently displayed page. Similarly, when setting this property,
+it will need to change the <SPAN CLASS="attrib">selectedIndex</SPAN> attribute
+of the deck. In addition, the text widget will need to be updated to display
+which page is the current one.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;property name="page"
+    onget="return parseInt(document.getAnonymousNodes(this)[0].childNodes[0].getAttribute('selectedIndex'));"
+    onset="return this.setPage(val);"/&gt;</PRE></DIV>
+
+
+
+<P>
+The 'page' property gets its value by looking at the first element of the
+anonymous array. This returns the vertical box, so to get the deck, we need
+to get the first child node of the box. The anonymous array isn't used as the
+deck is not anonymous from the box. Finally, the value of the
+<SPAN CLASS="attrib">selectedIndex</SPAN> attribute is retrieved. To set the
+page, a method 'setPage' is called which will be defined later.
+</P>
+
+<P>
+An <SPAN CLASS="attrib">oncommand</SPAN> handler will need to be added to the
+Previous and Next buttons so that the page is changed when the buttons are
+pressed. Conveniently, we can change the page using the custom 'page'
+property that was just added:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;xul:button xbl:inherits="label=previoustext"
+               oncommand="parentNode.parentNode.parentNode.page--;"/&gt;
+&lt;xul:description flex="1"/&gt;
+&lt;xul:button xbl:inherits="label=nexttext"
+               oncommand="parentNode.parentNode.parentNode.page++;"/&gt;</PRE></DIV>
+
+
+
+<P>
+Because the 'page' property is only on the outer XUL element, we need
+to to use the parentNode property to get to it. The first parentNode
+returns the parent of the button which is the horizontal box, the second
+its parent, the vertical box, and finally, its parent which is the outer
+box. The 'page' property is incremented or decremented. This will call
+the <SPAN CLASS="attrib">onget</SPAN> script to get the value, increment
+or decrement the value by one, and then call the
+<SPAN CLASS="attrib">onset</SPAN> handler to set the value.
+</P>
+
+<P>
+Now let's define the 'setPage' method. It will take one parameter,
+the page number to set the page to. It will need to make sure the
+page is not out of range and then modify the deck's
+<SPAN CLASS="attrib">selectedIndex</SPAN> attribute and the text widget's
+<SPAN CLASS="attrib">label</SPAN> attribute.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;method name="setPage"&gt;
+  &lt;parameter name="newidx"/&gt;
+  &lt;body&gt;
+    &lt;![CDATA[
+      var thedeck=document.getAnonymousNodes(this)[0].childNodes[0];
+      var totalpages=this.childNodes.length;  
+
+      if (newidx<0) return 0;
+      if (newidx>=totalpages) return totalpages;
+      thedeck.setAttribute("selectedIndex",newidx);
+      document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1]
+              .setAttribute("value",(newidx+1)+" of "+totalpages);
+      return newidx;
+    ]]&gt;
+  &lt;/body&gt;
+&lt;/method&gt;</PRE></DIV>
+
+
+
+<P>
+This function is called 'setPage' and takes one parameter 'newidx'. The
+body of the method has been enclosed inside '&lt;![CDATA[' and ']]&gt'.
+This is the general mechanism in all XML files that can be used to
+escape all of the text inside it. That way, you don't have to escape
+every less-than and greater-than sign inside it.
+</P>
+
+<P>
+Let's break down the code piece by piece.
+</P>
+
+<UL>
+  <LI><PRE>var thedeck=document.getAnonymousNodes(this)[0].childNodes[0];</PRE>
+      Get the first element of the anonymous content array, which will be the
+      vertical box, then get its first child, which will be the deck element.
+  </LI>
+  <LI><PRE>var totalpages=this.childNodes.length;</PRE>
+      Get the number of children that the bound box has. This will give the
+      total number of pages that there are.
+  </LI>
+  <LI><PRE>if (newidx<0) return 0;</PRE>
+      If the new index is before the first page, don't change the page and
+      return 0. The page should not change to a value earlier than the first
+      page.
+  </LI>
+  <LI><PRE>if (newidx>=totalpages) return totalpages;</PRE>
+      If the new index is after the last page, don't change the page and
+      return the last page's index. The page should not change to one after the
+      last page.
+  </LI>
+  <LI><PRE>thedeck.setAttribute("selectedIndex",newidx);</PRE>
+      Change the <SPAN CLASS="attrib">selectedIndex</SPAN> attribute on the deck.
+      This causes the requested page to be displayed.
+  </LI>
+  <LI><PRE>document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1].setAttribute("value",(newidx+1)+" of "+totalpages);</PRE>
+      This line modifies the label element so that it displays the current page
+      index. The label element can be retrieved by getting the first element of
+      anonymous content (the vertical box), the second child of that label element
+      (the horizontal box), and then the second element of that box. The
+      <SPAN CLASS="attrib">value</SPAN> attribute is changed to read '1 of 3' or
+      something similar. Note that one is added to the index because indicies
+      start at 0.
+  </LI>
+</UL>
+
+<P>
+We will also need a constructor to initialize the label element so that it
+displays correctly when the slideshow is first displayed. We use similar
+code as to the method above to set the page number. The reference to
+'this.page' will call the onget script of the page property, which in turn
+will retrieve the initial page from the <SPAN CLASS="attrib">selectedIndex</SPAN>
+attribute.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;constructor&gt;
+  var totalpages=this.childNodes.length;
+  document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1]
+          .setAttribute("value",(this.page+1)+" of "+totalpages);
+&lt;/constructor&gt;</PRE></DIV>
+
+
+
+<P>
+We can add some additional features as well. Some keyboard shortcuts could
+be used for the Previous and Next buttons, (say backspace and the Enter key).
+First and Last buttons could be added to go to the first and last pages. The
+label element could be changed to a field where the user could enter the page
+to go to, or a popup could be added to allow selection of the page from a menu.
+We could also add a border around the deck with CSS to make it look a bit
+nicer.
+</P>
+
+<P>
+The final code is as follows:
+</P>
+
+
+Example 11.8.2:
+<A HREF='examples/ex_xblex_2.xml.txt'>Source</A>
+<DIV CLASS="example"><PRE>&lt;binding id="slideshow"&gt;
+  &lt;content&gt;
+    &lt;xul:vbox flex="1"&gt;
+      &lt;xul:deck xbl:inherits="selectedIndex" selectedIndex="0" flex="1"&gt;
+        &lt;children/&gt;
+      &lt;/xul:deck&gt;
+      &lt;xul:hbox&gt;
+        &lt;xul:button xbl:inherits="label=previoustext"
+                    oncommand="parentNode.parentNode.parentNode.page--;"/&gt;
+        &lt;xul:description flex="1"/&gt;
+        &lt;xul:button xbl:inherits="label=nexttext"
+                    oncommand="parentNode.parentNode.parentNode.page++;"/&gt;
+      &lt;/xul:hbox&gt;
+    &lt;/xul:vbox&gt;
+  &lt;/content&gt;
+
+  &lt;implementation&gt;
+
+    &lt;constructor&gt;
+      var totalpages=this.childNodes.length;
+      document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1]
+              .setAttribute("value",(this.page+1)+" of "+totalpages);
+    &lt;/constructor&gt;
+
+    &lt;property name="page"
+          onget="return parseInt(document.getAnonymousNodes(this)[0].childNodes[0].getAttribute('selectedIndex'));"
+          onset="return this.setPage(val);"/&gt;
+
+    &lt;method name="setPage"&gt;
+      &lt;parameter name="newidx"/&gt;
+      &lt;body&gt;
+        &lt;![CDATA[
+          var thedeck=document.getAnonymousNodes(this)[0].childNodes[0];
+          var totalpages=this.childNodes.length;  
+
+          if (newidx<0) return 0;
+          if (newidx>=totalpages) return totalpages;
+          thedeck.setAttribute("selectedIndex",newidx);
+          document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1]
+                  .setAttribute("value",(newidx+1)+" of "+totalpages);
+          return newidx;
+        ]]&gt;
+      &lt;/body&gt;
+    &lt;/method&gt;
+  &lt;/implementation&gt;
+
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<HR>
+<P>
+<A HREF="featwin.html">(Next)</A>
+Next, we'll see some additional features of a window.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_xblex_1.xml.txt'>11.8.1</A>
+  <A HREF='examples/ex_xblex_2.xml.txt'>11.8.2</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.7 - XBL Inheritance"
+     href="xblinherit.html">Previous</a>
+
+
+  <a class="nextlink" title="12.1 - Features of a Window"
+     href="featwin.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

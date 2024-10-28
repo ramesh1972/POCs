@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+
+<element name='rdf:files'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/datasrc.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_rdffiles.html</reference>
+  The files datasource holds a tree of the user's filesystem. Use NC:FilesRoot in  a ref attribute to grab the file list from the root. Alternatively, you can use  a file URL to specify a particular directory.  
+
+<attr name=' Content-Length (http://home.netscape.com/NC-rdf#Content-Length) '>
+  
+  The length of the file.
+</attr>
+<attr name=' LastModifiedDate (http://home.netscape.com/WEB-rdf#LastModifiedDate) '>
+  
+  The date that URL was last modified.
+</attr>
+<attr name=' Name (http://home.netscape.com/NC-rdf#Name) '>
+  
+  The name of the resource. This will be the title of the page.
+</attr>
+<attr name=' URL (http://home.netscape.com/NC-rdf#URL) '>
+  
+  The URL for the resource. This will be the URL that is opened when a user double-clicks  on the entry in a tree.
+</attr>
+<attr name=' extension (http://home.netscape.com/NC-rdf#extension) '>
+  
+  The extension of the file, including the period. This property is only available  on platforms that use file extensions.
+</attr>
+</element>

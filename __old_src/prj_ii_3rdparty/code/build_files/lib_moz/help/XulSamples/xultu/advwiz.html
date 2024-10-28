@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="wizard.html"> 
+ <link rel="next" href="overlay.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - More Wizards</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 12.5 - More Wizards 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <SPAN CLASS="currentpage">More Wizards</SPAN></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.4 - Creating a Wizard"
+     href="wizard.html">Previous</a>
+
+
+  <a class="nextlink" title="12.6 - Overlays"
+     href="overlay.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>More Wizards</h2>
+
+<P>
+This section describes some additional features of wizards.
+</P>
+
+<H3>More Complex Navigation</H3>
+
+<P>
+Normally, a wizard displays each <A CLASS="tag" HREF="elemref/ref_wizardpage.html">wizardpage</A> in the
+order that you place them in the XUL file. In some cases however, you may want
+to have different pages of the wizard appear depending on what the user selects
+in earlier pages.
+</P>
+
+<P>
+In this case, place a <SPAN CLASS="attrib">pageid</SPAN> attribute on each of the
+pages. This should be set to an indentifer for each page. Then, to navigate to
+a page, use one of two methods:
+</P>
+
+<OL>
+  <LI>Set the <SPAN CLASS="attrib">next</SPAN> attribute on each page to the
+      page ID of the next page to go to. You can change these attributes as
+      needed to navigate to different pages.
+  </LI>
+  <LI>Call the wizard's goTo method. It takes one argument, the page ID of a
+      page to go to. You might call this method in the
+      <SPAN CLASS="attrib">onpageadvanced</SPAN> or
+      <SPAN CLASS="attrib">onwizardnext</SPAN> handlers. Remember to return
+      false in this case, because you have already changed the page yourself.
+      Note that the goTo method, because it causes a page change, will fire
+      the events again, so you'll have to make sure you handle this case.
+   </LI>
+</OL>
+
+<P>
+For example, here are a set of wizard pages (the inner content has been omitted):
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+&lt;wizardpage pageid="type" next="font"&gt;
+&lt;wizardpage pageid="font" next="done"&gt;
+&lt;wizardpage pageid="color" next="done"&gt;
+&lt;wizardpage pageid="done"&gt;</PRE></DIV>
+
+
+
+<P>
+The wizard always starts at the first page, which in this case has the page ID
+<SPAN CLASS="aval">type</SPAN>. The next page is the one with the page ID
+<SPAN CLASS="aval">font</SPAN>, so the wizard will navigate to that page next.
+On the page with the page ID <SPAN CLASS="aval">font</SPAN>, we can see that
+the next page is <SPAN CLASS="aval">done</SPAN>, so that page will be displayed
+afterwards. The page with the page ID <SPAN CLASS="aval">done</SPAN> has no
+<SPAN CLASS="attrib">next</SPAN> attribute, so this will be the last page.
+A script will adjust the <SPAN CLASS="attrib">next</SPAN> attributes as necessary
+to go to the page with the page ID <SPAN CLASS="aval">color</SPAN> when
+needed.
+</P>
+
+<H3>Wizard Functions</H3>
+
+<P>
+The wizard works much like a tabbed panel, except that the tabs are not
+displayed and the user navigates between pages by using the buttons along
+the bottom. Because all of the pages are part of the same file, all of the
+values of the fields on all pages will be remembered. Thus, you do not have
+to load and save information between pages.
+</P>
+
+<P>
+However, you may want to do some validation of each field on each page. For
+this, use the handlers described in the previous section. If a field is invalid,
+you might display an alert. In some cases, it would be more convenient to
+disable the Next button until valid input has been entered.
+</P>
+
+<P>
+The wizard has a property <SPAN CLASS="attrib">canAdvance</SPAN>, which can be
+set to true to indicate that the Next button should be enabled. If set to false,
+the Next button is disabled. You can change the property when invalid or valid data
+has been entered.
+</P>
+
+<P>
+In the following example, the user must enter a secret code into a textbox on
+the first page of the wizard. The function checkCode is called whenever the first
+page is shown as indicated by the <SPAN CLASS="attrib">onpageshow</SPAN>
+attribute. It is also called whenever a key is pressed in the textbox, to determine
+whether the Next button should be enabled again.
+</P>
+
+
+
+Example 12.5.1:
+<A HREF='examples/ex_advwiz_1.xul.txt'>Source</A>
+<DIV CLASS="examplec"><PRE>
+&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="theWizard" title="Secret Code Wizard"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+     &lt;script&gt;
+     function checkCode()
+     {
+       document.getElementById('theWizard').canAdvance=
+         (document.getElementById('secretCode').value == "cabbage");
+     } 
+     &lt;/script&gt;
+
+     &lt;wizardpage onpageshow="checkCode();"&gt;
+       &lt;label value="Enter the secret code:"/&gt;
+       &lt;textbox id="secretCode" onkeyup="checkCode();"/&gt;
+     &lt;/wizardpage&gt;
+
+     &lt;wizardpage&gt;
+       &lt;label value="That is the correct secret code."/&gt;
+     &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;</PRE></DIV>
+
+
+
+<P>
+There is also a corresponding <SPAN CLASS="attrib">canRewind</SPAN>
+property that you can use to enable or disable the Back button. Both
+properties are adjusted automatically as you switch pages. Thus, the Back
+button will be disabled on the first page so you don't have to set it yourself.
+</P>
+
+<P>
+Another useful property of the wizard is <SPAN CLASS="attrib">currentPage</SPAN>,
+which holds a reference to the currently displayed <A CLASS="tag" HREF="elemref/ref_wizardpage.html">wizardpage</A>.
+You can also modify the current page by changing this property. If you do change it,
+the various page change events will still be fired.
+</P>
+
+<HR>
+<P>
+<A HREF="overlay.html">(Next)</A>
+Next, we'll see how to use overlays to handle common content.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_advwiz_1.xul.txt'>12.5.1</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.4 - Creating a Wizard"
+     href="wizard.html">Previous</a>
+
+
+  <a class="nextlink" title="12.6 - Overlays"
+     href="overlay.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

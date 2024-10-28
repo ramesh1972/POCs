@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: common - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSPF6.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\..\COMMON\PUBLIC" /I "..\..\PL\PUBLIC" /I "..\..\PWW\PUBLIC" /I "C:\My3rdParty\CGIPP" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\string" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\nspr" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpcom" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\necko" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\uriloader" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\gfx" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\gfxwin" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\widget" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\windowwatcher" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\layout" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\docshell" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\dom" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webbrwsr" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webshell" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\content" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\htmlparser" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\profdirserviceProvider" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\pref" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpconnect" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xmlextras" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webbrowserpersist" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\view" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\imglib2" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\locale" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\embed_base" /I "C:\My3rdParty\mysqlpp\include" /I "C:\My3rdParty\mysqlpp\mysql\include" /D "_DEBUG" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "_X86_" /D "XP_WIN" /D "XP_WIN32" /U "NS_DEBUG" /FR"Debug/" /Fp"Debug/common.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\MyFiles\Projects\dev\intrainter\common\src\rvJSdb.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSPF6.tmp" 
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSPF7.tmp" with contents
+[
+/nologo /out:"..\..\build\Debug\common.lib" 
+.\Debug\rvDB.obj
+.\Debug\rvFileLogger.obj
+.\Debug\rvHTMLElement.obj
+.\Debug\rvJSdb.obj
+.\Debug\rvMessageList.obj
+.\Debug\rvMessages.obj
+.\Debug\rvOpenURL.obj
+.\Debug\rvXmlDocument.obj
+.\Debug\utils.obj
+\My3rdParty\Cgipp\CGIPP\Debug\CGIPP.lib
+"\My3rdParty\mysqlpp\lib\mysql++.lib"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSPF7.tmp"
+<h3>Output Window</h3>
+Compiling...
+rvJSdb.cpp
+Creating library...
+Creating command line "bscmake.exe /nologo /o"Debug/common.bsc"  .\Debug\rvDB.sbr .\Debug\rvFileLogger.sbr .\Debug\rvHTMLElement.sbr .\Debug\rvJSdb.sbr .\Debug\rvMessageList.sbr .\Debug\rvMessages.sbr .\Debug\rvOpenURL.sbr .\Debug\rvXmlDocument.sbr .\Debug\utils.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+<h3>
+--------------------Configuration: pl - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSPF9.tmp" with contents
+[
+/nologo /out:"..\..\build\Debug\pl.lib" 
+.\Debug\rvDOMEventListener.obj
+.\Debug\rvRuleBase.obj
+.\Debug\rvRuleCreator.obj
+.\Debug\rvRuleProcessor.obj
+.\Debug\rvRuleRenderer.obj
+.\Debug\rvRulesCollection.obj
+.\Debug\rvRulesDefines.obj
+.\Debug\rvRuleSetProcessor.obj
+.\Debug\rvRulesProcessor.obj
+\MyFiles\Projects\dev\intrainter\build\Debug\common.lib
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSPF9.tmp"
+<h3>Output Window</h3>
+Creating library...
+<h3>
+--------------------Configuration: ii_load - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSPFB.tmp" with contents
+[
+user32.lib libmysql.lib mysql++.lib xpcom.lib gkgfx.lib plds4.lib nspr4.lib common.lib profdirserviceprovider_s.lib cgipp.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/ii-load.pdb" /debug /machine:I386 /out:"C:\MyReleases\intrainter\dev\ii-load.exe" /pdbtype:sept /libpath:"..\..\BUILD\DEBUG" /libpath:"C:\My3rdParty\Cgipp\CGIPP\Debug" /libpath:"C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\lib" /libpath:"C:\My3rdParty\mysqlpp\lib" /libpath:"C:\My3rdParty\mysqlpp\mysql\lib" 
+.\Debug\main.obj
+\MyFiles\Projects\dev\intrainter\build\Debug\common.lib
+\MyFiles\Projects\dev\intrainter\build\Debug\pl.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSPFB.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+ii-load.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

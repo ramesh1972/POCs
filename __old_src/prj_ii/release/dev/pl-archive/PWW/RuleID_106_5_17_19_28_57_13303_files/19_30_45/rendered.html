@@ -1,0 +1,545 @@
+<html><head></head>
+<body>
+<script type="text/javascript">
+	bname=document.URL
+	if (bname.indexOf("1bu.com")!=-1)
+	{
+		window.location="http://www.ndtv.com/";
+	}
+	var bandwidth1="broad";
+	var bandwidth1 = new Array("broad","broad","broad","broad","broad","broad","broad","broad")
+	var bandwidth="broad";	
+	var bandwidth = new Array("broad","broad","broad","broad","broad","broad","broad","broad","broad","broad","broad")
+	
+	function PopVid(URL,height,width,catid)
+			{
+				URL=URL+"&band="+bandwidth1[catid];
+				
+				if (bandwidth1[catid]=="broad")
+				{		
+					out = "_N."; // replace this
+					add = "_B."; // with this
+					temp = "" + URL; // temporary holder
+
+					while (temp.indexOf(out)>-1) {
+					pos= temp.indexOf(out);
+					temp = "" + (temp.substring(0, pos) + add + 
+					temp.substring((pos + out.length), temp.length));
+					}
+					URL = temp;
+				}			
+						
+				hWindow = window.open(URL,height+width,"width="+width+",height="+height+",resize=no,resizable=no,scrollbars=yes,menubar=no,status=no");
+				hWindow.focus();
+			}
+
+
+
+
+</script><script>
+    	
+	
+	function PopWindow(URL,height,width)
+	{	
+		hWindow = window.open(URL,height+width,"width="+width+",height="+height+",resize=no,resizable=no,scrollbars=yes,menubar=no,status=no");
+		hWindow.focus();
+	}	
+	function PopUnderWindow(URL,height,width)
+	{	
+		hWindow = window.open(URL,height+width,"width="+width+",height="+height+",resize=no,resizable=no,scrollbars=no,menubar=no,status=no");
+	}	
+
+	function PopTimeLine(template1)
+	{
+		window.open("../template/completetimeline.asp?template1="+template1,"timeline",config="menubar=no,height=400,width=622,scrollbars=yes")
+	}
+</script><script language="Javascript">
+	var IE4 = (document.all && !document.getElementById) ? true : false;
+	var NS4 = (document.layers) ? true : false;
+	var IE5 = (document.all && document.getElementById) ? true : false;
+	var N6 = (document.getElementById && !document.all) ? true : false;
+
+	function frmSubmit()
+	{		
+		if (document.searchbox.searchwhat[1].checked){
+			document.searchbox.action="http://www.google.com/custom";
+			if  (document.searchbox.q.value == "")
+			{
+				alert("The search criterion cannot be empty");
+				document.searchbox.q.focus();
+				return false;
+			}
+		}
+		else
+		{
+			document.searchbox.target="_self"
+			document.searchbox.action="../archives/default.asp";
+			document.searchbox.searchtextfordisplay.value=document.searchbox.q.value;
+			document.searchbox.cof.value="";
+			if  (document.searchbox.searchtextfordisplay.value == "")
+			{
+				alert("The search criterion cannot be empty");
+				document.searchbox.q.focus();
+				return false;
+			}
+			ln = document.searchbox.searchtextfordisplay.value;
+			if  (ln.length < 3)
+			{
+				alert("The search criteria cannot be less than 3 letters");
+				document.searchbox.q.focus();
+				return false;
+			}
+		}	
+		return true;
+	}
+
+	function findPosX(obj)
+	{
+		var curleft = 0;
+		if (obj.offsetParent)
+		{
+			while (obj.offsetParent)
+			{
+				curleft += obj.offsetLeft
+				obj = obj.offsetParent;
+			}
+		}
+		else if (obj.x)
+			curleft += obj.x;
+		return curleft;
+	}
+
+	function findPosY(obj)
+	{
+		var curtop = 0;
+		if (obj.offsetParent)
+		{
+			while (obj.offsetParent)
+			{
+				curtop += obj.offsetTop
+				obj = obj.offsetParent;
+			}
+		}
+		else if (obj.y)
+			curtop += obj.y;
+		return curtop;
+	}
+	
+	function LeftRightLength()
+	{
+	 Hideobj=document.getElementById("FlowBrick");
+	 Hideobj.style.height=10;
+	 maxlength=window.document.body.scrollHeight;
+	 Rightobj=document.getElementById("Rightextra");
+	 //window.status= "ok";
+	 if (Rightobj!=null) 
+		{
+			rightdiv=document.getElementById("RightDiv");
+			objtop=findPosY(rightdiv)+10;
+			Extraheightleft=(maxlength-objtop);
+			if (Extraheightleft>0)
+			{
+				Rightobj.height=15+Extraheightleft;
+			}
+		}
+	 Leftobj=document.getElementById("Leftextra");
+	 if (Leftobj!=null) 
+		 {
+			Extraheight=(maxlength-825); // 800 is the default fixed menu height
+			 if (Extraheight>0)
+			{
+				Leftobj.height=10+Extraheight;
+				//Rightobj.height=5+Extraheight;
+			}
+		}
+	}
+</script><script language="javascript">
+if (IE5 == true)
+	{
+		document.write('<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" onload="javascript:LeftRightLength();">')
+	}
+	else
+	{
+		document.write('<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0">')
+	}
+//	ndtvlogo.gif
+</script><style>
+	Select
+	{	
+		background:#FFFAFA;
+	    BORDER-TOP-WIDTH: 1px;		    
+	    BORDER-LEFT-WIDTH: 1px;
+	    FONT-SIZE: 8pt;
+	    color:#9c0000;		    
+	    BORDER-LEFT-COLOR: #000000;
+	    BORDER-BOTTOM-WIDTH: 1px;
+	    BORDER-BOTTOM-COLOR: #000000;
+	    BORDER-TOP-COLOR: #000000;
+	    FONT-FAMILY: verdana,arial,helvetica,san-serif;
+	    BORDER-RIGHT-WIDTH: 1px;
+	    BORDER-RIGHT-COLOR: #000000
+	}
+	BODY
+	{
+		font-family:verdana;
+		font-size:8pt;
+		color:black;
+	}
+	TD
+	{
+		font-family:verdana;
+		font-size:8pt;
+		color:black;
+	}
+	.leftbar
+	{
+		font-family:verdana;
+		font-size:8pt;
+		color:white;
+		text-decoration:none;
+	}
+	.leftbar:hover
+	{
+		font-family:verdana;
+		font-size:8pt;
+		color:#ffc000;
+		text-decoration:underline;
+	}
+	A.topcap
+	{
+		font-family:verdana;
+		font-size:8pt;
+		color:#414141;
+		text-decoration:none;			
+	}
+	A.topcap:hover
+	{
+		font-family:verdana;
+		font-size:8pt;
+		color:#000000;
+		text-decoration:underline;			
+	}
+	A.lowbar
+	{
+		font-family:verdana;
+		font-size:7.5pt;		
+		color:#076DEC;
+		text-decoration:none;			
+	}
+	A.lowbar:hover
+	{
+		font-family:verdana;
+		font-size:7.5pt;
+		color:#076DEC;
+		text-decoration:underline;			
+	}
+	A.topbar
+	{
+		FONT-WEIGHT: 600;
+		font-family:verdana;
+		font-size:8pt;
+		color:white;
+		text-decoration:none;			
+	}
+	A.topbar:hover
+	{
+		FONT-WEIGHT: 600;
+		font-family:verdana;
+		font-size:8pt;
+		color:white;
+		text-decoration:underline;			
+	}
+	A
+	{
+		font-family:verdana;
+		font-size:8pt;
+		color:#414141;
+		text-decoration:none;			
+	}
+	A:hover
+	{
+		font-family:verdana;
+		font-size:8pt;
+		color:#000000;
+		text-decoration:underline;			
+	}
+TD.Headings
+{
+    BORDER-RIGHT: black 1px groove;
+    BORDER-TOP: black 1px groove;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    BORDER-LEFT: black 1px groove;
+    COLOR: #000000;
+    BORDER-BOTTOM: black 1px groove;
+    FONT-FAMILY: verdana,arial,helvetica,sans-serif;
+    BACKGROUND-COLOR: #eaeaea
+}
+.dark
+{
+    FONT-WEIGHT: bold;
+    BACKGROUND: #999999;
+    COLOR: #000000;
+    FONT-FAMILY: verdana,arial,helvetica,sans-serif;
+    TEXT-ALIGN: center
+}
+.medium
+{
+    BACKGROUND: #d6d6d6;
+    COLOR: #000000;
+    FONT-FAMILY: verdana,arial,helvetica,sans-serif;
+    TEXT-ALIGN: center
+}
+.light
+{
+    BACKGROUND-IMAGE: none;
+    COLOR: #000000;
+    BACKGROUND-REPEAT: repeat;
+    FONT-FAMILY: verdana,arial,helvetica,sans-serif;
+    BACKGROUND-COLOR: #eeeeee;
+    TEXT-ALIGN: center
+}
+.Header
+{
+    BORDER-RIGHT: 7px;
+    BORDER-TOP: 7px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    BORDER-LEFT: 7px;
+    COLOR: white;
+    BORDER-BOTTOM: 7px;
+    FONT-FAMILY: verdana,arial,helvetica,sans-serif;
+    BACKGROUND-COLOR: #9a0000;
+    FONT-COLOR: white
+}
+INPUT
+{
+    BORDER-TOP-WIDTH: 1px;
+    FONT-WEIGHT: normal;
+    BORDER-LEFT-WIDTH: 1px;
+    FONT-SIZE: x-small;
+    BORDER-LEFT-COLOR: #000000;
+    BORDER-BOTTOM-WIDTH: 1px;
+    BORDER-BOTTOM-COLOR: #000000;
+    BORDER-TOP-COLOR: #000000;
+    FONT-FAMILY: verdana,arial,helvetica,san-serif;
+    BORDER-RIGHT-WIDTH: 1px;
+    BORDER-RIGHT-COLOR: #000000
+}
+.bluetext
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: #3366ff;
+    FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+
+</style><script language="JavaScript">
+
+
+	var browser = navigator.appName;
+	var IE5 = (document.all && document.getElementById) ? true : false;
+//	var bandwidth="narrow";	
+//	var bandwidth = new Array("narrow","narrow","narrow","narrow","narrow","narrow","narrow","narrow","narrow","narrow","narrow")
+	var bandwidth="broad";	
+	var bandwidth = new Array("broad","broad","broad","broad","broad","broad","broad","broad","broad","broad","broad")
+
+
+	
+	function changeband(category,catid)
+	{	
+		for(i=0;i<=1;i++)
+		{	
+			x=eval("document.choosebandwidth." + category + "band" + "[i].checked");
+			if(x)
+			{				
+				bandwidth[catid]=eval("document.choosebandwidth." + category + "band" + "[i].value");
+			    //bandwidth = document.choosebandwidth.catband[i].value;
+			}
+		}
+	}
+	
+	function PopEmail(page,caption)
+	{	
+		window.open("../addons/emailstory.asp?page="+page+"&caption="+caption,"email",config="menubar=no,height=320,width=410,scrollbars=yes")
+	}
+	function PopPrint(id,callid,caption)
+	{	
+		window.open("../addons/printpage.asp?id="+id+"&callid="+callid+"&caption="+caption,"print",config="menubar=yes,height=400,width=615,scrollbars=yes")
+	}
+	function PopEmailPage(page,caption)
+	{	
+		window.open("../addons/emailpage.asp?page="+page+"&caption="+caption,"email",config="menubar=no,height=320,width=410,scrollbars=yes")
+	}
+	function PopBigPrint(strUrl,id)
+	{	
+		window.open("../addons/"+strUrl+"?id="+id,"print",config="menubar=yes,height=400,width=615,scrollbars=yes")
+	}
+	
+	function PopVideo(URL,catid)
+	{		
+		if (catid==99)
+		{
+			//URL=URL+"&band=unknown";
+			URL=URL;
+		}
+		else
+		{
+//			URL=URL+"&band="+bandwidth[catid];
+			URL=URL+"&band=broad";
+		}
+		if (bandwidth[catid]=="broad")
+		{		
+			out = "_N."; // replace this
+			add = "_B."; // with this
+			temp = "" + URL; // temporary holder
+
+			while (temp.indexOf(out)>-1) {
+			pos= temp.indexOf(out);
+			temp = "" + (temp.substring(0, pos) + add + 
+			temp.substring((pos + out.length), temp.length));
+			}
+			URL = temp;
+		}
+		hWindow = window.open(URL,"videoondemand","width=568,height=335,resizable=yes,scrollbars=yes,menubar=no,status=no");
+		hWindow.focus();
+	}
+	
+	function PopWindow(URL,height,width)
+	{	
+		hWindow = window.open(URL,height+width,"width="+width+",height="+height+",resize=no,resizable=no,scrollbars=yes,menubar=no,status=no");
+		hWindow.focus();
+	}	
+	function PopAboutUs()
+	{
+		window.open("../ndtv/about.asp","aboutus",config="menubar=no,height=400,width=520,scrollbars=yes")
+	}
+	function ShowDetailStory(storyid,Articlename,searchtext,WordMatch)
+	{
+		var strURL1 = "../NewsArchive/showarchivedstory.asp?id=" + storyid + "&Article=" + Articlename + "&searchtext=" + searchtext + "&WordMatch=" + WordMatch + ""
+		parent.location = strURL1;
+	}	
+	function PopVix(URL,height,width)
+	{
+		URL=URL;
+//		hWindow = window.open(URL,height+width,"width="+width+",height="+height+",resize=no,resizable=no,scrollbars=yes,menubar=no,status=no");
+		hWindow = window.open(URL,"videoondemand","width="+width+",height="+height+",resize=no,resizable=no,scrollbars=yes,menubar=no,status=no");
+		hWindow.focus();
+	}
+</script><script language="javascript">
+			if (IE5 == true)
+				{
+					document.write('<IMG border=0 id=Leftextra name=Leftextra alt="India News" src="../images/blankdot.gif" width=100 height=5></img>')
+				}
+			else
+				{
+					document.write('<IMG border=0 id=Leftextra name=Leftextra alt="India News" src="../images/blankdot.gif" width=100 height=950></img>')
+				}
+			</script><script language="JavaScript">
+function fillFrm()
+{
+  var frm = document.FareSearchForm;
+  today = new Date();
+  time = today.getTime();
+  time += 7*24*60*60*1000;
+  todayPlus7 = new Date(); 
+  todayPlus7.setTime(time);
+  StartDate = todayPlus7.getDate();
+  StartMonth = todayPlus7.getMonth();
+  StartYear = todayPlus7.getYear();
+  frm.DepDay.value = StartDate;
+  frm.DepMonth.value = parseInt(StartMonth) + 1;
+  frm.DepYear.value = StartYear;
+
+  today = new Date();
+  time = today.getTime();
+  time += 21*24*60*60*1000;
+  todayPlus21 = new Date(); 
+  todayPlus21.setTime(time);
+  ReturnDate = todayPlus21.getDate();
+  ReturnMonth = todayPlus21.getMonth();
+  ReturnYear = todayPlus21.getYear();
+  frm.RetDay.value = ReturnDate;
+  frm.RetMonth.value = parseInt(ReturnMonth) + 1;
+  frm.RetYear.value = ReturnYear;
+}  
+</script><script language="JavaScript">
+fillFrm();
+</script><script language="javascript">
+	var IE4 = (document.all && !document.getElementById) ? true : false;
+	var NS4 = (document.layers) ? true : false;
+	var IE5 = (document.all && document.getElementById) ? true : false;
+	var N6 = (document.getElementById && !document.all) ? true : false;
+
+
+	function OpenPrime()
+			{
+			var tempval=eval("document.frmprime.primeshow");
+			x=tempval.options[tempval.selectedIndex].value;
+			if (x!='NULLX')
+			{
+				window.location.href=x;
+			}
+		}
+	function Vote()
+	{
+	var votes = "" ;
+		for(i=0;i<document.frmVote.option.length;i++)
+		{
+			  if(document.frmVote.option[i].checked)
+			  {
+			      votes = document.frmVote.option[i].value;
+			  }
+		}
+		if (votes == "") 
+		{
+			alert("Please select an option!") ;
+			return ;
+		}
+		id = document.frmVote.id.value;
+		window.open('http://origin.ndtv.com/poll/checkcookie.asp?options='+votes+'&id='+id,"Vote","width=340,height=270,resizable=no,scrollbars=yes,menubar=no,status=no");
+	}
+	function PopWindow(URL,height,width)
+	{	
+		hWindow = window.open(URL,height+width,"width="+width+",height="+height+",'VideoWindow',resize=no,resizable=no,scrollbars=yes,menubar=no,status=no");
+		hWindow.focus();
+	}
+	function PopWindowscroll(URL,height,width)
+	{	
+		hWindow = window.open(URL,height+width,"width="+width+",height="+height+",'VideoWindow',resize=no,resizable=no,scrollbars=yes,menubar=no,status=no");
+		hWindow.focus();
+	}
+//				<IMG alt="News India"  src="../images/homepage/contest.gif"><br><br>
+//				<div align=left><a href="../airtel/indianoftheyear.asp"><font color=brick>Pick the Indian of the year. <b>Vote now!</b></font></a></div>
+
+</script><script language="javascript">
+			if (NS4==true || N6==true) 
+			{
+				document.write('<layer id=RightDiv name=RightDiv style="position:relative;"></layer>');
+			}
+			else 
+			{
+				document.write('<div id=RightDiv name=RightDiv style="position:relative;"></div>');
+			}
+			</script><script language="javascript">
+	HideFlash=20000;
+	function HideFlashwindow()
+	{
+	getobj=window.document.getElementById("flashwind");
+	getobj.style.visibility="hidden";
+	}
+	setTimeout("HideFlashwindow()",HideFlash);
+</script><td colspan="2" bgcolor="white" valign="top" width="330">
+			<br> 			
+	<a class="topcaplink" href="http://www.ndtv.com/topstories/showtopstory.asp?slug=Suicide+case%3A+Army+denies+responsibility&amp;id=19642&amp;category=National"><font style="font-size: 9pt;" color="black"><b>Suicide case: Army denies responsibility</b></font><br><br><img src="file:///C:/MyReleases/intrainter/dev/pww-archive/PWW/RuleID_106_5_17_19_28_57_13303_files/19_30_45/Sushmitachakraborty.jpg" alt="News India" align="left" border="0" width="130"><br><font color="#656565"><b>Bhopal:</b> The Army has denied that its Vice Chief had said women were not welcome in the force.
+
+The clarification comes a day after news br... </font></a><font color="#656565"><a class="topcaplink" href="http://www.ndtv.com/topstories/showtopstory.asp?slug=Suicide+case%3A+Army+denies+responsibility&amp;id=19642&amp;category=National"><div align="right"><b>More.. </b></div></a></font><br>		
+	<br><br><br><center>	
+	<!--<IMG  src="../images/homepage/envelope.gif" alt="News India">--><!--<a href="../smsregistration/register.asp"> <b><font color=brick>Subscribe</font></b> to <b><font color=brick>SMS</font></b> TEXT alerts <font color=brick>></font></a>-->
+	
+	
+	<!--BR><center><a href="../sports/usopen.asp"><IMG  src="../images/homepage/usopen2005.jpg" border=0 alt="News US Open 2005"></a>
+	<br-->
+
+	<!-- fifa cup count down -->
+	</center></td></body></html>

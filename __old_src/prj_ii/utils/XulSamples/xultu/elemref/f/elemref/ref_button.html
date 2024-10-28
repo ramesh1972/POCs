@@ -1,0 +1,510 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Button Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Button 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Button</h3>
+
+<p>
+  A button that can be pressed by the user. Event handlers can be used to trap  mouse, keyboard and other events. It is typically rendered as a grey outset  rectangle. You can specify the label of the button using the label attribute  or by placing content inside the button.  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/buttons.html'>More information about button<a></p>
+<p><strong>Example:</strong></p>
+<p><pre>    &lt;button label=&quot;Press Me&quot;
+            oncommand=&quot;alert('You pressed me!'); return false;&quot;/&gt;
+</pre></p>
+<div class='aphead'>The button element implements the following interfaces:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIAccessibleProvider.html'>nsIAccessibleProvider</a>&nbsp;&nbsp;
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULButtonElement.html'>nsIDOMXULButtonElement</a>&nbsp;&nbsp;
+</div>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_accesskey'>accesskey</a></td>
+<td><a href='#attr_autoCheck'>autoCheck</a></td>
+<td><a href='#attr_checkState'>checkState</a></td>
+<td><a href='#attr_checked'>checked</a></td>
+<td><a href='#attr_command'>command</a></td>
+</tr><tr>
+<td><a href='#attr_crop'>crop</a></td>
+<td><a href='#attr_dir'>dir</a></td>
+<td><a href='#attr_disabled'>disabled</a></td>
+<td><a href='#attr_dlgType'>dlgType</a></td>
+<td><a href='#attr_group'>group</a></td>
+</tr><tr>
+<td><a href='#attr_image'>image</a></td>
+<td><a href='#attr_label'>label</a></td>
+<td><a href='#attr_open'>open</a></td>
+<td><a href='#attr_orient'>orient</a></td>
+<td><a href='#attr_tabindex'>tabindex</a></td>
+</tr><tr>
+<td><a href='#attr_type'>type</a></td>
+</tr></table>
+</div>
+<div class='aphead'><p>Properties and Methods:</p><table class='apheadbody'><tr>
+<td><a href='#prop_accessKey'>accessKey</a></td>
+<td><a href='#prop_accessible'>accessible</a></td>
+<td><a href='#prop_autoCheck'>autoCheck</a></td>
+<td><a href='#prop_checkState'>checkState</a></td>
+<td><a href='#prop_checked'>checked</a></td>
+</tr><tr>
+<td><a href='#prop_command'>command</a></td>
+<td><a href='#prop_crop'>crop</a></td>
+<td><a href='#prop_dir'>dir</a></td>
+<td><a href='#prop_disabled'>disabled</a></td>
+<td><a href='#prop_dlgType'>dlgType</a></td>
+</tr><tr>
+<td><a href='#prop_group'>group</a></td>
+<td><a href='#prop_image'>image</a></td>
+<td><a href='#prop_label'>label</a></td>
+<td><a href='#prop_open'>open</a></td>
+<td><a href='#prop_orient'>orient</a></td>
+</tr><tr>
+<td><a href='#prop_type'>type</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Attributes:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#attr_align'>align</a><br>
+<a href='ref_XULElement.html#attr_allowevents'>allowevents</a><br>
+<a href='ref_XULElement.html#attr_allownegativeassertions'>allownegativeassertions</a><br>
+<a href='ref_XULElement.html#attr_class'>class</a><br>
+<a href='ref_XULElement.html#attr_coalesceduplicatearcs'>coalesceduplicatearcs</a><br>
+<a href='ref_XULElement.html#attr_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#attr_container'>container</a><br>
+<a href='ref_XULElement.html#attr_containment'>containment</a><br>
+<a href='ref_XULElement.html#attr_context'>context</a><br>
+<a href='ref_XULElement.html#attr_contextmenu'>contextmenu</a><br>
+<a href='ref_XULElement.html#attr_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#attr_debug'>debug</a><br>
+<a href='ref_XULElement.html#attr_dir'>dir</a><br>
+<a href='ref_XULElement.html#attr_empty'>empty</a><br>
+<a href='ref_XULElement.html#attr_equalsize'>equalsize</a><br>
+<a href='ref_XULElement.html#attr_flags'>flags</a><br>
+<a href='ref_XULElement.html#attr_flex'>flex</a><br>
+<a href='ref_XULElement.html#attr_height'>height</a><br>
+<a href='ref_XULElement.html#attr_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#attr_id'>id</a><br>
+<a href='ref_XULElement.html#attr_insertafter'>insertafter</a><br>
+<a href='ref_XULElement.html#attr_insertbefore'>insertbefore</a><br>
+<a href='ref_XULElement.html#attr_left'>left</a><br>
+<a href='ref_XULElement.html#attr_maxheight'>maxheight</a><br>
+<a href='ref_XULElement.html#attr_maxwidth'>maxwidth</a><br>
+<a href='ref_XULElement.html#attr_menu'>menu</a><br>
+<a href='ref_XULElement.html#attr_minheight'>minheight</a><br>
+<a href='ref_XULElement.html#attr_minwidth'>minwidth</a><br>
+<a href='ref_XULElement.html#attr_observes'>observes</a><br>
+<a href='ref_XULElement.html#attr_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#attr_orient'>orient</a><br>
+<a href='ref_XULElement.html#attr_pack'>pack</a><br>
+<a href='ref_XULElement.html#attr_persist'>persist</a><br>
+<a href='ref_XULElement.html#attr_popup'>popup</a><br>
+<a href='ref_XULElement.html#attr_position'>position</a><br>
+<a href='ref_XULElement.html#attr_ref'>ref</a><br>
+<a href='ref_XULElement.html#attr_removeelement'>removeelement</a><br>
+<a href='ref_XULElement.html#attr_sortDirection'>sortDirection</a><br>
+<a href='ref_XULElement.html#attr_sortResource'>sortResource</a><br>
+<a href='ref_XULElement.html#attr_sortResource2'>sortResource2</a><br>
+<a href='ref_XULElement.html#attr_statustext'>statustext</a><br>
+<a href='ref_XULElement.html#attr_style'>style</a><br>
+<a href='ref_XULElement.html#attr_template'>template</a><br>
+<a href='ref_XULElement.html#attr_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#attr_tooltiptext'>tooltiptext</a><br>
+<a href='ref_XULElement.html#attr_top'>top</a><br>
+<a href='ref_XULElement.html#attr_uri'>uri</a><br>
+<a href='ref_XULElement.html#attr_wait-cursor'>wait-cursor</a><br>
+<a href='ref_XULElement.html#attr_width'>width</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='attr_accesskey'><span class='attrib'>accesskey</span></a></h5>
+<p class='aptype'>Type:&nbsp;character</p>  <p>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the button.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the button will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.</p>
+  <h5><a name='attr_autoCheck'><span class='attrib'>autoCheck</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If this attribute is true, or left out, the checked state of the button will  be switched each time the button is pressed. If this attribute is false, the  checked state must be adjusted manually.</p>
+  <h5><a name='attr_checkState'><span class='attrib'>checkState</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer: 0, 1 or 2</p>  <p>
+  This attribute may be used to create three state buttons, numbered 0, 1 and  2. When in state 0 or 1, pressing the button will switch to the opposite  state. When in state 2, pressing the button will switch to state 0. This  means that the button acts like a checkbox except that there is a third  state which must be set manually by adjusting the check state. If you wish  to have different behavior for how the states are adjusted, set the  autoCheck attribute to false and adjust the state with a script. The type  attribute must be set to 'checkbox' for buttons with a check state.</p>
+  <h5><a name='attr_checked'><span class='attrib'>checked</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Indicates whether the button is checked or not.</p>
+  <h5><a name='attr_command'><span class='attrib'>command</span></a></h5>
+<p class='aptype'>Type:&nbsp;element id</p>  <p>
+  Set to an id of a <a href='ref_command.html'>command</a> element that is being observed by the  element.</p>
+  <h5><a name='attr_crop'><span class='attrib'>crop</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  If the label of the button is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is right to left (rtl), the cropping is reversed.</p>
+  <ul>
+    <li><span class='aval'>start</span>:
+          The text will be cropped on its left side. 
+
+</li>
+    <li><span class='aval'>end</span>:
+          The text will be cropped on its right side.
+
+</li>
+    <li><span class='aval'>left</span>:
+          <b>(Deprecated)</b> The text will be cropped on its left side.
+
+</li>
+    <li><span class='aval'>right</span>:
+          <b>(Deprecated)</b> The text will be cropped on its right side.
+
+</li>
+    <li><span class='aval'>center</span>:
+          The text will be cropped on both sides.
+
+</li>
+    <li><span class='aval'>none</span>:
+          The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+
+</li>
+  </ul>
+  <h5><a name='attr_dir'><span class='attrib'>dir</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  Specifies which side of the button's label that its image is placed.</p>
+  <ul>
+    <li><span class='aval-default'>ltr</span>:
+          The image appears to the left or above the label.
+
+</li>
+    <li><span class='aval'>rtl</span>:
+          The image appears to the right or below the label.
+
+</li>
+  </ul>
+  <h5><a name='attr_disabled'><span class='attrib'>disabled</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Indicates whether the button is disabled or not. If this attribute is set to true,  the button is disabled. This is usually drawn with the text in grey. If the button is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the button, leave the attribute out entirely as opposed to  setting the value to false.</p>
+  <h5><a name='attr_dlgType'><span class='attrib'>dlgType</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  The dialog type of the button, used only when the button is in a dialog box.  You can use this feature to replace the standard dialog box buttons with custom  buttons, yet the dialog event methods will still function. For example, if the  dlgType is set to 'accept', the button will replace the dialog box's accept  button, which is usually labeled OK. Using this attribute on a button not a  dialog box has no effect. The following values can be used as the dialog type:</p>
+  <ul>
+    <li><span class='aval'>accept</span>:
+          The OK button, which will accept the changes when pressed.
+
+</li>
+    <li><span class='aval'>cancel</span>:
+          The cancel button which will cancel the operation.
+
+</li>
+    <li><span class='aval'>help</span>:
+          A help button for displaying help about the dialog.
+
+</li>
+    <li><span class='aval'>disclosure</span>:
+          A button to show more information. This might be a button or a disclosure
+    triangle.
+
+</li>
+  </ul>
+  <h5><a name='attr_group'><span class='attrib'>group</span></a></h5>
+<p class='aptype'>Type:&nbsp;string group name</p>  <p>
+  Buttons with the same value for their group attribute are put into the same  group. Only one button from each group can be checked at a time. If the user  selects one the radio buttons, the others in the group are unchecked.</p>
+  <h5><a name='attr_image'><span class='attrib'>image</span></a></h5>
+<p class='aptype'>Type:&nbsp;image URL</p>  <p>
+  The URL of the image to appear on the button. If this is attribute is left  out, no image appears. The position of the image is determined by the dir  and orient attributes.</p>
+  <h5><a name='attr_label'><span class='attrib'>label</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  The label that will appear on the button. If this is left out, no text appears.</p>
+  <h5><a name='attr_open'><span class='attrib'>open</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  For the menu type buttons, the open attribute is set to true when the menu is  open. The open attribute is not present if the menu is closed.</p>
+  <h5><a name='attr_orient'><span class='attrib'>orient</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  Along with the dir attribute, the orient attribute is used to indicate  where the button's image appears in relation to the the label. </p>
+  <ul>
+    <li><span class='aval-default'>horizontal</span>:
+          The image appears to the left of the label if the dir attribute is 'ltr'
+    or to the right of the text if the dir attribute is 'rtl'
+
+</li>
+    <li><span class='aval'>vertical</span>:
+          The image appears above the label if the dir attribute is 'ltr' or below
+    the text if the dir attribute is 'rtl'
+
+</li>
+  </ul>
+  <h5><a name='attr_tabindex'><span class='attrib'>tabindex</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.</p>
+  <h5><a name='attr_type'><span class='attrib'>type</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  The type of button. If this attribute is not present, a normal button is created.  Leave the attribute out for a normal button.</p>
+  <ul>
+    <li><span class='aval'>checkbox</span>:
+          This type of button can be in two states. The user can click the button to
+    switch between the states. This is not the same as a <a href='ref_checkbox.html'>checkbox</a> because it
+    looks like a button.
+
+</li>
+    <li><span class='aval'>menu</span>:
+          Set the type attribute to the value 'menu' to create a button with a
+    menu popup. Place a <a href='ref_menupopup.html'>menupopup</a> element inside the button in this case.
+
+</li>
+    <li><span class='aval'>menu-button</span>:
+           You can also use the value 'menu-button' to create a button with a
+     menu. This second value will typically cause the button to be displayed
+     with an arrow to the side indicating that a menu is present. This type of
+     button is used for Mozilla's back and forward buttons.
+
+</li>
+    <li><span class='aval'>radio</span>:
+          The button acts like a radio button. Only one button in the group can be
+    on a once.
+
+</li>
+  </ul>
+</div>
+<hr class='propsplit'><h4 class='propslist'><a name='propsblk'>Properties and Methods:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#prop_align'>align</a><br>
+<a href='ref_XULElement.html#prop_allowEvents'>allowEvents</a><br>
+<a href='ref_XULElement.html#prop_blur'>blur</a><br>
+<a href='ref_XULElement.html#prop_boxObject'>boxObject</a><br>
+<a href='ref_XULElement.html#prop_boxObject.element'>boxObject.element</a><br>
+<a href='ref_XULElement.html#prop_boxObject.getLookAndFeelMetric'>boxObject.getLookAndFeelMetric</a><br>
+<a href='ref_XULElement.html#prop_boxObject.height'>boxObject.height</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenX'>boxObject.screenX</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenY'>boxObject.screenY</a><br>
+<a href='ref_XULElement.html#prop_boxObject.width'>boxObject.width</a><br>
+<a href='ref_XULElement.html#prop_boxObject.x'>boxObject.x</a><br>
+<a href='ref_XULElement.html#prop_boxObject.y'>boxObject.y</a><br>
+<a href='ref_XULElement.html#prop_builder'>builder</a><br>
+<a href='ref_XULElement.html#prop_className'>className</a><br>
+<a href='ref_XULElement.html#prop_click'>click</a><br>
+<a href='ref_XULElement.html#prop_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#prop_contextMenu'>contextMenu</a><br>
+<a href='ref_XULElement.html#prop_controllers'>controllers</a><br>
+<a href='ref_XULElement.html#prop_database'>database</a><br>
+<a href='ref_XULElement.html#prop_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#prop_dir'>dir</a><br>
+<a href='ref_XULElement.html#prop_doCommand'>doCommand</a><br>
+<a href='ref_XULElement.html#prop_flex'>flex</a><br>
+<a href='ref_XULElement.html#prop_focus'>focus</a><br>
+<a href='ref_XULElement.html#prop_getElementsByAttribute'>getElementsByAttribute</a><br>
+<a href='ref_XULElement.html#prop_height'>height</a><br>
+<a href='ref_XULElement.html#prop_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#prop_id'>id</a><br>
+<a href='ref_XULElement.html#prop_left'>left</a><br>
+<a href='ref_XULElement.html#prop_maxHeight'>maxHeight</a><br>
+<a href='ref_XULElement.html#prop_maxWidth'>maxWidth</a><br>
+<a href='ref_XULElement.html#prop_menu'>menu</a><br>
+<a href='ref_XULElement.html#prop_minHeight'>minHeight</a><br>
+<a href='ref_XULElement.html#prop_minWidth'>minWidth</a><br>
+<a href='ref_XULElement.html#prop_observes'>observes</a><br>
+<a href='ref_XULElement.html#prop_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#prop_orient'>orient</a><br>
+<a href='ref_XULElement.html#prop_pack'>pack</a><br>
+<a href='ref_XULElement.html#prop_persist'>persist</a><br>
+<a href='ref_XULElement.html#prop_ref'>ref</a><br>
+<a href='ref_XULElement.html#prop_resource'>resource</a><br>
+<a href='ref_XULElement.html#prop_statusText'>statusText</a><br>
+<a href='ref_XULElement.html#prop_style'>style</a><br>
+<a href='ref_XULElement.html#prop_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#prop_tooltipText'>tooltipText</a><br>
+<a href='ref_XULElement.html#prop_top'>top</a><br>
+<a href='ref_XULElement.html#prop_width'>width</a><br>
+</p>
+<p>Inherited from Element:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_addEventListener'>addEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_appendChild'>appendChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_attributes'>attributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_childNodes'>childNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_cloneNode'>cloneNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_dispatchEvent'>dispatchEvent</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_firstChild'>firstChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttribute'>getAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNS'>getAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNode'>getAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNodeNS'>getAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagName'>getElementsByTagName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagNameNS'>getElementsByTagNameNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttribute'>hasAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributeNS'>hasAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributes'>hasAttributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasChildNodes'>hasChildNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_insertBefore'>insertBefore</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_isSupported'>isSupported</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_lastChild'>lastChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_localName'>localName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_namespaceURI'>namespaceURI</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nextSibling'>nextSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeName'>nodeName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeType'>nodeType</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeValue'>nodeValue</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_normalize'>normalize</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_ownerDocument'>ownerDocument</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_parentNode'>parentNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_prefix'>prefix</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_previousSibling'>previousSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttribute'>removeAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNS'>removeAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNode'>removeAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeChild'>removeChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeEventListener'>removeEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_replaceChild'>replaceChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttribute'>setAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNS'>setAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNode'>setAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNodeNS'>setAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_tagName'>tagName</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='prop_accessKey'><span class='attrib'>accessKey</span></a></h5>
+<p class='aptype'>Type:&nbsp;character</p><p>Gets and sets the value of the accesskey attribute.</p>
+  <h5><a name='prop_accessible'><span class='attrib'>accessible</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIAccessible.html'>nsIAccessible</a></p>  <p>
+  Returns the accessibility object for the button.</p>
+  <h5><a name='prop_autoCheck'><span class='attrib'>autoCheck</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p><p>Gets and sets the value of the autoCheck attribute.</p>
+  <h5><a name='prop_checkState'><span class='attrib'>checkState</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer: 0, 1 or 2</p><p>Gets and sets the value of the checkState attribute.</p>
+  <h5><a name='prop_checked'><span class='attrib'>checked</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p><p>Gets and sets the value of the checked attribute.</p>
+  <h5><a name='prop_command'><span class='attrib'>command</span></a></h5>
+<p class='aptype'>Type:&nbsp;element id</p><p>Gets and sets the value of the command attribute.</p>
+  <h5><a name='prop_crop'><span class='attrib'>crop</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the crop attribute.</p>
+  <h5><a name='prop_dir'><span class='attrib'>dir</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the dir attribute.</p>
+  <h5><a name='prop_disabled'><span class='attrib'>disabled</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p><p>Gets and sets the value of the disabled attribute.</p>
+  <h5><a name='prop_dlgType'><span class='attrib'>dlgType</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the dlgType attribute.</p>
+  <h5><a name='prop_group'><span class='attrib'>group</span></a></h5>
+<p class='aptype'>Type:&nbsp;string group name</p><p>Gets and sets the value of the group attribute.</p>
+  <h5><a name='prop_image'><span class='attrib'>image</span></a></h5>
+<p class='aptype'>Type:&nbsp;image URL</p><p>Gets and sets the value of the image attribute.</p>
+  <h5><a name='prop_label'><span class='attrib'>label</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the label attribute.</p>
+  <h5><a name='prop_open'><span class='attrib'>open</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p><p>Gets and sets the value of the open attribute.</p>
+  <h5><a name='prop_orient'><span class='attrib'>orient</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the orient attribute.</p>
+  <h5><a name='prop_type'><span class='attrib'>type</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the type attribute.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

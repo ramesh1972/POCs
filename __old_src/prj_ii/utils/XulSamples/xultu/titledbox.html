@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="boxdet.html"> 
+ <link rel="next" href="boxfinal.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Groupboxes</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 3.4 - Groupboxes 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <SPAN CLASS="currentpage">Groupboxes</SPAN></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="3.3 - Box Model Details"
+     href="boxdet.html">Previous</a>
+
+
+  <a class="nextlink" title="3.5 - Adding More Elements"
+     href="boxfinal.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Groupboxes</h2>
+
+<P>
+This section describes a way to include elements into groups.
+</P>
+
+<H3>Groupboxes</H3>
+
+<P>
+HTML provides an element, <SPAN CLASS= "tag">fieldset</SPAN> which can be used
+to group elements together. A border is typically drawn around the elements to
+show that they are related. An example would be a group of check boxes. XUL
+provides an equivalent element, <A CLASS="tag" HREF="elemref/ref_groupbox.html">groupbox</A> which can
+be used for a similar purpose.
+</P>
+
+<P>
+As its name implies, the <A CLASS="tag" HREF="elemref/ref_groupbox.html">groupbox</A> is a type of box.
+That means that the elements inside it align themselves according to the
+rules of boxes. There are two differences between groupboxes and regular boxes:
+</P>
+
+<OL>
+  <LI>A beveled border is drawn around the groupbox by default. You can change
+      this behavior by changing the CSS style.</LI>
+  <LI>The groupbox supports a caption which is placed along the top part of the
+      border.</LI>
+</OL>
+
+<P>
+Because groupboxes are types of boxes, you can use the same attributes such as
+<SPAN CLASS="attrib">orient</SPAN> and <SPAN CLASS="attrib">flex</SPAN>.
+You can put whatever elements you want inside the box, although typically they
+will be related in some way.
+</P>
+
+<P>
+The label across the top of the groupbox can be created by using the 
+<A CLASS="tag" HREF="elemref/ref_caption.html">caption</A> element. It works much like the HTML
+<A CLASS="tag" HREF="elemref/ref_legend.html">legend</A> element. A single <A CLASS="tag" HREF="elemref/ref_caption.html">caption</A>
+element placed as the first child is sufficient.
+</P>
+
+<P>
+The example below shows a simple groupbox:
+</P>
+
+
+Example 3.4.1:
+<A HREF='examples/ex_titledbox_1.xul.txt'>Source</A>
+<A HREF="examples/ex_titledbox_1.xul" ONCLICK="window.open('examples/ex_titledbox_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;groupbox&gt;
+  &lt;caption label="Answer"/&gt;
+  &lt;description value="Banana"/&gt;
+  &lt;description value="Tangerine"/&gt;
+  &lt;description value="Phone Booth"/&gt;
+  &lt;description value="Kiwi"/&gt;
+&lt;/groupbox&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/titledbox1.jpg" ALIGN=RIGHT ALT="">
+This will cause four pieces of text to be displayed surrounded by a box with
+the label Answer. Note that the groupbox has a vertical orientation by default
+which is necesssary to have the text elements stack in a single column.
+</P>
+
+<P>
+You can also add child elements inside the <A CLASS="tag" HREF="elemref/ref_caption.html">caption</A>
+element to create a more complex caption. For example, Mozilla's Font
+preferences panel uses a drop-down menu as a caption. Although any content
+can be used, usually you would use a checkbox or dropdown menu.
+</P>
+
+
+Example 3.4.2:
+<A HREF='examples/ex_titledbox_2.xul.txt'>Source</A>
+<A HREF="examples/ex_titledbox_2.xul" ONCLICK="window.open('examples/ex_titledbox_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;groupbox flex="1"&gt;
+  &lt;caption&gt;
+    &lt;checkbox label="Enable Backups"/&gt;
+  &lt;/caption&gt;
+  &lt;hbox&gt;
+    &lt;label control="dir" value="Directory:"/&gt;
+    &lt;textbox id="dir" flex="1"/&gt;
+  &lt;/hbox&gt;
+  &lt;checkbox label="Compress archived files"/&gt;
+&lt;/groupbox&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/groupbox2.jpg" ALIGN=RIGHT ALT="">
+In this example, a checkbox has been used as a caption. We might use a script
+to enable and disable the contents of the groupbox when the checkbox is checked
+and unchecked. The groupbox contains a horizontal box with a label and textbox.
+Both the textbox and groupbox have been made flexible so the textbox expands when
+the window is expanded. The additional checkbox appears below the textbox because
+of the vertical orientation of the groupbox. We'll add a groupbox to the find
+files dialog in the next section.
+</P>
+
+<H3>Radio Groups</H3>
+
+<P>
+You can use the <A CLASS="tag" HREF="elemref/ref_radiogroup.html">radiogroup</A> element to group radio elements
+together. The <A CLASS="tag" HREF="elemref/ref_radiogroup.html">radiogroup</A> is a type of box. You can put any
+element you want inside it, and apart from its special handling of
+<A CLASS="tag" HREF="elemref/ref_radio.html">radio</A> buttons, it works like any other box.
+
+<P>
+Any radio buttons placed inside the radio group will be grouped together, even if
+they are inside nested boxes. This could be used to add extra elements within the
+structure, such as in the following example:
+</P>
+
+
+Example 3.4.3:
+<A HREF='examples/ex_titledbox_3.xul.txt'>Source</A>
+<A HREF="examples/ex_titledbox_3.xul" ONCLICK="window.open('examples/ex_titledbox_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;radiogroup&gt;
+  &lt;radio id="no" value="no" label="No Number"/&gt;
+  &lt;radio id="random" value="random" label="Random Number"/&gt;
+  &lt;hbox&gt;
+    &lt;radio id="specify" value="specify" label="Specify Number:"/&gt;
+    &lt;textbox id="specificnumber"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;</PRE></DIV>
+
+
+
+<P>
+Note that the <A CLASS="tag" HREF="elemref/ref_radiogroup.html">radiogroup</A> element does not draw a 
+border around it. You should place a <A CLASS="tag" HREF="elemref/ref_groupbox.html">groupbox</A> element
+around it if a border and caption are desired.
+</P>
+
+<HR>
+<P>
+<A HREF="boxfinal.html">(Next)</A>
+Next, we'll use what we've learned so far and add some additional elements
+to the find files dialog.
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_titledbox_1.xul.txt'>3.4.1</A>
+  <A HREF='examples/ex_titledbox_2.xul.txt'>3.4.2</A>
+  <A HREF='examples/ex_titledbox_3.xul.txt'>3.4.3</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="3.3 - Box Model Details"
+     href="boxdet.html">Previous</a>
+
+
+  <a class="nextlink" title="3.5 - Adding More Elements"
+     href="boxfinal.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

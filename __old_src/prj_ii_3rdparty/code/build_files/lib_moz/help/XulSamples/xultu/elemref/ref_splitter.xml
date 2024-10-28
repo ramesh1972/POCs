@@ -1,0 +1,65 @@
+<?xml version='1.0'?>
+
+<element name='splitter'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/splitter.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_splitter.html</reference>
+  An element which should appear before or after an element inside a container.  When the splitter is dragged, the sibling elements of the splitter are resized.  If a grippy in placed inside the splitter, one sibling element of the  splitter is collapsed when the grippy is clicked.  
+
+<attr name='collapse'>
+  Determines which side of the splitter is collapsed when its grippy is  clicked. If this attribute is not specified, the splitter will not  cause a collapse. It is common to put a grippy element inside the splitter  when it is used for collapsing.
+<value name='none' default='true'>
+    No collpasing occurs.
+</value>
+<value name='before'>
+    When the grippy is clicked, the element immediately before the splitter in
+    the same parent is collapsed so that its width or height is 0.
+</value>
+<value name='after'>
+    When the grippy is clicked, the element immediately after the splitter in
+    the same parent is collapsed so that its width or height is 0.
+</value>
+</attr>
+<attr name='resizeafter'>
+  This attribute indicates which element to the right or below the splitter should  be resized when the splitter is repositioned.
+<value name='closest' default='true'>
+    The element immediately to the right or below the splitter resizes.
+</value>
+<value name='farthest'>
+    The element that is the farthest away from the splitter to the right or below
+    the splitter resizes.
+</value>
+<value name='grow'>
+    The elements to the right or below the splitter do not change size (unless
+    they are flexible) when the splitter is dragged, but instead the entire
+    container changes size.
+</value>
+</attr>
+<attr name='resizebefore'>
+  This attribute indicates which element to the left or above the splitter should  be resized when the splitter is repositioned.
+<value name='closest' default='true'>
+    The element immediately to the left or above the splitter resizes.
+</value>
+<value name='farthest'>
+    The element that is the farthest away from the splitter to the left or above
+    the splitter resizes.
+</value>
+</attr>
+<attr name='state'>
+  Indicates whether the splitter has collapsed content or not. This attribute  will be updated automatically as the splitter is moved, and is generally used  in a stylesheet to apply a different appearance for each state.
+<value name='open'>
+    The content either before or after the splitter, depending on the value of
+    the collapsed attribute, is currently displayed.
+</value>
+<value name='collapsed'>
+    The content either before or after the splitter is collapsed and is not
+    visible.
+</value>
+<value name='dragging'>
+    The user is current adjutsing the position of the splitter, typically by
+    dragging it with the mouse.
+</value>
+</attr>
+<class name='tree-splitter'>
+  This splitter is intended to be used in tree columns (in-between <a href='ref_treecol.html'>treecol</a>  elements). The splitter will be drawn with no width so that it isn't  visible, however, the columns may still be resized.
+</class>
+</element>

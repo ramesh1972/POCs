@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+
+<element name='page'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_page.html</reference>
+  Similar to a window, except it should be used for XUL files that are  to be loaded into an iframe.
+
+</element>

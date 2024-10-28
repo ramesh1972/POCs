@@ -1,0 +1,179 @@
+// <!-- <mdb:mork:z v="1.4"/> -->
+< <(a=c)> // (f=iso-8859-1)
+  (8A=Typed)(8B=LastPageVisited)(8C=ByteOrder)
+  (80=ns:history:db:row:scope:history:all)
+  (81=ns:history:db:table:kind:history)(82=URL)(83=Referrer)
+  (84=LastVisitDate)(85=FirstVisitDate)(86=VisitCount)(87=Name)
+  (88=Hostname)(89=Hidden)>
+
+<(80=LE)(81
+    =file:///c:/MyReleases/intrainter/dev/pww-app-files/openurl.html)
+  (188=1152064570340985)(82=1148921580251846)(83=)(189=15)(182
+    =file:///c:/MyReleases/intrainter/dev/pww-app-files/home.html)(186
+    =1152064480211385)(183=1152035150479355)(187=2)(18A
+    =http://www.hindu.com/)(1A8=1152064689722648)(18B=1152064582378294)
+  (18C=www.hindu.com)(18D
+    =T$00h$00e$00 $00H$00i$00n$00d$00u$00 $00:$00 $00F$00r$00o$00n$00t$00 $00P\
+$00a$00g$00e$00 $00N$00e$00w$00s$00 $00:$00 $00W$00e$00d$00n$00e$00s$00d$00a$00\
+y$00,$00 $00J$00u$00l$00y$00 $000$005$00,$00 $002$000$000$006$00)(1A9=3)
+  (18E
+    =http://ads.mediaturf.net/html.ng/site=hinduonline&size=468x60&content=oth\
+er&SpaceDesc=topbanner&campaign=icicibank_nri_3189&lang=language&screenw=1024&\
+bust=462454)(18F=ads.mediaturf.net)(190=1)(191
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064588056&lmt=1152049283&format=300x250_as&output=html&url=http%3\
+A%2F%2Fwww.hindu.com%2F&ad_type=text_image&cc=31&u_h=768&u_w=1024&u_ah=738&u_a\
+w=1024&u_cd=32&u_tz=330&u_his=1&u_java=true&u_nplug=16&u_nmime=51)(192
+    =1152064588767481)(193=pagead2.googlesyndication.com)(194
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064588827&lmt=1152049283&prev_fmts=300x250_as&format=120x600_as&o\
+utput=html&url=http%3A%2F%2Fwww.hindu.com%2F&ad_type=text&cc=21&u_h=768&u_w=10\
+24&u_ah=738&u_aw=1024&u_cd=32&u_tz=330&u_his=1&u_java=true&u_nplug=16&u_nmime=\
+51)(195
+    =http://ad.in.doubleclick.net/adi/N3892.Hindu/B1917878;sz=150x100;ord=9897\
+878230778880000?)(196=ad.in.doubleclick.net)(197
+    =C$00l$00i$00c$00k$00 $00h$00e$00r$00e$00 $00t$00o$00 $00f$00i$00n$00d$00 \
+$00o$00u$00t$00 $00m$00o$00r$00e$00!$00)(198
+    =http://www.hindu.com/2006/07/05/23hdline.htm)(199=1152064627643382)
+  (19A
+    =T$00h$00e$00 $00H$00i$00n$00d$00u$00 $00:$00 $00T$00a$00m$00i$00l$00 $00N\
+$00a$00d$00u$00 $00N$00e$00w$00s$00 $00:$00 $00W$00e$00d$00n$00e$00s$00d$00a$00\
+y$00,$00 $00J$00u$00l$00y$00 $000$005$00,$00 $002$000$000$006$00)(19B
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064627783&lmt=1152048168&format=468x60_as&output=html&channel=782\
+3056745&url=http%3A%2F%2Fwww.hindu.com%2F2006%2F07%2F05%2F23hdline.htm&ad_type\
+=text_image&ref=http%3A%2F%2Fwww.hindu.com%2F&cc=100&u_h=768&u_w=1024&u_ah=738\
+&u_aw=1024&u_cd=32&u_tz=330&u_his=2&u_java=true&u_nplug=16&u_nmime=51)
+  (19C
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064629876&lmt=1152048168&prev_fmts=468x60_as&format=300x250_as&ou\
+tput=html&url=http%3A%2F%2Fwww.hindu.com%2F2006%2F07%2F05%2F23hdline.htm&ad_ty\
+pe=text_image&ref=http%3A%2F%2Fwww.hindu.com%2F&cc=18&u_h=768&u_w=1024&u_ah=73\
+8&u_aw=1024&u_cd=32&u_tz=330&u_his=2&u_java=true&u_nplug=16&u_nmime=51)
+  (19D
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064630086&lmt=1152048168&prev_fmts=468x60_as%2C300x250_as&format=\
+120x600_as&output=html&url=http%3A%2F%2Fwww.hindu.com%2F2006%2F07%2F05%2F23hdl\
+ine.htm&ad_type=text&ref=http%3A%2F%2Fwww.hindu.com%2F&cc=15&u_h=768&u_w=1024&\
+u_ah=738&u_aw=1024&u_cd=32&u_tz=330&u_his=2&u_java=true&u_nplug=16&u_nmime=51)
+  (19E=1152064630878033)(1A0
+    =http://ads.mediaturf.net/html.ng/site=hinduonline&size=468x60&content=oth\
+er&SpaceDesc=topbanner&campaign=icicibank_nri_3189&lang=language&screenw=1024&\
+bust=73822)(19F=1152064671666684)(1A1
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064671967&lmt=1152049283&format=300x250_as&output=html&url=http%3\
+A%2F%2Fwww.hindu.com%2F&ad_type=text_image&u_h=768&u_w=1024&u_ah=738&u_aw=1024\
+&u_cd=32&u_tz=330&u_his=1&u_java=true&u_nplug=16&u_nmime=51)(1A2
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064672047&lmt=1152049283&prev_fmts=300x250_as&format=120x600_as&o\
+utput=html&url=http%3A%2F%2Fwww.hindu.com%2F&ad_type=text&u_h=768&u_w=1024&u_a\
+h=738&u_aw=1024&u_cd=32&u_tz=330&u_his=1&u_java=true&u_nplug=16&u_nmime=51)
+  (1A3
+    =http://ad.in.doubleclick.net/adi/N3892.Hindu/B1917878;sz=150x100;ord=6693\
+762163374235000?)(1A5
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064675642&lmt=1152048168&format=468x60_as&output=html&channel=782\
+3056745&url=http%3A%2F%2Fwww.hindu.com%2F2006%2F07%2F05%2F23hdline.htm&ad_type\
+=text_image&ref=http%3A%2F%2Fwww.hindu.com%2F&u_h=768&u_w=1024&u_ah=738&u_aw=1\
+024&u_cd=32&u_tz=330&u_his=2&u_java=true&u_nplug=16&u_nmime=51)(1A4
+    =1152064675592329)(1A6
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064675752&lmt=1152048168&prev_fmts=468x60_as&format=300x250_as&ou\
+tput=html&url=http%3A%2F%2Fwww.hindu.com%2F2006%2F07%2F05%2F23hdline.htm&ad_ty\
+pe=text_image&ref=http%3A%2F%2Fwww.hindu.com%2F&u_h=768&u_w=1024&u_ah=738&u_aw\
+=1024&u_cd=32&u_tz=330&u_his=2&u_java=true&u_nplug=16&u_nmime=51)(1A7
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064675782&lmt=1152048168&prev_fmts=468x60_as%2C300x250_as&format=\
+120x600_as&output=html&url=http%3A%2F%2Fwww.hindu.com%2F2006%2F07%2F05%2F23hdl\
+ine.htm&ad_type=text&ref=http%3A%2F%2Fwww.hindu.com%2F&u_h=768&u_w=1024&u_ah=7\
+38&u_aw=1024&u_cd=32&u_tz=330&u_his=2&u_java=true&u_nplug=16&u_nmime=51)
+  (1AA
+    =http://ads.mediaturf.net/html.ng/site=hinduonline&size=468x60&content=oth\
+er&SpaceDesc=topbanner&campaign=icicibank_nri_3189&lang=language&screenw=1024&\
+bust=654616)(1AB
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064690013&lmt=1152049283&format=300x250_as&output=html&url=http%3\
+A%2F%2Fwww.hindu.com%2F&ad_type=text_image&u_h=768&u_w=1024&u_ah=738&u_aw=1024\
+&u_cd=32&u_tz=330&u_his=1&u_java=true&u_nplug=16&u_nmime=51)(1AC
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064690083&lmt=1152049283&prev_fmts=300x250_as&format=120x600_as&o\
+utput=html&url=http%3A%2F%2Fwww.hindu.com%2F&ad_type=text&u_h=768&u_w=1024&u_a\
+h=738&u_aw=1024&u_cd=32&u_tz=330&u_his=1&u_java=true&u_nplug=16&u_nmime=51)
+  (1AD
+    =http://ad.in.doubleclick.net/adi/N3892.Hindu/B1917878;sz=150x100;ord=6583\
+952045502030000?)(1AE
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064692266&lmt=1152048168&format=468x60_as&output=html&channel=782\
+3056745&url=http%3A%2F%2Fwww.hindu.com%2F2006%2F07%2F05%2F23hdline.htm&ad_type\
+=text_image&ref=http%3A%2F%2Fwww.hindu.com%2F&u_h=768&u_w=1024&u_ah=738&u_aw=1\
+024&u_cd=32&u_tz=330&u_his=2&u_java=true&u_nplug=16&u_nmime=51)(1AF
+    =1152064692736982)(1B0
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064692376&lmt=1152048168&prev_fmts=468x60_as&format=300x250_as&ou\
+tput=html&url=http%3A%2F%2Fwww.hindu.com%2F2006%2F07%2F05%2F23hdline.htm&ad_ty\
+pe=text_image&ref=http%3A%2F%2Fwww.hindu.com%2F&u_h=768&u_w=1024&u_ah=738&u_aw\
+=1024&u_cd=32&u_tz=330&u_his=2&u_java=true&u_nplug=16&u_nmime=51)(1B1
+    =http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-62384051713\
+13215&dt=1152064692406&lmt=1152048168&prev_fmts=468x60_as%2C300x250_as&format=\
+120x600_as&output=html&url=http%3A%2F%2Fwww.hindu.com%2F2006%2F07%2F05%2F23hdl\
+ine.htm&ad_type=text&ref=http%3A%2F%2Fwww.hindu.com%2F&u_h=768&u_w=1024&u_ah=7\
+38&u_aw=1024&u_cd=32&u_tz=330&u_his=2&u_java=true&u_nplug=16&u_nmime=51)>
+{1:^80 {(k^81:c)(s=9)[1(^8C=LE)]} 
+  [2(^82^81)(^84^188)(^85^82)(^88=)(^87=)(^86=15)]
+  [63(^82^182)(^84^186)(^85^183)(^88=)(^87=)(^86=2)]
+  [64(^82^18A)(^84^1A8)(^85^18B)(^88^18C)(^87^18D)(^86=3)]
+  [65(^82^18E)(^84^18B)(^85^18B)(^88^18F)(^89=1)(^87=)]
+  [66(^82^191)(^84^192)(^85^192)(^88^193)(^89=1)(^87=)]
+  [67(^82^194)(^84^192)(^85^192)(^88^193)(^89=1)(^87=)]
+  [68(^82^195)(^84^192)(^85^192)(^88^196)(^89=1)(^87^197)]
+  [69(^82^198)(^84^1A8)(^85^199)(^88^18C)(^87^19A)(^86=3)]
+  [6A(^82^19B)(^84^199)(^85^199)(^88^193)(^89=1)(^87=)]
+  [6B(^82^19C)(^84^199)(^85^199)(^88^193)(^89=1)(^87=)]
+  [6C(^82^19D)(^84^19E)(^85^19E)(^88^193)(^89=1)(^87=)]
+  [6D(^82^1A0)(^84^19F)(^85^19F)(^88^18F)(^89=1)(^87=)]
+  [6E(^82^1A1)(^84^19F)(^85^19F)(^88^193)(^89=1)(^87=)]
+  [6F(^82^1A2)(^84^19F)(^85^19F)(^88^193)(^89=1)(^87=)]
+  [70(^82^1A3)(^84^19F)(^85^19F)(^88^196)(^89=1)(^87^197)]
+  [71(^82^1A5)(^84^1A4)(^85^1A4)(^88^193)(^89=1)(^87=)]
+  [72(^82^1A6)(^84^1A4)(^85^1A4)(^88^193)(^89=1)(^87=)]
+  [73(^82^1A7)(^84^1A4)(^85^1A4)(^88^193)(^89=1)(^87=)]
+  [74(^82^1AA)(^84^1A8)(^85^1A8)(^88^18F)(^89=1)(^87=)]
+  [75(^82^1AB)(^84^1A8)(^85^1A8)(^88^193)(^89=1)(^87=)]
+  [76(^82^1AC)(^84^1A8)(^85^1A8)(^88^193)(^89=1)(^87=)]
+  [77(^82^1AD)(^84^1A8)(^85^1A8)(^88^196)(^89=1)(^87^197)]
+  [78(^82^1AE)(^84^1AF)(^85^1AF)(^88^193)(^89=1)(^87=)]
+  [79(^82^1B0)(^84^1AF)(^85^1AF)(^88^193)(^89=1)(^87=)]
+  [7A(^82^1B1)(^84^1AF)(^85^1AF)(^88^193)(^89=1)(^87=)]}
+
+@$${1{@
+<(1B2=1152149808643363)(1B3=16)>
+[-2:^80(^82^81)(^84^1B2)(^85^82)(^88=)(^87=)(^86=16)]
+<(1B4=1152149812268576)>[-63:^80(^82^182)(^84^1B4)(^85^183)(^88=)(^87=)
+    (^86=3)]
+@$$}1}@
+
+@$${2{@
+
+<(1B5=http://www.rediff.com/)(1B6=1152149842401905)(1B7=www.rediff.com)
+  (1B8=http://in.rediff.com/index.html)(1B9=in.rediff.com)(1BA
+    =W$00e$00l$00c$00o$00m$00e$00 $00t$00o$00 $00R$00e$00d$00i$00f$00f$00.$00c\
+$00o$00m$00 $00I$00n$00d$00i$00a$00)(1BB
+    =http://im.rediff.com/uim/ads/ind-home-pop.htm)(1BC=1152149847298947)
+  (1BD=im.rediff.com)(1BE=W$00e$00l$00c$00o$00m$00e$00 $00t$00o$00 $00r$00e$00\
+d$00i$00f$00f$00.$00c$00o$00m$00)>
+{1:^80 {(k^81:c)(s=9)1 } [-7B(^82^1B5)(^84^1B6)(^85^1B6)(^88^1B7)(^89=1)]
+  [-7C(^82^1B8)(^84^1B6)(^85^1B6)(^88^1B9)(^87^1BA)]
+  [-7D(^82^1BB)(^84^1BC)(^85^1BC)(^88^1BD)(^87^1BE)]}
+@$$}2}@
+
+@$${3{@
+<(1BF=1152149879104681)>[-7C:^80(^82^1B8)(^84^1BF)(^85^1B6)(^88^1B9)
+    (^87^1BA)(^86=2)]
+[-7D:^80(^82^1BB)(^84^1BF)(^85^1BC)(^88^1BD)(^87^1BE)(^86=2)]
+@$$}3}@
+
+@$${4{@
+<(1C0=1152149895057620)>[-7C:^80(^82^1B8)(^84^1C0)(^85^1B6)(^88^1B9)
+    (^87^1BA)(^86=3)]
+[-7D:^80(^82^1BB)(^84^1C0)(^85^1BC)(^88^1BD)(^87^1BE)(^86=3)]
+@$$}4}@

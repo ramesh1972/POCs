@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='stack'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/stacks.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_stack.html</reference>
+  An element that renders its children on top of each other. The first element  if placed on the bottom, and each successive child is place above the  previous one. All elements are displayed at once. Child elements may also  be placed at absolute positions within the stack.        The left and top attributes on a child of the stack specify the position of  that element.  
+<html><![CDATA[
+<p>  An element that renders its children on top of each other. The first element  if placed on the bottom, and each successive child is place above the  previous one. All elements are displayed at once. Child elements may also  be placed at absolute positions within the stack.  </p>  <p>  The left and top attributes on a child of the stack specify the position of  that element.  </p>
+]]></html>
+
+</element>

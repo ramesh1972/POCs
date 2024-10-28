@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+
+<element name='handler' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblevents.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblhandler.html</reference>
+  Specifies event handlers which the XBL element responds to. You can provide  default handling which can be overriden by an appropriate handler on the  bound element. When the event occurs, the code contained in the action  attribute or, if the action is not present, the content of the handler tag is  executed.  
+
+<example>
+<![CDATA[
+    &lt;handler event=&quot;keydown&quot; keycode=&quot;VK_F3&quot;&gt;
+      alert('You pressed the F3 key! Good for you!');
+    &lt;/handler&gt;
+
+]]>
+</example>
+<attr name='action'>
+  The code contained in the action value is executed when the event occurs.
+</attr>
+<attr name='button'>
+  If set, the action is only called when the given mouse button is pressed. If  this attribute is not used, it does not matter which button is pressed.
+<value name='0'>
+    the left mouse button
+</value>
+<value name='1'>
+    the middle mouse button
+</value>
+<value name='2'>
+    the right mouse button
+</value>
+</attr>
+<attr name='charcode'>
+  If set, the action is only called when the given character is pressed.  If the key is not pressed, the event is ignored by this handler. If this  attribute is not present and there is no keycode attribute, the handler  is called no matter which key is pressed.
+</attr>
+<attr name='clickcount'>
+  Set to the number of mouse clicks that must occur for the action to be called.  For example, if set to 2, the handler only get called on a double click of the  mouse. Mozilla supports values 1, 2 and 3. The default is 1.
+</attr>
+<attr name='command'>
+  The id of a command to invoke when the event occurs. If used in a  non-chrome document, the entire handler will be ignored.
+</attr>
+<attr name='event'>
+  The event that the handler listens to. When the event occurs on the bound  element, the code in the action attribute is executed. Two special events  exist, bindingattached, which is called when the binding is bound to an  element, and bindingdetached, which is called when the binding is removed  from an element.
+</attr>
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the handler with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='keycode'>
+  If set, the action is only called for a key event when the key with the  given code is pressed.
+</attr>
+<attr name='modifiers' type='space separated list of the values below'>
+  A list of modifier keys that should be pressed to invoke the event. Multiple  keys may be separated by spaces or commas. Keys will map to other keys on  platforms that do not have them.
+<value name='shift'>
+    The Shift key.
+</value>
+<value name='alt'>
+    The Alt key. On the Macintosh, this is the Option key.
+</value>
+<value name='meta'>
+    The Meta key. On the Macintosh, this is the Command key.
+</value>
+<value name='control'>
+    The Control key.
+</value>
+<value name='accel'>
+    The key used for keyboard shortcuts on the user's platform. Usually, this would
+    be the value you would use.
+</value>
+<value name='accesskey'>
+    The menu access key.
+</value>
+</attr>
+<attr name='phase'>
+  The event phase where the handler is invoked. This should be set to the  value 'capturing' to indicate during the event capturing phase, 'target'  to indicate at the target element or left out entirely for the bubbling  phase. (A value of 'target' only works in Mozilla 1.4 and later.)
+</attr>
+<attr name='preventdefault'>
+  If set to true, the default action of the event is not performed.
+</attr>
+</element>

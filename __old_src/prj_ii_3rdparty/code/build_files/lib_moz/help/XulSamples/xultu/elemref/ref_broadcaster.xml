@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='broadcaster'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/broadob.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_broadcaster.html</reference>
+  A broadcaster is used whn you want multiple elements to share one or more  attribute values, or when you want elements to respond to a state change.  Any elements that are observing the broadcaster will share the attributes  placed on the broadcaster. For instance, if the broadcaster has a label  attribute, the observes will use that label. If the label changes, the  labels of the observers will update automatically. An onbroadcast event  will be sent to the observers when a change is made.        For menuitems or buttons that just want to have their disabled status set  when the feature should be disabled, you should use a command element  instead.  
+<html><![CDATA[
+<p>  A broadcaster is used whn you want multiple elements to share one or more  attribute values, or when you want elements to respond to a state change.  Any elements that are observing the broadcaster will share the attributes  placed on the broadcaster. For instance, if the broadcaster has a label  attribute, the observes will use that label. If the label changes, the  labels of the observers will update automatically. An onbroadcast event  will be sent to the observers when a change is made.  </p>  <p>  For menuitems or buttons that just want to have their disabled status set  when the feature should be disabled, you should use a command element  instead.  </p>
+]]></html>
+
+</element>

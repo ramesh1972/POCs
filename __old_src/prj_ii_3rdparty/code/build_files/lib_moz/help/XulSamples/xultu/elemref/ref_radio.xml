@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+
+<element name='radio'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/inputs.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_radio.html</reference>
+  An element that can be turned on and off. Radio buttons are almost always  grouped together in groups. Only one radio button within the same  radiogroup may be selected at a time. The user can switch which radio  button is turned on by selecting it with the mouse or keyboard. Other radio  buttons in the same group are turned off. A label, specified with the label  attribute may be added beside the radio button to indicate to the user as to  its function.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULSelectControlItemElement</implements>
+<attr name='accesskey' type='character'>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the radio.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the radio will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.
+</attr>
+<attr name='command' type='element id'>
+  Set to an id of a command element that is being observed by the  element.
+</attr>
+<attr name='crop'>
+  If the label of the radio is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the radio is disabled or not. If this attribute is set to true,  the radio is disabled. This is usually drawn with the text in grey. If the radio is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the radio, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='focused' type='boolean'>
+  This attribute is set to true if the radio element is focused.
+</attr>
+<attr name='label' type='string'>
+  The label that will appear beside the radio. If this is left out, no text appears.  The labels on radio buttons will wrap if there is not enough space.
+</attr>
+<attr name='selected' type='boolean'>
+  This attribute is set to true if the radio button is selected. To  change the currently selected radio button, modify either the selectedIndex  or selectedItem property of the radiogroup.
+</attr>
+<attr name='src' type='image URL'>
+  The URL of the image to appear on the radio. If this attribute is left  out, no image appears.
+</attr>
+<attr name='value' type='string'>
+  You can associate a data value with each radio button.
+</attr>
+<prop name='accessKey'/>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the radio.
+</prop>
+<prop name='crop'/>
+<prop name='disabled'/>
+<prop name='label'/>
+<prop name='radioGroup' type='radiogroup element'>
+  Returns the enclosing radiogroup that the radio element is contained within,  which may or may not be its direct parent.
+</prop>
+<prop name='selected' type='boolean'>
+  This read-only property returns true if the radio button is selected.
+</prop>
+<prop name='value'/>
+</element>

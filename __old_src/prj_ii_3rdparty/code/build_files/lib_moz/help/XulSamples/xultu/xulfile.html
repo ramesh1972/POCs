@@ -1,0 +1,734 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="intro.html"> 
+ <link rel="next" href="chromeurl.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - XUL Structure</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 1.2 - XUL Structure 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <SPAN CLASS="currentpage">XUL Structure</SPAN></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="1.1 - Introduction"
+     href="intro.html">Previous</a>
+
+
+  <a class="nextlink" title="1.3 - The Chrome URL"
+     href="chromeurl.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>XUL Structure</h2>
+
+<P>
+We'll begin by looking at how the XUL is handled in Mozilla.
+</P>
+
+<H3>How XUL is Handled</H3>
+
+<P>
+In Mozilla, XUL is handled much in the same way that HTML is handled. When
+you type the URL of an HTML page into the browser's address field, the
+browser locates the web site and downloads the content. The Mozilla rendering
+engine takes the content in the form of HTML source and transforms it into a
+document tree. The tree is then converted into a set of objects that can
+be displayed on the screen.
+<acronym title="Cascading Style Sheets">CSS</acronym>, images and other
+technologies are used to control the presentation. XUL functions in much the
+same way.
+</P>
+
+<P>
+In fact, in Mozilla, all document types, whether they are HTML or XUL, or
+even SVG are all handled by the same underlying code. This means that the same
+CSS properties may be used to style both HTML and XUL, and many of the
+features can be shared between both. However, there are some features that are
+specific to HTML such as forms, and others which are specific to XUL such as
+overlays.
+</P>
+
+<P>
+Since XUL and HTML are handled in the same way, you can load both from either
+your local file system or from a web page. In addition, Mozilla provides a
+special way of installing and registering files as part of its chrome system.
+This involves creating an archive of the files which the user would download
+and install. These registered packages have enhanced privileges such as being
+able to read files, examine user preferences and bookmarks and access other
+system features. Obviously, web pages do not get these privileges, unless they
+are signed with a digital certificate and the user has granted these
+applications permission.
+</P>
+
+<P>
+The package registration is the way in which Firefox Extensions are able to
+add features to the browser. The extensions are small packages of XUL files,
+Javascript, style sheets and images packed together into a single file. This
+file can be created by using a ZIP utility. When the user downloads it, it
+will be installed onto the user's machine. It will hook into the browser using
+a XUL specific feature called an overlay which allows the XUL from the
+extension and the XUL in the browser to combine together. To the user, it may
+seem like the extension has modified the browser, but in reality, the code is
+all separate, and the extension may be uninstalled easily.
+</P>
+
+<P>
+Registered packages are not required to use overlays, of course. If they
+don't, you won't be able to access them via the main browser interface, but
+you can still access them via a special kind of URL, designed specifically
+for accessing installed packages. This kind of URL is called a chrome URL and
+it always begins with 'chrome://'. Much like how the 'http://' URL always
+refers to remote web sites, and the 'file://' URL always refers to local
+files, the 'chrome://' URL always refers to installed packages and extensions.
+We'll look more at the syntax of a chrome URL in the next section.
+</P>
+
+<P>
+It is important to note that when accessing content through a chrome URL, it
+gains the enhanced privileges described above that other kinds of URLs do not.
+For instance, an HTTP URL does not have any special privileges and an error
+will occur if a web page tries, for example, to read a local file. However, a
+file loaded via a chrome URL will be able to read files without restriction.
+</P>
+
+<P>
+This distinction is important. This means that there are certain things that
+content of web pages cannot do, such as read the user's bookmarks. This
+distinction is <em>not</em> based on the kind of content being displayed; only
+on the type of URL used. Both HTML and XUL placed on a web site have no extra
+permissions; however both HTML and XUL loaded through a chrome URL have
+enhanced permissions.
+</P>
+
+<P>
+It is worth noting that the Mozilla browser itself is actually just a set of
+packages containing XUL files, JavaScript and style sheets. These files are
+accessed via a chrome URL and have enhanced privileges and work just like any
+other package. Of course, the browser is much larger and more sophisticated
+than most extensions. Mozilla's mail client, composer, Firefox and Thunderbird
+as well as number of other components are all written in XUL and are all
+accessible via chrome URLs.
+</P>
+
+<P>
+If you are going to use XUL on a web site, you can just put the XUL file
+on the web site as you would an HTML file, and then load its URL in a
+browser. Ensure that your web server is configured to send XUL files with
+the content type of 'application/vnd.mozilla.xul+xml'. This content type
+is how Mozilla knows the difference between HTML and XUL. Mozilla does not
+use the file extension, unless reading files from the file system, but you
+should use the .xul extension for all XUL files. You can load XUL files from
+your own machine by opening them in the browser, or by double-clicking the
+file in your file manager. Remember that remote XUL will have significant
+restrictions on what it can do.
+</P>
+
+<P>
+Currently, work is ongoing to allow XUL applications to be created as
+standalone applications which have their own installers and executables. While
+they will share Mozilla libraries, you will not need to have a browser
+installed in order to use XUL. It is actually somewhat possible to do this
+today, but the process is rather complicated and rarely done. The goal is to
+streamline this process.
+</P>
+
+<P>
+While much of the functionality is shared between HTML and XUL, Mozilla uses
+a distinctly different kind of document object for each. There are three
+main types of document in Mozilla: HTML, XML and XUL. Naturally, the HTML
+document is used for HTML documents, the XUL document is used for XUL
+documents, and the XML document is used for other types of XML documents.
+Since XUL is also XML, the XUL document is a subtype of the more generic XML
+document. There are subtle differences in functionality. For example while the
+form controls on an HTML page are accessible via the 'document.forms'
+property, this property isn't available for XUL documents since XUL doesn't
+have forms in the HTML sense. On the other hand, XUL specific features such as
+overlays and templates are only available in XUL documents.
+</P>
+
+<P>
+This distinction between documents is important. It is possible to use many
+XUL features in HTML or XML documents since they aren't document type specifc,
+however other features require the right kind of document. For instance, you
+can use the XUL layout types in other documents since they don't rely on the
+XUL document type to function.
+</P>
+
+<P>
+To summarize the points made above:
+</P>
+
+<UL>
+  <LI>Mozilla renders both HTML and XUL using the same underlying engine and
+      uses CSS to specify their presentation.</LI>
+  <LI>XUL may be loaded from a remote site, the local file system, or
+      installed as a package and accessed using a chrome URL. This is what
+      browser extensions do.</LI>
+  <LI>Chrome URLs may be used to access installed packages and open them with
+      enhanced privileges.</LI>
+  <LI>HTML, XML and XUL each have a different document type. Some features may
+      be used in any document type whereas some features are specific to one
+      kind of document.</LI>
+</UL>
+
+<P>
+The next few sections describe the basic structure of a chrome package which
+can be installed into Mozilla. However, if you just want to get started
+building a simple application, you may skip ahead to
+<a href="http://www.xulplanet.com/tutorials/xultu/window.html">section 2</a>
+and save this section for later.
+</P>
+
+<H3>Package Organization</H3>
+
+<P>
+Mozilla is organized in such a way that you can have as many components
+as you want installed. A typical installation might have the navigator,
+messenger and editor components. It will also have one component for each
+installed skin and locale. Each of these components, or packages, is made
+up of a set of files that describe the user interface for it. For example,
+the messenger component will have descriptions of the mail messages list
+window, the composition window and the address book dialogs.
+</P>
+
+<P>
+The packages that are provided with Mozilla are located within the chrome
+directory, which you will find in the directory where you installed Mozilla.
+The chrome directory is where you will find all the files that describe the
+user interface used by the Mozilla browser, mail client and other
+applications. Rather confusingly, the directory is called 'chrome' but is only
+marginally related to the chrome URL. Just copying a file into the 'chrome'
+directory doesn't give the file any extra permissions nor can it be accessed
+via a chrome URL. The only way to create content that can be accessed through
+a chrome URL is by creating a package as described in the next few sections.
+This directory is called 'chrome' likely because it seemed like a convenient
+name to use for the directory where the chrome packages that are included with
+Mozilla are kept.
+</P>
+
+<P>
+To further the confusion, there are two other places where the word chrome
+might appear. The first is the '-chrome' command line argument, and the
+chrome modifier to the 'window.open' function. Neither of these features
+grant extra privileges; instead they are used to open a new top-level window
+without the browser UI such as the menu and toolbar. You will commonly use
+this feature in more complex XUL applications since you wouldn't want a
+browser to exist around your dialog boxes.
+</P>
+
+<P>
+The files for a package are usually combined into a single JAR file. A JAR
+file may created and examined using a ZIP utility. For instance, open some of
+the JAR files in Mozilla's chrome directory to see the basic structure of a
+package. Although it's normal to combine the files into a JAR file, packages
+may also be accessed in expanded form as a set of directories. Although you
+don't normally distribute a package this way, it is handy during development
+since you can edit the file directory and then reload the XUL file without
+having to repackage or reinstall.
+</P>
+
+<P>
+There are usually three different parts to a chrome package, although they are
+all optional. Each part is stored in a different directory. These three sets
+are the content, the skin and the locale, described below. A particular
+package might provide one or more skins and locales, but a user can replace
+them with their own. In addition, the package might include several different
+applications each accessible via different chrome URLs. The packaging system
+is flexible enough so that you can include whatever parts you need, and allow
+other parts, such as the text for different languages, to be downloaded
+separately.
+</P>
+
+<UL>
+  <LI><B>Content</B> - Windows and scripts<BR>
+      The declarations of the windows and the user interface elements
+      contained within them. These are stored in XUL files, which
+      have a xul extension. A content package can have multiple XUL files,
+      but the main window should have a filename that is the same as the
+      package name. For example, the editor package will have a file
+      within it called editor.xul. Scripts are placed in separate files
+      alongside the XUL files.
+  </LI>
+  <LI><B>Skin</B> - Style sheets, images and other theme specific files<BR>
+      Style sheets describe details of the appearance of a window. They
+      are stored separately from XUL files to facilitate modifying
+      the skin (theme) of an application. Any images used are stored here
+      also.
+  </LI>
+  <LI><B>Locale</B> - Locale specific files<BR>
+      All the text that is displayed within a window is stored separately.
+      This way, a user can have a set for their own language.
+  </LI>
+</UL>
+
+<P>
+Take a look at Mozilla's chrome directory. You should see a bunch of JAR files,
+one for each installed package. For example, the file messenger.jar describes
+the user interface for the Mail component. The file modern.jar describes
+the Modern skin.
+</P>
+
+<H3>Distinguishing a Package Type</H3>
+
+<P>
+The name of the JAR file might describe what it contains, but you can't be sure
+unless you view its contents. Let's use the messenger package as an example.
+If you extract the files in messenger.jar, you will find that it contains a
+directory structure much like the following:
+</P>
+
+<PRE>
+content
+   messenger
+      contents.rdf
+      messenger.xul
+      -- other mail XUL and JS files goes here --
+      addressbook
+         -- address book files go here --
+      messengercompose
+         -- message composition files go here --
+.
+.
+.
+</PRE>
+
+<P>
+This is easily recognizable as a content package, as the top-level directory
+is called 'content'. For skins, this directory will usually be called 'skin'
+and for locales, it will usually be called 'locale'. Actually, this naming
+scheme isn't necessary but this is a common convention to make the parts of a
+package clearer. Some packages may include a content section, a skin and a
+locale. In this case, you will find a subdirectory for each type. For example,
+Chatzilla is distributed in this way.
+</P>
+
+<P>
+The content/messenger directory contains a number of files with xul and js
+extensions. The XUL files are the ones with the xul extension. The files with
+js extensions are JavaScript files which contain scripts that handle the
+functionality of a window. Many XUL files have a script file associated with
+them, and some may have more than one.
+</P>
+
+<P>
+In the listing above, two files have been shown. There are others of course,
+but for simplicity they aren't shown. The file messenger.xul is the XUL file
+that describes the main Mail window which displays the mail messages list.
+The mail window is fairly complex so it is actually made of several files each
+combined together using overlays. The main window for a content package should
+have the same name as the package with a xul extension. In this case, the
+package name is 'messenger', so we expect to find 'messenger.xul'. Some of the
+other XUL files describe separate windows. For example, the file subscribe.xul
+describes the dialog for subscribing to newsgroups.
+</P>
+
+<P>
+The file contents.rdf is found in every package, one for each content, skin
+and locale in the package. This is an important file since it specifies the
+name of the package, its author and version. Mozilla will read this file and
+use its contents to register the package and assign a chrome URL to it, so
+that the files can be accessed through this chrome URL. Without this file,
+a chrome URL cannot be assigned to the package. The details of this file will
+be described in a later section.
+</P>
+
+<P>
+Two subdirectories, addressbook and messengercompose, describe additional
+sections of the Mail component. They are placed in different directories
+only to separate them. They don't need 'contents.rdf' files because they can
+be accessed through the same chrome URLs.
+</P>
+
+<H3>Skins</H3>
+
+<P>
+The underlying code of Mozilla calls them skins, although the user interface
+calls them themes, but they both refer to the same thing. The modern.jar and
+classic.jar files in the Mozilla chrome directory describe the themes provided
+with Mozilla. Their structure is similar to the content packages. For example,
+examining modern.jar:
+</P>
+
+<PRE>
+skin
+   modern
+      navigator
+         contents.rdf
+         -- navigator skin files go here --
+      messenger
+         contents.rdf
+         -- messenger skin files go here --
+      editor
+         contents.rdf
+         -- editor skin files go here --
+      communicator
+         contents.rdf
+         -- communicator skin files go here --
+      global
+         contents.rdf
+         -- global skin files go here --
+.
+.
+.
+</PRE>
+
+<P>
+This is a little more complicated, although the structure is similar to the
+content part. Instead of 'content' at the top level, 'skin' is used. Remember
+that this is purely convention, as you can actually put all the files in one
+directory at the top level and not use subdirectories. However, for larger
+applications like Mozilla itself, subdirectories are used to separate the
+different components. In the example above, five directories exist, one for
+each package that the skin is applied to. The global directory contains skin
+files that are general to all packages. These files will apply to all
+components and you will usually use this one yourself. The global part defines
+the appearance of all of the common XUL widgets, whereas the other directories
+have files that are specific to those applications. For example, the editor
+directory describes the skin for the editor component and contains, among
+other files, the images for the editor toolbar buttons.
+</P>
+
+<P>
+You might notice that there are five contents.rdf files. This way, the skins
+are applied separately to each component. You could theoretically have a
+different skin for navigator as messenger, but most of the appearance is
+determined by the global part so you won't see much difference. Besides,
+Mozilla provides no capability to select a different theme for each
+application. They are also separate files so that new components can be added
+and existing components can be removed easily. For example, you could create a
+new theme for messenger and users could download it separately. By packaging
+the parts separately, the right pieces can be selected for use.
+</P>
+
+<P>
+A skin is made up of CSS files and a number of images used to define the
+look of an interface. The file messenger.css is used by messenger.xul and
+contains styles which define the appearance of various parts of the mail
+interface. Again, note how the file messenger.css has the same name as the
+package. By changing the CSS files, you can adjust the appearance of a window
+without changing its function. This is how you can create a new theme. The XUL
+part remains the same but the skin part changes independently.
+</P>
+
+<H3>Locales</H3>
+
+<P>
+The file en-US.jar describes the language information for each component, in
+this case for US English. Like the skins, each language will contain files
+that specify text used by the package but for a specific language. As usual, a
+contents.rdf file is provided that lists the packages the locale provides text
+for. Subdirectories provide the text for each package. The locale structure is
+similar to the skin part, so we won't list it here.
+</P>
+
+<P>
+The localized text is stored in two types of files, DTD files, and properties
+files. The DTD files have a dtd extension and contain entity declarations, one
+for each text string that is used in a window. For example, the file
+messenger.dtd contains entity declarations for each menu command. In addition,
+keyboard shortcuts for each command are also defined, because they may be
+different for each language. DTD files are used by XUL files so, in general,
+you will have one per XUL file. The locale part also contains properties
+files, which are similar, but are used by script files. The file
+messenger.properties contains a few such localized strings.
+</P>
+
+<P>
+This structure allows you to translate Mozilla or a component into a different
+language by just adding a new locale for that language. You don't have to
+change the XUL part. In addition, another person could supply a separate
+package that applies a skin or locale to your content part, thus providing
+support for a new theme or language without having to change the original
+package.
+</P>
+
+<H3>Other Packages</H3>
+
+<P>
+Many of the packages in Mozilla are sub-packages of the communicator package.
+For example, you'll find the bookmarks window, the history viewer and the
+preferences dialogs within the communicator package. They are put there
+because they are general to a number of packages. There is nothing special
+about them.
+</P>
+
+<P>
+There is a one special package called toolkit (or global). We saw the global
+directory earlier for skins. The toolkit.jar contains the corresponding content
+part for it. It contains some global dialogs and definitions. It also defines
+the default appearance and functionality of the various common widgets such as
+textboxes and buttons. The files located in the global part of a skin package
+contain the default look for all of the XUL interface elements. Most theme
+changes will involve variations of these files.
+</P>
+
+<H3>Adding a Package</H3>
+
+<P>
+Mozilla places the packages that are included with the installation in the
+chrome directory. However, they do not need to be placed there. If you have
+another package installed, it can be placed anywhere on the disk. The file
+chrome.rdf in the chrome directory stores the list of installed packages,
+skins and locales and where they are located. It is common to install new
+packages into the chrome directory simply because it is convenient, however
+they will work just as well from another directory or somewhere on your
+local network. You cannot store them on a remote site, unless the remote site
+is mounted through the local file system.
+</P>
+
+<P>
+A user may have multiple skins and locales installed that modify the same
+package. Only one skin and locale per package is active at any given time.
+The file chrome/chrome.rdf in the user profile specifies which skins and
+locales are active. This file can also specify content packages. It works
+similarly to the chrome.rdf file in the main Mozilla installation, however
+packages specified in the profile are only installed for that user, whereas
+the Mozilla directory's chrome.rdf is used for packages that are available for
+all users.
+</P>
+
+</P>
+
+<HR>
+<P>
+<A HREF="chromeurl.html">(Next)</A>
+In the next section, we'll look at how to refer to chrome packages using the
+chrome URL.
+
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="1.1 - Introduction"
+     href="intro.html">Previous</a>
+
+
+  <a class="nextlink" title="1.3 - The Chrome URL"
+     href="chromeurl.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+
+<element name='menuseparator'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/menubar.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_menuseparator.html</reference>
+  Used to create a separator between menu items. Typically drawn as a thin line.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULSelectControlItemElement</implements>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the menuseparator.
+</prop>
+</element>

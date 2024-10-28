@@ -1,0 +1,676 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="chromeurl.html"> 
+ <link rel="next" href="window.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Contents.rdf Files</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 1.4 - Contents.rdf Files 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="1.3 - The Chrome URL"
+     href="chromeurl.html">Previous</a>
+
+
+  <a class="nextlink" title="2.1 - Creating a Window"
+     href="window.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Contents.rdf Files</h2>
+
+<P>
+In this section, we'll see how to put chrome and XUL files into a package
+and create the contents.rdf files for them.
+</P>
+
+<H3>Packages</H3>
+
+<P>
+A package is a set of XUL files and scripts that define the functionality of a
+user interface. Packages may be installed into Mozilla and referenced with
+chrome URLs. A package can contain any kinds of files and may be split into
+subdirectories for different parts of the package. For example, the bookmarks
+and history viewer are part of the communicator package, but are stored in
+different sub-directories.
+</P>
+
+<P>
+A package can be stored either as a directory or as a JAR archive. Each
+package will have a file, contents.rdf, that describes the package. This file
+will be placed inside the JAR file alongside the files that it describes. The
+file must be named contents.rdf and be a file in RDF (Resource Description
+Framework) format. We'll learn more about RDF later.
+</P>
+
+<H3>Contents.rdf Files</H3>
+
+<P>
+The contents.rdf file describes the contents of a package. It can also be used
+to describe a skin or locale. These files are fairly easy to create once you
+know how. The template below can be used as a starting point.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+
+  &lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+    &lt;RDF:li resource="urn:mozilla:package:myapplication"/&gt;
+  &lt;/RDF:Seq&gt;
+
+  &lt;RDF:Description about="urn:mozilla:package:myapplication"
+        chrome:displayName="My Application"
+        chrome:author="name"
+        chrome:name="myapplication"&gt;
+  &lt;/RDF:Description&gt;
+&lt;/RDF:RDF&gt;</PRE></DIV>
+
+
+
+<P>
+You can use this template and make some minor changes specific to your
+package. Let's break this down to understand what each piece does.
+</P>
+
+<PRE>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+</PRE>
+
+<P>
+These three lines should be placed at the top of the contents.rdf file.
+Because RDF is an XML format, it contains the standard first line that XML
+files usually have. Next, we declare the namespaces that are being used, one
+for RDF and the other for the chrome system. If you don't understand what
+this means, don't worry. Just add them at the beginning of the file.
+</P>
+
+<PRE>&lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+  &lt;RDF:li resource="urn:mozilla:package:myapplication"/&gt;
+&lt;/RDF:Seq&gt;
+</PRE>
+
+<P>
+These lines are used to declare what packages, skins and locales are described
+by the file. In this case, a content package is being described (as indicated
+by the word 'package' in the text). If you were creating a skin, you would use
+'skin' instead of 'package', and if you were creating a locale, you would use
+'locale'. The name of the package is 'myapplication'. Of course, you would
+replace this with the name of the package you were creating. For example, the
+Mozilla mail application has a name of 'messenger'. The name should be short
+and meaningful. This name will be used in chrome URLs for the package.
+</P>
+
+<P>
+The <SPAN CLASS=" tag">RDF:li</SPAN> tag above is much like the 
+<SPAN CLASS=" tag">li</SPAN> tag of HTML as it declares an element of a
+list. Thus, you can declare multiple packages by using multiple
+<SPAN CLASS=" tag">RDF:li</SPAN> tags.
+</P>
+
+<P>
+For skins, replace the two occurances of 'package' with 'skin'; for locales,
+replace the two occurances of 'package' with 'locale'. For example, the
+following specifies a skin:
+
+<PRE>&lt;RDF:Seq about="urn:mozilla:skin:root"&gt;
+  &lt;RDF:li resource="urn:mozilla:skin:blueswayedshoes"/&gt;
+&lt;/RDF:Seq&gt;
+</PRE>
+
+<P>
+Next, the descriptive part that specifies the name and author of the
+application:
+</P>
+
+<PRE>
+  &lt;RDF:Description about="urn:mozilla:package:myapplication"
+        chrome:displayName="My Application"
+        chrome:author="name"
+        chrome:name="myapplication"&gt;
+  &lt;/RDF:Description&gt;
+</PRE>
+
+<P>
+This block is used to provide more details of the package, skin or locale.
+You will need a description for each <SPAN CLASS=" tag">li</SPAN> that you
+have. The value of the <SPAN CLASS="attrib">about</SPAN> attribute should
+be equal to the <SPAN CLASS="attrib">resource</SPAN> attribute on the
+<SPAN CLASS=" tag">li</SPAN> tag.
+</P>
+
+<P>
+The three extra attributes describe extra information about the package:
+</P>
+
+<UL>
+  <LI>displayName<BR>
+      The title of the package as it would be displayed to the user. For
+      example, 'Messenger'.</LI>
+  <LI>author<BR>
+      The name of the author of the package.</LI>
+  <LI>name<BR>
+      The name of the package, skin or locale. This should be the same value
+      as what comes after 'urn:mozilla:package:' that was specfied earlier.
+      This name is used as the first part of the chrome URL.</LI>
+</UL>
+
+<P>
+You can also use a variety of other values as well. When Mozilla registers
+your package, these values will be added into the chrome registry.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+Let's create a contents.rdf file for the find files dialog we'll be creating.
+It will need to describe the package. Because there are no sub-packages, skins
+or locales included, it is fairly similar to the template above.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+
+  &lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+    &lt;RDF:li resource="urn:mozilla:package:findfile"/&gt;
+  &lt;/RDF:Seq&gt;
+
+  &lt;RDF:Description about="urn:mozilla:package:findfile"
+        chrome:displayName="Find Files"
+        chrome:author="Whoever"
+        chrome:name="findfile"&gt;
+  &lt;/RDF:Description&gt;
+&lt;/RDF:RDF&gt;</PRE></DIV>
+
+
+
+<P>
+Here, the component is named 'findfile' which means that we'll be able to
+refer to it using the following chrome URL:
+</P>
+
+<PRE>
+chrome://findfile/content/findfile.xul
+</PRE>
+
+</DIV>
+
+<H3>Installing a Package</H3>
+
+<P>
+The list of installed packages is stored in the chrome directory in the file
+chrome.rdf. You shouldn't edit this file directly. It will be automatically
+changed when you install a new package. Like the contents.rdf files, it is an
+RDF format file. On first inspection, it looks quite different than the
+contents.rdf files, but if you are familiar with RDF, you should notice that
+it is actually very similar.
+</P>
+
+<P>
+Whenever Mozilla starts up, it checks the chrome directory for a file called
+'installed-chrome.txt'. This file contains a list, in a very simple format,
+of all the content packages, skins and locales that are installed. If this
+file is changed, Mozilla scans each entry in the list and registers or updates
+each one as necessary so that they can be used.
+</P>
+
+<P>
+To register a new package, all you need to do is add an entry to the file
+'installed-chrome.txt' and restart Mozilla. The new package will be registered
+and the chrome.rdf file will be regenerated as necessary to contain the newly
+installed package. Mozilla also has an installation system called XPInstall
+which will allow scripts to install packages automatically via JavaScript
+without having to modify this file manually. XPInstall will be described
+near the end of the tutorial. However, during development, we can modify
+the installed-chrome.txt file directly.
+</P>
+
+<P>
+The file 'installed-chrome.txt' is in the chrome directory. The file
+contains a list of entries to install, one per line. For example:
+</P>
+
+
+<DIV CLASS="sample"><PRE>content,install,url,resource:/chrome/findfile/content/
+skin,install,url,resource:/chrome/findfile/skin/</PRE></DIV>
+
+
+
+<P>
+The above will be used to install the findfiles package and also a skin for it.
+The format of each line is fairly simple. It's just four values separated by
+commas:
+</P>
+
+<UL>
+  <LI>Type<BR>
+      Set to 'content' for content packages, 'skin' for skins or 'locale' for
+      locales.</LI>
+  <LI>Install<BR>
+      Set to the text 'install' to have the entry installed. For skins and
+      locales, you can also set it to 'profile' to have the entry installed
+      in the user profile directory. This would mean that it would only be
+      installed for a particular user.</LI>
+  <LI>URL Type<BR>
+      Set to the text 'url' to specify a URL where the new package, skin or
+      locale is stored. If you use 'path' instead, you can use a file path
+      (which should be in the path format of your operating system).</LI>
+  <LI>URL<BR>
+      Set to the URL or file path of the location of the package. This should
+      be the directory which contains the contents.rdf file or the path and
+      name of the JAR file. Because it refers to a directory, make sure there
+      is a slash at the end, otherwise the package will not be found
+      correctly.</LI>
+</UL>
+
+<P>
+Notice that the URLs used are 'resource:/' URLs. You could use a file URL as
+well. The resource URL is similar to a file URL except that it begins with
+'resource:' instead of 'file:' and its top-level directory is the directory
+where Mozilla is installed instead of the root of the file system. This
+means that it can be used to refer to files in the Mozilla directory or its
+subdirectories, regardless of where Mozilla has been installed. The resource
+URL should only have one slash after the colon since its always a relative
+path.
+</P>
+
+<P>
+The line added should point to the directory where the contents.rdf file is
+located. If you have multiple packages, add a line for each one.
+</P>
+
+<P>
+Although Mozilla follows a directory naming convention, you can put the files
+anywhere you want. For example, the following will install a new package that
+is located in the directory /main/calculator/.
+</P>
+
+
+<DIV CLASS="sample"><PRE>content,install,url,file:///main/calculator/</PRE></DIV>
+
+
+
+<P>
+You might notice that the existing lines in installed-chrome.txt have yet
+another URL type, the 'jar:' URL type. If you are packing your files into a
+JAR file, you can use a JAR URL to refer to it. It has two parts, separated by
+an exclamation mark (!). The part before is the URL of the JAR file and the
+part after is the directory or file within the archive. The example below
+might refer to the find files dialog:
+</P>
+
+
+<DIV CLASS="sample"><PRE>jar:resource:/chrome/findfile.jar!/content/findfile/</PRE></DIV>
+
+
+
+<P>
+However, you don't usually need to worry about JAR URLs when creating your own
+packages. Instead, you would keep the package expanded and refer to it using
+file or resource URL types.
+</P>
+
+<H3>Quick Steps</H3>
+
+<P>
+The information above may have been a little confusing. Here is a quick guide
+to creating a simple package. You may wish to simply follow the steps below
+and try to work out the details of how package installation works once you are
+more familiar with XUL.
+</P>
+
+<ol>
+
+<li>Create a directory somewhere on your disk. Many people put this as a subdirectory
+    inside Mozilla's chrome directory, but this isn't necessary. The directory could
+    be anywhere and on any disk. Put your XUL files in this directory.</li>
+<li>Create a file called <strong>contents.rdf</strong> and place it in this directory.
+    Copy the text in the box below into the new contents.rdf file. This file is used
+    to identify the application id, its name, author, version and so on.</li>
+
+<div class="sample"><pre>
+&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+
+  &lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+    &lt;RDF:li resource="urn:mozilla:package:<span style="color: red;">myapplication</span>"/&gt;
+  &lt;/RDF:Seq&gt;
+
+  &lt;RDF:Description about="urn:mozilla:package:<span style="color: red;">myapplication</span>"
+          chrome:displayName="<span style="color: blue;">Application Title</span>"
+          chrome:author="<span style="color: blue;">Author Name</span>"
+          chrome:name="<span style="color: red;">myapplication</span>"
+          chrome:extension="true"/&gt;
+
+&lt;/RDF:RDF&gt;
+</pre></div>
+</li>
+
+<li>Change the highlighted parts of the file above to your own information. The red text
+'myapplication' should be the ID of your application. You make this up, but typically, the
+ID is similar to your application's name. Replace the blue highlighted text above with your
+application's title and author.
+</li>
+<li>
+  If the 'chrome:extension' field is true, the application is a Mozilla Firefox Extension
+  and it will show up in the Extensions window of the browser. If false, it will not appear.
+</li>
+<li>
+  Save the contents.rdf and make sure it is in the directory you created in step 1.
+</li>
+<li>
+  Open the file &lt;mozilla-directory&gt;/chrome/installed-chrome.txt, where &lt;mozilla-directory&gt;
+
+  is the directory where Mozilla is installed. Exit Mozilla before you do this.
+</li>
+<li>
+  Next, you are going to register the new application with Mozilla so it will know where to
+  find it. Add a line at the end of installed-chrome.txt pointing to the new directory you
+  created in step 1.
+
+<div class="sample"><pre>content,install,url,<span style="color: red;">file:///main/app/</span>
+</pre></div>
+
+Change the highlighted text to the file URL of the directory. Make sure that it URL ends with
+a slash and that you press enter at the end of the line. If you aren't sure what the URL is,
+open the directory created in step 1 into a Mozilla browser and copy the URL from the location
+field. Note that the reference should always be a directory, not a file.
+</li>
+<li>
+Delete the file &lt;mozilla-directory&gt;/chrome/chrome.rdf.
+
+<li>
+Start Mozilla. You should be able to view any XUL files you put into the directory using a
+URL of the form:
+<strong>chrome://<span style="color: red;">applicationid</span>/content/file.xul</strong>
+where file.xul is the filename. Your main XUL file should be <strong>applicationid.xul</strong>
+which you can load using the shortcut URL 
+<strong>chrome://<span style="color: red;">applicationid</span>/content/</strong>.
+</li>
+
+</ol>
+
+<p>
+If you are creating skin and/or locale portions, repeat the steps above, except that the format
+of the contents.rdf file is slightly different. Look at the contents.rdf files in other applications
+for details.
+</p>
+
+<h3>Troubleshooting</h3>
+
+<p>
+Creating a chrome package can often be tricky and it is difficult to diagnose
+problems. Here are a few tips in case you get stuck.
+</p>
+
+<ul>
+  <li>Open the file &lt;mozilla-directory&gt;/chrome/chrome.rdf. You should find references to
+      your application ID in there. If not, something is wrong with registration. If it is
+      there, you are probably using the wrong chrome URL when you load the file.</li>
+  <li>Try deleting the &lt;mozilla-directory&gt;/chrome/chrome.rdf file. It will get regenerated.
+      Also delete the entire &lt;mozilla-directory&gt;/chrome/overlayinfo/ directory if you are using
+      overlays.
+  <li>Make sure that the URL in the line you added to installed-chrome.txt ends with a slash
+      and the file itself ends with a blank line.</li>
+  <li>On Windows, file URLs are of the form file:///C|/files/app/, where C is the drive letter.</li>
+  <li>Make sure the contents.rdf file is in the right directory and is well-formed. Open the
+      contents.rdf file in Mozilla to see if it parses as well-formed XML. If not, you will see
+      an error on a yellow background.</li>
+  <li>If you are using a debug build of Mozilla, some info will be printed to the terminal when
+      starting up indicating what chrome applications are being checked. Check if your application
+      is listed.</li>
+</ul>
+
+<HR>
+<P>
+<A HREF="window.html">(Next)</A>
+In the next section, we will start looking into the XUL language.
+
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="1.3 - The Chrome URL"
+     href="chromeurl.html">Previous</a>
+
+
+  <a class="nextlink" title="2.1 - Creating a Window"
+     href="window.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

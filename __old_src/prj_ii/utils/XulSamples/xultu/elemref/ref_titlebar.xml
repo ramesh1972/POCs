@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+
+<element name='titlebar'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_titlebar.html</reference>
+  Used to represent a title bar. This element is used to create a custom  titlebar by placing the contents as children inside the titlebar. When  the titlebar is clicked and dragged, the window moves with it. Any  elements inside the titlebar do not receive events. The titlebar will send  a command event after the move is complete.  
+
+</element>

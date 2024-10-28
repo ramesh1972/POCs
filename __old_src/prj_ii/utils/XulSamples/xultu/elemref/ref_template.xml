@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='template'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/templates.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_template.html</reference>
+  Used to declare a template for rule-based construction of elements. Elements  are constructed from a datasource. For more information see the rule element.  
+
+</element>

@@ -1,0 +1,10 @@
+@media print {
+  #header, #sidebar, #locationlinks, .navlinks-pnc, .extlink, hr {
+    display: none;
+  }
+ 
+  #content {
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+}

@@ -1,0 +1,112 @@
+<?xml version='1.0'?>
+
+<element name='rdf:bookmarks'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/datasrc.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_rdfbookmarks.html</reference>
+  This datasource holds the user's bookmarks. Each bookmark holds a title and URL  and information about when the user has visited the bookmark and the schedule  for checking when the URL is checked for updates. The root of the bookmarks  datasource is NC:BookmarksRoot. You can also use the roots NC:PersonalToolbarFolder  for the folder holding personal toolbar items and NC:IEFavoritesRoot for the folder  containing the imported IE favorites.  
+
+<attr name=' BookmarkAddDate (http://home.netscape.com/NC-rdf#BookmarkAddDate) '>
+  
+  The date and time that the bookmark was added.
+</attr>
+<attr name=' Description (http://home.netscape.com/NC-rdf#Description) '>
+  
+  The description or comments of the bookmark. The user can set this in a bookmark's  property window.
+</attr>
+<attr name=' LastModifiedDate (http://home.netscape.com/WEB-rdf#LastModifiedDate) '>
+  
+  The date that URL was last modified.
+</attr>
+<attr name=' LastVisitDate (http://home.netscape.com/WEB-rdf#LastVisitDate) '>
+  
+  The date that URL was last visited.
+</attr>
+<attr name=' Name (http://home.netscape.com/NC-rdf#Name) '>
+  
+  The name of the resource. This will be the title of the page.
+</attr>
+<attr name=' Schedule (http://home.netscape.com/WEB-rdf#Schedule) '>
+  
+  The schedule for checking the bookmark's URL for updates. This is a string of the  following format:   &lt;days to check&gt;|&lt;times to check&gt;|&lt;duration&gt;|&lt;alert options&gt;        For example: '1|4-11|30|icon,alert' means check on Monday between 4 and 11, every  thirty minutes. If the page has been updated, the icon changed and an alert is  displayed. The first value may contain multiple digits for multiple days. Additional  alert options are 'sound' and 'open' to play a sound and open a new window. These  options correspond to those in the bookmark properties dialog.
+</attr>
+<attr name=' ShortcutURL (http://home.netscape.com/NC-rdf#ShortcutURL) '>
+  
+  The shortcut keyword for the resource. You can set this for a bookmark in its  properties window.
+</attr>
+<attr name=' URL (http://home.netscape.com/NC-rdf#URL) '>
+  
+  The URL for the resource. This will be the URL that is opened when a user double-clicks  on the entry in a tree.
+</attr>
+<attr name=' status (http://home.netscape.com/WEB-rdf#status) '>
+  
+  This property is set to the string 'new' when an update check determines that the  page has been modified. This only applies when the schedule has the icon alert option  set.
+</attr>
+<attr name=' type (http://www.w3.org/1999/02/22-rdf-syntax-ns#type) '>
+  
+  The type of bookmark. This will be set to one of three possible values. The bookmarks  window uses the type to determine how to render the bookmark, including which icon  to use.
+<value name='http://home.netscape.com/NC-RDF#Bookmark'>
+    A regular bookmark.
+</value>
+<value name='http://home.netscape.com/NC-RDF#BookmarkSeparator'>
+    A bookmark separator. You will typically draw a horizontal line for this type.
+</value>
+<value name='http://home.netscape.com/NC-RDF#Folder'>
+    A bookmark folder, which can contain other bookmarks.
+</value>
+</attr>
+<method name='rdf:deletebookmark'>
+<prototype> deletebookmark (http://home.netscape.com/NS-rdf#command?cmd=deletebookmark) </prototype>
+  
+  Deletes a bookmark from the datasource.
+</method>
+<method name='rdf:deletebookmarkfolder'>
+<prototype> deletebookmarkfolder (http://home.netscape.com/NS-rdf#command?cmd=deletebookmarkfolder) </prototype>
+  
+  Deletes a bookmark from the datasource.
+</method>
+<method name='rdf:deletebookmarkseparator'>
+<prototype> deletebookmarkseparator (http://home.netscape.com/NS-rdf#command?cmd=deletebookmarkseparator) </prototype>
+  
+  Deletes a bookmark separator from the datasource.
+</method>
+<method name='rdf:export'>
+<prototype> export (http://home.netscape.com/NS-rdf#command?cmd=export) </prototype>
+  
+  Used to export bookmarks to a file. Use the URL property to specify a file URL  to export to.
+</method>
+<method name='rdf:import'>
+<prototype> import (http://home.netscape.com/NS-rdf#command?cmd=import) </prototype>
+  
+  Used to import bookmarks from a file. Use the URL property to specify a file URL  to import from.
+</method>
+<method name='rdf:newbookmark'>
+<prototype> newbookmark (http://home.netscape.com/NS-rdf#command?cmd=newbookmark) </prototype>
+  
+  Adds a new bookmark to the datasource. Arguments include the Name and URL of  the new bookmark. You should pass nsIResource objects for the name and URL as  arguments.
+</method>
+<method name='rdf:newfolder'>
+<prototype> newfolder (http://home.netscape.com/NS-rdf#command?cmd=newfolder) </prototype>
+  
+  Adds a new bookmark folder to the datasource. Use the Name argument to specify  the folder title.
+</method>
+<method name='rdf:newseparator'>
+<prototype> newseparator (http://home.netscape.com/NS-rdf#command?cmd=newseparator) </prototype>
+  
+  Adds a new bookmark separator to the datasource.
+</method>
+<method name='rdf:setnewbookmarkfolder'>
+<prototype> setnewbookmarkfolder (http://home.netscape.com/NS-rdf#command?cmd=setnewbookmarkfolder) </prototype>
+  
+  Indicates that a bookmark is a folder.
+</method>
+<method name='rdf:setnewsearchfolder'>
+<prototype> setnewsearchfolder (http://home.netscape.com/NS-rdf#command?cmd=setnewsearchfolder) </prototype>
+  
+  indicates that a folder is the one used for storing search results.
+</method>
+<method name='rdf:setpersonaltoolbarfolder'>
+<prototype> setpersonaltoolbarfolder (http://home.netscape.com/NS-rdf#command?cmd=setpersonaltoolbarfolder) </prototype>
+  
+  Indicates that a folder is the one used for the items that appear on the  personal toolbar.
+</method>
+</element>

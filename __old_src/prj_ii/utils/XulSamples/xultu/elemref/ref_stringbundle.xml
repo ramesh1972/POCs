@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+
+<element name='stringbundle'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/locprops.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_stringbundle.html</reference>
+  An element which can be used to load localized resources from property files.  Stringbundles should be placed inside a stringbundleset element.        A property file is a list of property key-value pairs each on a separate  line. The key and value is separated with an equals sign. For example, the  following defines two properties:         message.displayError=An error occured trying to display this message   message.nameAlreadyUsed=The name %s is already being used by another account.      
+<html><![CDATA[
+<p>  An element which can be used to load localized resources from property files.  Stringbundles should be placed inside a stringbundleset element.  </p>  <p>  A property file is a list of property key-value pairs each on a separate  line. The key and value is separated with an equals sign. For example, the  following defines two properties:  </p>  <p><pre>  message.displayError=An error occured trying to display this message<br>  message.nameAlreadyUsed=The name %s is already being used by another account.  </pre></p>  </p>
+]]></html>
+
+<attr name='src' type='string properties file URL'>
+  The URL of the property file that contains the localized strings.
+</attr>
+<prop name='appLocale' type='nsILocale'>
+  Returns the XPCOM object which holds information about the user's locale. This is  an object which implements nsILocale.
+</prop>
+<method name='getFormattedString' returns='string'>
+<prototype> getFormattedString ( key , strArray ) </prototype>
+  
+  Returns a formatted string with the given key name from the string  bundle, where each occurance of %s is replaced by each successive  element in the supplied array. You may also use other formatting codes  
+</method>
+<method name='getString' returns='string'>
+<prototype> getString ( key ) </prototype>
+  
+  Returns the string with the given key name from the string bundle.
+</method>
+<prop name='src'/>
+<prop name='stringBundle' type='nsIStringBundle'>
+  Returns the XPCOM string bundle object which implements nsIStringBundle.
+</prop>
+</element>

@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Event Handlers Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Event Handlers 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Event Handlers</h3>
+
+<p>
+  The following describes the event handler attributes that are valid for most XUL  elements. The event name is the attribute without the 'on' prefix.  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/events.html'>More information about Event Handlers<a></p>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_CheckboxStateChange'>CheckboxStateChange</a></td>
+<td><a href='#attr_DOMAttrModified'>DOMAttrModified</a></td>
+<td><a href='#attr_DOMMenuItemActive'>DOMMenuItemActive</a></td>
+<td><a href='#attr_DOMMenuItemInactive'>DOMMenuItemInactive</a></td>
+<td><a href='#attr_DOMMouseScroll'>DOMMouseScroll</a></td>
+</tr><tr>
+<td><a href='#attr_DOMNodeInserted'>DOMNodeInserted</a></td>
+<td><a href='#attr_DOMNodeRemoved'>DOMNodeRemoved</a></td>
+<td><a href='#attr_RadioStateChange'>RadioStateChange</a></td>
+<td><a href='#attr_onblur'>onblur</a></td>
+<td><a href='#attr_onbroadcast'>onbroadcast</a></td>
+</tr><tr>
+<td><a href='#attr_onchange'>onchange</a></td>
+<td><a href='#attr_onclick'>onclick</a></td>
+<td><a href='#attr_onclose'>onclose</a></td>
+<td><a href='#attr_oncommand'>oncommand</a></td>
+<td><a href='#attr_oncommandupdate'>oncommandupdate</a></td>
+</tr><tr>
+<td><a href='#attr_oncontextmenu'>oncontextmenu</a></td>
+<td><a href='#attr_ondblclick'>ondblclick</a></td>
+<td><a href='#attr_ondragdrop'>ondragdrop</a></td>
+<td><a href='#attr_ondragenter'>ondragenter</a></td>
+<td><a href='#attr_ondragexit'>ondragexit</a></td>
+</tr><tr>
+<td><a href='#attr_ondraggesture'>ondraggesture</a></td>
+<td><a href='#attr_ondragover'>ondragover</a></td>
+<td><a href='#attr_onfocus'>onfocus</a></td>
+<td><a href='#attr_oninput'>oninput</a></td>
+<td><a href='#attr_onkeydown'>onkeydown</a></td>
+</tr><tr>
+<td><a href='#attr_onkeypress'>onkeypress</a></td>
+<td><a href='#attr_onkeyup'>onkeyup</a></td>
+<td><a href='#attr_onload'>onload</a></td>
+<td><a href='#attr_onmousedown'>onmousedown</a></td>
+<td><a href='#attr_onmousemove'>onmousemove</a></td>
+</tr><tr>
+<td><a href='#attr_onmouseout'>onmouseout</a></td>
+<td><a href='#attr_onmouseover'>onmouseover</a></td>
+<td><a href='#attr_onmouseup'>onmouseup</a></td>
+<td><a href='#attr_onoverflow'>onoverflow</a></td>
+<td><a href='#attr_onoverflowchanged'>onoverflowchanged</a></td>
+</tr><tr>
+<td><a href='#attr_onpopuphidden'>onpopuphidden</a></td>
+<td><a href='#attr_onpopuphiding'>onpopuphiding</a></td>
+<td><a href='#attr_onpopupshowing'>onpopupshowing</a></td>
+<td><a href='#attr_onpopupshown'>onpopupshown</a></td>
+<td><a href='#attr_onselect'>onselect</a></td>
+</tr><tr>
+<td><a href='#attr_onunderflow'>onunderflow</a></td>
+<td><a href='#attr_onunload'>onunload</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Event Handler Attributes:</a></h4>
+<div class='ref_apblk'>
+  <h5><a name='attr_CheckboxStateChange'><span class='attrib'>CheckboxStateChange</span></a></h5>
+  <p>
+  This event is sent when a <a href='ref_checkbox.html'>checkbox</a> is checked or unchecked, either by the  user or a script. This event has no corresponding attribute; it must be  added using the addEventListener method. Normally, you would use the command  event to listen to checkbox changes, however, the command event is only sent  when the user modifies the value, while the CheckboxStateChange event is  also sent when a script modifies the checked property of a checkbox. For user  changes, the CheckboxStateChange event is sent before the command event. The  CheckboxStateChange event does not bubble.</p>
+  <h5><a name='attr_DOMAttrModified'><span class='attrib'>DOMAttrModified</span></a></h5>
+  <p>
+  This event is sent to an element when one of its attributes is modified. In  the event handler, you can retrieve the attribute that was modified using  the event's attrName property, and you can retrieve the old and new values  of the attribute using the event's prevValue and newValue properties.</p>
+  <h5><a name='attr_DOMMenuItemActive'><span class='attrib'>DOMMenuItemActive</span></a></h5>
+  <p>
+  This event is sent when a menu or menuitem is hovered over, or highlighted.  This event bubbles.</p>
+  <h5><a name='attr_DOMMenuItemInactive'><span class='attrib'>DOMMenuItemInactive</span></a></h5>
+  <p>
+  This event is sent when a menu or menuitem is no longer being hovered over,  or highlighted. This event bubbles.</p>
+  <h5><a name='attr_DOMMouseScroll'><span class='attrib'>DOMMouseScroll</span></a></h5>
+  <p>
+  This event is sent when the mousewheel is moved, causing the content to  scroll.</p>
+  <h5><a name='attr_DOMNodeInserted'><span class='attrib'>DOMNodeInserted</span></a></h5>
+  <p>
+  This event is sent when a node is added as a child of a element. If you  capture this element at the document level, you can be notified of document  changes.</p>
+  <h5><a name='attr_DOMNodeRemoved'><span class='attrib'>DOMNodeRemoved</span></a></h5>
+  <p>
+  This event is sent when a node is removed from an element. If you capture  this element at the document level, you can be notified of document changes.</p>
+  <h5><a name='attr_RadioStateChange'><span class='attrib'>RadioStateChange</span></a></h5>
+  <p>
+  This event is sent when a <a href='ref_radio.html'>radio</a> button is selected, either by the user or a  script. This event has no corresponding attribute; it must be added using the  addEventListener method. Normally, you would use the command event to listen  to radio button selection changes, however, the command event is only sent  when the user changes the selected radio button, while the RadioStateChange  event is also sent when a script modifies the selection. For user changes,  the RadioStateChange event is sent before the command event. The  RadioStateChange event bubbles so you can also attach the event handler to  the enclosing <a href='ref_radiogroup.html'>radiogroup</a>.</p>
+  <h5><a name='attr_onblur'><span class='attrib'>onblur</span></a></h5>
+  <p>
+  The opposite of the focus event, the blur event is passed just as an element  loses the focus.</p>
+  <h5><a name='attr_onbroadcast'><span class='attrib'>onbroadcast</span></a></h5>
+  <p>
+  The event handler should be placed on an observer. The broadcast event is  sent when the attributes of the broadcaster being listened to are changed.</p>
+  <h5><a name='attr_onchange'><span class='attrib'>onchange</span></a></h5>
+  <p>
+  This event is sent when the value of the textbox is changed.  The event is not sent until the focus is moved to another element.</p>
+  <h5><a name='attr_onclick'><span class='attrib'>onclick</span></a></h5>
+  <p>
+  This event is sent when a mouse button is pressed and released. You can  determine which mouse button was clicked by retrieving the button property  of the event object. This event is also sent when the user double-clicks  with the mouse. The detail property specifies how many clicks occured. You  can also check for triple-clicks in a similar manner. For buttons and menus,  you should use oncommand instead.</p>
+  <h5><a name='attr_onclose'><span class='attrib'>onclose</span></a></h5>
+  <p>
+  This event is sent when a request has been made to close the window, for  example, when the user presses the close button. If you place an event  handler on the window element, you can trap the window close. If you return  false from the onclose handler, the window will not close. Return true to  have it close normally.</p>
+  <h5><a name='attr_oncommand'><span class='attrib'>oncommand</span></a></h5>
+  <p>
+  This event handler is called when an element is activated. How it is activated  varies for each element and in many cases, there are several ways to activate  an element. For example, a button can be activated by clicking on it with the  mouse or by pressing ENTER while it has the focus. Menus can be activated by  selecting them with the mouse or by pressing a shortcut key. You should always  use the oncommand event instead of onclick because it will be called in all of  the needed cases.</p>
+  <h5><a name='attr_oncommandupdate'><span class='attrib'>oncommandupdate</span></a></h5>
+  <p>
+  This event occurs when a command update occurs. You would use this to update  the disabled status of items.</p>
+  <h5><a name='attr_oncontextmenu'><span class='attrib'>oncontextmenu</span></a></h5>
+  <p>
+  This event is sent to an element when the user requests to open the context menu  for the element. The action to do this varies by platform, but it will typically  be a right click. This handler is usually used to dynamically set the commands on  a menu when the user requests to display it, or you can use onpopupshowing event.  Returning false from this event handler prevents the popup from appearing.</p>
+  <h5><a name='attr_ondblclick'><span class='attrib'>ondblclick</span></a></h5>
+  <p>
+  This event is like the click event except it is only sent when the user  double clicks with the mouse. This is an alternative to checking the detail  property in the click event.</p>
+  <h5><a name='attr_ondragdrop'><span class='attrib'>ondragdrop</span></a></h5>
+  <p>
+  This event is sent when the user releases the mouse button to drop an object  being dragged. The element, if it accepts the drop, should respond in some  manner such inserting the dragged object into itself.</p>
+  <h5><a name='attr_ondragenter'><span class='attrib'>ondragenter</span></a></h5>
+  <p>
+  The dragenter event is sent when the mouse pointer first moves over an  element during a drag. It is similar to the mouseover event but occurs  while dragging.</p>
+  <h5><a name='attr_ondragexit'><span class='attrib'>ondragexit</span></a></h5>
+  <p>
+  This event is sent when the mouse pointer moves away from an element during  a drag. It is also called after a drop on an element. It is similar to the  mouseout event but occurs during a drag.</p>
+  <h5><a name='attr_ondraggesture'><span class='attrib'>ondraggesture</span></a></h5>
+  <p>
+  This event is sent when the user starts dragging the element, usually by  holding down the mouse button and moving the mouse.</p>
+  <h5><a name='attr_ondragover'><span class='attrib'>ondragover</span></a></h5>
+  <p>
+  Related to the mousemove event, this event is sent while something is  being dragged over an element. The handler should indicate whether the  object being dragged can be dropped.</p>
+  <h5><a name='attr_onfocus'><span class='attrib'>onfocus</span></a></h5>
+  <p>
+  The focus event is sent to an element when it receives the focus. Once an  element has the focus, keyboard events are sent to it. The focus can be  changed by clicking on an element or by pressing TAB to switch to the next  element is sequence.</p>
+  <h5><a name='attr_oninput'><span class='attrib'>oninput</span></a></h5>
+  <p>
+  This event is sent when a user enters text in a textbox. This event  is only called when the text displayed would change, thus it is not called  when the user presses non-displayable keys.</p>
+  <h5><a name='attr_onkeydown'><span class='attrib'>onkeydown</span></a></h5>
+  <p>
+  The keydown event is sent to an element that has the focus and a key is  pressed but not released.</p>
+  <h5><a name='attr_onkeypress'><span class='attrib'>onkeypress</span></a></h5>
+  <p>
+  The keypress event is sent to an element that has the focus and a key is  pressed and released. When the user presses a key, the keydown event is  first sent, followed by the keypress event and then the keyup event.  In a textbox, a user normally can hold down a key to repeat a character  In this case, multiple sets of key events are sent as if the user rapidly  pressed the same key repeatedly.</p>
+  <h5><a name='attr_onkeyup'><span class='attrib'>onkeyup</span></a></h5>
+  <p>
+  The keyup event is sent to an element that has the focus and a key is  released.</p>
+  <h5><a name='attr_onload'><span class='attrib'>onload</span></a></h5>
+  <p>
+  This event is sent to the window after it has been fully loaded. You should  place this event handler on the window element. This event may also be used  on the <a href='ref_image.html'>image</a> element, or an element that accepts an image attribute, and  will be fired when the image has finished loading. For images, this event  does not bubble up the element tree, so it will not conflict with the window's  onload event.</p>
+  <h5><a name='attr_onmousedown'><span class='attrib'>onmousedown</span></a></h5>
+  <p>
+  This event is sent when the mouse is pressed on an element but not released.</p>
+  <h5><a name='attr_onmousemove'><span class='attrib'>onmousemove</span></a></h5>
+  <p>
+  This event is sent repeatedly as the mouse is moved over an element.</p>
+  <h5><a name='attr_onmouseout'><span class='attrib'>onmouseout</span></a></h5>
+  <p>
+  This mouseout event is sent to an element when the user moves the mouse  outside the element. This event is the reverse of onmouseover.</p>
+  <h5><a name='attr_onmouseover'><span class='attrib'>onmouseover</span></a></h5>
+  <p>
+  This event is sent to an element when the mouse first moves over an element.  You can use this event to provide feedback to the user.</p>
+  <h5><a name='attr_onmouseup'><span class='attrib'>onmouseup</span></a></h5>
+  <p>
+  This event is sent when the mouse is released on an element.</p>
+  <h5><a name='attr_onoverflow'><span class='attrib'>onoverflow</span></a></h5>
+  <p>
+  This event is sent to a box or other layout element when there is not enough  space to display it at full size. This might be the result of maximum sizes  on elements. For example, if a box has a maximum size of 100 pixels, and only  enough space for 80 pixels is available, the overflow event will be sent to  the box. If the size changes, for example, by the user resizing the window,  you can use the onunderflow event handler to determine when enough space is  available.</p>
+  <h5><a name='attr_onoverflowchanged'><span class='attrib'>onoverflowchanged</span></a></h5>
+  <p>
+  This event is sent when the overflow state changes.</p>
+  <h5><a name='attr_onpopuphidden'><span class='attrib'>onpopuphidden</span></a></h5>
+  <p>
+  This event is sent to a popup after it has been hidden.</p>
+  <h5><a name='attr_onpopuphiding'><span class='attrib'>onpopuphiding</span></a></h5>
+  <p>
+  This event is sent to a popup when it is about to be hidden.</p>
+  <h5><a name='attr_onpopupshowing'><span class='attrib'>onpopupshowing</span></a></h5>
+  <p>
+  This event is sent to a popup just before it is popped open. This handler is  usually used to dynamically set the contents when the user requests to display it.  Returning false from this event handler prevents the popup from appearing.</p>
+  <h5><a name='attr_onpopupshown'><span class='attrib'>onpopupshown</span></a></h5>
+  <p>
+  This is event is sent to a popup after it has been opened, much like the onload  event is sent to a window when it is opened.</p>
+  <h5><a name='attr_onselect'><span class='attrib'>onselect</span></a></h5>
+  <p>
+  This event is sent to a listbox or tree when an item is selected.</p>
+  <h5><a name='attr_onunderflow'><span class='attrib'>onunderflow</span></a></h5>
+  <p>
+  This event is sent to an element when there becomes enough space to display  it at full size. This applies to boxes and other layout elements.</p>
+  <h5><a name='attr_onunload'><span class='attrib'>onunload</span></a></h5>
+  <p>
+  This event is sent to a window when the window has closed. This is done  after the close event. You should place this event handler on the window  element.</p>
+</div>

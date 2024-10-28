@@ -1,0 +1,276 @@
+/* -- Home -- */
+
+/* -- Home Page Nav Box - Global Elements -- */
+#navbox-tabs {position: absolute; left: 15px; top: 13px;}
+#navbox-tabs img {margin-bottom: 6px;}
+.navbox {width: 849px; margin-left: 95px;}
+.navbox a:link {text-decoration: none; color: #FFA100;}
+.navbox a:visited {text-decoration: none; color: #FFA100;}
+
+#cat {float: left; width: 191px; padding: 14px 0 5px 5px; background: url(/i/dl/doors/navbox_tl.gif) no-repeat;}
+#cat .header1 {margin: 0 0 11px 11px;}
+
+/* -- Home Page Nav Box - Software -- */
+#tablayer-nb-software {background: url(/i/dl/doors/navbox_bg_software.gif) repeat-y;}
+#tablayer-nb-software #bottom {clear: both; height: 15px; background: url(/i/dl/doors/navbox_bottom_software.gif) no-repeat;}
+#tablayer-nb-software #content {float: right; width: 648px; min-height: 315px; padding: 3px 5px 0px 0px; background: url(/i/dl/doors/navbox_tr_software.gif) top right no-repeat;}
+#tablayer-nb-software #content .headlines {font-size: 1.1em;}
+#tablayer-nb-software #content .more {clear: both; padding: 15px 0 8px 18px; background: url(/i/dl/doors/navbox_sep_software_hor.gif) top right repeat-x; color: #FFA100}
+#tablayer-nb-software #content #main {float: left; width: 296px; padding: 18px 18px 0 18px; color: #DCECB1;}
+#tablayer-nb-software #content #main .header1 {margin-bottom: 6px; display: block;}
+#tablayer-nb-software #content #main .header2 {margin-bottom: 15px; display: block;}
+#tablayer-nb-software #content #main .screenshot {margin: 0 15px 15px 0;}
+#tablayer-nb-software #content #main .icon {margin: 12px 0 -6px 0;}
+#tablayer-nb-software #content #side {float: left; width: 300px; padding: 6px 16px 0 0; color: #DCECB1;}
+#tablayer-nb-software #content #side .left {float: left; width: 70px; margin: 0 0 10px 0;}
+#tablayer-nb-software #content #side .right {float: left; width: 215px; margin: 0 0 10px 0;}
+#tablayer-nb-software #content #side img {margin: 3px 0 0 0;}
+#tablayer-nb-software #content #side .header1 {margin: 0 0 13px 0px; display: block;}
+#tablayer-nb-software #content #side h3 {font-size: 1.3em; color: #FFA100; padding: 0 0 4px 0; margin: 0;}
+#tablayer-nb-software #content #side p.more {padding: 13px 0 0 0; margin: 0; font-weight: bold;}
+#tablayer-nb-software #content #adlinks {clear: both; padding: 7px 0 10px 18px; background: url(/i/dl/doors/navbox_sep_software_hor.gif) top right repeat-x;}
+#tablayer-nb-software #content #adlinks .header1 {display: block;}
+#tablayer-nb-software #content #adlinks p {padding: 0 0 4px 0; margin: 0;}
+#tablayer-nb-software #content #adlinks a {color: #FFFFFF;font-weight: bold;}
+#tablayer-nb-software #content #adlinks h5 a {color: #FFA100; font-size: 1.1em;}
+#tablayer-nb-software #content #adlinks .ll_image {margin-bottom: -2px;}
+
+/* -- Home Page Nav Box - Music -- */
+#tablayer-nb-music {background: url(/i/dl/doors/navbox_bg_music_e.gif) repeat-y; display: none;}
+#tablayer-nb-music #bottom {clear: both; height: 15px; background: url(/i/dl/doors/navbox_bottom_music.gif) no-repeat;}
+#tablayer-nb-music #content {float: right; width: 648px; min-height: 315px; padding: 3px 5px 0px 0px; background: url(/i/dl/doors/navbox_tr_music.gif) top right no-repeat;}
+#tablayer-nb-music #content #main {float: left; width: 429px; color: #FFFFFF; display: inline;}
+#tablayer-nb-music #content #main .desc {padding: 18px 18px 15px 18px;}
+#tablayer-nb-music #content #side {float: right; width: 193px; padding: 6px 10px 0 0; color: #FFFFFF; display: inline;}
+#tablayer-nb-music #content #main .header1 {margin-bottom: 5px; display: block;}
+#tablayer-nb-music #content #main .header2 {margin-bottom: 15px; display: block;}
+#tablayer-nb-music #content #main p {padding: 0 0 7px 0; margin: 0;}
+#tablayer-nb-music #content #main .album-large {float: left; margin: 2px 18px 25px 0;}
+#tablayer-nb-music #content .headlines {font-size: 1.1em;}
+#tablayer-nb-music #content .headlines {font-size: 1.1em;}
+#tablayer-nb-music #content h4 {font-size: 1.4em; color: #FFA100; padding: 0 0 7px 0; margin: 0;}
+#tablayer-nb-music #content #side .header1 {margin: 20px 0 12px 0; display: block;}
+#tablayer-nb-music #content #side .album-small {clear: both; float: left; margin: 2px 10px 11px 0;}
+#tablayer-nb-music #content #side h5 {padding: 0 0 0 0; margin: 0;}
+#tablayer-nb-music #content #streaming {clear: both; padding: 16px 18px 0 18px; margin: 0 0px 0 0px;}
+#tablayer-nb-music #content #streaming .header1 {margin-bottom: 8px; display: block;}
+
+/* -- Home Page Nav Box - Music - cbgb -- */
+#tablayer-nb-music-cbgb {background: url(/i/dl/doors/cbgb/navbox_bg_music_cbgb.gif) repeat-y; display: none;}
+#tablayer-nb-music-cbgb #bottom {clear: both; height: 15px; background: url(/i/dl/doors/cbgb/navbox_bottom_music.gif) no-repeat;}
+#tablayer-nb-music-cbgb #content {float: right; width: 648px; min-height: 315px; padding: 3px 5px 0px 0px; background: url(/i/dl/doors/cbgb/navbox_tr_music_cbgb.jpg) top right no-repeat;}
+#tablayer-nb-music-cbgb #content #main p {font-size: 1.1em; color: #FFFFFF;}
+#tablayer-nb-music-cbgb #content .desc {padding: 18px 18px 0 18px; margin-bottom: 7px;}
+#tablayer-nb-music-cbgb #content .desc p {color: #FFFFFF;}
+#tablayer-nb-music-cbgb #content .desc .cbgb-logo {float: left; width: 158px;}
+#tablayer-nb-music-cbgb #content .desc .cbgb-copy {float: left; width: 450px;}
+#tablayer-nb-music-cbgb #content .desc .cbgb-copy p {line-height: 15px;}
+#tablayer-nb-music-cbgb #content #bottomBulk {float: left; width: 283px; padding: 14px 18px 0 9px; color: #FFFFFF; display: inline;}
+#tablayer-nb-music-cbgb #content #bottomBulk h4 {padding: 25px 0 0 10px; margin: 0;}
+#tablayer-nb-music-cbgb #content #bottomBulk .header1 {padding: 0 0 13px 10px;}
+#tablayer-nb-music-cbgb #content #bottomBulk .recent {padding: 12px 0 0 0; background: url(/i/dl/doors/cbgb/div_cbgb.gif) bottom left no-repeat;}
+#tablayer-nb-music-cbgb #content #bottomBulk .recent-image {float: left; width: 121px; padding: 0 0 0 10px;}
+#tablayer-nb-music-cbgb #content #bottomBulk .recent-copy {float: left; width: 150px;}
+#tablayer-nb-music-cbgb #content #bottomBulk .recent-copy h4 {padding: 0 0 2px 0; margin: 0;}
+#tablayer-nb-music-cbgb #content #bottomBulk .recent-copy .button {margin-top: 6px;}
+#tablayer-nb-music-cbgb #content #bottomBulk .recent-copy p {line-height: 15px; color: #999999;}
+#tablayer-nb-music-cbgb #content #side {float: left; width: 322px; padding: 0 10px 0 0; color: #FFFFFF; display: inline;}
+#tablayer-nb-music-cbgb #content #side .latest-copy {float: left; width: 203px; padding: 15px 20px 0 20px;}
+#tablayer-nb-music-cbgb #content #side .latest-play {float: left; width: 79px; padding: 20px 0 0 0;}
+#tablayer-nb-music-cbgb #content #side h4 {padding: 0 0 2px 0; margin: 0;}
+#tablayer-nb-music-cbgb #content #side #vid_cbgb {text-align: center;}
+#tablayer-nb-music-cbgb #content #side #vid_cbgb .header2 {border: 1px solid #fff;}
+#tablayer-nb-music-cbgb #content #bottomBulk .recent-image .video-small {border: 1px solid #fff;}
+#tablayer-nb-music-cbgb #content #side #vid_cbgb img.header2 {width: 320px; height: 240px;}
+#tablayer-nb-music-cbgb #content #side #vdlplayer {width: 320px; height: 286px;}
+
+/* -- Home Page Nav Box - Games -- */
+#tablayer-nb-games {background: url(/i/dl/doors/navbox_bg_games.gif) repeat-y; display: none;}
+#tablayer-nb-games #bottom {clear: both; height: 15px; background: url(/i/dl/doors/navbox_bottom_games.gif) no-repeat;}
+#tablayer-nb-games #content {float: right; width: 648px; min-height: 315px; padding: 3px 5px 0px 0px; background: url(/i/dl/doors/navbox_tr_games.gif) top right no-repeat;}
+#tablayer-nb-games #content #main {float: left; width: 385px; color: #FFFFFF; display: inline;}
+#tablayer-nb-games #content #main .desc {padding: 18px 0 15px 18px;}
+#tablayer-nb-games #content #side {float: right; width: 235px; padding: 6px 10px 0 0; color: #FFFFFF; display: inline;}
+#tablayer-nb-games #content #main .header1 {margin-bottom: 5px; display: block;}
+#tablayer-nb-games #content #main .header2 {margin-bottom: 15px; display: block;}
+#tablayer-nb-games #content #main p {padding: 0 0 7px 0; margin: 0;}
+#tablayer-nb-games #content #main .games-wrapper {background: url(/i/dl/doors/navbox_sep_games_vert.gif) top left repeat-y;}
+#tablayer-nb-games #content #main .game-left {float: left; width: 160px; margin-right: 32px;}
+#tablayer-nb-games #content #main .game-right {float: left; width: 160px;}
+#tablayer-nb-games #content #main .game-left .header1 {margin-bottom: 15px; display: block;}
+#tablayer-nb-games #content #main .game-right .header1 {margin-bottom: 15px; display: block;}
+#tablayer-nb-games #content #main .game-left .header2 {margin-bottom: 5px; display: block;}
+#tablayer-nb-games #content #main .game-right .header2 {margin-bottom: 5px; display: block;}
+#tablayer-nb-games #content .headlines {font-size: 1.1em;}
+#tablayer-nb-games #content .headlines {font-size: 1.1em;}
+#tablayer-nb-games #content h4 {font-size: 1.4em; color: #FFA100; padding: 0 0 7px 0; margin: 0;}
+#tablayer-nb-games #content #side .header1 {margin: 20px 0 12px 0; display: block;}
+#tablayer-nb-games #content #side .album-small {clear: both; float: left; margin: 2px 10px 11px 0;}
+#tablayer-nb-games #content #side h5 {padding: 0 0 0 0; margin: 0;}
+#tablayer-nb-games #content #side h5 a, #tablayer-nb-music #content #side .more { color: #FFA100; padding: 0 0 0 0; margin: 0;}
+#tablayer-nb-games #content #side a {color: #FFFFFF;}
+#tablayer-nb-games #content #all {clear: both; padding: 10px 18px 0 18px; margin: 0 0px 0 0px; background: url(/i/dl/doors/navbox_sep_music_hor.gif) top right repeat-x;}
+#tablayer-nb-games #content #all .header1 {margin-bottom: 8px; display: block;}
+
+/* -- Home Page Nav Box - Video -- */
+#tablayer-nb-video {background: url(/i/dl/doors/navbox_bg_video-nl.gif) repeat-y; display: none;}
+#tablayer-nb-video #bottom {clear: both; height: 15px; background: url(/i/dl/doors/navbox_bottom_video.gif) no-repeat;}
+#tablayer-nb-video #content {float: right; width: 648px; min-height: 315px; padding: 3px 5px 0px 0px; background: url(/i/dl/doors/navbox_tr_video-nl.gif) top right no-repeat;}
+#tablayer-nb-video #content #main {float: left; width: 277px; padding: 18px 0 15px 18px; color: #FFFFFF;}
+#tablayer-nb-video #content #side {float: left; width: 322px; padding: 27px 0 0 16px; color: #FFFFFF;}
+#tablayer-nb-video #content #side h4 {color: #FFFFFF;}
+#tablayer-nb-video #content #side .header1 {margin-bottom: 15px; display: block;}
+#tablayer-nb-video #content #side .header2 {margin-bottom: 15px; display: block;}
+#tablayer-nb-video #content #side img.header2 {border: 1px solid #fff;}
+#tablayer-nb-video #content #main .header1 {margin-bottom: 5px; display: block;}
+#tablayer-nb-video #content #main .header2 {margin-bottom: 15px; display: block;}
+#tablayer-nb-video #content #main p {padding: 0 0 6px 0; margin: 0;}
+#tablayer-nb-video #content #main .video-left {clear: both; float: left; width: 120px; margin-bottom: 15px;}
+#tablayer-nb-video #content #main .video-right {float: left; width: 138px; margin: 2px 10px 11px 0; margin-bottom: 15px;}
+#tablayer-nb-video #content #main h2 {padding: 0 0 4px 0; margin: 0;}
+#tablayer-nb-video #content #main .video-small {margin-top: 3px; border: 1px solid #fff;}
+#tablayer-nb-video #content #side #vid img.header2 {width: 320px; height: 240px;}
+#tablayer-nb-video #content #side #vdlplayer {width: 320px; height: 286px;}
+#tab-nb-video {display: none;}
+
+/* -- Home Page Features -- */
+#favorite-freeware a {font-weight: bold;}
+
+#features-fd {}
+#features-fd .sep {clear: both; float: left; width: 352px; height: 1px; background: url(/i/dl/global/dotted_div_hor.gif) repeat-x top left; padding: 0; margin: 0; position: relative;}
+#features-fd .header1 {margin-bottom: 13px;}
+.features-fd-wrapper {clear: both; background: url(/i/dl/doors/features_fd_wrapper_bg.gif) repeat-y top left;}
+.features-fd-boxes-wrapper-top {clear: both; background: url(/i/dl/global/dotted_div_hor.gif) repeat-x bottom left; margin-bottom: 15px;}
+.features-fd-boxes-wrapper {clear: both; background: url(/i/dl/global/dotted_div_hor.gif) repeat-x bottom left;}
+.feature-fd-box-left {float: left; width: 160px; padding: 0 15px 0px 0;}
+.feature-fd-box-right {float: right; width: 160px; padding: 0 0 0 15px;}
+h4 {font-size: 1.2em; color: #FFA100; padding: 2px 0 3px 0; margin: 0;}
+
+.morefeatures {margin-top: 16px;}
+
+/* -- Home Page Most Popular -- */
+#most-popular-frontdoor {}
+#most-popular-frontdoor .tabs {padding: 17px 0 0 15px; border-bottom: 1px solid #D3D3D2;}
+#most-popular-frontdoor .tabs img {margin: 0 9px -1px 0;}
+
+#tablayer-mp-software {}
+#tablayer-mp-games {}
+
+#tablayer-mp-music .number {margin-top: 4px;}
+#tablayer-mp-music .filed {color: #6A6969;}
+#tablayer-mp-music table {width: 351px; padding: 0; margin-bottom: 10px; border: 0; background: url(/i/dl/global/dotted_div_hor.gif) repeat-x top left;}
+#tablayer-mp-music td {padding: 7px 0 6px 0; border: 0; background: url(/i/dl/global/dotted_div_hor.gif) repeat-x bottom left;}
+#tablayer-mp-music .more {color: #888383; padding: 0 0 0 0; margin: 0;}
+
+.table-most-popular .number {margin-top: 0px;}
+.table-most-popular .filed {color: #6A6969;}
+.table-most-popular {width: 351px; padding: 0; border: 0; margin-bottom: 10px; background: url(/i/dl/global/dotted_div_hor.gif) repeat-x top left;}
+.table-most-popular td {padding: 4px 0 4px 0; border: 0; background: url(/i/dl/global/dotted_div_hor.gif) repeat-x bottom left;}
+.table-most-popular .more {color: #888383; padding: 0 0 0 0; margin: 0;}
+
+.morelinks {padding: 10px 0 0 0; margin: 0;}
+.morelinks a:link {text-decoration: none; color: #888383;}
+.morelinks a:visited {text-decoration: none; color: #888383;}
+.morelinks a:hover {text-decoration: underline; color: #888383;}
+.morelinks a:active {text-decoration: none; color: #888383;}
+
+/* -- Home Page Webshots -- */
+#webshots-box {float: right; width: 351px; background-color: #E9E9E9;}
+#webshots-box .content {padding: 5px 10px 0px 15px;}
+#webshots-box .rbtop div { background: url(/i/dl/doors/webshots_tl.gif) no-repeat top left;  }
+#webshots-box .rbtop { background: url(/i/dl/doors/webshots_tr.gif) no-repeat top right; background-color: #E9E9E9;}
+#webshots-box .rbbot div { background: url(/i/dl/doors/webshots_bl.gif) no-repeat bottom left; }
+#webshots-box .rbbot { background: url(/i/dl/doors/webshots_br.gif) no-repeat bottom right; background-color: #D6D6D6;}
+#webshots-box .rbtop div, .rbtop, .rbbot div, .rbbot {width: 100%; height: 9px; font-size: 1px;}
+#webshots-box .bottomcap {background-color: #D6D6D6;}
+#webshots-box .left {float: left; margin-right: 18px;}
+#webshots-box .right {float: left; width: 190px;}
+#webshots-box .header1 {margin: 3px 0 5px 0; display: block;}
+#webshots-box .icon {margin-bottom: -6px;}
+#webshots-box input {margin-top: 3px;}
+#webshots-box p {padding: 0 0 8px 0; margin: 0;}
+#webshots-box .bottomcap .left-tap {float: left; width: 250px; padding: 4px 0 0 17px; margin: 0; display: inline;}
+#webshots-box .bottomcap .right-tap {float: left; width: 15px; padding: 10px 0 0 0px; margin: 0; display: inline;}
+
+/* -- Home Page Blogs -- */
+.blog_box {margin:10px 15px;}
+.blog_hdr {width:351px; height:44px; background:url('/i/dl/blogs/fd/blogs_hdr.gif') no-repeat;}
+.blog_hdr .pad {padding:15px 0 0 80px; font: 16px arial; color:#fff;}
+.blog_m {width:351px;}
+.blog_m .post a, .blog_m .post a:hover {color:#106bde;}
+.blog_m .border {border-left: 1px solid #eee; border-right: 1px solid #eee;}
+.blog_m .post {padding:10px; background:url('/i/dl/blogs/fd/blend.gif') repeat-x bottom; border-top:1px solid #eee;}
+.blog_m .blurb {font: bold 10px arial; margin-bottom:5px;}
+.blog_m .mug {float:left; width:50px; height:50px; margin-right:8px;}
+.blog_m .hed {font: bold 14px arial; line-height:16px;}
+.blog_m .dek {font: 11px verdana; line-height:15px;}
+.blog_ftr {width:351px; height:36px; background:url('/i/dl/blogs/fd/box_btm.gif') no-repeat;}
+.blog_ftr .pad {padding:11px 0 0 15px; font: bold 10px verdana; line-height: 14px;}
+.blog_ftr .pad a, .blog_ftr .pad a:hover {color:#106bde;}
+
+/* -- Home Page Ads -- */
+#stacked-ads .header1 {margin-bottom: 13px;}
+
+/*-- front door launchpad unit --*/
+#launchpad-fd-wrapper {width: 955px; background-color: #9FCC4E; padding-bottom: 12px;}
+#launchpad-fd-wrapper #tinyad-fd {float: right; padding: 1px 15px 0 0;}
+#lp-fd {float: left; width: 789px; background: url(/i/dl/ads/fd_lp2/lp2_fd_bg.gif) repeat-y; margin-left: 15px; display: inline;}
+#lp-fd .lp-top {width: 789px; padding-top: 8px; background: url(/i/dl/ads/fd_lp2/lp2_fd_top.gif) no-repeat top left;}
+#lp-fd .lp-bottom {width: 789px; padding-bottom: 13px; background: url(/i/dl/ads/fd_lp2/lp2_fd_bottom.gif) no-repeat bottom left;}
+#lp-fd .ad {float: left; width: 236px; padding: 10px 0 5px 0; background: url(/i/dl/ads/fd_lp2/txt_spon.gif) no-repeat; margin: 0 12px 0 14px; display: inline;}
+#lp-fd .ad h5 {font: bold 1.4em Arial, verdana, Helvetica, sans-serif; padding: 0; margin: 0 0 4px 0;}
+#lp-fd .ad a {color: #106bde; border-bottom: 1px solid #106bde; text-decoration: none;}
+#lp-fd .ad a:hover {color: #106bde; border-bottom: 1px solid #106bde; text-decoration: none;}
+#lp-fd .ad p {padding: 0; margin: 0 0 6px 0;}
+#lp-fd .ad .icon {margin-bottom: -4px; height: 15px;}
+
+.error {color: #FF0000;}
+
+/* -- mdl panel -- */
+#tablayer-nb-music #main #bottomBulk { height: 150px; }
+#tablayer-nb-music #main #streaming { float: left; width: 235px; }
+#tablayer-nb-music #main #fdBigShots { float: left; margin-left: 0px; }
+#tablayer-nb-music #main #fdBigShots img { margin-bottom: 10px; }
+#tablayer-nb-music #main #fdBigShots h3 { width: 123px; height: 8px; margin: 15px 0 10px 0; padding: 0; background: url('/i/dl/doors/headline_bigshots.gif') }
+#tablayer-nb-music #main #fdBigShots span { display: none; }
+#tablayer-nb-music .desc a.header1 { background: url(/i/mdl/doors/headline_new_in_music.gif) top left no-repeat; width: 155px; height: 17px; padding: 0; margin: 0; display: block; }
+#tablayer-nb-music .desc h3 span { display: none; }
+#tablayer-nb-music #main #picSample { float: left; text-align: center; margin: 0 15px 10px 0; }
+#tablayer-nb-music #main #picSample .promoPic { border: 1px solid white;}
+#tablayer-nb-music #main .sample { margin-top: 10px; }
+#tablayer-nb-music #main .sample span { display: none; }
+#tablayer-nb-music #main .sample a { background: url(/i/mdl/global/play_sample.gif) no-repeat; display: block; width: 102px; height: 16px; border: 1px solid #34374C; }
+#tablayer-nb-music #main .sample a:hover { border: 1px solid #FF6013; }
+#tablayer-nb-music #main .headlines { line-height: 1.3em; }
+#tablayer-nb-music #content #bottomBulk {background: url(/i/dl/doors/navbox_sep_music_hor.gif) top right repeat-x;}
+#tablayer-nb-music a#fiftyK { display: block; margin: 10px 0 0 25px; border: 0; background: url(/i/mdl/panel/50k_free2.gif) no-repeat; width: 141px; height: 103px; }
+#tablayer-nb-music a:hover#fiftyK { background-position: 0 -103px; }
+#tablayer-nb-music #fiftyK span { display: none; }
+#tablayer-nb-music #side a.header1 { background: url(/i/dl/doors/headline_free_mp3s_nb.gif) top left no-repeat; width: 87px; height: 11px; padding: 0; margin: 0; }
+#tablayer-nb-music #side .header1 h3 span { display: none; }
+#tablayer-nb-music #side a.primaryChn { color: #FFF; }
+#tablayer-nb-music #side .artistHL { margin-bottom: 5px; }
+#tablayer-nb-music #side .album-small { border: 1px solid white; }
+#tablayer-nb-music #side .moreMP3 { margin-left: 80px; }
+#tablayer-nb-music #categories .lt a { font-weight: normal; }
+#tablayer-nb-music #categories li ul {margin: 0; padding: 0; background: none; }
+#tablayer-nb-music #categories li ul li {margin: 0; padding: 0; background: none; }
+#tablayer-nb-music #categories li ul li a { background-color: #285F1A; background: url(/i/dl/global/bullet_categories_right.gif) no-repeat 22px 7px;}
+#tablayer-nb-music #categories li ul li a:hover { background: url(/i/dl/global/bullet_categories_right_on.gif) no-repeat 22px 7px; background-color: #F7941C; color: #fff;/i/dl/global/bullet_categories_right_on.gif}
+#tablayer-nb-music #categories sublist.ul {margin: 0; padding: 0;}
+#tablayer-nb-music #content #streaming {clear: both; padding: 16px 18px 0 18px; margin: 0 0px 0 0px;}
+
+/* cbgb versions */
+#tablayer-nb-music-cbgb a#fiftyK { display: block; margin: 10px 0 0 25px; border: 0; background: url(/i/mdl/panel/50k_free2.gif) no-repeat; width: 141px; height: 103px; }
+#tablayer-nb-music-cbgb a:hover#fiftyK { background-position: 0 -103px; }
+#tablayer-nb-music-cbgb #fiftyK span { display: none; }
+#tablayer-nb-music-cbgb #categories .lt a { font-weight: normal; }
+#tablayer-nb-music-cbgb #categories li ul {margin: 0; padding: 0; background: none; }
+#tablayer-nb-music-cbgb #categories li ul li {margin: 0; padding: 0; background: none; }
+#tablayer-nb-music-cbgb #categories li ul li a { background-color: #285F1A; background: url(/i/dl/global/bullet_categories_right.gif) no-repeat 22px 7px;}
+#tablayer-nb-music-cbgb #categories li ul li a:hover { background: url(/i/dl/global/bullet_categories_right_on.gif) no-repeat 22px 7px; background-color: #F7941C; color: #fff;/i/dl/global/bullet_categories_right_on.gif}
+#tablayer-nb-music-cbgb #categories sublist.ul {margin: 0; padding: 0;}
+
+
+
+

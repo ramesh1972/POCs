@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+
+<element name='arrowscrollbox'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/menuscroll.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_arrowscrollbox.html</reference>
+  A box which provides scroll arrows along its edges for scolling through  the contents of the box. The user only needs to hover the mouse over the  arrows to scroll the box. This element is typically used for large popup  menus.  
+
+<method name='scrollByIndex'>
+<prototype> scrollByIndex ( lines ) </prototype>
+  
+  Scrolls the contents of the arrowscrollbox by a certain number of lines. A line is a  single element. Use a positive value as the lines argument to scroll forward  that many lines, or a negative value to scroll backward that many lines.
+</method>
+</element>

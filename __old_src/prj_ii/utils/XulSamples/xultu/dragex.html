@@ -1,0 +1,302 @@
+<?php
+
+  $pagebase="<a href='http://www.xulplanet.com/tutorials/'>Tutorials</a> &gt; " .
+    "<a href='http://www.xulplanet.com/tutorials/xultu/'>XUL Tutorial</a>";
+  $pagetitle="8.7 - Drag and Drop Example";
+  $customsidebar = "xultu-sidebar.php";
+
+
+
+  include "../../lib/header.php";
+ ?>
+
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="8.6 - Drag and Drop JavaScript Wrapper"
+     href="dragwrap.html">Previous</a>
+
+
+  <a class="nextlink" title="9.1 - Adding Style Sheets"
+     href="style.html">Next</a>
+
+</div>
+
+
+
+<h2>Drag and Drop Example</h2>
+
+<P>
+An example of implementing drag and drop will be implemented in this section.
+</P>
+
+<H3>Dragging Elements Around</H3>
+
+<P>
+Here, we'll create a simple board where items from a palette can be dragged
+onto the board. The user can click on one of several XUL elements on the
+palette and drag it onto a stack element to create an element of a particular
+type.
+</P>
+
+<P>
+First, we'll add the wrapper scripts:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;script src="chrome://global/content/nsDragAndDrop.js"/&gt;
+&lt;script src="chrome://global/content/nsTransferable.js"/&gt; 
+
+&lt;script src="dragboard.js"/&gt;</PRE></DIV>
+
+
+
+<P>
+An additional script file dragboard.js is included which will contain the
+code we will write ourselves.
+</P>
+
+<P>
+The board will be created using a <A CLASS="tag" HREF="/references/elemref/ref_stack.html">stack</A>
+element. We'll use some style properties to set the width and height of
+the stack. A maximum size is also specified so that it doesn't
+resize when new elements are dragged onto it.
+</P>
+
+<P>
+The board will need to respond to the dragdrop event so that an element
+is created when the user drags onto it.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;stack id="board"
+               style="width:300px; height: 300px; max-width: 300px; max-height: 300px"
+  ondragover="nsDragAndDrop.dragOver(event,boardObserver)"
+  ondragdrop="nsDragAndDrop.drop(event,boardObserver)"&gt;
+&lt;/stack&gt;</PRE></DIV>
+
+
+
+<P>
+The board only needs to respond to the dragdrop and dragover events. We'll add a
+boardObserver to the file dragboard.js in a moment.
+</P>
+
+<P>
+Next, a palette will be added to the right side of the window. It will contain
+three buttons, one to create new buttons, one to create check boxes and the
+other to create textboxes. This buttons will respond to the draggesture event
+and start a drag.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;vbox&gt;
+
+&lt;button label="Button"
+        elem="button" ondraggesture="nsDragAndDrop.startDrag(event,listObserver)"/&gt;
+&lt;button label="Check Box"
+        elem="checkbox" ondraggesture="nsDragAndDrop.startDrag(event,listObserver)"/&gt;
+&lt;button label="Text Box"
+        elem="textbox" ondraggesture="nsDragAndDrop.startDrag(event,listObserver)"/&gt;
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<P>
+The nsDragAndDrop object will be called to do most of the work. We'll create a
+listObserver object that will set the data to be dragged. Note that each button
+here has an additional <SPAN CLASS="attrib">elem</SPAN> attribute. The is a made-up
+attribute. XUL doesn't handle it and just ignores it, but we can still retrieve
+it with the DOM's getAttribute function. We need this so that we know what type of
+element to create when dragging.
+</P>
+
+<P>
+Next, we'll define the two listener objects. First, the listObserver which needs
+a function to handle the start of the drag.
+</P>
+
+
+<DIV CLASS="sample"><PRE>var listObserver = { 
+  onDragStart: function (evt,transferData,action){
+    var txt=evt.target.getAttribute("elem");
+    transferData.data=new TransferData();
+    transferData.data.addDataForFlavour("text/unicode",txt);
+  }
+};</PRE></DIV>
+
+
+
+<P>
+One function has been defined, onDragStart, which will be called by the
+nsDragAndDrop object when necessary. The function adds the data to be dragged
+to the transfer object. The <SPAN CLASS="attrib">elem</SPAN> attribute is
+retrieved from the target of the drag event. The target will be the element
+that had the drag start on. We'll use the value of this attribute as the data
+of the drag.
+</P>
+
+<P>
+The boardObserver will need three functions, getSupportedFlavours, onDragOver
+and onDrop. The onDrop function will grab the data from the drag session and
+create a new element of the appropriate type.
+</P>
+
+
+<DIV CLASS="sample"><PRE>var boardObserver = {
+  getSupportedFlavours : function () {
+    var flavours = new FlavourSet();
+    flavours.appendFlavour("text/unicode");
+    return flavours;
+  },
+  onDragOver: function (evt,flavour,session){},
+  onDrop: function (evt,dropdata,session){
+    if (dropdata.data!=""){
+      var elem=document.createElement(dropdata.data);
+      evt.target.appendChild(elem);
+      elem.setAttribute("left",""+evt.pageX);
+      elem.setAttribute("top",""+evt.pageY);
+      elem.setAttribute("label",dropdata.data);
+    }
+  }
+};</PRE></DIV>
+
+
+
+<P>
+The getSupportedFlavours function needs only to return a list of flavours
+that the stack can accept to be dropped on it. In this case, it only
+accepts text. We don't need to do anything special for the onDragOver function,
+so no code is added in its body.
+</P>
+
+<P>
+The onDrop handler first uses the createElement function to create a new element
+of the type stored in the drag session. Next, appendChild is called to add the
+new element to the stack, which is the target of the event. Finally, we set some
+attributes on the new element.
+</P>
+
+<P>
+The position of elements in a stack is determined by the
+<SPAN CLASS="attrib">left</SPAN> and
+<SPAN CLASS="attrib">top</SPAN> attributes. The values of the
+<SPAN CLASS="attrib">pageX</SPAN> and
+<SPAN CLASS="attrib">pageY</SPAN> properties store the mouse pointer
+coordinates on the window where the drop occured. This allows us to
+place the new element at the position where the mouse button was
+released. This isn't quite the correct way to do this as we actually
+need to calculate the coordinates of the event relative to the
+stack. It works here because the board is at the top-left
+corner of the window.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">label</SPAN> attribute is set to the data from the
+drag also so that the button has a default label.
+</P>
+
+<P>
+This example is fairly simple. One possible change is to use a custom
+flavour for the data instead of text. The problem with using text is that
+if the text from an external drag just happens to be set to 'button',
+a button will be created on the board. A custom type means that the board
+will only accept drags from the palette.
+</P>
+
+<P>
+The final code is shown below:
+</P>
+
+
+Example 8.7.1:
+<A HREF='examples/ex_8_7_1.xul.txt'>Source</A>
+<DIV CLASS="examplec"><PRE>&lt;window title="Widget Dragger" id="test-window"
+  orient="horizontal"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script src="chrome://global/content/nsDragAndDrop.js"/&gt;
+&lt;script src="chrome://global/content/nsTransferable.js"/&gt; 
+&lt;script src="dragboard.js"/&gt;
+
+&lt;stack id="board"
+       style="width:300px; height: 300px; max-width: 300px; max-height: 300px"
+  ondragover="nsDragAndDrop.dragOver(event,boardObserver)"
+  ondragdrop="nsDragAndDrop.drop(event,boardObserver)"&gt;
+&lt;/stack&gt;
+
+&lt;vbox&gt;
+
+&lt;button label="Button"
+        elem="button" ondraggesture="nsDragAndDrop.startDrag(event,listObserver)"/&gt;
+&lt;button label="Check Box"
+        elem="checkbox" ondraggesture="nsDragAndDrop.startDrag(event,listObserver)"/&gt;
+&lt;button label="Text Box"
+        elem="textbox" ondraggesture="nsDragAndDrop.startDrag(event,listObserver)"/&gt;
+&lt;/vbox&gt;
+
+&lt;/window&gt;</PRE></DIV>
+
+
+
+
+Example 8.7.2:
+<A HREF='examples/ex_8_7_2.xul.txt'>Source</A>
+<DIV CLASS="examplec"><PRE>var listObserver = { 
+  onDragStart: function (evt,transferData,action){
+    var txt=evt.target.getAttribute("elem");
+    transferData.data=new TransferData();
+    transferData.data.addDataForFlavour("text/unicode",txt);
+  }
+};
+
+var boardObserver = {
+  getSupportedFlavours : function () {
+    var flavours = new FlavourSet();
+    flavours.appendFlavour("text/unicode");
+    return flavours;
+  },
+  onDragOver: function (evt,flavour,session){},
+  onDrop: function (evt,dropdata,session){
+    if (dropdata.data!=""){
+      var elem=document.createElement(dropdata.data);
+      evt.target.appendChild(elem);
+      elem.setAttribute("left",""+evt.pageX);
+      elem.setAttribute("top",""+evt.pageY);
+      elem.setAttribute("label",dropdata.data);
+    }
+  }
+};</PRE></DIV>
+
+
+
+<HR>
+<P>
+<A HREF="style.html">(Next)</A>
+Next, we'll look at using style sheets with XUL files.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_8_7_1.xul.txt'>8.7.1</A>
+  <A HREF='examples/ex_8_7_2.js.txt'>8.7.2</A>
+</P>
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="8.6 - Drag and Drop JavaScript Wrapper"
+     href="dragwrap.html">Previous</a>
+
+
+  <a class="nextlink" title="9.1 - Adding Style Sheets"
+     href="style.html">Next</a>
+
+</div>
+
+
+<?php include "../../comments/comments.php"; ?>
+
+<?php include "../../lib/footer.php" ?>
+
+
+

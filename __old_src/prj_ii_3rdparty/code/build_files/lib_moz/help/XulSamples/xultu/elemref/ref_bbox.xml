@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+
+<element name='bbox' spec='Moz1.5'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_bbox.html</reference>
+  A horizontal box that is baseline aligned. It is equivalent to using  an hbox element with an align attribute set to baseline.
+
+</element>

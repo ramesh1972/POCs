@@ -1,0 +1,592 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="keyshort.html"> 
+ <link rel="next" href="commands.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Focus and Selection</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 6.4 - Focus and Selection 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <SPAN CLASS="currentpage">Focus and Selection</SPAN></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.3 - Keyboard Shortcuts"
+     href="keyshort.html">Previous</a>
+
+
+  <a class="nextlink" title="6.5 - Commands"
+     href="commands.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Focus and Selection</h2>
+
+<P>
+The section will describe how to handle the focus and selection of
+elements.
+</P>
+
+<H3>Focused Elements</H3>
+
+<P>
+The focused element refers to the element which currently receives
+input events. If there are three textboxes on a window, the one that
+has the focus is the one that the user can currently enter text into.
+Only one element per window has the focus at a time.
+</P>
+
+<P>
+The user can change the focus by clicking an element with the mouse or
+by pressing the TAB key. When the TAB key is pressed, the next element
+is given the focus. To step backwards, the Shift key and Tab key can be
+pressed.
+</P>
+
+<P>
+You can change the order in which elements are focused when the user presses
+the TAB key by adding a <SPAN CLASS="attrib">tabindex</SPAN> attribute to an
+element. This attribute should be set to a number. When the user presses TAB,
+the focus will shift to the element with the next highest tab index. That
+means that you can order the elements by setting indices on elements in
+sequence. Usually, however, you would not set the
+<SPAN CLASS="attrib">tabindex</SPAN> attribute. If you do not, pressing TAB
+will set the focus to the next displayed element. You only need to set tab
+indices if you wish to use a different order. Here is an example:
+</P>
+
+
+Example 6.4.1:
+<A HREF='examples/ex_focus_1.xul.txt'>Source</A>
+<A HREF="examples/ex_focus_1.xul" ONCLICK="window.open('examples/ex_focus_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button label="Button 1" tabindex="2"/&gt;
+&lt;button label="Button 2" tabindex="1"/&gt;
+&lt;button label="Button 3" tabindex="3"/&gt;</PRE></DIV>
+
+
+
+<P>
+The focus event is used to respond when the focus is given to an element.
+The blur event is used to respond when the focus is removed from an
+element. You can respond to focus changes by adding an
+<SPAN CLASS="attrib">onfocus</SPAN> or
+<SPAN CLASS="attrib">onblur</SPAN> attribute on an element. They work just
+like their HTML counterparts. You might use these event handlers to highlight
+the element or display text on a status bar. The following example can be used
+to apply a function to handle a focus event.
+</P>
+
+
+Example 6.4.2:
+<A HREF='examples/ex_focus_2.xul.txt'>Source</A>
+<A HREF="examples/ex_focus_2.xul" ONCLICK="window.open('examples/ex_focus_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;script&gt;
+
+function displayFocus()
+{
+  var elem=document.getElementById('sbar');
+  elem.setAttribute('value','Enter your phone number.');
+}
+
+&lt;/script&gt;
+
+&lt;textbox id="tbox1"/&gt;
+&lt;textbox id="tbox2" onfocus="displayFocus();"/&gt;
+&lt;description id="sbar" value=""/&gt;
+</PRE></DIV>
+
+
+
+<P>
+The focus event, when it occurs, will call the displayFocus function. This
+function will change the value of the text label. We could extend this example
+to remove the text when the blur event occurs. Typically, you will use focus
+and blur events to update parts of the interface as the user selects elements.
+For instance, you might update a total as the user enters values in other
+fields, or use focus events to validate certain values. Don't display an alert
+during a focus or blur event as this will be distracting for the user and is
+poor user interface design.
+</P>
+
+<P>
+You can also add event handlers dynamically using the DOM function
+<SPAN CLASS="attrib">addEventListener</SPAN>. You can use it for any element
+and event type. It takes three parameters, the event type, a function to
+execute when the event occurs and a boolean indicating whether to capture or
+not.
+</P>
+
+<P>
+The currently focused element is held by an object called a command
+dispatcher, of which there is only one for the window. The command dispatcher
+is responsible for keeping track of the focused element as the user uses the
+interface. The command dispatcher has other roles, which will be discussed in
+a later section on commands. For now, we'll look at some of the focus related
+features of the command dispatcher.
+</P>
+
+<P>
+You can retrieve the command dispatcher from a window using the document's
+<SPAN CLASS="attrib">commandDispatcher</SPAN> property. From there, you can get
+the focused element with the dispatcher's
+<SPAN CLASS="attrib">focusedElement</SPAN> property. The example below shows
+this.
+</P>
+
+
+Example 6.4.3:
+<A HREF='examples/ex_focus_3.xul.txt'>Source</A>
+<A HREF="examples/ex_focus_3.xul" ONCLICK="window.open('examples/ex_focus_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;window id="focus-example" title="Focus Example"
+        onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init()
+{
+  addEventListener("focus",setFocusedElement,true);
+}
+
+function setFocusedElement()
+{
+  var focused = document.commandDispatcher.focusedElement;
+  document.getElementById("focused").value = focused.tagName;
+}
+&lt;/script&gt;
+
+&lt;hbox&gt;
+  &lt;label control="username" value="User Name:"/&gt;
+  &lt;textbox id="username"/&gt;
+&lt;/hbox&gt;
+
+&lt;button label="Hello"/&gt;
+&lt;checkbox label="Remember This Decision"/&gt;
+
+&lt;label id="focused" value="-No focus-"/&gt;
+
+&lt;/window&gt;</PRE></DIV>
+
+
+
+<P>
+In this example, a focus event handler is attached the window. We want to use
+a capturing event handler, so the <SPAN CLASS="attrib">addEventListener</SPAN>
+method needs to be used. It registers a capturing event handler with the
+window which will call the setFocusedElement method. This method gets the
+focused element from the command dispatcher and sets a label to its tag name.
+As the focused element is changed, the label will show the tagname of the
+element. A few things to note. First, when the textbox is focused, the tag
+name is 'html:input', not 'textbox' as we might expect. This is because XUL
+text boxes are implemented using the HTML input widget, so the focus event is
+received for that element instead. Second, clicking the textbox's label
+changes the focus to the textbox. This is because the label has a
+<SPAN CLASS="attrib">control</SPAN> attribute pointing to the id of the
+textbox. Finally, the other label which displays the tag name has no
+<SPAN CLASS="attrib">control</SPAN> attribute, so clicking it has no effect on
+the focused element. Only focusable elements can be focused.
+</P>
+
+<P>
+If you were creating custom elements, you might have a need to change whether
+an element can have the focus or not. For this, you can use a special style
+property <SPAN CLASS="attrib">-moz-user-focus</SPAN>. This property controls
+whether an element can be focused. For instance, you could make a label
+focusable, as in the example below.
+</P>
+
+
+Example 6.4.4:
+<A HREF='examples/ex_focus_4.xul.txt'>Source</A>
+<A HREF="examples/ex_focus_4.xul" ONCLICK="window.open('examples/ex_focus_4.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>
+&lt;label id="focused" style="-moz-user-focus: normal;"
+          onkeypress="alert('Label Focused');" value="Focus Me"/&gt;</PRE></DIV>
+
+
+
+<P>
+The style property is set to <SPAN CLASS="aval">normal</SPAN>. You can also
+set it to <SPAN CLASS="aval">ignore</SPAN> to turn off the focus for an
+element. This shouldn't be used for disabling an element, however; the
+<SPAN CLASS="attrib">disabled</SPAN> attribute or property should be used
+instead, since that is what it is designed for. Once the label in the example
+is focused, it can respond to key presses. Naturally, the label gives no
+indication that it is focused, since it isn't normally expected to ever be
+focused.
+</P>
+
+<P>
+There are several ways to change the currently focused element. The simplest
+is to call the focus method of a the XUL element that you wish to set the
+focus to. The blur method can be used to remove the focus from an element. The
+following example demonstrates this:
+</P>
+
+
+Example 6.4.5:
+<A HREF='examples/ex_focus_5.xul.txt'>Source</A>
+<A HREF="examples/ex_focus_5.xul" ONCLICK="window.open('examples/ex_focus_5.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;textbox id="addr"/&gt;
+
+&lt;button label="Focus" oncommand="document.getElementById('addr').focus()"/&gt;</PRE></DIV>
+
+
+
+<P>
+Or, you can use the methods <SPAN CLASS="attrib">advanceFocus</SPAN> and
+<SPAN CLASS="attrib">rewindFocus</SPAN> on the command dispatcher. These
+methods move the focus to the next element is sequence or the previous element
+respectively. This is what happens when the user presses TAB or Shift+Tab.
+</P>
+
+<P>
+For textboxes, a special attribute, <SPAN CLASS="attrib">focused</SPAN>
+is added whenever the element has the focus. You can check for the
+presence of this attribute to determine if the element has the focus, 
+either from a script or within a style sheet. It will have the value
+<SPAN CLASS="aval">true</SPAN>. if the textbox has the focus and, if
+the textbox does not have the focus, the attribute will not be present.
+</P>
+
+<H3>Handling Text Changes</H3>
+
+<P>
+There are two events that can used when the user changes the value of a
+textbox. Naturally, these events will only be sent to the textbox that has
+the focus. The input event is fired whenever the text is modified in the
+field. The new value will be different than the old value. You may want to
+use this event instead of using key events, as some keys such as the shift
+key don't change the value. Also, the input event would not fire if a letter
+key was pressed and there were already more characters than will fit in the
+textbox.
+</P>
+
+<P>
+The change event is similar in that it fires only when the field is changed.
+However it only fires once the textbox loses the focus, thus, only once per
+set of changes.
+</P>
+
+<H3>Text Selection</H3>
+
+<P>
+When working with a textbox, you may wish to retrieve not the entire
+contents of a field but only what the user has selected. Or, you may
+wish to change the current selection.
+</P>
+
+<P>
+XUL textboxes support a way to retrieve and modify the selection. The
+simplest one is to select all of the text in a textbox. This involves
+using the select method of the textbox.
+</P>
+
+
+<DIV CLASS="sample"><PRE>tbox.select();</PRE></DIV>
+
+
+
+<P>
+However, you may wish to select only part of the text. To do this you
+can use the setSelectionRange function. It takes two parameters, the
+first is the starting character and the second is the character after
+the last one that you want to have selected. Values are zero-based,
+so the first character is 0, the second is 1 and so on.
+</P>
+
+
+<DIV CLASS="sample"><PRE>tbox.setSelectionRange(4,8);</PRE></DIV>
+
+
+
+<P>
+This example will select the fifth character displayed, as well as the
+sixth, seventh and eighth. If there were only six characters entered
+into the field, only the fifth and sixth characters would be selected.
+No error would occur.
+</P>
+
+<P>
+If you use the same value for both parameters, the start and end of the
+selection changes to the same position. This results in changing the
+cursor position within the textbox. For example, the line below can be
+used to move the cursor to the beginning of the text.
+</P>
+
+
+<DIV CLASS="sample"><PRE>tbox.setSelectionRange(0,0);</PRE></DIV>
+
+
+
+<P>
+You can retrieve the current selection by using the
+<SPAN CLASS="attrib">selectionStart</SPAN> and
+<SPAN CLASS="attrib">selectionEnd</SPAN> properties. These properties
+are set to the starting and ending positions of the current selection
+respectively. If both are set to the same value, no text is selected,
+but the values will be set to the current cursor position. Once you
+have the start and end positions, you can pull out the substring from
+the whole text.
+</P>
+
+<P>
+You can retrieve and modify the contents of the textbox by using the
+<SPAN CLASS="attrib">value</SPAN> property.
+</P>
+
+<P>
+One additional useful property of textboxes is the
+<SPAN CLASS="attrib">textLength</SPAN> property, which holds the total
+number of characters in the field.
+</P>
+
+<HR>
+<P>
+<A HREF="commands.html">(Next)</A>
+Next, we'll find out how to use commands.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_focus_1.xul.txt'>6.4.1</A>
+  <A HREF='examples/ex_focus_2.xul.txt'>6.4.2</A>
+  <A HREF='examples/ex_focus_3.xul.txt'>6.4.3</A>
+  <A HREF='examples/ex_focus_4.xul.txt'>6.4.4</A>
+  <A HREF='examples/ex_focus_5.xul.txt'>6.4.5</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.3 - Keyboard Shortcuts"
+     href="keyshort.html">Previous</a>
+
+
+  <a class="nextlink" title="6.5 - Commands"
+     href="commands.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

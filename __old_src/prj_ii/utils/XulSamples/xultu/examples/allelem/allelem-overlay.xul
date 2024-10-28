@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<overlay id="overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<arrowscrollbox id="arrowscrollbox">
+   <label id="label_sb5" value="Hot"/>
+   <label id="label_sb6" value="Very Hot"/>
+   <label id="label_sb2" value="Cold"/>
+   <label id="label_sb3" value="Somewhat Cold" position="3"/>
+</arrowscrollbox>
+
+</overlay>
+

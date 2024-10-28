@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+
+<element name='textnode'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_textnode.html</reference>
+  Normally when substituting RDF resources in template rules, you place the RDF  property name inside an attribute value preceded with 'rdf:'. In the case of the  textnode element, the entire node is replaced with text corresponding to the result  of the value attribute.         This is useful if you want to use the html element or other elements that have  text content inside them instead of in attributes. This element does nothing outside  of a template.  
+<html><![CDATA[
+<p>  Normally when substituting RDF resources in template rules, you place the RDF  property name inside an attribute value preceded with 'rdf:'. In the case of the  textnode element, the entire node is replaced with text corresponding to the result  of the value attribute.   </p>  <p>  This is useful if you want to use the html element or other elements that have  text content inside them instead of in attributes. This element does nothing outside  of a template.  </p>
+]]></html>
+
+<attr name='value' type='URL of an RDF predicate'>
+  The text value to display. This value should be an RDF property.
+</attr>
+</element>

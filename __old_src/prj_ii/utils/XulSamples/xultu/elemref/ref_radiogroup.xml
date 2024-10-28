@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+
+<element name='radiogroup'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/inputs.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_radiogroup.html</reference>
+  A group of radio buttons. Only one radio button inside the group can be  selected at a time. The radio buttons may either direct children of the  radiogroup or descendants. Place the radiogroup inside a groupbox if you  would like a border or caption around the group. The radiogroup defaults  to vertical orientation.        To set the radio button that will be selected by default, set the selected  attribute of a child radio element.  
+<html><![CDATA[
+<p>  A group of radio buttons. Only one radio button inside the group can be  selected at a time. The radio buttons may either direct children of the  radiogroup or descendants. Place the radiogroup inside a groupbox if you  would like a border or caption around the group. The radiogroup defaults  to vertical orientation.  </p>  <p>  To set the radio button that will be selected by default, set the selected  attribute of a child radio element.  </p>
+]]></html>
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULSelectControlElement</implements>
+<attr name='disabled' type='boolean'>
+  Indicates whether the radiogroup is disabled or not. If this attribute is set to true,  the radiogroup is disabled. This is usually drawn with the text in grey. If the radiogroup is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the radiogroup, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='focused' type='boolean'>
+  This attribute is set to true if the radiogroup element is focused.
+</attr>
+<attr name='tabindex' type='integer'>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.
+</attr>
+<attr name='value' type='string'>
+  Returns the value property of the currently selected radio button. To  change the selection, use the selectedIndex or selectedItem property.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the radiogroup.
+</prop>
+<method name='appendItem' returns='radio element'>
+<prototype> appendItem ( label , value ) </prototype>
+  
+  Creates a new radio element and adds it to the end of the radiogroup. You  may optionally set a value. The function returns the new item.
+</method>
+<method name='checkAdjacentElement'>
+<prototype> checkAdjacentElement ( dir ) </prototype>
+  
+  Deselects the currently selected radio button in the group and selects the one  adjacent to it. If the argument dir is true, the next radio button is selected.  If it is false, the previous radio button is selected.
+</method>
+<prop name='disabled'/>
+<prop name='focusedItem' type='radio element'>
+  Holds the currently focused item in the radiogroup, which may or may not be  the same as the selected one. You can change the focused item by setting this  property.
+</prop>
+<method name='insertItemAt' returns='radio element'>
+<prototype> insertItemAt ( index, label , value ) </prototype>
+  
+  Creates a new radio element and inserts it at a specific position in the  radiogroup. You may optionally set a value. The function returns the new item.
+</method>
+<method name='removeItemAt' returns='radio element'>
+<prototype> removeItemAt ( index ) </prototype>
+  
+  Removes the child item in the radiogroup at the given index.  The function returns the removed item.
+</method>
+<prop name='selectedIndex' type='radio element'>
+  Holds the index of the currently selected item in the radiogroup. If no item  is currently selected, this value will be set to -1.. You can select an item  by setting this value.
+</prop>
+<prop name='selectedItem' type='radio element'>
+  Holds the currently selected item in the radiogroup. If no item is currently  selected, this value will be null. You can select an item by setting this  value. A RadioStateChange event will be sent to the selected radio button  when it is changed either via this property, the selectedIndex property, or  changed by the user.
+</prop>
+<prop name='value'/>
+</element>

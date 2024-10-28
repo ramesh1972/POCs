@@ -1,0 +1,104 @@
+<?xml version='1.0'?>
+
+<element name='menuitem'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/menubar.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_menuitem.html</reference>
+  A single choice in a menupopup element. It acts much like a button but it is  rendered on a menu.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULSelectControlItemElement</implements>
+<attr name='acceltext' type='string'>
+  Text that appears beside beside the menu label to indicate the shortcut key  (accelerator key) to use to invoke the command. If this value is set, it  overrides an assigned key set in the key attribute. This attribute does not  apply to menus directly on the menubar.
+</attr>
+<attr name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the menuitem.
+</attr>
+<attr name='accesskey' type='character'>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the menuitem.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the menuitem will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.
+</attr>
+<attr name='allowevents' type='boolean'>
+  If true, events are passed to children of the menuitem. Otherwise, events are  passed to the menuitem only.
+</attr>
+<attr name='autocheck'>
+  If this attribute is true, or left out, the menuitem check mark will update  each time the menu item is selected. If this attribute is false, the  check mark must be adjusted manually.
+</attr>
+<attr name='checked' type='boolean'>
+  Indicates whether the menuitem is checked or not.
+</attr>
+<attr name='command' type='element id'>
+  Set to an id of a command element that is being observed by the menuitem.  If the command element's disabled attribute is set to true, the menuitem will  become disabled. If the command disabled attribue is removed, the menuitem will  be enabled. Similarly, the command's label attribute can be used to set the  menuitem's label.
+</attr>
+<attr name='crop'>
+  If the label of the menuitem is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the menuitem is disabled or not. If this attribute is set to true,  the menuitem is disabled. This is usually drawn with the text in grey. If the menuitem is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the menuitem, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='image' type='image URL'>
+  The URL of the image to appear on the menuitem. If this is attribute is left  out, no image appears. The position of the image is determined by the dir  and orient attributes. You must use the class 'menuitem-iconic' to have an  image appear.
+</attr>
+<attr name='key' type='key element id'>
+  The id of a key element that is used as the menu command's shortcut key.  If used, text will be displayed beside the menu label to indicate which  keys can be pressed to invoke the command.
+</attr>
+<attr name='label' type='string'>
+  The label that will appear on the menuitem. If this is left out, no text appears.
+</attr>
+<attr name='name' type='string name'>
+  Radio menuitems with the same name as put into a group. Only one  menuitem from each radio group can be checked at a time.
+</attr>
+<attr name='selected' type='boolean'>
+  Indicates that the menuitem is selected in a menulist. This property is  read only. To change the selection, set either the selectedIndex or  selectedItem property of the containing menulist.
+</attr>
+<attr name='type'>
+  Can be used to create checkable menuitems or for radio button  menuitems.
+<value name='checkbox'>
+    The menuitem is checked. The checked attribute determines whether the menuitem
+    is checked or not.
+</value>
+<value name='radio'>
+    The menuitem becomes part of a radio group. Other menuitems that have the same
+    value for their name attributes are part of the same radio group. Only one
+    menuitem in the same radio group can be checked at once.
+</value>
+</attr>
+<attr name='validate'>
+  This attribute indicates whether to load the image from the cache or not.  This would be useful if the images are stored remotely or you plan on swapping  the image frequently. The following values are accepted, or leave out the  attribute entirely for default handling:
+<value name='always'>
+    The image is always checked to see whether it should be reloaded.
+</value>
+<value name='never'>
+    The image will be loaded from the cache if possible.
+</value>
+</attr>
+<attr name='value' type='string'>
+  You can associate a data value with each menu and menuitem. It is  not used for any specific purpose but you can access it with a script  for your own use.
+</attr>
+<class name='menuitem-iconic'>
+  Use this class to have an image appear on the menuitem. Specify the image  using the image attribute.
+</class>
+<class name='menuitem-non-iconic'>
+  Normally, menuitems have a margin to the left for an image or checkmark.  This class may be used to remove this margin so that the menuitem appears  on the left edge of the menupopup.
+</class>
+<prop name='label'/>
+<prop name='value'/>
+</element>

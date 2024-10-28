@@ -1,0 +1,763 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - XUL Element Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ XUL Element 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">XUL Element</h3>
+
+<p>
+  A XUL element. The following lists attribute and properties common to  all XUL elements. Some only have any meaning in particular situations such as  when placed inside a template or overlay.</p>
+<div class='aphead'>The XUL Element object implements the following interfaces:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMElement.html'>nsIDOMElement</a>&nbsp;&nbsp;
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMEventTarget.html'>nsIDOMEventTarget</a>&nbsp;&nbsp;
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMNode.html'>nsIDOMNode</a>&nbsp;&nbsp;
+<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULElement.html'>nsIDOMXULElement</a>&nbsp;&nbsp;
+</div>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_align'>align</a></td>
+<td><a href='#attr_allowevents'>allowevents</a></td>
+<td><a href='#attr_allownegativeassertions'>allownegativeassertions</a></td>
+<td><a href='#attr_class'>class</a></td>
+<td><a href='#attr_coalesceduplicatearcs'>coalesceduplicatearcs</a></td>
+</tr><tr>
+<td><a href='#attr_collapsed'>collapsed</a></td>
+<td><a href='#attr_container'>container</a></td>
+<td><a href='#attr_containment'>containment</a></td>
+<td><a href='#attr_context'>context</a></td>
+<td><a href='#attr_contextmenu'>contextmenu</a></td>
+</tr><tr>
+<td><a href='#attr_datasources'>datasources</a></td>
+<td><a href='#attr_debug'>debug</a></td>
+<td><a href='#attr_dir'>dir</a></td>
+<td><a href='#attr_empty'>empty</a></td>
+<td><a href='#attr_equalsize'>equalsize</a></td>
+</tr><tr>
+<td><a href='#attr_flags'>flags</a></td>
+<td><a href='#attr_flex'>flex</a></td>
+<td><a href='#attr_height'>height</a></td>
+<td><a href='#attr_hidden'>hidden</a></td>
+<td><a href='#attr_id'>id</a></td>
+</tr><tr>
+<td><a href='#attr_insertafter'>insertafter</a></td>
+<td><a href='#attr_insertbefore'>insertbefore</a></td>
+<td><a href='#attr_left'>left</a></td>
+<td><a href='#attr_maxheight'>maxheight</a></td>
+<td><a href='#attr_maxwidth'>maxwidth</a></td>
+</tr><tr>
+<td><a href='#attr_menu'>menu</a></td>
+<td><a href='#attr_minheight'>minheight</a></td>
+<td><a href='#attr_minwidth'>minwidth</a></td>
+<td><a href='#attr_observes'>observes</a></td>
+<td><a href='#attr_ordinal'>ordinal</a></td>
+</tr><tr>
+<td><a href='#attr_orient'>orient</a></td>
+<td><a href='#attr_pack'>pack</a></td>
+<td><a href='#attr_persist'>persist</a></td>
+<td><a href='#attr_popup'>popup</a></td>
+<td><a href='#attr_position'>position</a></td>
+</tr><tr>
+<td><a href='#attr_ref'>ref</a></td>
+<td><a href='#attr_removeelement'>removeelement</a></td>
+<td><a href='#attr_sortDirection'>sortDirection</a></td>
+<td><a href='#attr_sortResource'>sortResource</a></td>
+<td><a href='#attr_sortResource2'>sortResource2</a></td>
+</tr><tr>
+<td><a href='#attr_statustext'>statustext</a></td>
+<td><a href='#attr_style'>style</a></td>
+<td><a href='#attr_template'>template</a></td>
+<td><a href='#attr_tooltip'>tooltip</a></td>
+<td><a href='#attr_tooltiptext'>tooltiptext</a></td>
+</tr><tr>
+<td><a href='#attr_top'>top</a></td>
+<td><a href='#attr_uri'>uri</a></td>
+<td><a href='#attr_wait-cursor'>wait-cursor</a></td>
+<td><a href='#attr_width'>width</a></td>
+</tr></table>
+</div>
+<div class='aphead'><p>Style Classes:</p><table class='apheadbody'><tr>
+<td><a href='#class_box-inset'>box-inset</a></td>
+<td><a href='#class_box-padded'>box-padded</a></td>
+<td><a href='#class_groove-bottom'>groove-bottom</a></td>
+<td><a href='#class_groove-left'>groove-left</a></td>
+<td><a href='#class_groove-right'>groove-right</a></td>
+</tr><tr>
+<td><a href='#class_groove-top'>groove-top</a></td>
+<td><a href='#class_inset'>inset</a></td>
+<td><a href='#class_outset'>outset</a></td>
+<td><a href='#class_outset-top-bottom'>outset-top-bottom</a></td>
+</tr></table>
+</div>
+<div class='aphead'><p>Properties and Methods:</p><table class='apheadbody'><tr>
+<td><a href='#prop_align'>align</a></td>
+<td><a href='#prop_allowEvents'>allowEvents</a></td>
+<td><a href='#prop_blur'>blur</a></td>
+<td><a href='#prop_boxObject'>boxObject</a></td>
+<td><a href='#prop_boxObject.element'>boxObject.element</a></td>
+</tr><tr>
+<td><a href='#prop_boxObject.getLookAndFeelMetric'>boxObject.getLookAndFeelMetric</a></td>
+<td><a href='#prop_boxObject.height'>boxObject.height</a></td>
+<td><a href='#prop_boxObject.screenX'>boxObject.screenX</a></td>
+<td><a href='#prop_boxObject.screenY'>boxObject.screenY</a></td>
+<td><a href='#prop_boxObject.width'>boxObject.width</a></td>
+</tr><tr>
+<td><a href='#prop_boxObject.x'>boxObject.x</a></td>
+<td><a href='#prop_boxObject.y'>boxObject.y</a></td>
+<td><a href='#prop_builder'>builder</a></td>
+<td><a href='#prop_className'>className</a></td>
+<td><a href='#prop_click'>click</a></td>
+</tr><tr>
+<td><a href='#prop_collapsed'>collapsed</a></td>
+<td><a href='#prop_contextMenu'>contextMenu</a></td>
+<td><a href='#prop_controllers'>controllers</a></td>
+<td><a href='#prop_database'>database</a></td>
+<td><a href='#prop_datasources'>datasources</a></td>
+</tr><tr>
+<td><a href='#prop_dir'>dir</a></td>
+<td><a href='#prop_doCommand'>doCommand</a></td>
+<td><a href='#prop_flex'>flex</a></td>
+<td><a href='#prop_focus'>focus</a></td>
+<td><a href='#prop_getElementsByAttribute'>getElementsByAttribute</a></td>
+</tr><tr>
+<td><a href='#prop_height'>height</a></td>
+<td><a href='#prop_hidden'>hidden</a></td>
+<td><a href='#prop_id'>id</a></td>
+<td><a href='#prop_left'>left</a></td>
+<td><a href='#prop_maxHeight'>maxHeight</a></td>
+</tr><tr>
+<td><a href='#prop_maxWidth'>maxWidth</a></td>
+<td><a href='#prop_menu'>menu</a></td>
+<td><a href='#prop_minHeight'>minHeight</a></td>
+<td><a href='#prop_minWidth'>minWidth</a></td>
+<td><a href='#prop_observes'>observes</a></td>
+</tr><tr>
+<td><a href='#prop_ordinal'>ordinal</a></td>
+<td><a href='#prop_orient'>orient</a></td>
+<td><a href='#prop_pack'>pack</a></td>
+<td><a href='#prop_persist'>persist</a></td>
+<td><a href='#prop_ref'>ref</a></td>
+</tr><tr>
+<td><a href='#prop_resource'>resource</a></td>
+<td><a href='#prop_statusText'>statusText</a></td>
+<td><a href='#prop_style'>style</a></td>
+<td><a href='#prop_tooltip'>tooltip</a></td>
+<td><a href='#prop_tooltipText'>tooltipText</a></td>
+</tr><tr>
+<td><a href='#prop_top'>top</a></td>
+<td><a href='#prop_width'>width</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Attributes:</a></h4>
+<div class='ref_apblk'>
+  <h5><a name='attr_align'><span class='attrib'>align</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  The align attribute specifies how child elements of the box are aligned, when  the size of the box is larger than the total size of the children. For boxes that  have horizontal orientation, it specifies how its children will be aligned  vertically. For boxes that have vertical orientation, it is used to specify how  its children are algined horizontally. The pack attribute is related to the alignment  but is used to specify the position in the opposite direction. You  can also specify the value of align using the style property '-moz-box-align'.</p>
+  <ul>
+    <li><span class='aval'>start</span>:
+          Child elements are aligned starting from the left or top edge of the box. If
+    the box is larger than the total size of the children, the extra space is
+    placed on the right or bottom side.
+
+</li>
+    <li><span class='aval'>center</span>:
+          Extra space is split equally along each side of the child elements, resulting
+    the children being placed in the center of the box.
+
+</li>
+    <li><span class='aval'>end</span>:
+          Child elements are placed on the right or bottom edge of the box. If the box
+    is larger than the total size of the children, the extra space is placed on
+    the left or top side.
+
+</li>
+    <li><span class='aval'>baseline</span>:
+          This value applies to horizontally oriented boxes only. It causes the child
+    elements to be aligned so that their text labels are lined up.
+
+</li>
+    <li><span class='aval-default'>stretch</span>:
+          The child elements are stretched to fit the size of the box. For a horizontal
+    box, the children are stretched to be the height of the box. For a vertical
+    box, the children are stretched to be the width of the box. If the size of the
+    box changes, the children stretch to fit. Use the flex attribute to create
+    elements that stretch in the opposite direction.
+
+</li>
+    <li><span class='aval'>left</span>:
+          <b>(Deprecated)</b> The elements are aligned on their left edges.
+
+</li>
+    <li><span class='aval'>center</span>:
+          <b>(Deprecated)</b> The elements are centered horizontally.
+
+</li>
+    <li><span class='aval'>right</span>:
+          <b>(Deprecated)</b> The elements are aligned on their right edges.
+
+</li>
+  </ul>
+  <h5><a name='attr_allowevents'><span class='attrib'>allowevents</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, events are passed to children of the element. Otherwise, events are  passed to the element only.</p>
+  <h5><a name='attr_allownegativeassertions'><span class='attrib'>allownegativeassertions</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Valid on any element that has a datasources attribute. When multiple  datasources are used, one may override an assertion from another.  This attribute, if true, which is the default, allows a datasource  to negate an earlier assertion.</p>
+  <h5><a name='attr_class'><span class='attrib'>class</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  The style class of the element. Multiple classes may be specified by  separating them with spaces.</p>
+  <h5><a name='attr_coalesceduplicatearcs'><span class='attrib'>coalesceduplicatearcs</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Valid on any element that has a datasources attribute. Because RDF  holds a graph of resources, it is possible for there to be several  pointers to the same node. If this attribute is true, which is the  default, duplicate references are skipped. If false, duplicate  references will appear.</p>
+  <h5><a name='attr_collapsed'><span class='attrib'>collapsed</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, then the element is collapsed and does not appear. It is equivalent  to setting the CSS visibility property to 'collapse'.</p>
+  <h5><a name='attr_container'><span class='attrib'>container</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Set to true if the element is to act as a container which can have child  elements. This would be used for folders. This will be set by the template  builder as needed.</p>
+  <h5><a name='attr_containment'><span class='attrib'>containment</span></a></h5>
+<p class='aptype'>Type:&nbsp;URI of an RDF predicate</p>  <p>
+  This attribute specifies RDF properties that indicate that a resource is a  container. When generating content from a template this is used to determine  which resources from the datasource are containers and thus can have child  nodes and which ones are not containers.  <p><p>  This attribute should be placed on the same element that the datasources and  the ref attribute is on. It may be set to a space-separated list of RDF  properties or resources.</p>
+  <h5><a name='attr_context'><span class='attrib'>context</span></a></h5>
+<p class='aptype'>Type:&nbsp;popup element id</p>  <p>
+  Should be set to the value of the id of the popup element that should appear  when the user context-clicks on the element. A context-click varies on each  platform. Usually it will be a right click. You can use the special  value '_child' to indicate the first <a href='ref_menupopup.html'>menupopup</a> child of the element.</p>
+  <h5><a name='attr_contextmenu'><span class='attrib'>contextmenu</span></a></h5>
+<p class='aptype'>Type:&nbsp;popup element id</p>  <p>
+  Alternate name for the context attribute, but also has a corresponding  script property 'contextmenu'.</p>
+  <h5><a name='attr_datasources'><span class='attrib'>datasources</span></a></h5>
+<p class='aptype'>Type:&nbsp;space separated list of datasource URIs</p>  <p>
+  A space-separated list of datasources that an element's template  will use for content generation. These can be either internal  datasources such as rdf:bookmarks or a URL of an RDF file. The  datasources attribute may be placed on most elements, although it  will usually be found on trees and menupopups. The element should  have a template element as a child.  </p><p>  The specified datasources are combined into a single composite  datasource which holds the data from all of the datasources. This  composite datasource is accesssible via a script through the  database property.  </p><p>  If you plan on adding a datasource to an element but don't want one  to be added right away, set this attribute to 'rdf:null'. This will  make the element so that its contents can be generated from a datasource.  Otherwise, you cannot add one later.</p>
+  <h5><a name='attr_debug'><span class='attrib'>debug</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If true, extra borders are drawn around the element and all its  descendants. This can be used to determine orientation and where  flexible elements are. If debug mode is enabled for a box, horizontal  oriented boxes are displayed with a blue border and vertical boxes  are displayed with a red border. The border above the element will be  straight for non-flexible elements and wavy for flexible elements.</p>
+  <h5><a name='attr_dir'><span class='attrib'>dir</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  The direction in which the child elements of the element are placed. </p>
+  <ul>
+    <li><span class='aval'>ltr</span>:
+          The elements are placed left to right or top to bottom in the order they
+    appear in the XUL code.
+
+</li>
+    <li><span class='aval'>rtl</span>:
+          The elements are placed right to left or bottom to top. This is reverse of
+    the order in which they appear in the XUL code.
+
+</li>
+  </ul>
+  <h5><a name='attr_empty'><span class='attrib'>empty</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Set to true if the element is a container that contains no children. This will  be set by the template builder as needed.</p>
+  <h5><a name='attr_equalsize'><span class='attrib'>equalsize</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  This attribute can be used to make the children of the element equal in size.</p>
+  <ul>
+    <li><span class='aval'>always</span>:
+          For a horizontally oriented element, this will make all of its children have
+    the width of the widest child. For a vertically oriented element, this will
+    make its children all have the height of the tallest child.
+
+</li>
+    <li><span class='aval-default'>never</span>:
+          All of the children are displayed at the size required by the content or as
+    specified by the width and height attributes or the CSS width and height
+    properties.
+
+</li>
+  </ul>
+  <h5><a name='attr_flags'><span class='attrib'>flags</span></a></h5>
+<p class='aptype'>Type:&nbsp;space separated list of the values below</p>  <p>
+  A set of flags used for miscellaneous purposes. Two flags are defined, which  may be the value of this attribute.</p>
+  <ul>
+    <li><span class='aval'>dont-test-empty</span>:
+          For template generated content, the builder will not check that a container
+    is empty.
+
+</li>
+    <li><span class='aval'>dont-build-content</span>:
+          This flag may be used on a tree to indicate that content elements should not
+    be generated. This results in a performace enhancement, but you will not be
+    able to use the DOM functions to retreive the tree rows.
+
+</li>
+  </ul>
+  <h5><a name='attr_flex'><span class='attrib'>flex</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  Indicates the flexibility of the element. Flexible elements grow and shrink  to fit their given space. The actual value is not relevant unless there are  other flexible elements within the same container. Elements with larger  flex values will grow more than elements with lower flex values, at the  ratio determined by the two elements.</p>
+  <h5><a name='attr_height'><span class='attrib'>height</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The height of the element in pixels. It is recommended that the CSS height property  be used instead.</p>
+  <h5><a name='attr_hidden'><span class='attrib'>hidden</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If set to true, the element is not displayed. This is similar to setting the  CSS display property to 'none'.</p>
+  <h5><a name='attr_id'><span class='attrib'>id</span></a></h5>
+<p class='aptype'>Type:&nbsp;element id, must be unique in the window</p>  <p>
+  A unique identifier so that you can identify the element with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.</p>
+  <h5><a name='attr_insertafter'><span class='attrib'>insertafter</span></a></h5>
+<p class='aptype'>Type:&nbsp;element id</p>  <p>
+  When an element is in an <a href='ref_overlay.html'>overlay</a>, the insertafter attribute specifies the id  of the element in the base window that the element should appear after. This  attribute overrides the insertbefore attribute. This value may be a comma-separated  list of ids, which are scanned and the first one found in the window is used.</p>
+  <h5><a name='attr_insertbefore'><span class='attrib'>insertbefore</span></a></h5>
+<p class='aptype'>Type:&nbsp;element id</p>  <p>
+  When an element is in an <a href='ref_overlay.html'>overlay</a>, the insertbefore attribute specifies the id  of the element in the base window that the element should appear before. This value  may be a comma-separated list of ids, which are scanned and the first one found in  the window is used.</p>
+  <h5><a name='attr_left'><span class='attrib'>left</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  For elements placed within a <a href='ref_stack.html'>stack</a>, specifies the position of the  left edge of the element.</p>
+  <h5><a name='attr_maxheight'><span class='attrib'>maxheight</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The maximum height of the element. This corresponds to the max-height CSS property.</p>
+  <h5><a name='attr_maxwidth'><span class='attrib'>maxwidth</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The maximum width of the element. This corresponds to the max-width CSS property.</p>
+  <h5><a name='attr_menu'><span class='attrib'>menu</span></a></h5>
+<p class='aptype'>Type:&nbsp;popup element id</p>  <p>
+  Alternate name for the popup attribute, but also has a corresponding  script property 'menu'.</p>
+  <h5><a name='attr_minheight'><span class='attrib'>minheight</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The minimum height of the element. This corresponds to the min-height CSS property.</p>
+  <h5><a name='attr_minwidth'><span class='attrib'>minwidth</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The minimum width of the element. This corresponds to the min-width CSS property.</p>
+  <h5><a name='attr_observes'><span class='attrib'>observes</span></a></h5>
+<p class='aptype'>Type:&nbsp;broadcaster element id</p>  <p>
+  Set to an id of a <a href='ref_broadcaster.html'>broadcaster</a> element that is being observed by the  element. If an attribute changes in the broadcaster it is also changed  in the observer.</p>
+  <h5><a name='attr_ordinal'><span class='attrib'>ordinal</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  An integer which specifies the position of the element within its parent.  By default, elements appear in the order they appear in the XUL code. The  ordinal attribute can be used to change the order. You can retrieve the  displayed order by using the properties of the boxObject of the container.</p>
+  <h5><a name='attr_orient'><span class='attrib'>orient</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  Used to specify whether the children of the element are oriented horizontally or  vertically. The default value depends on the element. You can also use the  '-moz-box-orient' style property.</p>
+  <ul>
+    <li><span class='aval'>horizontal</span>:
+          Child elements of the element are placed next to each other in a row in the order
+    that they appear in the XUL source.
+
+</li>
+    <li><span class='aval'>vertical</span>:
+          Child elements of the element are placed under each other in a column in the
+    order that they appear in the XUL source.
+
+</li>
+  </ul>
+  <h5><a name='attr_pack'><span class='attrib'>pack</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  The pack attribute specifies where child elements of the box are placed when  the box is larger that the size of the children. For boxes with horizontal  orientation, it is used to indicate the position of children horizontally.  For boxes with vertical orientation, it is used to indicate the position of  children vertically. The align attribute is used to specify the position in the  opposite direction. You can also specify the value of pack using the style property  '-moz-box-pack'.</p>
+  <ul>
+    <li><span class='aval-default'>start</span>:
+          Child elements are placed starting from the left or top edge of the box. If
+    the box is larger than the total size of the children, the extra space is
+    placed on the right or bottom side.
+
+</li>
+    <li><span class='aval'>center</span>:
+          Extra space is split equally along each side of the child elements, resulting
+    the children being placed in the center of the box.
+
+</li>
+    <li><span class='aval'>end</span>:
+          Child elements are placed on the right or bottom edge of the box. If the box
+    is larger than the total size of the children, the extra space is placed on
+    the left or top side.
+
+</li>
+  </ul>
+  <h5><a name='attr_persist'><span class='attrib'>persist</span></a></h5>
+<p class='aptype'>Type:&nbsp;space separated list of attribute names</p>  <p>
+  A space separated list of attributes that are maintained when the window is  closed. When the window is re-opened, the values of persistent attributes  are restored. In Mozilla, persistent attributes are stored in the per-profile  file localstore.rdf. Persistence can also be stored using the  <a href='ref_XULDocument.html#persist'>document.persist</a> function.  In order for persistence to work, the element must also have an id.</p>
+  <h5><a name='attr_popup'><span class='attrib'>popup</span></a></h5>
+<p class='aptype'>Type:&nbsp;popup element id</p>  <p>
+  Should be set to the value of the id of the popup element that should appear  when the user clicks on the element.</p>
+  <h5><a name='attr_position'><span class='attrib'>position</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  When an element is in an <a href='ref_overlay.html'>overlay</a>, the position is an index where the child is  inserted. The position is one-based, so use a value of 1 to place the element at  the beginning. This attribute is ignored if either an insertbefore or insertafter  attribute matches an element.</p>
+  <h5><a name='attr_ref'><span class='attrib'>ref</span></a></h5>
+<p class='aptype'>Type:&nbsp;URI of an RDF resource</p>  <p>
+  For template generated elements, this attribute is used to specify the root  RDF node where content generation begins. This will correspond to the  value of an about attribute on an RDF container. This attribute should be  placed alongside the datasources attribute.</p>
+  <h5><a name='attr_removeelement'><span class='attrib'>removeelement</span></a></h5>
+<p class='aptype'>Type:&nbsp;element id</p>  <p>
+  When placed on an element in an <a href='ref_overlay.html'>overlay</a>, it indicates that the element in the  base file should be removed from the window.</p>
+  <h5><a name='attr_sortDirection'><span class='attrib'>sortDirection</span></a></h5>
+<p class='aptype'>Type:&nbsp;one of the values below</p>  <p>
+  Set this attribute to set the direction that template-generated content is sorted.  Use the sortResource attribute to specify the sort key.</p>
+  <ul>
+    <li><span class='aval'>ascending</span>:
+          The data is sorted in ascending order.
+
+</li>
+    <li><span class='aval'>descending</span>:
+          The data is sorted in descending order.
+
+</li>
+    <li><span class='aval-default'>natural</span>:
+          The data is sorted in natural order, which means the order that it is stored in.
+
+</li>
+  </ul>
+  <h5><a name='attr_sortResource'><span class='attrib'>sortResource</span></a></h5>
+<p class='aptype'>Type:&nbsp;URI of an RDF predicate</p>  <p>
+  For template-generated content, this specifies the sort key, if you would like  the content to be sorted. The key should be the full URI of the resource to sort  by, for example 'http://home.netscape.com/NC-rdf#Name'. Place this attribute on  the same element as the datasources attribute. Use sortResource2 to specify a  secondary sort key.</p>
+  <h5><a name='attr_sortResource2'><span class='attrib'>sortResource2</span></a></h5>
+<p class='aptype'>Type:&nbsp;URI of an RDF predicate</p>  <p>
+  A secondary key for sorted content.</p>
+  <h5><a name='attr_statustext'><span class='attrib'>statustext</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  Used to set the text that appears on the status bar when the user moves the mouse  over the element.</p>
+  <h5><a name='attr_style'><span class='attrib'>style</span></a></h5>
+<p class='aptype'>Type:&nbsp;CSS inline style</p>  <p>
+  CSS style rules to be applied to the element. Syntax is as in the HTML style  attribute. It is preferred to put style rules in style sheets.</p>
+  <h5><a name='attr_template'><span class='attrib'>template</span></a></h5>
+<p class='aptype'>Type:&nbsp;element id</p>  <p>
+  For template generated elements, this attribute may optionally be placed on  the root node (the element with the datasources attribute) to refer to  a template that exists elsewhere in the XUL code. This template attribute  should be set to the ID of the template element. This might be used to share a  single template between multiple trees or menus. If this attribute is not  specified, there should be a template element directly inside the node.</p>
+  <h5><a name='attr_tooltip'><span class='attrib'>tooltip</span></a></h5>
+<p class='aptype'>Type:&nbsp;tooltip element id</p>  <p>
+  Should be set to the value of the id of the popup element that should be used  as a tooltip window when the mouse hovers over the element for a moment. The tooltip  will automatically disappear when the mouse is moved. If this attribute is set  to '_child', the first tooltip child element inside the element is used.</p>
+  <h5><a name='attr_tooltiptext'><span class='attrib'>tooltiptext</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  Used to set the text which appears in the tooltip when the user moves the  mouse over the element. This can be used instead of setting the tooltip to a  popup for the common case where it contains only text. The toolitp is  displayed in a default tooltip which only displays only a label, however  the default tooltip may be changed by setting the default attribute on a  <a href='ref_tooltip.html'>tooltip</a> element.</p>
+  <h5><a name='attr_top'><span class='attrib'>top</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  For elements placed within a <a href='ref_stack.html'>stack</a>, specifies the position of the  top edge of the element.</p>
+  <h5><a name='attr_uri'><span class='attrib'>uri</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  For template-generated content, the attribute should be placed on the  element where content generation should begin. Thus, it should be placed  on an element that is a descendant of a template. The value should be set  to rdf:*.</p>  <p>Elements that appear inside the element with the attribute will be  repeated for each node in the RDF datasource. Elements outside will appear  only once.</p>
+  <h5><a name='attr_wait-cursor'><span class='attrib'>wait-cursor</span></a></h5>
+  <p>
+  Set this attribute to true to have the cursor switch to a waiting cursor  while the mouse is hovering over it. Usually, you would only use this on the  <a href='ref_window.html'>window</a> element or other top-level elements.</p>
+  <h5><a name='attr_width'><span class='attrib'>width</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The width of the element in pixels. It is recommended that the CSS width property  be used instead.</p>
+</div>
+<hr class='propsplit'><h4 class='propslist'><a name='propsblk'>Style Classes:</a></h4>
+<p>The following classes may be used to style the element. These
+                classes should be used instead of changing the style of the
+                element directly since they will fit more naturally with the
+                user's selected theme.</p><div class='ref_apblk'>
+  <h5><a name='class_box-inset'><span class='attrib'>box-inset</span></a></h5>
+  <p>
+  The element is drawn with an inset border around it similar to the inset  type except more noticeable. It will generally have borders like those that  appear around a control such as listbox, with the background white, assuming  the default theme.</p>
+  <h5><a name='class_box-padded'><span class='attrib'>box-padded</span></a></h5>
+  <p>
+  A box with a small amount of padding on each side.</p>
+  <h5><a name='class_groove-bottom'><span class='attrib'>groove-bottom</span></a></h5>
+  <p>
+  An element with a groove along its bottom edge.</p>
+  <h5><a name='class_groove-left'><span class='attrib'>groove-left</span></a></h5>
+  <p>
+  An element with a groove along its left edge.</p>
+  <h5><a name='class_groove-right'><span class='attrib'>groove-right</span></a></h5>
+  <p>
+  An element with a groove along its right edge.</p>
+  <h5><a name='class_groove-top'><span class='attrib'>groove-top</span></a></h5>
+  <p>
+  An element with a groove along its top edge.</p>
+  <h5><a name='class_inset'><span class='attrib'>inset</span></a></h5>
+  <p>
+  The element is drawn with an inset border around it. This causes the element  area to appear inset from the rest of the content.</p>
+  <h5><a name='class_outset'><span class='attrib'>outset</span></a></h5>
+  <p>
+  The element is drawn with an outset border around it. This causes the element  area to appear outset from the rest of the content.</p>
+  <h5><a name='class_outset-top-bottom'><span class='attrib'>outset-top-bottom</span></a></h5>
+  <p>
+  The element is drawn with an outset border along the top and bottom edges.  This class might be used when the element is part of a set of items in a  row, since borders do not appear between them.</p>
+</div>
+<hr class='propsplit'><h4 class='propslist'><a name='propsblk'>Properties and Methods:</a></h4>
+<div class='apinherits'>
+<p>Inherited from Element:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_addEventListener'>addEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_appendChild'>appendChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_attributes'>attributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_childNodes'>childNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_cloneNode'>cloneNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_dispatchEvent'>dispatchEvent</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_firstChild'>firstChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttribute'>getAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNS'>getAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNode'>getAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNodeNS'>getAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagName'>getElementsByTagName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagNameNS'>getElementsByTagNameNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttribute'>hasAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributeNS'>hasAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributes'>hasAttributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasChildNodes'>hasChildNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_insertBefore'>insertBefore</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_isSupported'>isSupported</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_lastChild'>lastChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_localName'>localName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_namespaceURI'>namespaceURI</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nextSibling'>nextSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeName'>nodeName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeType'>nodeType</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeValue'>nodeValue</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_normalize'>normalize</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_ownerDocument'>ownerDocument</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_parentNode'>parentNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_prefix'>prefix</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_previousSibling'>previousSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttribute'>removeAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNS'>removeAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNode'>removeAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeChild'>removeChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeEventListener'>removeEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_replaceChild'>replaceChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttribute'>setAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNS'>setAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNode'>setAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNodeNS'>setAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_tagName'>tagName</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='prop_align'><span class='attrib'>align</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the align attribute.</p>
+  <h5><a name='prop_allowEvents'><span class='attrib'>allowEvents</span></a></h5>
+<p>Gets and sets the value of the allowevents attribute.</p>
+  <h5><a name='prop_blur'><span class='attrib'> blur ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  If the focus is on the element, it is removed. The focus is not automatically  placed on any other element. Essentially, this is used to call the onblur  handler.</p>
+  <h5><a name='prop_boxObject'><span class='attrib'>boxObject</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIBoxObject.html'>nsIBoxObject</a></p>  <p>
+  This property is available for elements that are derived from boxes, which  is most displayable XUL elements. You can retrieve the boxObject for non-XUL  elements using the document.getBoxObjectFor method. The boxObject contains a  number of properties, described below.</p>
+  <h5><a name='prop_boxObject.element'><span class='attrib'>boxObject.element</span></a></h5>
+<p class='aptype'>Type:&nbsp;element</p>  <p>
+  A reference to the element itself.</p>
+  <h5><a name='prop_boxObject.getLookAndFeelMetric'><span class='attrib'> boxObject.getLookAndFeelMetric ( property ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;string</p>  <p>
+  
+  Returns a platform-specific setting named by the property argument.  Typically these would be settings the user would set in their  operating system preferences.  Two values can be used:</p>
+  <ul>
+    <li><span class='aval'>scrollbarStyle</span>:
+          Determines the type of scroll bar arrows that are used. This is used
+    on a Macintosh to determine whether the system is configured to display
+    the arrows at one end or both. The four possible return values are
+    doublebottom, double, doubletop, and single.
+
+</li>
+    <li><span class='aval'>thumbStyle</span>:
+          Determines whether scroll bar thumbs are displayed as a small fixed size
+    box or proportional to the size of the content. The two possible return
+    values are fixed and proportional.
+
+</li>
+  </ul>
+  <h5><a name='prop_boxObject.height'><span class='attrib'>boxObject.height</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The displayed height of the element.</p>
+  <h5><a name='prop_boxObject.screenX'><span class='attrib'>boxObject.screenX</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The horizontal position of the element on the screen.</p>
+  <h5><a name='prop_boxObject.screenY'><span class='attrib'>boxObject.screenY</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The vertical position of the element on the screen.</p>
+  <h5><a name='prop_boxObject.width'><span class='attrib'>boxObject.width</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The displayed width of the element.</p>
+  <h5><a name='prop_boxObject.x'><span class='attrib'>boxObject.x</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The horizontal position of the element on the window. The x and y position  is relative to the window's upper-left corner, or if the XUL is loaded in  a frame, the upper-left corner of the frame.</p>
+  <h5><a name='prop_boxObject.y'><span class='attrib'>boxObject.y</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The vertical position of the element on the window.</p>
+  <h5><a name='prop_builder'><span class='attrib'>builder</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIXULTemplateBuilder.html'>nsIXULTemplateBuilder</a></p>  <p>
+  For content generated from a template, this is the XPCOM object that is  responsible for generating the content. For scripts it is only necessary in  case you want to force the template content to be regenerated. You may need  to do this if you have adjusted the rules manually. To rebuild the content  call the builder's rebuild method.</p>  <p>For example, given a reference to a tree myTree, this example will rebuild  its content:</p>  <p>myTree.builder.rebuild();</p>
+  <h5><a name='prop_className'><span class='attrib'>className</span></a></h5>
+  <p>
+  Gets and sets the value of the class attribute.</p>
+  <h5><a name='prop_click'><span class='attrib'> click ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Calls the onclick handler for the element.</p>
+  <h5><a name='prop_collapsed'><span class='attrib'>collapsed</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p><p>Gets and sets the value of the collapsed attribute.</p>
+  <h5><a name='prop_contextMenu'><span class='attrib'>contextMenu</span></a></h5>
+<p>Gets and sets the value of the contextmenu attribute.</p>
+  <h5><a name='prop_controllers'><span class='attrib'>controllers</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIControllers.html'>nsIControllers</a></p>  <p>
+  A controllers list attached to the element. The controllers are used to  respond to commands. The document's command dispatcher will locate  controllers to handle a command by using the focused element's controllers  list.</p>
+  <h5><a name='prop_database'><span class='attrib'>database</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIRDFCompositeDataSource.html'>nsIRDFCompositeDataSource</a></p>  <p>
+  Returns the composite datasource created when all the datasources  of an element are combined. Set to null for elements that do not  have a datasources attribute.</p>
+  <h5><a name='prop_datasources'><span class='attrib'>datasources</span></a></h5>
+<p class='aptype'>Type:&nbsp;space separated list of datasource URIs</p>  <p>
+  Gets and sets the value of the statusbar attribute. In newer versions of  Mozilla (1.7), the datasources will be reloaded and the template updated.</p>
+  <h5><a name='prop_dir'><span class='attrib'>dir</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the dir attribute.</p>
+  <h5><a name='prop_doCommand'><span class='attrib'> doCommand ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Executes the command event for the element.</p>
+  <h5><a name='prop_flex'><span class='attrib'>flex</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p><p>Gets and sets the value of the flex attribute.</p>
+  <h5><a name='prop_focus'><span class='attrib'> focus ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Assigns the focus to the element, if it can accept the focus. The onfocus  handler is called.</p>
+  <h5><a name='prop_getElementsByAttribute'><span class='attrib'> getElementsByAttribute ( attrib , value ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;DOM NodeList</p>  <p>
+  
+  Returns an array of all the child elements of the element that have the  attribute given by the first argument set to the value given by the second  argument. If second argument is '*', the attribute may be set to any value.</p>
+  <h5><a name='prop_height'><span class='attrib'>height</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p><p>Gets and sets the value of the height attribute.</p>
+  <h5><a name='prop_hidden'><span class='attrib'>hidden</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p><p>Gets and sets the value of the hidden attribute.</p>
+  <h5><a name='prop_id'><span class='attrib'>id</span></a></h5>
+<p class='aptype'>Type:&nbsp;element id, must be unique in the window</p><p>Gets and sets the value of the id attribute.</p>
+  <h5><a name='prop_left'><span class='attrib'>left</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p><p>Gets and sets the value of the left attribute.</p>
+  <h5><a name='prop_maxHeight'><span class='attrib'>maxHeight</span></a></h5>
+<p>Gets and sets the value of the maxheight attribute.</p>
+  <h5><a name='prop_maxWidth'><span class='attrib'>maxWidth</span></a></h5>
+<p>Gets and sets the value of the maxwidth attribute.</p>
+  <h5><a name='prop_menu'><span class='attrib'>menu</span></a></h5>
+<p class='aptype'>Type:&nbsp;popup element id</p><p>Gets and sets the value of the menu attribute.</p>
+  <h5><a name='prop_minHeight'><span class='attrib'>minHeight</span></a></h5>
+<p>Gets and sets the value of the minheight attribute.</p>
+  <h5><a name='prop_minWidth'><span class='attrib'>minWidth</span></a></h5>
+<p>Gets and sets the value of the minwidth attribute.</p>
+  <h5><a name='prop_observes'><span class='attrib'>observes</span></a></h5>
+<p class='aptype'>Type:&nbsp;broadcaster element id</p><p>Gets and sets the value of the observes attribute.</p>
+  <h5><a name='prop_ordinal'><span class='attrib'>ordinal</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p><p>Gets and sets the value of the ordinal attribute.</p>
+  <h5><a name='prop_orient'><span class='attrib'>orient</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the orient attribute.</p>
+  <h5><a name='prop_pack'><span class='attrib'>pack</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p><p>Gets and sets the value of the pack attribute.</p>
+  <h5><a name='prop_persist'><span class='attrib'>persist</span></a></h5>
+<p class='aptype'>Type:&nbsp;space separated list of attribute names</p><p>Gets and sets the value of the persist attribute.</p>
+  <h5><a name='prop_ref'><span class='attrib'>ref</span></a></h5>
+<p class='aptype'>Type:&nbsp;URI of an RDF resource</p><p>Gets and sets the value of the ref attribute.</p>
+  <h5><a name='prop_resource'><span class='attrib'>resource</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIRDFResource.html'>nsIRDFResource</a></p>  <p>
+  Returns an RDF resource with the value of the element's ref attribute. If the  ref attribute is not specified, the id attribute is used instead.</p>
+  <h5><a name='prop_statusText'><span class='attrib'>statusText</span></a></h5>
+<p>Gets and sets the value of the statustext attribute.</p>
+  <h5><a name='prop_style'><span class='attrib'>style</span></a></h5>
+<p class='aptype'>Type:&nbsp;CSS inline style</p><p>Gets and sets the value of the style attribute.</p>
+  <h5><a name='prop_tooltip'><span class='attrib'>tooltip</span></a></h5>
+<p class='aptype'>Type:&nbsp;tooltip element id</p><p>Gets and sets the value of the tooltip attribute.</p>
+  <h5><a name='prop_tooltipText'><span class='attrib'>tooltipText</span></a></h5>
+<p>Gets and sets the value of the tooltiptext attribute.</p>
+  <h5><a name='prop_top'><span class='attrib'>top</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p><p>Gets and sets the value of the top attribute.</p>
+  <h5><a name='prop_width'><span class='attrib'>width</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p><p>Gets and sets the value of the width attribute.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

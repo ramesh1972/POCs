@@ -1,0 +1,244 @@
+/* Footer */
+#uftr {
+	margin-top: 10px;
+	text-align: center;
+	}
+#ftr {
+	width: 781;
+	margin: 0;
+	padding: 10px 0;
+	background-image: url(img/hbgr1.gif);
+	margin-left: auto;
+	margin-right: auto;
+}
+#ftrmid {
+	width: 781;
+	background-color: #393;
+	margin: 0;
+	padding: 5px 0;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+#ftrmid {
+	font: 10px/12px Tahoma,Arial,Helvetica; color: #030;
+	}
+#ftrmid a { color: #030; text-decoration: none }
+#ftrmid a:link { color: #030; }
+#ftrmid a:visited { color: #020; }
+#ftrmid a:hover { color: #fff; }
+#hdr {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+	}
+
+#hdrtop {
+	margin: 0;
+	padding: 0
+	}
+
+#hdrm {
+	background-image: url(img/hbgr1.gif);
+	margin: 0 auto;
+	width: 800px;
+	height: 58px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000
+	}
+
+#htnav {
+	color: #fff;
+	font: bold 11px Arial, Helvetica, sans-serif;
+	text-align: right;
+	padding-top: 1px;
+	padding-right: 10px;
+	padding-bottom: 1px;
+	}
+
+#htnav a:link {
+	color: #fff;
+	text-decoration: none
+	}
+
+#htnav a:visited {
+	color: #fff;
+	text-decoration: none
+	}
+
+#htnav a:hover {
+	color: #0f0;
+	text-decoration: none
+	}
+#hbttn  { background-color: #393; 
+	width: 800px; height: 34px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding-top: 2px; }
+
+/* Nav List Styles Begin */
+/* all lists */
+.nav, .nav ul { 
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	/* line-height: .8em; */
+	float: left;
+	
+}
+/* Style for nav A tags, and search A tag */
+.nav a, .hsr {
+	background: blue;
+	background-image: url(img/nbgr.gif);
+	display: block;
+	width: 8em;
+	font: bold 11px Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-align: center;
+	padding: 2px 0px;
+	margin: 5px 10px;
+	text-decoration: none;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	
+}
+/* all list items */
+.nav li {
+	position : relative;
+	float: left;
+	/* width needed or else Opera goes nuts */
+	width: 6.2em; 
+	/*border: 1px solid red*/
+}
+
+.nav li ul { /* second-level lists */
+	position: absolute;
+	
+	/*background: orange;*/
+	left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+	width: 10em;
+	
+}
+.nav li ul a { background: #69F;
+	text-align: left;
+	padding-left: 3px;
+	color: #000;
+	border-top: 0px solid #fff;
+	border-bottom: 0px solid #fff;
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 12em;
+ }
+.nav li a:hover {
+		color : white;
+		background-color : #369;
+		/*border-right: 1px solid #fff;
+		border-left: 1px solid #fff;*/
+	}
+
+.nav li:hover ul, .nav li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+	
+}
+/* Search box styles.  A tag (.hsr) is defined above */
+#hsrch { width: 250px; float: right; text-align: right;}
+#sbox, #srch { margin: 0; padding: 0;}
+#searchbox, #searchbutton { float: right; }
+#searchbox {margin-top: 5px; }
+
+#srch{
+	color: black;
+	font-size: 12px;
+	width: 10em;
+	font-family: Arial, Helvetica;
+	line-height: 17px;
+	border: 1px solid black;
+	}
+/* Main Body */
+#main1 { 
+	margin: 0; 
+	padding: 0;
+	margin-top: 10px;
+	}
+
+/* Specific Box Styles */
+#wotd { height: 200px; }
+#news1 { height: 100px; }
+
+/* Word of the day layout styles */
+#wodhdr { margin: 1px 8px 5px 8px;
+		font: bold 14px/16px Tahoma,Arial,Helvetica; color: #030 }
+#woddes, #wodlnk {margin: 3px 8px 5px 8px;
+		font: 11px/15px Tahoma,Arial,Helvetica; color: #060 }
+#wodhdr i, #woddes i { color: #0c688e; font-weight: bold }
+#wodlnk { text-align: center }
+#wodlnk a { text-decoration: none; font-weight: bold; }
+#wodlnk a:link { color: #030 }
+#wodlnk a:visited { color: #000 }
+#wodlnk a:hover { color: #00f }
+
+/*Top 10 stuff*/
+#ttl { margin: 0; padding: 0; margin-left: 4px }
+#ttl ol { margin:0px ; padding: 0; font: 11px/20px tahoma,arial; margin-left: 27px}
+#ttl li { margin:0px ; padding: 0; }
+#ttl li a { display: block; margin: 0; padding: 0; width: 119px; height: 20px; text-decoration: none}
+#ttl li a:link { color: #060 }
+#ttl li a:visited { color: #060 }
+#ttl li a:hover { color: #000; background-color: #9c9 }
+
+/*Article formatting*/
+#article p { margin: 0; padding: 5; font: 12px/16px arial,helvetica; }
+#article h1 { margin: 0; padding: 0; font:  bold 24px/28px arial,helvetica; }
+#article h2 { margin: 0; padding: 0; padding-top: 20px; font:  bold 18px/22px arial,helvetica; }
+#article ul { margin: 0; padding: 0; margin-left: 20px; font: 12px/16px arial,helvetica; }
+#article li { margin: 0; padding: 0; margin-left: 20px; padding-bottom: 8px; font: 12px/16px arial,helvetica; }
+#article a { font: 12px/16px arial,helvetica;}
+#article a:link { color: #060 }
+#article a:visited { color: #060 }
+#article a:hover { color: #005400 }	
+
+/*Article Inset Formatting*/
+#artinset {margin: 0; padding: 0; }
+#artinset { margin: 0; padding: 5; font: 12px/16px arial,helvetica; }
+
+/*This puts space between the right nav ads*/
+#adpadding {margin: 0; padding: 0; margin-top: 10px; text-align: right }
+
+/*Contact Form*/
+#contactUs {margin: 0; padding: 0}
+.textfield {margin-right: 4px; border: 1px solid #030; font: 12px/14px Arial,Helvetica; color: #060 }
+.textbox {width: 400px; height: 100px}
+
+/* Home Page Content */
+#enhdr, #pnhdr {
+	color: #030;
+	font: 14px / 17px Arial, Helvetica;
+	padding: 0;
+	margin: 0 8px 3px 9px;
+	}
+#pnhdr { color: #033 }
+
+#enbdy, #pnbdy, #enatt {
+	color: #030;
+	font: 11px / 13px Tahoma, Arial, Helvetica;
+	margin: 0 10px 0 10px;
+	padding: 0
+	}
+#enbdy p, #pnbdy p { margin: 0; padding: 4px 0;}
+#enbdy a { text-decoration: none; font: bold 11px/13px Arial,helvetica; color: #030; margin: 0; padding: 0; display: block;}
+#enbdy a:link { color: #030; }
+#enbdy a:visited { color: #020; }
+#enbdy a:hover { color: #00c; }
+
+#pnbdy a { text-decoration: none; font: bold 11px/13px Arial,helvetica; color: #033; margin: 0; padding: 0; display: block;}
+#pnbdy a:link { color: #033; }
+#pnbdy a:visited { color: #033; }
+#pnbdy a:hover { color: #00c; }
+
+#enatt, #pnatt { text-align: center; font: 10px / 12px Arial, Helvetica;}
+#enatt a, #pnatt a { color: #030; text-decoration: none }
+
+/*Margins between boxes*/
+.boxmargin { margin: 0; padding: 0; margin-bottom: 10px;}
+#imgmargin { margin: 0; padding: 0;}

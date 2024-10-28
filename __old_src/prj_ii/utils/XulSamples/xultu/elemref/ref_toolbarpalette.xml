@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+
+<element name='toolbarpalette' spec='Firefox'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_toolbarpalette.html</reference>
+  The item is a palette of available toolbar items. It is not displayed,  but is used by the toolbar customization dialog to display the list  of items. The children of the toolbarpalette should be the complete  list of toolbarbuttons and toolbaritems that can be added to the  toolbar. Do not add the various spacing items, as those are added  automatically.        You can add your own custom buttons to the Firefox browser by using  an overlay that overlays the toolbarpalette with the id  'BrowserToolbarPalette'.
+<html><![CDATA[
+<p>  The item is a palette of available toolbar items. It is not displayed,  but is used by the toolbar customization dialog to display the list  of items. The children of the toolbarpalette should be the complete  list of toolbarbuttons and toolbaritems that can be added to the  toolbar. Do not add the various spacing items, as those are added  automatically.  </p>  <p>  You can add your own custom buttons to the Firefox browser by using  an overlay that overlays the toolbarpalette with the id  'BrowserToolbarPalette'.</p>
+]]></html>
+
+</element>

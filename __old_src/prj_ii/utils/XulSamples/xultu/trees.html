@@ -1,0 +1,644 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="xpcomex.html"> 
+ <link rel="next" href="advtrees.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Trees</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 8.1 - Trees 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <SPAN CLASS="currentpage">Trees</SPAN></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="7.6 - XPCOM Examples"
+     href="xpcomex.html">Previous</a>
+
+
+  <a class="nextlink" title="8.2 - More Tree Features"
+     href="advtrees.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Trees</h2>
+
+<P>
+XUL provides a way to create tabular or hierarchical lists using a tree.
+</P>
+
+<H3>The Tree</H3>
+
+<P>
+One of the more complex elements in XUL is the tree. A tree may be used to display
+rows of text in columns. It can be used with rows either in a flat list or arranged
+into a hierarchy. A tree also allows the user to rearrange, resize and hide individual
+columns. Some examples of trees include the list of messages in a mail application, or
+the Bookmarks window in Mozilla.
+</P>
+
+<P>
+In some ways, a tree has some similarities with the <A CLASS="tag" HREF="elemref/ref_listbox.html">listbox</A>.
+Both can be used to create tables of data with multiple rows and columns, and both may
+contain column headers. The tree also supports nested rows, whereas the listbox does
+not. However, listboxes may contain any type of content, whereas trees may only contain
+text and images.
+</P>
+
+<P>
+A tree consists of two parts, the set of columns, and the tree body. The set of columns
+is defined by a number of <A CLASS="tag" HREF="elemref/ref_treecol.html">treecol</A> elements, one for each
+column. Each column will appear as a header at the top of the tree. The second part, the
+tree body, contains the data to appear in the tree and is created with a
+<A CLASS="tag" HREF="elemref/ref_treechildren.html">treechildren</A> tag.
+</P>
+
+<P>
+The tree is unique in that the body of the tree consists only of a single widget which
+draws all of the data in the tree. This contrasts with the listbox, where individual
+<A CLASS="tag" HREF="elemref/ref_listitem.html">listitem</A> and <A CLASS="tag" HREF="elemref/ref_listcell.html">listcell</A> tags are used
+to specify the rows in the listbox. In a tree, all of the data to be displayed is
+supplied by a separate object, called a tree view. When it comes time to display a
+cell, the tree widget will call out to this tree view to determine what to display,
+which in turn will be drawn by the tree. The tree is smart enough to only ask for
+information from the view for those rows that need to be displayed. This allows the
+view to be optimized such that it only needs to load the data for displayed content.
+For instance, a tree might have thousands of rows, yet most of them will be scrolled
+off the border of the tree, hidden from view. This means that the tree is scalable to
+any number rows without any performance problems. Of course, this is independant of
+the performance of the view object itself.
+</P>
+
+<P>
+A tree view is an object which implements the 
+<A HREF="http://xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</A>
+interface. This interface contains thirty properties and functions which you may
+implement. These functions will be called by the tree as necessary to retrieve data
+and state about the tree. For instance, the getCellText function will be called to get
+the label for a particular cell in the tree.
+</P>
+
+<P>
+An advantage of using a view is that it allows the view to store the data in a manner
+which is more suitable for the data, or to load the data on demand as rows are
+displayed. This allows more flexibility when using trees.
+</P>
+
+<P>
+Naturally, having to implement a tree view with thirty or so properties and methods for
+every tree can be very cumbersome, especially for simple trees. Fortunately, XUL
+provides a couple of built-in view implementations which do most of the hard work for
+you. For most trees, especially when you first start to use trees, you will use one
+of these built-in types. However, you can create a view entirely from scratch if
+necessary. If you do, you might store the data in an array or JavaScript data
+structure, or load the data from an XML file.
+</P>
+
+<P>
+Since the entire body of the tree is a single widget, you can't change the style of
+individual rows or cells in the normal way. This is because there are no elements that
+display the individual cells, like there is with the listbox. Instead, all drawing
+is done by the tree body using data supplied by the view. This is an important point
+and many XUL developers have trouble understanding this aspect. To modify the
+appearance of a tree cell, the view must instead associate a set of keywords for a row
+and cell. A special CSS syntax is used which styles components of the tree body with
+those keywords. In a sense, it is somewhat like using CSS classes. Tree styling will be
+discussed in detail in a later section.
+</P>
+
+<H3>Tree Elements</H3>
+
+<P>
+Trees can be created with the <A CLASS="tag" HREF="elemref/ref_tree.html">tree</A> element, which is
+described in the following sections. There are also two elements used to define the
+columns to be displayed in the tree.
+</P>
+
+<UL>
+  <LI><DIV CLASS="tag">tree</DIV>
+      This is the outer element of a tree.
+  </LI>
+  <LI><DIV CLASS="tag">treecols</DIV>
+      This element is a placeholder for a set of <A CLASS="tag" HREF="elemref/ref_treecol.html">treecol</A>
+      elements.
+  </LI>
+  <LI><DIV CLASS="tag">treecol</DIV>
+      This is used to declare a column of the tree. By using this element, you
+      can specify additional information about how the data in the columns
+      are sorted and if the user can resize the columns. You should always
+      place an <SPAN CLASS="attrib">id</SPAN> attribute on a column, as Mozilla
+      uses the ids to identify the columns when rearranging and hiding them. This
+      is no longer required in Mozilla 1.8 and later, but it is still a good idea
+      to use ids on columns.
+  </LI>
+  <LI><DIV CLASS="tag">treechildren</DIV>
+      This contains the main body of the tree where the individual rows of data will
+      be displayed.
+  </LI>
+</UL>
+
+<P>
+Here is an example of a tree with two columns:
+</P>
+
+
+Example 8.1.1:
+<A HREF='examples/ex_trees_1.xul.txt'>Source</A>
+<A HREF="examples/ex_trees_1.xul" ONCLICK="window.open('examples/ex_trees_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;tree flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="nameColumn" label="Name" flex="1"/&gt;
+    &lt;treecol id="addressColumn" label="Address" flex="2"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
+&lt;/tree&gt;</PRE></DIV>
+
+
+
+<P>
+First, the entire table is surrounded with a <A CLASS="tag" HREF="elemref/ref_tree.html">tree</A>
+element. This declares an element that is used as a table or tree. As with HTML tables,
+the data in a tree is always organized into rows. The columns are specified using the
+<A CLASS="tag" HREF="elemref/ref_treecols.html">treecols</A> tag.
+</P>
+
+<P>
+You may place as many columns as you wish in a tree. As with listboxes, a
+header row will appear with column labels. A drop-down menu will appear in the
+upper-right corner of the tree, which the user may use to show and hide individual
+columns. Each column is created with a <A CLASS="tag" HREF="elemref/ref_treecol.html">treecol</A> element. You
+can set the header label using the <SPAN CLASS="attrib">label</SPAN> attribute. You
+may also want to make the columns flexible if your tree is flexible, so that the
+columns stretch as the tree does. In this example, the second column will be twice as
+wide as the first column. All of the columns should be placed directly inside a
+<A CLASS="tag" HREF="elemref/ref_treecols.html">treecols</A> element.
+</P>
+
+<P>
+In this case we haven't specified a view to supply the tree's data, so we'll only
+see column headers and an empty tree body. You may have to resize the window to see
+anything since there isn't any data to display. Since the tree has been marked as
+flexible, the body will stretch to fit the available space. Making a tree flexible is
+quite commonly done, as it is often the case that the data in the tree is the most
+significant information displayed, so it makes sense to make the tree grow to fit.
+However, you may specify a specific number of rows to appear in a tree by setting the
+<SPAN CLASS="attrib">rows</span> attribute on the
+<A CLASS="tag" HREF="elemref/ref_tree.html">tree</A> element. This attribute specifies how many rows are
+displayed in the user interface, not how many rows of data there are. The total number
+of rows is supplied by the tree view. If there are more rows of data in the tree, a
+scrollbar will appear to allow the user to see the rest of them. If you don't specify
+the <SPAN CLASS="attrib">rows</span> attribute, the default value is 0, which means
+that none of the rows will appear. In this case, you would make the tree flexible. If
+your tree is flexible, it doesn't need a <SPAN CLASS="attrib">rows</span> attribute
+since it will grow to fit the available space.
+</P>
+
+<H3>The Content Tree View</H3>
+
+<P>
+Having said that the data to be displayed in a tree comes from a view and not from XUL
+tags, there happens to be a built-in tree view which gets its data from XUL tags. This
+may be a bit confusing, but essentially, one of the built-in tree views uses a set of
+tags which can be used to specify information about the data in the tree. The following
+tags are used:
+</P>
+
+<UL>
+  <LI><DIV CLASS="tag">treeitem</DIV>
+      This contains a single top level row and all its descendants. This element
+      also serves as the item which can be selected by the user. The treeitem tag
+      would go around the entire row so that it is selectable as a whole.
+  </LI>
+  <LI><DIV CLASS="tag">treerow</DIV>
+      A single row in the tree, which should be placed inside a 
+      <A CLASS="tag" HREF="elemref/ref_treeitem.html">treeitem</A> tag.
+  </LI>
+  <LI><DIV CLASS="tag">treecell</DIV>
+      A single cell in a tree. This element would go inside a
+      <A CLASS="tag" HREF="elemref/ref_treerow.html">treerow</A> element.
+  </LI>
+</UL>
+
+<P>
+Conveniently, these tags may be placed directly inside the
+<A CLASS="tag" HREF="elemref/ref_treechildren.html">treechildren</A> tag, nested in the order above. The tags define
+the data to be displayed in the tree body. In this case, the tree uses the built-in
+tree view, called a content tree view, which uses the labels and values specified on
+these elements as the data for the tree. When the tree needs to display a row, the tree
+asks the content tree view for a cell's label by calling the view's getCellText
+function, which in turn gets the data from the label of the appropriate 
+<A CLASS="tag" HREF="elemref/ref_treecell.html">treecell</A>.
+</P>
+
+<P>
+However, the three elements listed above are not displayed directly. They are used
+only as the source for the data for the view. Thus, only a handful of attributes apply
+to the <A CLASS="tag" HREF="elemref/ref_treeitem.html">treeitem</A> and related elements. For instance, you cannot
+change the appearance of the tree rows using the <SPAN CLASS="attrib">style</SPAN>
+attribute or with other CSS properties and the box related features such as flexibility
+and orientation cannot be used.
+</P>
+
+<P>
+In fact, apart from some tree specific attributes, the only attributes that will have
+any effect will be the <SPAN CLASS="attrib">label</SPAN> attribute to set a text label
+for a cell and the <SPAN CLASS="attrib">src</SPAN> attribute to set an image. However,
+there are special ways of styling the tree and setting other features which we will
+see in later sections.
+</P>
+
+<P>
+Also, events do not get sent to <A CLASS="tag" HREF="elemref/ref_treeitem.html">treeitem</A> element and their
+children; instead they get sent to the <A CLASS="tag" HREF="elemref/ref_treechildren.html">treechildren</A> element.
+</P>
+
+<P>
+That the treeitems are unlike other XUL elements is a common source of confusion for
+XUL developers. Essentially, the tree content view is a view where the data for the
+cells is supplied from tags placed inside the tree. Naturally, if you are using a
+different kind of view, the data will be supplied from another source, and there
+won't be any  <A CLASS="tag" HREF="elemref/ref_treeitem.html">treeitem</A> elements at all.
+</P>
+
+<P>
+Let's start by looking at how to create a simple tree with multiple columns using the
+tree content view. This could be used to create a list of mail messages. There might be
+multiple columns, such as the sender and the subject.
+</P>
+
+
+Example 8.1.2:
+<A HREF='examples/ex_trees_2.xul.txt'>Source</A>
+<A HREF="examples/ex_trees_2.xul" ONCLICK="window.open('examples/ex_trees_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;tree flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="sender" label="Sender" flex="1"/&gt;
+    &lt;treecol id="subject" label="Subject" flex="2"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="joe@somewhere.com"/&gt;
+        &lt;treecell label="Top secret plans"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="mel@whereever.com"/&gt;
+        &lt;treecell label="Let's do lunch"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/trees1.jpg" ALIGN="right" ALT="" WIDTH=387 HEIGHT=101>
+As can be seen in the image, the tree has been created with two rows of data.
+</P>
+
+<P>
+This tree has two columns, the second of which will take up more space than
+the first. You will usually make the columns flexible. You can also supply widths
+with the <SPAN CLASS="attrib">width</SPAN> attribute. You should include the
+same number of <A CLASS="tag" HREF="elemref/ref_treecol.html">treecol</A> elements as there are columns in
+the tree. Otherwise strange things might happen.
+</P>
+
+<P>
+The header row is created automatically. The button in the upper right corner can
+be used to hide and show the columns. You can place a
+<SPAN CLASS="attrib">hidecolumnpicker</SPAN> attribute on the
+tree and set it to <SPAN CLASS="aval">true</SPAN> if you would like to hide this
+button. If this button is hidden, the user will not be able to hide columns.
+</P>
+
+<P>
+Make sure that you set an <SPAN CLASS="attrib">id</SPAN> attribute on each
+column or the hiding and showing of columns will not work in all versions of Mozilla.
+</P>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_treechildren.html">treechildren</A> element surrounds all of the rows. Inside
+the body are individual rows, which may in turn contain other rows. For a simpler tree,
+each row is created with the <A CLASS="tag" HREF="elemref/ref_treeitem.html">treeitem</A> and 
+<A CLASS="tag" HREF="elemref/ref_treerow.html">treerow</A> elements. The
+<A CLASS="tag" HREF="elemref/ref_treerow.html">treerow</A> element surrounds all of the cells in a single row,
+while a <A CLASS="tag" HREF="elemref/ref_treeitem.html">treeitem</A> element would surround a row and all of its
+children. Trees with nested rows are described in the next section. 
+</P>
+
+<P>
+Inside the rows, you will put individual tree cells. These are created using the
+<A CLASS="tag" HREF="elemref/ref_treecell.html">treecell</A> element. You can set the text for the cell
+using the <SPAN CLASS="attrib">label</SPAN> attribute. The first
+<A CLASS="tag" HREF="elemref/ref_treecell.html">treecell</A> in a row determines the content that will
+appear in the first column, the second <A CLASS="tag" HREF="elemref/ref_treecell.html">treecell</A>
+determines the content that will appear in the second column, and so on.
+</P>
+
+<P>
+The user can select the treeitems by clicking on them with the mouse, or by
+highlighting them with the keyboard. The user can select multiple items by
+holding down the Shift or Control keys and clicking additional rows. To disable
+multiple selection, place a <SPAN CLASS="attrib">seltype</SPAN> attribute on
+the tree, set to the value <SPAN CLASS="aval">single</SPAN>. With this, the user
+may only select a single row at a time.
+</P>
+
+<H3>Tree Example</H3>
+
+<DIV CLASS="task">
+
+<P>
+Let's add a tree to the find files window where the results of the search
+would be displayed. The tree will use a content tree view. The following code
+should be added in place of the iframe.
+</P>
+
+
+<DIV CLASS="sample"><PRE><SPAN STYLE="color: red;">&lt;tree flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Filename" flex="1"/&gt;
+    &lt;treecol id="location" label="Location" flex="2"/&gt;
+    &lt;treecol id="size" label="Size" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+   &lt;treeitem&gt;
+     &lt;treerow&gt;
+       &lt;treecell label="mozilla"/&gt;
+       &lt;treecell label="/usr/local"/&gt;
+       &lt;treecell label="2520 bytes"/&gt;
+     &lt;/treerow&gt;
+   &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;</SPAN>
+
+&lt;splitter collapse="before" resizeafter="grow"/&gt;</PRE></DIV>
+
+
+
+<P>
+We've added a tree with three columns for the filename, the location and
+the file size. The second column will appear twice as wide due to the
+larger flexibility. A single row has been added to demonstrate what the
+table would look like with a row. In a real implementation, the rows
+would be added by a script as the search was performed, or a custom
+view would be created to hold the data.
+</P>
+
+</DIV>
+
+<HR>
+<P>
+<A HREF="advtrees.html">(Next)</A>
+Next, we'll learn how to create more advanced trees.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_trees_1.xul.txt'>8.1.1</A>
+  <A HREF='examples/ex_trees_2.xul.txt'>8.1.2</A>
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-trees.xul.txt'>Source</A>
+<A HREF="examples/findfile/findfile-trees.xul" ONCLICK="window.open('examples/findfile/findfile-trees.xul','xulff','chrome,resizable'); return false;">View</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="7.6 - XPCOM Examples"
+     href="xpcomex.html">Previous</a>
+
+
+  <a class="nextlink" title="8.2 - More Tree Features"
+     href="advtrees.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

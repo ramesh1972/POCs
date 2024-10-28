@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='conditions'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/advrules.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_conditions.html</reference>
+  This element should appear directly inside a rule element and is used to  define conditions for the rule. Within the conditions can be placed content,  member and triple elements. These may have attributes whose value is a  variable name beginning with a question mark (?). When evaluating the rule for  a particular RDF resource, the variables are replaced with values from the  resource. If all variables can be replaced, the rule matched.  
+
+</element>

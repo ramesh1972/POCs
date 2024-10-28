@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+
+<element name='key'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/keyshort.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_key.html</reference>
+  The key element defines a keyboard shortcut. Event handlers can be used  to respond when the appropriate keys are pressed. A key element must be  placed inside a keyset element.  
+
+<attr name='command' type='element id'>
+  Set to an id of a command element that is being observed by the  element.
+</attr>
+<attr name='disabled' type='boolean'>
+  Set to true to disable the key. This is often used with a broadcaster to  disable a menu command and key at the same time.
+</attr>
+<attr name='key' type='character'>
+  The character that is must be pressed. This should be set to a displayable  character.
+</attr>
+<attr name='keycode' type='string key code'>
+  For keys that do not have displayable characters, such as the enter key or  function keys, use this attribute, instead of the key attribute. Valid keys  are listed  here .
+</attr>
+<attr name='keytext' type='string'>
+  A label for the keyboard shortcut. This text would appear next to a menuitem  label if that menuitem is associated with the key element via its key  attribute.
+</attr>
+<attr name='modifiers' type='space separated list of the values below'>
+  A list of modifier keys that should be pressed to invoke the keyboard  shortcut. Multiple keys may be separated by spaces or commas. Keys will map  to other keys on platforms that do not have them.
+<value name='shift'>
+    The Shift key.
+</value>
+<value name='alt'>
+    The Alt key. On the Macintosh, this is the Option key.
+</value>
+<value name='meta'>
+    The Meta key. On the Macintosh, this is the Command key.
+</value>
+<value name='control'>
+    The Control key.
+</value>
+<value name='accel'>
+    The key used for keyboard shortcuts on the user's platform. Usually, this would
+    be the value you would use.
+</value>
+</attr>
+<attr name='oncommand' type='script code'>
+  This event handler is called when an element is activated. How it is activated  varies for each element and in many cases, there are several ways to activate  an element. For example, a button can be activated by clicking on it with the  mouse or by pressing ENTER while it has the focus. Menus can be activated by  selecting them with the mouse or by pressing a shortcut key. You should always  use the oncommand event instead of onclick because it will be called in all of  the needed cases.
+</attr>
+<attr name='phase' type='string'>
+  The event phase where the handler is invoked. This should be set to the  value 'capturing' to indicate during the event capturing phase or 'target'  to indicate at the target element or left out entirely for the bubbling  phase.
+</attr>
+</element>

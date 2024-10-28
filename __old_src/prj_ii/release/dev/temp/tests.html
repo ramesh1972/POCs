@@ -1,0 +1,43 @@
+<body></body>
+<script language=javascript>
+function rect()
+{
+	this.x = 10;
+	this.y = 20;
+}
+function test_array()
+{
+	var a = new Array();
+	var x = new rect();
+	a.push(x);
+	
+	var y = new rect();
+	y.x=100;
+	a.push(y);
+
+	var z = new rect();
+	a.push(z);
+
+	var found = false;
+	for (var i=0;i<a.length;i++)
+	{
+		if (a[i] == y)
+		{
+		
+			alert("found");
+			alert(a[i].x);
+			found = true;
+		}
+		
+		if (found)
+		{
+			a[i] = a[i+1];
+		}
+	}
+	
+	a.pop();
+	
+	alert(a.length);
+}
+test_array();
+</script>

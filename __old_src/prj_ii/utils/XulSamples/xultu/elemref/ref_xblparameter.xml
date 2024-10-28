@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+
+<element name='parameter' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblmethods.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblparameter.html</reference>
+  Declares a parameter to a method. Each parameter has a name attribute  with becomes a variable that is declared in the method body and has the  value that was passed in to the method.  
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the parameter with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='name'>
+  The name of the parameter. This will be declared as a variable within the  method body and given the value passed in as the corresponding method parameter.
+</attr>
+</element>

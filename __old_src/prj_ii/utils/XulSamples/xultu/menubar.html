@@ -1,0 +1,467 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="toolbar.html"> 
+ <link rel="next" href="advmenu.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Simple Menu Bars</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 5.2 - Simple Menu Bars 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <SPAN CLASS="currentpage">Simple Menu Bars</SPAN></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="5.1 - Toolbars"
+     href="toolbar.html">Previous</a>
+
+
+  <a class="nextlink" title="5.3 - More Menu Features"
+     href="advmenu.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Simple Menu Bars</h2>
+
+<P>
+In this section, we'll see how to create a menu bar with menus on it.
+</P>
+
+<H3>Creating a Menu</H3>
+
+<P>
+XUL has a number of different ways of creating menus. The most basic way is to add
+a menu bar with a row of menus on it like many applications have. You can also
+create popup menus. The menu features of XUL consist of a number of different
+elements which allow you to create menu bars or popup menus. The items on the menus
+can be customized quite easily. We've already seen part of how to make menus using
+the <A CLASS="tag" HREF="elemref/ref_menulist.html">menulist</A>. This section will build on that.
+</P>
+
+<P>
+Menu bars are usually created much like a toolbar. The menu bar can be placed inside a
+<A CLASS="tag" HREF="elemref/ref_toolbox.html">toolbox</A> and a grippy will appear on its left side so that
+it can be collapsed. The menu would work just like any other toolbar. XUL does
+have some special menu elements which provide special functionality typical of
+menus.
+</P>
+
+<P>
+There are five elements associated with creating a menu bar and its menus, which
+are explained briefly here and in detail afterwards:
+</P>
+
+<UL>
+  <LI><DIV CLASS="tag">menubar</DIV>
+      The container for the row of menus.
+  </LI>
+  <LI><DIV CLASS="tag">menu</DIV>
+      Despite the name, this is actually only the title of the menu on the menubar.
+      This element can be placed on a menubar or can be placed separately.
+  </LI>
+  <LI><DIV CLASS="tag">menupopup</DIV>
+      The popup box that appears when you click on the menu title. This box contains
+      the list of menu commands.
+  </LI>
+  <LI><DIV CLASS="tag">menuitem</DIV>
+      An individual command on a menu. This would be placed in a
+      <A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A>.
+  </LI>
+  <LI><DIV CLASS="tag">menuseparator</DIV>
+      A separator bar on a menu. This would be placed in a
+      <A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A>.
+  </LI>
+</UL>
+
+<P>
+You can customize the menus on the menubar to have whatever you want on them on
+all platforms except the Macintosh. This is because the Macintosh has its own
+special menu along the top of the screen controlled by the system. Although you
+can create custom menus, any special style rules or non-menu elements that you
+place on a menu may not be applied. You should keep this is mind when creating
+menus.
+</P>
+
+<P>
+Here is an example of a simple menu bar:
+</P>
+
+
+Example 5.2.1:
+<A HREF='examples/ex_menubar_1.xul.txt'>Source</A>
+<A HREF="examples/ex_menubar_1.xul" ONCLICK="window.open('examples/ex_menubar_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="File"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="New"/&gt;
+        &lt;menuitem label="Open"/&gt;
+        &lt;menuitem label="Save"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Exit"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="Edit"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="Undo"/&gt;
+        &lt;menuitem label="Redo"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/menubar-ex1.jpg" ALIGN="right" ALT="" WIDTH=221 HEIGHT=144>
+Here, a simple menu bar is created using the <A CLASS="tag" HREF="elemref/ref_menubar.html">menubar</A>
+element. It will create a row for menus to be placed on. Two menus, File and
+Edit have been created here. The <A CLASS="tag" HREF="elemref/ref_menu.html">menu</A> element
+creates the title at the top of the menu, which appears on the menu bar.
+The popups are created using the <A CLASS="tag" HREF="elemref/ref_menupoup.html">menupoup</A> element.
+It will pop up when the user clicks on the parent menu title. The size of the
+popup will be large enough to fit the commands inside it. The commands
+themselves are created using the <A CLASS="tag" HREF="elemref/ref_menuitem.html">menuitem</A> element.
+Each one represents a single command on the menu popup.
+</P>
+
+<P>
+You can also create separators on the menus using the
+<A CLASS="tag" HREF="elemref/ref_menuseparator.html">menuseparator</A> element. This is used to separate groups
+of menuitems.
+</P>
+
+<P>
+The menubar is a box containing menus. Note that it has been placed inside a flexible
+<A CLASS="tag" HREF="elemref/ref_toolbox.html">toolbox</A>. The menubar has no special attributes but it
+is a type of box. This means that you could create a vertical menubar by setting
+the <SPAN CLASS="attrib">orient</SPAN> attribute to
+<SPAN CLASS="aval">vertical</SPAN>.
+</P>
+
+<P>
+<IMG SRC="images/menubar-ex2.jpg" ALT="" ALIGN=RIGHT WIDTH=180 HEIGHT=45>
+The <A CLASS="tag" HREF="elemref/ref_menu.html">menu</A> element is normally placed on a menubar,
+although it does not have to be. However, it will be given a different look.
+The image here shows what the earlier example would look like without the
+menu bar.
+</P>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_menu.html">menu</A> element works much like the
+<A CLASS="tag" HREF="elemref/ref_button.html">button</A> element. It accepts some of the same
+attributes plus some additional ones:
+</P>
+
+<UL>
+  <LI><DIV CLASS="attrib">id</DIV>
+      The unique identifier of the menu title button.
+  </LI>
+  <LI><DIV CLASS="attrib">label</DIV>
+      The text to appear on the menu, such as File or Edit.
+  </LI>
+  <LI><DIV CLASS="attrib">disabled</DIV>
+      This boolean attribute determines whether the menu is disabled. Although
+      you can, there's rarely a need to disable an entire menu. This attribute
+      can be set to either <SPAN CLASS="aval">true</SPAN> or
+      <SPAN CLASS="aval">false</SPAN>. Of course, the latter is the default.
+  </LI>
+  <LI><DIV CLASS="attrib">accesskey</DIV>
+      This is the key that the user can press to activate the menu item. This
+      letter is typically shown underlined on the menu title. Mozilla will
+      look at the <SPAN CLASS="attrib">label</SPAN> attribute and add an
+      underline character to the character specified here. For that reason,
+      you should specify a character that exists in the text (although the key
+      will still work if it doesn't).
+  </LI>
+</UL>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A> element creates the popup window containing
+the menu commands. It is a type of box which defaults to a vertical orientation. You
+could change it to horozontal if you wanted to and the menuitems would be placed in
+a row. Normally only menuitems and menuseparators would be placed on a
+<A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A>. You can place any element on a
+<A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A>, however they will be ignored on a Macintosh.
+</P>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_menuitem.html">menuitem</A> element is much like the
+<A CLASS="tag" HREF="elemref/ref_menu.html">menu</A> element and has some of the same attributes.
+
+<UL>
+  <LI><DIV CLASS="attrib">id</DIV>
+      The unique identifier of the menu title button.
+  </LI>
+  <LI><DIV CLASS="attrib">label</DIV>
+      The text to appear on the menu item, such as Open or Save.
+  </LI>
+  <LI><DIV CLASS="attrib">disabled</DIV>
+      This boolean attribute determines whether the menu item is disabled. 
+      This attribute can be set to either <SPAN CLASS="aval">true</SPAN> or
+      <SPAN CLASS="aval">false</SPAN> where the latter is the default.
+  </LI>
+  <LI><DIV CLASS="attrib">accesskey</DIV>
+      This is the key that the user can press to activate the menu item. This
+      letter is typically shown underlined on the menu title. Mozilla will
+      look at the <SPAN CLASS="attrib">label</SPAN> attribute and add an
+      underline character to the character specified here. For that reason,
+      you should specify a character that exists in the text.
+  </LI>
+  <LI><DIV CLASS="attrib">acceltext</DIV>
+      This specifies the shortcut key text to appear next to the menu command
+      text. It does not associate a key action with the menuitem however. We'll
+      look at how to do this later.
+  </LI>
+</UL>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_menuseparator.html">menuseparator</A> has no special attributes. It just
+creates a horizontal bar between the menuitems next to it.
+</P>
+
+<HR>
+<P>
+<A HREF="advmenu.html">(Next)</A>
+Next, we'll learn some more features of menus.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_menubar_1.xul.txt'>5.2.1</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="5.1 - Toolbars"
+     href="toolbar.html">Previous</a>
+
+
+  <a class="nextlink" title="5.3 - More Menu Features"
+     href="advmenu.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

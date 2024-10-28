@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='statusbar'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_statusbar.html</reference>
+  An element used to create a status bar, usually placed along the bottom of  a window. It is virtually equivalent to a standard box, but may be rendered  differently.  
+
+<implements>nsIAccessibleProvider</implements>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the statusbar.
+</prop>
+</element>

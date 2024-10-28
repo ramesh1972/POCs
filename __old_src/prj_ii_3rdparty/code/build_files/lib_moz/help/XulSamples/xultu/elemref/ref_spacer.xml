@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+
+<element name='spacer'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/springs.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_spacer.html</reference>
+  An element that takes up space but does not display anything. It is usually  used to place spacing within a container. If you don't specify that the  spacer has a size or is flexible, the spacer does not occupy any space. If  you want a small gap, consider using a separator instead.  
+
+<example>
+<![CDATA[
+    &lt;box&gt;
+      &lt;button label=&quot;Left&quot;/&gt;
+      &lt;spacer flex=&quot;1&quot;/&gt;
+      &lt;button label=&quot;Right&quot;/&gt;
+    &lt;/box&gt;
+
+]]>
+</example>
+</element>

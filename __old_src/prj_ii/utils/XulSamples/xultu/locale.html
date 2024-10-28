@@ -1,0 +1,663 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="cskin.html"> 
+ <link rel="next" href="locprops.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Localization</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 10.5 - Localization 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <SPAN CLASS="currentpage">Localization</SPAN></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="10.4 - Creating a Skin"
+     href="cskin.html">Previous</a>
+
+
+  <a class="nextlink" title="10.6 - Property Files"
+     href="locprops.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Localization</h2>
+
+<P>
+XUL and XML provide entities which are a convenient way of allowing
+localization.
+</P>
+
+<H3>Entities</H3>
+
+<P>
+Many applications are built such that translating the interface into a
+different language is as simple as possible. Usually, a table of strings
+is created for each language. Instead of hard-coding text directly into
+an application, each piece of text is only a reference into the string
+table. XML provides entities which can be used for a similar purpose.
+</P>
+
+<P>
+You should already be familiar with entities if you have written HTML.
+The codes &amp;lt; and &amp;gt; are examples of entities which can be used
+to place less than and greater than signs into the text. XML has a syntax
+which allows you to declare custom entities. You can use these so that the
+entity is replaced with its value, which can be a string of text. Entities
+may be used whenever text occurs, including the values of attributes. The
+example below demonstrates the use of an entity in a button.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;button label="&amp;findLabel;"/&gt;</PRE></DIV>
+
+
+
+<P>
+The text that will appear on the label will be the value that the entity
+&amp;findLabel has. A file is created which contains the entity declarations
+for each supported language. In English, the &amp;findLabel entity will
+probably be declared to have the text 'Find'.
+</P>
+
+<H3>DTD Files</H3>
+
+<P>
+Entities are declared in DTD (Document Type Declaration) files. These types of
+files are normally used to declare the syntax and sematics of a particular XML
+file, but they also allow you to declare entities. In the Mozilla chrome system,
+you will find DTD files located in the locales subdirectory. You would normally
+have one DTD file (with an extension dtd) per XUL file.
+</P>
+
+<P>
+If you look in the chrome directory, you should see an archive for your language.
+(en-US.jar is the default for English.) You might have locale files in multiple
+languages, for example, US English (en-US) and French (fr). Inside these archives,
+you will find the files that hold the localized text for each window. The structure
+of the archives is very similar to the directory structure used for skins.
+</P>
+
+<P>
+Inside the archives, you would place your DTD files in which you declare entities.
+Typically, you will have one DTD file for each XUL file, usually with the same
+filename except with a .dtd extension. So, for the find files dialog, we will need
+a file called findfile.dtd.
+</P>
+
+<P>
+For non-installed chrome files, you can just put the DTD file in the same
+directory as the XUL file.
+</P>
+
+<P>
+Once you have created a DTD file for your XUL, you will need to add a line to
+the XUL file which indicates that you want to use the DTD file. Otherwise,
+errors will occur as it won't be able to find the entities. To do this, add a
+line of the following form somewhere near the top of the XUL file:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;!DOCTYPE window SYSTEM "chrome://findfile/locale/findfile.dtd"&gt;</PRE></DIV>
+
+
+
+<P>
+This line specifies that the URL indicated is to be used as a DTD for the file.
+In this case, we have declared that we want to use the findfile.dtd DTD file.
+This line is typically placed just before the <A CLASS="tag" HREF="elemref/ref_window.html">window</A>
+element.
+</P>
+
+<H3>Declaring Entities</H3>
+
+<P>
+The entities are declared using a simple syntax as shown below:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;!ENTITY findLabel "Find"&gt;</PRE></DIV>
+
+
+
+<P>
+This example creates an entity with the name <SPAN CLASS="attrib">findLabel</SPAN>
+and the value <SPAN CLASS="aval">Find</SPAN>. This means that wherever the text
+&amp;findLabel appears in the XUL file, it will be replaced with the text
+<SPAN CLASS="aval">Find</SPAN>. In the DTD file for a different language, the text
+for that language will be used instead. Note that entity declarations do not have a
+trailing slash at the end of them.
+</P>
+
+<P>
+For example, the following text:
+</P>
+
+<PRE>&lt;description value="&amp;findLabel"/&gt;</PRE>
+
+<P>is translated as:</P>
+
+<PRE>&lt;description value="Find"/&gt;</PRE>
+
+<P>
+You would declare an entity for each label or string of text that you use in your
+interface. You should not have any directly displayed text in the XUL file at all.
+</P>
+
+<P>
+In addition to using entities for text labels, you should use them for any value
+that could be different in a different language. Access keys and keyboard
+shortcuts for example.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;menuitem label="&amp;undo.label" accesskey="&amp;undo.key"/&gt;
+&lt;!ENTITY undo.label "Undo"&gt;
+&lt;!ENTITY undo.key "u"&gt;</PRE></DIV>
+
+
+
+<P>
+The example above uses two entities, one for the label on the Undo menu item and
+the second for the access key.
+</P>
+
+<H3>Changing the Find Files Dialog</H3>
+
+<DIV CLASS="task">
+
+<P>
+Let's take a look at how we would put all of this together by modifying the
+find files dialog so that it uses a DTD file for all of its text strings.
+The entire XUL file is shown below with the changes shown in red.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+&lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;
+
+<SPAN STYLE="color: red;">&lt;!DOCTYPE window SYSTEM "chrome://findfile/locale/findfile.dtd"&gt;</SPAN>
+
+&lt;window
+  id="findfile-window"
+  title="<SPAN STYLE="color: red;">&amp;findWindow.title;</SPAN>"
+  persist="screenX screenY width height"
+  orient="horizontal"
+  onload="initSearchList()"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script src="findfile.js"/&gt;
+
+&lt;popupset&gt;
+   &lt;popup id="editpopup"&gt;
+     &lt;menuitem label="Cut" accesskey="<SPAN STYLE="color: red;">&amp;cutCmd.accesskey;</SPAN>"/&gt;
+     &lt;menuitem label="Copy" accesskey="<SPAN STYLE="color: red;">&amp;copyCmd.accesskey;</SPAN>"/&gt;
+     &lt;menuitem label="Paste" accesskey="<SPAN STYLE="color: red;">&amp;pasteCmd.accesskey;</SPAN>" disabled="true"/&gt;
+   &lt;/popup&gt;
+&lt;/popupset&gt;
+
+&lt;keyset&gt;
+   &lt;key id="cut_cmd" modifiers="accel" key="<SPAN STYLE="color: red;">&amp;cutCmd.commandkey;</SPAN>"/&gt;
+   &lt;key id="copy_cmd" modifiers="accel" key="<SPAN STYLE="color: red;">&amp;copyCmd.commandkey;</SPAN>"/&gt;
+   &lt;key id="paste_cmd" modifiers="accel" key="<SPAN STYLE="color: red;">&amp;pasteCmd.commandkey;</SPAN>"/&gt;
+   &lt;key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/&gt;
+&lt;/keyset&gt;
+
+&lt;vbox flex="1"&gt;
+
+ &lt;toolbox&gt;
+
+  &lt;menubar id="findfiles-menubar"&gt;
+    &lt;menu id="file-menu" label="<SPAN STYLE="color: red;">&amp;fileMenu.label;</SPAN>"
+        accesskey="<SPAN STYLE="color: red;">&amp;fileMenu.accesskey;</SPAN>"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="<SPAN STYLE="color: red;">&amp;openCmd.label;</SPAN>"
+                  accesskey="<SPAN STYLE="color: red;">&amp;openCmd.accesskey;</SPAN>"/&gt;
+        &lt;menuitem label="<SPAN STYLE="color: red;">&amp;saveCmd.label;</SPAN>"
+                  accesskey="<SPAN STYLE="color: red;">&amp;saveCmd.accesskey;</SPAN>"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="<SPAN STYLE="color: red;">&amp;closeCmd.label;</SPAN>"
+                  accesskey="<SPAN STYLE="color: red;">&amp;closeCmd.accesskey;</SPAN>" key="close_cmd" oncommand="window.close();"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="<SPAN STYLE="color: red;">&amp;editMenu.label;</SPAN>"
+          accesskey="<SPAN STYLE="color: red;">&amp;editMenu.accesskey;</SPAN>"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="<SPAN STYLE="color: red;">&amp;cutCmd.label;</SPAN>"
+                  accesskey="<SPAN STYLE="color: red;">&amp;cutCmd.accesskey;</SPAN>" key="cut_cmd"/&gt;
+        &lt;menuitem label="<SPAN STYLE="color: red;">&amp;copyCmd.label;</SPAN>"
+                  accesskey="<SPAN STYLE="color: red;">&amp;copyCmd.accesskey;</SPAN>" key="copy_cmd"/&gt;
+        &lt;menuitem label="<SPAN STYLE="color: red;">&amp;pasteCmd.label;</SPAN>"
+                  accesskey="<SPAN STYLE="color: red;">&amp;pasteCmd.accesskey;</SPAN>" key="paste_cmd" disabled="true"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+
+  &lt;toolbar id="findfiles-toolbar"&gt;
+    &lt;toolbarbutton id="opensearch" label="<SPAN STYLE="color: red;">&amp;openCmdToolbar.label;</SPAN>"/&gt;
+    &lt;toolbarbutton id="savesearch" label="<SPAN STYLE="color: red;">&amp;saveCmdToolbar.label;</SPAN>"/&gt;
+  &lt;/toolbar&gt;
+ &lt;/toolbox&gt;
+
+ &lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="<SPAN STYLE="color: red;">&amp;searchTab;</SPAN>" selected="true"/&gt;
+    &lt;tab label="<SPAN STYLE="color: red;">&amp;optionsTab;</SPAN>"/&gt;
+  &lt;/tabs&gt;
+
+  &lt;tabpanels&gt;
+
+   &lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;
+
+   &lt;description&gt;
+     <SPAN STYLE="color: red;">&amp;findDescription;</SPAN>
+   &lt;/description&gt;
+
+   &lt;spacer class="titlespace"/&gt;
+
+   &lt;groupbox orient="horizontal"&gt;
+     &lt;caption label="<SPAN STYLE="color: red;">&amp;findCriteria;</SPAN>"/&gt;
+
+     &lt;menulist id="searchtype"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<SPAN STYLE="color: red;">&amp;type.name;</SPAN>"/&gt;
+         &lt;menuitem label="<SPAN STYLE="color: red;">&amp;type.size;</SPAN>"/&gt;
+         &lt;menuitem label="<SPAN STYLE="color: red;">&amp;type.date;</SPAN>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+     &lt;menulist id="searchmode"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<SPAN STYLE="color: red;">&amp;mode.is;</SPAN>"/&gt;
+         &lt;menuitem label="<SPAN STYLE="color: red;">&amp;mode.isnot;</SPAN>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+
+   &lt;menulist id="find-text" flex="1"
+             editable="true"
+             datasources="file:///mozilla/recents.rdf"
+             ref="http://www.xulplanet.com/rdf/recent/all"&gt;
+     &lt;template&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="rdf:http://www.xulplanet.com/rdf/recent#Label" uri="rdf:*"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/template&gt;
+   &lt;/menulist&gt;
+
+   &lt;/groupbox&gt;
+
+  &lt;/tabpanel&gt;
+
+  &lt;tabpanel id="optionspanel" orient="vertical"&gt;
+     &lt;checkbox id="casecheck" label="<SPAN STYLE="color: red;">&amp;casesensitive;</SPAN>"/&gt;
+     &lt;checkbox id="wordscheck" label="<SPAN STYLE="color: red;">&amp;matchfilename;</SPAN>"/&gt;
+    &lt;/tabpanel&gt;
+
+  &lt;/tabpanels&gt;
+ &lt;/tabbox&gt;
+
+ &lt;tree id="results" style="display: none;" flex="1"&gt;
+   &lt;treecols&gt;
+     &lt;treecol id="name" label="<SPAN STYLE="color: red;">&amp;results.filename;</SPAN>" flex="1"/&gt;
+     &lt;treecol id="location" label="<SPAN STYLE="color: red;">&amp;results.location;</SPAN>" flex="2"/&gt;
+     &lt;treecol id="size" label="<SPAN STYLE="color: red;">&amp;results.size;</SPAN>" flex="1"/&gt;
+   &lt;/treecols&gt;
+
+   &lt;treechildren&gt;
+     &lt;treeitem&gt;
+       &lt;treerow&gt;
+         &lt;treecell label="mozilla"/&gt;
+         &lt;treecell label="/usr/local"/&gt;
+         &lt;treecell label="<SPAN STYLE="color: red;">&amp;bytes.before;</SPAN>2520<SPAN STYLE="color: red;">&amp;bytes.after;</SPAN>"/&gt;
+       &lt;/treerow&gt;
+     &lt;/treeitem&gt;
+   &lt;/treechildren&gt;
+ &lt;/tree&gt;
+
+ &lt;splitter id="splitbar" resizeafter="grow" style="display: none;"/&gt;
+
+ &lt;spacer class="titlespace"/&gt;
+
+ &lt;hbox&gt;
+   &lt;progressmeter id="progmeter" value="50%" style="display: none;"/&gt;
+   &lt;spacer flex="1"/&gt;
+   &lt;button id="find-button" label="<SPAN STYLE="color: red;">&amp;button.find;</SPAN>"
+           oncommand="doFind()"/&gt;
+   &lt;button id="cancel-button" label="<SPAN STYLE="color: red;">&amp;button.cancel;</SPAN>"
+           oncommand="window.close();"/&gt;
+ &lt;/hbox&gt;
+&lt;/vbox&gt;
+
+&lt;/window&gt;</PRE></DIV>
+
+
+
+<P>
+Each text string has been replaced by an entity reference. A DTD file has
+been included near the beginning of the XUL file. Each entity that was added
+should be declared in the DTD file. The window will not be displayed if an
+entity is found in the XUL file that hasn't been declared.
+</P>
+
+<P>
+Note that the name of the entity is not important. In the example above,
+words in entities have been separated with periods. You don't have to do
+this. The entity names here follow similar conventions as the rest of the
+Mozilla code.
+</P>
+
+<P>
+You might notice that the text '2520 bytes' has been replaced by two entities.
+This is because the phrase structure may be different in another locale. For
+example, the number might need to appear before the equivalent of 'bytes'
+instead of after. Of course, this might need to be more complicated in order
+to display KB or MB as needed.
+</P>
+
+<P>
+The access keys and keyboard shortcuts have also been translated into entities
+because they will likely be different in a different locale.
+</P>
+
+<P>
+Next, the DTD file (findfile.dtd):
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;!ENTITY findWindow.title "Find Files"&gt;
+&lt;!ENTITY fileMenu.label "File"&gt;
+&lt;!ENTITY editMenu.label "Edit"&gt;
+&lt;!ENTITY fileMenu.accesskey "f"&gt;
+&lt;!ENTITY editMenu.accesskey "e"&gt;
+&lt;!ENTITY openCmd.label "Open Search..."&gt;
+&lt;!ENTITY saveCmd.label "Save Search..."&gt;
+&lt;!ENTITY closeCmd.label "Close"&gt;
+&lt;!ENTITY openCmd.accesskey "o"&gt;
+&lt;!ENTITY saveCmd.accesskey "s"&gt;
+&lt;!ENTITY closeCmd.accesskey "c"&gt;
+&lt;!ENTITY cutCmd.label "Cut"&gt;
+&lt;!ENTITY copyCmd.label "Copy"&gt;
+&lt;!ENTITY pasteCmd.label "Paste"&gt;
+&lt;!ENTITY cutCmd.accesskey "t"&gt;
+&lt;!ENTITY copyCmd.accesskey "c"&gt;
+&lt;!ENTITY pasteCmd.accesskey "p"&gt;
+&lt;!ENTITY cutCmd.commandkey "X"&gt;
+&lt;!ENTITY copyCmd.commandkey "C"&gt;
+&lt;!ENTITY pasteCmd.commandkey "V"&gt;
+&lt;!ENTITY openCmdToolbar.label "Open"&gt;
+&lt;!ENTITY saveCmdToolbar.label "Save"&gt;
+&lt;!ENTITY searchTab "Search"&gt;
+&lt;!ENTITY optionsTab "Options"&gt;
+&lt;!ENTITY findDescription "Enter your search criteria below and select the Find button to begin the search."&gt;
+&lt;!ENTITY findCriteria "Search Criteria"&gt;
+&lt;!ENTITY type.name "Name"&gt;
+&lt;!ENTITY type.size "Size"&gt;
+&lt;!ENTITY type.date "Date Modified"&gt;
+&lt;!ENTITY mode.is "Is"&gt;
+&lt;!ENTITY mode.isnot "Is Not"&gt;
+&lt;!ENTITY casesensitive "Case Sensitive Search"&gt;
+&lt;!ENTITY matchfilename "Match Entire Filename"&gt;
+&lt;!ENTITY results.filename "Filename"&gt;
+&lt;!ENTITY results.location "Location"&gt;
+&lt;!ENTITY results.size "Size"&gt;
+&lt;!ENTITY bytes.before ""&gt;
+&lt;!ENTITY bytes.after "bytes"&gt;
+&lt;!ENTITY button.find "Find"&gt;
+&lt;!ENTITY button.cancel "Cancel"&gt;</PRE></DIV>
+
+
+
+<P>
+Now, to change a language all you need to do is create another DTD file.
+By using the chrome system to add the DTD file to a different locale, the
+same XUL file can be used in any language.
+</P>
+
+</DIV>
+
+<HR>
+<P>
+<A HREF="locprops.html">(Next)</A>
+Next, we'll look at property files.
+
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-locale.xul.txt'>Source</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="10.4 - Creating a Skin"
+     href="cskin.html">Previous</a>
+
+
+  <a class="nextlink" title="10.6 - Property Files"
+     href="locprops.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

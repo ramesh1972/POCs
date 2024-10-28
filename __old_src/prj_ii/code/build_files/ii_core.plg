@@ -1,0 +1,179 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: prj_ii - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+prj_ii.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: prj_ii - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+prj_ii.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: prj_ii - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_component - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_component.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: prj_ii - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_component - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_component.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: ii_component - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_system - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_system.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: ii_component - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_system - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_system.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: srvc_task - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_system - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_service - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_service.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: srvc_task - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_system - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_service - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_service.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: disp_request - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: disp_link - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_dispatcher - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_dispatcher.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: disp_request - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: disp_link - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_dispatcher - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_dispatcher.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: ii_dispatcher - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_service - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_core - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_core.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: ii_dispatcher - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_service - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+<h3>
+--------------------Configuration: ii_core - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+
+
+
+<h3>Results</h3>
+ii_core.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='vbox'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/boxes.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_vbox.html</reference>
+  A container element which can contain any number of child elements. This is  equivalent to the box element, except it defaults to vertical orientation.  
+
+</element>

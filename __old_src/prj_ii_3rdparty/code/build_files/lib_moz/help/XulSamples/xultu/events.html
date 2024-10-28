@@ -1,0 +1,537 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="menuscroll.html"> 
+ <link rel="next" href="advevents.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Adding Event Handlers</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 6.1 - Adding Event Handlers 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <SPAN CLASS="currentpage">Adding Event Handlers</SPAN></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="5.5 - Scrolling Menus"
+     href="menuscroll.html">Previous</a>
+
+
+  <a class="nextlink" title="6.2 - More Event Handlers"
+     href="advevents.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Adding Event Handlers</h2>
+
+<P>
+The find files dialog so far looks quite good. We haven't cleaned it up much but
+we have created a simple user interface easily. Next, we will show how to add
+scripts to it.
+</P>
+
+<H3>Using Scripts</H3>
+
+<P>
+To make the find files dialog functional, we need to add some scripts which will
+execute when the user interacts with the dialog. We would want to add a script to
+handle the Find button, the Cancel button and to handle each menu command. We write
+this using JavaScript functions much in the same way as HTML.
+</P>
+
+<P>
+You can use the <A CLASS="tag" HREF="elemref/ref_script.html">script</A> element to include scripts
+in XUL files. You can embed the script code directly in the XUL file in between
+the opening and closing <A CLASS="tag" HREF="elemref/ref_script.html">script</A> tags but it is much better
+to include code in a separate file. Your XUL window will load slightly faster. The
+<SPAN CLASS="attrib">src</SPAN> attribute is used to link in an external script
+file.
+</P>
+
+<DIV CLASS="task"/>
+
+<P>
+Let's add a script to the find file dialog. Although it does not matter what
+the script file is called, usually it would be the same as the XUL file
+with a js extension. In this case, findfile.js will be used. Add the line below
+just after the opening <A CLASS="tag" HREF="elemref/ref_window.html">window</A> tag and before any elements.
+</P>
+
+
+<DIV CLASS="sample"><PRE><SPAN STYLE="color: red;">&lt;script src="findfile.js"/&gt;</SPAN></PRE></DIV>
+
+
+
+<P>
+We'll create the script file later when we know what we want to put it in it. We'll
+define some functions in the file and we can call them in event handlers.
+
+</DIV>
+
+<P>
+You can include multiple scripts in a XUL file by using multiple
+<A CLASS="tag" HREF="elemref/ref_script.html">script</A> tags, each pointing to a different script. You
+may use relative or absolute URLs. For example, you may use URLs of the following form:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;script src="findfile.js"/&gt;
+&lt;script src="chrome://findfiles/content/help.js"/&gt;
+&lt;script src="http://www.example.com/js/items.js"/&gt;</PRE></DIV>
+
+
+
+<P>
+This tutorial does not attempt to describe how to use JavaScript as this is a
+fairly large topic and there are plenty of other resources that available for this.
+</P>
+
+<H3>Responding to Events</H3>
+
+<P>
+The script will contain code which responds to various events triggered by the user
+or other situations. There are about thirty or so different events that may be
+handled in several different ways. A typical event is the user pressing a mouse
+button or pressing a key. Each XUL element has the ability to trigger certain events
+in different situations. Some events are triggered only be certain elements.
+</P>
+
+<P>
+Each event has a name, for example, 'mousemove' is the name of the event that is
+triggered when the user moves the mouse over a UI element. XUL uses the same event
+mechanism as defined by
+<A HREF="http://www.w3.org/TR/DOM-Level-2-Events/">DOM Events</A>.
+When an action occurs that would trigger an event, such as the user moving the mouse,
+an event object is created corresponding to that event type. Various properties are set
+on the event object such as the mouse position, the key that was pressed, and so forth.
+</P>
+
+<P>
+The event is then sent to the XUL in phases. The first phase is the capturing
+phase, in which the event is first sent to the window, then to the document,
+followed by each ancestor of the XUL element where the event occured downwards
+until it reaches that element. Then, the event is sent to that XUL element.
+Finally, during the bubbling phase, the event is sent to each element back upwards
+until it reaches the window again. You can respond to an event during either the
+capturing or bubbling phase. Once the event has finished propagating, any default
+action will occur, which is the built in behaviour of the element.
+</P>
+
+<P>
+For example, when the mouse is moved over a button that inside a box, a 'mousemove'
+event is generated, and sent first to the window, followed by the document, and then
+the box. That completes the capturing phase. Next, the 'mousemove' event is sent to
+the button. Finally, the bubbling phase causes the event to be sent to the box,
+document and window. The bubbling phase is essentially the reverse of the capturing
+phase. Note that some events don't do the bubbling phase.
+</P>
+
+<P>
+You can attach listeners to each element to listen to the events during each step
+of event propagation. Due to the way a single event is passed to all the ancestors,
+you may attach a listener to a specific element or to an element higher in the
+hierarchy. Naturally, an event attached to an element higher up will receive
+notification of all elements inside it, whereas an event attached to a button will
+only receive events pertaining to that button. This is useful if there are several
+elements you would like to handle using the same or similar code.
+</P>
+
+<P>
+Once you handle an event, regardless of where in the propagation the event is, you
+will likely want to stop the event from being sent to further elements, essentially
+stopping the capturing or bubbling phases from continuing. Depending on how you
+attach the event listener to an element, there are different ways of doing this.
+</P>
+
+<P>
+The most common event used is the 'command' event. The command event is fired when a
+user activates an element, for example by pressing a button, changing a checkbox or
+selecting an item from a menu. The command event is a useful event since it
+automatically handles different ways of activating the element. For example, the
+command event will occur regardless of whether the user uses the mouse to click a
+button, or presses the Enter key. 
+</P>
+
+<P>
+There are two ways to attach an event listener to an element. First, by using
+an attribute with script as its value. Second, by calling an element's addEventListener
+method. The former may only handle bubbling events but tends to be simpler to
+write. The latter can handle events at any phase and may also be used attach multiple
+listeners for an event to an element. Using the attribute form is more common for most
+events.
+</P>
+
+<P>
+To use the attribute form, place an attribute on the element where you want the event
+listener to be, the name of which should be the event name preceded by the word 'on'.
+For example, the corresponding attribute for the 'command' event is 'oncommand'. The
+value of the attribute should be some script that should be executed when the event
+occurs. Typically, this code will be short and just call a function defined in a
+separate script. An example of responding to a button being pressed:
+</P>
+
+
+Example 6.1.1:
+<A HREF='examples/ex_events_1.xul.txt'>Source</A>
+<A HREF="examples/ex_events_1.xul" ONCLICK="window.open('examples/ex_events_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button label="OK" oncommand="alert('Button was pressed!');"/&gt;</PRE></DIV>
+
+
+
+<P>
+Since the command event will bubble, it is also possible to place the event listener
+on an enclosing element. In the example below, the listener has been placed on a box
+and will receive events for both elements.
+</P>
+
+
+Example 6.1.2:
+<A HREF='examples/ex_events_2.xul.txt'>Source</A>
+<A HREF="examples/ex_events_2.xul" ONCLICK="window.open('examples/ex_events_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;vbox oncommand="alert(event.target.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Show images"/>
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<P>
+In this example, the command event will bubble up from the button or checkbox to
+the vbox, where it is handled. If a second listener (the 
+<SPAN CLASS="attrib">oncommand</SPAN> attribute) were placed on the button, its
+code will be called first, followed by the handler on the vbox. Event handlers are
+passed the event object as an implied argument called 'event'. This is used to get
+specific information about the event. One commonly used property is the 'target'
+property of the event, which holds the element where the event actually occured.
+In the example we display an alert containing the target's tag name. The target is
+useful when using a bubbling event so that you could have a set of buttons which
+are all handled by a single script.
+</P>
+
+<P>
+You might notice that the attribute syntax is similar to that used for events in HTML
+documents. In fact, both HTML and XUL share the same event mechanism. One important
+difference is that while the 'click' event (or the <SPAN CLASS="attrib">onclick</SPAN>
+attribute) is used in HTML to respond to buttons, in XUL the command event should be
+used instead. XUL does have a click event, but it only responds to mouse clicks, not
+to keyboard usage. Thus, the click event should be avoided in XUL, unless you have a
+reason to have an element that can only be handled with a mouse.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+A command handler can be placed on the Find and Cancel buttons in the find files
+dialog. Pressing the Find button should start the search. Because we aren't going to
+implement this part yet, we'll leave it out for now. However, pressing the Cancel
+button should close the window. The code below shows how to do this. While we're at
+it, let's add the same code to the Close menu item.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;menuitem label="Close" accesskey="c" <SPAN STYLE="color: red;">oncommand="window.close();"</SPAN>/&gt;
+...
+  
+&lt;button id="cancel-button" label="Cancel"
+     <SPAN STYLE="color: red;">oncommand="window.close();"</SPAN>/&gt;</PRE></DIV>
+
+
+
+<P>
+Two handlers have been added here. The <SPAN CLASS="attrib">oncommand</SPAN>
+attribute was added to the Close menu item. By using this handler, the user will
+be able to close the window by clicking the menu item with the mouse or by selecting
+it with the keyboard. The <SPAN CLASS="attrib">oncommand</SPAN> handler was also added
+to the Cancel button.
+</P>
+
+</DIV>
+
+<H3>DOM Event Listeners</H3>
+
+<P>
+The second way to add an event handler is to call an element's addEventListener
+method. This allows you to attach an event listener dynamically and listen for
+events during the capturing phase. The syntax is as follows:
+</P>
+
+
+Example 6.1.3:
+<A HREF='examples/ex_events_3.xul.txt'>Source</A>
+<A HREF="examples/ex_events_3.xul" ONCLICK="window.open('examples/ex_events_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button id="okbutton" label="OK"/&gt;
+
+&lt;script&gt;
+function buttonPressed(event)
+{
+  alert('Button was pressed!');
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command', buttonPressed, true);
+&lt;/script&gt;
+</PRE></DIV>
+
+
+
+<P>
+The getElementById function returns the element with a given id, in this case the
+button. The addEventListener function is called to add a new capturing event
+listener. The first argument is the name of the event to listen to. The second
+argument is the event listener function which will be called when the event occurs.
+This function may take one argument, the event object, as shown in the declaration
+for the buttonPressed function above. Finally, the last argument should be true for
+capturing listeners. You can also listen during the bubbling phase by setting the
+last argument to false.
+</P>
+
+<HR>
+<P>
+<A HREF="advevents.html">(Next)</A>
+Next, we'll look at some more details about the event object.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_events_1.xul.txt'>6.1.1</A>
+  <A HREF='examples/ex_events_2.xul.txt'>6.1.2</A>
+  <A HREF='examples/ex_events_3.xul.txt'>6.1.3</A>
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-events.xul.txt'>Source</A>
+<A HREF="examples/findfile/findfile-events.xul" ONCLICK="window.open('examples/findfile/findfile-events.xul','xulff','chrome,resizable'); return false;">View</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="5.5 - Scrolling Menus"
+     href="menuscroll.html">Previous</a>
+
+
+  <a class="nextlink" title="6.2 - More Event Handlers"
+     href="advevents.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

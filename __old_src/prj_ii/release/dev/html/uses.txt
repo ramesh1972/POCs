@@ -1,0 +1,14 @@
+Tyagi, these are the flavours in which we could sell this thing,
+1) for any end user, this site will be a personal, group and public interfaces to the entire internet. There are sites which give space for emails, provide content, search, files etc..but the user has to literally recreate all that stuff in that new site. There are web sites which provide merged content, comparisons, but the user is limited to choosing from what the web site publishes. 
+
+This idea, the user does not have to re-create his content, but only pick all existing data and content and only create a library/interface to the actual content else where. With automatic syncing, merging and multiple posting, the user saves time, remebering urls, number of clicks. 
+This could be useful for all the 100 crore people.
+
+2) Anyone who wants to display a pagelet from other site on his/her site can do the same. So the actual website publisher can focus on his/her core competence and flick all other related content.
+This could be useful for any website owner
+
+3) the third is the same as 2) but for advertisers. as of now they have the only option of showing a link to their site with a small text. But we can show their entire form(s)/content on any website. So we can create a pool of such ad pagelets, map them to keywords and display on other website, who are willing to get paid for clicks on these ads.  This could generate revenue.
+
+4) For micro to small businesses, data/knowledge and info consolidation is very useful. Apart from creating a invaluable subject related content library, they get auot synching, hence can save time and money and space on the internet connection. Plus with multiple employees, information is shared instantly. With a page let dataset, we can do what all other scraping systems do. That is to create a table of records from the info on the internet. 
+
+5) All these pagelets can be shown on mobiles, gadgets. So instantly any content on the net is instantly available for everyone on the mobile. We would be doing that picking and posting.

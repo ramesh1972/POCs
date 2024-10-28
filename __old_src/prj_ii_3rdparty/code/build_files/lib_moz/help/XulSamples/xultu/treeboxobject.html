@@ -1,0 +1,558 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="treeviewdet.html"> 
+ <link rel="next" href="intrordf.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Tree Box Objects</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 8.6 - Tree Box Objects 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <SPAN CLASS="currentpage">Tree Box Objects</SPAN></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="8.5 - Tree View Details"
+     href="treeviewdet.html">Previous</a>
+
+
+  <a class="nextlink" title="9.1 - Introduction to RDF"
+     href="intrordf.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Tree Box Objects</h2>
+
+<P>
+This section will describe the tree box object used to handle how a tree is
+displayed.
+</P>
+
+<H3>About the Tree Box Object</H3>
+
+<P>
+Box objects were described in an <A HREF="boxobject.html">earlier section</A>. The
+tree box object is a specialized box object used specifically for trees. The tree
+box implements the 
+<A HREF="http://www.xulplanet.com/references/objref/TreeBoxObject.html">TreeBoxObject</A>
+interface.
+</P>
+
+<P>
+We already saw the rowCountChanged function of the tree box object in the previous
+section. It is used to indicate that one or more rows have been added to the
+tree or removed from the tree. The tree will redraw the affected area. You don't
+need to call the rowCountChanged function when a row has simply changed in some
+way, for example if a cell's label changes. In this case, there are other drawing
+functions that can be used. The simplest is to call invalidateRow which will
+redraw a specific row in the tree. The tree will call the view to get the updated
+data and update the contents of the tree on screen.
+</P>
+
+<P>
+Other redrawing functions are invalidateCell to redraw only a single cell,
+invalidateColumn to redraw a column, invalidateRange to redraw a range of rows,
+or the invalidate function to redraw the entire tree. Note that redrawing does not
+occur until the calling script ends since Mozilla does not redraw in the
+background.
+</P>
+
+<P>
+You can also scroll the tree using four different methods, similar to those
+available for listboxes. The scrollToRow function may be used to scroll to a
+particular row. Here is a simple example.
+</P>
+
+
+Example 8.6.1:
+<A HREF='examples/ex_treeboxobject_1.xul.txt'>Source</A>
+<A HREF="examples/ex_treeboxobject_1.xul" ONCLICK="window.open('examples/ex_treeboxobject_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>
+&lt;script&gt;
+function doScroll()
+{
+  var value = document.getElementById("tbox").value;
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.scrollToRow(value);
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" rows="4"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="row" label="Row" primary="true" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem label="Row 0"/&gt;
+    &lt;treeitem label="Row 1"/&gt;
+    &lt;treeitem label="Row 2"/&gt;
+    &lt;treeitem label="Row 3"/&gt;
+    &lt;treeitem label="Row 4"/&gt;
+    &lt;treeitem label="Row 5"/&gt;
+    &lt;treeitem label="Row 6"/&gt;
+    &lt;treeitem label="Row 7"/&gt;
+    &lt;treeitem label="Row 8"/&gt;
+    &lt;treeitem label="Row 9"/&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Scroll to row:"/&gt;
+  &lt;textbox id="tbox"/&gt;
+  &lt;button label="Scroll" oncommand="doScroll();"/&gt;
+&lt;/hbox&gt;</PRE></DIV>
+
+
+
+<P>
+Note that we use the rows attribute on the <A CLASS="tag" HREF="elemref/ref_tree.html">tree</A> to
+specify that only four rows are displayed at a time. This makes it easier to
+see how the example works. Also, notice that the first row is 0.
+</P>
+
+<P>
+The doScroll function gets the box object and calls the scrollToRow function
+with an argument set to the value of the textbox. You might notice that the
+tree box object can be retieved in the same way as other box objects using
+the boxObject property, however we need to call QueryInterface to cast the
+box object to the more specific tree box object. The functions of the more general
+<A HREF="http://www.xulplanet.com/references/objref/BoxObject.html">box object</A>
+are also available to trees.
+</P>
+
+<P>
+Additional scroll methods include the scrollByLines, scrollByPages and
+ensureRowIsVisible functions. The scrollByLines scrolls up or down by a certain
+number of rows. Use a positive number to go down and a negative number to go up.
+The scrollByPages function scrolls by a number of pages and is called automatically
+when the user presses the page up or page down keys while the tree is focused. A
+page is equal to the number of visible rows. For example if the tree shows 10 rows
+at a time, a page will be equivalent to 10 rows. This is a convenient method since
+when the user resizes a flexible tree, the page size will grow and shrink, so you
+don't need to calculate the page size manually. This isn't too hard to calculate
+manually anyway since the tree box object also provides a getPageLength function
+which returns the number of rows in a page. In the scrolling example above,
+getPageLength would return four.
+</P>
+
+<P>
+Note that in Firefox 1.0 and Mozilla 1.7 and earlier, the getPageLength function
+is called getPageCount instead. The name was changed to getPageLength since it
+was confusing before since it doesn't return the number of pages, but the size of
+each page. You could determine the number of pages by dividing the total number
+of rows by the page length.
+</P>
+
+<P>
+The ensureRowIsVisible function will scroll to a row just as scrollToRow does, but
+does not scroll if the row is already visible.
+</P>
+
+<H3>Cell Coordinates</H3>
+
+<P>
+Some of the most interesting functions of the tree box object are several functions
+which may be used to get the parts of the tree at specific coordinates and vice versa.
+The getCellAt function may be used to get the cell at specific pixel location while
+the getRowAt function may be used to get a row at a specific location. The getRowAt
+function takes two arguments, the x and y coordinates to use.
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+tree.boxObject.getRowAt( 50, 100 );</PRE></DIV>
+
+
+
+<P>
+This example will return the index of the row with a horizontal position of 50 and
+a vertical position of 100. Naturally, it doesn't really matter what the value of
+the x coordinate is since rows always take up the entire horizontal space of the
+tree. One important thing to note is that the coordinates are measured from the
+upper left corner of the containing document, not the edge of the tree itself. This
+makes it easy to pass event coordinates directly to these functions, as in the
+following example of the getCellAt function.
+</P>
+
+
+Example 8.6.2:
+<A HREF='examples/ex_treeboxobject_2.xul.txt'>Source</A>
+<A HREF="examples/ex_treeboxobject_2.xul" ONCLICK="window.open('examples/ex_treeboxobject_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>
+&lt;script&gt;
+function updateFields(event)
+{
+  var row = {}, column = {}, part = {};
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.getCellAt(event.clientX, event.clientY, row, column, part);
+
+  if (typeof column.value != "string") column.value = column.id;
+
+  document.getElementById("row").value = row.value;
+  document.getElementById("column").value = column.value;
+  document.getElementById("part").value = part.value;
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" flex="1" onmousemove="updateFields(event);"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="utensil" label="Utensil" primary="true" flex="1"/&gt;
+    &lt;treecol id="count" label="Count" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Fork"/&gt;
+        &lt;treecell label="5"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Knife"/&gt;
+        &lt;treecell label="2"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Spoon"/&gt;
+        &lt;treecell label="8"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;label value="Row:"/&gt;
+&lt;label id="row"/&gt;
+&lt;label value="Column:"/&gt;
+&lt;label id="column"/&gt;
+&lt;label value="Child Type:"/&gt;
+&lt;label id="part"/&gt;</PRE></DIV>
+
+
+
+<P>
+The getCellAt function takes five arguments, the coordinates to look up and three
+out parameters. An out parameter is used since the function needs to return more
+that one value. You will see a number of interfaces that use out parameters in the
+<A HREF="http://www.xulplanet.com/references/objref/">object reference</A>.
+These are indicated by the word 'out' before the argument. For these, you will need
+to supply an empty object and the function will fill in the 'value' property with
+the necessary value.
+</P>
+
+<P>
+The three out parameters will be filled in with the row, the column and a child
+type. The row is the index of the row the mouse is over, since we call it with the
+event coordinates of a mousemove event. If the coordinate is not over a row, the
+row value will be set to -1. The column is a column object in Mozilla 1.8 and
+later. In earlier versions, columns are identified with a string, the id of the
+column. In later versions, a separate column object exists, which can be queried
+for column data.
+</P>
+
+<P>
+The following line is used so that the example above will work in all versions.
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+if (typeof column.value != "string") column.value = column.id;</PRE></DIV>
+
+
+
+<P>
+If the column is a string, we are running on Mozilla 1.7 or earlier, but for later
+versions we get the column id from the column object. If you are writing code for
+multiple versions, you should check for this as above.
+</P>
+
+<P>
+The last argument to getCellAt is the child type which is filled in with a string
+depending on what part of the cell the coordinate is at. If you move the mouse
+around in the previous example, you might notice the label change between 'text'
+and 'cell'. The value 'text' indicates the area where the text would be drawn and
+the value 'cell' indicates the area around the text, for example, the margin on
+the left side where the open and close twisties are normally drawn. If there was
+a twisty, however, the value would be 'twisty' instead. This is convenient since
+you could determine whether the user clicked on a twisty instead of another part
+of the row. In fact, this is what the underlying tree code does when the user
+double clicks the twisty. The final value that may be returned is 'image' if there
+is an image in the tree cell and the coordinate corresponds to a location where the
+image is. Of course, in many cases you may not care what part of the cell the
+coordinate is on and just want the row and column.
+</P>
+
+<P>
+To go in reverse and get the cell at a specific coordinate, use the
+getCoordsForCellItem function. It takes seven arguments, as described below.
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+var x = {}, y = {}, width = {}, height = {};
+tree.boxObject.getCoordsForCellItem( row, column, part, x, y, width, height );</PRE></DIV>
+
+
+
+<P>
+The row, column, and part arguments are similar to those returned from the
+getCellAt function. Again, the column should be either a string or a column
+object depending on which version you are using. The cell part type may be
+used to get the coordinates of either the text, the entire cell, the twisty
+or the image in the cell. The same values as the getCellAt function are used.
+The getCoordsForCellItem function returns the x and y coordinates in addition
+to the width and height, all as out parameters.
+</P>
+
+<HR>
+<P>
+<A HREF="intrordf.html">(Next)</A>
+Next, we'll look at RDF which can be used to automatically populate trees and
+other elements.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_treeboxobject_1.xul.txt'>8.6.1</A>
+  <A HREF='examples/ex_treeboxobject_2.xul.txt'>8.6.2</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="8.5 - Tree View Details"
+     href="treeviewdet.html">Previous</a>
+
+
+  <a class="nextlink" title="9.1 - Introduction to RDF"
+     href="intrordf.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

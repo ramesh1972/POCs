@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<element name='binding'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/advrules.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_binding.html</reference>
+  Should be contained within a bindings element. A binding is used to  bind a variable to a node. Like the triple element in syntax, it can  be used to bind a particular property of a matched node to a particular  variable name. That name can then be used within the action of a rule.  
+
+<prop name='object'>
+  The object of a binding. It can be a variable reference, an RDF resource URI,  or an RDF literal value.
+</prop>
+<prop name='predicate'>
+  The predicate or property to match. This must be a URI of the property.
+</prop>
+<prop name='subject'>
+  The subject of a binding. It can be a variable reference or an RDF  resource URI.
+</prop>
+</element>

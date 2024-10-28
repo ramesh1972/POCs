@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Wizard Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Wizard 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Wizard</h3>
+
+<p>
+  This element is used to construct a step-by-step wizard found in some  applications to guide users through a task. It is used for a window with  several steps contained on several pages. This element provides the header  and buttons along the bottom, and also handles navigation between the pages.  Each page should be constructed using a <a href='ref_wizardpage.html'>wizardpage</a>. The pages are  displayed in the order that they are placed in the wizard, unless you use  the next and pageid attributes on the pages to change the sequence. The  wizard will rendered in a manner suitable for the user's selected theme and  platform. In newer versions of Mozilla, a <a href='ref_statusbar.html'>statusbar</a> may be placed directly  inside the wizard element which will be shared among all pages.  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/wizard.html'>More information about wizard<a></p>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_firstpage'>firstpage</a></td>
+<td><a href='#attr_lastpage'>lastpage</a></td>
+<td><a href='#attr_onwizardback'>onwizardback</a></td>
+<td><a href='#attr_onwizardcancel'>onwizardcancel</a></td>
+<td><a href='#attr_onwizardfinish'>onwizardfinish</a></td>
+</tr><tr>
+<td><a href='#attr_onwizardnext'>onwizardnext</a></td>
+<td><a href='#attr_pagestep'>pagestep</a></td>
+<td><a href='#attr_title'>title</a></td>
+</tr></table>
+</div>
+<div class='aphead'><p>Properties and Methods:</p><table class='apheadbody'><tr>
+<td><a href='#prop_advance'>advance</a></td>
+<td><a href='#prop_canAdvance'>canAdvance</a></td>
+<td><a href='#prop_canRewind'>canRewind</a></td>
+<td><a href='#prop_cancel'>cancel</a></td>
+<td><a href='#prop_currentPage'>currentPage</a></td>
+</tr><tr>
+<td><a href='#prop_getButton'>getButton</a></td>
+<td><a href='#prop_getPageById'>getPageById</a></td>
+<td><a href='#prop_goTo'>goTo</a></td>
+<td><a href='#prop_onFirstPage'>onFirstPage</a></td>
+<td><a href='#prop_onLastPage'>onLastPage</a></td>
+</tr><tr>
+<td><a href='#prop_pageCount'>pageCount</a></td>
+<td><a href='#prop_pageIndex'>pageIndex</a></td>
+<td><a href='#prop_pageStep'>pageStep</a></td>
+<td><a href='#prop_rewind'>rewind</a></td>
+<td><a href='#prop_title'>title</a></td>
+</tr><tr>
+<td><a href='#prop_wizardPages'>wizardPages</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Attributes:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#attr_align'>align</a><br>
+<a href='ref_XULElement.html#attr_allowevents'>allowevents</a><br>
+<a href='ref_XULElement.html#attr_allownegativeassertions'>allownegativeassertions</a><br>
+<a href='ref_XULElement.html#attr_class'>class</a><br>
+<a href='ref_XULElement.html#attr_coalesceduplicatearcs'>coalesceduplicatearcs</a><br>
+<a href='ref_XULElement.html#attr_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#attr_container'>container</a><br>
+<a href='ref_XULElement.html#attr_containment'>containment</a><br>
+<a href='ref_XULElement.html#attr_context'>context</a><br>
+<a href='ref_XULElement.html#attr_contextmenu'>contextmenu</a><br>
+<a href='ref_XULElement.html#attr_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#attr_debug'>debug</a><br>
+<a href='ref_XULElement.html#attr_dir'>dir</a><br>
+<a href='ref_XULElement.html#attr_empty'>empty</a><br>
+<a href='ref_XULElement.html#attr_equalsize'>equalsize</a><br>
+<a href='ref_XULElement.html#attr_flags'>flags</a><br>
+<a href='ref_XULElement.html#attr_flex'>flex</a><br>
+<a href='ref_XULElement.html#attr_height'>height</a><br>
+<a href='ref_XULElement.html#attr_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#attr_id'>id</a><br>
+<a href='ref_XULElement.html#attr_insertafter'>insertafter</a><br>
+<a href='ref_XULElement.html#attr_insertbefore'>insertbefore</a><br>
+<a href='ref_XULElement.html#attr_left'>left</a><br>
+<a href='ref_XULElement.html#attr_maxheight'>maxheight</a><br>
+<a href='ref_XULElement.html#attr_maxwidth'>maxwidth</a><br>
+<a href='ref_XULElement.html#attr_menu'>menu</a><br>
+<a href='ref_XULElement.html#attr_minheight'>minheight</a><br>
+<a href='ref_XULElement.html#attr_minwidth'>minwidth</a><br>
+<a href='ref_XULElement.html#attr_observes'>observes</a><br>
+<a href='ref_XULElement.html#attr_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#attr_orient'>orient</a><br>
+<a href='ref_XULElement.html#attr_pack'>pack</a><br>
+<a href='ref_XULElement.html#attr_persist'>persist</a><br>
+<a href='ref_XULElement.html#attr_popup'>popup</a><br>
+<a href='ref_XULElement.html#attr_position'>position</a><br>
+<a href='ref_XULElement.html#attr_ref'>ref</a><br>
+<a href='ref_XULElement.html#attr_removeelement'>removeelement</a><br>
+<a href='ref_XULElement.html#attr_sortDirection'>sortDirection</a><br>
+<a href='ref_XULElement.html#attr_sortResource'>sortResource</a><br>
+<a href='ref_XULElement.html#attr_sortResource2'>sortResource2</a><br>
+<a href='ref_XULElement.html#attr_statustext'>statustext</a><br>
+<a href='ref_XULElement.html#attr_style'>style</a><br>
+<a href='ref_XULElement.html#attr_template'>template</a><br>
+<a href='ref_XULElement.html#attr_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#attr_tooltiptext'>tooltiptext</a><br>
+<a href='ref_XULElement.html#attr_top'>top</a><br>
+<a href='ref_XULElement.html#attr_uri'>uri</a><br>
+<a href='ref_XULElement.html#attr_wait-cursor'>wait-cursor</a><br>
+<a href='ref_XULElement.html#attr_width'>width</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='attr_firstpage'><span class='attrib'>firstpage</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  True if the wizard is on the first page.</p>
+  <h5><a name='attr_lastpage'><span class='attrib'>lastpage</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  True if the wizard is on the last page.</p>
+  <h5><a name='attr_onwizardback'><span class='attrib'>onwizardback</span></a></h5>
+<p class='aptype'>Type:&nbsp;script code</p>  <p>
+  This should be set to code which is called when the user presses the  Back button. Return true to allow the previous page to be displayed and  false to disallow moving back a page. Use the canRewind property to indicate  to the user (by disabling the Back button) that they cannot go back a page.</p>
+  <h5><a name='attr_onwizardcancel'><span class='attrib'>onwizardcancel</span></a></h5>
+<p class='aptype'>Type:&nbsp;script code</p>  <p>
+  This should be set to code which is called when the user presses the  Cancel button. Return true to allow the wizard to be cancelled, and close the  wizard, or return false to prevent the wizard from being cancelled. Use the  canCancel property to indicate to the user (by disabling the Cancel button)  that they cannot cancel.</p>
+  <h5><a name='attr_onwizardfinish'><span class='attrib'>onwizardfinish</span></a></h5>
+<p class='aptype'>Type:&nbsp;script code</p>  <p>
+  This should be set to code which is called when the user presses the  Finish button, which would appear in place of the Next button on the last page  of the wizard. Return true to allow the wizard to be closed, accepting any values  entered on the pages, or return false to prevent the wizard from being closed.  Use the canAdvance property to indicate to the user (by disabling the Finish button)  that they cannot end the wizard.</p>
+  <h5><a name='attr_onwizardnext'><span class='attrib'>onwizardnext</span></a></h5>
+<p class='aptype'>Type:&nbsp;script code</p>  <p>
+  This should be set to code which is called when the user presses the  Next button. Return true to allow the next page to be displayed and  false to disallow moving to the next page. Use the canAdvance property to  indicate to the user (by disabling the Next button) that they cannot go to the  next page.</p>
+  <h5><a name='attr_pagestep'><span class='attrib'>pagestep</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  The index of the current page.</p>
+  <h5><a name='attr_title'><span class='attrib'>title</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  The title that appears at the top of the wizard. This is overriden by the label  attribute on the individual pages.</p>
+</div>
+<hr class='propsplit'><h4 class='propslist'><a name='propsblk'>Properties and Methods:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#prop_align'>align</a><br>
+<a href='ref_XULElement.html#prop_allowEvents'>allowEvents</a><br>
+<a href='ref_XULElement.html#prop_blur'>blur</a><br>
+<a href='ref_XULElement.html#prop_boxObject'>boxObject</a><br>
+<a href='ref_XULElement.html#prop_boxObject.element'>boxObject.element</a><br>
+<a href='ref_XULElement.html#prop_boxObject.getLookAndFeelMetric'>boxObject.getLookAndFeelMetric</a><br>
+<a href='ref_XULElement.html#prop_boxObject.height'>boxObject.height</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenX'>boxObject.screenX</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenY'>boxObject.screenY</a><br>
+<a href='ref_XULElement.html#prop_boxObject.width'>boxObject.width</a><br>
+<a href='ref_XULElement.html#prop_boxObject.x'>boxObject.x</a><br>
+<a href='ref_XULElement.html#prop_boxObject.y'>boxObject.y</a><br>
+<a href='ref_XULElement.html#prop_builder'>builder</a><br>
+<a href='ref_XULElement.html#prop_className'>className</a><br>
+<a href='ref_XULElement.html#prop_click'>click</a><br>
+<a href='ref_XULElement.html#prop_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#prop_contextMenu'>contextMenu</a><br>
+<a href='ref_XULElement.html#prop_controllers'>controllers</a><br>
+<a href='ref_XULElement.html#prop_database'>database</a><br>
+<a href='ref_XULElement.html#prop_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#prop_dir'>dir</a><br>
+<a href='ref_XULElement.html#prop_doCommand'>doCommand</a><br>
+<a href='ref_XULElement.html#prop_flex'>flex</a><br>
+<a href='ref_XULElement.html#prop_focus'>focus</a><br>
+<a href='ref_XULElement.html#prop_getElementsByAttribute'>getElementsByAttribute</a><br>
+<a href='ref_XULElement.html#prop_height'>height</a><br>
+<a href='ref_XULElement.html#prop_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#prop_id'>id</a><br>
+<a href='ref_XULElement.html#prop_left'>left</a><br>
+<a href='ref_XULElement.html#prop_maxHeight'>maxHeight</a><br>
+<a href='ref_XULElement.html#prop_maxWidth'>maxWidth</a><br>
+<a href='ref_XULElement.html#prop_menu'>menu</a><br>
+<a href='ref_XULElement.html#prop_minHeight'>minHeight</a><br>
+<a href='ref_XULElement.html#prop_minWidth'>minWidth</a><br>
+<a href='ref_XULElement.html#prop_observes'>observes</a><br>
+<a href='ref_XULElement.html#prop_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#prop_orient'>orient</a><br>
+<a href='ref_XULElement.html#prop_pack'>pack</a><br>
+<a href='ref_XULElement.html#prop_persist'>persist</a><br>
+<a href='ref_XULElement.html#prop_ref'>ref</a><br>
+<a href='ref_XULElement.html#prop_resource'>resource</a><br>
+<a href='ref_XULElement.html#prop_statusText'>statusText</a><br>
+<a href='ref_XULElement.html#prop_style'>style</a><br>
+<a href='ref_XULElement.html#prop_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#prop_tooltipText'>tooltipText</a><br>
+<a href='ref_XULElement.html#prop_top'>top</a><br>
+<a href='ref_XULElement.html#prop_width'>width</a><br>
+</p>
+<p>Inherited from Element:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_addEventListener'>addEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_appendChild'>appendChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_attributes'>attributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_childNodes'>childNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_cloneNode'>cloneNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_dispatchEvent'>dispatchEvent</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_firstChild'>firstChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttribute'>getAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNS'>getAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNode'>getAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNodeNS'>getAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagName'>getElementsByTagName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagNameNS'>getElementsByTagNameNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttribute'>hasAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributeNS'>hasAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributes'>hasAttributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasChildNodes'>hasChildNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_insertBefore'>insertBefore</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_isSupported'>isSupported</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_lastChild'>lastChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_localName'>localName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_namespaceURI'>namespaceURI</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nextSibling'>nextSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeName'>nodeName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeType'>nodeType</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeValue'>nodeValue</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_normalize'>normalize</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_ownerDocument'>ownerDocument</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_parentNode'>parentNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_prefix'>prefix</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_previousSibling'>previousSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttribute'>removeAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNS'>removeAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNode'>removeAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeChild'>removeChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeEventListener'>removeEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_replaceChild'>replaceChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttribute'>setAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNS'>setAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNode'>setAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNodeNS'>setAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_tagName'>tagName</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='prop_advance'><span class='attrib'> advance ( pageID ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Call this function to go to the next page. It is equivalent to pressing the next  button. The canAdvance property must be set to true for the page to be changed. The  code in the onwizardnext attribute is called before the page is changed. You may  supply as the argument to the advance function a page index to jump to. Supply null  as the argument to go to the next page in sequence.</p>
+  <h5><a name='prop_canAdvance'><span class='attrib'>canAdvance</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  This property is set to true if the user can press the Next button to go to  the next page. If this property is false, the user cannot navigate to the next  page. Set this property to true to indicate that the user can go to the next page.  Set to false to disallow moving to the next page. This has the effect of enabling  or disabling the Next button, or, on the last page of the wizard, the Finish button.</p>
+  <h5><a name='prop_canRewind'><span class='attrib'>canRewind</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  This property is set to true if the user can press the Next button to go to  the next page. If this property is false, the user cannot navigate to the next  page. Set this property to true to indicate that the user can go back a page. Set  to false to disallow moving to the previous page. This has the effect of enabling  or disabling the Back button.</p>
+  <h5><a name='prop_cancel'><span class='attrib'> cancel ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  This function can be called to cancel the wizard and close it. The code in the  onwizardcancel attribute is called before the wizard is cancelled.</p>
+  <h5><a name='prop_currentPage'><span class='attrib'>currentPage</span></a></h5>
+<p class='aptype'>Type:&nbsp;wizardpage element</p>  <p>
+  This property returns the wizardpage element that is currently displayed.  You can modify this value to change the current page.</p>
+  <h5><a name='prop_getButton'><span class='attrib'> getButton ( type ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;button element</p>  <p>
+  
+  This method returns the wizard button of the specific type, which should be  either "back", "next", "finish" or "cancel".</p>
+  <h5><a name='prop_getPageById'><span class='attrib'> getPageById ( pageID ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;wizardpage element</p>  <p>
+  
+  Returns the <a href='ref_wizardpage.html'>wizardpage</a> element corresponding to the specified page ID.</p>
+  <h5><a name='prop_goTo'><span class='attrib'> goTo ( pageID ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  This function is used to change which page is currently displayed, specified by the  argument pageID. The page will be changed regardless of the value of canAdvance or  canRewind. The onwizardback and onwizardnext code is not called when using this  function.</p>
+  <h5><a name='prop_onFirstPage'><span class='attrib'>onFirstPage</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  This property is set to true if the user is on the first page, which may or  may not be the first index.</p>
+  <h5><a name='prop_onLastPage'><span class='attrib'>onLastPage</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  This property is set to true if the user is on the last page of the wizard.</p>
+  <h5><a name='prop_pageCount'><span class='attrib'>pageCount</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  This property holds the number of pages in the wizard.</p>
+  <h5><a name='prop_pageIndex'><span class='attrib'>pageIndex</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  This property returns the index of the currently selected page. You can  change the selected page by modifying this property.</p>
+  <h5><a name='prop_pageStep'><span class='attrib'>pageStep</span></a></h5>
+<p class='aptype'>Type:&nbsp;integer</p>  <p>
+  This property returns the number of pages that the user has navigated through  so far, meaning that the user would press the Back button this many times to  go back to the beginning. This property is different than pageIndex, because  pages are not necessarily navigated in order.</p>
+  <h5><a name='prop_rewind'><span class='attrib'> rewind ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Call this function to go back a page. It is equivalent to pressing the back button.  The canRewind property must be set to true for the page to be changed. The  code in the onwizardback attribute is called before the page is changed.</p>
+  <h5><a name='prop_title'><span class='attrib'>title</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  The title that appears at the top of the wizard. This is overriden by the label  attribute on the individual pages.</p>
+  <h5><a name='prop_wizardPages'><span class='attrib'>wizardPages</span></a></h5>
+<p class='aptype'>Type:&nbsp;DOM NodeList of wizardpage elements</p>  <p>
+  This property holds the list of wizardpage elements in the wizard.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<element name='colorpicker'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_colorpicker.html</reference>
+  An element that the user may use to select a color from. Mozilla renders  this as a grid of colors. The user may select a color by clicking on one of  the grid cells.  
+
+<attr name='color' type='color string'>
+  The currently selected color. This is modified when the user selects a  color. You can assign a string of the form #RRGGBB to this property to  change the selected color.
+</attr>
+<attr name='onchange' type='script code'>
+  The code in the onchange attribute is called when a color is selected.
+</attr>
+<attr name='type' type='string'>
+  If this attribute is not present, the colorpicker is displayed inside the  window. If this is set to the text 'button', the colorpicker is displayed as  a button. When the user clicks the button, a popup appears for the user to  select a color.
+</attr>
+<prop name='color' type='color string'/>
+</element>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window
+  id="example-window"
+  title="History List"
+  xmlns:ANIMALS="http://www.some-fictitious-zoo.com/rdf#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<button label="Click here to see the mammals the zoo has" type="menu"
+        datasources="animals.rdf" ref="http://www.some-fictitious-zoo.com/mammals">
+  <template>
+    <rule ANIMALS:specimens="0"></rule>
+    <rule>
+      <menupopup>
+        <menuitem uri="rdf:*" label="rdf:http://www.some-fictitious-zoo.com/rdf#name"/>
+      </menupopup>
+    </rule>
+  </template>
+</button>
+
+</window>
+

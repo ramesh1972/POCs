@@ -1,0 +1,81 @@
+<?xml version='1.0'?>
+
+<element name='editor'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_editor.html</reference>
+  A frame which is expected to contain an editable document. Set the value of  the editortype attribute to 'html' to create an editor document. Mozilla  provides two types of editors, the HTML editor and the plaintext editor.  The editor does not provide any editing user interface; you would supply that  yourself. However, text editing, image resizing, and table row and cell  editing capabilities are provided. If you do not set the editortype  attribute on an editor, you must enable editing using the makeEditable  method.        To specify the document to load in the editor use the src attribute.  However, an issue is that if you specify the src attribute initially on the  editor tag in the XUL file, the document does not become editable by  default. To enable editing on an editor, do one of two things:           Set the src attribute on the editor after the outer window has loaded,        for example, in the onload handler. You might also set the src        attribute based on what the user selects from a file dialog. In this        case, set the editortype attribute on the editor.      Call the makeEditable function to make the document loaded in the        editor editable.         To edit a new document, set the src attribute to 'about:blank'.   
+<html><![CDATA[
+<p>  A frame which is expected to contain an editable document. Set the value of  the editortype attribute to 'html' to create an editor document. Mozilla  provides two types of editors, the HTML editor and the plaintext editor.  The editor does not provide any editing user interface; you would supply that  yourself. However, text editing, image resizing, and table row and cell  editing capabilities are provided. If you do not set the editortype  attribute on an editor, you must enable editing using the makeEditable  method.  </p>  <p>  To specify the document to load in the editor use the src attribute.  However, an issue is that if you specify the src attribute initially on the  editor tag in the XUL file, the document does not become editable by  default. To enable editing on an editor, do one of two things:  </p>  <ol>    <li>Set the src attribute on the editor after the outer window has loaded,        for example, in the onload handler. You might also set the src        attribute based on what the user selects from a file dialog. In this        case, set the editortype attribute on the editor.</li>    <li>Call the makeEditable function to make the document loaded in the        editor editable.</li>  </ol>  <p>  To edit a new document, set the src attribute to 'about:blank'.  </p></p>
+]]></html>
+
+<example>
+<![CDATA[
+    &lt;editor src=&quot;http://www.xulplanet.com&quot;/&gt;
+    &lt;button label=&quot;Edit&quot; oncommand=&quot;this.previousSibling.makeEditable('html',false);&quot;/&gt;
+
+]]>
+</example>
+<implements>nsIAccessibleProvider</implements>
+<attr name='editortype'>
+  The type of editor to use. This value will be overriden depending on the  content type of the document in the editor.
+<value name='html'>
+    An HTML editor.
+</value>
+<value name='text'>
+    A plaintext editor.
+</value>
+</attr>
+<attr name='src' type='document URL'>
+  The URL of the file to load into the editor.
+</attr>
+<attr name='type' type='string'>
+  If set to the string 'content-primary', this editor becomes the primary  content for the page. The window for the primary content can be retrieved  more conveniently using 'window.content'.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the editor.
+</prop>
+<prop name='commandManager' type='nsICommandManager'>
+  The command manager handles operations on the editor.
+</prop>
+<prop name='contentDocument' type='document'>
+  This read-only property contains the document object in the editor.
+</prop>
+<prop name='contentWindow' type='window'>
+  This read-only property contains the window object in the editor.
+</prop>
+<prop name='docShell' type='nsIDocShell'>
+  This read-only property contains the nsIDocShell object for the document.
+</prop>
+<prop name='editingSession' type='nsIEditorSession'>
+  The editing session for the editor which is used to initialize the editor.  You would not normally need to use this.
+</prop>
+<prop name='editortype'>
+  The type of editor to use. This value will be overriden depending on the  content type of the document in the editor.
+<value name='html'>
+    An HTML editor.
+</value>
+<value name='text'>
+    A plaintext editor.
+</value>
+</prop>
+<method name='getEditor' returns='nsIEditor'>
+<prototype> getEditor ( window ) </prototype>
+  
+  Returns the editing interface for the editor which contains numerous  methods for manipulating the document. Pass the editor's contentWindow  as the argument.
+</method>
+<method name='getHTMLEditor' returns='nsIHTMLEditor'>
+<prototype> getHTMLEditor ( window ) </prototype>
+  
+  Returns the HTML editing interface for the editor which contains   methods  for  manipulating an HTML document. Pass the editor's contentWindow  as the argument.
+</method>
+<method name='makeEditable'>
+<prototype> makeEditable ( editortype , waitForLoad ) </prototype>
+  
+  This function enables editing for an editor. Specify 'text' or 'html' as the  editortype.
+</method>
+<prop name='webBrowserFind' type='nsIWebBrowserFind'>
+  This read-only property contains an nsIWebBrowserFind object which can be used  to search for text in the document.
+</prop>
+<prop name='webNavigation' type='nsIWebNavigation'>
+  This read-only property contains the nsIWebNavigation object for the document.  Most of its methods are callable directly on the editor itself, such as goBack and  goForward. It also contains the load constants used by reloadWithFlags and  loadURIWithFlags.
+</prop>
+</element>

@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='keyset'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/keyshort.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_keyset.html</reference>
+  A container element for key elements. The keyset and its descendants are not  displayed.  
+
+</element>

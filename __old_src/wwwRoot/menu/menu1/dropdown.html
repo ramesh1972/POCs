@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p align="left"> 
+  <script language="JavaScript1.2" src="navigationmenus.js">
+
+These are the varibles you have to set to customize the menu.
+*******************************************************************************/
+</script>
+</p>
+<p> 
+  <script language="JavaScript1.2" >
+
+
+
+
+
+oMenu=new menuObj('oMenu') 
+
+
+oMenu.clMain='padding:5px; font-family:verdana; font-size:10px; font-weight:bold' 
+oMenu.clSub='padding:5px; font-family:verdana; font-size:10px'
+oMenu.clSubSub='padding:5px; font-family:verdana; font-size:10px' 
+oMenu.clAMain='text-decoration:none; color:White' 
+oMenu.clASub='text-decoration:none; color:White' 
+oMenu.clASubSub='text-decoration:none; color:White'
+
+//Background bar properties
+oMenu.backgroundbar=1 
+oMenu.backgroundbarfromleft=0
+oMenu.backgroundbarfromtop=85
+oMenu.backgroundbarsize="100%" 
+oMenu.backgroundbarcolor="#6699CC"
+
+oMenu.mainheight=25 
+oMenu.mainwidth=118
+
+
+oMenu.subwidth=120 
+oMenu.subheight=20
+
+oMenu.subsubwidth=130  
+oMenu.subsubheight=oMenu.subheight 
+
+
+oMenu.makeStyle()
+
+oMenu.subplacement=oMenu.mainheight 
+oMenu.subsubXplacement=oMenu.subwidth
+oMenu.subsubYplacement=7 
+
+oMenu.mainbgcoloroff='#6699CC'
+oMenu.mainbgcoloron='#6699CC' 
+oMenu.subbgcoloroff='#6699CC'
+oMenu.subbgcoloron='#99CCFF'
+oMenu.subsubbgcoloroff='#6699CC' 
+oMenu.subsubbgcoloron='#99CCFF' 
+oMenu.stayoncolor=0 
+
+oMenu.menuspeed=10 
+oMenu.menusubspeed=15 
+
+oMenu.menurows=1
+
+oMenu.menueventon="mouse" 
+oMenu.menueventoff="mouse" 
+
+
+
+//oMenu.menuplacement=new Array("20%","30%","60%","50%","65%" "95%","95%","95%","95%")  
+
+oMenu.menuplacement=new Array(35,80,150,215,290,400,465,510,594)
+
+
+
+
+oMenu.pxbetween=0 //in pixel or %
+
+
+oMenu.fromleft=0 
+oMenu.fromtop=85
+
+
+
+
+//MAIN 0
+
+
+oMenu.makeMain(0,'Home |','index-1.htm')
+	
+//MAIN 1		
+oMenu.makeMain(1,'Corporate |',0)
+	oMenu.makeSub(1,0,'Mission','corp-mis.htm',4)
+	oMenu.makeSub(1,1,'Objectives','corp-obj.htm',4)
+	oMenu.makeSub(1,2,'Values','corp-val.htm',4)
+	oMenu.makeSub(1,3,'About SSI','corp-about.htm',4)
+     
+//MAIN 2		
+oMenu.makeMain(2,'Divisions |',0)
+	oMenu.makeSub(2,0,'SSI Education','divi-edu.htm',4)
+	oMenu.makeSub(2,1,'SSI Technologies','divi-tech.htm',4)
+	oMenu.makeSub(2,2,'SSI Enterprise Support','divi-ent.htm',4)
+	oMenu.makeSub(2,3,'SSI Web Initiatives','divi-web.htm',4)
+
+//MAIN 3		
+oMenu.makeMain(3,'Companies |',0)
+	oMenu.makeSub(3,0,'IndigoMarkets','comp-indigo.htm',4)
+	oMenu.makeSub(3,1,'3rd Agenda','comp-3rd.htm',4)
+	oMenu.makeSub(3,2,'Inndsoft','comp-indsof.htm',4)
+	oMenu.makeSub(3,3,'Client Soft','comp-csof.htm',4)
+
+//MAIN 4		
+oMenu.makeMain(4,'Credits/Alliances |',0)
+	oMenu.makeSub(4,0,'Credits','cred-crd.htm',2)
+	oMenu.makeSub(4,1,'Alliances','cred-all.htm',2)
+	
+//MAIN 5
+
+//Main items:
+// makeMain 
+oMenu.makeMain(5,'Investor |',0)
+	//Sub items:
+	// makeSub
+	oMenu.makeSub(5,0,'Finincial Results',0,6)
+	oMenu.makeSub(5,1,'Archives','fin-arc.htm',6)
+	oMenu.makeSub(5,2,'Corp. Presentation','fin-corp.htm',6)
+	oMenu.makeSub(5,3,'Stock Index','fin-stock.htm',6)
+	oMenu.makeSub(5,4,'SSI 10yrs meet','./ssi-10/index.htm',6)
+	oMenu.makeSub(5,5,'Mail Us','fin-contact.htm',6)
+		//SubSub items:
+		// makeSubSub
+		oMenu.makeSubSub(5,0,0,'FY(00-01)Quarterly','fin-q-00.htm',3)
+		oMenu.makeSubSub(5,0,1,'FY(99-00)Annual','fin-a-99.htm',3)
+		oMenu.makeSubSub(5,0,2,'FY(99-00)Quarterly','fin-q-99.htm',3)
+
+
+//MAIN 6	
+oMenu.makeMain(6,'News |',0)
+	oMenu.makeSub(6,0,'2001','./news-2001/index.html',7)
+	oMenu.makeSub(6,1,'2000','./news-2000/index.html',7)	
+        oMenu.makeSub(6,2,'1999','./news-1999/index.html',7)
+        oMenu.makeSub(6,3,'1998','./news-1998/index.html',7)
+	oMenu.makeSub(6,4,'1997','./news-1997/index.html',7)
+	oMenu.makeSub(6,5,'1996','./news-1996/index.html',7)
+	oMenu.makeSub(6,6,'1995','./news-1995/index.html',7)
+	
+//MAIN 7	
+oMenu.makeMain(7,'NewsLetters |',0)
+	oMenu.makeSub(7,0,'2000','newslet.htm',2)
+	oMenu.makeSub(7,1,'2001','./nl-01/index.html',2)
+	
+//MAIN 8	
+oMenu.makeMain(8,'Careers |',0)
+	oMenu.makeSub(8,0,'India','car-india.htm',2)
+	oMenu.makeSub(8,1,'Overseas','car-abroad.htm',2)
+
+		
+
+oMenu.construct()	
+
+</script>
+</p>
+</body>
+</html>

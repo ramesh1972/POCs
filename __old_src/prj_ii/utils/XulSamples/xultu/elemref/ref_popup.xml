@@ -1,0 +1,165 @@
+<?xml version='1.0'?>
+
+<element name='popup'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/popups.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_popup.html</reference>
+  A container that appears in a child window. The popup window does not have any  special frame. Popups can be displayed when an element is clicked by assigning  the id of the popup to either the popup, context or tooltip attribute of the  element. A popup is a type of box that defaults to vertical orientation.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULPopupElement</implements>
+<attr name='ignorekeys' type='boolean'>
+  If true, keyboard navigation between menu items in the popup is disabled.
+</attr>
+<attr name='left' type='integer'>
+  Overrides the horizontal position of the popup specified by the showPopup  function.
+</attr>
+<attr name='onpopuphidden' type='script code'>
+  This event is sent to a popup after it has been hidden.
+</attr>
+<attr name='onpopuphiding' type='script code'>
+  This event is sent to a popup when it is about to be hidden.
+</attr>
+<attr name='onpopupshowing' type='script code'>
+  This event is sent to a popup just before it is popped open. This handler is  usually used to dynamically set the contents when the user requests to display it.  Returning false from this event handler prevents the popup from appearing.
+</attr>
+<attr name='onpopupshown' type='script code'>
+  This is event is sent to a popup after it has been opened, much like the onload  event is sent to a window when it is opened.
+</attr>
+<attr name='position'>
+  The position attribute determines where the popup appears relative to the element  the user clicked to invoke the popup.
+<value name='after_start'>
+    The popup appears underneath the element with the popup's upper-left corner
+    aligned with the lower-left corner of the element. The left edges of the
+    element and the popup are aligned.
+</value>
+<value name='after_end'>
+    The popup appears underneath the element with the popup's upper-right corner
+    aligned with the lower-right corner of the element. The right edges of the
+    element and the popup are aligned.
+</value>
+<value name='before_start'>
+    The popup appears above the element with the popup's lower-left corner
+    aligned with the upper-left corner of the element. The left edges of the
+    element and the popup are aligned.
+</value>
+<value name='before_end'>
+    The popup appears above the element with the popup's lower-right corner
+    aligned with the upper-right corner of the element. The right edges of the
+    element and the popup are aligned.
+</value>
+<value name='end_after'>
+    The popup appears to the right of the element with the popup's lower-left
+    corner aligned with the lower-right corner of the element. The bottom edges
+    of the element and the popup are aligned.
+</value>
+<value name='end_before'>
+    The popup appears to the right of the element with the popup's upper-left
+    corner aligned with the upper-right corner of the element. The top edges of
+    the element and the popup are aligned.
+</value>
+<value name='start_after'>
+    The popup appears to the left of the element with the popup's lower-right
+    corner aligned with the lower-left corner of the element. The bottom edges
+    of the element and the popup are aligned.
+</value>
+<value name='start_before'>
+    The popup appears to the left of the element with the popup's upper-right
+    corner aligned with the upper-left corner of the element. The top edges of
+    the element and the popup are aligned.
+</value>
+<value name='overlap'>
+    The popup appears over top of the element with the upper-left corners aligned.
+</value>
+<value name='at_pointer'>
+    The popup appears at the same position as the mouse pointer.
+</value>
+<value name='after_pointer'>
+    The popup appears at the same horizontal position as the mouse pointer, but
+    vertically, it is placed just below the element. This is the value used for
+    tooltips.
+</value>
+</attr>
+<attr name='top' type='integer'>
+  Overrides the vertical position of the popup specified by the showPopup  function.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the popup.
+</prop>
+<method name='hidePopup'>
+<prototype> hidePopup ( ) </prototype>
+  
+  Closes the popup window immediately.
+</method>
+<method name='moveTo'>
+<prototype> moveTo ( x , y ) </prototype>
+  
+  Moves the popup to a new location.
+</method>
+<prop name='popupBoxObject' type='nsIPopupBoxObject'>
+  This read-only property holds the nsIPopupBoxObject that implements the popup.  You wouldn't normally need to use this property as all of its functions are  available via the popup itself.
+</prop>
+<prop name='position'>
+  The position attribute determines where the popup appears relative to the element  the user clicked to invoke the popup.
+<value name='after_start'>
+    The popup appears underneath the element with the popup's upper-left corner
+    aligned with the lower-left corner of the element. The left edges of the
+    element and the popup are aligned.
+</value>
+<value name='after_end'>
+    The popup appears underneath the element with the popup's upper-right corner
+    aligned with the lower-right corner of the element. The right edges of the
+    element and the popup are aligned.
+</value>
+<value name='before_start'>
+    The popup appears above the element with the popup's lower-left corner
+    aligned with the upper-left corner of the element. The left edges of the
+    element and the popup are aligned.
+</value>
+<value name='before_end'>
+    The popup appears above the element with the popup's lower-right corner
+    aligned with the upper-right corner of the element. The right edges of the
+    element and the popup are aligned.
+</value>
+<value name='end_after'>
+    The popup appears to the right of the element with the popup's lower-left
+    corner aligned with the lower-right corner of the element. The bottom edges
+    of the element and the popup are aligned.
+</value>
+<value name='end_before'>
+    The popup appears to the right of the element with the popup's upper-left
+    corner aligned with the upper-right corner of the element. The top edges of
+    the element and the popup are aligned.
+</value>
+<value name='start_after'>
+    The popup appears to the left of the element with the popup's lower-right
+    corner aligned with the lower-left corner of the element. The bottom edges
+    of the element and the popup are aligned.
+</value>
+<value name='start_before'>
+    The popup appears to the left of the element with the popup's upper-right
+    corner aligned with the upper-left corner of the element. The top edges of
+    the element and the popup are aligned.
+</value>
+<value name='overlap'>
+    The popup appears over top of the element with the upper-left corners aligned.
+</value>
+<value name='at_pointer'>
+    The popup appears at the same position as the mouse pointer.
+</value>
+<value name='after_pointer'>
+    The popup appears at the same horizontal position as the mouse pointer, but
+    vertically, it is placed just below the element. This is the value used for
+    tooltips.
+</value>
+</prop>
+<method name='showPopup'>
+<prototype> showPopup ( element, x , y , popupType, anchor, align ) </prototype>
+  
+  Opens a popup window. There are two ways of specifying where the popup  appears, either at a specific screen position, or relative to some element  in the window. If either x and y are set to values, the popup will  appear at the screen coordinate (x,y). If x and y are -1, the popup will be  positioned relative to the element specified as the first argument. This is  what you might do to show a popup underneath a button for example. In this  latter case, the anchor and align arguments may be used to further control  where the popup appears relative to the element.  The anchor argument  corresponds to the popupanchor attribute on the element. The align argument  corresponds to the popupalign attribute on the element. The anchor and align  attributes are ignored if either x or y are not -1.        To have a popup appear relative to another element yet still be offset by  some number of pixels, determine the actual screen position of the element  using the boxObject.screenX and boxObject.screenY properties of the element  and use those as the x and y arguments offset by the desired values.        Type should be either the string "popup", "context" or "tooltip". Each type  of popup is intended to be displayed only temporarily; they are not excepted  to be displayed permanently. Only one popup may be displayed at a time.
+</method>
+<method name='sizeTo'>
+<prototype> sizeTo ( width , height ) </prototype>
+  
+  Changes the current size of the popup to a new width and height.
+</method>
+</element>

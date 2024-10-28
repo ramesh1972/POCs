@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 8.6.2"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script>
+function updateFields(event)
+{
+  var row = {}, column = {}, part = {};
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.getCellAt(event.clientX, event.clientY, row, column, part);
+
+  if (typeof column.value != "string") column.value = column.id;
+
+  document.getElementById("row").value = row.value;
+  document.getElementById("column").value = column.value;
+  document.getElementById("part").value = part.value;
+}
+</script>
+
+<tree id="thetree" flex="1" onmousemove="updateFields(event);">
+  <treecols>
+    <treecol id="utensil" label="Utensil" primary="true" flex="1"/>
+    <treecol id="count" label="Count" flex="1"/>
+  </treecols>
+  <treechildren>
+    <treeitem>
+      <treerow>
+        <treecell label="Fork"/>
+        <treecell label="5"/>
+      </treerow>
+    </treeitem>
+    <treeitem>
+      <treerow>
+        <treecell label="Knife"/>
+        <treecell label="2"/>
+      </treerow>
+    </treeitem>
+    <treeitem>
+      <treerow>
+        <treecell label="Spoon"/>
+        <treecell label="8"/>
+      </treerow>
+    </treeitem>
+  </treechildren>
+</tree>
+
+<label value="Row:"/>
+<label id="row"/>
+<label value="Column:"/>
+<label id="column"/>
+<label value="Child Type:"/>
+<label id="part"/>
+
+
+</window>
+

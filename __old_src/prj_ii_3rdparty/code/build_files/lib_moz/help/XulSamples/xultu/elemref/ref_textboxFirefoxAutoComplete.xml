@@ -1,0 +1,237 @@
+<?xml version='1.0'?>
+
+<element name='textbox (Firefox Auto Complete)'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_textboxFirefoxAutoComplete.html</reference>
+  This element is created by setting the type attribute of a textbox to 'autocomplete'.  It is used to create a textbox with a popup containing a list of possible completions  for what the user has started to type.        Firefox uses a different autocomplete mechanism that the Mozilla suite. The  example below will create an autocomplete textbox which will search the  user's history.
+<html><![CDATA[
+<p>  This element is created by setting the type attribute of a textbox to 'autocomplete'.  It is used to create a textbox with a popup containing a list of possible completions  for what the user has started to type.  </p>  <p>  Firefox uses a different autocomplete mechanism that the Mozilla suite. The  example below will create an autocomplete textbox which will search the  user's history.</p>
+]]></html>
+
+<example>
+<![CDATA[
+    &lt;textbox type=&quot;autocomplete&quot; autocompletesearch=&quot;history&quot;/&gt;
+
+]]>
+</example>
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIAutoCompleteInput</implements>
+<implements>nsIDOMXULMenuListElement</implements>
+<attr name='accesskey' type='character'>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the textbox.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the textbox will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.
+</attr>
+<attr name='autocompletepopup' type='id of popup element'>
+  The id of a popup element used to hold autocomplete results for the textbox.
+</attr>
+<attr name='autocompletesearch' type='space separated list of values'>
+  A space separated list of search component names, each of which implements  the   nsIAutoCompleteSearch   interface. The components are created using the  name '@mozilla.org/autocomplete/search;1?name= ' where name is listed in  this attribute.
+<value name='history'>
+    Search the browser's URL history
+</value>
+<value name='form-history'>
+    Search the values that the user has entered into form fields.
+</value>
+</attr>
+<attr name='autocompletesearchparam' type='string'>
+  A string which is passed to the search component.
+</attr>
+<attr name='completedefaultindex' type='boolean'>
+  If true, the best match value will be filled into the textbox as the user  types. If set to false or omitted, the value must be selected from the list.
+</attr>
+<attr name='crop'>
+  If the label of the textbox is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='disableautocomplete' type='boolean'>
+  Set this attribute to true to disable autocomplete on the textbox. This  might be used to temporarily disable autocomplete for a field.
+</attr>
+<attr name='disabled' type='boolean'>
+  Indicates whether the textbox is disabled or not. If this attribute is set to true,  the textbox is disabled. This is usually drawn with the text in grey. If the textbox is  disabled, it does not respond to user actions. The element cannot be focused  and the command event will not fire. The element will still respond to mouse  events. To enable the textbox, leave the attribute out entirely as opposed to  setting the value to false.
+</attr>
+<attr name='disablekeynavigation' type='boolean'>
+  If this attribute is not used, the user can navigate to specific items in  the list by pressing the first the first letter of the item's label. This is  done incrementally, so pressing additional keys will select more specific  items. This feature may be disabled by setting this attribute to true.
+</attr>
+<attr name='enablehistory' type='boolean'>
+  If true, an arrow button will appear on the end of the textbox which, when  pressed, will open a dropdown menu of all available results.
+</attr>
+<attr name='focused' type='boolean'>
+  This attribute is set to true if the textbox element is focused.
+</attr>
+<attr name='forcecomplete' type='boolean'>
+  If true, the textbox will be filled in with the best match when it loses the  focus. If false, it will only be filled in when the user selects an item.
+</attr>
+<attr name='ignoreblurwhilesearching' type='boolean'>
+  If true, blur events are ignored while searching, which means that the  autocomplete popup will not disappear.
+</attr>
+<attr name='inputtooltiptext' type='string'>
+  The tooltip text for the textbox.
+</attr>
+<attr name='label' type='string'>
+  The label that will appear on the textbox. If this is left out, no text appears.
+</attr>
+<attr name='maxlength' type='integer'>
+  The maximum number of characters that the textbox allows to be entered.
+</attr>
+<attr name='maxrows' type='integer'>
+  The number of rows to show in the results list at a time. A scrollbar will appear  so the user can scroll through the remaining items.
+</attr>
+<attr name='minresultsforpopup' type='integer'>
+  The minimum number of results that must be returned for the popup to be  displayed.
+</attr>
+<attr name='nomatch' type='boolean'>
+  This attribute will be set to true if the last search resulted in no matches.
+</attr>
+<attr name='onchange' type='script code'>
+  This event is sent when the value of the textbox is changed.  The event is not sent until the focus is moved to another element.
+</attr>
+<attr name='oninput' type='script code'>
+  This event is sent when a user enters text in a textbox. This event  is only called when the text displayed would change, thus it is not called  when the user presses non-displayable keys.
+</attr>
+<attr name='onsearchcomplete'>
+  This event handler is called when the auto complete search is finished and  results are available.
+</attr>
+<attr name='ontextentered'>
+  This event handler is called when a result is selected for the textbox.
+</attr>
+<attr name='ontextreverted'>
+  This event handler is called when the user presses Escape to revert the  textbox to its original uncompleted value.
+</attr>
+<attr name='open' type='boolean'>
+  This attribute will be set when the history popup is open. The open  attribute is not present if the menu is closed.
+</attr>
+<attr name='readonly' type='boolean'>
+  If set to true, then the user cannot modify the value of the textbox. However, the  value may still be modified by a script.
+</attr>
+<attr name='showcommentcolumn' type='boolean'>
+  If true, a comment column appears in the popup. For the URL history, the comment  column will contain the page titles associated with each URL. The default value  of this property is false.
+</attr>
+<attr name='size' type='integer'>
+  The number of characters that can be displayed in the textbox.
+</attr>
+<attr name='tabindex' type='integer'>
+  The tab order of the element. The tab order is the order in which the focus  is moved when the user presses the Tab key. Elements with a higher tabindex are  later in the tab order sequence.
+</attr>
+<attr name='tabscrolling' type='boolean'>
+  If true, the user may cycle through the results list by pressing the TAB key.  If false, the default, the TAB key moves the focus to the next element.
+</attr>
+<attr name='timeout' type='integer'>
+  For timed textboxes, the number of milliseconds before the timer fires a  command event. The timer starts after the user types a character. If the  user types another character, the timer resets.
+</attr>
+<attr name='type' type='string'>
+  Set to the value 'autocomplete' to have an autocomplete textbox.
+</attr>
+<attr name='value' type='string'>
+  A value associated with the textbox. You may use it in a script for your own  purposes.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the textbox.
+</prop>
+<prop name='completeDefaultIndex'/>
+<prop name='controller' type='nsIAutoCompleteController'>
+  Returns the controller for the auto complete element.
+</prop>
+<prop name='crop'/>
+<prop name='disableAutoComplete'/>
+<prop name='disableKeyNavigation'/>
+<prop name='disabled'/>
+<prop name='editable' type='boolean'>
+  Autocomplete fields are editable so this property always returns true.
+</prop>
+<prop name='focused'/>
+<prop name='forceComplete'/>
+<method name='getSearchAt' returns='string'>
+<prototype> getSearchAt ( idx ) </prototype>
+  
+  Returns the search component with the given index. The components are set  with the autocompletesearch attribute.
+</method>
+<prop name='ignoreBlurWhileSearching'/>
+<prop name='inputField' type='textbox element'>
+  In Mozilla, the XUL textbox is implemented as a wrapper around an HTML  input element. This read only property holds a reference to this inner input  element.
+</prop>
+<prop name='label'/>
+<prop name='maxLength' type='integer'>
+  The maximum number of characters that the textbox allows to be entered.
+</prop>
+<prop name='maxRows'/>
+<prop name='minResultsForPopup'/>
+<method name='onSearchComplete'>
+<prototype> onSearchComplete ( ) </prototype>
+  
+  Calls the searchcomplete event handler. You should not call this method  yourself.
+</method>
+<method name='onTextEntered' returns='event result'>
+<prototype> onTextEntered ( ) </prototype>
+  
+  Calls the textentered event handler. You should not call this method  yourself.
+</method>
+<method name='onTextReverted' returns='event result'>
+<prototype> onTextReverted ( ) </prototype>
+  
+  Calls the textreverted event handler. You should not call this method  yourself.
+</method>
+<prop name='open'/>
+<prop name='popup' type='popup element id'>
+  Should be set to the value of the id of the popup element that should appear  when the user clicks on the textbox.
+</prop>
+<prop name='popupOpen' type='boolean'>
+  Indicates whether the popup is open or not. Set this property to open or  close the popup.
+</prop>
+<prop name='searchCount' type='integer'>
+  Returns the number of search components used. This property is read only.
+</prop>
+<prop name='searchParam' type='string'>
+  Gets and sets the value of the autocompletesearchparam attribute.
+</prop>
+<method name='select'>
+<prototype> select ( ) </prototype>
+  
+  Select all the text in the textbox.
+</method>
+<prop name='selectionEnd' type='integer'>
+  Get or modify the end of the selected portion of the field's text. Use  in conjuction with the selectionEnd property. The value specifies the index of  the character after the selection. If this value is equal to the selectionStart  property, no text is selected, but the value indicates the position of the  caret (cursor) within the textbox.
+</prop>
+<prop name='selectionStart' type='integer'>
+  Get or modify the beginning of the selected portion of the field's text. Use  in conjuction with the selectionEnd property. The value specifies the index of  the first selected character.
+</prop>
+<method name='setSelectionRange'>
+<prototype> setSelectionRange ( start , end ) </prototype>
+  
+  Sets the selected portion of the textbox, where the start argument is the  index of the first character to select and the end argument is the index of the  character after the selection. Set both arguments to the same value to move the  cursor to the corresponding position without selecting text.
+</method>
+<prop name='showCommentColumn'/>
+<prop name='size' type='integer'>
+  The number of characters that can be displayed in the textbox.
+</prop>
+<prop name='tabScrolling'/>
+<prop name='textLength' type='integer'>
+  Holds the length of the text entered in the textbox. This property is read only.
+</prop>
+<prop name='textValue' type='string'>
+  Returns the content of the textbox. Equivalent to the value property.
+</prop>
+<prop name='timeout'/>
+<prop name='type' type='string'>
+  Set to the value 'autocomplete' to have an autocomplete textbox.
+</prop>
+<prop name='value' type='string'>
+  Returns the text entered into the textbox. You can set this property to  change the text in the textbox.
+</prop>
+</element>

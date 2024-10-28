@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)http://www.mozilla.org/docs/url_load.html -->
+<HTML><HEAD><TITLE>The Life Of An HTML HTTP Request</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1"><LINK 
+title=Home href="http://www.mozilla.org/" rel=top><LINK media=print 
+href="The Life Of An HTML HTTP Request_files/print.css" type=text/css 
+rel=stylesheet><LINK media=all 
+href="The Life Of An HTML HTTP Request_files/content.css" type=text/css 
+rel=stylesheet><LINK title=Cavendish media=screen 
+href="C:\Documents and Settings\Ramesh\My Documents\The Life Of An HTML HTTP Request_files\content(1).css" 
+type=text/css rel=stylesheet><LINK media=screen 
+href="The Life Of An HTML HTTP Request_files/template.css" type=text/css 
+rel=stylesheet><LINK title=Cavendish media=screen 
+href="C:\Documents and Settings\Ramesh\My Documents\The Life Of An HTML HTTP Request_files\template(1).css" 
+type=text/css rel=stylesheet><LINK href="../images/mozilla-16.png" 
+type=image/png rel=icon>
+<META content="MSHTML 6.00.2900.2523" name=GENERATOR></HEAD>
+<BODY class=deepLevel id=www-mozilla-org>
+<DIV id=container>
+<P class=skipLink><A accessKey=2 
+href="http://www.mozilla.org/docs/url_load.html#mainContent">Skip to main 
+content</A></P>
+<DIV id=header>
+<H1><A title="Return to home page" accessKey=1 
+href="http://www.mozilla.org/">Mozilla</A></H1>
+<UL>
+  <LI id=menu_aboutus><A title="Getting the most out of your online experience" 
+  href="http://www.mozilla.org/about/">About</A> </LI>
+  <LI id=menu_developers><A 
+  title="Using Mozilla's products for your own applications" 
+  href="http://www.mozilla.org/developer/">Developers</A> </LI>
+  <LI id=menu_store><A 
+  title="Shop for Mozilla products on CD and other merchandise" 
+  href="http://www.mozillastore.com/?r=mozorg1">Store</A> </LI>
+  <LI id=menu_support><A 
+  title="Installation, trouble-shooting, and the knowledge base" 
+  href="http://www.mozilla.org/support/">Support</A> </LI>
+  <LI id=menu_products><A title="All software Mozilla currently offers" 
+  href="http://www.mozilla.org/products/">Products</A> </LI></UL>
+<FORM id=search title="mozilla.org Search" action=http://www.google.com/custom 
+method=get>
+<DIV><LABEL title="Search mozilla.org's sites" for=q>search mozilla:</LABEL> 
+<INPUT type=hidden 
+value=LW:174;LH:60;L:http://www.mozilla.org/images/mlogosm.gif;GIMP:#cc0000;T:black;ALC:#0000ff;GFNT:grey;LC:#990000;BGC:white;AH:center;VLC:purple;GL:0;GALT:#666633;AWFID:9262c37cefe23a86; 
+name=cof> <INPUT type=hidden value=mozilla.org name=domains> <INPUT type=hidden 
+value=mozilla.org name=sitesearch> <INPUT id=q accessKey=s size=30 name=q> <INPUT id=submit type=submit value=Go> </DIV></FORM></DIV>
+<HR class=hide>
+
+<DIV id=mBody>
+<DIV id=side>
+<UL id=nav>
+  <LI><A title=Roadmap 
+  href="http://www.mozilla.org/roadmap.html"><STRONG>Roadmap</STRONG></A> 
+  <LI><A title=Projects 
+  href="http://www.mozilla.org/projects/"><STRONG>Projects</STRONG></A> 
+  <LI><A title="For developers" 
+  href="http://www.mozilla.org/developer/"><STRONG>Coding</STRONG></A> 
+  <UL>
+    <LI><A title="Module Owners" 
+    href="http://www.mozilla.org/owners.html">Module Owners</A> 
+    <LI><A title=Hacking href="http://www.mozilla.org/hacking/">Hacking</A> 
+    <LI><A title="Get the Source" href="http://www.mozilla.org/source.html">Get 
+    the Source</A> 
+    <LI><A title="Building Mozilla" href="http://www.mozilla.org/build/">Build 
+    It</A> </LI></UL>
+  <LI><A title=Testing 
+  href="http://www.mozilla.org/quality/"><STRONG>Testing</STRONG></A> 
+  <UL>
+    <LI><A title=Releases href="http://www.mozilla.org/releases/">Releases</A> 
+    <LI><A title="Latest mozilla builds for testers" 
+    href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/nightly/latest-trunk/">Nightly 
+    Builds</A> 
+    <LI><A title="For testers to report bugs" 
+    href="https://bugzilla.mozilla.org/enter_bug.cgi?format=guided">Report A 
+    Bug</A> </LI></UL>
+  <LI><A title="Tools for mozilla developers" 
+  href="http://www.mozilla.org/tools.html"><STRONG>Tools</STRONG></A> 
+  <UL>
+    <LI><A title="Bug tracking system for mozilla testers." 
+    href="https://bugzilla.mozilla.org/">Bugzilla</A> 
+    <LI><A title="Latest status of mozilla builds" 
+    href="http://tinderbox.mozilla.org/showbuilds.cgi?tree=SeaMonkey">Tinderbox</A> 
+
+    <LI><A title="Latest checkins" 
+    href="http://bonsai.mozilla.org/cvsqueryform.cgi?">Bonsai</A> 
+    <LI><A title="Source cross reference" 
+    href="http://lxr.mozilla.org/seamonkey/">LXR</A> </LI></UL>
+  <LI><A title="Frequently Asked Questions." 
+  href="http://www.mozilla.org/faq.html"><STRONG>FAQs</STRONG></A> 
+</LI></UL></DIV>
+<HR class=hide>
+
+<DIV id=mainContent><FONT size=+3><B>The Life Of An HTML HTTP 
+Request</B></FONT><BR>Alexander Larsson &lt;<A 
+href="mailto:alex@cendio.se">alex@cendio.se</A>&gt; 
+<P><BR><IMG src="The Life Of An HTML HTTP Request_files/url_load.gif"> 
+<P><B>(1)</B> The loading of the url is started in nsWebShell::DoLoadURL (called 
+from some LoadURL or LoadURI variant in the webshell). The webshell then tells 
+it's DocumentLoader to load (command "view") the specified url. [note: Passes 
+nsWebShell.mObserver as nsIStreamObserver and the webshell as 
+nsIContentViewerContainer to the DocLoader.] 
+<P><B>(2)</B> The Document Loader calls NS_OpenURI with the url to begin 
+transfering the requested file. Necko (the network library) checks the url 
+scheme (the first part of the url, http: in this case) and locates the correct 
+nsIProtocolHandler (in this case nsHTTPHandler) and asks it for a nsIChannel 
+(nsHTTPChannel). The channel represents the connection to the server, and is the 
+source of the html data stream. 
+<P><B>(3)</B> When data is starting to come from the webserver the nsIChannel 
+calls the OnStartRequest in the DocumenLoader. Now the channel knows the content 
+type of the incoming data, so the DocumentLoader can find an 
+nsIDocumentLoaderFactory for the "text/html" content type (in this case an 
+nsLayoutDLF). This factory is then told to create a nsIContentViewer. The 
+factory creates a ContentViewer. In most cases (including this) it also creates 
+a nsIDocument (nsHTMLDocument) and binds it to the ContentViewer 
+(nsIDocumentViewer in that case). The ContentViewer is then Embed():ed into the 
+ContentViewerContainer (the WebShell). 
+<P><B>(4)</B> The document then creates a nsIParser for parsing the input 
+stream. For HTML document this is an nsParser, which also implements 
+nsIStreamListener. This StreamListener is returned to the DocumentLoader and 
+connected to the nsIChannel of the request. 
+<P><B>(5)</B> The Document (nsHTMLDocument) also creates a nsIContentSink 
+(nsHTMLContentSink) and connects it to the parser and the document. The parser 
+then parses the stream it gets via it's StreamListener interface and converts it 
+to nsIParserNodes which it places in the ContentSink. 
+<P>The parser typically gets data from the stream in 8kb blocks and parses these 
+blocks, block by block. After every parsed block it passes the parsed data as 
+nsIParserNodes to the ContentSink unless the parser has been temporarily 
+blocked, in wich case it waits until it gets unblocked before parsing the cached 
+data it has receieved while being blocked. 
+<P><B>(6)</B> The contentsink then builds up nsIContent nodes that describe the 
+document. These content nodes are created by calling functions like 
+NS_NewHTMLXxxxElement(). These element nodes implement the nsIHTMLContent 
+interface as well as their respective DOM interfaces. nsIContent::AppendChild() 
+is used to build the content tree but AppendChild takes a "aNotify" argument 
+that marks if it should notify the document about the content model changes or 
+not. This argument is always PR_FALSE when the content sink calls AppendChild. 
+The content sink tells the document about content model changes (NotifyBody()) 
+in places like nsHTMLContentSink::WillInterrupt() and 
+nsHTMLContentSink::DidBuildModel(). WillInterrup is called by the parser between 
+every 8kb block of data (unless the parser is temporarily blocked). 
+<P><B>(7)</B> Since the presentation shell (nsPresShell) has registred as an 
+DocumentObserver with the nsIDocument it also gets notified of changes in the 
+Document/Content tree. This is used to create and update the nsIFrame hierarchy. 
+This is done by the nsCSSFrameConstructor, which creates frames for each Content 
+node according to the rules specified in the user agent stylesheet (ua.css) and 
+the document specific style sheets. Each Content node corresponds to one or more 
+nsIFrame, except content with displaytype "none". If there are several frames 
+created from a content node, then the first of these are called the "primary" 
+node, and the following frames can be found by using the GetNextInFlow() method 
+of nsIFrame. The initial reflow is done by the nsHTMLContentSink::StartLayout(), 
+StartLayout() calls PresShell::InitialReflow(). StartLayout is called quite 
+early in the parsing process, for HTML it's called in 
+nsHTMLContentSink::OpenBody() (among other places). 
+<P><I>TODO: How are nsIFrames reflowed after a change when they already 
+exist?</I> 
+<P><B>(8)</B> Each nsIFrame knows how how to draw itself on the screen. When the 
+PresShell [Note: not true, who really does the call?] has layouted (reflowed) 
+the frames it calls nsIFrame::Paint() method of all frames. These get passed 
+references to the presentation context and a rendering context to do the drawing 
+on. The rendering context implementation is a native class 
+(nsGtkRenderingContext on unix) that knows how to draw in a window. 
+<P><I>TODO: Views, ViewManager, EventStateManager? </I>
+<P><A href="http://www.mozilla.org/docs/url_load.dia">Diagram</A> created with 
+<A href="http://www.lysator.liu.se/~alla/dia/dia.html">DIA</A>. 
+<HR class=hide>
+</DIV></DIV>
+<DIV id=footer>
+<UL>
+  <LI><A href="http://www.mozilla.org/sitemap.html">Site Map</A> 
+  <LI><A href="http://www.mozilla.org/security/">Security Updates</A> 
+  <LI><A href="http://www.mozilla.org/contact/">Contact Us</A> 
+  <LI><A href="http://www.mozilla.org/foundation/donate.html">Donate</A> 
+</LI></UL>
+<P class=copyright>Copyright © 1998–2005 The Mozilla Organization</P>
+<P><SPAN>Last modified October 8, 1999</SPAN> <SPAN><A 
+href="http://cvs-www.mozilla.org/webtools/bonsai/cvslog.cgi?file=mozilla-org/html/docs/url_load.html&amp;rev=&amp;root=/cvsroot/">Document 
+History</A></SPAN> <SPAN><A 
+href="http://doctor.mozilla.org/?file=mozilla-org/html/docs/url_load.html">Edit 
+this Page</A></SPAN> <SPAN>(or <A 
+href="http://www.mozilla.org/contribute/writing/cvs">via CVS</A>)</SPAN> 
+</P></DIV></DIV></BODY></HTML>

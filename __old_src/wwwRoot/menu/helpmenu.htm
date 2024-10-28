@@ -1,0 +1,1263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://developer.netscape.com/viewsource/smith_menu/smith_menu.html -->
+<HTML><HEAD><TITLE>The JavaScript Menu Object</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<SCRIPT language=JavaScript1.2 src="helpmenu_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript1.2>
+<!--
+function onLoad() {
+    if (document.layers) {
+        loadMenus();
+    }
+}
+
+function loadMenus() {
+    //Dynamic Menus
+    window.myMenu = new Menu();
+    myMenu.addMenuItem("my menu item A");
+    myMenu.addMenuItem("my menu item B");
+    myMenu.addMenuItem("my menu item C");
+    myMenu.addMenuItem("my menu item D");
+
+    window.myMenu2 = new Menu();
+    myMenu2.addMenuItem("DevEdge Online", "top.window.location='http://developer.netscape.com'");
+    myMenu2.addMenuItem("Open Studio", "top.window.location='http://developer.netscape.com/openstudio/'");
+    myMenu2.addMenuItem("Netcenter", "top.window.location='http://home.netscape.com'");
+    myMenu2.addMenuItem("Download", "top.window.location='http://home.netscape.com/download/'");
+
+    window.myMenu3 = new Menu();
+    myMenu3.addMenuItem("Red", "document.bgColor='red'");
+    myMenu3.addMenuItem("Green", "document.bgColor='green'");
+    myMenu3.addMenuItem("Blue", "document.bgColor='blue'");
+    myMenu3.addMenuItem("White", "document.bgColor='white'");
+
+    window.myMenu4 = new Menu();
+    myMenu4.addMenuItem("DevEdge Online", "top.window.location='http://developer.netscape.com'");
+    myMenu4.addMenuItem("Open Studio", "top.window.location='http://developer.netscape.com/openstudio/'");
+    myMenu4.addMenuItem("Netcenter", "top.window.location='http://home.netscape.com'");
+    myMenu4.addMenuItem("Download", "top.window.location='http://home.netscape.com/download/'");
+    myMenu4.menuItemBgColor = "yellow";
+    myMenu4.fontColor = "blue";
+
+    window.myMenu5 = new Menu();
+    myMenu5.addMenuItem("DevEdge Online", "top.window.location='http://developer.netscape.com'");
+    myMenu5.addMenuItem("Open Studio", "top.window.location='http://developer.netscape.com/openstudio/'");
+    myMenu5.addMenuItem("Netcenter", "top.window.location='http://home.netscape.com'");
+    myMenu5.addMenuItem("Download", "top.window.location='http://home.netscape.com/download/'");
+    myMenu5.menuItemBgColor = "#8B0000";
+    myMenu5.menuHiliteBgColor = "#000084";
+    myMenu5.menuItemHeight = 25;
+    myMenu5.fontSize = 18;
+    myMenu5.fontWeight = "Bold";
+    myMenu5.fontColor = "white";
+    myMenu5.bgColor = "#CDB79E";
+
+    window.myMenu6 = new Menu();
+    myMenu6.addMenuItem("DevEdge Online", "top.window.location='http://developer.netscape.com'");
+    myMenu6.addMenuItem("Open Studio", "top.window.location='http://developer.netscape.com/openstudio/'");
+    myMenu6.addMenuItem("Netcenter", "top.window.location='http://home.netscape.com'");
+    myMenu6.addMenuItem("Download", "top.window.location='http://home.netscape.com/download/'");
+
+    window.mySubMenu7 = new Menu("JavaScript");
+    mySubMenu7.addMenuItem("JavaScript 1.1", "top.window.location='http://home.netscape.com/eng/mozilla/3.0/handbook/javascript/index.html'");
+    mySubMenu7.addMenuItem("JavaScript 1.2", "top.window.location='http://developer.netscape.com/docs/manuals/communicator/jsguide4/index.htm'");
+    mySubMenu7.addMenuItem("JavaScript Reference", "top.window.location='http://developer.netscape.com/docs/manuals/communicator/jsref/index.htm'");
+
+    window.myMenu7 = new Menu("Technologies");
+    myMenu7.addMenuItem("Dynamic HTML", "top.window.location='http://developer.netscape.com'");
+    myMenu7.addMenuItem("Java", "top.window.location='http://home.netscape.com'");
+    myMenu7.addMenuItem(mySubMenu7);
+    myMenu7.addMenuItem("Plug-ins", "top.window.location='http://home.netscape.com'");
+
+    window.myMenu8 = new Menu("Example 8");
+    myMenu8.addMenuItem(myMenu2);
+    myMenu8.addMenuItem(myMenu3);
+    myMenu8.addMenuItem(myMenu4);
+    myMenu8.addMenuItem(myMenu5);
+    myMenu8.addMenuItem(myMenu7);
+
+    window.myMenu9a = new Menu("Example 9a");
+    myMenu9a.addMenuItem("DevEdge Online", "top.window.location='http://developer.netscape.com'");
+    myMenu9a.addMenuItem("Open Studio", "top.window.location='http://developer.netscape.com/openstudio/'");
+    myMenu9a.addMenuItem("Netcenter", "top.window.location='http://home.netscape.com'");
+    myMenu9a.addMenuItem("Download", "top.window.location='http://home.netscape.com/download/'");
+
+    myMenu9a.fontColor = "#ffffff";
+    myMenu9a.menuItemBgColor = "#000000";
+    myMenu9a.menuHiliteBgColor = "#6699CC";
+    myMenu9a.bgColor = "#AAAAAA";
+
+    window.myMenu9b = new Menu("Example 9b");
+    myMenu9b.addMenuItem("Net Search", "top.window.location='http://home.netscape.com/escapes/myMenu9b'");
+    myMenu9b.addMenuItem("Excite", "top.window.location='http://www.excite.com'");
+    myMenu9b.addMenuItem("Infoseek", "top.window.location='http://www.infoseek.com'");
+    myMenu9b.addMenuItem("Lycos", "top.window.location='http://www.lycos.com'");
+    myMenu9b.addMenuItem("Yahoo", "top.window.location='http://www.yahoo.com'");
+
+    myMenu9b.fontColor = "#ffffff";
+    myMenu9b.menuItemBgColor = "#000000";
+    myMenu9b.menuHiliteBgColor = "#6699CC";
+    myMenu9b.bgColor = "#AAAAAA";
+
+    window.myMenu9c = new Menu("Example 9c");
+    myMenu9c.addMenuItem("Mozilla.org", "top.window.location='http://www.mozilla.org'");
+    myMenu9c.addMenuItem("Projects", "top.window.location='http://www.mozilla.org/projects.html'");
+    myMenu9c.addMenuItem("Source Code", "top.window.location='http://www.mozilla.org/source-code.html'");
+
+    myMenu9c.fontColor = "#ffffff";
+    myMenu9c.menuItemBgColor = "#000000";
+    myMenu9c.menuHiliteBgColor = "#6699CC";
+    myMenu9c.bgColor = "#AAAAAA";
+
+    window.myMenu10a = new Menu("Example 10a");
+    myMenu10a.addMenuItem("DevEdge Online", "top.window.location='http://developer.netscape.com'");
+    myMenu10a.addMenuItem("Open Studio", "top.window.location='http://developer.netscape.com/openstudio/'");
+    myMenu10a.addMenuItem("Netcenter", "top.window.location='http://home.netscape.com'");
+    myMenu10a.addMenuItem("Download", "top.window.location='http://home.netscape.com/download/'");
+
+    myMenu10a.fontColor = "#ffffff";
+    myMenu10a.menuItemBgColor = "#000000";
+    myMenu10a.menuHiliteBgColor = "#6699CC";
+    myMenu10a.bgColor = "#AAAAAA";
+
+    window.myMenu10b = new Menu("Example 10b");
+    myMenu10b.addMenuItem("Net Search", "top.window.location='http://home.netscape.com/escapes/myMenu10b'");
+    myMenu10b.addMenuItem("Excite", "top.window.location='http://www.excite.com'");
+    myMenu10b.addMenuItem("Infoseek", "top.window.location='http://www.infoseek.com'");
+    myMenu10b.addMenuItem("Lycos", "top.window.location='http://www.lycos.com'");
+    myMenu10b.addMenuItem("Yahoo", "top.window.location='http://www.yahoo.com'");
+
+    myMenu10b.fontColor = "#ffffff";
+    myMenu10b.menuItemBgColor = "#000000";
+    myMenu10b.menuHiliteBgColor = "#6699CC";
+    myMenu10b.bgColor = "#AAAAAA";
+
+    window.myMenu10c = new Menu("Example 10c");
+    myMenu10c.addMenuItem("Mozilla.org", "top.window.location='http://www.mozilla.org'");
+    myMenu10c.addMenuItem("Projects", "top.window.location='http://www.mozilla.org/projects.html'");
+    myMenu10c.addMenuItem("Source Code", "top.window.location='http://www.mozilla.org/source-code.html'");
+
+    myMenu10c.fontColor = "#ffffff";
+    myMenu10c.menuItemBgColor = "#000000";
+    myMenu10c.menuHiliteBgColor = "#6699CC";
+    myMenu10c.bgColor = "#AAAAAA";
+
+    window.search = new Menu("Search");
+    search.addMenuItem("Net Search", "top.window.location='http://home.netscape.com/escapes/search'");
+    search.addMenuItem("Excite", "top.window.location='http://www.excite.com'");
+    search.addMenuItem("Infoseek", "top.window.location='http://www.infoseek.com'");
+    search.addMenuItem("Lycos", "top.window.location='http://www.lycos.com'");
+    search.addMenuItem("Yahoo", "top.window.location='http://www.yahoo.com'");
+
+    window.mozilla = new Menu("Mozilla");
+    mozilla.addMenuItem("Mozilla.org", "top.window.location='http://www.mozilla.org'");
+    mozilla.addMenuItem("Projects", "top.window.location='http://www.mozilla.org/projects.html'");
+    mozilla.addMenuItem("Source Code", "top.window.location='http://www.mozilla.org/source-code.html'");
+
+        myMenu.writeMenus();
+}
+
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 src="helpmenu_files/resize.js"></SCRIPT>
+<!-- START: AOL HTML AD TOKEN: DO NOT EDIT OR REMOVE THIS COMMENT -->
+<SCRIPT language=JavaScript1.1 src="helpmenu_files/adsWrapper.js"></SCRIPT>
+<!-- END: AOL HTML AD TOKEN: DO NOT EDIT OR REMOVE THIS COMMENT -->
+<META content="MSHTML 5.00.2314.1000" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff>
+<CENTER>
+<TABLE border=0>
+  <TBODY>
+  <TR>
+    <TD width=480>
+      <P><BR><!-- START: AOL 468 X 60 HTML AD TOKEN: DO NOT EDIT OR REMOVE THIS COMMENT -->
+      <SCRIPT language=JavaScript1.1>
+<!--
+htmlAdWH('64000755', '468', '60');
+//-->
+</SCRIPT>
+      <NOSCRIPT><A href="http://ads.web.aol.com/link/64000755/aol"><IMG 
+      alt="Click here to visit our advertiser." border=0 height=60 
+      src="helpmenu_files/aol.gif" width=468></A> </NOSCRIPT><!-- END: AOL 468 X 60 HTML AD TOKEN: DO NOT EDIT OR REMOVE THIS COMMENT -->
+      <P><BR></P></TD>
+    <TD>
+      <P><BR><!-- START: AOL 120 X 60 HTML AD TOKEN: DO NOT EDIT OR REMOVE THIS COMMENT -->
+      <SCRIPT language=JavaScript1.1>
+<!--
+htmlAdWH('93068561', '120', '60');
+//-->
+</SCRIPT>
+      <NOSCRIPT><A href="http://ads.web.aol.com/link/93068561/aol"><IMG 
+      alt="Click here to visit our advertiser." border=0 height=60 
+      src="\\rameshv\Songs\helpmenu_files\aol(1).gif" width=120></A> </NOSCRIPT><!-- END: AOL 120 X 60 HTML AD TOKEN: DO NOT EDIT OR REMOVE THIS COMMENT -->
+      <P><BR></P></TD></TR></TBODY></TABLE></CENTER>
+<P><A href="http://developer.netscape.com/maps/vs_menu.map"><IMG border=0 
+height=38 isMap src="helpmenu_files/vsnavbar.gif" useMap=#buttonmap 
+width=530></A> <MAP name=buttonmap><AREA alt="View Source Front Page" 
+  coords=0,1,50,30 href="http://developer.netscape.com/viewsource/index.html" 
+  shape=RECT target=_top><AREA alt="JavaScript / DHTML" coords=51,1,113,30 
+  href="http://developer.netscape.com/viewsource/archive/archivelist.html#javascript" 
+  shape=RECT><AREA alt="Java Language" coords=116,1,168,30 
+  href="http://developer.netscape.com/viewsource/archive/archivelist.html#java" 
+  shape=RECT><AREA alt="Netscape Servers" coords=171,1,233,30 
+  href="http://developer.netscape.com/viewsource/archive/archivelist.html#servers" 
+  shape=RECT><AREA alt="Open Standards and Architectures" coords=236,1,291,30 
+  href="http://developer.netscape.com/viewsource/archive/archivelist.html#standards" 
+  shape=RECT><AREA alt=E-Commerce coords=294,1,353,30 
+  href="http://developer.netscape.com/viewsource/archive/archivelist.html#ecommerce" 
+  shape=RECT><AREA alt="Human Interface" coords=356,1,405,30 
+  href="http://developer.netscape.com/viewsource/archive/archivelist.html#humaninterface" 
+  shape=RECT><AREA alt="Case Studies" coords=408,1,452,30 
+  href="http://developer.netscape.com/viewsource/archive/archivelist.html#casestudies" 
+  shape=RECT><AREA alt="Third-Party News" coords=455,1,515,30 
+  href="http://developer.netscape.com/viewsource/archive/archivelist.html#thirdparty" 
+  shape=RECT></MAP><BR></P><FONT face="Arial, Helvetica" size=-1>
+<H2>The JavaScript Menu Component</H2>
+<H3>Creating Cross-Browser Dynamic HTML Menus</H3>
+<H3>Part 1: Adding Menus to Your Web Site</H3><B>By <A 
+href="http://developer.netscape.com/viewsource/smith_menu/smith_menu.html#bio">Gary 
+Smith</A></B> 
+<P>
+<CENTER>
+<HR SIZE=1 width="100%">
+<A href="mailto:pdreyfus@netscape.com">Send comments and questions</A> about 
+this article to <I>View Source.</I> 
+<HR SIZE=1 width="100%">
+</CENTER>
+<P>The JavaScript </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> 
+component provides a user- and developer-friendly way for you to build easily 
+customized, floating menus made up of pure, cross-browser Dynamic HTML (DHTML) 
+and object-oriented JavaScript. In this article I'll show how you can use the 
+(free to the public) </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> 
+component to build DHTML menus in your own web site or web application. (Note 
+that only version 4.0 browsers will display the DHTML menus; 3.0 browsers will 
+simply ignore them.) <A 
+href="http://developer.netscape.com/viewsource/smith_menu2/smith_menu2.html">Part 
+2</A> of this article focuses on advanced features, such as drag-and-drop menus, 
+static menus, and tracking menus. 
+<P>The </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component 
+provides the pull-down menu element that's common in most graphical user 
+interfaces (GUIs). Using a familiar GUI element will reduce the interface 
+learning curve of your web site or application for new users, as well as help 
+all users more easily find what they're looking for. Having menus that contain 
+links to sections at various levels in your web site can improve both the 
+navigation of the site and the real estate of your web pages. 
+<P>I'll show how easy yet useful it can be to take advantage of DHTML in your 
+web site or application. Using optimized, pre-built DHTML widgets that are 
+portable like the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> 
+component can save you a lot of time and effort, because the hard part has 
+already been done for you. You only need to know how to copy the JavaScript code 
+into your web page and how to customize it. You can try the sample scripts 
+provided in this article and visit some of the public web sites that use the 
+<FONT face=Courier>Menu</FONT> component as a navigation utility (for example, 
+the Netscape <A href="http://developer.netscape.com/openstudio/index.html" 
+target=_top>Open Studio</A> site). 
+<P>I'll assume you're familiar with the basic syntax of the JavaScript language. 
+If you're new to JavaScript, this is a great place to learn a lot about it 
+quickly. If you already know JavaScript, you should soon enjoy modifying and 
+customizing your own menu objects (through an object-oriented architecture that 
+resembles JavaBeans, or the </FONT><A 
+href="http://developer.netscape.com/docs/examples/index.html?content=dynhtml/dialog/dialog.html" 
+target=_top><TT>Dialog</TT><FONT face="Arial, Helvetica" size=-1> 
+API</FONT></A><FONT face="Arial, Helvetica" size=-1> in the DevEdge Online 
+sample code library). <NOSCRIPT>
+<P>Note that you must <A 
+href="http://developer.netscape.com/openstudio/enable_js.html">enable 
+JavaScript</A> to run these examples. </NOSCRIPT>
+<P><A name=start></A></P>
+<H4>Getting Started</H4>Adding menus to your web site is easy. To begin, you 
+need to add the following line of code into your web page: <A 
+name=scripttag></A></FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2" SRC="http://developer.netscape.com/viewsource/smith_menu/menu.js"&gt;&lt;/SCRIPT&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>Here the standard HTML 
+</FONT><TT>&lt;SCRIPT&gt;</TT><FONT face="Arial, Helvetica" size=-1> tag 
+contains a </FONT><TT>SRC</TT><FONT face="Arial, Helvetica" size=-1> attribute 
+for including the </FONT><TT>menu.js</TT><FONT face="Arial, Helvetica" size=-1> 
+JavaScript library in your page source. This library contains the code for the 
+</FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component constructor 
+and functions that you'll need for building menus. It's best to place this tag 
+in the </FONT><TT>HEAD</TT><FONT face="Arial, Helvetica" size=-1> section of 
+your page source. As you may know, one of the many benefits of using JavaScript 
+libraries is that they're kept in memory via Navigator's cache, so the library 
+code doesn't have to be downloaded each time. Also, the library code can be 
+shared by multiple pages and by different sites; when a change is made to the 
+library file, it applies to all the pages that are sharing that code. 
+<P>Adding the above </FONT><TT>&lt;SCRIPT&gt;</TT><FONT face="Arial, Helvetica" 
+size=-1> tag shouldn't affect the performance of your web page. If it does in 
+any considerable way, please <A 
+href="mailto:dhtml-feedback@netscape.com?subject=Menu Object&amp;body=URL:">report 
+the problem</A>. Note that you can alternatively </FONT><A 
+href="view-source:http://developer.netscape.com/viewsource/smith_menu/menu.js"><FONT 
+face="Arial, Helvetica" size=-1>download </FONT><TT>menu.js</TT></A><FONT 
+face="Arial, Helvetica" size=-1> onto your hard drive, and point to it locally 
+from within your code or host it on your server. 
+<P><A name=creating></A></P>
+<H4>Creating Menus</H4>
+<P>The syntax for creating your own menus isn't very different from that of 
+regular client-side JavaScript code. The </FONT><TT>Menu</TT><FONT 
+face="Arial, Helvetica" size=-1> component provides an object-oriented 
+application programming interface (API) which includes a collection of member 
+functions, procedures, and variables for creating new "menu objects" -- 
+instances of the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> 
+prototype object. You create a menu object by using the JavaScript 
+</FONT><TT>new</TT><FONT face="Arial, Helvetica" size=-1> operator and the 
+</FONT><TT>Menu()</TT><FONT face="Arial, Helvetica" size=-1> constructor, as 
+follows: </FONT><TT><PRE>var myMenu = new Menu();
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<P>This new expression creates a new menu object called 
+</FONT><TT>myMenu</TT><FONT face="Arial, Helvetica" size=-1>. The template-based 
+</FONT><TT>Menu()</TT><FONT face="Arial, Helvetica" size=-1> constructor 
+implements prototype-based inheritance and shared properties for new menu 
+objects. Using the </FONT><TT>new</TT><FONT face="Arial, Helvetica" size=-1> 
+operator and a constructor is how you create most new objects in JavaScript. 
+<P>You can add "menu items" to your newly created menu object with the 
+</FONT><TT>addMenuItem()</TT><FONT face="Arial, Helvetica" size=-1> method, 
+which is built into the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" 
+size=-1> component. For example: </FONT><TT><PRE>myMenu.addMenuItem("my item");
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<P>If you're familiar with the Java language, you may notice that the syntax of 
+the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> API is very 
+similar to the way menus are applied to Java applications with the JDK 
+</FONT><TT>java.awt.Menu</TT><FONT face="Arial, Helvetica" size=-1> class; the 
+</FONT><TT>addMenuItem()</TT><FONT face="Arial, Helvetica" size=-1> method in 
+the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component is 
+analogous to the </FONT><TT>java.awt.Menu.add()</TT><FONT 
+face="Arial, Helvetica" size=-1> method. You can add a menu item to your menu 
+object by passing any text string as a "label" parameter to 
+</FONT><TT>addMenuItem()</TT><FONT face="Arial, Helvetica" size=-1>. To continue 
+adding menu items, keep calling </FONT><TT>addMenuItem()</TT><FONT 
+face="Arial, Helvetica" size=-1>, as shown in the sample script in Example 1. 
+<P>
+<HR width="100%">
+<B>Example 1</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+    var myMenu = new Menu();
+
+    myMenu.addMenuItem("my menu item A");
+    myMenu.addMenuItem("my menu item B");
+    myMenu.addMenuItem("my menu item C");
+    myMenu.addMenuItem("my menu item D");
+
+    myMenu.writeMenus();
+//--&gt;
+&lt;/SCRIPT&gt;</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P>This script creates a new menu object with four menu items, each with its own 
+string label: </FONT><TT>"my menu item A"</TT><FONT face="Arial, Helvetica" 
+size=-1>, </FONT><TT>"my menu item B"</TT><FONT face="Arial, Helvetica" 
+size=-1>, and so on. To see what this menu object displays, click the following 
+link, which calls the </FONT><TT>showMenu()</TT><FONT face="Arial, Helvetica" 
+size=-1> method to display the menu: 
+<P></FONT><A href="javascript:window.showMenu(window.myMenu);"><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu</TT></A><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>I should also explain the </FONT><TT>writeMenus()</TT><FONT 
+face="Arial, Helvetica" size=-1> method, which is called at the end of the 
+script in Example 1. This method writes the menu GUI into the <I>menu 
+container</I> of your page. The menu container is a CSS-P-based object that the 
+</FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component creates for 
+writing and storing your menus. The purpose of the menu container is to enable 
+you to create and write, or change and rewrite, your menus at any time, on the 
+fly. You need to call </FONT><TT>writeMenus()</TT><FONT face="Arial, Helvetica" 
+size=-1> at the end of your menu script. If you instead use the 
+</FONT><TT>write()</TT><FONT face="Arial, Helvetica" size=-1> method to write 
+your menus at the regular </FONT><TT>window.document</TT><FONT 
+face="Arial, Helvetica" size=-1> level after the page is loaded, you'll wind up 
+rewriting the entire web page document. (Later the section <A 
+href="http://developer.netscape.com/viewsource/smith_menu/smith_menu.html#multi">Creating 
+Multiple Menus</A> illustrates using </FONT><TT>writeMenus()</TT><FONT 
+face="Arial, Helvetica" size=-1> when you've created more than one menu.) 
+<P>Moving on, Example 2 creates another, more useful menu. <A name=example2></A>
+<P>
+<HR width="100%">
+<B>Example 2</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+    var myMenu2 = new Menu();
+    
+    myMenu2.addMenuItem("DevEdge Online", "location='http://developer.netscape.com'");
+    myMenu2.addMenuItem("Open Studio", "location='http://developer.netscape.com/openstudio/'");
+    myMenu2.addMenuItem("Netcenter", "location='http://home.netscape.com'");
+    myMenu2.addMenuItem("Download", "location='http://home.netscape.com/download/'");
+    
+    myMenu2.writeMenus();
+//--&gt;
+&lt;/SCRIPT&gt;</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P>
+<P>This example is similar to Example 1, but it passes a second parameter to 
+</FONT><TT>addMenuItem()</TT><FONT face="Arial, Helvetica" size=-1>. I've 
+actually defined </FONT><TT>addMenuItem()</TT><FONT face="Arial, Helvetica" 
+size=-1> to have two parameters: a "label" and an "action" parameter. The action 
+parameter is for setting the JavaScript action or function that should be called 
+or performed when the user clicks the menu item. In Example 2, I set all the 
+menu item actions so that the browser will change the location of the page to 
+the specified URL. To try this out, click the following link: 
+<P></FONT><A href="javascript:window.showMenu(window.myMenu2);"><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu2</TT></A><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>Notice that like the label parameter, the action parameter is a text string, 
+but in this case a string of code. The action string is registered by the 
+</FONT><TT>addMenuItem()</TT><FONT face="Arial, Helvetica" size=-1> method for 
+an event handler in the menu object, and the menu item gets a copy of the event 
+data. The event handler performs the action at run time, when the user clicks 
+the menu item. (The action string evaluation is similar to that performed by the 
+JavaScript </FONT><TT>eval()</TT><FONT face="Arial, Helvetica" size=-1> method.) 
+Wrapping the action code in a string makes it possible to pass practically any 
+kind of action, including multiple JavaScript statements and expressions, 
+without having the action performed until the event takes place. You can even 
+pass variables or functions before they're defined, because they aren't 
+evaluated until run time. 
+<P>For example, instead of passing a string of code like 
+</FONT><TT>"location='http://developer.netscape.com'"</TT><FONT 
+face="Arial, Helvetica" size=-1> for the item action (as in Example 2), we could 
+have passed </FONT><TT>"document.bgColor='red'"</TT><FONT 
+face="Arial, Helvetica" size=-1> to change the document's 
+</FONT><TT>bgColor</TT><FONT face="Arial, Helvetica" size=-1> property to red. 
+For an example script that does this, see Example 3. <A name=example3></A>
+<P>
+<HR width="100%">
+<B>Example 3</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+    var myMenu3 = new Menu();
+
+    myMenu3.addMenuItem("Red", "document.bgColor='red'");
+    myMenu3.addMenuItem("Green", "document.bgColor='green'");
+    myMenu3.addMenuItem("Blue", "document.bgColor='blue'");
+    myMenu3.addMenuItem("White", "document.bgColor='white'");
+
+    myMenu3.writeMenus();
+//--&gt;
+&lt;/SCRIPT&gt;</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P></FONT>
+<P><A href="javascript:window.showMenu(window.myMenu3);"><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu3</TT></A> <FONT 
+face="Arial, Helvetica" size=-1>
+<P>As you can see, the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" 
+size=-1> component is very flexible, allowing you to do much more than just 
+navigate through links. 
+<P>Let's summarize the three basic steps it takes to quickly add a dynamic menu 
+to your web page: 
+<OL>
+  <LI>Copy and paste the </FONT><A 
+  href="http://developer.netscape.com/viewsource/smith_menu/smith_menu.html#scripttag"><TT>&lt;SCRIPT&gt;</TT><FONT 
+  face="Arial, Helvetica" size=-1> tag</FONT></A><FONT face="Arial, Helvetica" 
+  size=-1> for adding the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" 
+  size=-1> library. 
+  <LI>Copy and paste the menu script from <A 
+  href="http://developer.netscape.com/viewsource/smith_menu/smith_menu.html#example2">Example 
+  2</A> (or <A 
+  href="http://developer.netscape.com/viewsource/smith_menu/smith_menu.html#example3">Example 
+  3</A>). 
+  <LI>Copy and paste the </FONT><A 
+  href="javascript:window.showMenu(window.myMenu2);"><FONT 
+  face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu2</TT></A> <FONT 
+  face="Arial, Helvetica" size=-1>(or </FONT><A 
+  href="javascript:window.showMenu(window.myMenu3);"><FONT 
+  face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu3</TT></A><FONT 
+  face="Arial, Helvetica" size=-1>) link. </LI></OL>
+<P><A name=custom></A></P>
+<H4>Customizing Menus</H4>
+<P>Now that you know how easy it is to add a menu to your web page, let's look 
+at how to customize menus. You can change the sizes, fonts, and colors of your 
+menus by changing the settings of the </FONT><TT>Menu</TT><FONT 
+face="Arial, Helvetica" size=-1> prototype properties from their default values. 
+Example 4 creates a menu similar to the one in Example 2, but a bit more 
+customized. 
+<P>
+<HR width="100%">
+<B>Example 4</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+    var myMenu4 = new Menu();
+    
+    myMenu4.addMenuItem("DevEdge Online", "location='http://developer.netscape.com'");
+    myMenu4.addMenuItem("Open Studio", "location='http://developer.netscape.com/openstudio/'");
+    myMenu4.addMenuItem("Netcenter", "location='http://home.netscape.com'");
+    myMenu4.addMenuItem("Download", "location='http://home.netscape.com/download/'");
+
+    myMenu4.fontColor = "blue";
+    myMenu4.menuItemBgColor = "yellow";
+
+    myMenu4.writeMenus();
+//--&gt;
+&lt;/SCRIPT&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P>
+<P>To see what this code displays, click the following link: </FONT>
+<P><A href="javascript:window.showMenu(window.myMenu4);"><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu4</TT></A> <FONT 
+face="Arial, Helvetica" size=-1>
+<P>This sample script includes two extra lines of code that override two of the 
+default property values, by setting the menu's </FONT><TT>fontColor</TT><FONT 
+face="Arial, Helvetica" size=-1> property to </FONT><TT>"blue"</TT><FONT 
+face="Arial, Helvetica" size=-1> and its </FONT><TT>menuItemBgColor</TT><FONT 
+face="Arial, Helvetica" size=-1> property to </FONT><TT>"yellow"</TT><FONT 
+face="Arial, Helvetica" size=-1>. You can copy this script and put in your own 
+colors. 
+<P>There are several other properties that you can customize in the 
+</FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> prototype object, 
+such as the font size, the font family, and the highlight color for your menu 
+items. Here's a list of the properties (and their default settings) that you can 
+change: </FONT><TT><PRE>this.fontSize = 14;
+this.fontWeight = "plain";
+this.fontFamily = "arial, helvetica, espy, sans-serif";
+this.fontColor = "#000000";
+this.bgColor = "#555555";
+this.menuBorder = 1;
+this.menuItemBorder = 1;
+this.menuItemIndent = 15;
+this.menuItemHeight = 20;
+this.menuItemBgColor = "#cccccc";
+this.menuLiteBgColor = "#ffffff";
+this.menuBorderBgColor = "#777777";
+this.menuHiliteBgColor = "#bbbbbb";
+this.menuContainerBgColor = "#cccccc";
+this.childMenuIcon = "images/gs.gif";</PRE></TT><FONT face="Arial, Helvetica" 
+size=-1>
+<P>Example 5 creates the same menus as Example 4, but sets a few additional 
+color and size properties to display a menu with a completely different look. 
+<P>
+<HR width="100%">
+<B>Example 5</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+    window.myMenu5 = new Menu();
+    
+    myMenu5.addMenuItem("DevEdge Online", "location='http://developer.netscape.com'");
+    myMenu5.addMenuItem("Open Studio", "location='http://developer.netscape.com/openstudio/'");
+    myMenu5.addMenuItem("Netcenter", "location='http://home.netscape.com'");
+    myMenu5.addMenuItem("Download", "location='http://home.netscape.com/download/'");
+
+    myMenu5.fontSize = 18;
+    myMenu5.fontWeight = "Bold";
+    myMenu5.fontColor = "white";
+    myMenu5.bgColor = "#CDB79E";
+    myMenu5.menuItemBgColor = "#8B0000";
+    myMenu5.menuHiliteBgColor = "#000084";
+    myMenu5.menuItemHeight = 25;
+
+    myMenu5.writeMenus();
+//--&gt;
+&lt;/SCRIPT&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P>
+<P>To see what this menu object displays, click the following link: </FONT>
+<P><A href="javascript:window.showMenu(window.myMenu5);"><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu5</TT></A><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>This time the menu is brick-red, with a larger, bolder font. As you can see, 
+the font characteristics are determined by the menu's 
+</FONT><TT>fontWeight</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>fontSize</TT><FONT face="Arial, Helvetica" size=-1>, and 
+</FONT><TT>fontColor</TT><FONT face="Arial, Helvetica" size=-1> properties. 
+(These are the same as the regular JavaScript font styles.) Take advantage of 
+any or all of the customizable </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" 
+size=-1> prototype properties to make your menus match the look and feel of your 
+web site. 
+<P><A name=multi></A></P>
+<H4>Creating Multiple Menus</H4>You can add multiple menu objects and scripts to 
+your page in various ways and display them whenever you want. Compare Example 6 
+to the earlier examples. <A name=example6></A>
+<P>
+<HR width="100%">
+<B>Example 6</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+function loadMenus () 
+{
+    window.myMenu6 = new Menu("myMenu6");
+    myMenu6.addMenuItem("DevEdge Online", "location='http://developer.netscape.com'");
+    myMenu6.addMenuItem("Open Studio", "location='http://developer.netscape.com/openstudio/'");
+    myMenu6.addMenuItem("Netcenter", "location='http://home.netscape.com'");
+    myMenu6.addMenuItem("Download", "location='http://home.netscape.com/download/'");
+
+    window.search = new Menu("Search");
+    search.addMenuItem("Net Search", "location='http://home.netscape.com/escapes/search'");
+    search.addMenuItem("Excite", "location='http://www.excite.com'");
+    search.addMenuItem("Infoseek", "location='http://www.infoseek.com'");
+    search.addMenuItem("Lycos", "location='http://www.lycos.com'");
+    search.addMenuItem("Yahoo", "location='http://www.yahoo.com'");
+
+    window.mozilla = new Menu("Mozilla");
+    mozilla.addMenuItem("Mozilla.org", "location='http://www.mozilla.org'");
+    mozilla.addMenuItem("Projects", "location='http://www.mozilla.org/projects.html'");
+    mozilla.addMenuItem("Source Code", "location='http://www.mozilla.org/source-code.html'");
+
+    mozilla.writeMenus();
+}
+//--&gt;
+&lt;/SCRIPT&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P>
+<P>This sample script creates three menu objects: </FONT><TT>myMenu6</TT><FONT 
+face="Arial, Helvetica" size=-1>, </FONT><TT>search</TT><FONT 
+face="Arial, Helvetica" size=-1>, and </FONT><TT>mozilla</TT><FONT 
+face="Arial, Helvetica" size=-1>. To see these menus, click the following links: 
+</FONT>
+<UL>
+  <LI>
+  <P><A href="javascript:window.showMenu(window.myMenu6);"><FONT 
+  face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu6</TT></A> </P>
+  <LI><A href="javascript:window.showMenu(window.search);"><FONT 
+  face="Arial, Helvetica" size=-1>display </FONT><TT>search</TT></A> 
+  <LI><A href="javascript:window.showMenu(window.mozilla);"><FONT 
+  face="Arial, Helvetica" size=-1>display </FONT><TT>mozilla</TT></A> 
+</LI></UL><FONT face="Arial, Helvetica" size=-1>
+<P>Notice that the three new menu objects in Example 6 are contained inside a 
+function called </FONT><TT>loadMenus()</TT><FONT face="Arial, Helvetica" 
+size=-1>. Placing your menu code in a function enables you to load your menus 
+whenever you want, because the menu objects aren't actually created until the 
+function is called. For example, you can call this function after your page is 
+loaded, allowing the main content of your page to load the menus. 
+<P>Although there are three menus, this script contains only one call to the 
+</FONT><TT>writeMenus()</TT><FONT face="Arial, Helvetica" size=-1> method. 
+That's a feature of the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" 
+size=-1> component: you only need to call </FONT><TT>writeMenus()</TT><FONT 
+face="Arial, Helvetica" size=-1> <I>once</I>, because every time you create a 
+menu object for your page, the new object gets registered and stored in an array 
+called </FONT><TT>window.menus</TT><FONT face="Arial, Helvetica" size=-1>, which 
+contains all the menus you've created for that window. Whenever you call 
+</FONT><TT>writeMenus()</TT><FONT face="Arial, Helvetica" size=-1> (which in 
+turn calls </FONT><TT>document.writeln()</TT><FONT face="Arial, Helvetica" 
+size=-1>), it writes <I>all</I> the menus stored in the 
+</FONT><TT>window.menus</TT><FONT face="Arial, Helvetica" size=-1> array. This 
+way your script calls </FONT><TT>document.writeln()</TT><FONT 
+face="Arial, Helvetica" size=-1> only once for all the menus, rather than 
+calling it several times, which can be much slower. For the Open Studio web 
+site, </FONT><TT>writeMenus()</TT><FONT face="Arial, Helvetica" size=-1> takes 
+less than one second to load its menus, and this article quickly loads about 20 
+example menus (hopefully you'll have far fewer menus than that!). 
+<P>The </FONT><TT>window.menus</TT><FONT face="Arial, Helvetica" size=-1> array 
+is a regular JavaScript array, so you can access the elements of it the same way 
+you access other JavaScript arrays that you create, or the 
+</FONT><TT>window.images</TT><FONT face="Arial, Helvetica" size=-1> or 
+</FONT><TT>window.forms</TT><FONT face="Arial, Helvetica" size=-1> array. The 
+</FONT><TT>window.menus</TT><FONT face="Arial, Helvetica" size=-1> array is 
+readable and writeable; you can modify it or access the objects it contains at 
+any time. 
+<P>Also notice that Example 6 doesn't use the JavaScript 
+</FONT><TT>var</TT><FONT face="Arial, Helvetica" size=-1> keyword like the 
+earlier examples. Instead of using 
+<P></FONT><TT>var myMenu6 = new Menu();</TT><FONT face="Arial, Helvetica" 
+size=-1> 
+<P>this example creates a new window object property, with the following syntax: 
+
+<P></FONT><TT>window.myMenu6 = new Menu();</TT><FONT face="Arial, Helvetica" 
+size=-1> 
+<P>If I had instead used the </FONT><TT>var</TT><FONT face="Arial, Helvetica" 
+size=-1> keyword, the </FONT><TT>myMenu6</TT><FONT face="Arial, Helvetica" 
+size=-1> object would have been declared only as a local variable of the 
+</FONT><TT>loadMenus()</TT><FONT face="Arial, Helvetica" size=-1> function. 
+However, I want </FONT><TT>myMenu6</TT><FONT face="Arial, Helvetica" size=-1> to 
+be a "global" variable (or </FONT><TT>window</TT><FONT face="Arial, Helvetica" 
+size=-1> property), so I declared it as a property of the 
+</FONT><TT>window</TT><FONT face="Arial, Helvetica" size=-1> object. This is one 
+of the many powerful features of the JavaScript language. <A name=child></A></P>
+<H4>Creating Child Menus</H4>
+<P>In this section, I'll show how you can add "child" menus, or submenus, into 
+your regular menus to display a deeper hierarchical menu tree. Creating a child 
+menu is exactly the same as creating a regular menu. (Again, it's similar to 
+using the Java </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> class 
+in the JDK.) Example 7 shows how to create a single child menu hosted inside a 
+regular "parent" menu. 
+<P>
+<HR width="100%">
+<B>Example 7</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+function loadMenus () 
+{
+    window.mySubMenu7 = new Menu("JavaScript");
+    mySubMenu7.addMenuItem("JavaScript 1.1", "location='/eng/mozilla/3.0/handbook/javascript/index.html'");
+    mySubMenu7.addMenuItem("JavaScript 1.2", "location='/docs/manuals/communicator/jsguide4/index.htm'");
+    mySubMenu7.addMenuItem("JavaScript Reference", "location='/docs/manuals/communicator/jsref/index.htm'");
+
+    window.myMenu7 = new Menu("Technologies");
+    myMenu7.addMenuItem("Dynamic HTML", "location='http://developer.netscape.com'");
+    myMenu7.addMenuItem(mySubMenu7);
+    myMenu7.addMenuItem("Java", "location='http://home.netscape.com'");
+    myMenu7.addMenuItem("Plug-ins", "location='http://home.netscape.com'");
+    myMenu7.writeMenus();
+}
+//--&gt;
+&lt;/SCRIPT&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P></FONT>
+<P><A href="javascript://" onclick=showMenu(window.myMenu7);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu7</TT></A><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>As in the Java language, once you create a menu object, you can pass it as a 
+child menu for another menu; Example 7 does this by passing the 
+</FONT><TT>mySubMenu7</TT><FONT face="Arial, Helvetica" size=-1> object as the 
+label parameter in one of the </FONT><TT>addMenuItem()</TT><FONT 
+face="Arial, Helvetica" size=-1> calls for the </FONT><TT>myMenu7</TT><FONT 
+face="Arial, Helvetica" size=-1> menu. Thus the </FONT><TT>mySubMenu7</TT><FONT 
+face="Arial, Helvetica" size=-1> menu object becomes the child of the parent 
+(</FONT><TT>myMenu7</TT><FONT face="Arial, Helvetica" size=-1>) menu. 
+<P>You can also share the same child menu or menus with several different parent 
+menus, and vice versa. Example 8 shows how to create a menu that serves as the 
+"root" parent menu for several different child menus. This script is quite 
+short, because it uses the prescripted menu objects from the previous examples 
+as the child menus. 
+<P>
+<HR width="100%">
+<B>Example 8</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+function loadMenus () 
+{
+    window.myMenu8 = new Menu("my menu tree");
+    myMenu8.addMenuItem(myMenu2);
+    myMenu8.addMenuItem(myMenu3);
+    myMenu8.addMenuItem(myMenu4);
+    myMenu8.addMenuItem(myMenu5);
+    myMenu8.addMenuItem(myMenu7);
+    myMenu8.writeMenus();
+}
+//--&gt;
+&lt;/SCRIPT&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P></FONT>
+<P><A href="javascript://" onclick=showMenu(window.myMenu8);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu8</TT></A><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>Notice that the labels displayed in </FONT><TT>myMenu8</TT><FONT 
+face="Arial, Helvetica" size=-1> for the submenus </FONT><TT>myMenu2</TT><FONT 
+face="Arial, Helvetica" size=-1> through </FONT><TT>myMenu5</TT><FONT 
+face="Arial, Helvetica" size=-1> have the default labels 
+</FONT><TT>"menuLabel0"</TT><FONT face="Arial, Helvetica" size=-1> through 
+</FONT><TT>"menuLabel4"</TT><FONT face="Arial, Helvetica" size=-1>. These 
+default labels were used because no label was passed when each of those menu 
+objects was created in the earlier examples. Compare this to Example 7, where I 
+passed a label when creating </FONT><TT>myMenu7</TT><FONT 
+face="Arial, Helvetica" size=-1>, by setting 
+<P></FONT><TT>window.myMenu7 = new Menu("Technologies");</TT><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>Consequently, the </FONT><TT>myMenu8</TT><FONT face="Arial, Helvetica" 
+size=-1> menu displays "Technologies" as the label for the submenu 
+</FONT><TT>myMenu7</TT><FONT face="Arial, Helvetica" size=-1>. If you're going 
+to be creating submenus or adding your menus to a menu bar (as in <A 
+href="http://developer.netscape.com/docs/examples/index.html?content=dynhtml/visual/index.html" 
+target=_top>Visual DHTML</A> </A>), you should get into the habit of always 
+passing a label to all your menu objects. 
+<P>Although you can logically add as many child menus into as many parent menus 
+as you want (to as many levels deep as you want), you should try not to use too 
+many child menus, to avoid annoying or confusing the user. In fact, I recommend 
+avoiding the use of child menus altogether whenever possible, although having 
+one or two of them once in a while is usually OK. Just keep it simple. 
+<P><A name=proto></A></P>
+<H4>Prototyping Menu Styles</H4>You've seen how to customize the font and color 
+styles of a menu object by changing the default property values, and how to 
+create multiple customized and child menus. Usually when creating multiple 
+customized menus for your web page, you'll want to use the same font and color 
+styles for all your menus. For this reason, I added style prototyping into the 
+architecture of the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> 
+object. 
+<P>Example 9 illustrates what you would have to do to customize the font and 
+color styles for three sample menu objects <I>without</I> prototyping. 
+<P>
+<HR width="100%">
+<B>Example 9</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+function loadMenus () 
+{
+    window.myMenu9a = new Menu("Example 9a");
+    myMenu9a.addMenuItem("DevEdge Online", "location='http://developer.netscape.com'");
+    myMenu9a.addMenuItem("Open Studio", "location='http://developer.netscape.com/openstudio/'");
+    myMenu9a.addMenuItem("Netcenter", "location='http://home.netscape.com'");
+    myMenu9a.addMenuItem("Download", "location='http://home.netscape.com/download/'");
+
+    myMenu9a.fontColor = "#ffffff";
+    myMenu9a.menuItemBgColor = "#000000";
+    myMenu9a.menuHiliteBgColor = "#6699CC";
+    myMenu9a.bgColor = "#AAAAAA";
+
+    window.myMenu9b = new Menu("Example 9b");
+    myMenu9b.addMenuItem("Net Search", "location='http://home.netscape.com/escapes/myMenu9b'");
+    myMenu9b.addMenuItem("Excite", "location='http://www.excite.com'");
+    myMenu9b.addMenuItem("Infoseek", "location='http://www.infoseek.com'");
+    myMenu9b.addMenuItem("Lycos", "location='http://www.lycos.com'");
+    myMenu9b.addMenuItem("Yahoo", "location='http://www.yahoo.com'");
+
+    myMenu9b.fontColor = "#ffffff";
+    myMenu9b.menuItemBgColor = "#000000";
+    myMenu9b.menuHiliteBgColor = "#6699CC";
+    myMenu9b.bgColor = "#AAAAAA";
+
+    window.myMenu9c = new Menu("Example 9c");
+    myMenu9c.addMenuItem("Mozilla.org", "location='http://www.mozilla.org'");
+    myMenu9c.addMenuItem("Projects", "location='http://www.mozilla.org/projects.html'");
+    myMenu9c.addMenuItem("Source Code", "location='http://www.mozilla.org/source-code.html'");
+
+    myMenu9c.fontColor = "#ffffff";
+    myMenu9c.menuItemBgColor = "#000000";
+    myMenu9c.menuHiliteBgColor = "#6699CC";
+    myMenu9c.bgColor = "#AAAAAA";
+
+    myMenu9c.writeMenus();
+}
+//--&gt;
+&lt;/SCRIPT&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P></FONT><A href="javascript://" onclick=showMenu(window.myMenu9a);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu9a</TT></A> <BR><A 
+href="javascript://" onclick=showMenu(window.myMenu9b);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu9b</TT></A> <BR><A 
+href="javascript://" onclick=showMenu(window.myMenu9c);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu9c</TT></A><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>To change the font and color styles, I added four new lines of code to <A 
+href="http://developer.netscape.com/viewsource/smith_menu/smith_menu.html#example6">Example 
+6</A> for <I>each</I> of the three menu objects, for a total of 12 new lines. 
+Imagine if there had been ten menu objects: this could add up to a lot of new 
+code. If you want these style properties to be different for each menu object, 
+you have no alternative; however, if you want all your menus to have the same 
+customized look and feel, using the menu prototyping feature is faster, as well 
+as easier to maintain. Example 10 accomplishes the same thing as Example 9 but 
+<I>with</I> prototyping. 
+<P>
+<HR width="100%">
+<B>Example 10</B> </FONT><TT><PRE>&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt;
+&lt;!--
+function loadMenus () 
+{
+    window.myMenu10a = new Menu("Example 10a");
+    myMenu10a.addMenuItem("DevEdge Online", "location='http://developer.netscape.com'");
+    myMenu10a.addMenuItem("Open Studio", "location='http://developer.netscape.com/openstudio/'");
+    myMenu10a.addMenuItem("Netcenter", "location='http://home.netscape.com'");
+    myMenu10a.addMenuItem("Download", "location='http://home.netscape.com/download/'");
+
+    window.myMenu10b = new Menu("Example 10b");
+    myMenu10b.addMenuItem("Net Search", "location='http://home.netscape.com/escapes/myMenu10b'");
+    myMenu10b.addMenuItem("Excite", "location='http://www.excite.com'");
+    myMenu10b.addMenuItem("Infoseek", "location='http://www.infoseek.com'");
+    myMenu10b.addMenuItem("Lycos", "location='http://www.lycos.com'");
+    myMenu10b.addMenuItem("Yahoo", "location='http://www.yahoo.com'");
+
+    window.myMenu10c = new Menu("Example 10c");
+    myMenu10c.addMenuItem("Mozilla.org", "location='http://www.mozilla.org'");
+    myMenu10c.addMenuItem("Projects", "location='http://www.mozilla.org/projects.html'");
+    myMenu10c.addMenuItem("Source Code", "location='http://www.mozilla.org/source-code.html'");
+
+    myMenu10c.fontColor = "#ffffff";
+    myMenu10c.menuItemBgColor = "#000000";
+    myMenu10c.menuHiliteBgColor = "#6699CC";
+    myMenu10c.bgColor = "#AAAAAA";
+
+    myMenu10c.prototypeStyles = myMenu10c;
+
+    myMenu10c.writeMenus();
+}
+//--&gt;
+&lt;/SCRIPT&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<HR width="100%">
+
+<P></FONT><A href="javascript://" onclick=showMenu(window.myMenu10a);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu10a</TT></A> <BR><A 
+href="javascript://" onclick=showMenu(window.myMenu10b);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu10b</TT></A> <BR><A 
+href="javascript://" onclick=showMenu(window.myMenu10c);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>myMenu10c</TT></A><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>Compared to Example 9, this example uses only five lines of code rather than 
+12; the more menus there are, the more lines of code saved. This is done via the 
+</FONT><TT>prototypeStyles</TT><FONT face="Arial, Helvetica" size=-1> property, 
+which you set to the menu object whose styles you want to be used as the 
+prototype for your other menu objects. View the source of the <A 
+href="http://developer.netscape.com/openstudio/index.html" target=_top>Open 
+Studio</A> web site to see how Open Studio uses menu style prototyping. 
+<P><A name=handlers></A></P>
+<H4>Displaying Menus</H4>Remember that your menus are CSS-P-based objects that 
+you can show and hide using the </FONT><TT>visibility</TT><FONT 
+face="Arial, Helvetica" size=-1> property. To make life easier for you, I've 
+built </FONT><TT>showMenu()</TT><FONT face="Arial, Helvetica" size=-1> and 
+</FONT><TT>hideMenu()</TT><FONT face="Arial, Helvetica" size=-1> functions into 
+the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component. The 
+</FONT><TT>showMenu()</TT><FONT face="Arial, Helvetica" size=-1> method is what 
+I've been using all along to show the example menus. Here's how to use 
+</FONT><TT>showMenu()</TT><FONT face="Arial, Helvetica" size=-1> as an event 
+handler: </FONT><TT><PRE>&lt;A HREF="javascript://" onClick="showMenu(mozilla);"&gt;display mozilla&lt;/A&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<P>Click the following link to see what this example displays: </FONT>
+<P><A href="javascript://" onclick=showMenu(mozilla);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>mozilla</TT></A><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>As you can see, I set the </FONT><TT>onClick</TT><FONT 
+face="Arial, Helvetica" size=-1> attribute for the 
+</FONT><TT>&lt;A&gt;</TT><FONT face="Arial, Helvetica" size=-1> tag to call 
+</FONT><TT>showMenu()</TT><FONT face="Arial, Helvetica" size=-1> with the 
+</FONT><TT>mozilla</TT><FONT face="Arial, Helvetica" size=-1> menu object as its 
+argument. This displays the </FONT><TT>mozilla</TT><FONT face="Arial, Helvetica" 
+size=-1> menu I created earlier. 
+<P>Passing a menu object as an argument to </FONT><TT>showMenu()</TT><FONT 
+face="Arial, Helvetica" size=-1> is one of the simplest ways to show a menu. By 
+default, the menu will be displayed wherever your mouse was when 
+</FONT><TT>showMenu()</TT><FONT face="Arial, Helvetica" size=-1> was called: the 
+top left corner of the menu falls at that mouse position. You can override the 
+default menu placement as follows: </FONT><TT><PRE>&lt;A HREF="javascript://" onClick="showMenu(mozilla, 150);"&gt;display mozilla&lt;/A&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>Click the following link to see 
+where this example displays the </FONT><TT>mozilla</TT><FONT 
+face="Arial, Helvetica" size=-1> menu: </FONT>
+<P><A href="javascript://" onclick="showMenu(mozilla, 150);"><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>mozilla</TT></A> <FONT 
+face="Arial, Helvetica" size=-1>
+<P>I've defined </FONT><TT>showMenu()</TT><FONT face="Arial, Helvetica" size=-1> 
+to have two more parameters, for setting the x and y coordinates on the page 
+(for the left and top positions) where you want the menu to be displayed. The 
+above example shows how to override the default </FONT><TT>x</TT><FONT 
+face="Arial, Helvetica" size=-1> position: passing 150 as the 
+</FONT><TT>x</TT><FONT face="Arial, Helvetica" size=-1> coordinate displays the 
+</FONT><TT>mozilla</TT><FONT face="Arial, Helvetica" size=-1> menu exactly 150 
+pixels from the left page border, rather than where the mouse 
+</FONT><TT>pageX</TT><FONT face="Arial, Helvetica" size=-1> position was. An 
+</FONT><TT>onClick</TT><FONT face="Arial, Helvetica" size=-1> attribute of 
+</FONT><TT>"showMenu(mozilla, 150, 150)"</TT><FONT face="Arial, Helvetica" 
+size=-1> would set the </FONT><TT>x</TT><FONT face="Arial, Helvetica" size=-1> 
+and </FONT><TT>y</TT><FONT face="Arial, Helvetica" size=-1> coordinates equally. 
+
+<P>You can also use other event handlers and actions to show and hide menus. 
+Here's how to use the familiar </FONT><TT>onMouseOver</TT><FONT 
+face="Arial, Helvetica" size=-1> event handler to display menus: </FONT><TT><PRE>&lt;A HREF="javascript://" onMouseOver="showMenu(mozilla);"&gt;display mozilla&lt;/A&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>This is the same as the 
+previous example, except that it uses </FONT><TT>onMouseOver</TT><FONT 
+face="Arial, Helvetica" size=-1> instead of </FONT><TT>onClick</TT><FONT 
+face="Arial, Helvetica" size=-1> to show the menu. Run your mouse over the 
+following link to see how this works: </FONT>
+<P><A href="javascript://" onmouseover=showMenu(window.mozilla);><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>mozilla</TT></A><FONT 
+face="Arial, Helvetica" size=-1> 
+<P>You may prefer using </FONT><TT>onMouseOver</TT><FONT face="Arial, Helvetica" 
+size=-1> instead of the </FONT><TT>onClick</TT><FONT face="Arial, Helvetica" 
+size=-1> style for displaying menus on your web page. I recommend implementing 
+the </FONT><TT>onClick</TT><FONT face="Arial, Helvetica" size=-1> style for 
+application interfaces, because most application GUIs display menus based on 
+user clicks. However, for web pages the </FONT><TT>onMouseOver</TT><FONT 
+face="Arial, Helvetica" size=-1> style is well accepted in most cases, as in the 
+Open Studio site. Again, just remember to keep it simple. 
+<P>You can implement the </FONT><TT>onMouseOver</TT><FONT 
+face="Arial, Helvetica" size=-1> or </FONT><TT>onClick</TT><FONT 
+face="Arial, Helvetica" size=-1> interface with an image, too, or use other 
+event handlers, or capture any of the new JavaScript 1.2 events, such as 
+</FONT><TT>DblClick</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>DragDrop</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>KeyDown</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>KeyPress</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>KeyUp</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>MouseDown</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>MouseMove</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>MouseOut</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>MouseOver</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>MouseUp</TT><FONT face="Arial, Helvetica" size=-1>, 
+</FONT><TT>Move</TT><FONT face="Arial, Helvetica" size=-1>, or 
+</FONT><TT>Resize</TT><FONT face="Arial, Helvetica" size=-1>. 
+<P>You can also pass the menu's label string or CSS-P object ID to 
+</FONT><TT>showMenu()</TT><FONT face="Arial, Helvetica" size=-1> -- the 
+</FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component looks for 
+these variables, too. Compare the following with the previous example: 
+</FONT><TT><PRE>&lt;A HREF="javascript://" onMouseOver='showMenu("Mozilla");'&gt;display mozilla&lt;/A&gt;
+</PRE></TT><FONT face="Arial, Helvetica" size=-1></FONT>
+<P><A href="javascript://" onmouseover='window.showMenu("Mozilla");'><FONT 
+face="Arial, Helvetica" size=-1>display </FONT><TT>mozilla</TT></A> <FONT 
+face="Arial, Helvetica" size=-1>
+<P>See the difference? The argument passed to </FONT><TT>showMenu()</TT><FONT 
+face="Arial, Helvetica" size=-1> is the </FONT><TT>"Mozilla"</TT><FONT 
+face="Arial, Helvetica" size=-1> label (a string type) rather than the 
+</FONT><TT>mozilla</TT><FONT face="Arial, Helvetica" size=-1> object type. This 
+flexibility enables you to create event handlers more easily (especially if 
+you're not so familiar with object-oriented syntax) and in a greater variety of 
+ways. 
+<P>On the subject of hiding menus: Usually you don't have to worry about doing 
+this, because the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> 
+component sets up the </FONT><TT>hideMenu()</TT><FONT face="Arial, Helvetica" 
+size=-1> method to hide the menus for you, by default. That is, when the user 
+moves the mouse out of a menu, </FONT><TT>hideMenu()</TT><FONT 
+face="Arial, Helvetica" size=-1> gets called, because I set the 
+</FONT><TT>onMouseOut</TT><FONT face="Arial, Helvetica" size=-1> event handler 
+to </FONT><TT>hideMenu()</TT><FONT face="Arial, Helvetica" size=-1> for the menu 
+objects. I also overrode the </FONT><TT>window.onMouseUp</TT><FONT 
+face="Arial, Helvetica" size=-1> event handler with 
+</FONT><TT>hideMenu()</TT><FONT face="Arial, Helvetica" size=-1> to hide the 
+menu if the user clicks elsewhere in the window. This reflects the menu behavior 
+that's familiar on most operating systems. If you want to change any of this 
+default behavior, you can override these event handlers with your own functions. 
+
+<P><A name=domains></A></P>
+<H4>Sharing Menus Across Domains</H4>You can really take advantage of the basic 
+features of the Internet with JavaScript, especially when you use JavaScript 
+libraries. Storing your menu code in JavaScript </FONT><TT>.js</TT><FONT 
+face="Arial, Helvetica" size=-1> libraries allows you not only to share code on 
+your own domain, but also to safely share it across different domains, similar 
+to how folks have shared GIF images since the beginning of the web's existence. 
+In other words, you can view the prototypical </FONT><TT>Menu</TT><FONT 
+face="Arial, Helvetica" size=-1> library as a real Internet component or shared 
+object. 
+<P><A href="http://developer.netscape.com/openstudio/index.html" 
+target=_top>Open Studio</A> is a perfect example of this. It not only uses all 
+the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component 
+features that I've discussed so far, but it also distributes the 
+</FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component and several 
+customized menu objects across the Netscape developer domain, as well as other 
+external domains such as the <A 
+href="http://www.builder.com/openstudio/index.html" target=_top>C|NET</A>, <A 
+href="http://www.hotwired.com/webmonkey/partners/ns/?tw=os00001" 
+target=_top>Wired</A>, <A 
+href="http://www.adobe.com/special/openstudio/main.html" target=_top>Adobe</A>, 
+<A href="http://www.apple.com/quicktime/openstudio/" target=_top>Apple</A>, and 
+<A href="http://special.macromedia.com/netscape/openstudio/" 
+target=_top>Macromedia</A> domains, just to mention a few. 
+<P>The way Open Studio shares its menu objects is by storing them in a 
+JavaScript library named </FONT><A 
+href="view-source:http://developer.netscape.com/openstudio/lib/openstudio.js"><TT>openstudio.js</TT></A><FONT 
+face="Arial, Helvetica" size=-1>. (This library also contains other code that 
+both Open Studio's pages and other external sites share, such as some links and 
+</FONT><TT>MouseOver</TT><FONT face="Arial, Helvetica" size=-1> code.) As 
+illustrated in previous examples, the </FONT><TT>openstudio.js</TT><FONT 
+face="Arial, Helvetica" size=-1> library wraps the menu objects inside a 
+function called </FONT><TT>loadMenus()</TT><FONT face="Arial, Helvetica" 
+size=-1>, so that the menu objects can be created after the main web page 
+content is laid out. Like the scripts in this article, the 
+</FONT><TT>openstudio.js</TT><FONT face="Arial, Helvetica" size=-1> library 
+depends on the </FONT><TT>menu.js</TT><FONT face="Arial, Helvetica" size=-1> 
+library for accessing the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" 
+size=-1> code. Sharing the code of these two libraries allows Open Studio to 
+share its menu objects (and other code) across the various web pages and 
+domains. 
+<P>If you like menus, you really should use Open Studio as a reference. It shows 
+how useful menu objects can be, and how well they work on a busy web site -- and 
+they're very customized (white letters on a black background, with blue as the 
+highlight color, to match the site). 
+<P><A name=compatibility></A></P>
+<H4>Cross-Browser Compatibility</H4>Netscape Communicator 4 and Microsoft 
+Internet Explorer 4 support different document object models (DOMs). The 
+</FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component 
+accommodates for these kind of differences. Look at the 
+</FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> <A 
+href="view-source:http://developer.netscape.com/viewsource/smith_menu/menu.js">source</A> 
+to see exactly how this is done. Notice that I didn't use any of the traditional 
+"browser sniffing" techniques. Instead of looking for numerous browser versions 
+and names, I used "object sniffing," which is a lot simpler. 
+<P>Let's look at how object sniffing works in the </FONT><TT>Menu</TT><FONT 
+face="Arial, Helvetica" size=-1> component. For situations where I know there is 
+(or could be) a difference in the browser DOMs, such as with the 
+</FONT><TT>document.layers</TT><FONT face="Arial, Helvetica" size=-1> vs. 
+</FONT><TT>document.all</TT><FONT face="Arial, Helvetica" size=-1> array 
+objects, I use something like the following code: 
+<P></FONT><TT><PRE>if (document.layers) 
+{
+    document.layers["myObjectID"].top = 100;
+}
+else if (document.all)
+{
+    document.all["myObjectID"].styles.pixelTop = 100;
+}
+</PRE></TT><FONT face="Arial, Helvetica" size=-1>
+<P>Object sniffing can be more reliable than browser sniffing. However, if 
+you're using a browser sniffer, don't make common mistakes like </FONT><TT>if 
+(version == 4.0)</TT><FONT face="Arial, Helvetica" size=-1> or even 
+</FONT><TT>if (version == 4)</TT><FONT face="Arial, Helvetica" size=-1>, in case 
+a 4.1 or 5.0 browser comes out a few months later. Use </FONT><TT>if (version 
+&gt;= 4)</TT><FONT face="Arial, Helvetica" size=-1> instead to allow for future 
+versions. 
+<P>An </FONT><A 
+href="view-source:http://developer.netscape.com/docs/examples/dynhtml/visual/components/menubar/menu.js"><FONT 
+face="Arial, Helvetica" size=-1>earlier (mid-1997) version of the 
+</FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> 
+component</FONT></A><FONT face="Arial, Helvetica" size=-1> is even more flexible 
+and robust (see also other objects for <A 
+href="http://developer.netscape.com/docs/examples/index.html?content=dynhtml/visual/index.html" 
+target=_top>Visual DHTML</A>). However, this earlier version is more for web 
+applications than web sites, and it doesn't run on Internet Explorer 4, since 
+that IE version wasn't around at the time. 
+<H4>Known Issues</H4>One of the main features of the </FONT><TT>Menu</TT><FONT 
+face="Arial, Helvetica" size=-1> component is cross-browser compatibility; 
+however, both Communicator 4 and Internet Explorer 4 are known to sometimes fall 
+short in different areas regarding their new DOMs and the DHTML "draft 
+standards." The IE implementation of JScript is getting better, but it's still 
+virtually light years behind the standard implementation of JavaScript 1.2 and 
+LiveConnect in Communicator. On the other hand, IE4 seems to hold more water 
+regarding the HTML 4.0 draft, because it came out later than Communicator; 
+however, so far it's still less stable. Keep in mind that the upcoming 5.0 
+browsers will support DHTML much better and will conform to the W3C final specs, 
+which until now have been a moving target (Netscape, at least, is committed to 
+supporting all the W3C standards). 
+<P>Currently, a weaker area for Communicator 4.0 is the layout: when you resize 
+the window it sometimes loses some of the properties for CSS-P objects (the 
+</FONT><TT>&lt;LAYER&gt;</TT><FONT face="Arial, Helvetica" size=-1> tag is still 
+more robust). To work around this problem, you can capture the 
+</FONT><TT>Resize</TT><FONT face="Arial, Helvetica" size=-1> event and call a 
+function to reload the menu or page. 
+<P>IE4 has a layout bug, too: you'll need to load your menus before the window's 
+</FONT><TT>onLoad</TT><FONT face="Arial, Helvetica" size=-1> event handler is 
+called, because IE4 will most often crash when the </FONT><TT>Menu</TT><FONT 
+face="Arial, Helvetica" size=-1> component tries to use the JScript 
+</FONT><TT>innerHTML</TT><FONT face="Arial, Helvetica" size=-1> property for 
+CSS-P objects after the page is laid out, especially with multiple menus. Load 
+your menus early and you should be fine. 
+<P>You'll also often need to specify the width of your menus for IE4, because 
+IE4 doesn't explicitly assign values to CSS-P object properties. When you create 
+CSS-P objects the default behavior usually isn't what you think it should be 
+(especially the </FONT><TT>pixelWidth</TT><FONT face="Arial, Helvetica" size=-1> 
+property), so you'll need to specifically set each property. To work around the 
+menu width problem in particular, I set the default 
+</FONT><TT>pixelWidth</TT><FONT face="Arial, Helvetica" size=-1> in the 
+</FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component to 200 
+pixels for IE4; otherwise, your menus would always be the width of your whole 
+web page document in IE4. 
+<P>The DOM in Communicator handles default behavior much better, because it 
+assigns default values to virtually all CSS-P properties for your objects. In 
+this case your menus will always be the width of your largest menu item. Note 
+that the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> component 
+allows you to specify the width of your menus for both browsers by setting the 
+</FONT><TT>menuItemWidth</TT><FONT face="Arial, Helvetica" size=-1> property. 
+<H4>Going Forward</H4>
+<P>I plan to update and improve the </FONT><TT>Menu</TT><FONT 
+face="Arial, Helvetica" size=-1> component based on feedback from developers, so 
+please <A 
+href="mailto:dhtml-feedback@netscape.com?subject=Menu Object feedback&amp;body=URL:">send 
+in your suggestions, requests, or comments</A> regarding this component. If your 
+site uses the </FONT><TT>Menu</TT><FONT face="Arial, Helvetica" size=-1> 
+component, you can <A 
+href="mailto:dhtml-feedback@netscape.com?subject=Menu Object example&amp;body=URL:">submit 
+your URL</A> for possible posting on the <A 
+href="http://developer.netscape.com/viewsource/smith_menu2/menu.html">Sample 
+Menus</A> page. 
+<P>
+<HR width="100%">
+
+<P></P>
+<CENTER><B>See also <A 
+href="http://developer.netscape.com/viewsource/smith_menu2/smith_menu2.html">Part 
+2: <I>New Features</I></ A> </B></CENTER>
+<P><A name=resources></A></P>
+<HR width="100%">
+
+<P></P>
+<H4>Further Resources</H4>
+<UL>
+  <LI><A 
+  href="http://developer.netscape.com/viewsource/smith_menu/smith_menu.html">JavaScript 
+  Menu</A> 
+  <UL>
+    <LI><A 
+    href="http://developer.netscape.com/viewsource/smith_menu2/smith_menu2.html">The 
+    JavaScript Menu (Part 2: New Features)</A> 
+    <LI><A 
+    href="http://developer.netscape.com/viewsource/smith_menu2/menu_faq.html">Frequently 
+    Asked Questions (FAQ)</A> 
+    <LI><A 
+    href="http://developer.netscape.com/viewsource/smith_menu2/menu_vframes.html" 
+    target=frames>Menus in vertical frames</A> 
+    <LI><A 
+    href="http://developer.netscape.com/viewsource/smith_menu2/menu_hframes.html" 
+    target=frames>Menus in horizontal frames</A> 
+    <LI><A 
+    href="http://developer.netscape.com/viewsource/smith_menu2/simple.html" 
+    target=_top>Simple Menu</A> 
+    <LI><A href="http://developer.netscape.com/viewsource/smith_menu2/menu.html" 
+    target=_top>Sample Menus</A> </LI></UL>
+  <LI><A href="http://developer.netscape.com/tech/javascript/index.html" 
+  target=_top>JavaScript Resources</A> 
+  <UL>
+    <LI><A 
+    href="http://developer.netscape.com/docs/manuals/js/core/jsguide/index.htm" 
+    target=_top><I>JavaScript Guide</I></A> 
+    <LI><A 
+    href="http://developer.netscape.com/docs/manuals/communicator/jsref/index.htm" 
+    target=_top><I>JavaScript Reference</I></A> 
+    <LI><A 
+    href="http://developer.netscape.com/docs/manuals/communicator/jsguide/contents.htm"><I>What's 
+    New in JavaScript 1.2</I></A> </LI></UL>
+  <LI><A 
+  href="http://developer.netscape.com/tech/dynhtml/index.html?content=resources.html" 
+  target=_top>Dynamic HTML Resources</A> 
+  <UL>
+    <LI><A href="http://www.w3.org/TR/REC-CSS1-961217" target=_top>Cascading 
+    Style Sheets, Level 1</A> 
+    <LI><A href="http://www.w3.org/TR/WD-positioning" target=_top>Positioning 
+    HTML Elements with Cascading Style Sheets</A> 
+    <LI><A 
+    href="http://developer.netscape.com/docs/examples/dynhtml/visual/index.html">Visual 
+    DHTML</A> 
+    <LI><A 
+    href="http://developer.netscape.com/docs/examples/dynhtml/dialog/dialog.html">Dialog 
+    Widget</A> 
+    <LI><A 
+    href="http://developer.netscape.com/docs/examples/javascript/webwidget/doc.html">Webtop 
+    Widget</A> </LI></UL>
+  <LI><A href="http://developer.netscape.com/support/index.html" 
+  target=_top>Netscape support area</A> </LI></UL>
+<P>
+<CENTER>
+<HR SIZE=1 width="100%">
+<I>View Source</I> wants your feedback! <BR><A 
+href="mailto:pdreyfus@netscape.com">Write to us</A> and let us know <BR>what you 
+think of this article. <BR>
+<HR SIZE=1 width="100%">
+<BR></CENTER>
+<P>Many thanks to Paul Dreyfus, Andres Espineira, and Richard Hall for the 
+opportunity to write this article, and special thanks to Caroline Rose for the 
+excellent editing job. </P>
+<P><A name=bio></A></P><A href="mailto:garys@netscape.com">Gary Smith</A> is a 
+Netscape engineer, creator of <A 
+href="http://developer.netscape.com/docs/examples/index.html?content=dynhtml/visual/index.html" 
+target=_top>Visual DHTML</A>, <A 
+href="http://developer.netscape.com/docs/examples/index.html?content=dynhtml/dialog/dialog.html" 
+target=_top>Dialog Widget</A>, and <A 
+href="http://developer.netscape.com/docs/examples/index.html?content=javascript/webwidget/doc.html" 
+target=_top>Webtop Widget</A>. He works on new technology projects involving 
+LiveConnect, JavaScript, Java, CGI, XML/RDF, and web-crawling technologies. 
+Occasionally he writes sample code and documentation for DevEdge Online, such as 
+the <I>View Source</I> article <A 
+href="http://developer.netscape.com/viewsource/smith_js2java/smith_js2java.html">Connecting 
+JavaScript to Java with LiveConnect</A>. 
+<P></P>
+<P>
+<HR SIZE=1>
+
+<CENTER>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=490>
+  <TBODY>
+  <TR>
+    <TD width=25></TD>
+    <TD align=left vAlign=top width=165><FONT face="Arial, Helvetica" 
+      size=-2><A 
+      href="http://developer.netscape.com/support/faqs/index.html?content=deofaq.html" 
+      target=_top>DevEdge Online FAQ</A> <BR><A 
+      href="http://developer.netscape.com/program/index_frame.html?content=contact.html" 
+      target=_top>Developer Response Center</A> <BR><A 
+      href="http://developer.netscape.com/program/index.html" target=_top>Join 
+      DevEdge Program</A> </FONT></TD>
+    <TD width=5></TD>
+    <TD align=left vAlign=top width=280><FONT face="Arial, Helvetica" 
+      size=-2>Copyright © 1998 <A 
+      href="http://home.netscape.com/misc/trademarks.html" target=_top>Netscape 
+      Communications Corporation</A>. <BR>This site powered by: <A 
+      href="http://home.netscape.com/servers/index.html" target=_top>Netscape 
+      Enterprise Server</A> and <A 
+      href="http://home.netscape.com/products/commapps/cxpert/pubsys_data.html" 
+      target=_top>Netscape Publishing System 1.6</A>. </FONT><BR><BR></TD>
+    <TD width=25></TD></TR></TBODY></TABLE></CENTER>
+<SCRIPT language=JavaScript1.2>
+<!--
+//For IE
+if (document.all) {
+    loadMenus();
+}
+//-->
+</SCRIPT>
+<!-- START: AOL HTML AD TOKEN: DO NOT EDIT OR REMOVE THIS COMMENT -->
+<SCRIPT language=JavaScript1.1 src="helpmenu_files/adsEnd.js"></SCRIPT>
+<!-- END: AOL HTML AD TOKEN: DO NOT EDIT OR REMOVE THIS COMMENT --></FONT></BODY></HTML>

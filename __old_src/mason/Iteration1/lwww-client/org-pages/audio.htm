@@ -1,0 +1,158 @@
+<HTML>
+<BODY BACKGROUND="bgnd.jpg">
+This page shows the music for the active track, selected in the <b>Mixer</b> page.
+<br>
+Since the track's <b>Type</b> is set to <b>Audio</b>, it shows the audio track's wave.
+<br>
+Initially, the entire track's wave is shown.  To see the wave in more detail, zoom in by
+scrolling the horizontal and vertical Zoom scroll bars.
+<br><br>
+Click the <b>Quality</b> field to change quality and memory requirements of your recording.
+One Mono track consumes memory at the following rates:
+<dir>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=3 BGCOLOR=#CFCFCF>
+<TR>
+ <TH ALIGN=LEFT>Quality</TH>
+ <TH>Bytes per second</TH>
+ <TH>Bytes per minute</TH>
+ <TH ALIGN=RIGHT>Sample</TH>
+</TR>
+<TR>
+ <TD ALIGN=LEFT>CD</TD>
+ <TD>88,200</TD>
+ <TD>5.2 million</TD>
+ <TD>16 bit @ 44 kHz</TD>
+</TR>
+<TR>
+ <TD ALIGN=LEFT>Video Game</TD>
+ <TD>44,100</TD>
+ <TD>2.6 million</TD>
+ <TD>8 bit @ 44 kHz</TD>
+</TR>
+<TR>
+ <TD ALIGN=LEFT>Phonograph</TD>
+ <TD>44,100</TD>
+ <TD>2.6 million</TD>
+ <TD>16 bit @ 22 kHz</TD>
+</TR>
+<TR>
+ <TD ALIGN=LEFT>FM Radio</TD>
+ <TD>22,050</TD>
+ <TD>1.3 million</TD>
+ <TD>16 bit @ 11 kHz</TD>
+</TR>
+<TR>
+ <TD ALIGN=LEFT>Radio</TD>
+ <TD>22,050</TD>
+ <TD>1.3 million</TD>
+ <TD>8 bit @ 22 kHz</TD>
+</TR>
+<TR>
+ <TD ALIGN=LEFT>Phone</TD>
+ <TD>11,025</TD>
+ <TD>661,500</TD>
+ <TD>8 bit @ 11 kHz</TD>
+</TR>
+<TR>
+ <TD ALIGN=LEFT>Old Radio</TD>
+ <TD>8,000</TD>
+ <TD>480,000</TD>
+ <TD>8 bit @ 8 kHz</TD>
+</TR>
+</TABLE>
+</dir>
+Stereo tracks consume memory twice as fast as Mono tracks.
+<br><br>
+The <b>Mixer</b> page lets you record mono tracks to conserve memory and disk space, but still generate stereo audio output.
+<br><br>
+To begin recording to this track, press the record button <img align=center src="recbut.gif">,
+and then press the stop button <img align=center src="stopbut.gif"> when you are ready to stop recording.
+<br><br>
+With the left mouse down, drag the mouse over the sound window to select part of it.
+<br>
+If nothing is selected, any of the following operations affect the entire track.
+<br>
+To hear only the selected sound, 
+press the <b>Play Selection</b> button.
+<br>
+To copy the contents of an audio (.WAV) file into this track,
+select the <b>Import Audio from...</b> from the <b><u>F</u>ile</b> menu.
+A private copy of the file is made, so that any changes you make will not
+affect the imported file.
+<br>
+To copy the selected sound to the clipboard, 
+select <b>Copy</b> from the <b><u>E</u>dit</b> menu.
+<br>
+To paste the contents of the clipboard into the song, click the mouse where you want to insert the new sound, and
+select one of the following from the <b><u>E</u>dit</b> menu:
+<dir>
+<li>
+<b>Paste Over</b> if you want the audio in the clipboard to replace sound on the current track.
+For example, if the clipboard contains 1 second of audio, and the song's current position is 0:10:00 (10 seconds), then
+the current track from 0:10:00 to 0:11:00 is replaced with the contents of the clipboard.
+<li>
+<b>Paste Mix</b> if you want the clipboard to be mixed with the current track.
+Paste Mix reduces the volume, preventing the possibility of distortion.
+If you want to preserve the volume and accept the possibility of distortion,
+hold the Shift key while selecting the Paste Mix menu item.
+<li>
+<b>Paste Insert</b> if you want the clipboard inserted into the current song.
+</dir>
+To delete the selected part of the track,
+select <b>Delete</b> from the <b><u>E</u>dit</b> menu.
+<br>
+To set the selected part of the track to complete silence,
+select <b>Silent</b> from the <b><u>E</u>dit</b> menu.
+<br>
+To replace the selected sound with the same sound played backward,
+select <b>Reverse</b> from the <b><u>E</u>dit</b> menu 
+
+<br><br>
+To filter the entire track, press the <b>Filter...</b> button.  If you only want to filter part of
+the track, select the desired time period with the mouse, and then press the Filter button.
+<br><br>
+To eliminate clicks and pops from the start or end of an audio track,
+press the <b>Filter...</b> button and set the filter kind to <b>Zero-Average</b>.
+<br>
+Then, press <b>Filter...</b> again and set the filter kind to <b>Normalize</b>.
+<br>
+Then, if there is a high-pitch hiss, press <b>Filter...</b> again and set the filter kind to <b>Low-Pass</b>.
+<br>
+Then, if there is a low-pitched hum, press <b>Filter...</b> again and set the filter kind to <b>High-Pass</b>.
+<br><br>
+To change the volume of the entire track, or a selected part of the track, press the <b>Volume...</b> button.
+As a short-cut, you can make the track, or part of it, twice as loud by pressing the <b>Louder</b> button.
+You can adjust the audio volume without modifying the audio signal by turning to the <b>Mixer</b> page.
+<br>
+To adjust the pitch of the entire track, or a selected part of the track, press the <b>Pitch...</b> button.
+<br>
+To help you synchronize with recorded MIDI instruments, vertical
+<i>tempo</i>   
+lines are drawn at the start of each 16th note, quarter note, and measure.
+<br><br>
+If you make a mistake while recording Audio, you can <b><i>Punch In</i></b>, or re-record
+over the mistake as follows.
+<dir>
+<li>Select the part of the recording you would like to re-record.
+<li>Select <b>Set Record + Play Start + End Times</b> from the <b>Edit</b> menu
+(or click on the top of the <img align=bottom src="starttim.jpg"> field),
+and set the Start/End times.  This lets you control the positions where song
+playing and recording start and stop.
+<li>Position the cursor several seconds before the part you want to record over.
+<li>Press the <b>Mix</b> button so that there will be no delay when the
+<img align=center src="recbut.gif">
+button is pressed.
+<li>Press the <b>VU</b> button so the Sound Card is <i>warmed up</i>.
+<li>Press the
+<img align=center src="recbut.gif">
+button.
+<li>Sing or play along with the song.
+<li>Recording will automatically stop when the end of the selection is reached,
+and only the selected <i>punch-in</i> range will be captured.
+</dir>
+<br><br>
+<br>Clicking at the bottom of the field lets you
+change time time units to Audio Samples, giving you the most precise control over this selection.
+</body>
+</HTML> 
+

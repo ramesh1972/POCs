@@ -1,0 +1,468 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="textimage.html"> 
+ <link rel="next" href="lists.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Input Controls</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 2.4 - Input Controls 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <SPAN CLASS="currentpage">Input Controls</SPAN></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="2.3 - Adding Labels and Images"
+     href="textimage.html">Previous</a>
+
+
+  <a class="nextlink" title="2.5 - List Controls"
+     href="lists.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Input Controls</h2>
+
+<P>
+XUL has elements that are similar to the HTML form controls.
+</P>
+
+<H3>Text Entry Fields</H3>
+
+<P>
+HTML has an <SPAN CLASS= "tag">input</SPAN> element which can be used for text
+entry controls. XUL has a similar element, <A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A>,
+used for text entry fields. Without any attributes, the
+<A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> element creates a box in which the user can
+enter text. Textboxes accept many of the same attributes as HTML input controls.
+The following are some of them:
+</P>
+
+<UL>
+  <LI><DIV CLASS="attrib">id</DIV>
+      A unique identifier so that you can identify the textbox.
+  </LI>
+  <LI><DIV CLASS="attrib">class</DIV>
+      The style class of the textbox.
+  </LI>
+  <LI><DIV CLASS="attrib">value</DIV>
+      If you want the textbox to have default text, supply it with the 
+      <SPAN CLASS="attrib">value</SPAN> attribute.
+  </LI>
+  <LI><DIV CLASS="attrib">disabled</DIV>
+      Set to <SPAN CLASS="aval">true</SPAN> to have text entry disabled.
+  </LI>
+  <LI><DIV CLASS="attrib">type</DIV>
+      You can set this attribute to the special value
+      <SPAN CLASS="aval">password</SPAN> to create a textbox that hides what
+      it types. This is usually used for password entry fields.
+  </LI>
+  <LI><DIV CLASS="attrib">maxlength</DIV>
+      The maximum number of characters that the textbox allows.
+  </LI>
+</UL>
+
+<P>
+Note that while in HTML, several different kinds of fields can be created with
+the <SPAN CLASS= "tag">input</SPAN> element, in XUL there are separate elements
+for each type. The following example shows some textboxes:
+</P>
+
+
+Example 2.4.1:
+<A HREF='examples/ex_inputs_1.xul.txt'>Source</A>
+<A HREF="examples/ex_inputs_1.xul" ONCLICK="window.open('examples/ex_inputs_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;label control="some-text" value="Enter some text"/&gt;
+&lt;textbox id="some-text"/&gt;
+&lt;label control="some-password" value="Enter a password"/&gt;
+&lt;textbox id="some-password" type="password" maxlength="8"/&gt;</PRE></DIV>
+
+
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> examples above will create text inputs
+that can only be used for entering one line of text. HTML also has a
+<SPAN CLASS= "tag">textarea</SPAN> element for creating a larger text entry area.
+In XUL, you can use the <A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> element for this purpose
+as well -- two separate elements are not necessary. If you set the
+<SPAN CLASS="attrib">multiline</SPAN> attribute to
+<SPAN CLASS="aval">true</SPAN>, the text entry field will display mutliple rows.
+</P>
+
+<P>
+For example:
+</P>
+
+
+Example 2.4.2:
+<A HREF='examples/ex_inputs_2.xul.txt'>Source</A>
+<A HREF="examples/ex_inputs_2.xul" ONCLICK="window.open('examples/ex_inputs_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;textbox multiline="true"
+           value="This is some text that could wrap onto multiple lines."/&gt;</PRE></DIV>
+
+
+
+<P>
+Like the HTML <SPAN CLASS= "tag">textarea</SPAN>, you can use the
+<SPAN CLASS="attrib">rows</SPAN> and
+<SPAN CLASS="attrib">cols</SPAN> attributes to set the size. This should be
+set to the number of rows and columns of characters to display.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+Let's add a search entry field to the find file dialog. We'll use the
+<A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> element.
+</P>
+
+
+<DIV CLASS="sample"><PRE><SPAN STYLE="color:red;">&lt;label value="Search for:" control="find-text"/&gt;
+&lt;textbox id="find-text"/&gt;</SPAN>
+
+&lt;button id="find-button" label="Find"/&gt;</PRE></DIV>
+
+
+
+<P>
+Add these lines before the buttons we created in the last section.  
+If you open this window, you will see something much like that shown in the
+image below.
+</P>
+
+<P>
+<IMG SRC="images/inputs1.jpg" ALIGN=RIGHT ALT="" WIDTH=402 HEIGHT=55>
+Notice that the label and the text input field have now appeared in the
+window. The textbox is fully functional and you can type into it and
+select text. Note that the <SPAN CLASS="attrib">control</SPAN> attribute
+has been used so that the textbox is selected when the label is clicked.
+</P>
+
+</DIV>
+
+<H3>Checkboxes and Radio Buttons</H3>
+
+<P> 
+Two additional elements are used for creating check boxes and radio buttons.
+They are variations of buttons. The checkbox is used for options that
+can be enabled or disabled. Radio buttons can be used for a similar purpose
+when there are a set of them where only one can be selected at once.
+</P>
+
+<P>
+You can use most of the same attributes on checkboxes and radio buttons as with
+buttons. The example below shows some simple checkboxes and radio buttons.
+</P>
+   
+
+<DIV CLASS="sample"><PRE>&lt;checkbox id="case-sensitive" checked="true" label="Case sensitive"/&gt;
+&lt;radio id="orange" label="Orange"/&gt;
+&lt;radio id="violet" selected="true" label="Violet"/&gt;
+&lt;radio id="yellow" label="Yellow"/&gt;</PRE></DIV>
+
+
+
+<P> 
+The first line creates a simple checkbox. When the user clicks the checkbox, it
+switches between checked and unchecked. The <SPAN CLASS="attrib">checked</SPAN>
+attribute can be used to indicate the default state. You should set this to
+either <SPAN CLASS="attrib">true</SPAN> or <SPAN CLASS="attrib">false</SPAN>.   
+The <SPAN CLASS="attrib">label</SPAN> attribute can be used to assign a label
+that will appear beside the check box. For radio buttons, you should
+use the <SPAN CLASS="attrib">selected</SPAN> attribute instead of the
+<SPAN CLASS="attrib">checked</SPAN> attribute. Set it to 
+<SPAN CLASS="aval">true</SPAN> to have a radio button selected by
+default, or leave it out for other radio buttons.
+</P>
+
+<P>
+In order to group radio buttons together, you need to use the
+<A CLASS="tag" HREF="elemref/ref_radiogroup.html">radiogroup</A> element. Only one of the radio buttons in a
+radio group can be selected at once. Clicking one will turn off all of the others
+in the same group. The following example demonstrates this.
+</P>
+
+
+Example 2.4.3:
+<A HREF='examples/ex_inputs_3.xul.txt'>Source</A>
+<A HREF="examples/ex_inputs_3.xul" ONCLICK="window.open('examples/ex_inputs_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;radiogroup&gt;
+  &lt;radio id="orange" label="Orange"/&gt;
+  &lt;radio id="violet" selected="true" label="Violet"/&gt;
+  &lt;radio id="yellow" label="Yellow"/&gt;
+&lt;/radiogroup&gt;</PRE></DIV>
+
+
+
+<P>
+Like buttons, check boxes and radio buttons are made up of a label and an
+image, where the image switches between checked and unchecked when it is
+pressed. Check boxes have many of the same attributes as buttons:
+</P>
+
+<UL>
+  <LI><DIV CLASS="attrib">label</DIV>
+    The label on the check box or radio button.
+  </LI>
+  <LI><DIV CLASS="attrib">disabled</DIV>
+    Set this to either <SPAN CLASS="aval">true</SPAN> or
+    <SPAN CLASS="aval">false</SPAN> to disable or enable the check box or
+    radio button.
+  </LI>
+  <LI><DIV CLASS="attrib">accesskey</DIV>
+    The shortcut key that can be used to select the element. The letter specified
+    is usually drawn underlined in the label.
+  </LI>
+</UL>
+
+<HR>
+<P>
+<A HREF="lists.html">(Next)</A>
+In the next section, we will look at some elements for creating list boxes.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_inputs_1.xul.txt'>2.4.1</A>
+  <A HREF='examples/ex_inputs_2.xul.txt'>2.4.2</A>
+  <A HREF='examples/ex_inputs_3.xul.txt'>2.4.3</A>
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-inputs.xul.txt'>Source</A>
+<A HREF="examples/findfile/findfile-inputs.xul" ONCLICK="window.open('examples/findfile/findfile-inputs.xul','xulff','chrome,resizable'); return false;">View</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="2.3 - Adding Labels and Images"
+     href="textimage.html">Previous</a>
+
+
+  <a class="nextlink" title="2.5 - List Controls"
+     href="lists.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

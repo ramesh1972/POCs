@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+
+<element name='tabpanels'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/tabpanel.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_tabpanels.html</reference>
+  A container to hold the set of pages in a tabbox. The tabpanels element  should be placed in a tabbox. The children of the tabpanels element become  the panels of the tabbox. Usually, the children are tabpanel elements. By  clicking the first tab, the first panel will be displayed. By clicking the  second tab, the second panel will be displayed and so on.  
+
+<implements>nsIAccessibleProvider</implements>
+<attr name='selectedIndex' type='integer'>
+  Gets and sets the index of the currently selected panel in the deck.  The first item is at index 0.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the tabpanels.
+</prop>
+<prop name='selectedIndex' type='integer'>
+  Gets and sets the index of the currently selected panel. A non-bubbling select  event will be sent to the tabpanels element when the selection changes.
+</prop>
+<prop name='selectedPanel' type='tabpanel element'>
+  Holds a reference to the currently selected tabpanel. You can assign a  value to this property to change the displayed tab.
+</prop>
+</element>

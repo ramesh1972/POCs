@@ -1,0 +1,500 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="advbtns.html"> 
+ <link rel="next" href="boxstyle.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - The Box Model</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 3.1 - The Box Model 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <SPAN CLASS="currentpage">The Box Model</SPAN></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="2.9 - More Button Features"
+     href="advbtns.html">Previous</a>
+
+
+  <a class="nextlink" title="3.2 - Element Positioning"
+     href="boxstyle.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>The Box Model</h2>
+
+<P>
+In this section, we'll look at how XUL handles layout.
+</P>
+
+<H3>Introduction to Boxes</H3>
+
+<P>
+The main form of layout in XUL is called the 'Box Model'. This model allows
+you to divide a window into a series of boxes. Elements inside of a box will
+orient themselves horizontally or vertically. By combining a series of
+boxes, spacers and elements with <SPAN CLASS="attrib">flex</SPAN> attributes,
+you can control the layout of a window.
+</P>
+
+<P>
+Although a box is the fundamental part of XUL element layout, it follows
+a few very simple rules. A box can lay out its children in one of two
+orientations, either horizontally or vertically. A horizontal box lines up its
+elements horizontally and a vertical box orients its elements vertically. You
+can think of a box as one row or one column from an HTML table. Various
+attributes placed on the child elements in addition to some CSS style
+properties control the exact position and size of the children.
+</P>
+
+
+<P>
+The basic syntax of a box is as follows:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;hbox&gt;
+  ...
+&lt;/hbox&gt;
+
+&lt;vbox&gt;
+  ...
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_hbox.html">hbox</A> element is used to create a horizontally
+oriented box. Each element placed in the <A CLASS="tag" HREF="elemref/ref_hbox.html">hbox</A> will
+be placed horizontally in a row. The <A CLASS="tag" HREF="elemref/ref_vbox.html">vbox</A> element
+is used to create a vertically oriented box. Added elements will be placed
+underneath each other in a column.
+</P>
+
+<P>
+There is also a generic <A CLASS="tag" HREF="elemref/ref_box.html">box</A> element which defaults
+to horizontal orientation, meaning that it is equivalent to the
+<A CLASS="tag" HREF="elemref/ref_hbox.html">hbox</A>. However, you can use the
+<SPAN CLASS="attrib">orient</SPAN> attribute to control the orientation of
+the box. You can set this attribute to the value
+<SPAN CLASS="aval">horizontal</SPAN> to create a horizontal box and
+<SPAN CLASS="aval">vertical</SPAN> to create a vertical box.
+
+<P>
+Thus, the two lines below are equivalent:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;vbox&gt;
+
+&lt;box orient="vertical"&gt;</PRE></DIV>
+
+
+
+<P>
+The following example shows how to place three buttons vertically.
+</P>
+
+
+Example 3.1.1:
+<A HREF='examples/ex_boxes_1.xul.txt'>Source</A>
+<A HREF="examples/ex_boxes_1.xul" ONCLICK="window.open('examples/ex_boxes_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;vbox&gt;
+  &lt;button id="yes" label="Yes"/&gt;
+  &lt;button id="no" label="No"/&gt;
+  &lt;button id="maybe" label="Maybe"/&gt;
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/boxes-ex1.jpg" ALIGN="left" ALT="" WIDTH=98 HEIGHT=113>
+The three buttons here are oriented vertcally as was indicated by the box.
+To change the buttons so that they are oriented horizontally, all you need to
+do is change the <A CLASS="tag" HREF="elemref/ref_vbox.html">vbox</A> element to a
+<A CLASS="tag" HREF="elemref/ref_hbox.html">hbox</A> element.
+</P>
+
+<P>
+You can add as many elements as you want inside a box, including other boxes.
+In the case of a horizontal box, each additional element will be placed to the
+right of the previous one. The elements will not wrap at all so the more
+elements you add, the wider the window will be. Similarly, each element added
+to a vertical box will be placed underneath the previous one. The example below
+shows a simple login prompt:
+</P>
+
+
+Example 3.1.2:
+<A HREF='examples/ex_boxes_2.xul.txt'>Source</A>
+<A HREF="examples/ex_boxes_2.xul" ONCLICK="window.open('examples/ex_boxes_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;vbox&gt;
+  &lt;hbox&gt;
+    &lt;label control="login" value="Login:"/&gt;
+    &lt;textbox id="login"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox&gt;
+    &lt;label control="pass" value="Password:"/&gt;
+    &lt;textbox id="pass"/&gt;
+  &lt;/hbox&gt;
+  &lt;button id="ok" label="OK"/&gt;
+  &lt;button id="cancel" label="Cancel"/&gt;
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/boxes-ex2.jpg" ALIGN="right" ALT="" WIDTH=227 HEIGHT=132>
+Here four elements have been oriented vertically, two inner
+<A CLASS="tag" HREF="elemref/ref_hbox.html">hbox</A> tags and two
+<A CLASS="tag" HREF="elemref/ref_button.html">button</A> elements. Notice that only the
+elements that are direct descendants of the box are oriented vertcally.
+The labels and textboxes are inside the inner <A CLASS="tag" HREF="elemref/ref_hbox.html">hbox</A>
+elements, so they are oriented according to those boxes, which are horizontal.
+You can see in the image that each label and textbox is oriented horizontally.
+</P>
+
+<P>
+If you look closely at the image of the login dialog, you can see that the two
+textboxes are not aligned with each other horizontally. It would
+probably be better if they were. In order to do this we need to add some
+additional boxes.
+</P>
+
+
+Example 3.1.3:
+<A HREF='examples/ex_boxes_3.xul.txt'>Source</A>
+<A HREF="examples/ex_boxes_3.xul" ONCLICK="window.open('examples/ex_boxes_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;vbox&gt;
+  &lt;hbox&gt;
+    &lt;vbox&gt;
+      &lt;label control="login" value="Login:"/&gt;
+      &lt;label control="pass" value="Password:"/&gt;
+    &lt;/vbox&gt;
+    &lt;vbox&gt;
+      &lt;textbox id="login"/&gt;
+      &lt;textbox id="pass"/&gt;
+    &lt;/vbox&gt;
+  &lt;/hbox&gt;
+  &lt;button id="ok" label="OK"/&gt;
+  &lt;button id="cancel" label="Cancel"/&gt;
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/boxes-ex3.jpg" ALIGN="right" ALT="" WIDTH=227 HEIGHT=132>
+Notice how the text boxes are now aligned with each other. To do this, we
+needed to add boxes inside of the main box. The two labels and textboxes
+are all placed inside a horizontal box. Then, the labels are placed inside
+another box, this time a vertical one, as are the textboxes. This inner
+box is what makes the elements orient vertically. The horizontal box is
+needed as we want the labels vbox and the inputs vbox to be placed horizontally
+with each other. If this box was removed, both textboxes would appear below
+both of the labels.
+</P>
+
+<P>
+The issue now is that the 'Password' label is too high. We should really use
+the <A CLASS="tag" HREF="elemref/ref_grid.html">grid</A> element here to fix this which we'll learn
+about in a later section.
+</P>
+
+<H3>Boxes in the Find Files Dialog</H3>
+
+<DIV CLASS="task">
+
+<P>
+Let's add some boxes to the find files dialog. A vertical box will be added
+around all of the elements, and a horizontal box with be added around the
+textbox and the buttons. The result will be that the buttons will appear
+below the textbox.
+</P>
+
+
+<DIV CLASS="sample"><PRE><SPAN STYLE="color:red;">&lt;vbox flex="1"&gt;
+
+  &lt;description&gt;
+    Enter your search criteria below and select the Find button to begin
+    the search.
+  &lt;/description&gt;
+  
+  &lt;hbox&gt;</SPAN>
+    &lt;label value="Search for:" control="find-text"/&gt;
+    &lt;textbox id="find-text"/&gt;
+<SPAN STYLE="color:red;">  &lt;/hbox&gt;</SPAN>
+
+<SPAN STYLE="color:red;">  &lt;hbox&gt;
+    &lt;spacer flex="1"/&gt;</SPAN>
+
+    &lt;button id="find-button" label="Find"/&gt;
+    &lt;button id="cancel-button" label="Cancel"/&gt;
+<SPAN STYLE="color:red;">  &lt;/hbox&gt;
+&lt;/vbox&gt;</SPAN></PRE></DIV>
+
+
+
+<P>
+The vertical box causes the main text, the box with the textbox and the
+box with the buttons to orient vertically. The inner boxes orient their
+elements horizontally. As you see in the image below, the label and text
+input are placed side by side. The spacer and two buttons are also placed
+horizontally in their box. Notice how the spacer causes the buttons to
+appear on the right side, because it is flexible.
+</P>
+
+<IMG SRC="images/boxes1.jpg" ALT="" WIDTH=466 HEIGHT=99>
+</DIV>
+
+<HR>
+<P>
+<A HREF="boxstyle.html">(Next)</A>
+In the next section, we'll look at specifying the sizes of individual
+elements and how to constrain their sizes.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_boxes_1.xul.txt'>3.1.1</A>
+  <A HREF='examples/ex_boxes_2.xul.txt'>3.1.2</A>
+  <A HREF='examples/ex_boxes_3.xul.txt'>3.1.3</A>
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-boxes.xul.txt'>Source</A>
+<A HREF="examples/findfile/findfile-boxes.xul" ONCLICK="window.open('examples/findfile/findfile-boxes.xul','xulff','chrome,resizable'); return false;">View</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="2.9 - More Button Features"
+     href="advbtns.html">Previous</a>
+
+
+  <a class="nextlink" title="3.2 - Element Positioning"
+     href="boxstyle.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

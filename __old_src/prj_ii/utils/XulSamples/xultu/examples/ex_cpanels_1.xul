@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 4.5.1"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<toolbox>
+  <toolbar id="nav-toolbar">
+    <toolbarbutton label="Back"/>
+    <toolbarbutton label="Forward"/>
+    <textbox id="urlfield"/>
+  </toolbar>
+</toolbox>
+
+<iframe id="content-body" src="http://www.mozilla.org" flex="1"/>
+
+
+</window>
+

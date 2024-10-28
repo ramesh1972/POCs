@@ -1,0 +1,52 @@
+.tdbgdark
+{
+    BACKGROUND-COLOR: #004a00;
+    BACKGROUND-IMAGE: none
+}
+.tdbglight
+{
+    BACKGROUND-COLOR: #dadac5
+}
+.footernote
+{
+    COLOR: red;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 12px
+}
+.tablefooter
+{
+    COLOR: red;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 10px
+}
+.smalltext
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 10px
+}
+.tlightb
+{
+    BACKGROUND-COLOR: aqua
+}
+.whiteboldtext
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+.insertWebElementBody
+{
+    BACKGROUND-COLOR: lemonchiffon
+}
+.insertWebElementHead
+{
+    BACKGROUND-COLOR: gray
+}
+.insertWebElementHeadText
+{
+    COLOR: navy;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}

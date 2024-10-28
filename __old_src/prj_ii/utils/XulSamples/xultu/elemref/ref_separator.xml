@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+
+<element name='separator'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_separator.html</reference>
+  Creates a small separating gap between elements. This type of separator should be  used to separate parts of a dialog. It doesn't draw a bar visually, but is just a  small space. It is functionally equivalent to a spacer except it defaults to a  small size (usually 1.5 ems).  
+
+<attr name='orient'>
+  Used to specify whether the separator is a horizontal or vertical separator.  Note that the values are the reverse of what seems more likely.
+<value name='horizontal' default='true'>
+    The separator separates vertically placed elements.
+</value>
+<value name='vertical'>
+    The separator separates horizontally placed elements.
+</value>
+</attr>
+<class name='groove'>
+  A grooved separator.
+</class>
+<class name='groove-thin'>
+  A thin grooved separator.
+</class>
+<class name='thin'>
+  A thinner separator which is usually 0.5 ems. 
+</class>
+</element>

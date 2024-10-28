@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+
+<element name='toolbarset' spec='Firefox'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_toolbarset.html</reference>
+  This element is used as a container for custom toolbars, which are added in  the custom toolbar dialog.
+
+</element>

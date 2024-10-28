@@ -1,0 +1,89 @@
+<% 
+	Dim lDay
+	Dim lWeekDay
+	Dim lTime1
+   
+	lTime1 = Now()
+	lWeekDay = Weekday(lTime1)
+	lDay = Weekdayname(lWeekDay)
+%>
+   
+<script Language="JavaScript">
+var timerID = null;
+var timerRunning = false;
+
+function gettheDate() {
+	Todays = new Date();
+	TheDate = (Todays.getMonth()+ 1) +"/"+ Todays.getDate() + "/" + Todays.getYear(); 
+
+	return TheDate;
+}
+
+function stopclock (){
+	if(timerRunning)
+		clearTimeout(timerID);
+	timerRunning = false;
+}
+
+function startclock () {
+	stopclock();
+	gettheDate()
+	showtime();
+}
+
+function showtime () {
+	var now = new Date();
+	var hours = now.getHours();
+	var minutes = now.getMinutes();
+	var seconds = now.getSeconds()
+	var timeValue = "" + ((hours >12) ? hours -12 :hours)
+
+	var ldate = gettheDate();
+	
+	timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+	timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+	timeValue += (hours >= 12) ? " P.M." : " A.M."
+	document.all.divTime.innerHTML = "<font style='color:orange'>" + ldate + ", <%=lDay%>" + "</font><BR>" + "<font class='whiteboldtext'><B>" + timeValue + "</font></B>";
+
+	// you could replace the above with this
+	// and have a clock on the status bar:
+	// window.status = timeValue;
+
+	timerID = setTimeout("showtime()",1000);
+	timerRunning = true;
+}
+// end Hide -->
+</script>
+
+<style>
+a {text-decoration:none}
+a:hover { color:#3333FF}
+</style>
+<title></title>
+<LINK REL=StyleSheet HREF="../timesheet/theme.css" >
+<% ' Compute the Time
+	Dim lTime
+	lTime = Now()
+%>
+<TABLE width="100%" cellspacing="0" cellpadding="0">
+<tr>
+	<td bgcolor="black" width="20%" align="middle"><div id="divTime"></div></td>
+	<TD width="80%"><IMG height=78 src="../timesheet/images/psdb-earth.bmp" width="100%"></TD>
+</tr>
+</TABLE>
+<TABLE border=1 width="100%" cellspacing="0" align="center" cellpadding="0">
+<TR>
+	<TD align=center bgcolor="lightgreen" width=15%><A href="psdb-bugs-group-select.asp"><font style="text-decoration: none;color: blue;"><div id="oDivSelGroup"><B>Select Group</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=14%><A href="psdb-bugs-create.asp"><font style="text-decoration: none;color: blue;"><div id="oDivCreate"><B>Report Bugs</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=14%><A href="psdb-bugs-report-select.asp"><font style="text-decoration: none;color: blue;"><div id="oDivReportSel"><B>Query Bugs</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=14%><A href="psdb-bugs-chart-select.asp"><font style="text-decoration: none;color: blue;"><div id="oDivChartSel"><B>Bug Charts</B></div></font></A></TD>	
+	<TD align="center" bgcolor="lightgreen" width=14%><A href="psdb-bugs-update-select.asp"><font style="text-decoration: none;color: blue;"><div id="oDivUpdateSel"><B>Update Bugs</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=14%><A href="psdb-bugs-delete-query.asp"><font style="text-decoration: none;color: blue;"><div id="oDivDeleteQry"><B>Delete Bugs</B></div></font></A></TD>			
+	<TD align="center" bgcolor="lightgreen" width=15%><A href="psdb-bugs-cat-start.asp"><font style="text-decoration: none;color: blue;"><div id="oDivCat"><B>Categories</B></div></font></A></TD>		
+</TR>
+</TABLE>
+
+<script language="javascript">
+startclock();
+</script>
+

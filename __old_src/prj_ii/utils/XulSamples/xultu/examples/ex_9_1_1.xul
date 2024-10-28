@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window title="Widget Dragger" id="test-window"
+  orient="horizontal"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script src="chrome://global/content/nsDragAndDrop.js"/>
+<script src="chrome://global/content/nsTransferable.js"/> 
+<script src="dragboard.js"/>
+
+<stack id="board"
+       style="width:300px; height: 300px; max-width: 300px; max-height: 300px"
+  ondragover="nsDragAndDrop.dragOver(event,boardObserver)"
+  ondragdrop="nsDragAndDrop.drop(event,boardObserver)">
+</stack>
+
+<vbox>
+
+<button label="Button"
+        elem="button" ondraggesture="nsDragAndDrop.startDrag(event,listObserver)"/>
+<button label="Check Box"
+        elem="checkbox" ondraggesture="nsDragAndDrop.startDrag(event,listObserver)"/>
+<button label="Text Box"
+        elem="textbox" ondraggesture="nsDragAndDrop.startDrag(event,listObserver)"/>
+</vbox>
+
+</window>
+

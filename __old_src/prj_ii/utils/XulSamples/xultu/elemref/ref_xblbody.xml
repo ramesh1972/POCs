@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='body' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblmethods.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblbody.html</reference>
+  The content of the body element should be the code to execute when the  method is called.  
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the body with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+</element>

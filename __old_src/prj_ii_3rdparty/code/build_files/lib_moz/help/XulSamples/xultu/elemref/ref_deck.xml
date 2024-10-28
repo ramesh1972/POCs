@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<element name='deck'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/stacks.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_deck.html</reference>
+  An element that displays only one of its children at a time. The selectedIndex  attribute determines which child is displayed.  
+
+<attr name='selectedIndex' type='integer'>
+  Gets and sets the index of the currently selected panel in the deck.  The first item is at index 0.
+</attr>
+<prop name='selectedIndex' type='integer'>
+  Gets and sets the index of the currently selected panel in the deck.  The first item is at index 0. A non-bubbling select event will be sent to  the deck when the selected panel is changed.
+</prop>
+<prop name='selectedPanel' type='element'>
+  Holds a reference to the currently selected panel in the deck. Assign a value  to this property to modify the selected panel. A non-bubbling select event  will be sent to the deck when the selected panel is changed.
+</prop>
+</element>

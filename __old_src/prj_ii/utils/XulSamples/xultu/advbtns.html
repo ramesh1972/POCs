@@ -1,0 +1,445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="springs.html"> 
+ <link rel="next" href="boxes.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - More Button Features</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 2.9 - More Button Features 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <SPAN CLASS="currentpage">More Button Features</SPAN></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="2.8 - Using Spacers"
+     href="springs.html">Previous</a>
+
+
+  <a class="nextlink" title="3.1 - The Box Model"
+     href="boxes.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>More Button Features</h2>
+
+<P>
+In this section, we will look at some additional features of buttons.
+</P>
+
+<H3>Adding an Image</H3>
+
+<P>
+You can add an image to a button by specifying a URL in the
+<SPAN CLASS="attrib">image</SPAN> attribute. The image is loaded from
+the URL, which can be a relative or absolute URL, and then the image
+is displayed on the button.
+<P>
+
+<P>
+The button below will have both a label and the image 'happy.png'. The image
+will appear to the left of the label. You can change this position by using
+two other attributes. This will be explained in a moment.
+</P>
+
+
+Example 2.9.1:
+<A HREF='examples/ex_advbtns_1.xul.txt'>Source</A>
+<A HREF="examples/ex_advbtns_1.xul" ONCLICK="window.open('examples/ex_advbtns_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button label="Help" image="happy.png"/></PRE></DIV>
+
+
+
+<P>
+Another way to specify the image by using the CSS
+<SPAN CLASS="attrib">list-style-image</SPAN> style property on the
+button. This is designed to allow the 'skin' (in this case, the appearance
+of the image) to be changed without changing the XUL file. An example is
+shown below.
+</P>
+
+
+Example 2.9.2:
+<A HREF='examples/ex_advbtns_2.xul.txt'>Source</A>
+<A HREF="examples/ex_advbtns_2.xul" ONCLICK="window.open('examples/ex_advbtns_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button id="find-button"
+  label="Find" style="list-style-image: url('happy.png')"/&gt;</PRE></DIV>
+
+
+    
+<P> 
+In this case, the image 'happy.png' is displayed on the button. The
+<SPAN CLASS="attrib">style</SPAN> attribute functions similar to its
+HTML counterpart. In general, it can be used on all XUL elements. Note
+that you really should put the style declarations in a separate style sheet.
+</P>
+
+<H3>Positioning the Images</H3>
+
+<P>
+By default, the image on a button will appear to the left of the text label.
+There are two attributes that can be used to control this position.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">dir</SPAN> attribute controls the direction of the
+image and text. By setting this attribute to the value
+<SPAN CLASS="aval">reverse</SPAN>, the image will be placed on the right side
+of the text. By using the value <SPAN CLASS="aval">normal</SPAN>, or leaving the
+attribute out entirely, the image will be placed on the left side of the text.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">orient</SPAN> attribute can be used to place the image
+above or below the text. The default value is <SPAN CLASS="aval">horizontal</SPAN>
+which is used to place the image on the left or right. You can also use the value
+<SPAN CLASS="aval">vertical</SPAN> to place the image above or below. In this
+case, the <SPAN CLASS="attrib">dir</SPAN> attribute controls the placement above
+or below. The same values are used, where <SPAN CLASS="aval">normal</SPAN> means
+place the image above the text, and <SPAN CLASS="aval">reverse</SPAN> means place the
+image below the text.
+</P>
+
+
+
+Example 2.9.3:
+<A HREF='examples/ex_advbtns_3.xul.txt'>Source</A>
+<A HREF="examples/ex_advbtns_3.xul" ONCLICK="window.open('examples/ex_advbtns_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button label="Left" image="happy.png"/&gt;
+&lt;button label="Right" image="happy.png" dir="reverse"/&gt;
+&lt;button label="Above" image="happy.png" orient="vertical"/&gt;
+&lt;button label="Below" image="happy.png" orient="vertical" dir="reverse"/&gt;</PRE></DIV>
+
+
+
+<P ALIGN="CENTER">
+<IMG SRC="images/advbtns1.jpg" ALT="">
+</P>
+
+<P>
+The example here shows all four types of alignment of buttons. Note that the
+two attributes are not specified when the default value can be used.
+</P>
+
+<H3>Buttons with Extra Content</H3>
+
+<P>
+Buttons may have arbitrary markup contained inside them, and it will be
+rendered inside the button. You probably wouldn't use this very often,
+but you might use it when creating custom elements.
+</P>
+
+<P>
+For example, the following will create a button where two of the words
+are red:
+</P>
+
+
+Example 2.9.4:
+<A HREF='examples/ex_advbtns_4.xul.txt'>Source</A>
+<A HREF="examples/ex_advbtns_4.xul" ONCLICK="window.open('examples/ex_advbtns_4.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button&gt;
+  &lt;description value="This is a"/&gt;
+  &lt;description value="rather strange" style="color: red;"/&gt;
+  &lt;description value="button"/&gt;
+&lt;/button&gt;</PRE></DIV>
+
+
+
+<P>
+Any XUL element may be placed inside the button. HTML elements will be
+ignored, so you need to wrap them inside a <A CLASS="tag" HREF="elemref/ref_description.html">description</A>
+element. If you specify the <SPAN CLASS="attrib">label</SPAN> attribute
+on the button, it will override any content placed inside the button.
+</P>
+
+<P>
+You can place a <A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A> inside the button to cause a
+menu to drop down when the button is pressed, much like the
+<A CLASS="tag" HREF="elemref/ref_menulist.html">menulist</A>. However, in this case you must set the
+<SPAN CLASS="attrib">type</SPAN> attribute to the value
+<SPAN CLASS="aval">menu</SPAN>.
+</P>
+
+
+Example 2.9.5:
+<A HREF='examples/ex_advbtns_5.xul.txt'>Source</A>
+<A HREF="examples/ex_advbtns_5.xul" ONCLICK="window.open('examples/ex_advbtns_5.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button type="menu" label="Device"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Printer"/&gt;
+    &lt;menuitem label="Mouse"/&gt;
+    &lt;menuitem label="Keyboard"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;</PRE></DIV>
+
+
+
+<P>
+In this example, the user may click the button to pop up a menu containing
+three items. Note that selecting one of these menu items doesn't change the
+label on the button, unlike a <A CLASS="tag" HREF="elemref/ref_menulist.html">menulist</A>. This type of
+button is intended to be used like a menu, with scripts attached to each item
+to perform a task. We'll see more on menus later.
+</P>
+
+<P>
+<IMG SRC="images/advbtns2.jpg" ALIGN="right" ALT="">
+You can also set the <SPAN CLASS="attrib">type</SPAN> attribute to the value
+<SPAN CLASS="aval">menu-button</SPAN>. This also creates a button with a menu,
+but the appearance will be different. The image to the right shows the difference.
+The left one is a 'menu' and the second one is a 'menu-button'. It has an arrow
+indicating the presence of a menu. For the 'menu', the user may click anywhere on
+the button to show the menu. For the 'menu-button', the user must click the arrow
+to show the menu.
+</P>
+
+<HR>
+<P>
+<A HREF="boxes.html">(Next)</A>
+Next, we'll learn more details about how XUL elements are positioned in a window.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_advbtns_1.xul.txt'>2.9.1</A>
+  <A HREF='examples/ex_advbtns_2.xul.txt'>2.9.2</A>
+  <A HREF='examples/ex_advbtns_3.xul.txt'>2.9.3</A>
+  <A HREF='examples/ex_advbtns_4.xul.txt'>2.9.4</A>
+  <A HREF='examples/ex_advbtns_5.xul.txt'>2.9.5</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="2.8 - Using Spacers"
+     href="springs.html">Previous</a>
+
+
+  <a class="nextlink" title="3.1 - The Box Model"
+     href="boxes.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<wizard id="example-window" title="Select a Dog Wizard"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <wizardpage>
+    <description>
+      This wizard will help you select the type of dog that is best for you."
+    </description>
+    <label value="Why do you want a dog?"/>
+    <menulist>
+      <menupopup>
+        <menuitem label="To scare people away"/>
+        <menuitem label="To get rid of a cat"/>
+        <menuitem label="I need a best friend"/>
+      </menupopup>
+    </menulist>
+  </wizardpage>
+
+  <wizardpage description="Dog Details">
+    <label value="Provide additional details about the dog you would like:"/>
+    <radiogroup>
+      <caption label="Size"/>
+      <radio value="small" label="Small"/>
+      <radio value="large" label="Large"/>
+    </radiogroup>
+    <radiogroup>
+      <caption label="Gender"/>
+      <radio value="male" label="Male"/>
+      <radio value="female" label="Female"/>
+    </radiogroup>
+  </wizardpage>
+
+</wizard>
+

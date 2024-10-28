@@ -1,0 +1,40 @@
+From C++ to HTML
+----------------
+c++ char		html char		in JS		back in c++ after submit
+no value		empty			
+
+''			no value attrib		empty		null	
+"''"			''			''		
+
+""			no value attrib		empty		null	
+""""			no value attrib, ??	empty		null
+
+'a'			a			a
+'4'			4			4
+
+"a"			a			a
+'4'			4			4
+
+a-z			a-z			a-z
+1-9			1-9			1-9
+
+&			&amp;			&		&
+'&'			&amp;			&		&
+"&"			&amp;			&		&
+
+<			"<"			<		<
+'<'			"<"			<		<
+"<"			"<"			<		<
+
+>			considered as a closing empty		null
+			&gt
+'>'			">"			>		>
+
+'<a-z>'			"<a-z>"			<a-z>		empty	
+From HTMl to C++
+----------------
+html char		c++ char			
+empty			null
+a-z			a-z
+&			&
+<,>			<,>

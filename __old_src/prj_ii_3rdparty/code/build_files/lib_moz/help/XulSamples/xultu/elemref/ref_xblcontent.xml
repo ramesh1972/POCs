@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+
+<element name='content' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblcontent.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblcontent.html</reference>
+  Used to define the anonymous content of a binding. The elements within the  content tag become the anonymous content of the element bound to. The content  is visible on screen as if it was present directly in the XUL file, however  the elements cannot be seen via the normal DOM functions.        You need to use the  getAnonymousNodes   function of the XUL document to retrieve the anonymous content. The only XBL  element that should appear inside the content tag is the xbl tag.        You can place the XBL inherits attribute on any element within the content.  This is used to have attributes of the bound element be placed on the inner  content. This attribute must be in the XBL namespace.  
+<html><![CDATA[
+<p>  Used to define the anonymous content of a binding. The elements within the  content tag become the anonymous content of the element bound to. The content  is visible on screen as if it was present directly in the XUL file, however  the elements cannot be seen via the normal DOM functions.  </p>  <p>  You need to use the <a href='ref_XULDocument.html#prop_getAnonymousNodes'>getAnonymousNodes</a>  function of the XUL document to retrieve the anonymous content. The only XBL  element that should appear inside the content tag is the xbl tag.  </p>  <p>  You can place the XBL inherits attribute on any element within the content.  This is used to have attributes of the bound element be placed on the inner  content. This attribute must be in the XBL namespace.  </p>
+]]></html>
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the content with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+</element>

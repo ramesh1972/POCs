@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='bindings' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/introxbl.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblbindings.html</reference>
+  The root node of an XBL file. It should contain one or more xbl tags.  
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the bindings with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+</element>

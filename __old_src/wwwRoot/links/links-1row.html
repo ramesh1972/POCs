@@ -1,0 +1,569 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<style>
+A:hover
+{
+	color: red; 
+	text-decoration: underline; 
+}
+
+.linkstyle_head
+{
+    FONT-FAMILY: Arial
+	color: #000080; 
+	font-size: 11pt; 
+	text-decoration: none; 
+}
+
+.linkstyle_row
+{
+    FONT-FAMILY: Arial
+	color: #000080; 
+	font-size: 8pt; 
+	text-decoration: none; 
+}
+</style>
+
+<script language="JScript">
+// Global vars
+var bExpanded0;
+var bHeaderCreated0;
+var bExpanded1;
+var bHeaderCreated1;
+var bExpanded2;
+var bHeaderCreated2;
+var bExpanded3;
+var bHeaderCreated3;
+
+// Init vars
+bExpanded0 = false;
+bHeaderCreated0 = false;
+bExpanded1 = false;
+bHeaderCreated1 = false;
+bExpanded2 = false;
+bHeaderCreated2 = false;
+bExpanded3 = false;
+bHeaderCreated3 = false;
+
+// Function to expand and collapse listings
+function ExpandCollapse0() {
+	var iIdx,iLen;
+	
+	// If expanding call CreateBody0 else collapse
+	if (bExpanded0 == true) {
+		iLen = oTBody0.rows.length;
+		for (iIdx=1; iIdx<iLen ; iIdx++) {
+			oTBody0.deleteRow();
+		}
+		bExpanded0 = false;
+	}
+	else {
+		CreateBody0();
+	}
+}
+
+// Function to expand and collapse listings
+function ExpandCollapse1() {
+	// If expanding call CreateBody0 else collapse
+	if (bExpanded1 == true) {
+		oTBody1.deleteRow();
+		bExpanded1 = false;
+	}
+	else {
+		CreateBody1();
+	}
+}
+
+// Function to expand and collapse listings
+function ExpandCollapse2() {
+	var iIdx,iLen;
+	
+	// If expanding call CreateBody0 else collapse
+	if (bExpanded2 == true) {
+		iLen = oTBody2.rows.length;
+		for (iIdx=1; iIdx<iLen ; iIdx++) {
+			oTBody2.deleteRow();
+		}
+		bExpanded2 = false;
+	}
+	else {
+		CreateBody2();
+	}
+}
+
+// Function to expand and collapse listings
+function ExpandCollapse3() {
+	var iIdx,iLen;
+	
+	// If expanding call CreateBody0 else collapse
+	if (bExpanded3 == true) {
+		iLen = oTBody3.rows.length;
+		for (iIdx=1; iIdx<iLen ; iIdx++) {
+			oTBody3.deleteRow();
+		}
+		bExpanded3 = false;
+	}
+	else {
+		CreateBody3();
+	}
+}
+
+// Function to create the tbody innerHTML content
+function CreateBody0() {
+	//Declare variables and create the header, footer, and caption.
+	var oRow, oCell;
+	var iIdx, iBody0Count;
+	
+	// Init vars
+	bExpanded0 = true;
+	iBody0Count = 112;
+
+	// Hrefs and Description
+	var aLinks = new Array;
+	var aDesc = new Array;
+ 
+	aLinks[0] = "Visual Basic";
+	aDesc[0] = "";
+	aLinks[1] = "http://msdn.microsoft.com/vbasic/";
+	aDesc[1] = "Homepage-Microsoft";
+	aLinks[2] = "http://www.vbthunder.com/";
+	aDesc[2] = "Homepage-www.vbthunder.com";
+	aLinks[3] = "http://www.vb-world.net/";
+	aDesc[3] = "HomePage-VB-World";
+	aLinks[4] = "http://www.vb-zone.com/default1.asp?Area=Visual+Basic";
+	aDesc[4] = "Homepage-VB Zone";
+	
+	aLinks[5] = "http://msdn.microsoft.com/library/default.asp?url=/library/en-us/vbref98/html/vbmsclroverview.asp";
+	aDesc[5] = "Reference-Microsoft";
+	aLinks[6] = "http://www.vbapi.com/ref/index.html";
+	aDesc[6] = "Reference-Windows API";
+	
+	aLinks[7] = "http://msdn.microsoft.com/library/default.asp?url=/library/en-us/vbcon98/html/vbconProgrammersGuide.asp";
+	aDesc[7] = "Guides-Microsoft";
+
+	aLinks[8] = "http://msdn.microsoft.com/vbasic/technical/articles.asp";
+	aDesc[8] = "Articles-Microsoft";
+	aLinks[9] = "http://www.vbwm.com/articles/";
+	aDesc[9] = "Articles-www.vbwm.com";
+	aLinks[10] = "http://visualbasic.about.com/mbody.htm";
+	aDesc[10] = "Articles-visualbasic.about.com";
+	aLinks[11] = "http://www.vb-world.net/articles/";
+	aDesc[11] = "Articles-VB-World";
+	
+	aLinks[12] = "http://msdn.microsoft.com/vbasic/technical/training.asp";
+	aDesc[12] = "Tutorial-Microsoft";
+	aLinks[13] = "http://www.guide2web.com/links/tutorials/vb.html";
+	aDesc[13] = "Tutorial-Web Guide";
+	aLinks[14] = "http://www.vbexplorer.com/vb_tutorials.htm";
+	aDesc[14] = "Tutorials-www.vbexplorer.com";
+	aLinks[15] = "http://robinmckay.topcities.com/resources.html";
+	aDesc[15] = "Tutorials-robinmckay.topcities.com";
+	
+	aLinks[16] = "http://msdn.microsoft.com/library/default.asp?url=/library/en-us/vbref98/html/vbsamppage.asp";
+	aDesc[16] = "Samples-Microsoft";
+	aLinks[17] = "http://www.vbcode.com/asp/code.asp?SortBy=Accessed&NumberToView=10";
+	aDesc[17] = "Samples-VB-Code";
+
+	aLinks[18] = "http://msdn.microsoft.com/vbasic/technical/techfaq.asp";
+	aDesc[18] = "FAQ-Microsoft";
+	aLinks[19] = "http://www.faqs.org/faqs/visual-basic-faq/";
+	aDesc[19] = "FAQ-www.faqs.org";
+	
+	aLinks[20] = "http://communities.microsoft.com/newsgroups/default.asp";
+	aDesc[20] = "Newsgroup-Microsoft";
+	aLinks[21] = "http://news.devx.com/";
+	aDesc[21] = "Newsgroup-DevX";
+	aLinks[22] = "http://www.vbwire.com/";
+	aDesc[22] = "Newsgroup-www.vbwire.com";
+	
+	aLinks[23] = "http://searchvb.techtarget.com/home/0,289692,sid8,00.html";
+	aDesc[23] = "Search-VB";
+	
+	aLinks[24] = "http://www.vbthunder.com/links.htm";
+	aDesc[24] = "Links-www.vbexplorer.com";
+	aLinks[25] = "http://searchvb.techtarget.com/bestWebLinks/0,289521,sid8,00.html";
+	aDesc[25] = "Links-VB-Code";
+	aLinks[26] = "http://abstractvb.com/links.asp?GID=22";
+	aDesc[26] = "Links-abstractvb.com";
+	
+	aLinks[27] = "http://www.devx.com/free/products/pgSearch.asp";
+	aDesc[27] = "Products-DevX";
+	aLinks[28] = "http://www.vbxtras.com/";
+	aDesc[28] = "Product-VB";
+	
+	aLinks[29] = "http://vb.oreilly.com/";
+	aDesc[29] = "Books-OReilly";
+	aLinks[30] = "http://www.wrox.com/Books/books.asp?sub_section=1&subject_id=5&subject=Visual+Basic";
+	aDesc[30] = "Books-Wrox";
+	aLinks[31] = "http://www.osborne.com/indexes/visual_basic.shtml";
+	aDesc[31] = "Books-Osborne";
+	aLinks[32] = "http://www.vb-world.net/books/";
+	aDesc[32] = "Books-VB-World";
+	aLinks[33] = "http://abstractvb.com/books.asp?GID=13";
+	aDesc[33] = "Books-abstractvb.com";
+
+	aLinks[34] = "http://www.visualbasiczone.com/";
+	aDesc[34] = "www.visualbasiczone.com";
+	aLinks[35] = "http://glowbutton.faithweb.com/";
+	aDesc[35] = "glowbutton.faithweb.com";
+	aLinks[36] = "http://www.developerfusion.com/";
+	aDesc[36] = "www.developerfusion.com";
+	aLinks[37] = "http://www.vbfreeware.com/";
+	aDesc[37] = "www.vbfreeware.com";
+	aLinks[38] = "http://www.visualbasiczone.com/";
+	aDesc[38] = "www.visualbasiczone.com";
+	aLinks[39] = "http://www.nantronix.com/";
+	aDesc[39] = "www.nantronix.com";
+	aLinks[40] = "http://vyaskn.tripod.com/";
+	aDesc[40] = "vyaskn.tripod.com";
+	aLinks[41] = "http://www.vbrad.com/";
+	aDesc[41] = "www.vbrad.com";
+	aLinks[42] = "http://www.vbplanet.net/";
+	aDesc[42] = "www.vbplanet.net";
+	aLinks[43] = "http://www.shiningstar.net/articles";
+	aDesc[43] = "www.shiningstar.net";
+	aLinks[44] = "http://www.visualbuilder.com/";
+	aDesc[44] = "www.visualbuilder.com";
+	aLinks[45] = "http://www.webtest2000.com/";
+	aDesc[45] = "www.webtest2000.com";
+	aLinks[46] = "http://www.eggheadcafe.com/";
+	aDesc[46] = "www.eggheadcafe.com";
+	aLinks[47] = "http://www.vbnetwork.net/";
+	aDesc[47] = "www.vbnetwork.net";
+	aLinks[48] = "http://www.vbexplorer.com";
+	aDesc[48] = "www.vbexplorer.com";
+	aLinks[49] = "http://www.edgeofnowhere.com/jeffsstudynotes/net/";
+	aDesc[49] = "www.edgeofnowhere.com";
+	aLinks[50] = "http://www.vbws.com/";
+	aDesc[50] = "www.vbws.com";
+	aLinks[51] = "http://www.htservices.com/Tools/VisualBasic/index.htm";
+	aDesc[51] = "www.htservices.com";
+	aLinks[52] = "http://personal.mia.bellsouth.net/mia/r/a/rapalloa/vbtoymaker/";
+	aDesc[52] = "personal.mia.bellsouth.net";
+	aLinks[53] = "http://www.vbdiamond.com/";
+	aDesc[53] = "www.vbdiamond.com";
+	aLinks[54] = "http://www.vbnexus.com/";
+	aDesc[54] = "www.vbnexus.com";
+	aLinks[55] = "http://vbdesignteam.com/";
+	aDesc[55] = "vbdesignteam.com";
+	aLinks[56] = "http://www.xbeat.net/vbspeed/index.htm";
+	aDesc[56] = "www.xbeat.net";
+	aLinks[57] = "http://www.v-tech.ws/";
+	aDesc[57] = "www.v-tech.ws";
+	aLinks[58] = "http://www.dotnetisp.com/";
+	aDesc[58] = "www.dotnetisp.com";
+	aLinks[59] = "http://www.dotnet247.com/";
+	aDesc[59] = "www.dotnet247.com";
+	aLinks[60] = "http://www.vbcodemagician.dk/";
+	aDesc[60] = "www.vbcodemagician.dk";
+	aLinks[61] = "http://oreillynet.com/";
+	aDesc[61] = "oreillynet.com";
+	aLinks[62] = "http://www.maxutil.com/";
+	aDesc[62] = "www.maxutil.com";
+	aLinks[63] = "http://www.geocities.com/vbsurf";
+	aDesc[63] = "www.geocities.com";
+	aLinks[64] = "http://www.vbusers.com/";
+	aDesc[64] = "www.vbusers.com";
+	aLinks[65] = "http://www.activelinx.co.uk/";
+	aDesc[65] = "www.activelinx.co.uk";
+	aLinks[66] = "http://clix.to/vb";
+	aDesc[66] = "clix.to";
+	aLinks[67] = "http://www.freedevelopertips.com/";
+	aDesc[67] = "www.freedevelopertips.com";
+	aLinks[68] = "http://www.neteng.org/";
+	aDesc[68] = "www.neteng.org";
+	aLinks[69] = "http://www.geocities.com/venky_dude/venkwork.htm";
+	aDesc[69] = "www.geocities.com";
+	aLinks[70] = "http://www.worldofdotnet.net/";
+	aDesc[70] = "www.worldofdotnet.net";
+	aLinks[71] = "http://www.c2i.fr/";
+	aDesc[71] = "www.c2i.fr";
+	aLinks[72] = "http://www.codebeach.com/";
+	aDesc[72] = "www.codebeach.com";
+	aLinks[73] = "http://www.saxsoft.com/";
+	aDesc[73] = "www.saxsoft.com";
+	aLinks[74] = "http://www.qbasicnews.com/";
+	aDesc[74] = "www.qbasicnews.com";
+	aLinks[75] = "http://www.devbeach.com/";
+	aDesc[75] = "www.devbeach.com";
+	aLinks[76] = "http://www.progsharehouse.com/index.pl";
+	aDesc[76] = "www.progsharehouse.com";
+	aLinks[77] = "http://www.aspwarriors.com/";
+	aDesc[77] = "www.aspwarriors.com";
+	aLinks[78] = "http://www.2enetworx.com/dev/";
+	aDesc[78] = "www.2enetworx.com";
+	aLinks[79] = "http://www.vb-links.com/";
+	aDesc[79] = "www.vb-links.com";
+	aLinks[80] = "http://www.database-applications.net/";
+	aDesc[80] = "www.database-applications.net";
+	aLinks[81] = "http://www.creations.per.sg/";
+	aDesc[81] = "www.creations.per.sg";
+	aLinks[82] = "http://www.computersmarts.net/";
+	aDesc[82] = "www.computersmarts.net";
+	aLinks[83] = "http://www.universalthread.com/";
+	aDesc[84] = "www.universalthread.com";
+	aLinks[85] = "http://www.v-tech.ws/vtech/devzone";
+	aDesc[85] = "www.v-tech.ws";
+	aLinks[86] = "http://www.mcpcentral.com/";
+	aDesc[86] = "www.mcpcentral.com";
+	aLinks[87] = "http://cuinl.tripod.com/";
+	aDesc[87] = "cuinl.tripod.com";
+	aLinks[88] = "http://www.freevbcode.com/";
+	aDesc[88] = "www.freevbcode.com";
+	aLinks[89] = "http://vb.onweb.cx/";
+	aDesc[89] = "vb.onweb.cx";
+	aLinks[90] = "http://www.vbwow.com/";
+	aDesc[90] = "www.vbwow.com";
+	aLinks[91] = "http://www.incognitasoftware.com/";
+	aDesc[91] = "www.incognitasoftware.com";
+	aLinks[92] = "http://www.planet-source-code.com/";
+	aDesc[92] = "www.planet-source-code.com";
+	aLinks[93] = "http://www.omarswan.cjb.net/";
+	aDesc[93] = "www.omarswan.cjb.net";
+	aLinks[94] = "http://www.mbvbsite.cjb.net/";
+	aDesc[94] = "www.mbvbsite.cjb.net";
+	aLinks[95] = "http://www.vbg1.com/";
+	aDesc[95] = "www.vbg1.com";
+	aLinks[96] = "http://www.allapi.net/";
+	aDesc[96] = "www.allapi.net";
+	aLinks[97] = "http://www.developersdomain.com/";
+	aDesc[97] = "www.developersdomain.com";
+	aLinks[98] = "http://www.codeonthenet.com/";
+	aDesc[98] = "www.codeonthenet.com";
+	aLinks[99] = "http://www.programmersheaven.com/";
+	aDesc[99] = "www.programmersheaven.com";
+	aLinks[100] = "http://www.a1vbcode.com/";
+	aDesc[100] = "www.a1vbcode.com";
+	aLinks[101] = "http://www.vbip.com/";
+	aDesc[101] = "www.vbip.com";
+	aLinks[102] = "http://www.vbcity.com/";
+	aDesc[102] = "www.vbcity.com";
+	aLinks[103] = "http://www.kosob.com/";
+	aDesc[103] = "www.kosob.com";
+	aLinks[104] = "http://blackbeltvb.com/";
+	aDesc[104] = "blackbeltvb.com";
+	aLinks[105] = "http://www.experts-exchange.com/Computers/Programming/Windows/Visual";
+	aDesc[105] = "www.experts-exchange.com";
+	aLinks[106] = "http://www.allexperts.com/getExpert.asp?Category=1048";
+	aDesc[106] = "www.allexperts.com";
+	aLinks[107] = "http://msdn.microsoft.com/vbasic/default.asp";
+	aDesc[108] = "msdn.microsoft.com";
+	aLinks[108] = "http://www.vb-web-directory.com/";
+	aDesc[108] = "www.vb-web-directory.com";
+	aLinks[109] = "http://www.mvps.org/vbnet/";
+	aDesc[109] = "www.mvps.org";
+	aLinks[110] = "http://www.vbtechniques.com/";
+	aDesc[110] = "www.vbtechniques.com";
+	aLinks[111] = "http://vbwire.com/";
+	aDesc[111] = "vbwire.com";
+	aLinks[112] = "http://www.cgvb.com/";
+	aDesc[112] = "www.cgvb.com";
+
+	// Insert rows and cells into the first body.
+	for (iIdx=0; iIdx<iBody0Count; iIdx++)
+	{
+		if (iIdx == 0) {
+			if (bHeaderCreated0 == false) {
+				oRow = oTBody0.insertRow();
+				oCell = oRow.insertCell();
+				oCell.innerHTML = "<A class=linkstyle_head href=javascript:ExpandCollapse0()><B>" + aLinks[iIdx] + "</B></A>";	
+				bHeaderCreated0 = true;
+			}
+		}
+		else {
+			oRow = oTBody0.insertRow();
+			oCell = oRow.insertCell();
+			oCell.innerHTML = "<A class=linkstyle_row href=" + aLinks[iIdx] + "><font size=1>&nbsp;&nbsp;&nbsp;&nbsp;" + aDesc[iIdx] + "</FONT></A><br>";  
+			
+		}
+	}
+
+	// Set the background color of the first body.
+	oTBody0.bgColor = "lemonchiffon";
+}
+
+// Function to create the tbody innerHTML content
+function CreateBody1() {
+	//Declare variables and create the header, footer, and caption.
+	var oRow, oCell;
+	var iIdx, iBody1Count;
+	
+	// Init vars
+	bExpanded1 = true;
+	iBody1Count = 4;
+
+	// hrefs
+	var aLinks = new Array;
+	aLinks[0] = "Active Server Pages";
+	aLinks[1] = "http://www.microst.com";
+	aLinks[2] = "http://www.master.com";
+	aLinks[3] = "http://www.vb.com";
+
+	// Description
+	var aDesc = new Array;
+	aDesc[0] = "";
+	aDesc[1] = "Microsoft Visual Basic";
+	aDesc[2] = "Master VB";
+	aDesc[3] = "VB";
+
+	if (bHeaderCreated1 == false) {
+		oRow = oTBody1.insertRow();
+		oCell = oRow.insertCell();
+		oCell.innerHTML = "<A class=linkstyle_head href=javascript:ExpandCollapse1()><B>" + aLinks[0] + "</B></A>";	
+		bHeaderCreated1 = true;
+	}
+
+	oRow = oTBody1.insertRow();
+	oCell = oRow.insertCell();
+	inHtml = "";
+	for (iIdx = 1; iIdx < iBody1Count; iIdx++) {
+		inHtml = inHtml + "&nbsp;&nbsp;&nbsp;&nbsp;<A class=linkstyle_row href=" + aLinks[iIdx] + ">" + aDesc[iIdx] + "</A><BR>";
+	}
+	
+	oCell.innerHTML = inHtml;
+
+	// Set the background color of the first body.
+	oTBody1.bgColor = "lemonchiffon";
+}
+
+// Function to create the tbody innerHTML content
+function CreateBody2() {
+	//Declare variables and create the header, footer, and caption.
+	var oRow, oCell;
+	var iIdx, iBody2Count;
+	
+	// Init vars
+	bExpanded2 = true;
+	iBody2Count = 4;
+
+	// hrefs
+	var aLinks = new Array;
+	aLinks[0] = ".NET Framework";
+	aLinks[1] = "http://www.microst.com";
+	aLinks[2] = "http://www.master.com";
+	aLinks[3] = "http://www.vb.com";
+
+	// Description
+	var aDesc = new Array;
+	aDesc[0] = "";
+	aDesc[1] = "Microsoft Visual Basic";
+	aDesc[2] = "Master VB";
+	aDesc[3] = "VB";
+
+	// Insert rows and cells into the first body.
+	for (iIdx=0; iIdx<iBody2Count; iIdx++)
+	{
+		if (iIdx == 0) {
+			if (bHeaderCreated2 == false) {
+				oRow = oTBody2.insertRow();
+				oCell = oRow.insertCell();
+				oCell.innerHTML = "<A class=linkstyle_head href=javascript:ExpandCollapse2()><B>" + aLinks[iIdx] + "</B></A>";	
+				bHeaderCreated2 = true;
+			}
+		}
+		else {
+			oRow = oTBody2.insertRow();
+			oCell = oRow.insertCell();
+			oCell.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;<A class=linkstyle_row href=" + aLinks[iIdx] + "><font size=2>" + aDesc[iIdx] + "</FONT></A>";  
+		}
+	}
+
+	// Set the background color of the first body.
+	oTBody2.bgColor = "lemonchiffon";
+}
+
+// Function to create the tbody innerHTML content
+function CreateBody3() {
+	//Declare variables and create the header, footer, and caption.
+	var oRow, oCell;
+	var iIdx, iBody3Count;
+	
+	// Init vars
+	bExpanded3 = true;
+	iBody3Count = 4;
+
+	// hrefs
+	var aLinks = new Array;
+	aLinks[0] = "Database";
+	aLinks[1] = "http://www.microst.com";
+	aLinks[2] = "http://www.master.com";
+	aLinks[3] = "http://www.vb.com";
+
+	// Description
+	var aDesc = new Array;
+	aDesc[0] = "";
+	aDesc[1] = "Microsoft Visual Basic";
+	aDesc[2] = "Master VB";
+	aDesc[3] = "VB";
+
+	// Insert rows and cells into the first body.
+	for (iIdx=0; iIdx<iBody3Count; iIdx++)
+	{
+		if (iIdx == 0) {
+			if (bHeaderCreated3 == false) {
+				oRow = oTBody3.insertRow();
+				oCell = oRow.insertCell();
+				oCell.innerHTML = "<A class=linkstyle_head href=javascript:ExpandCollapse3()><B>" + aLinks[iIdx] + "</B></A>";	
+				bHeaderCreated3 = true;
+			}
+		}
+		else {
+			oRow = oTBody3.insertRow();
+			oCell = oRow.insertCell();
+			oCell.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;<A class=linkstyle_row href=" + aLinks[iIdx] + "><font size=2>" + aDesc[iIdx] + "</FONT></A>";  
+		}
+	}
+
+	// Set the background color of the first body.
+	oTBody3.bgColor = "lemonchiffon";
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<TABLE width=300 align="center" ID="oTable" BGCOLOR="lightslategray" STYLE="border-collapse:collapse">
+<TBODY ID="oTBody0"></TBODY>
+</TABLE>
+
+<TABLE width=300 align="center" ID="oTable1" BGCOLOR="lightslategray" STYLE="border-collapse:collapse">
+<TBODY ID="oTBody1"></TBODY>
+</TABLE>
+
+<TABLE width=300 align="center" ID="oTable2" BGCOLOR="lightslategray" STYLE="border-collapse:collapse">
+<TBODY ID="oTBody2"></TBODY>
+</TABLE>
+
+<TABLE width=300 align="center" ID="oTable3" BGCOLOR="lightslategray" STYLE="border-collapse:collapse">
+<TBODY ID="oTBody3"></TBODY>
+</TABLE>
+
+<SCRIPT language="JScript">
+var oRow, oCell;
+var oTHead = oTable.createTHead();
+
+// Declare aLinks data that would normally be retrieved from a aLinks Web site.
+var aHeading = new Array;
+aHeading[0] = "Links";
+
+// Insert a row into the header.
+oRow = oTHead.insertRow();
+oTHead.bgColor = "lightskyblue";
+
+// Insert cells into the header row.
+oCell = oRow.insertCell();
+oCell.align = "center";
+oCell.style.fontWeight = "bold";
+oCell.innerText = aHeading[0];
+
+// Create the table in a collapsed start initially
+CreateBody0();
+ExpandCollapse0();
+CreateBody1();
+ExpandCollapse1();
+CreateBody2();
+ExpandCollapse2();
+CreateBody3();
+ExpandCollapse3();
+</SCRIPT>
+</BODY>
+</HTML>

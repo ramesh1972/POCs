@@ -1,0 +1,85 @@
+/*
+// basic construct type function poninters ===============================
+dcp_fp_dvp* get_dcp_fp_dvp(dvp v);
+ddp_fp_dvp* get_ddp_fp_dvp(dvp v);
+dvrp_fp_dvp* get_dvrp_fp_dvp(dvp v);
+dmp_fp_dvp* get_dmp_fp_dvp(dvp v);
+dctxp_fp_dvp* get_dctxp_fp_dvp(dvp v);
+dlp_fp_dvp* get_dlp_fp_dvp(dvp v);
+dctp_fp_dvp* get_dctp_fp_dvp(dvp v);
+dccp_fp_dvp* get_dccp_fp_dvp(dvp v);
+
+dcp_fp* get_dcp_fp(nvp ptr);
+dcp_fp_dcp* get_dcp_fp_dcp(nvp ptr);
+dcp_fp_dcp2* get_dcp_fp_dcp2(nvp ptr);
+dcp_fp_dcp3* get_dcp_fp_dcp3(nvp ptr);
+
+dcdp_fp* get_dcdp_fp(nvp ptr);
+dcdp_fp_dcdp* get_dcdp_fp_dcdp(nvp ptr);
+dcdp_fp_dcdp2* get_dcdp_fp_dcdp2(nvp ptr);
+dcdp_fp_dcdp3* get_dcdp_fp_dcdp3(nvp ptr);
+
+dcvp_fp* get_dcvp_fp(nvp ptr);
+dcvp_fp_dcvp* get_dcvp_fp_dcvp(nvp ptr);
+dcvp_fp_dcvp2* get_dcvp_fp_dcvp2(nvp ptr);
+dcvp_fp_dcvp3* get_dcvp_fp_dcvp3(nvp ptr);
+
+dcp_fp* get_dcp_fp(nvp ptr) {return $vp2ct(dcp_fp, ptr);}
+dcp_fp_dcp* get_dcp_fp_dcp(nvp ptr) {return $vp2ct(dcp_fp_dcp, ptr);}
+dcp_fp_dcp2* get_dcp_fp_dcp2(nvp ptr) {return $vp2ct(dcp_fp_dcp2, ptr);}
+dcp_fp_dcp3* get_dcp_fp_dcp3(nvp ptr) {return $vp2ct(dcp_fp_dcp3, ptr);}
+
+dcdp_fp* get_dcdp_fp(nvp ptr) {return $vp2ct(dcdp_fp, ptr);}
+dcdp_fp_dcdp* get_dcdp_fp_dcdp(nvp ptr) {return $vp2ct(dcdp_fp_dcdp, ptr);}
+dcdp_fp_dcdp2* get_dcdp_fp_dcdp2(nvp ptr) {return $vp2ct(dcdp_fp_dcdp2, ptr);}
+dcdp_fp_dcdp3* get_dcdp_fp_dcdp3(nvp ptr) {return $vp2ct(dcdp_fp_dcdp3, ptr);}
+
+dcvp_fp* get_dcvp_fp(nvp ptr) {return $vp2ct(dcvp_fp, ptr);}
+dcvp_fp_dcvp* get_dcvp_fp_dcvp(nvp ptr) {return $vp2ct(dcvp_fp_dcvp, ptr);}
+dcvp_fp_dcvp2* get_dcvp_fp_dcvp2(nvp ptr) {return $vp2ct(dcvp_fp_dcvp2, ptr);}
+dcvp_fp_dcvp3* get_dcvp_fp_dcvp3(nvp ptr) {return $vp2ct(dcvp_fp_dcvp3, ptr);}
+
+dcp_fp_dvp* get_dcp_fp_dvp(nvp ptr) {return (dcp_fp_dvp*) ptr;}
+ddp_fp_dvp* get_ddp_fp_dvp(nvp ptr) {return (ddp_fp_dvp*) ptr;} 
+dvrp_fp_dvp* get_dvrp_fp_dvp(nvp ptr) {return (dvrp_fp_dvp*) ptr;}
+dmp_fp_dvp* get_dmp_fp_dvp(nvp ptr) {return (dmp_fp_dvp*) ptr;}
+dctxp_fp_dvp* get_dctxp_fp_dvp(nvp ptr) {return (dctxp_fp_dvp*) ptr;}
+dlp_fp_dvp* get_dlp_fp_dvp(nvp ptr) {return (dlp_fp_dvp*) ptr;}
+dctp_fp_dvp* get_dctp_fp_dvp(nvp ptr) {return (dctp_fp_dvp*) ptr;}
+dccp_fp_dvp* get_dccp_fp_dvp(nvp ptr) {return (dccp_fp_dvp*) ptr;}
+*/
+
+/*// native type methods =================================================
+void_p get_dvp(void_p ptr) { return ptr; }
+vp_fp* get_dvp_fp(void_p ptr) {return (vp_fp*) ptr;}
+template <typename Pdt> void_p get_dvp(Pdt* val) {return (void_p) val};
+vp_fp_vp* get_dvp_fp_dvp(void_p ptr) {return (vp_fp_vp*) ptr;}
+vp_fp_string* get_dvp_fp_dstr(void_p ptr) {return (vp_fp_string*) ptr;}
+int get_dint(void_p ptr) {return *((int*) ptr);}
+int_fp_vp* get_dint_fp_dvp(void_p ptr) {return (int_fp_vp*) ptr;}
+chars_fp_vp* get_dchrp_fp_dvp(void_p ptr) {return (chars_fp_vp*) ptr;}
+bool_fp_vp* get_dbln_fp_dvp(void_p ptr) {return (bool_fp_vp*) ptr;}
+string_fp_vp* get_dstr_fp_dvp(void_p ptr) {return (string_fp_vp*) ptr;}
+*/
+
+/*
+#define ADD_LINKER_GF_CONS(Ft, Tmpl)  \
+		template<typename Ft> \
+		__language::__processor::__linker::tmpl_linker_object_global_function<Ft>::tmpl_linker_object_global_function() \
+{} \
+	\
+		template<typename Ft> \
+		nvp __language::__processor::__linker::tmpl_linker_object_global_function<Ft>::process() \
+		{return NULL;} \
+		\
+		template<typename Ft> \
+		nvd __language::__processor::__linker::tmpl_linker_object_global_function<Ft>::set(Ft* v) \
+		{	dfp_value =  v;}\
+				\
+		template<typename Ft> \
+		nvd __language::__processor::__linker::tmpl_linker_object_global_function<Ft>::set(nvp v) \
+		{	dfp_value =  (Ft*) v;}
+*/
+
+
+

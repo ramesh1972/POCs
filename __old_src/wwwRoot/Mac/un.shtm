@@ -1,0 +1,60 @@
+
+	<!--
+    '**************************************************************************
+	'* Application	:	BCE								    				  *
+	'* Module		:   Demo          										  *
+	'* File name	:	Un.shtm									  			  *
+	'* Purpose		:	This page shows under construction tag			      *
+	'* Prepared by	:	Dinali G Priyadarshana                 				  *	
+	'* Date			:	15.07.2001											  *
+	'* Copyright	:	(c) SSI Technologies,India							  *
+	'*																		  *
+	'**************************************************************************
+
+	'**************************************************************************
+	'* General Notes														  *
+	'* This page is created for Demo purpose								  *
+	'*																		  *
+	'**************************************************************************
+
+	'**************************************************************************
+	'* Revision History														  *
+	'* Version No.- Date		- By				       - Explanation   	  *
+	'*	1		    20.07.2001	- Dinali G Priyadarshana   - First Base line  *
+	'*																		  *
+	'**************************************************************************
+-->
+
+<HTML>
+	<HEAD>
+	<style>	a {text-decoration:none}
+	a:hover { color:#3333FF}
+	</style>
+	<title>Welcome to the Bombay Commodity Exchange Limited</title>
+	<link rel="stylesheet" href="Includes/Theme.css">
+	</HEAD>
+	<body  leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<center>
+	<!--#include file="Includes/header.inc" ----><br>
+	</center>
+	<br>
+	<center>
+  <table width="100%" border="0" height="54%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td height="349"> 
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td> 
+            <div align="center" class="title">Under Construction</div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--#include file="Includes/footer.inc" ---->
+</center>
+
+	</BODY>
+	</HTML>

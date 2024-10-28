@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 2.7.2"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<html:p>
+  Click the box below to remember this decision. 
+  <html:p>
+    <html:input id="rtd" type="checkbox"/>
+    <html:label for="rtd">Remember This Decision</html:label>
+  </html:p>
+</html:p>
+
+
+</window>
+

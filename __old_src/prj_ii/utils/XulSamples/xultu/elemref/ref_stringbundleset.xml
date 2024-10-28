@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+
+<element name='stringbundleset'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_stringbundleset.html</reference>
+    A container for stringbundle elements.
+
+</element>

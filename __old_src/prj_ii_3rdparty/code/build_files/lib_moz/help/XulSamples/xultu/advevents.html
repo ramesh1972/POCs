@@ -1,0 +1,575 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="events.html"> 
+ <link rel="next" href="keyshort.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - More Event Handlers</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 6.2 - More Event Handlers 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <SPAN CLASS="currentpage">More Event Handlers</SPAN></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.1 - Adding Event Handlers"
+     href="events.html">Previous</a>
+
+
+  <a class="nextlink" title="6.3 - Keyboard Shortcuts"
+     href="keyshort.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>More Event Handlers</h2>
+
+<P>
+In this section, the event object is examined and additional events are described.
+</P>
+
+<H3>The Event Object</H3>
+
+<P>
+Each event handler has a single argument which holds an event object. In the
+attribute form of event listener, this event is an implied argument to the script
+code which can be refered to using the name 'event'. In the addEventListener form,
+the first argument to the listener function will be the event object. The event
+object has a number of properties which can be examined during an event. The full
+list can be found in the
+<A HREF="http://xulplanet.com/references/objref/Event.html">object reference</A>.
+</P>
+
+<P>
+We already saw the event's target property is the last section. It holds a reference
+to the element where the event occured. A similar property currentTarget holds the
+element that is currently having its event listeners handled. In the example below,
+currentTarget is always the vbox, whereas target would be the specific element,
+either the button or checkbox, that was activated.
+</P>
+
+
+Example 6.2.1:
+<A HREF='examples/ex_advevents_1.xul.txt'>Source</A>
+<A HREF="examples/ex_advevents_1.xul" ONCLICK="window.open('examples/ex_advevents_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;vbox oncommand="alert(event.currentTarget.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Show images"/>
+&lt;/vbox&gt;</PRE></DIV>
+
+
+
+<P>
+Recall that the capturing phase occurs before the bubbling phase, so any capturing
+listeners will trigger before any bubbling listeners. If a capturing event stops the
+event propagation, none of the later capturing listeners, nor any of the bubbling
+listeners will ever receive notification about the events. To stop event propagation,
+call the event object's stopPropagation method, as in the following example.
+</P>
+
+
+Example 6.2.2:
+<A HREF='examples/ex_advevents_2.xul.txt'>Source</A>
+<A HREF="examples/ex_advevents_2.xul" ONCLICK="window.open('examples/ex_advevents_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;hbox id="outerbox"&gt;
+  &lt;button id="okbutton" label="OK"/&gt;
+&lt;/hbox&gt;
+
+&lt;script&gt;
+function buttonPressed(event)
+{
+  alert('Button was pressed!');
+}
+
+function boxPressed(event)
+{
+  alert('Box was pressed!');
+  event.stopPropagation();
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command',buttonPressed,true);
+
+var outerbox = document.getElementById("outerbox");
+outerbox.addEventListener('command',boxPressed,true);
+&lt;/script&gt;</PRE></DIV>
+
+
+
+<P>
+Here, an event listener has been added to the button and another event listener has
+been added to the box. The stopPropagation method has been called in the box's
+listener, so the button's listener never gets called. If this call was removed, both
+listeners would be called and both alerts would appear.
+</P>
+
+<P>
+If no event handlers have been registered for an event, then after completing
+the capturing and bubbling phases, the element will handle the event in a default
+way. What will happen depends on the event and the type of element. For example,
+the 'popupshowing' event is sent to a popup just before it is displayed. The default
+action is to display the popup. If the default action is prevented, the popup will
+not be displayed. The default action can be prevented with the event object's
+preventDefault method, as in the example below.
+</P>
+
+
+Example 6.2.3:
+<A HREF='examples/ex_advevents_3.xul.txt'>Source</A>
+<A HREF="examples/ex_advevents_3.xul" ONCLICK="window.open('examples/ex_advevents_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button label="Types" type="menu"&gt;
+  &lt;menupopup onpopupshowing="event.preventDefault();"&gt;
+    &lt;menuitem label="Glass"/&gt;
+    &lt;menuitem label="Plastic"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;</PRE></DIV>
+
+
+
+<P>
+Alternatively, for attribute event listeners, you can just return false from the
+code. Note that preventing the default action is not the same as stopping event
+propagation with the stopPropagation method. Even if the default action has been
+prevented, the event will still continue to propagate. Similarly, calling the
+stopPropagation method won't prevent the default action. You must call both
+methods to stop both from occuring.
+</P>
+
+<P>
+Note that once propagation or the default action has been prevented, neither may
+be re-enabled again for that event.
+</P>
+
+<P>
+The following sections list some of the events that may be used. A full list is
+provided in the 
+<A HREF="http://www.xulplanet.com/references/elemref/ref_EventHandlers.html">event reference</A>.
+</P>
+
+<H3>Mouse Events</H3>
+
+<P>
+There are several events which can be used to handle mouse specific actions, listed
+in the following table:
+</P>
+
+
+<TABLE BORDER=1>
+  <TR>
+    <TD CLASS='attrib' COLSPAN=3 WIDTH='20%'>click
+    </TD>
+    <TD COLSPAN=1>
+      Called when the mouse is pressed and released on an element.
+    </TD>
+  </TR>
+  <TR>
+    <TD CLASS='attrib' COLSPAN=3 WIDTH='20%'>dblclick
+    </TD>
+    <TD COLSPAN=1>
+      Called when the a mouse button is double clicked.
+    </TD>
+  </TR>
+  <TR>
+    <TD CLASS='attrib' COLSPAN=3 WIDTH='20%'>mousedown
+    </TD>
+    <TD COLSPAN=1>
+      Called when a mouse button is pressed down on an element. The event
+      handler will be called as soon as a mouse button is pressed, even if it
+      hasn't been released yet.
+    </TD>
+  </TR>
+  <TR>
+    <TD CLASS='attrib' COLSPAN=3 WIDTH='20%'>mouseup
+    </TD>
+    <TD COLSPAN=1>
+      Called when a mouse button is released on an element
+    </TD>
+  </TR>
+  <TR>
+    <TD CLASS='attrib' COLSPAN=3 WIDTH='20%'>mouseover
+    </TD>
+    <TD COLSPAN=1>
+      Called when the mouse pointer is moved onto an element. You could use
+      this to highlight the element, however CSS provides a way to do this
+      automatically so you shouldn't do it with an event. You might, however,
+      want to display some help text on a status bar.
+    </TD>
+  </TR>
+  <TR>
+    <TD CLASS='attrib' COLSPAN=3 WIDTH='20%'>mousemove
+    </TD>
+    <TD COLSPAN=1>
+      Called when the mouse pointer is moved while over an element. The event
+      may be called many times as the user moves the mouse so you should avoid
+      performing lengthy tasks frorm this handler.
+    </TD>
+  </TR>
+  <TR>
+    <TD CLASS='attrib' COLSPAN=3 WIDTH='20%'>mouseout
+    </TD>
+    <TD COLSPAN=1>
+      Called when the mouse pointer is moved off of an element. You might
+      then unhighlight the element or remove status text.
+    </TD>
+  </TR>
+</TABLE>
+
+<P>
+There are also a set of drag related events, which occur when the user holds
+down a mouse button and drags the mouse around. Those events are described in
+a later section on drag and drop.
+</P>
+
+<P>
+When a mouse button event occurs, a number of additional properties are available to
+determine which mouse buttons were pressed and the location of the mouse pointer.
+The event's button property can be used to determine which button was pressed, where
+possible values are 0 for the left button, 1 for the right button and 2 for the
+middle button. If you've configured your mouse differently, these values may be
+different.
+</P>
+
+<P>
+The detail property holds the number of times the button has been clicked quickly
+in sequence. This allows you to check for single, double or triple clicks. Of
+course, if you just want to check for double clicks, you can also use the dblclick
+event instead. The click event will be fired once for the first click, again for
+the second click, and again for the third click, but the dblclick event will only
+be fired once for a double click.
+</P>
+
+<P>
+The button and detail properties only apply to the mouse button related events, not
+mouse movement events. For the mousemove event, for example, both properties will
+be set to 0.
+</P>
+
+<P>
+However, all mouse events will be supplied with properties that hold the coordinates
+of the mouse position where the event occured. There are two sets of coordinates. The
+first is the screenX and screenY properties and are relative to the top left corner of
+the screen. The second set, clientX and clientY, are relative to the top left corner
+of the document. Here is an example which displays the current mouse coordinates:
+</P>
+
+
+Example 6.2.4:
+<A HREF='examples/ex_advevents_4.xul.txt'>Source</A>
+<A HREF="examples/ex_advevents_4.xul" ONCLICK="window.open('examples/ex_advevents_4.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;script&gt;
+
+function updateMouseCoordinates(event)
+{
+  var text = "X:" + event.clientX + " Y:" + event.clientY;
+  document.getElementById("xy").value = text;
+}
+&lt;/script&gt;
+
+&lt;label id="xy"/&gt;
+&lt;hbox width="400" height="400" onmousemove="updateMouseCoordinates(event);"/&gt;</PRE></DIV>
+
+
+
+<P>
+In this example, the size of the box has been set explicity so the effect is easier
+to see. The event handler gets the clientX and clientY properties and creates a string
+from them. This string is then assigned to the value property of the label. Note that
+the event argument must be passed to the updateMouseCoordinates function. If you move
+the mouse quickly across the border of the box, you might notice that the coordinates
+don't generally stop right at 400. This is because the mousemove events occur at
+intervals depdending on the speed at which the mouse moves and the mouse is usually
+moved some distance past the border by the time the next event fires. Obviously, it
+would be much too inefficient to send a mousemove event for every pixel the mouse is
+moved.
+</P>
+
+<P>
+You will often want to get the coordinates of an event relative to the element where
+the element occured rather than the entire window. You can do this by subtracting the
+element's position from the event position, as in the following code.
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+var element = event.target;
+var elementX = event.clientX - element.boxObject.x;
+var elementY = event.clientY - element.boxObject.y;</PRE></DIV>
+
+
+
+<P>
+XUL elements have a box object that can be retrieved using the boxObject property.
+We'll learn more about the box object in a later section, but it holds information
+pertaining to how the element is displayed, including the x and y position of the
+element. In this example code, these coordinates are subtracted from the event
+coordinates to get the event position relative to the element.
+</P>
+
+<H3>Load Events</H3>
+
+<P>
+The load event is sent to the document (the <A CLASS="tag" HREF="elemref/ref_window.html">window</A> tag)
+once the XUL file has finished loading and just before the content is displayed.
+This event is commonly used to initialize fields and perform other tasks that
+need to be done before the user can use the window. You should use a load event
+to do these kinds of things as opposed to adding script at the top level outside
+a function. This is because the XUL elements may not have loaded or fully
+initialized yet, so some things may not work as expected. To use a load event,
+place an <SPAN CLASS="attrib">onload</SPAN> attribute on the 
+<A CLASS="tag" HREF="elemref/ref_window.html">window</A> tag. Call code within the load handler which will
+initialize the interface as necessary.
+</P>
+
+<P>
+There is also an unload event which is called once the window has closed, or in a
+browser context, when the page is switched to another URL. You can use this event
+to save any changed information, for example.
+</P>
+
+<HR>
+<P>
+<A HREF="keyshort.html">(Next)</A>
+Next, we'll find out how to add keyboard shortcuts.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_advevents_1.xul.txt'>6.2.1</A>
+  <A HREF='examples/ex_advevents_2.xul.txt'>6.2.2</A>
+  <A HREF='examples/ex_advevents_3.xul.txt'>6.2.3</A>
+  <A HREF='examples/ex_advevents_4.xul.txt'>6.2.4</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.1 - Adding Event Handlers"
+     href="events.html">Previous</a>
+
+
+  <a class="nextlink" title="6.3 - Keyboard Shortcuts"
+     href="keyshort.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

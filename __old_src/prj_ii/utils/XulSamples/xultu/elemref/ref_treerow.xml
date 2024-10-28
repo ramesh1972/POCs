@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='treerow'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/trees.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_treerow.html</reference>
+  A single row in a tree. It should be placed inside a treeitem element.  Children of the treerow should be treecell elements. If child rows are  necessary, they should be placed in a treechildren element inside the parent  treeitem.  
+
+<attr name='properties' type='space separated list of property names'>
+  Sets the properties of the treerow, which can be used to style the row.
+</attr>
+</element>

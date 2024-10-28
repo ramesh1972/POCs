@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='listcols'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/morelists.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_listcols.html</reference>
+  A container for the columns of a listbox, each of which are created with  the listcol element. There should be only one listcols element in a list  box. If there is no listcols element, the list box has a single column.  
+
+</element>

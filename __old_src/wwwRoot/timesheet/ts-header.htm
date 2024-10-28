@@ -1,0 +1,107 @@
+<% 
+	Dim lDay
+	Dim lWeekDay
+	Dim lTime1
+   
+	lTime1 = Now()
+	lWeekDay = Weekday(lTime1)
+	lDay = Weekdayname(lWeekDay)
+%>
+   
+<script Language="JavaScript">
+var timerID = null;
+var timerRunning = false;
+
+function gettheDate() {
+	Todays = new Date();
+	TheDate = (Todays.getMonth()+ 1) +"/"+ Todays.getDate() + "/" + Todays.getYear(); 
+
+	return TheDate;
+}
+
+function stopclock (){
+	if(timerRunning)
+		clearTimeout(timerID);
+	timerRunning = false;
+}
+
+function startclock () {
+	stopclock();
+	gettheDate()
+	showtime();
+}
+
+function showtime () {
+	var now = new Date();
+	var hours = now.getHours();
+	var minutes = now.getMinutes();
+	var seconds = now.getSeconds()
+	var timeValue = "" + ((hours >12) ? hours -12 :hours)
+
+	var ldate = gettheDate();
+	
+	timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+	timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+	timeValue += (hours >= 12) ? " P.M." : " A.M."
+	document.all.divTime.innerHTML = "<font style='color:orange'>" + ldate + ", <%=lDay%>" + "</font><BR>" + "<font class='whiteboldtext'><B>" + timeValue + "</font></B>";
+
+	// you could replace the above with this
+	// and have a clock on the status bar:
+	// window.status = timeValue;
+
+	timerID = setTimeout("showtime()",1000);
+	timerRunning = true;
+}
+// end Hide -->
+</script>
+
+<style>
+a {text-decoration:none}
+a:hover { color:#3333FF}
+</style>
+<title></title>
+<LINK REL=StyleSheet HREF="theme.css" >
+<% ' Compute the Time
+	Dim lTime
+	lTime = Now()
+%>
+<TABLE width="100%" cellspacing="0" cellpadding="0">
+<tr>
+	<td bgcolor="black" width="20%" align="middle"><div id="divTime"></div></td>
+	<TD width="80%"><IMG height=78 src="images/ts-earth.bmp" width="100%"></TD>
+<!--	<TD width="20%" align="middle"  bgcolor="lightblue">
+      <OBJECT classid=clsid:20DD1B9E-87C4-11D1-8BE3-0000F8754DA1 height=26 
+      name=DTPicker1 style="HEIGHT: 26px; LEFT: 0px; TOP: 0px; WIDTH: 92px" 
+      width=92 VIEWASTEXT><PARAM NAME="_ExtentX" VALUE="2434">
+      <PARAM NAME="_ExtentY" VALUE="688"><PARAM NAME="_Version" VALUE="393216">
+      <PARAM NAME="MousePointer" VALUE="0"><PARAM NAME="Enabled" VALUE="1">
+      <PARAM NAME="OLEDropMode" VALUE="0"><PARAM NAME="CalendarBackColor" VALUE="16777215">
+      <PARAM NAME="CalendarForeColor" VALUE="-2147483630">
+      <PARAM NAME="CalendarTitleBackColor" VALUE="-2147483633">
+      <PARAM NAME="CalendarTitleForeColor" VALUE="-2147483630">
+      <PARAM NAME="CalendarTrailingForeColor" VALUE="-2147483631">
+      <PARAM NAME="CheckBox" VALUE="0"><PARAM NAME="CustomFormat" VALUE="01/04/2002">
+      <PARAM NAME="DateIsNull" VALUE="0"><PARAM NAME="Format" VALUE="662831105">
+      <PARAM NAME="UpDown" VALUE="0"><PARAM NAME="CurrentDate" VALUE="37034">
+      <PARAM NAME="MaxDate" VALUE="2958465"><PARAM NAME="MinDate" VALUE="-109205"></OBJECT>
+</TD> -->
+</tr>
+</TABLE>
+<TABLE border=1 width="100%" cellspacing="0" cellpadding="0">
+<TR>
+	<TD align=center bgcolor="lightgreen" width=10%><A href="ts-logon-start.asp"><font style="text-decoration: none;color: blue;"><div id="oDivLogon"><B>Login</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=13%><A href="ts-weekly-timesheet-start.asp"><font style="text-decoration: none;color: blue;"><div id="oDivTS"><B>Time Sheet</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=17%><A href="ts-weekly-progress-start.asp"><font style="text-decoration: none;color: blue;"><div id="oDivPR"><B>Progress Report</B></div></font></A></TD>	
+	<TD align="center" bgcolor="lightgreen" width=10%><A href="ts-reports-start.asp"><font style="text-decoration: none;color: blue;"><div id="oDivReports"><B>Reports</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=10%><A href="ts-users-start.asp"><font style="text-decoration: none;color: blue;"><div id="oDivUsers"><B>Users</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=10%><A href="ts-groups-start.asp"><font style="text-decoration: none;color: blue;"><div id="oDivGroups"><B>Groups</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=10%><A href="ts-projects-start.asp"><font style="text-decoration: none;color: blue;"><div id="oDivProjects"><B>Projects</div></B></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=10%><A href="ts-codes-start.asp"><font style="text-decoration: none;color: blue;"><div id="oDivCodes"><B>Codes</B></div></font></A></TD>
+	<TD align="center" bgcolor="lightgreen" width=10%><A href="ts-logon-logout.asp"><font style="text-decoration: none;color: blue;"><div id="oDivLogout"><B>Logout</B></div></font></A></TD>	
+</TR>
+</TABLE>
+
+<script language="javascript">
+startclock();
+</script>
+

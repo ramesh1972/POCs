@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:weather="http://www.xulplanet.com/rdf/weather#">
+
+  <RDF:Description about="http://www.xulplanet.com/rdf/weather/city/Paris">
+    <weather:name>Paris</weather:name>
+    <weather:prediction>Sunny</weather:prediction>
+  </RDF:Description>
+
+  <RDF:Description about="http://www.xulplanet.com/rdf/weather/city/Manchester">
+    <weather:name>Manchester</weather:name>
+    <weather:prediction>Cloudy</weather:prediction>
+  </RDF:Description>
+
+  <RDF:Description about="http://www.xulplanet.com/rdf/weather/city/Melbourne">
+    <weather:name>Melbourne</weather:name>
+    <weather:prediction>Rain</weather:prediction>
+  </RDF:Description>
+
+  <RDF:Description about="http://www.xulplanet.com/rdf/weather/city/Kiev">
+    <weather:name>Kiev</weather:name>
+    <weather:prediction>Sunny</weather:prediction>
+  </RDF:Description>
+
+  <RDF:Seq about="http://www.xulplanet.com/rdf/weather/cities">
+    <RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Paris"/>
+    <RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Manchester"/>
+    <RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Melbourne"/>
+    <RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Kiev"/>
+  </RDF:Seq>
+
+</RDF:RDF>

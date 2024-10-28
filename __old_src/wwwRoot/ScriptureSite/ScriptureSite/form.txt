@@ -1,0 +1,17 @@
+							"<TR><TD colspan=1>" +
+							"<Input type=button id='move_up' style='border-width:1;width:40;font-weight:bold;font-size:10;color:blue' Value='Up'>" + 
+							"<BR>" +
+							"<Input type=button id='move_down' style='border-width:1;width:40;font-weight:bold;font-size:10;color:blue' Value='Down'>" +
+							"</TD></Tr>" +
+							"<Tr valign=top align=left><Td colspan=3 width=100%>" +
+							"Text In This Version's Language<BR><TextArea id='stanza_lang' style='border-width:1;border-color:gray' rows=8 cols=80 Value='1'></TextArea>" +
+							"</Td></Tr>" +
+							"<Tr valign=top align=left><Td colspan=3 width=100%>" +
+							"Text in English" + 
+							"<BR>" + 
+							"<TextArea id='stanza_eng' style='border-width:1;border-color:gray' rows=8 cols=80 Value='1'></TextArea>" +
+							"</Td></Tr>" +
+							"<Tr><Td colspan=3>" +
+							"<Input type=button id='prev_stanza' style='border-width:1;width:120;font-weight:bold;font-size:10;color:blue' Value='<< Previous Stanza'>" +
+							"<Input type=button id='next_stanza' style='border-width:1;width:120;font-weight:bold;font-size:10;color:blue' Value='Next Stanza >>'>" +
+11:21 PM 4/10/200411:24 PM 4/10/2004

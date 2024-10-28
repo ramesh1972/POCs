@@ -1,0 +1,129 @@
+
+---------- PROCESSOR.CPP
+using namespace __language::__constructs::__linker;
+processor* processor::__proc = NULL;
+processor* processor::p() { return __proc; }
+dispatcher* processor::d() 
+memory* processor::m() 
+linker* processor::l() 
+nint processor::create_processor()
+processor::processor() {boot();}
+processor::~processor() {shutdown();}
+nvd processor::boot()
+nvd processor::shutdown()
+nvd processor::mount()
+nvd processor::unmount()
+nvd processor::run()
+nvd processor::registerc()
+	// IMPORTANT::
+nvd processor::init() 	
+construct* processor::process(construct* _link, nstr instrctn) {return NULL;}
+construct* processor::process() {return NULL;}
+construct* processor::process(nstr construct_name, nstr instrctn) {return NULL;}
+construct* processor::process(nstr instrctn) {return NULL;}
+nvd processor::clean() 	
+dispatcher::dispatcher(processor *p) 
+dispatcher::~dispatcher() 
+nvd dispatcher::mount()
+nvd dispatcher::unmount()
+nvd dispatcher::scan_standard_inputs()
+nvd dispatcher::flush_ins_and_outs()
+nvd dispatcher::set_args(nint args_c, nchrp* args) 
+nint dispatcher::get_argsc() {return args_count;}
+nchrp* dispatcher::get_args() {return args_list;}
+construct* dispatcher::dispatcher_start()
+	//__pl::test_boot_constructs();
+		map<nstr, construct*>::iterator its = _start->construct_list->begin();
+collection_construct* dispatcher::get_start_instructions()
+construct* dispatcher::dispatcher_stop(construct* exit_code)
+nvd dispatcher::registerc()
+nvd dispatcher::init() 	
+construct* dispatcher::process(construct* cons, nstr instrctn) {return NULL;}
+construct* dispatcher::process(nstr construct_name, nstr instrctn) {return NULL;}
+construct* dispatcher::process(nstr instrctn) {return NULL;}
+construct* dispatcher::process() {return NULL;}
+nvd dispatcher::clean() 	
+nvd dispatcher::registerc_from_inputs()
+construct* dispatcher::dispatch_instruction(construct* cons, nstr instrctn) {return NULL;}
+link* dispatcher::dispatch_get_link(construct* cons, nstr instrctn) {return NULL;}
+link* dispatcher::dispatch_get_dnative_link(construct* cons) {return NULL;}
+link* dispatcher::dispatch_nlink(construct* cons) 
+link* dispatcher::dispatch_link(construct* cons, nstr instrctn) 
+link* dispatcher::dispatch_link(link* lnk) 
+link* dispatcher::get_dvalue(data_construct* data, nstr in_dtype) {return NULL;}
+link* dispatcher::get_dvalue(nstr name, nstr in_dtype) {return NULL;}
+data_construct* dispatcher::new_data(nstr dname, nvp dvalue, nstr in_dtypenvp, construct* parent) {return NULL;}
+data_construct* dispatcher::set_dvalue(data_construct* data, nvp dvalue, nstr in_dtype, construct* parent){return NULL;} 
+link* dispatcher::get_vvalue(variable* data, nstr in_typenvp) {return NULL;}
+link* dispatcher::get_vvalue(nstr vname, nstr in_vtypenvp) {return NULL;}
+nvp dispatcher::get_vvalue_native(variable* data, nstr in_typenvp)
+nvp dispatcher::get_vvalue_native(nstr vname, nstr in_vtypenvp);
+data_construct* dispatcher::register_construct(nstr cname, nstr ctype, nstr scope, nstr order, construct* parent)
+data_construct* dispatcher::new_construct(nstr root_context, nstr rc_type, nint size) 
+data_construct* dispatcher::new_variable(nstr vname, nvp vvalue, nstr in_vtypenvp, construct* parent) {return NULL;}
+data_construct* dispatcher::set_vvalue(variable* data, nvp dvalue, nstr dtypenvp) {return NULL;}
+construct* dispatcher::execute_method(method* method, ...) {return NULL;}
+variable* dispatcher::execute_method_ret_var(method* method, ...) {return NULL;}
+link* dispatcher::execute_method_ret_link(method* m, ...)
+memory::memory(processor* p ) : proc_ref(p)
+memory::~memory()
+nvd memory::reset_sections()
+nvd memory::mount()
+nvd memory::unmount()
+nvd memory::create_memory() 
+nvd memory::destroy_memory() 
+nvd memory::registerc()
+	_proc_m = __instructions::register_context("_processor_m");
+	construct* cons = __instructions::register_construct_type("construct", get_cons, "dcp_fp_dvp", _proc_m );
+		construct* ctxcons = __instructions::register_construct_type("context", get_ctx, "dctxp_fp_dvp", cons);
+	context* disp_m = __instructions::register_context("_dispatcher_m", _proc_m);
+		__instructions::register_context("_types_m", disp_m);
+		__instructions::register_context("_constructions_m", disp_m);
+		__instructions::register_context("_data_m", disp_m);
+	context* stack_m = __instructions::register_context("_stack_m", _proc_m);
+		context* s_types = __instructions::register_context("_types_m", stack_m);
+		context* s_constructs = __instructions::register_context("_constructions_m", stack_m);
+		__instructions::register_context("_data_m", stack_m);
+	context* heap_m = __instructions::register_context("_heap_m", _proc_m);
+		construct* t = __instructions::register_context("_types_m", heap_m);
+		__instructions::register_context("_constructions_m", heap_m);
+		__instructions::register_context("_data_m", heap_m);
+	construct* tcons = __instructions::register_construct_type("construct_type", get_typ, "dtp_fp_dvp", cons);
+	context* st_cons = __instructions::register_context("_starter_constructs_m", s_constructs);
+			__instructions::register_context("_processor_default_", st_cons);
+nvd memory::init() 	
+construct* memory::process(nstr construct_name, nstr instrctn) {return NULL;}
+construct* memory::process(nstr instrctn) {return NULL;}
+construct* memory::process(construct*, nstr instrctn) {return NULL;}
+construct* memory::process() {return NULL;}
+nvd memory::clean() 	
+construct* memory::get_memory_section(nstr rc, nstr rc_type)
+nvd memory::dump() 
+data_construct* memory::register_construct(nstr cname, nstr ctype, nstr scope, nstr order, construct* parent)
+	construct* c = __constructs::__instructions::ci_create_construct(cname, type, scope, order, parent);
+nvp memory::new_memory(nstr root_context, nstr rc_type, nint size)
+nvd* memory::allocate_memory(nint size) 
+nvd* memory::fill_memory(nvp buffer, nvp source, nint size) 
+nvd memory::delete_construct(construct* cons)
+nvd memory::move_child_construct(construct* cons, construct* new_parent)
+nvd memory::remove_child_construct(construct* cons)
+collection_construct* memory::traverse(construct*, nstr type) {return NULL;}
+collection_construct* memory::traverse_types_info(construct*, nstr type) {return NULL;}
+collection_construct* memory::traverse_ctype_links(construct*, nstr type) {return NULL;}
+linker::linker(processor* p) : proc_ref(p) {}
+linker::~linker() {}
+nvd linker::mount() {}
+nvd linker::unmount() {}
+nvd linker::registerc() 
+	__constructs::__linker::registerc();
+	__processor::__linker::registerc();
+	__constructs::__linker::register_default_start_methods();
+nvd linker::init() {}
+construct* linker::process(nstr construct_name, nstr instrctn) {return NULL;}
+construct* linker::process(nstr instrctn) {return NULL;}
+construct* linker::process(construct*, nstr instrctn) {return NULL;}
+construct* linker::process() {return NULL;}
+nvd linker::clean() {}
+nvp linker::jump_link(link* l) 
+		map<nstr, construct*>::iterator its = paramsl->construct_list->begin();
+nvp linker::add_linker(linker_object* lnkr)

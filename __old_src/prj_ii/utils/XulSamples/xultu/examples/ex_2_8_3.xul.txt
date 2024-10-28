@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 2.8.3"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<button label="Left" image="happy.png"/>
+<button label="Right" image="happy.png" dir="rtl"/>
+<button label="Above" image="happy.png" orient="vertical"/>
+<button label="Below" image="happy.png" orient="vertical" dir="rtl"/>
+
+
+</window>
+

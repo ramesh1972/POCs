@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+
+<element name='content'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/advrules.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_content.html</reference>
+  This element should appear inside a conditions element. A rule's conditions  should contain one and only one content element. The content element should  also have a uri attribute. It is used to bind a variable to a content node  during matching. When using a tree with the 'flags' attribute set to  'dont-build-content', use a treeitem element instead.  
+
+<prop name='tag'>
+  This may be set to a tag name. If set, the conditions will only match if the  template builder is parsing content for an element directly inside this tag.  For example, by using a value of 'treechildren', the condition will only match  when placing elements directly inside a treechildren tag. Thus, nested elements  will not match because they are directly inside a treeitem. This attribute is  useful to provide different rules for outer and inner elements.
+</prop>
+<prop name='uri'>
+  Used to specify the variable name for the content. When a rule is  evaluated, it scans through each resource in the RDF datasource looking  for a match. Each resource is placed in the variable specified in the  uri attribute in turn. Then, the other rules are evaluated for a match.  This attribute should always be present.
+</prop>
+</element>

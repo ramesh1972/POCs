@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+
+<element name='scrollbar'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/scroll.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_scrollbar.html</reference>
+  When a container contains contents which are larger that the size of the  content, scroll bars may be placed at the side of the container to allow the  user to scroll around in the container. The scroll bar may also be used  independently when a numeric value or percentage needs to be selected by the  user. The user can adjust the position of the scroll bar by clicking arrows  on either end of the scroll bar or by dragging the scroll bar thumb around.  
+
+<example>
+<![CDATA[
+    &lt;scrollbar curpos=&quot;5&quot; maxpos=&quot;50&quot;/&gt;
+
+]]>
+</example>
+<attr name='curpos' type='integer'>
+  The current position of the scrollbar, which ranges from 0 to the value of the  maxpos attribute. The default value is 0.
+</attr>
+<attr name='increment' type='integer'>
+  The amount that the value of the curpos attribute changes by when the scroll bar  arrows are clicked. The default value is 1.
+</attr>
+<attr name='maxpos' type='integer'>
+  The maximum position of the scrollbar. The default value is 100.
+</attr>
+<attr name='pageincrement' type='integer'>
+  The amount that the value of the curpos attribute changes by when the tray  of the scroll bar is clicked. The tray is the area in which the scroll bar  thumb moves along. The default value is 10.
+</attr>
+</element>

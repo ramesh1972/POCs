@@ -1,0 +1,24 @@
+<PUBLIC:COMPONENT>
+<PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="Hilite()" />
+<PUBLIC:ATTACH EVENT="onmouseout"  ONEVENT="Restore()" />
+<SCRIPT LANGUAGE="JScript">
+   var normalColor, normalSpacing;
+
+   function Hilite()
+   {
+     // save original values
+     normalColor  = runtimeStyle.color;
+     normalSpacing= runtimeStyle.letterSpacing;
+
+     element.style.color  = "blue";
+     runtimeStyle.letterSpacing = 2;
+   }
+
+   function Restore()
+   {
+     // restore original values
+     runtimeStyle.color  = normalColor;
+     runtimeStyle.letterSpacing = normalSpacing;
+   }
+</SCRIPT>
+</PUBLIC:COMPONENT>

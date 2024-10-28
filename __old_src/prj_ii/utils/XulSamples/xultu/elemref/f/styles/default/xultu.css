@@ -1,0 +1,180 @@
+h5 {
+  font-size: medium;
+}
+
+img {
+  margin-right: 4px;
+}
+
+pre, code {
+  white-space: -moz-pre-wrap;
+}
+
+.note {
+  background-color: rgb(255,255,204);
+  border-color: rgb(128,128,128);
+  border-style: ridge;
+  padding: 0.5em;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.sample {
+  background-color: rgb(192,192,192);
+  border-color: rgb(128,128,128);
+  border-style: ridge;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-family: monospace;
+}
+
+.example {
+  background-color: rgb(192,192,192);
+  border-color: rgb(128,128,128);
+  border-style: ridge;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-family: monospace;
+}
+
+.examplec {
+  background-color: rgb(192,192,192);
+  border-color: rgb(128,128,128);
+  border-style: ridge;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-family: monospace;
+}
+
+.excomment {
+  color: green;
+}
+
+.ref_apblk p {
+  margin-left: 1em;
+}
+
+.aphead {
+  font-size: smaller;
+  margin: 2em 0;
+}
+
+.apinherits {
+  font-size: smaller;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  padding: 0.5em 1em;
+  float: right;
+  clear: right;
+  border: 1px solid rgb(70,130,180);
+}
+
+.apheadbody {
+  margin-top: 0;
+  margin-left: 1em;
+}
+
+.apheadbody td {
+  padding-right: 1em;
+}
+
+.aptype {
+  font-size: smaller;
+}
+
+.propsplit {
+  clear: right;
+}
+
+.tag {
+  color: rgb(255,0,0);
+}
+
+.tag:link {
+  color: rgb(255,0,0);
+}
+
+.tag:link:hover {
+  color: blue;
+}
+
+.attrib {
+  color: rgb(0,128,0);
+}
+
+.aval {
+  color: rgb(255,165,0);
+  font-weight: bold;
+}
+
+.aval-default {
+  color: rgb(255,165,0);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.spec {
+  color: rgb(255,0,0);
+  font-size: small;
+}
+
+.keyname {
+  font-variant: small-caps;
+}
+
+.task {
+  border-left: rgb(0,0,128);
+  border-left-style: solid;
+  padding-left: 1ex;
+}
+
+.navlinks-pnc {
+  font-variant: small-caps;
+  text-align: right;
+}
+
+.prevlink:before {
+  content: "<< ";
+}
+
+.nextlink:after {
+  content: " >>";
+}
+
+.nextlink {
+  margin-left: 1em;
+}
+
+#sidebar-docs-index {
+  padding-left: 1em;
+}
+
+#sidebar-docs-index ol {
+  margin-top: 0.5ex;
+  padding-left: 1em;
+}
+
+#sidebar-docs-index li {
+  font-size: small;
+}
+
+.sidebar-section-title {
+  margin-bottom: 0.5em;
+}
+
+.sidebar-section-links {
+  padding-left: 1em;
+}
+
+.currentpage {
+  color: red;
+}
+
+.small-inimage {
+  float: right;
+  margin-left: 1em;
+}
+

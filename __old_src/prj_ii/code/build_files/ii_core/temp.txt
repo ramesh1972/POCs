@@ -1,0 +1,8 @@
+core_data_db
+core_data_files
+core_io
+core_ipc
+core_proc
+core_services
+Debug
+temp.txt

@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - rdf:bookmarks Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ rdf:bookmarks 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">rdf:bookmarks</h3>
+
+<p>
+  This datasource holds the user's bookmarks. Each bookmark holds a title and URL  and information about when the user has visited the bookmark and the schedule  for checking when the URL is checked for updates. The root of the bookmarks  datasource is NC:BookmarksRoot. You can also use the roots NC:PersonalToolbarFolder  for the folder holding personal toolbar items and NC:IEFavoritesRoot for the folder  containing the imported IE favorites.  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/datasrc.html'>More information about rdf:bookmarks<a></p>
+<hr><h4 class='propslist'><a name='attrblk'>Available Resource Properties:</a></h4>
+<div class='ref_apblk'>
+  <h5><a name='prop_rdf:BookmarkAddDate'><span class='attrib'> BookmarkAddDate (http://home.netscape.com/NC-rdf#BookmarkAddDate) </span></a></h5>
+  <p>
+  
+  The date and time that the bookmark was added.</p>
+  <h5><a name='prop_rdf:Description'><span class='attrib'> Description (http://home.netscape.com/NC-rdf#Description) </span></a></h5>
+  <p>
+  
+  The description or comments of the bookmark. The user can set this in a bookmark's  property window.</p>
+  <h5><a name='prop_rdf:LastModifiedDate'><span class='attrib'> LastModifiedDate (http://home.netscape.com/WEB-rdf#LastModifiedDate) </span></a></h5>
+  <p>
+  
+  The date that URL was last modified.</p>
+  <h5><a name='prop_rdf:LastVisitDate'><span class='attrib'> LastVisitDate (http://home.netscape.com/WEB-rdf#LastVisitDate) </span></a></h5>
+  <p>
+  
+  The date that URL was last visited.</p>
+  <h5><a name='prop_rdf:Name'><span class='attrib'> Name (http://home.netscape.com/NC-rdf#Name) </span></a></h5>
+  <p>
+  
+  The name of the resource. This will be the title of the page.</p>
+  <h5><a name='prop_rdf:Schedule'><span class='attrib'> Schedule (http://home.netscape.com/WEB-rdf#Schedule) </span></a></h5>
+  <p>
+  
+  The schedule for checking the bookmark's URL for updates. This is a string of the  following format:<br>  &lt;days to check&gt;|&lt;times to check&gt;|&lt;duration&gt;|&lt;alert options&gt;  </p>  <p>  For example: '1|4-11|30|icon,alert' means check on Monday between 4 and 11, every  thirty minutes. If the page has been updated, the icon changed and an alert is  displayed. The first value may contain multiple digits for multiple days. Additional  alert options are 'sound' and 'open' to play a sound and open a new window. These  options correspond to those in the bookmark properties dialog.</p>
+  <h5><a name='prop_rdf:ShortcutURL'><span class='attrib'> ShortcutURL (http://home.netscape.com/NC-rdf#ShortcutURL) </span></a></h5>
+  <p>
+  
+  The shortcut keyword for the resource. You can set this for a bookmark in its  properties window.</p>
+  <h5><a name='prop_rdf:URL'><span class='attrib'> URL (http://home.netscape.com/NC-rdf#URL) </span></a></h5>
+  <p>
+  
+  The URL for the resource. This will be the URL that is opened when a user double-clicks  on the entry in a tree.</p>
+  <h5><a name='prop_rdf:status'><span class='attrib'> status (http://home.netscape.com/WEB-rdf#status) </span></a></h5>
+  <p>
+  
+  This property is set to the string 'new' when an update check determines that the  page has been modified. This only applies when the schedule has the icon alert option  set.</p>
+  <h5><a name='prop_rdf:type'><span class='attrib'> type (http://www.w3.org/1999/02/22-rdf-syntax-ns#type) </span></a></h5>
+  <p>
+  
+  The type of bookmark. This will be set to one of three possible values. The bookmarks  window uses the type to determine how to render the bookmark, including which icon  to use.</p>
+  <ul>
+    <li><span class='aval'>http://home.netscape.com/NC-RDF#Bookmark</span>:
+          A regular bookmark.
+
+</li>
+    <li><span class='aval'>http://home.netscape.com/NC-RDF#BookmarkSeparator</span>:
+          A bookmark separator. You will typically draw a horizontal line for this type.
+
+</li>
+    <li><span class='aval'>http://home.netscape.com/NC-RDF#Folder</span>:
+          A bookmark folder, which can contain other bookmarks.
+
+</li>
+  </ul>
+</div>
+<hr class='propsplit'><h4 class='propslist'><a name='propsblk'>Available Resource Commands:</a></h4>
+<p>Commands can be called with the DoCommand method of the
+                 nsIRDFDataSource interface. This method can take a number of arguments,
+                 which are described in the descriptions below.</p><div class='ref_apblk'>
+  <h5><a name='command_rdf:deletebookmark'><span class='attrib'> deletebookmark (http://home.netscape.com/NS-rdf#command?cmd=deletebookmark) </span></a></h5>
+  <p>
+  
+  Deletes a bookmark from the datasource.</p>
+  <h5><a name='command_rdf:deletebookmarkfolder'><span class='attrib'> deletebookmarkfolder (http://home.netscape.com/NS-rdf#command?cmd=deletebookmarkfolder) </span></a></h5>
+  <p>
+  
+  Deletes a bookmark from the datasource.</p>
+  <h5><a name='command_rdf:deletebookmarkseparator'><span class='attrib'> deletebookmarkseparator (http://home.netscape.com/NS-rdf#command?cmd=deletebookmarkseparator) </span></a></h5>
+  <p>
+  
+  Deletes a bookmark separator from the datasource.</p>
+  <h5><a name='command_rdf:export'><span class='attrib'> export (http://home.netscape.com/NS-rdf#command?cmd=export) </span></a></h5>
+  <p>
+  
+  Used to export bookmarks to a file. Use the URL property to specify a file URL  to export to.</p>
+  <h5><a name='command_rdf:import'><span class='attrib'> import (http://home.netscape.com/NS-rdf#command?cmd=import) </span></a></h5>
+  <p>
+  
+  Used to import bookmarks from a file. Use the URL property to specify a file URL  to import from.</p>
+  <h5><a name='command_rdf:newbookmark'><span class='attrib'> newbookmark (http://home.netscape.com/NS-rdf#command?cmd=newbookmark) </span></a></h5>
+  <p>
+  
+  Adds a new bookmark to the datasource. Arguments include the Name and URL of  the new bookmark. You should pass nsIResource objects for the name and URL as  arguments.</p>
+  <h5><a name='command_rdf:newfolder'><span class='attrib'> newfolder (http://home.netscape.com/NS-rdf#command?cmd=newfolder) </span></a></h5>
+  <p>
+  
+  Adds a new bookmark folder to the datasource. Use the Name argument to specify  the folder title.</p>
+  <h5><a name='command_rdf:newseparator'><span class='attrib'> newseparator (http://home.netscape.com/NS-rdf#command?cmd=newseparator) </span></a></h5>
+  <p>
+  
+  Adds a new bookmark separator to the datasource.</p>
+  <h5><a name='command_rdf:setnewbookmarkfolder'><span class='attrib'> setnewbookmarkfolder (http://home.netscape.com/NS-rdf#command?cmd=setnewbookmarkfolder) </span></a></h5>
+  <p>
+  
+  Indicates that a bookmark is a folder.</p>
+  <h5><a name='command_rdf:setnewsearchfolder'><span class='attrib'> setnewsearchfolder (http://home.netscape.com/NS-rdf#command?cmd=setnewsearchfolder) </span></a></h5>
+  <p>
+  
+  indicates that a folder is the one used for storing search results.</p>
+  <h5><a name='command_rdf:setpersonaltoolbarfolder'><span class='attrib'> setpersonaltoolbarfolder (http://home.netscape.com/NS-rdf#command?cmd=setpersonaltoolbarfolder) </span></a></h5>
+  <p>
+  
+  Indicates that a folder is the one used for the items that appear on the  personal toolbar.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

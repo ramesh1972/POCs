@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<element name='implementation' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblprops.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblimplementation.html</reference>
+  This element should contain all of the xbl, xbl and xbl  declarations for the binding.  
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the implementation with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='implements'>
+  Set this property to one or more XPCOM interfaces that the binding  implements, separated by commas. Normally, you would not set this property.  It is used to create a binding which implements an interface.
+</attr>
+<attr name='name'>
+  A name used internally for constructing names for this binding. It is  included in error messages displayed on the JavaScript console.
+</attr>
+</element>

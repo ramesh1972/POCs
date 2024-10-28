@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+		  "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>Morten's JavaScript Tree Menu -- Install guide -- Tracking code</title>
+
+<script type="text/javascript">
+<!-- hide the script from old browsers
+if((navigator.appName == "Netscape" && parseInt(navigator.appVersion) >= 3 && navigator.userAgent.indexOf("Opera") == -1) || (navigator.appName == "Microsoft Internet Explorer" && parseInt(navigator.appVersion) >= 4) || (navigator.appName == "Opera" && parseInt(navigator.appVersion) >= 5)) {
+
+  for(i = 0; i < parent.frames.length; i++) {
+    if(parent.frames[i].name == "code" && parent.frames[i].MTMLoaded) {
+      parent.frames[i].MTMTrack = true;
+      setTimeout("parent.frames[" + i + "].MTMDisplayMenu()", 250);
+      break;
+    }
+  }
+}
+
+// End of script hiding -->
+</script>
+</head>
+
+<body bgcolor="#ffffff" text="#000000" link="#330099" vlink="#666699" alink="red">
+<h2>Tracking code</h2>
+
+<p>What is left is to add some code to the files that are to appear in the right frame (the content frame, in our example called &quot;text&quot;), and also checking all pages to make sure everything's right.  Lets look at the code we need to add first.</p>
+
+<p>The code is needed for the tracking. If you forget to insert this the tracking won't work. You'll also see that sub menus with URLs will not expand like they should. In the page-header (between <code>&lt;HEAD&gt;</code> and <code>&lt;/HEAD&gt;</code>) you have to insert this little script:</p>
+
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+&lt;!-- hide the script from old browsers
+if((navigator.appName == &quot;Netscape&quot; && parseInt(navigator.appVersion) >= 3 && navigator.userAgent.indexOf(&quot;Opera&quot;) == -1) || (navigator.appName == &quot;Microsoft Internet Explorer&quot; && parseInt(navigator.appVersion) >= 4) || (navigator.appName == &quot;Opera&quot; && parseInt(navigator.appVersion) >= 5)) {
+
+  for(i = 0; i &lt; parent.frames.length; i++) {
+    if(parent.frames[i].name == &quot;code&quot; && parent.frames[i].MTMLoaded) {
+      parent.frames[i].MTMTrack = true;
+      setTimeout(&quot;parent.frames[&quot; + i + &quot;].MTMDisplayMenu()&quot;, 250);
+      break;
+    }
+  }
+}
+
+// End of script hiding --&gt;
+&lt;/script&gt;</pre></code>
+
+<p>This code checks what browser the visitor has, and if it's either of the ones who get the dynamic menu we call the function to update the menu, with a slight delay of 250ms to make fetching documents from the cache a little quicker.  If you feel that it's cumbersome to add all this code to all documents you can save it to a file, make sure it has the extension &quot;.js&quot; and then reference that file from each document.  Say you save it to a file called &quot;tracking-code.js&quot; (which happens to be what the example found in the downloadable files is called) you can refer to it using the following script element:</p>
+
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;tracking-code.js&quot;&gt;
+&lt;/script&gt;</code></pre>
+
+<p>This also means that you can update the tracking code by changing just one file, instead of having to go through all files on your site.  Another way to solve it through Server Side Includes (SSI), which I use myself.  Provided your host has support for it you can then put the tracking code in a separate file and reference it from each document to be included dynamically by the server.  Contact your own web host if you have any inquires about this since I can't help you out.</p>
+
+<p>That should be about all there is to do.  If you've used my pages as a basis for your pages you might want to remember that I use style sheets for my pages, and that each page therefore has a stylesheet linked.  This link needs to be removed if you don't use stylesheets.  If you're curious about what the inline style sheet looks like and what CSS properties it uses, have a look at the next document <a href="css-properties.shtml">CSS-related properties</a>.</p>
+
+<p>If you find that the script doesn't work as it should, go through what you've done and make sure it looks like it should do.  Also remember that the above script needs to be present in <em>all</em> pages that are to be loaded in the main frame (&quot;text&quot; in our example) for the tracking to work correctly.</p>
+</body>
+</html>

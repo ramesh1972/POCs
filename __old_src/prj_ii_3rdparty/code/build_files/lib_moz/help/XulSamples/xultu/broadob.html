@@ -1,0 +1,551 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="commandupdate.html"> 
+ <link rel="next" href="dom.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Broadcasters and Observers</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 6.7 - Broadcasters and Observers 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <SPAN CLASS="currentpage">Broadcasters and Observers</SPAN></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.6 - Updating Commands"
+     href="commandupdate.html">Previous</a>
+
+
+  <a class="nextlink" title="7.1 - Document Object Model"
+     href="dom.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Broadcasters and Observers</h2>
+
+<P>
+There may be times when you want several elements to respond to events or
+changes of state easily. To do this, we can use broadcasters.
+</P>
+
+<H3>Command Attribute Forwarding</H3>
+
+<P>
+We've already seen that elements such as buttons can be hooked up to commands.
+In addition, if you place the <SPAN CLASS="attrib">disabled</SPAN> attribute
+on the <A CLASS="tag" HREF="elemref/ref_command.html">command</A> element, any elements hooked up to it
+will also become disabled automatically. This is useful way to simplify the
+amount of code you need to write. The technique also works for other
+attributes as well. For instance, if you place a
+<SPAN CLASS="attrib">label</SPAN> attribute on a
+<A CLASS="tag" HREF="elemref/ref_command.html">command</A> element, any buttons attached to the command
+will share the same label.
+</P>
+
+
+Example 6.7.1:
+<A HREF='examples/ex_broadob_1.xul.txt'>Source</A>
+<A HREF="examples/ex_broadob_1.xul" ONCLICK="window.open('examples/ex_broadob_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;command id="my_command" label="Open"/&gt;
+
+&lt;button command="my_command"/&gt;
+&lt;checkbox label="Open in a new window" command="my_command"/&gt;</PRE></DIV>
+
+
+
+<P>
+In this example, the button does not have a <SPAN CLASS="attrib">label</SPAN>
+attribute, however it is attached to a command that does. The button will
+share the label with the command. The checkbox already has a label, however,
+it will be overridden by the command's label. The result is that both the
+button and the checkbox will have the same label 'Open'.
+</P>
+
+<P>
+If you were to modify the command's <SPAN CLASS="attrib">label</SPAN>
+attribute, the label on the button and checkbox will adjust accordingly.
+We saw something like this in a previous section where the
+<SPAN CLASS="attrib">disabled</SPAN> attribute was adjusted once and
+propagated to other elements.
+</P>
+
+<P>
+This attribute forwarding is quite useful for a number of purposes. For
+instance, let's say that we want the Back action in a browser to be disabled.
+We would need to disable the Back command on the menu, the Back button on the
+toolbar, the keyboard shortcut (Alt+Left for example) and any Back commands on
+popup menus. Although we could write a script to do this, it is quite tedious.
+It also has the disadvantage that we would need to know all of the places
+where a Back action could be. If someone added a new Back button using an
+extension, it wouldn't be handled. It is convenient to simply disable the Back
+action and have all the elements that issue the Back action disable
+themselves. We can use the attribute forwarding of commands to accomplish
+this.
+</P>
+
+<H3>Broadcasters</H3>
+
+<P>
+There is a similar element called a <A CLASS="tag" HREF="elemref/ref_broadcaster.html">broadcaster</A>.
+Broadcasters support attribute forwarding in the same way that commands do.
+They work the same as commands except that a command is used for actions,
+while a broadcaster is instead used for holding state information. For
+example, a <A CLASS="tag" HREF="elemref/ref_command.html">command</A> would be used for an action such
+as Back, Cut or Delete. A <A CLASS="tag" HREF="elemref/ref_broadcaster.html">broadcaster</A> would be used
+to hold, for instance, a flag to indicate whether the user was online or not.
+In the former case, menu items and toolbar buttons would need to be disabled
+when there was no page to go back to, or no text to cut or delete. In the
+latter case, various UI elements might need to update when the user switches
+from offline mode to online mode.
+</P>
+
+<P>
+The simplest broadcaster is shown below. You should always use an
+<SPAN CLASS="attrib">id</SPAN> attribute so that it can be referred to by other
+elements.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;broadcasterset&gt;
+  &lt;broadcaster id="isOffline" label="Offline"/&gt;
+&lt;/broadcasterset&gt;</PRE></DIV>
+
+
+
+<P>
+Any elements that are watching the broadcaster will be modified automatically
+whenever the broadcaster has its <SPAN CLASS="attrib">label</SPAN> attribute
+changed. This results in these elements having a new label. Like other
+non-displayed elements, the <A CLASS="tag" HREF="elemref/ref_broadcasterset.html">broadcasterset</A> element
+serves as a placeholder for broadcasters. You should declare all your
+broadcasters inside a <A CLASS="tag" HREF="elemref/ref_broadcasterset.html">broadcasterset</A> element so that
+they are all kept together.
+</P>
+
+<P>
+Elements that are watching the broadcaster are called observers because they
+observe the state of the broadcaster. To make an element an observer, add an
+<SPAN CLASS="attrib">observes</SPAN> attribute to it. This is analogous to
+using the <SPAN CLASS="attrib">command</SPAN> attribute when attaching an
+element to a <A CLASS="tag" HREF="elemref/ref_command.html">command</A> element. For example, to make a
+button an observer of the broadcaster above:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;button id="offline_button" observes="isOffline"/&gt;</PRE></DIV>
+
+
+
+<P>
+The <SPAN CLASS="attrib">observes</SPAN> attribute has been placed on the
+button and its value has been set to the value of the
+<SPAN CLASS="attrib">id</SPAN> on the broadcaster to observe. Here the button
+will observe the broadcaster which has the id
+<SPAN CLASS="aval">isOffline</SPAN>, which is the one defined earlier. If the
+value of the <SPAN CLASS="attrib">label</SPAN> attribute on the broadcaster
+changes, the observers will update the values of their
+<SPAN CLASS="attrib">label</SPAN> attributes also.
+</P>
+
+<P>
+We could continue with additional elements. As many elements as you want can
+observe a single broadcaster. You can also have only one if you wanted to but
+that would accomplish very little since the main reason for using broadcasters
+is to have attributes forwarded to multiple places. You should only use
+broadcasters when you need multiple elements that observe an attribute. Below,
+some additional observers are defined:
+</P>
+
+
+<DIV CLASS="sample"><PRE>
+&lt;broadcaster id="offline_command" label="Offline" accesskey="f"/&gt;
+
+&lt;keyset&gt;
+  &lt;key id="goonline_key" observes="offline_command" modifiers="accel" key="O"/&gt;
+&lt;keyset&gt;
+&lt;menuitem id="offline_menuitem" observes="offline_command"/&gt;
+&lt;toolbarbutton id="offline_toolbarbutton" observes="offline_command"/&gt;</PRE></DIV>
+
+
+
+<P>
+In this example, both the <SPAN CLASS="attrib">label</SPAN> and the
+<SPAN CLASS="attrib">accesskey</SPAN> will be forwarded from the broadcaster
+to the key, menu item and the toolbar button. The key won't use any of the
+received attributes for anything, but it will be disabled when the broadcaster
+is disabled.
+</P>
+
+<P>
+You can use a broadcaster to observe any attribute that you wish. The
+observers will grab all the values of any attributes from the broadcasters
+whenever they change. Whenever the value of any of the attributes on the
+broadcaster changes, the observers are all notified and they update their own
+attributes to match. Attributes of the observers that the broadcaster doesn't
+have itself are not modified. The only attributes that are not updated are the
+<SPAN CLASS="attrib">id</SPAN> and
+<SPAN CLASS="attrib">persist</SPAN> attributes; these attributes are never
+shared. You can also use your own custom attributes if you wish.
+</P>
+
+<P>
+Broadcasters aren't used frequently as commands can generally handle most
+uses. One thing to point out is that there really is no difference between
+the <A CLASS="tag" HREF="elemref/ref_command.html">command</A> element and the
+<A CLASS="tag" HREF="elemref/ref_broadcaster.html">broadcaster</A> element. They both do the same thing.
+The difference is more semantic. Use commands for actions and use broadcasters
+for state. In fact, any element can act as broadcaster, as long as you observe
+it using the <SPAN CLASS="attrib">observes</SPAN> attribute.
+</P>
+
+<H3>The Observes Element</H3>
+
+<P>
+There is also a way to be more specific about which attribute of the
+broadcaster to observe. This involves an <A CLASS="tag" HREF="elemref/ref_observes.html">observes</A>
+element. Like its attribute counterpart, it allows you to define an element to
+be an observer. The <A CLASS="tag" HREF="elemref/ref_observes.html">observes</A> element should be placed
+as a child of the element that is to be the observer. An example is shown below:
+</P>
+
+
+Example 6.7.2:
+<A HREF='examples/ex_broadob_2.xul.txt'>Source</A>
+<A HREF="examples/ex_broadob_2.xul" ONCLICK="window.open('examples/ex_broadob_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;broadcasterset&gt;
+  &lt;broadcaster id="isOffline" label="Offline" accesskey="f"/&gt;
+&lt;/broadcasterset&gt;
+
+&lt;button id="offline_button"&gt;
+  &lt;observes element="isOffline" attribute="label"/&gt;
+&lt;/button&gt;</PRE></DIV>
+
+
+
+<P>
+Two attributes have been added to the <A CLASS="tag" HREF="elemref/ref_observes.html">observes</A>
+element. The first, <SPAN CLASS="attrib">element</SPAN> specifies the id of
+the broadcaster to observe. The second, <SPAN CLASS="attrib">attribute</SPAN>,
+specifies the attribute to observe. The result here is that the button will
+receive its label from the broadcaster, and when the label is changed, the
+label on the button is changed. The <A CLASS="tag" HREF="elemref/ref_observes.html">observes</A> element
+does not change but instead the element it is inside changes, which in this
+case is a <A CLASS="tag" HREF="elemref/ref_button.html">button</A>. Notice that the
+<SPAN CLASS="attrib">accesskey</SPAN> is not forwarded to the button, since
+it is not being obseved. If you wanted it to be, another
+<A CLASS="tag" HREF="elemref/ref_observes.html">observes</A> element would need to be added. If you don't
+use any <A CLASS="tag" HREF="elemref/ref_observes.html">observes</A> elements, and instead use the
+<SPAN CLASS="attrib">observes</SPAN> attribute directly on the button, all
+attributes will be observed.
+</P>
+
+<P>
+There is an additional event handler that we can place on the
+<A CLASS="tag" HREF="elemref/ref_observes.html">observes</A> element which is
+<SPAN CLASS="attrib">onbroadcast</SPAN>. The event is called whenever the
+observer notices a change to the attributes of the broadcaster that it is
+watching. An example is shown below.
+</P>
+
+
+Example 6.7.3:
+<A HREF='examples/ex_broadob_3.xul.txt'>Source</A>
+<A HREF="examples/ex_broadob_3.xul" ONCLICK="window.open('examples/ex_broadob_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;broadcasterset&gt;
+  &lt;broadcaster id="colorChanger" style="color: black"/&gt;
+&lt;/broadcasterset&gt;
+
+&lt;button label="Test"&gt;
+  &lt;observes element="colorChanger" attribute="style" onbroadcast="alert('Color changed');"/&gt;
+&lt;/button&gt;
+
+&lt;button label="Observer"
+  oncommand="document.getElementById('colorChanger').setAttribute('style','color: red');"
+/&gt;</PRE></DIV>
+
+
+
+<P>
+Two buttons have been created, one labeled Test and the other labeled
+Observer. If you click on the Test button, nothing special happens. However,
+if you click on the Observer button, two things happen. First, the button
+changes to have red text and, second, an alert box appears with the message
+'Color changed'.
+</P>
+
+<P>
+What happens is the <SPAN CLASS="attrib">oncommand</SPAN> handler on the second
+button is called when the user presses on it. The script here gets a reference
+to the broadcaster and changes the style of it to have a
+<SPAN CLASS="attrib">color</SPAN> that is red. The broadcaster is not affected
+by the style change because it doesn't display on the screen. However, the first
+button has an observer which notices the change in style. The
+<SPAN CLASS="attrib">element</SPAN> and the
+<SPAN CLASS="attrib">attribute</SPAN> on the <A CLASS="tag" HREF="elemref/ref_observes.html">observes</A>
+tag detect the style change. The style is applied to the first button
+automatically.
+</P>
+
+<P>
+Next, because the broadcast occured, the event handler
+<SPAN CLASS="attrib">onbroadcast</SPAN> is called. This results in an alert
+message appearing. Note that the broadcast only occurs if the attributes on
+the <A CLASS="tag" HREF="elemref/ref_broadcaster.html">broadcaster</A> element are changed. Changing the
+style of the buttons directly will not cause the broadcast to occur so the
+alert box will not appear.
+</P>
+
+<P>
+If you tried duplicating the code for the first
+<A CLASS="tag" HREF="elemref/ref_button.html">button</A> several times, you would end up with a
+series of alert boxes appearing, one for each button. This is because each
+button is an observer and will be notified when the style changes.
+</P>
+
+<HR>
+<P>
+<A HREF="dom.html">(Next)</A>
+Next, we'll look at using the Document Object Model with XUL elements.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_broadob_1.xul.txt'>6.7.1</A>
+  <A HREF='examples/ex_broadob_2.xul.txt'>6.7.2</A>
+  <A HREF='examples/ex_broadob_3.xul.txt'>6.7.3</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="6.6 - Updating Commands"
+     href="commandupdate.html">Previous</a>
+
+
+  <a class="nextlink" title="7.1 - Document Object Model"
+     href="dom.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,400 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="featwin.html"> 
+ <link rel="next" href="filedialog.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Creating Dialogs</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 12.2 - Creating Dialogs 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <SPAN CLASS="currentpage">Creating Dialogs</SPAN></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.1 - Features of a Window"
+     href="featwin.html">Previous</a>
+
+
+  <a class="nextlink" title="12.3 - Open and Save Dialogs"
+     href="filedialog.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Creating Dialogs</h2>
+
+<P>
+A XUL application will often require dialogs to be displayed. This section
+describes how one might construct them.
+</P>
+
+<H3>Creating a Dialog</H3>
+
+<P>
+The open function is used to open a window. A related function is openDialog. This
+function has several main differences. It will display a dialog instead of a window
+which implies that it is asking something of the user. It may have subtle differences
+in the way it works and appears to the user. These differences will vary on each
+platform.
+</P>
+
+<P>
+In addition, the openDialog function can take additional arguments beyond the first
+three. These arguments are passed to the new dialog and placed in an array stored
+in the new window's <SPAN CLASS="attrib">arguments</SPAN> property. You can pass
+as many arguments as necessary. This is a convenient way to supply default values
+to the fields in the dialog.
+</P>
+
+
+<DIV CLASS="sample"><PRE>var somefile=document.getElementById('enterfile').value;
+
+window.openDialog("chrome://findfile/content/showdetails.xul","showmore",
+                  "chrome",somefile);</PRE></DIV>
+
+
+
+<P>
+In this example the dialog 'showdetails.xul' will be displayed. It will be passed
+one argument, 'somefile', which was taken from the value of an element with the id
+<SPAN CLASS="aval">enterfile</SPAN>. In a script used by the dialog, we can then
+refer to the argument using the window's arguments property. For example:
+</P>
+
+
+<DIV CLASS="sample"><PRE>var fl=window.arguments[0];
+
+document.getElementById('thefile').value=fl;</PRE></DIV>
+
+
+
+<P>
+This is an effective way to pass values to the new window. You can pass values
+back from the opened window to the original window in one of two ways. First,
+you could use the window.opener property which holds the window that opened the
+dialog. Second, you could pass a function or object as one of the arguments, and
+then call the function or modify the object in the opened dialog.
+</P>
+
+<H3>The Dialog Element</H3>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_dialog.html">dialog</A> element should be used in place of the
+<A CLASS="tag" HREF="elemref/ref_window.html">window</A> element when creating a dialog. It provides
+the useful capability to construct up to four buttons along the bottom of
+the dialog for OK, Cancel and so on. You do not need to include the XUL for
+each button but you do need to supply code to handle when the user
+presses each button. This mechanism is necessary because different platforms
+have a specific order in which the buttons appear.
+</P>
+
+
+Example 12.2.1:
+<A HREF='examples/ex_dialogs_1.xul.txt'>Source</A>
+<A HREF="examples/ex_dialogs_1.xul" ONCLICK="window.open('examples/ex_dialogs_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?&gt;
+
+&lt;dialog id="donothing" title="Do Nothing"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel"
+        ondialogaccept="return doOK();"
+        ondialogcancel="return doCancel();"&gt;
+
+&lt;script&gt;
+function doOK()
+{
+  alert("You pressed OK!");
+  return true;
+}
+
+function doCancel()
+{
+  alert("You pressed Cancel!");
+  return true;
+}
+&lt;/script&gt;
+
+&lt;description value="Select a button"/&gt;
+
+&lt;/dialog&gt;</PRE></DIV>
+
+
+
+<P>
+You may place any elements that you wish in a dialog. The
+<A CLASS="tag" HREF="elemref/ref_dialog.html">dialog</A> element has some additional attributes that
+windows do not have. The <A CLASS="tag" HREF="elemref/ref_buttons.html">buttons</A> attribute is used to
+specify which buttons should appear in the dialog. The following values may
+be used, seperated by commas:
+
+<UL>
+  <LI><SPAN CLASS="aval">accept</SPAN> - an OK button</LI>
+  <LI><SPAN CLASS="aval">cancel</SPAN> - a Cancel button</LI>
+  <LI><SPAN CLASS="aval">help</SPAN> - a Help button</LI>
+  <LI><SPAN CLASS="aval">disclosure</SPAN> - a disclosure button, which is
+      used for showing more information.</LI>
+</UL>
+
+<P>
+You can set code to execute when the buttons are pressed using the
+<SPAN CLASS="attrib">ondialogaccept</SPAN>,
+<SPAN CLASS="attrib">ondialogcancel</SPAN>,
+<SPAN CLASS="attrib">ondialoghelp</SPAN> and
+<SPAN CLASS="attrib">ondialogdisclosure</SPAN> attributes. If you try the
+example above, you will find that the doOK function is called when the OK button
+is pressed and the doCancel function is called when the Cancel button is pressed.
+</P>
+
+<P>
+The two functions doOK and doCancel return true which indicate that the dialog
+should be closed. If false was returned, the dialog would stay open. This would
+be used if an invalid value was entered in a field in the dialog.
+</P>
+
+<HR>
+<P>
+<A HREF="filedialog.html">(Next)</A>
+Next, we'll see how to open file dialogs.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_dialogs_1.xul.txt'>12.2.1</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="12.1 - Features of a Window"
+     href="featwin.html">Previous</a>
+
+
+  <a class="nextlink" title="12.3 - Open and Save Dialogs"
+     href="filedialog.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

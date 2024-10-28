@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+
+<element name='scrollbox'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_scrollbox.html</reference>
+  A box that has additional functions that can be used to scroll the content. Note  that a scrollbox doesn't cause scrollbars to be displayed. It is intended to be  used when an application wants to be able to adjust the scroll position itself.  If you just want scrollbars to appear, add style='overflow: auto;'. This may also  be used with any other container element.
+
+</element>

@@ -1,0 +1,93 @@
+BODY
+{
+    COLOR: black;
+    FONT-FAMILY: Georgia, Verdana, Arial;
+    FONT-SIZE: 10pt
+}
+TD.menuitem
+{
+    COLOR: steelblue;
+    CURSOR: default;
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: 8pt;
+    PADDING-LEFT: 10px
+}
+TD.menuheading
+{
+    COLOR: steelblue;
+    CURSOR: default;
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bolder
+}
+TD.menuheading2
+{
+    COLOR: steelblue;
+    CURSOR: default;
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bolder;
+    PADDING-TOP: 10px
+}
+TD.navmenu
+{
+    COLOR: chocolate;
+    CURSOR: default;
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: 7pt;
+    FONT-WEIGHT: bolder
+}
+A
+{
+    BACKGROUND-COLOR: transparent
+}
+TD.title
+{
+    COLOR: darkgray;
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: large;
+    FONT-WEIGHT: bolder
+}
+.smalltext
+{
+    COLOR: gray;
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: 8pt
+}
+TD
+{
+    FONT-FAMILY: Georgia, Verdana, Arial;
+    FONT-SIZE: 10pt
+}
+DIV.pagetitle
+{
+    LINE-HEIGHT: 18pt
+}
+TABLE.gridtable
+{
+    COLOR: brown;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt
+}
+BUTTON
+{
+    BACKGROUND: steelblue;
+    COLOR: white;
+    FONT-SIZE: x-small
+}
+SPAN.BulletNumber
+{
+    COLOR: #cc9933;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: medium;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 14pt
+}
+input.BUTTON
+{
+    BACKGROUND: steelblue;
+    COLOR: white;
+    FONT-SIZE: x-small
+}
+
+MainPage

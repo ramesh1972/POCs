@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 5.3.2"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<button label="Save" tooltiptext="Click here to save your stuff"/>
+
+<popupset>
+  <tooltip id="moretip" orient="vertical" style="background-color: #33DD00;">
+    <description value="Click here to see more information"/>
+    <description value="Really!" style="color: red;"/>
+  </tooltip>
+</popupset>
+
+<button label="More" tooltip="moretip"/>
+
+
+</window>
+

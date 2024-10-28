@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='row'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/grids.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_row.html</reference>
+  A single row in a rows element. Each child of the row element is placed in  each successive cell of the grid. The row with the most child elements  determines the number of columns in each row.  
+
+</element>

@@ -1,0 +1,69 @@
+.planMainTitle 
+	  {
+	  background-image: url(img/bg_plantitle.gif);
+	  background-repeat: no-repeat;
+	  width: 150px;
+	  height: 26px;
+	  padding-top : 5px;
+	  text-align: center;
+	  font-family: arial;
+	  font-size: 9pt;
+	 }
+.planNav
+	 {
+	 margin-top: 5px;
+	 background: url(img/bg_planmid.gif) repeat-y;
+	 padding: 5px;
+	 padding-top: 0px;
+	 }
+.planNavlist
+	{
+	margin-top: 8px;
+	margin-left: 5px;
+	list-style: none;
+	padding-left: 0px;
+	}
+
+.planNavlist li 
+	{
+	margin-top: 10px;
+	padding-left: 18px;
+	background: url(img/arrow.gif) top left;
+	background-repeat: no-repeat;
+	}
+
+.planNavlist li#current
+	{
+	color:#000000;
+	background: url(img/arrow.gif) top left;
+	background-repeat: no-repeat;
+	font-size: 10pt;
+	text-decoration: none;
+	}
+
+/* added by andrew chow */
+.planNavlist li#current a {
+	color:#000000;
+	font-size: 10pt;
+	text-decoration: none;
+}
+/**/
+
+.askus
+	 {
+	 margin-top: 5px;
+	 background: url(img/bg_planmid.gif) repeat-y;
+	 padding: 20px;
+	 font-size: 8pt;
+	 }
+.hostingCell1
+	{
+	border-top: 1px solid #D5DADF;
+	border-bottom: 1px solid #D5DADF;
+	background: #f7f7f7;
+	padding: 10px;
+	}
+.hostingCell2
+	{
+	padding: 10px;
+	}

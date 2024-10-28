@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+
+<element name='wizardpage'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/wizard.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_wizardpage.html</reference>
+  This element defines a page in a wizard. The content in the pages should be placed  inside the wizardpage element.  
+
+<attr name='description' type='string'>
+  Set this attribute to a description to appear in the wizard header while the  page is being displayed.
+</attr>
+<attr name='label' type='string'>
+  The title that appears on the top of the wizard while the page is displayed.
+</attr>
+<attr name='next' type='string wizardpage id'>
+  Set to the page ID of the next page after this one. When set, the page with this  pageID is displayed when the Next button is pressed. This can be used to create  wizards that do not have a linear sequence. If one of the pages has a next  attribute, all of the pages should have one, except that last page.
+</attr>
+<attr name='onpageadvanced' type='script code'>
+  This should be set to code which is called when the user presses the Next  button while on the current page. Return true to allow the next page to be  displayed and false to disallow moving to the next page.
+</attr>
+<attr name='onpagehide' type='script code'>
+  The code in this attribute is called when the page is hidden, such as when  moving to another page. Return true to accept the page change and false to  prevent the page from changing. This code is called before the wizard's  onwizardnext and related functions.
+</attr>
+<attr name='onpagerewound' type='script code'>
+  This should be set to code which is called when the user presses the Back  button while on the current page. Return true to allow the previous page to  be displayed and false to disallow moving to the next page.
+</attr>
+<attr name='onpageshow' type='script code'>
+  The code in this attribute is called when the page is shown.
+</attr>
+<attr name='pageid' type='string wizardpage id'>
+  This attribute should be set to a string that identifies the page's identifer  in the wizard. This is used with the next attribute. The wizard always starts  with the wizardpage that appears first in the wizard child list.
+</attr>
+<prop name='next' type='string wizardpage id'>
+  Set to the page ID of the next page after this one. When set, the page with this  pageID is displayed when the Next button is pressed. This can be used to create  wizards that do not have a linear sequence. If one of the pages has a next  attribute, all of the pages should have one, except that last page.
+</prop>
+<prop name='pageid' type='string wizardpage id'>
+  This attribute should be set to a string that identifies the page's identifer  in the wizard. This is used with the next attribute. The wizard always starts  with the wizardpage that appears first in the wizard child list.
+</prop>
+</element>

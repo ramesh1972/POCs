@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+
+<element name='toolbar'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/toolbar.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_toolbar.html</reference>
+  A container which typically contains a row of buttons. It is a type of box  that defaults to horizontal orientation. It can be collapsed with a grippy  when the toolbar is placed inside a toolbox. The toolbar should always have  an id attribute. Firefox supports toolbar customization, whereas the Mozilla  browser does not.  
+
+<implements>nsIAccessibleProvider</implements>
+<attr name='currentset' spec=' Firefox only '>
+  The current set of displayed items on the toolbar. This should be  set to a comma-separated list of item IDs from the toolbarpalette.
+</attr>
+<attr name='customindex' spec=' Firefox only '>
+  This value is the index of the toolbar in the list of the custom  toolbars. The value is updated automatically by the toolbar  customization dialog.
+</attr>
+<attr name='customizable' spec=' Firefox only '>
+  Set this attribute to true on toolbars that can be customized. This  causes the set of buttons to be persisted across sessions.
+</attr>
+<attr name='defaultset' spec=' Firefox only '>
+  The default set of displayed items on the toolbar. This should be  set to a comma-separated list of item IDs from the toolbarpalette.  For example, 'back-button,forward-button,print-button'.
+</attr>
+<attr name='grippyhidden' spec=' Not in Firefox ' type='boolean'>
+  When set to true, the grippy will be hidden. When set to false, the default, the  grippy will be shown.
+</attr>
+<attr name='grippytooltiptext' spec=' Not in Firefox ' type='string'>
+  The text to appear on the tooltip for the toolbar's grippy when the toolbar is collapsed.  This would be used to label the grippy so that the user knows which toolbar it represents.
+</attr>
+<attr name='toolbarname' spec=' Firefox only '>
+  The name of the toolbar, which is listed on the Show/Hide toolbars  menu.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the toolbar.
+</prop>
+<prop name='currentSet' spec=' Firefox only '>
+  Holds a comma separated list of the items currently on the toolbar. This  will be modified when the user customizes the toolbar. You may change the  current set of items by setting this property.
+</prop>
+<prop name='firstPermanentChild' spec=' Firefox only '>
+  The first permanent child of the toolbar. A permanent child is one that is  not customizable and remains on the toolbar. Items that are placed directly  inside the toolbar without being in the toolbarpalette are permanent.
+</prop>
+<method name='insertItem' spec=' Firefox only '>
+<prototype> insertItem ( id , beforeNode , wrapper , beforePermanent ) </prototype>
+  
+  Add an item with the given id to the toolbar. The new item  is added just before the item given by the second argument.  If the second argument is null, but the beforePermanent argument  is true, the item is added to the beginning of the toolbar before  the first permanent item. Otherwise, if the beforePermanent argument  is false, the new item is added to the end of the toolbar. The third  argument can be used to wrap the new item in another element.  Usually, the last argument will be null as it is mainly for the use  of the customize dialog.        The id should match an element in the toolbar's toolbarpalette. Some  special ids may also be used to create special spacing items:
+<value name='separator'>
+    A separator, which is drawn as a vertical bar
+</value>
+<value name='spacer'>
+    A non-flexible space.
+</value>
+<value name='spring'>
+    A flexible space.
+</value>
+</method>
+<prop name='lastPermanentChild' spec=' Firefox only '>
+  The last permanent child of the toolbar.
+</prop>
+<prop name='toolbarName' spec=' Firefox only '>
+  The name of the toolbar.
+</prop>
+</element>

@@ -1,0 +1,525 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+
+
+
+
+
+
+
+
+
+
+
+Bombay Oilseeds and Oils Exchange
+(BOOE)
+Issue 1.0
+
+
+
+
+
+
+
+Software Requirements Specification
+
+
+
+
+
+
+
+
+
+
+
+ 
+Copyright (c) SSIT India. All rights reserved. No part of this publication may be reproduced, photocopied, stored in a retrieval system, or transmitted without the express prior consent of SSIT Software Private Limited.
+SSIT  makes no representations or warranties with respect to the contents or use of this document, and specifically disclaims any express or implied warranties of merchantability or fitness for any particular purpose. SSI Technologies reserves the right to revise this document and make changes to its content, at any time, without obligation to notify any person or entity of such revisions or changes.
+ 
+
+
+Contents
+
+1.	<A href="#Intro">INTRODUCTION</A>	4
+1.1	PURPOSE	4
+1.2	SCOPE	4
+1.3	DEFINITION, ACRONYMS & ABBREVIATIONS	4
+1.4	REFERENCES	5
+1.5	APPROVALS AND AUTHORISATIONS	5
+1.6	DISTRIBUTION	5
+1.7	AMENDMENT RECORD	5
+1.8	OVER VIEW	5
+2.	GENERAL DESCRIPTION	5
+2.1	PRODUCT PERSPECTIVE	5
+2.2	PRODUCT FUNCTIONS	6
+2.3	USER CHARACTERISTICS	6
+3.	SPECIFIC REQUIREMENTS	6
+3.1	DEVELOPMENT	6
+3.2	EXTERNAL INTERFACE REQUIREMENTS	15
+3.3	PERFORMANCE REQUIREMENTS	15
+3.4	DESIGN CONSTRAINTS	16
+3.5	ATTRIBUTES	16
+OTHER REQUIREMENTS	17
+
+ 
+
+1.	Introduction
+
+1.1	Purpose
+	
+·	To arrive at the software requirements for the  BOOE project
+·	To have this SRS as the basis for Functional  understanding for the entire development
+·	BOOE team will have this document referred for all requirements
+
+
+1.2	Scope
+
+	The scope of the project includes development  of  commodities exchange portal  “BCE.COM”
+	
+	It covers  the following business functionality 
+	
+·	Futures Trading of Oilseeds & Oils
+·	Market Administration and Control
+·	Risk Management and Surveillance
+·	Clearing and Settlement
+	
+And other supporting functionality like
+·	Broker Administration
+·	Daily downloads
+·	Reports & Queries
+
+1.3	Definition, Acronyms & Abbreviations
+	
+<A name="Intro"></A>
+Chapter	Title	Description
+Chapter 1	BOOE Trade	Trading Module
+Chapter 2	BOOE MAC	Market Administration  & Control 
+Chapter 3 	BOOE RMS	Risk Management & Surviellance
+Chapter 4	BOOE ADMIN	Broker Administration 
+Chapter 5	BOOE CS	Clearing and Settlement
+
+                  SSIT	Software Solution Integrated Technologies
+                BOOE 	Bombay Oilseeds and Oils Exchange
+                 QMS	Quality Management System
+                  SA	System Administrator
+                 MAC       	Market Administration & Control
+                RMS	Risk Management and Surviellance
+                  CS      	Clearing and Settlement
+
+
+
+
+
+
+
+
+
+
+1.4	References
+
+·	     
+
+
+
+1.5	Approvals and Authorisations
+	Designation	Name	Date
+Author	Project Coordinator	Suresh K	29.1.2001
+Approved by	SBU Head	V G  Chandrasekar	7.2.2001
+Authorised by			
+1.6	Distribution
+Copy No.	Holder’s Designation	Issue Date
+1	Project Coordinator	
+2	Practice Head	
+3	Team Members	
+
+1.7	Amendment record
+
+No	Date	Section(s)	Issue No.	Description
+1	29.1.2001	Draft- All	1.0	For approval by SBU Head
+2	7.2.2001	All	1.0	Released after approval
+
+
+1.8	Over view
+
+·	This documents all the functional requirements which is the basis for the development
+·	SRS is organized to address all requirements based on System study conducted at BOOE between 11th Dec’2000 to 20th December’2000
+
+2.	General Description
+2.1	Product Perspective
+
+·	The project is an independent and totally self-contained.
+·	The project will be the first online exchange available for commodities trading
+
+
+2.2	Product Functions
+
+Summary of the functions:
+
+·	Admit members as participants in trading
+·	Provide participants to view, trade and settle contracts in commodities exchange
+·	Set limits for brokers
+·	Provide clearing and settlement of trades
+·	Assist in delivery of goods and services to members
+
+
+
+2.3	User Characteristics
+
+The product will be used by 
+
+·	The commodities exchange
+·	The members of the exchange
+·	The members of the clearing and settlement corporation
+·	The bankers registered with the exchange
+·	Participants who can only view trades
+
+
+
+2.3.1	2.4 General Constraints
+
+·	Tandem Machine availability at the design phase in Temple Towers/KRM Centre
+·	Required infrastructure should be ready at BOOE before Acceptance testing phase
+
+
+2.3.2	 2.5 Assumptions & Dependencies
+
+·	The schedule that is provided in this document is based on the understanding of requirements at this stage.  After completion of SRS the schedule may be revised.
+·	The Team induction into the project, Hardware, Software and Training of team members should be completed before the commencement of Design phase.
+·	The set of output reports required are to be defined fully
+·	Maintenance and/or Enhancements to the completed website will be estimated separately
+·	Resources with Tandem/TESA skills, Nonstop SQL & Nonstop Kernel  are  made available to 
+the project before the start of  Design  phase
+
+
+3.	Specific Requirements
+3.1	Development
+            Following are the Broader level of functionalities identified as of now:
+
+
+
+1.	Users Login & Password Maintenance
+2.	User Services and Service Maintenance
+3.	Registration of users
+4.	Users and User Trading Relationship Maintenance
+5.	Limit Settings & Margins maintenance
+6.	Instruments/Contracts Maintenance & Commodity group Maintenance
+7.	Order Entry and  Maintenance, Routing
+8.	Order Validation , Matching & confirmation
+9.	Messages Broadcast
+10.	Middleware (BOOE interface between Tandem & web)
+11.	Order Book -  Query & Reports
+12.	Market Surveillance
+13.	Dayend Activities – Official Closing price computation,Trade reports generation, Gainers/Losers List
+14.	Dayend Batch jobs
+15.	Online Replication
+16.	Data Logger - Queries & Reports
+17.	Session Management/Calendar Maintenance
+18.	Bank Interface
+19.	DayBegin batch jobs
+20.	Clearing & Settlement -Queries / Reports for TCM/ICM
+21.	Clearing & Settlement – Queries / Reports for PCCCI
+
+
+3.1.1	User Login and Password Maintenance
+3.1.1.1	Introduction
+This is the requirement that meets the logon and password maintenance for a user. 
+3.1.1.2	Inputs
+Login Id,  Password, Old password, New password
+3.1.1.3	Processing
+For a normal access to the system, the user id and password is validated. For a change of password for an existing user, the old and new passwords will be verified
+3.1.1.4	Outputs
+   For a normal logon, the successful navigation to the next screen/activity is done.
+For a change in password, the details are updated accordingly
+
+3.1.2	User Services and Services Maintenance
+3.1.2.1	Introduction
+Mapping of  userwise services and services master maintenance is done based on the services provided by the exchange thru this functionality
+3.1.2.2	Inputs
+List of services,  services which are applicable to each user category
+3.1.2.3	Processing
+Details which are for service master maintenance handles the service master changes. For a user specific service, the corresponding user related service info gets updated
+3.1.2.4	Outputs
+Updated Service master, updated user service details
+
+
+3.1.3	Registration of  Users
+3.1.3.1	Introduction
+ Registration of users in the site need to be done thru this functionality. All details forming part of the application, are fed into the system after offline approval
+3.1.3.2	Inputs
+User details like address, name, company name,etc..
+3.1.3.3	Processing
+Entered information is validated for the correctness of the attribute and master updated accordingly.
+3.1.3.4	Outputs
+Approved user, who can logon to the system
+
+3.1.4	Users and User trading relationships maintenance
+3.1.4.1	Introduction
+  This functionality handles the user maintenance and mapping of users against a TCM(broker)
+3.1.4.2	Inputs
+User Id,  User Id to whom the mapping to be done, type of activity
+3.1.4.3	Processing
+ In case of user profile changes, the user suspension, trading suspension, customising as per user needs are the main functions. Defining the relation between the client and the broker and broker to subbroker forms part of relationship maintenance.
+3.1.4.4	Outputs
+Updated user profile and relationship info
+
+3.1.5	Limit Settings and Margins maintenance
+3.1.5.1	Introduction
+This functionality will provide the Users the facility to set limits and maintain margins for user registered under him
+3.1.5.2	Inputs
+User details likes User ID, Name , eligibility margin and utilised margin
+3.1.5.3	Processing
+The margins will be monitored on real time basis during the  trading time and any shortfall will be flashed to the user on attaining the critical limits. Once the margin is utilised, the user will be debarred from putting fresh trades except squaring of existing open positions
+3.1.5.4	Outputs
+The user position regarding limits and margins will be updated and will trigger the necessary action from the users
+
+3.1.6	Instruments/Contracts Maintenance & Commodity group             
+          Maintenance
+3.1.6.1	Introduction
+The exchange will be responsible for the introduction and maintaining the performance of various commodities falling under different groups
+3.1.6.2	Inputs
+The contract details will contain information regarding instrument code, instrument name, grade, MAOP, settlement circuit filter, etc
+3.1.6.3	Processing
+As and when a instrument/contract is introduced,  the instrument will be allowed to be traded from the start date and the end date as mentioned in the instrument master. The instrument will cease to exist after the trade on the last date as mentioned in the instrument master
+3.1.6.4	Outputs
+The user can identify the contracts which are expiring and accordingly prepare for post clearing process and also identify the instruments to be introduced for informing the user about the same
+
+3.1.7	Order Entry and Maintenance, Routing
+3.1.7.1	Introduction
+The users allow the user to feed the orders in instruments that are currently being traded in the market and route the same to the exchange for possible matching
+3.1.7.2	Inputs
+The user will feed the instrument code, name, quantity, fill types, limit r market order and the period the order should be live in the market
+3.1.7.3	Processing
+The instruments are processed provided the parameters set by the user are met and a confirmation is generated for user to view
+3.1.7.4	Outputs
+The order details in the  order books
+
+3.1.8	Order Validation , Matching & confirmation
+3.1.8.1	Introduction
+The order fed by the users will be validated for various parameters set by the users before the order is routed to the exchange for matching
+3.1.8.2	Inputs
+The order details like order quantity, value, etc will be validated for limit and margin purpose 
+3.1.8.3	Processing
+Once the order is validated, then the order is forwarded to the exchange for matching
+3.1.8.4	Outputs
+Order status after the matching process;Once the order is matched, a message is broadcasted to both the buyer and the seller confirming the matching
+
+3.1.9	Messages Broadcast
+3.1.9.1	Introduction
+The users and the user will receive periodical broadcast from the exchange on various activities  like introduction of an instrument, suspension of a user,etc..
+3.1.9.2	Inputs
+The inputs will contain the details of the instrument or details of the users 
+3.1.9.3	Processing
+Based on the nature of messaging, the message transmission between one end to other end takes place
+3.1.9.4	Outputs
+Confirmation on message transmission success/failure
+
+3.1.10	Middleware (BOOE interface between Tandem & web)
+3.1.10.1	Introduction
+  This is the interface between Tandem machine and Windows NT end
+3.1.10.2	Inputs
+The information from tandem end, request information, related parameters
+3.1.10.3	Processing
+The common requests processing that happens between Tandem and webserver for various activities like messaging, downloads, etc..  are the main functions.
+3.1.10.4	Outputs
+Response after activity completion thru updated status of request
+
+3.1.11	Order Book -  Query & Reports
+3.1.11.1	Introduction
+The users and user can query for various reports in the order book
+3.1.11.2	Inputs
+The order book will contain details regarding the live orders, rejected orders, period specified orders, etc
+3.1.11.3	Processing
+The users and the user by querying the order book can make modifications, delete the orders from the order book
+3.1.11.4	Outputs
+The order book will be changed accordingly and the orders will be routed to the exchange for matching
+
+3.1.12	Market Surveillance
+3.1.12.1	Introduction
+The surveillance users will be able to monitor the action of the user under various functional heads like limits, margins, MAOP, position limit
+3.1.12.2	Inputs
+The information required will be the equity and security deposit as well the margin deposited by the user and updated in the users and exchange surveillance book 
+3.1.12.3	Processing
+As soon as the order is fed into the system, the order is validated for the above inputs and accordingly the order is routed to the exchange for matching
+3.1.12.4	Outputs
+The surveillance will result in the actions of the user and users on orders processed by them
+
+3.1.13	Day end Activities – Official Closing price computation, Trade 
+             reports generation, Gainers/Losers List
+3.1.13.1	Introduction
+All the instruments that are allowed to be traded in the exchange will have a official closing price calculated everyday based on predetermined method
+3.1.13.2	Inputs
+In order to arrive at the official closing price, information like trade details of the last thirty minutes during the day or the last five trades during the day are arrived at
+3.1.13.3	Processing
+The daily price movement of all the instruments are monitored for arriving at the official closing price, accordingly reports are generated for various purpose
+3.1.13.4	Outputs
+The reports generated will provide information regarding price movement of the instrument  to arrive at price statistics, gainers losers, trade confirmation can be generated
+
+3.1.14	Day end Batch jobs
+3.1.14.1	Introduction
+At the end of the trading session in a day batch jobs will commence like users and user position calculation, pay-in and pay-out and clearing position calculation
+3.1.14.2	Inputs
+The trade confirmation report will contain information regarding the matched orders like instrument code, name, users code, name, quantity, value, etc
+3.1.14.3	Processing
+Once the trade report is generated, then the relative reports like clearing position report, pay-in and pay-out , margin position, MAOP and open position are also triggered  
+3.1.14.4	Outputs
+The reports processed can be viewed by the users and user as well as the clearing corporation for initiating necessary action respectively
+
+
+3.1.15	Online Replication
+3.1.15.1	Introduction
+This is the functionality thru which the database sync takes place between Tandem and Windows NT
+3.1.15.2	Inputs
+Nonstop SQL from Tandem
+3.1.15.3	Processing
+On a periodical basis, contents at web end will be updated from Tandem end
+3.1.15.4	Outputs
+Updated SQL database at Web end
+
+3.1.16	Data Logger – Queries & Reports
+3.1.16.1	Introduction
+This functionality covers the availability of offline details from Webend if the connectivity to Tandem is not possible at a given time
+3.1.16.2	Inputs
+Order details from webserver end
+3.1.16.3	Processing
+User requested details from webserver are displayed based on the request . 
+3.1.16.4	Outputs
+Query responses based on the request as webpages
+
+3.1.17	Session Management/Calendar Maintenance
+3.1.17.1	Introduction
+This is the functionality  which will cover sessions and calendar details maintenance
+3.1.17.2	Inputs
+Session details, day details
+3.1.17.3	Processing
+Based on session info, session details are updated. Similarly based on working day/holiday and other related info, calendar maintenance activity is done
+3.1.17.4	Outputs
+Updated session info, calendar info
+
+
+3.1.18	Bank Interface
+3.1.18.1	Introduction
+The users and user will have to maintain bank accounts for margin and clearing purpose
+3.1.18.2	Inputs
+The information to be provided by the bank to the exchange will consist of margin position and clearing position. The information to be provided by the exchange to the bank will consist of clearing position or the net position of the users and user
+3.1.18.3	Processing
+At the end of the trading session, the exchange will forward the net position of the users and the user to the bank for updating the bank account of the users and user
+3.1.18.4	Outputs
+The users and user account will be updated and accordingly the exchange will update the limits of the users and the user
+
+3.1.19	Day Begin Batch Jobs
+3.1.19.1	Introduction
+      This is the function of day begin job  activities execution
+3.1.19.2	Inputs
+      All servers
+3.1.19.3	Processing
+    All server startup activities will come under the day begin processing
+3.1.19.4	Outputs
+Activity completion confirmation 
+
+3.1.20	Clearing & Settlement – Queries/Reports for TCM/ICM
+3.1.20.1	Introduction
+The clearing report generated will provide details of open position of buyers and sellers to facilitate delivery of goods
+3.1.20.2	Inputs
+The information like the instrument code, name, users and user code, name, open position will be provided in the clearing and the settlement report
+3.1.20.3	Processing
+The net open position on the last day of the trade will be arrived and accordingly the respective buyers and sellers position will be matched for equality. 
+3.1.20.4	Outputs
+On successful matching, the process of physical movement of goods is initiated
+
+3.1.21	Clearing & Settlement – Queries/reports for PCCCI
+3.1.21.1	Introduction
+The information regarding the matched trades are viewed by the PCCCI which is responsible for netting of trades and ensuring physical delivery of commodities
+3.1.21.2	Inputs
+The daily trade report and the users and user net open position is provided to the PCCI
+3.1.21.3	Processing
+The PCCCI will process the net open position of the users and user after the last day of the instrument trading session .
+3.1.21.4	Outputs
+Once the process is complete, the PCCCI will forward mails to the respective parties regarding the next course of action like physical movement of goods by the seller to the designated warehouses and also a note to the buyer to take delivery of the goods on the specified days
+
+
+3.2	External Interface Requirements
+
+3.2.1	User Interfaces
+
+As the portal is basically for Web based trading , all the user interfaces will be thru the browser  (IE 5.0 & above) for web based functionalities. All other user interface will thru the client terminal connected to the Tandem machine.
+
+3.2.2	Hardware Interfaces
+Windows NT server will be the hardware interface for Tandem machine requests and viceversa
+for Tandem end.
+
+3.2.3	Software Interfaces
+
+3.2.4	3.2.4 Communication Interfaces
+
+·	A 2MBps dedicated leased line connecting the transaction server and the Local Area Network from which BOOE members will log in. 
+·	A web server collocated at an ISP connected by a 2 MBPS dedicated leased line to the transaction server for enabling Internet trading. There will be web server collocated at another ISP also connected by another 2 MBPS dedicated leased line to the transaction server so that if one ISP’s system is down, system will keep functioning through another ISP. 
+
+3.3	Performance requirements
+
+·	The solution and system being provided by SSIT will be sized suitably to take care of at least 50000 orders per day in a 5 hour working environment, with peak load being 5 times the normal load. Such spike will be sustained for a maximum of 30 minutes at a stretch with not more than 3 such spikes during the trading day, each separated by an hour. The end-to-end transaction response time, as measured on a terminal connected on a LAN within the BOOE’s premises at Vashi should be about 2 seconds at the 95th percentile. For transactions outside this LAN in Mumbai through internet access via a 128 KBPS ISDN connection or 56 KBPS dial up connection the transaction time is estimated to be about 3 to 4 seconds in the 95th percentile which may vary depending on the accessors’ individual internet service providers’ level of service, traffic, bandwidth conditions, terminal equipments etc. 
+·	However, the system should be immediately scaled up as soon as the system crosses 75 % capacity utilisation on an average for 30 consecutive trading days, so as to ensure that there is no degradation in the above-specified response time.
+         
+3.4	Design Constraints
+
+Balancing the performance of Tandem with respect to the Windows NT platform;
+Handling of requests/responses in  heterogeneous environment 
+
+3.4.1	Standards Compliance
+
+Standards that will be followed in the project will conform to SSIT QMS.
+For those standards where the client has specific requirements, corresponding standards will be followed
+
+3.4.2	Hardware Limitations
+
+Any additional processor on tandem requires the addition of a new cabinet 
+K series server used for development is a lower end machine, when compared to S series
+	Firewall needs to reside on a separate NT server.
+	
+               
+3.5	Attributes
+
+3.5.1	Availability
+
+The implemented system in the production environment needs to be available with a very less down time.
+
+3.5.2	Security
+
+The trading system through Internet will be compatible to Virtual Private Network ( VPN) which can be set up by BOOE or any group of members and traders authorized by BOOE. 
+
+Internet security: 
+SSIT will at its own cost provide suitable security measures such as firewall or equivalent measure to prevent unauthorised use or hacking of trading system. They will also implement suitable Secure socket layer and encryption and decryption technology (at least of 54 bit encryption) for providing Internet security. 
+3.5.3	Maintainability 
+
+As at present, the requirements will cover the aspects wherein the complete system is easily maintainable.
+
+3.5.4	Transferability/Conversion
+
+The developed portal will undergo acceptance testing at the BOOE facility and will be transferable 
+
+Other Requirements
+3.5.5	Statutory and Regulatory requirements
+
+If the performance of this Agreement is prevented by reason of: fire, flood, earthquakes or other acts of God or on account of any labour unrest, strikes, bandhs, riots or on account of any legal statutory or regulatory directive that may come into force, the party so affected, upon prompt written notice to the other Party, shall be excused from such performance to the extent such performance is found to be prevented, provided however that the affected party shall resume performance hereunder as soon as the cause is removed.
+
+3.5.6	Data Base
+
+	 SSIT will develop test cases and test database for system testing. Test cases will be executed and defects will be recorded. Defect reports will be handed over to development team. After fixing these defects system will be tested again. This cycle of testing & defect fixing will be continued until removal of all known defects.
+
+3.5.7	Operations
+
+	During the development, CRMG will have the backup of  the development server taken as per their procedure
+
+3.5.8	Site Adaptation
+
+Version maintenance between implementation and development will be in sync. This is ensured thru the usage of  Visual Source Safe for Software release and maintenance.
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+
+<element name='rule'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/advrules.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_rule.html</reference>
+  A rule is used in a template. The children of the rule are used to declare the  conditions in which the rule matches and the content that is generated. When  the content needs to be displayed, the template builder scans through the  RDF datasource searching for nodes that match the rules. When a rule is  matched, the corresponding content is generated.        A rule contains two or three child elements. The conditions element is used to  specify the conditions on which the resources in a datasource can match.  Matching resources are used to generate content. Non-matching resources have no  content generated for them. The action element specifies the content that is  generated. The bindings element is optional and may specify additional variable  bindings to be used.        All three children may use variables in place of attribute values. Variables are  a question mark followed by a name. For a matched rule, each variable will be a  reference to an RDF resource node. If the same variable appears multiple times,  it must have the same value in each place.     A rule may use a shortcut syntax for matching that involves placing additional  attributes on the rule element. The rule will match if the attribute matches  an attribute on the RDF resource. When comparing attributes, the id, property  and instanceOf attributes are ignored.        Each generated element will be given an id values automatically. The id values  will correspond to an id of the resource in the datasource. You can use this id  in a script to examine the resource.  
+<html><![CDATA[
+<p>  A rule is used in a template. The children of the rule are used to declare the  conditions in which the rule matches and the content that is generated. When  the content needs to be displayed, the template builder scans through the  RDF datasource searching for nodes that match the rules. When a rule is  matched, the corresponding content is generated.  </p>  <p>  A rule contains two or three child elements. The conditions element is used to  specify the conditions on which the resources in a datasource can match.  Matching resources are used to generate content. Non-matching resources have no  content generated for them. The action element specifies the content that is  generated. The bindings element is optional and may specify additional variable  bindings to be used.  </p>  <p>  All three children may use variables in place of attribute values. Variables are  a question mark followed by a name. For a matched rule, each variable will be a  reference to an RDF resource node. If the same variable appears multiple times,  it must have the same value in each place.  <p>  A rule may use a shortcut syntax for matching that involves placing additional  attributes on the rule element. The rule will match if the attribute matches  an attribute on the RDF resource. When comparing attributes, the id, property  and instanceOf attributes are ignored.  </p>  <p>  Each generated element will be given an id values automatically. The id values  will correspond to an id of the resource in the datasource. You can use this id  in a script to examine the resource.  </p>
+]]></html>
+
+<attr name='iscontainer' type='boolean'>
+  Indicates whether rules match based on containment. If not specified, the rule  may match regardless of whether a node is a container or not.
+<value name='true'>
+    The rule will only match nodes that are marked as containers. This would
+    apply to nodes that represent folders.
+</value>
+<value name='false'>
+    The rule will only match nodes that are not marked as containers.
+</value>
+</attr>
+<attr name='isempty' type='boolean'>
+  Indicates whether rules match based on emptyness. If not specified, the rule  may match regardless of whether a node has children or not.
+<value name='true'>
+    The rule will only match nodes that contain no child elements.
+</value>
+<value name='false'>
+    The rule will only match nodes that contain one or more child elements.
+</value>
+</attr>
+<attr name='parent' type='element tag name'>
+  If set, the rule will only match the corresponding tag. This may be used to  have separate rules for leaf and container nodes with different tags.
+</attr>
+<attr name='parsetype' type='string'>
+  If this attribute is set to 'Integer', the rule will only match RDF nodes  with a parse type of Integer.
+</attr>
+</element>

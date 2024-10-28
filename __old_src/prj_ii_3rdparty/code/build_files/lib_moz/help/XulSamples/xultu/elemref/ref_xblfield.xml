@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+
+<element name='field' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblprops.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblfield.html</reference>
+  A field is similar to a xbl, except that should not have a  xbl or xbl. It is useful as a simple holder for a value.        The field element may have content which is code that determines the  initial value of the field.  
+<html><![CDATA[
+<p>  A field is similar to a xbl, except that should not have a  xbl or xbl. It is useful as a simple holder for a value.  </p>  <p>  The field element may have content which is code that determines the  initial value of the field.  </p>
+]]></html>
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the field with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='name'>
+  The name of the field, which is the name that can be used via a script.  For example, if a field has the name width, it can be accessed with  object.width, where object is a reference to the object.
+</attr>
+<attr name='readonly'>
+  If set to true, the value of the field cannot be changed. If set  to false, the field may be changed.
+</attr>
+</element>

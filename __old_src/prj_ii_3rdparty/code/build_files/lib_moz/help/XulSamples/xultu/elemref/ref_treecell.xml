@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+
+<element name='treecell'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/trees.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_treecell.html</reference>
+  A single cell in a tree. This element should be placed inside a treerow. You  can set the text for the cell using the label attribute.  
+
+<attr name='label' type='string'>
+  The label to appear on the cell.
+</attr>
+<attr name='mode'>
+  For columns that are progress meters, this determines the type of progress meter  to use.
+<value name='none' default='true'>
+    No progress meter is displayed. The cell text is displayed instead.
+</value>
+<value name='normal'>
+    The cell uses its value attribute to determine the amount of the bar that
+    is filled in.
+</value>
+<value name='undetermined'>
+    The progressmeter is undeterminate.
+</value>
+</attr>
+<attr name='properties' type='space separated list of property names'>
+  Sets the properties of the treecell, which can be used to style the cell.
+</attr>
+<attr name='ref' type='id of a treecol element'>
+  Points to the treecol the cell is in. Usually you would not specify this  attribute as the tree will determine this by the position of the cell.
+</attr>
+<attr name='src' type='image URL'>
+  The URL of the image to appear on the treecell. If this attribute is left  out, no image appears.
+</attr>
+<attr name='value' type='inetger'>
+  A percentage value that specifies the amount of the progress meter that is  filled in. Because it is a percentage, it ranges from 0 to 100.
+</attr>
+</element>

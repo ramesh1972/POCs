@@ -1,0 +1,547 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="htmlelem.html"> 
+ <link rel="next" href="advbtns.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Using Spacers</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 2.8 - Using Spacers 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <SPAN CLASS="currentpage">Using Spacers</SPAN></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="2.7 - Adding HTML Elements"
+     href="htmlelem.html">Previous</a>
+
+
+  <a class="nextlink" title="2.9 - More Button Features"
+     href="advbtns.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Using Spacers</h2>
+
+<P>
+In this section, we'll find out how to add some spacing in between
+the elements we have created.
+</P>
+
+<H3>Adding Spacers</H3>
+
+<P>
+One of the problems with developing user interfaces is that each user
+has a different display. Some users may have larger displays with higher
+resolutions and others may have lower resolutions. In addition, different
+platforms may have special requirements on the user interface. If adding
+support for multiple languages, the text for one language may require more
+room than another.
+</P>
+
+<P>
+Applications that need to support multiple platforms and languages usually
+have their windows laid out with lots of space to allow for this. Some
+platforms and user interface toolkits provide components that are smart
+enough to resize and re-position themselves to fit the needs of the user.
+(Java uses layout managers for example.)</P>
+
+<P>
+XUL provides the capability for elements to position and resize
+automatically. As we've seen, the find files window has appeared in a size 
+that will fit the elements inside it. Each time we add something, the
+window gets bigger.
+</P>
+
+<P>
+XUL uses a layout system called the 'Box Model'. We'll talk more about this
+is the next section but it essentially allows you to divide a window into a
+series of boxes that hold elements. The boxes will be positioned and resize 
+based on specifications that you can define. For now, just know that the
+<A CLASS="tag" HREF="elemref/ref_window.html">window</A> element is a type of box.
+</P>
+
+<P>
+Before we get into detail about boxes, we'll introduce another XUL element
+that is useful for layout, the <A CLASS="tag" HREF="elemref/ref_spacer.html">spacer</A>. A spacer is
+very simple and only requires one attribute, which will be explained in a
+moment. The simplest spacer looks like the following:
+</P>
+
+<PRE>
+&lt;spacer flex="1"/&gt;
+</PRE>
+
+<P>
+A spacer is used to place blank space into a window. Its most useful ability
+is that is can grow or shrink as the user resizes the window. This would be
+how one would place buttons on the right or bottom of a window and have them
+stick to the right or bottom edge no matter what size the window is. As we'll
+see, you can use a series of spacers to create a number of layout effects.
+</P>
+
+<P>
+In this syntax above, the spacer has one attribute, called
+<SPAN CLASS="attrib">flex</SPAN>. This is used to define the flexibility
+of the spacer. In the case above, the spacer has a flex of 
+<SPAN CLASS="attrib">1</SPAN>. This makes the spacer element stretchy.
+If you place a spacer directly inside a window, the spacer will grow in
+size when the size of the window is changed.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+We'll add a spacer to our find file dialog soon. First, let's take a look
+at what happens when the current dialog is resized.
+</P>
+
+<P ALIGN="CENTER">
+<IMG SRC="images/springs1.jpg" ALT="" WIDTH=746 HEIGHT=66>
+</P>
+
+<P>
+If you change the size of the find files window, you can see that the
+elements have remained where they started. None of them have been
+moved or resized even though the window has more room in it.
+Let's see what happens when a spacer is added between the text box
+and the Find button.
+</P>
+
+<P ALIGN="CENTER">
+<IMG SRC="images/springs2.jpg" ALT="" WIDTH=746 HEIGHT=66>
+</P>
+
+<P>
+By adding a spacer and resizing the window, you can see that the spacer
+has expanded to fill the space. The buttons have been pushed over. The code
+to add a spacer is shown below. Insert it just before the Find button.
+</P>
+
+
+<DIV CLASS="sample"><PRE><SPAN STYLE="color:red">&lt;spacer flex="1"/&gt;</SPAN>
+
+&lt;button id="find-button" label="Find"/&gt;</PRE></DIV>
+
+
+
+</DIV>
+
+<H3>More About Flexibility</H3>
+
+<P>
+XUL lays out elements on a window by calculating suitable widths and heights
+for the elements and then adding space where they are flexible. Unless you
+specify information about the width and height of an element, the default
+size of an element is determined by its contents. You'll notice that the
+Cancel button in the dialogs has always set its width so that it fits the
+text inside it. If you create a button with a very long label, the button's
+default size will be large enough to hold the entire label. Other elements,
+such as the text box have chosen a suitable default size.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">flex</SPAN> attribute is used to specify if an
+element can change size to fit the box (in this case, the window) it is in.
+We've already seen the <SPAN CLASS="attrib">flex</SPAN> attribute applied
+to spacers, but it can be applied to any element. For example, you might
+want to have the Find button resize instead.
+</P>
+
+<P ALIGN="CENTER">
+<IMG SRC="images/springs3.jpg" ALT="" WIDTH=746 HEIGHT=66>
+</P>
+
+<P>
+As you can see in the image, by placing a <SPAN CLASS="attrib">flex</SPAN>
+attribute on the Find button, it resizes when the window does. A spacer is
+really nothing special. It could really be considered a hidden button. It
+works much the same way as a button except it does not draw on screen.
+</P>
+
+<P>
+You may have noticed something about the image above. Not only did the Find
+button grow in size but some space has appeared between the main label and
+the button. Of course, this is the spacer that we put in earlier. It has
+resized itself also. If you look closely enough, you should notice that
+the change in size has been divided up equally between the spacer and the
+button. The spacer has received half of the free space and the button has
+received the other half.
+</P>
+
+<P>
+The reason we're seeing this effect is that both the spacer and the Find
+button have a <SPAN CLASS="attrib">flex</SPAN> attribute. Because both are
+flexible, both the button and the spacer resize equally.
+</P>
+
+<P>
+What if you want to set one element to grow twice as large an another? You can
+use a higher number as the value of the <SPAN CLASS="attrib">flex</SPAN>
+attribute. The values of the flex element are a ratio. If one element has a
+flex of 1 and the next one has a flex of 2, the second one will grow at twice
+the rate of the first one. In effect, a flex of 2 says that this element has
+a flex that is two times the elements that have a flex of one.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">flex</SPAN> attribute isn't used to specify an actual
+size. Instead, it specifies how empty space it divided among the children of
+a container box. We'll look at boxes in the next section. Once the default sizes
+of the children of a box are determined, the flexibility values are used to divide
+up the remaining empty space in the box. For example, if a box is 200 pixels wide
+and contains two flexible buttons, the first 50 pixels and the other 90 pixels,
+there will be 60 pixels of space left over. If both buttons have a flex value of
+1, the space will be divided evenly with 30 extra pixels of width going to each
+button. If the second button's flexibility was increased to 2, the first button
+would receive 20 pixels of the extra space and the second button would receive 40
+pixels of extra space instead.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">flex</SPAN> attribute can be placed on any element,
+however it only has any meaning when placed on an element directly inside a XUL
+box. This means that even though you can place a <SPAN CLASS="attrib">flex</SPAN>
+on an HTML element, it will have no effect if that element is inside a non-box
+element.
+</P>
+
+<P>
+Let's look at some examples:
+</P>
+
+
+<DIV CLASS="sample"><PRE><STRONG>Example 1:</STRONG>
+  &lt;button label="Find" flex="1"/&gt;
+  &lt;button label="Cancel" flex="1"/&gt;
+
+<STRONG>Example 2:</STRONG>
+  &lt;button label="Find" flex="1"/&gt;
+  &lt;button label="Cancel" flex="10"/&gt;
+
+<STRONG>Example 3:</STRONG>
+  &lt;button label="Find" flex="2"/&gt;
+  &lt;button label="Replace"/&gt;
+  &lt;button label="Cancel" flex="4"/&gt;
+
+<STRONG>Example 4:</STRONG>
+  &lt;button label="Find" flex="2"/&gt;
+  &lt;button label="Replace" flex="2"/&gt;
+  &lt;button label="Cancel" flex="3"/&gt;
+
+<STRONG>Example 5:</STRONG>
+  &lt;html:div&gt;
+    &lt;button label="Find" flex="2"/&gt;
+    &lt;button label="Replace" flex="2"/&gt;
+  &lt;/html:div&gt;
+
+<STRONG>Example 6:</STRONG>
+  &lt;button label="Find" flex="145"/&gt;
+  &lt;button label="Replace" flex="145"/&gt;
+</PRE></DIV>
+
+
+
+<DIV>
+
+<BR>
+<STRONG>Example 1</STRONG>: in this case the flexibility is divided up
+evenly between both buttons. Both buttons will change size evenly.
+
+<BR>
+<STRONG>Example 2</STRONG>: here, both buttons will grow, but the Find
+button will grow ten times as much as the Cancel button, because it has a
+flex value that is 10 times the flex value of the Find button. Available
+space will be divided into one part for the Find button and 10 parts for
+the Cancel button.
+
+<BR>
+<STRONG>Example 3</STRONG>: only two of the buttons are marked as flexible
+here. The Replace button will never change size but the other two will.
+The Cancel button will always resize twice as large as the Find button
+because its flex value is twice as large.
+
+<BR>
+<STRONG>Example 4</STRONG>: in this case, all three buttons are flexible.
+Both the Find and Replace buttons will be the same size but the Cancel
+button will be somewhat larger (50% larger to be exact).
+
+<BR>
+<STRONG>Example 5</STRONG>: here, the two buttons are placed inside a 
+<A CLASS="tag" HREF="elemref/ref_div.html">div</A> element. Flexibility is meaningless here as the
+buttons are not directly in a box. The effect would be the same if the
+<SPAN CLASS="attrib">flex</SPAN> attributes were left out.
+
+<BR>
+<STRONG>Example 6</STRONG>: because the flex values are the same on both
+buttons, their will flex equally. This would work just as well with flex
+values of one instead of 145. There's no difference in this case. It is
+recommended that you use lower numbers for readability.
+
+</DIV>
+
+<P>
+Note that other factors such as the button labels and button minimum
+sizes will affect the actual sizes of the buttons. For instance, a button
+won't shrink less than the space needed to fit its label.
+</P>
+
+<P>
+Specifying a flex value of 0 has the same effect as leaving the
+<SPAN CLASS="attrib">flex</SPAN> attribute out entirely. It means that the
+element is not flexible at all. You may also sometimes see a flex value
+specified as a percentage. This has no special meaning and is treated as if
+the percent sign was not there.
+</P>
+
+<P>
+You may have noticed that when you resize the find file dialog vertically,
+the buttons resize themselves to fit the height of the window. This is
+because all of the buttons have an implied vertical flex given to them by
+the window. In the next section we'll learn how to change this.
+</P>
+
+<HR>
+<P>
+<A HREF="advbtns.html">(Next)</A>
+Next, we'll learn some additional features of buttons.
+
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-springs.xul.txt'>Source</A>
+<A HREF="examples/findfile/findfile-springs.xul" ONCLICK="window.open('examples/findfile/findfile-springs.xul','xulff','chrome,resizable'); return false;">View</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="2.7 - Adding HTML Elements"
+     href="htmlelem.html">Previous</a>
+
+
+  <a class="nextlink" title="2.9 - More Button Features"
+     href="advbtns.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

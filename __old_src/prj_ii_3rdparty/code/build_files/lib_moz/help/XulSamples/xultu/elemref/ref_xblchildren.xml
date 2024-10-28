@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<element name='children' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblcontent.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblchildren.html</reference>
+  Specifies the location where any child elements of the bound element are  placed in the generated content.        Normally, if the element bound to has its own content, the anonymous content  is not generated. However, with a children element, you can merge the  content from the XUL element and the XBL content.        If the children tag contains content itself, that content will become the default  content. If the element the binding is attached to contains content, the default  content will be ignored. If the element does not contain content, the default  content will be added.  
+<html><![CDATA[
+<p>  Specifies the location where any child elements of the bound element are  placed in the generated content.  </p>  <p>  Normally, if the element bound to has its own content, the anonymous content  is not generated. However, with a children element, you can merge the  content from the XUL element and the XBL content.  </p>  <p>  If the children tag contains content itself, that content will become the default  content. If the element the binding is attached to contains content, the default  content will be ignored. If the element does not contain content, the default  content will be added.  </p>
+]]></html>
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the children with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+<attr name='includes'>
+  Should be set to a tag name which acts as a filter for the XUL's content.  Any tags that match the value of the includes attribute are placed at the  location of the children element.
+</attr>
+</element>

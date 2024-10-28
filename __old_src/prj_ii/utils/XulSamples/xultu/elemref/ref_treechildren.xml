@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<element name='treechildren'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/trees.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_treechildren.html</reference>
+  This element is the body of the tree. For content trees, the content will  be placed inside this element. This element is also used to define container  rows in the tree.  
+
+</element>

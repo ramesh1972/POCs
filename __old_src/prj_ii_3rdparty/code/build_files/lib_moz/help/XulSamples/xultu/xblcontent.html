@@ -1,0 +1,598 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="introxbl.html"> 
+ <link rel="next" href="xblatin.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Anonymous Content</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 11.2 - Anonymous Content 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <SPAN CLASS="currentpage">Anonymous Content</SPAN></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.1 - Introduction to XBL"
+     href="introxbl.html">Previous</a>
+
+
+  <a class="nextlink" title="11.3 - XBL Attribute Inheritance"
+     href="xblatin.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Anonymous Content</h2>
+
+<P>
+In this section we'll look at creating content with XBL.
+</P>
+
+<H3>XBL Content</H3>
+
+<P>
+XBL can be used to automatically add a set of elements inside another element.
+The XUL file only needs to specify the outer element while the inner elements
+are described in the XBL. This is useful for creating a single widget that is
+made up of a set of other widgets, but can be referred to as only a single
+widget. Mechanisms are provided for adding attributes to the inner elements
+that were specified on the outer element.
+</P>
+
+<P>
+The example below shows how a scrollbar might be declared (It has been
+simplified a bit from the real thing):
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;bindings xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;binding id="scrollbarBinding"&gt;
+    &lt;content&gt;
+      &lt;xul:scrollbarbutton type="decrement"/&gt;
+      &lt;xul:slider flex="1"&gt;
+        &lt;xul:thumb/&gt;
+      &lt;xul:/slider&gt;
+      &lt;xul:scrollbarbutton type="increment"/&gt;
+    &lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;</PRE></DIV>
+
+
+
+<P>
+This file contains a single binding, declared with the
+<A CLASS="tag" HREF="elemref/ref_xblbinding.html">binding</A> element. The
+<SPAN CLASS="attrib">id</SPAN> attribute should be set to the identifier of
+the binding. This way it can be referred to through the CSS
+<SPAN CLASS="attrib">-moz-binding</SPAN> property.
+</P>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_xblcontent.html">content</A> tag is used to declare anonymous content
+that will be added to the scroll bar. All of the elements inside the
+<A CLASS="tag" HREF="elemref/ref_xblcontent.html">content</A> tag will be added inside the element that the
+binding is bound to. Presumably this binding would be bound to a scroll bar,
+altough it doesn't have to be. Any element that has its CSS
+<SPAN CLASS="attrib">-moz-binding</SPAN> property set to the URI of the binding
+will use it.
+</P>
+
+<P>
+The result of using the above binding is that the line of XUL below will
+be expanded as follows, assuming that the scrollbar is bound to the XBL above:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;scrollbar&gt;
+
+<B>expands to:</B>
+
+&lt;scrollbar&gt;
+  &lt;xul:scrollbarbutton type="decrement"/&gt;
+    &lt;xul:slider flex="1"/&gt;
+      &lt;xul:thumb/&gt;
+    &lt;/xul:slider&gt;
+  &lt;xul:scrollbarbutton type="increment"/&gt;
+&lt;/scrollbar&gt;</PRE></DIV>
+
+
+
+<P>
+The elements within the <A CLASS="tag" HREF="elemref/ref_xblcontent.html">content</A> tag are added to the
+scroll bar anonymously. Although anonymous content is displayed on screen, you
+cannot get to it through a script in the normal way. To the XUL, it's as if
+there was only one single element, even though it is really made up of a number
+of elements.
+</P>
+
+<P>
+If you look at a scroll bar in a Mozilla window, you will see that it is made up
+of an arrow button, a slider, a thumb inside it and a second arrow button at the
+end, which are the elements that appear in the XBL above. These elements would in
+turn be bound to other bindings that use the base XUL elements. Notice that the
+content elements need the XUL namespace (they appear preceded with xul:), because
+they are XUL elements and aren't valid in XBL. This namespace was declared on the
+<A CLASS="tag" HREF="elemref/ref_xblbindings.html">bindings</A> tag. If you don't use the namespace on XUL
+elements, Mozilla will assume that the elements are XBL, not understand them,
+and your elements won't work correctly.
+</P>
+
+<P>
+Another example, this time for a field for entering a filename:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;binding id="fileentry"&gt;
+  &lt;content&gt;
+    &lt;textbox/&gt;
+    &lt;button label="Browse..."/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+Attaching this binding to an element will cause it to contain a field for
+entering text, followed by a Browse button. This inner content is created
+anonymously and cannot be seen using the DOM.
+</P>
+
+<P>
+The anonymous content is created automatically whenever a binding is attached
+to an element. If you place child elements inside the XUL, they will override
+the elements provided by the binding. For example, take this XUL fragment,
+assuming it is bound to the scrollbar XBL earlier:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;scrollbar/&gt;
+
+&lt;scrollbar&gt;
+  &lt;button label="Overridden"/&gt;
+&lt;/scrollbar&gt;</PRE></DIV>
+
+
+
+<P>
+The first scroll bar, because it has no content of its own, will have its content
+generated from a binding definition declared in an XBL file. The second scroll bar
+has its own content so it will use that instead of the XBL content, resulting in
+something that isn't much of a scroll bar at all. Note that the built-in
+elements such as scroll bars, get their XBL from the files in the bindings directory
+in the toolkit package.
+</P>
+
+<P>
+This only applies to the elements defined within the <A CLASS="tag" HREF="elemref/ref_xblcontent.html">content</A>
+tag. Properties, methods and other aspects of XBL are still available whether the
+content is from XBL or whether the XUL provides its own content.
+</P>
+
+<P>
+There may be times when you want both the XBL content and the content provided by
+the XUL file to be displayed. You can do this by using the
+<A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> element. The children added in the XUL are added
+in place of the <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> element. This is handy when
+creating custom menu widgets. For example, a simplified version of an editable
+<A CLASS="tag" HREF="elemref/ref_menulist.html">menulist</A> element, might be created as follows:
+</P>
+
+
+<DIV CLASS="sample"><PRE><B>XUL:</B>
+
+&lt;menu class="dropbox"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="1000"/&gt;
+    &lt;menuitem label="2000"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menu&gt;
+
+<B>CSS:</B>
+
+menu.dropbox {
+    -moz-binding: url('chrome://example/skin/example.xml#dropbox');
+}
+
+<B>XBL:</B>
+
+&lt;binding id="dropbox"&gt;
+  &lt;content&gt;
+    &lt;children/&gt;
+    &lt;xul:textbox flex="1"/&gt;
+    &lt;xul:button src="chrome://global/skin/images/dropbox.jpg"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+This example creates an input field with a button beside it. The 
+<A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A> will be added to the content in the location
+specified by the <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> element. Note that to DOM
+functions, the content will appear as it was in the XUL file, so the menupopup
+will be a child of the menu. The XBL content is hidden away so the XUL developer
+doesn't need to even know it is there.
+</P>
+
+<P>
+The resulting content would be:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;menu class="dropbox"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="1000"/&gt;
+    &lt;menuitem label="2000"/&gt;
+  &lt;/menupopup&gt;
+  &lt;textbox flex="1"/&gt;
+  &lt;button src="chrome://global/skin/images/dropbox.jpg"/&gt;
+&lt;/menu&gt;</PRE></DIV>
+
+
+
+<P>
+In some cases, you may wish to only include specific types of content and not
+others. Or, you may wish to place different types of content in different places.
+The <SPAN CLASS="attrib">includes</SPAN> attribute can be used to allow only
+certain elements to appear in the content. Its value should be set to a single
+tag name, or to a list of tags separated by vertical bars ( The | symbol ).
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;children includes="button"&gt;</PRE></DIV>
+
+
+
+<P>
+This line will add all buttons that are children of the bound element in place
+of the <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> tag. Other elements will not match this
+tag. You can place multiple <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> elements in a binding
+to place different types of content in different places. If an element in the XUL
+does not match any of the <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> elements, that element
+(and any others that don't match) will be used instead of the bound content.
+</P>
+
+<P>
+Here is another example. Let's say that we wanted to create a widget that
+displayed an image with a zoom in and zoom out button on each side of it. This
+would be created with a box to hold the image and two buttons. The image element
+has to placed outside the XBL as it will differ with each use.
+</P>
+
+
+<DIV CLASS="sample"><PRE><B>XUL:</B>
+
+&lt;box class="zoombox"&gt;
+  &lt;image src="images/happy.jpg"/&gt;
+  &lt;image src="images/angry.jpg"/&gt;
+&lt;/box&gt;
+
+<B>XBL:</B>
+
+&lt;binding id="zoombox"&gt;
+  &lt;content&gt;
+    &lt;xul:box flex="1"&gt;
+      &lt;xul:button label="Zoom In"/&gt;
+      &lt;xul:box flex="1" style="border: 1px solid black"&gt;
+        &lt;children includes="image"/&gt;
+      &lt;/xul:box&gt;
+      &lt;xul:button label="Zoom Out"/&gt;
+    &lt;/xul:box&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+The explicit children in the XUL file will be placed at the location
+of the <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> tag. There are two images, so both
+will be added next to each other. This results in a display that
+is equivalent to the following:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;binding id="zoombox"&gt;
+  &lt;content&gt;
+    &lt;xul:box flex="1"&gt;
+      &lt;xul:button label="Zoom In"/&gt;
+      &lt;xul:box flex="1" style="border: 1px solid black"&gt;
+        &lt;image src="images/happy.jpg"/&gt;
+        &lt;image src="images/angry.jpg"/&gt;
+      &lt;/xul:box&gt;
+      &lt;xul:button label="Zoom Out"/&gt;
+    &lt;/xul:box&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+From the DOM's perspective, the child elements are still in their original
+location. That is, the outer XUL box has two children, which are the two images.
+The inner box with the border has one child, the <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A>
+tag. This is an important distinction when using the DOM with XBL. This also
+applies to CSS selector rules.
+</P>
+
+<H3>Multiple Children Elements</H3>
+
+<P>
+You can also use multiple <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> elements and have
+certain elements be placed in one location and other elements placed in another.
+By adding a <SPAN CLASS="attrib">includes</SPAN> attribute and setting it to a
+vertical bar-separated list of tags, you can make only elements in that list be
+placed at that location. For example, the following XBL will cause text labels
+and buttons to appear in a different location than other elements:
+</P>
+
+
+Example 11.2.1:
+<A HREF='examples/ex_xblcontent_1.xml.txt'>Source</A>
+<DIV CLASS="example"><PRE>&lt;binding id="navbox"&gt;
+  &lt;content&gt;
+    &lt;xul:vbox&gt;
+      &lt;xul:label value="Labels and Buttons"/&gt;
+      &lt;children includes="label|button"/&gt;
+    &lt;/xul:vbox&gt;
+    &lt;xul:vbox&gt;
+      &lt;xul:label value="Other Elements"/&gt;
+      &lt;children/&gt;
+    &lt;/xul:vbox&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;</PRE></DIV>
+
+
+
+<P>
+The first <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> element only grabs the label and button
+elements, as indicated by its <SPAN CLASS="attrib">includes</SPAN> attribute. The
+second <A CLASS="tag" HREF="elemref/ref_xblchildren.html">children</A> element, because it has no
+<SPAN CLASS="attrib">includes</SPAN> attribute, grabs all of the remaining elements.
+</P>
+
+<HR>
+<P>
+<A HREF="xblatin.html">(Next)</A>
+In the next section, we'll look at how attributes can be inherited into the
+anonymous content.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_xblcontent_1.xml.txt'>11.2.1</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="11.1 - Introduction to XBL"
+     href="introxbl.html">Previous</a>
+
+
+  <a class="nextlink" title="11.3 - XBL Attribute Inheritance"
+     href="xblatin.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

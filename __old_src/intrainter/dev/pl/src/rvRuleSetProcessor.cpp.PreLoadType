@@ -1,0 +1,741 @@
+// This class processes a single rule set. That is a linked list of related rules that
+// eventually get the "Trace Me" me HTML node. The rules are linke by the RuleInfo's m_prev_rule
+// pointer.
+//
+// This class is the main class that handles the passing of processing from one rule to the next
+// It also processes the Commands of the Rules
+
+#include "rvXPCOMIDs.h"
+#include "rvMyMozApp.h"
+#include "rvMainWindow.h"
+#include "rvParentWindow.h"
+#include "rvRulesDefines.h"
+#include "rvRuleProcessor.h"
+#include "rvRuleRenderer.h"
+#include "rvRuleSetProcessor.h"
+
+extern rvMyMozApp* theApp;
+extern rvXmlDocument* _rules_doc;
+
+CRuleSetProcessor::CRuleSetProcessor()
+{
+}
+
+CRuleSetProcessor::~CRuleSetProcessor()
+{
+}
+
+// =================================================================
+// Entry function: A RuleInfo object with the rule object from db shoudl be set.
+// Also the m_prev_rule has also be set, and further for the m_prev_rule's m_prev_rule should be set.
+// A complete linked list of related rules has to be set and the starting RuleInfo object to be passed in
+II_RESULT CRuleSetProcessor::ProcessRuleSet(RuleInfo *&p_rule_info)
+{
+	try
+	{
+		ILOG << "CRuleSetProcessor::ProcessRuleSet()" << IINF;
+		IL_TAB;
+
+		// create the rule processor that will hold the browser window through the entire processing
+		m_rule_processor = new CRuleProcessor();
+
+		// Assume there is a prev rule and hence this as an intermediary rule
+		II_RESULT res = IIR_FAILED;
+		res = ProcessIntermediaryRule(p_rule_info);
+		if (res != IIR_SUCCESS)
+		{
+			ILOG << "Failed trying to Process Rule" << IERR;
+		}
+
+		// destroy the browser that was loaded with the original url, clear stuff
+		delete m_rule_processor;
+
+		// The trace html document created, users alerted after the above call!!
+		ILOG << "Done Processing" << IINF;
+		
+		IL_UNTAB;
+		return IIR_DONE;
+	}
+	catch(...)
+	{
+		ILOG << "Caught Exception in CRuleSetProcessor::ProcessRuleSet()" << IEXC;
+		ILOG << "Aborting RuleSet Processing" << IEXC;
+		IL_UNTAB;
+		return IIR_EXCEPTION;
+	}
+}
+
+II_RESULT CRuleSetProcessor::ProcessIntermediaryRule(RuleInfo *&p_rule_info)
+{
+	ILOG << "CRuleSetProcessor::ProcessIntermediaryRule()" << IINF;
+	IL_TAB;
+	
+	if (p_rule_info == nsnull)
+	{
+		IL_UNTAB;
+		ILOG << "Fatal: Null rule pointer passed in" << IFTL;
+		return IIR_NULL_RULE;
+	}
+
+	II_RESULT init_res = IIR_FAILED;
+	if (p_rule_info->m_prev_rule != nsnull)
+	{
+		II_RESULT pr_res = ProcessIntermediaryRule(p_rule_info->m_prev_rule);
+		if (pr_res == IIR_FAILED_POPUP_WINDOW ||
+				pr_res == IIR_FAILED_POPUP_DOCUMENT ||
+				pr_res == IIR_FAILED_POPUP_WINDOW)
+		{
+			ILOG << "Processing on Popup failed. Ignoring popup rule and continuing" << IERR;
+			pr_res = IIR_SUCCESS;
+		}
+		
+		// the main check to proceed further
+		if (pr_res != IIR_SUCCESS)
+		{
+			ILOG << "Aborting this path of rule processing" << IERR;
+			IL_UNTAB;
+			return pr_res;
+		}
+
+		ILOG << "------------------------------------------------------" << IINF;
+		ILOG << "Start Processing Rule:" << p_rule_info->m_rule_name << IINF;
+		ILOG << "Start Processing URL:" << p_rule_info->m_url << IINF;
+
+		// 1) check if this is a popup, if yes get the popup browser (based on the referer)
+		// need to wait on it.
+		ILOG << "rule window type: " << p_rule_info->m_window_type << IINF;
+		if (p_rule_info->m_window_type == MozStr("IIW_MainPopup"))
+		{
+			ILOG << "Current rule needs to be processed on a Popup window" << IINF;
+
+			// TODO, to get popup based on url, position(order in which it was loaded initially)
+			ILOG << "Fetching Popup window" << IINF;
+			rvMainWindow* popup = theApp->mParentWindow->GetPopupBrowserWindow(m_rule_processor->mInternalBrowser, MozStr(""), 0);
+			if (popup == nsnull)
+			{
+				IL_UNTAB;
+				ILOG << "Failed to get Popup window. Must have been closed/shutdown automatically" << IERR;
+				return IIR_FAILED_POPUP_WINDOW; // the browser was destroyed. 
+			}
+
+			ILOG << "Successfully found Popup window" << IINF;
+			if (p_rule_info->m_prev_rule->m_window_type == MozStr("IIW_MainPopup") && p_rule_info->m_prev_rule->m_will_load_new_document)
+			{
+				// check if it was loaded
+				ILOG << "Waiting to get the windows html document" << IINF;
+				II_RESULT wait_result =popup->WaitForDocumentToLoad();
+				if (wait_result == IIR_TIMED_OUT)
+				{
+					ILOG << "Popup document did not load, timed out" << IFTL;
+					IL_UNTAB;
+					return IIR_FAILED_POPUP_TIMEDOUT; // assuming popups are not important TODO: later check the following rules to see if this popup window is important or not
+				}
+				else if (wait_result == IIR_FAILED)
+				{
+					ILOG << "Failed waiting for the popup document to load" << IFTL;
+					IL_UNTAB;
+					return IIR_FAILED_POPUP_WINDOW; // assuming popups are not important TODO: later check the following rules to see if this popup window is important or not
+				}
+
+				popup->mDocIsLoaded = PR_FALSE; //reset
+			}
+
+			nsIDOMHTMLDocument* doc;
+			popup->GetDocument(doc);
+			if (doc == nsnull)
+			{
+				IL_UNTAB;
+				ILOG << "Failed to get Popup windows document. Aborting rule and continuing" << IERR;
+				return IIR_FAILED_POPUP_DOCUMENT; // assuming popups are not important TODO: later check the following rules to see if this popup window is important or not
+			}
+
+			ILOG << "Got Popup window document" << IINF;
+			p_rule_info->m_html_document = doc;  
+			NS_RELEASE(doc);
+		}
+
+		// 2) This is not a popup window rule, so get the right window and the document.
+		// first check if the previous was a popup. if yes
+		//	-- Then probably some actions on the popup changed the main window, that is the current window
+		//	-- Probabaly nothing was done, so just continue with the main window
+		//	Either case get the main windows html document
+		else if (p_rule_info->m_window_type == MozStr("IIW_Main") && p_rule_info->m_prev_rule->m_window_type == MozStr("IIW_MainPopup"))
+		{
+			ILOG << "Current rule needs to be processed on the internal window, not the pop up" << IINF;
+			nsIDOMHTMLDocument* doc;
+			m_rule_processor->mInternalBrowser->GetDocument(doc);
+			if (doc == nsnull)
+			{
+				IL_UNTAB;
+				ILOG << "Failed to get internal window document. Aborting rule" << IERR;
+				return IIR_FAILED_GET_DOCUMENT; // assuming popups are not important TODO: later check the following rules to see if this popup window is important or not
+			}
+
+			ILOG << "Got the internal window's document" << IINF;
+			p_rule_info->m_html_document = doc;  
+			NS_RELEASE(doc);
+		}
+		// 3) The rule is not a popup window, nor the rule for main window that is dependent on a popup 
+		// In such a case either 
+		//  - the post commands on the previsou rule loaded a new document and hence wait for the load to complete.
+		else if (p_rule_info->m_prev_rule->m_will_load_new_document) 
+		{
+			ILOG << "Waiting for document to load" << IINF;
+			II_RESULT wait_result = m_rule_processor->WaitForDocumentToLoad();
+			if (wait_result == IIR_TIMED_OUT)
+			{
+				ILOG << "Document did not load, timed out" << IFTL;
+				ILOG << "Aborting this rule" << IFTL;
+				IL_UNTAB;
+				return IIR_TIMED_OUT;
+			}
+			else if (wait_result == IIR_FAILED)
+			{
+				ILOG << "Failed waiting for document to load" << IFTL;
+				IL_UNTAB;
+				return IIR_FAILED;
+			}
+
+			m_rule_processor->mInternalBrowser->mDocIsLoaded = PR_FALSE; //reset
+
+			nsIDOMHTMLDocument* doc;
+			m_rule_processor->mInternalBrowser->GetDocument(doc);
+			if (doc == nsnull)
+			{
+				IL_UNTAB;
+				ILOG << "Failed to get internal window document. Aborting rule" << IERR;
+				return IIR_FAILED_GET_DOCUMENT; // assuming popups are not important TODO: later check the following rules to see if this popup window is important or not
+			}
+
+			ILOG << "Got the internal window's document" << IINF;
+			p_rule_info->m_html_document = doc;  
+			NS_RELEASE(doc);
+
+			//#p_rule_info->m_html_document = m_rule_processor->m_html_document;  
+		}
+		//	4) contd from 3) either or post commands executed did not load a new document
+		//	so continue processing from the previous document
+		else
+		{
+			ILOG << "Processing on the previsouly loaded document" << IINF;
+
+			nsIDOMHTMLDocument* doc;
+			m_rule_processor->mInternalBrowser->GetDocument(doc);
+			if (doc == nsnull)
+			{
+				IL_UNTAB;
+				ILOG << "Failed to get internal window document. Aborting rule" << IERR;
+				return IIR_FAILED_GET_DOCUMENT; // assuming popups are not important TODO: later check the following rules to see if this popup window is important or not
+			}
+
+			ILOG << "Got the internal window's document" << IINF;
+			p_rule_info->m_html_document = doc;  
+			NS_RELEASE(doc);
+
+			//#p_rule_info->m_html_document = p_rule_info->m_prev_rule->m_html_document; 
+		}
+
+		//	5) the final node will be finally displayed/traced.
+		//			- So the rule next to this which will be the final one will have to processed, 
+		//				on the last loaded document or on a new document, this trace has to be done.
+		//			- The above 2 conditions will take care of the this
+
+		// initiate THE MATCING PROCESS!
+		init_res = ProcessRule_Initiator(p_rule_info);
+	}
+	else 
+	{
+		// Log Rule Name
+		ILOG << "------------------------------------------------------" << IINF;
+		ILOG << "Start Processing Rule:" << p_rule_info->m_rule_name << IINF;
+		ILOG << "Start Processing URL:" << p_rule_info->m_url << IINF;
+
+		// we are at the beginning of the ruleset, i.e. the first doucment to be loaded
+		II_RESULT start_res = ProcessStarterRule(p_rule_info);
+		if (start_res != IIR_SUCCESS)
+		{
+			ILOG << "Failed to load the starter document" << IFTL;
+			IL_UNTAB;
+			return start_res; // abort
+		}
+
+		// initiate THE MATCING PROCESS!
+		init_res = ProcessRule_Initiator(p_rule_info);
+	}
+
+	if (init_res == IIR_RULE_NOTHING_TO_PROCESS)
+	{
+		IL_UNTAB;
+		return IIR_SUCCESS;
+	}	
+
+	if (init_res != IIR_SUCCESS)
+	{
+		ILOG << "Failed initiating the rule processing for rule:" << p_rule_info->m_rule_name << IERR;
+		IL_UNTAB;
+		return init_res;
+	}
+
+	ILOG << "----------------------Handling Parse Results ---------------------" << IINF;
+	if (p_rule_info->m_rule_results != nsnull)
+	{
+		PRInt32 count = p_rule_info->m_rule_results->Count();
+		ILOG << "Returned Result Count:" << count << IINF;
+
+		if (count == 1)
+		{
+			RuleResult* result_node = (RuleResult*) p_rule_info->m_rule_results->ElementAt(0); 
+			ILOG << "Found Single Result with match value: " << result_node->weighted_match_value << IINF;
+			if (result_node->html_node == nsnull)
+			{
+				ILOG << "Could not Spot the html node(null)" << IERR;
+				m_rule_processor->ClearRuleResultsArray(); 
+				p_rule_info->m_html_document = nsnull;
+				IL_UNTAB;
+				return IIR_RULE_RESULT_NULL; // abort
+			}
+		
+			ILOG << "************ One Successful Result *************" << IINF;
+			ILOG << "Processing Post Commands" << IINF;
+			II_RESULT cmd_res = ProcessPostCommands(p_rule_info);
+
+			if (cmd_res != IIR_SUCCESS)
+			{
+				ILOG << "Failed to process post commands" << IFTL;
+				m_rule_processor->ClearRuleResultsArray(); 
+				p_rule_info->m_rule_executed = PR_TRUE;
+				ILOG << "----------------------Done Handling Parse Results ---------------------" << IINF;
+				IL_UNTAB;
+				return cmd_res;
+			}
+
+			m_rule_processor->ClearRuleResultsArray(); 
+			p_rule_info->m_rule_executed = PR_TRUE;
+			ILOG << "Successfully Processed post commands" << IINF;
+			ILOG << "----------------------Done Handling Parse Results ---------------------" << IINF;
+			IL_UNTAB;
+			return IIR_SUCCESS;
+		}
+		else if (count >= 1)
+		{
+			ILOG << "************ Multiple Successful Results ************" << IINF;
+
+			// *** IMPORTANT :Always going with the first rule, but logging the fact that 
+			// there were multiple results for later inquiry: 
+			for (PRInt32 idx=0;idx<count;idx++)
+			{
+				RuleResult *result = (RuleResult*) p_rule_info->m_rule_results->ElementAt(idx);
+				ILOG << "Processing Multiple Result:" << idx << IINF;
+
+				// IMPORTANT: Going with the first result that has a traced HTML Node
+				if (result->html_node != nsnull)
+				{
+					II_RESULT cmd_res = ProcessPostCommands(p_rule_info);
+					if (cmd_res != IIR_SUCCESS) // continue with next result
+					{
+						// TODO: NEED TO ROLLBACK (NOW) THE CURRENT POSTS. THAT IS GO BACK TO THE PREVISOU RULE and START again
+						// THIS WILL INVOLE RECREATING THE HTML DOCUMENT, BASE URI in the InternalBrowser and setting will_load_document to false
+						ILOG << "Failed to process post commands" << IFTL;
+						p_rule_info->m_rule_executed = PR_TRUE;
+						m_rule_processor->ClearRuleResultsArray(); 
+						ILOG << "----------------------Done Handling Parse Results ---------------------" << IINF;
+						IL_UNTAB;
+						return cmd_res;
+					}
+
+					// done with the current results
+					m_rule_processor->ClearRuleResultsArray(); 
+					p_rule_info->m_rule_executed = PR_TRUE;
+					ILOG << "Successfully Processed Multiple results: post commands" << IFTL;
+					ILOG << "----------------------Done Handling Parse Results ---------------------" << IINF;
+					IL_UNTAB;
+					return IIR_SUCCESS;
+
+					// TODO: POSSIBLY NEED TO ROLLBACK (LATER) if the path down the processing aborts. 
+					// THAT IS TO GO BACK TO THE PREVISOU RULE and START again later
+					// all the rule chain in the current path is processed.
+					// THIS WILL INVOLE storing the current rule in unprocessed state and the html result index that has to be next processed.
+					// THEN LATER RECREATING THE HTML DOCUMENT, BASE URI in the InternalBrowser and setting will_load_document to false and calling
+					// ProcessIntermediaryRule again from the root function(ProcessRuleSet) with this rule info.
+				}
+				else
+				{
+					ILOG << "Empty result: Ignoring" << IINF; // continue with next result
+				}
+
+				p_rule_info->m_rule_executed = PR_TRUE;
+			}
+		}
+	}
+	else
+	{
+		ILOG << "No Results returned" << IERR;
+		p_rule_info->m_html_document = nsnull;
+		m_rule_processor->ClearRuleResultsArray(); 
+		ILOG << "----------------------Done Handling Parse Results ---------------------" << IINF;
+		IL_UNTAB;
+		return IIR_RULE_RESULT_NULL; // abort
+	}
+
+	IL_UNTAB;
+	return IIR_UNKNOWN;
+}
+
+II_RESULT CRuleSetProcessor::ProcessStarterRule(RuleInfo* &p_rule_info)
+{
+	ILOG << "CRuleSetProcessor::ProcessStarterRule() " << IINF;
+	IL_TAB;
+
+	// Check if this is a frame.
+	nsAutoString url = p_rule_info->m_window_url;
+	if (url == MozStr(""))
+	{	// This is not a frame
+		ILOG << "Processing a non frame document " << IINF;
+		url = p_rule_info->m_url;
+	}
+	else // else, this is a frame, so load the RN_WINDOW_URL
+		ILOG << "Processing a document with frames" << IINF;
+	
+	// get the rule node
+	ILOG << "URL from Rule: " << url << IINF;
+	II_RESULT res = m_rule_processor->LoadDocument(url);
+	if (res != IIR_SUCCESS)
+	{
+		ILOG << "Failed loading document" << IFTL;
+		IL_UNTAB;
+		return res; // abort any further processing of the rule
+	}
+	
+	// LoadDocument will create a new browser window and after finishing the document load, it will 
+	// call FinishLoadingDocument() which will flag completion of load
+	// wait till the current rule is processed
+	II_RESULT wait_result = m_rule_processor->WaitForDocumentToLoad();
+	if (wait_result == IIR_TIMED_OUT)
+	{
+		ILOG << "Document did not load, timed out" << IFTL;
+		ILOG << "Aborting this rule" << IFTL;
+		IL_UNTAB;
+		return IIR_TIMED_OUT;
+	}
+	else if (wait_result == IIR_FAILED)
+	{
+		ILOG << "Failed waiting for document to load" << IFTL;
+		IL_UNTAB;
+		return IIR_FAILED;
+	}
+		
+	// we need to abort processing this rule
+	m_rule_processor->mInternalBrowser->mDocIsLoaded = PR_FALSE; // reset
+
+	// ok we have loaded a url and now parse/spot
+	// set the html doc member variable
+	//#p_rule_info->m_html_document = m_rule_processor->m_html_document;  
+
+	ILOG << "Successfully Loaded HTML Document" << IINF;
+	IL_UNTAB;
+	return IIR_SUCCESS;
+}
+
+II_RESULT CRuleSetProcessor::ProcessRule_Initiator(RuleInfo *&p_rule_info)
+{
+	ILOG << "CRuleSetProcessor::ProcessRule_Initiator() " << IINF;
+	IL_TAB;
+
+	// if there is nothing to spot, just return
+	nsIDOMElement* main_rule_node = m_rule_processor->GetMainRuleNode(p_rule_info->m_rule_root_node);
+	// TODO: The code prior does not set the root rule node sometimes. ?? Now it is working
+  //p_rule_info->m_rule_root_node = _rules_doc->GetChildNodeWithAttributeValue(nsnull, MozStr(RN_NAME), p_rule_info->m_rule_name);
+	if (main_rule_node == nsnull)
+	{
+		ILOG << "Nothing to Process. Just a document loader rule" << IINF;
+		IL_UNTAB;
+		return IIR_RULE_NOTHING_TO_PROCESS;
+	}
+
+	NS_RELEASE(main_rule_node);
+
+	ILOG << "Found a rule to process" << IINF;
+
+	// Check if this a frame, If yes then get the right html document
+	nsAutoString url = p_rule_info->m_window_url;
+	if (url != MozStr("")) // This is a frame
+	{ 
+		nsAutoString frame_url = p_rule_info->m_url;
+		nsAutoString frame_location = p_rule_info->m_frame_id;
+		
+		ILOG << "This is a frame." << "frame_url=" << frame_url << ",frame_location=" << frame_location << IINF;
+		ILOG << "Getting the Frame html document" << IINF;
+		m_rule_processor->SetFrameHTMLDocument(frame_url, frame_location);
+		p_rule_info->m_html_document = m_rule_processor->m_html_document; //#
+	}
+	else // This is not a frame document
+	{
+		ILOG << "This is a non frame document" << IINF;
+		m_rule_processor->m_html_document = p_rule_info->m_html_document;
+	}
+
+	// spot the current node
+	ILOG << "----------------------Calling ProcessRule_Parse----------------------" << IINF;
+ 	p_rule_info->m_rule_results = m_rule_processor->ProcessRule_Parse(p_rule_info->m_rule_root_node);
+	ILOG << "----------------------Finished ProcessRule_Parse---------------------" << IINF;
+	
+	// TODO: handling/reporting of multiple results. As of now picking the topmost
+	// Going upwards in multiple paths. Which ever returns??
+	IL_UNTAB;
+	return IIR_SUCCESS;
+}
+
+II_RESULT CRuleSetProcessor::ProcessPostCommands(RuleInfo *&p_rule_info)
+{
+	ILOG << "CRuleSetProcessor::ProcessPostCommands() " << IINF;
+	IL_TAB;
+
+	// execute the post commands, assume the commands are in order
+	PRInt32 num_cmds = p_rule_info->m_cmds->Count();
+	ILOG << "Number of Commands to execute: " << num_cmds << IINF;
+
+	// Process PostLoad Events First
+	II_RESULT postload_res = IIR_FAILED;
+	for (PRInt32 idx=0;idx<num_cmds;idx++)
+	{
+		CommandInfo* cmd = (CommandInfo*) p_rule_info->m_cmds->ElementAt(idx);
+		ILOG << "Processing Command" << IINF;
+		IL_TAB;
+		ILOG << "exec_type   =" << cmd->m_exec_type << IINF;
+		ILOG << "cmd         =" << cmd->m_cmd << IINF;
+		ILOG << "param_name  =" << cmd->m_param_name << IINF;
+		ILOG << "param_value =" << cmd->m_param_value << IINF;
+		IL_UNTAB;
+
+		if (cmd->m_exec_type == MozStr("PostLoad"))
+		{
+			if (cmd->m_cmd.Find(MozStr("Events")) >= 0)
+				postload_res = ProcessEventCommand(p_rule_info, cmd);
+			else if (cmd->m_cmd == MozStr("Change"))
+				postload_res = ProcessChangeCommand(p_rule_info, cmd);
+		}
+	}
+
+	// Process trace events
+	II_RESULT trace_event = IIR_FAILED;
+	for (idx=0;idx<num_cmds;idx++)
+	{
+		CommandInfo* cmd = (CommandInfo*) p_rule_info->m_cmds->ElementAt(idx);
+		if (cmd->m_exec_type == MozStr("TraceEvent"))
+		{
+			if (cmd->m_cmd == MozStr("PickMe"))
+				trace_event = ProcessTraceMeCommand(p_rule_info, cmd);
+		}
+	}
+
+	IL_UNTAB;
+	return IIR_SUCCESS;
+}
+
+II_RESULT CRuleSetProcessor::ProcessEventCommand(RuleInfo *&p_rule_info, CommandInfo* cmd)
+{
+	ILOG << "CRuleSetProcessor::ProcessEventCommand() " << IINF;
+	IL_TAB;
+
+	// This will execute all events
+	// Get the html document, element, In case of frames, then the appropriate frame document to be fetched.
+	// The frame document should already have been set in rules processor, during initiation
+	//# nsIDOMHTMLDocument* doc = m_rule_processor->m_html_document;
+	nsIDOMHTMLDocument* doc = p_rule_info->m_html_document;
+	if (doc == nsnull)
+	{
+		ILOG << "Failed to Process Event: html_document null" << IERR;
+		IL_UNTAB;
+		return IIR_RULE_RESULT_NULL;
+	}
+
+	if (p_rule_info == nsnull || p_rule_info->m_rule_results == nsnull || p_rule_info->m_rule_results->Count() < 1)
+	{
+		ILOG << "Failed to Process Event" << IERR;
+		IL_UNTAB;
+		return IIR_RULE_RESULT_NONE;
+	}
+
+	nsIDOMElement* element = ((RuleResult*)(p_rule_info->m_rule_results->ElementAt(0)))->html_node; 
+	if (element == nsnull)
+	{
+		ILOG << "Failed to Process Event: Null result->html_node" << IERR;
+		IL_UNTAB;
+		return IIR_RULE_RESULT_NULL;
+	}
+	
+	nsAutoString tag;
+	element->GetTagName(tag);
+	ILOG << "Processing event on element:" << tag << IINF;
+
+	nsCOMPtr<nsIDOMDocumentEvent> docEvent(do_QueryInterface(doc));
+	if (docEvent == nsnull)
+	{
+		ILOG << "Failed to create inerface:" << "nsIDOMDocumentEvent" << IERR;
+		IL_UNTAB;
+		return IIR_FAILED_EVENT;
+	}
+
+  nsCOMPtr<nsIDOMEvent> event;
+
+	// Events to be dispatched
+	if (tag.EqualsIgnoreCase("a") || tag.EqualsIgnoreCase("anchor") || tag.EqualsIgnoreCase("span") || tag.EqualsIgnoreCase("font") || tag.EqualsIgnoreCase("em"))
+	{
+		docEvent->CreateEvent(cmd->m_cmd, getter_AddRefs(event));
+		event->InitEvent(cmd->m_param_name, PR_TRUE, PR_TRUE);
+	}
+	else if (tag.EqualsIgnoreCase("button"))
+	{
+		docEvent->CreateEvent(cmd->m_cmd, getter_AddRefs(event));
+		event->InitEvent(cmd->m_param_name, PR_TRUE, PR_TRUE);
+	}
+	else if (tag.EqualsIgnoreCase("input"))
+	{
+		nsAutoString itype;
+		itype = _rules_doc->GetNodeAttributeValue(element, MozStr("type"));
+
+		if (itype.EqualsIgnoreCase("button"))
+		{
+			docEvent->CreateEvent(cmd->m_cmd, getter_AddRefs(event));
+			event->InitEvent(cmd->m_param_name, PR_TRUE, PR_TRUE);
+		}
+	}
+
+	if (event != nsnull)
+	{	
+		nsCOMPtr<nsIPrivateDOMEvent> privateEvent(do_QueryInterface(event));
+		privateEvent->SetTrusted(PR_TRUE);
+
+		PRBool noDefault;
+		nsCOMPtr<nsIDOMEventTarget> targ(do_QueryInterface(element));
+		targ->DispatchEvent(event, &noDefault);
+
+		nsAutoString etype;
+		event->GetType(etype);
+		
+		ILOG << "Processed mouse/key event:" << etype << IINF;
+		IL_UNTAB;
+		return IIR_SUCCESS;
+	}
+
+	// These are change events
+	if (tag.EqualsIgnoreCase("input"))
+	{
+		nsAutoString itype;
+		itype = _rules_doc->GetNodeAttributeValue(element, MozStr("type"));
+
+		if (itype.EqualsIgnoreCase("text") || itype.EqualsIgnoreCase(""))
+		{
+			nsCOMPtr<nsIDOMHTMLInputElement> ielement = do_QueryInterface(element);
+			ielement->SetValue(cmd->m_param_value);
+		}
+		else if (itype.EqualsIgnoreCase("checkbox") || itype.EqualsIgnoreCase("radio"))
+		{
+			nsCOMPtr<nsIDOMHTMLInputElement> ielement = do_QueryInterface(element);
+			if (cmd->m_param_name == MozStr("checked"))
+				ielement->SetChecked(PR_TRUE);
+			else
+				ielement->SetChecked(PR_FALSE);
+		}
+
+		ILOG << "Processed input event:" << tag << IINF;
+	}
+	else if (tag.EqualsIgnoreCase("textarea"))
+	{
+		nsCOMPtr<nsIDOMHTMLTextAreaElement> telement = do_QueryInterface(element);
+		telement->SetDefaultValue(cmd->m_param_value);
+		ILOG << "Processed textarea event:" << tag << IINF;
+	}
+	else if (tag.EqualsIgnoreCase("select"))
+	{
+		nsCOMPtr<nsIDOMHTMLOptionsCollection> col;
+		nsCOMPtr<nsIDOMHTMLSelectElement> selement = do_QueryInterface(element);
+		selement->GetOptions(getter_AddRefs(col));
+
+		PRUint32 len = 0;col->GetLength(&len);
+		for (PRInt32 idx=0;idx < len;idx++)
+		{
+			nsCOMPtr<nsIDOMHTMLOptionElement> opt = nsnull;
+			col->Item(idx, (nsIDOMNode**) &opt);
+			
+			nsAutoString idxstr;
+			idxstr.Append(MozStr(","));
+			idxstr.AppendInt(idx);
+			idxstr.Append(MozStr(","));
+
+			opt->SetDefaultSelected(PR_FALSE);
+			if (cmd->m_param_value.Find(idxstr) != -1)
+				opt->SetDefaultSelected(PR_TRUE);
+		}
+
+		ILOG << "Processed select/combo event:" << tag << IINF;
+	}
+	else if (tag.EqualsIgnoreCase("form"))
+	{
+		nsCOMPtr<nsIDOMHTMLFormElement> felement = do_QueryInterface(element);
+		if (cmd->m_param_name.EqualsIgnoreCase("submit"))
+			felement->Submit();
+		else if (cmd->m_param_name.EqualsIgnoreCase("reset"))
+			felement->Reset();
+
+		ILOG << "Processed form event:" << tag << IINF;
+	}	
+
+	IL_UNTAB;
+	return IIR_SUCCESS;
+}
+
+II_RESULT CRuleSetProcessor::ProcessChangeCommand(RuleInfo* &p_rule_info, CommandInfo* cmd)
+{
+	ILOG << "CRuleSetProcessor::ProcessChangeCommand() " << IINF;
+	IL_TAB;
+
+	// This will execute all change events, liek text box value change, checkbox change, 
+	// drop down selections etc..
+
+	// Get the html document, element
+	// NO REQUIREMENT SO FAR
+	nsIDOMHTMLDocument* doc = p_rule_info->m_html_document; 
+	nsIDOMElement* element = ((RuleResult*)(p_rule_info->m_rule_results->ElementAt(0)))->html_node; 
+
+	IL_UNTAB;
+	return IIR_SUCCESS;
+}
+
+II_RESULT CRuleSetProcessor::ProcessTraceMeCommand(RuleInfo *&p_rule_info, CommandInfo* cmd)
+{
+	ILOG << "CRuleSetProcessor::ProcessTraceMeCommand() " << IINF;
+	IL_TAB;
+
+	// This will execute all change events, liek text box value change, checkbox change, 
+	// drop down selections etc..
+
+	// Get the html document, element
+	RuleResult* result = (RuleResult*) p_rule_info->m_rule_results->ElementAt(0); 
+
+	if (result == nsnull || result->html_node == nsnull)
+	{
+		ILOG << "null result" << IFTL;
+		IL_UNTAB;
+		return IIR_FAILED;
+	}
+
+	// Create a Renderer , create the html document with the Trace Node and return!!
+	CRuleRenderer* renderer = new CRuleRenderer();
+	renderer->m_rule_name = p_rule_info->m_rule_name;
+	IL_TAB;
+	ILOG << "About to render rule " << p_rule_info->m_rule_name << IINF;
+	ILOG << "Document original URL " << p_rule_info->m_url << IINF;
+	ILOG << "Document Structure:" << IINF;
+	_rules_doc->DumpNodeDeep((nsIDOMElement*) p_rule_info->m_html_document);
+	IL_UNTAB;
+
+	renderer->m_url = p_rule_info->m_url;
+	renderer->m_html_document = p_rule_info->m_html_document;
+	renderer->ProcessPickMeCommand(result->html_node, p_rule_info->m_rule_root_node, result->m_content_changed);
+	renderer->WaitForDocumentToLoad();
+
+	IL_UNTAB;
+	return IIR_SUCCESS;
+}
+

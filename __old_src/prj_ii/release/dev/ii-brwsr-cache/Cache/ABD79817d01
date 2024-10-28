@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+	<title>Doteasy - 100MB Free Web Hosting, Free Email, Domain Names for Business and Individuals</title>
+	<meta name="keywords" content="web hosting, free web hosting, free hosting, free domain hosting, domain hosting, free website, free homepage, free email, domain registration, website hosting, dot easy free web hosting, free small business, cheap hosting">
+	<meta name="description" content="Doteasy provides bannerless free web hosting free email and free support for small business and individual">
+	<meta name="copyright" content="2004, Doteasy.com">
+	<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=iso-8859-1"">
+	<script language="JavaScript1.2" type="text/javascript" src="/_skin/200604/nav.js"></script>
+</head>
+
+<link rel="stylesheet" type="text/css" href="/_skin/200604/main.css">
+<link rel="stylesheet" type="text/css" href="/_skin/200604/content.css">
+<link rel="stylesheet" type="text/css" href="/_skin/200604/old.css">
+
+<body>
+
+
+<DIV ALIGN="center">
+<DIV CLASS="page" ALIGN="left">
+<!--top nav --> 
+
+          <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=777>
+              <TR>
+                   <TD ROWSPAN=2 WIDTH=119><a href="/"><img src="/_skin/200604/img/doteasy_logo.gif" alt="" border="0"></a></TD>
+                   <TD><img src="/_skin/200604/img/slogan1.gif" width="386" height="15" alt=""></TD>
+                   <TD></TD>
+                   <TD align="right" HEIGHT=45><img src="/_skin/200604/img/tenbest.gif" width="136" height="35" alt=""></TD>
+             </TR>
+             <TR>
+                    <TD COLSPAN=3 >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD><a href="http://www.doteasy.com/" onmouseover="Button_Active('home')" onmouseout="Button_InActive('home')"><img src="/_skin/200604/img/btn_home.gif" width="81" height="27" alt="" border="0" name="home"></a></TD>
+<TD><img src="/_skin/200604/img/nav_div.gif" width="2" height="27" alt=""></TD>
+<TD><a href="http://www.doteasy.com/Services/DomainNameRegistration" onmouseover="Button_Active('domain')" onmouseout="Button_InActive('domain')"><img src="/_skin/200604/img/btn_domains.gif" width="72" height="27" alt="" border="0" name="domain"></a></TD>
+<TD><img src="/_skin/200604/img/nav_div.gif" width="2" height="27" alt=""></TD>
+<TD><a href="http://www.doteasy.com/Services/WebHosting" onmouseover="Button_Active('hosting')" onmouseout="Button_InActive('hosting')"><img src="/_skin/200604/img/btn_hosting.gif" width="142" height="27" alt="" border=0 name="hosting"></a></TD>
+<TD><img src="/_skin/200604/img/nav_div.gif" width="2" height="27" alt=""></TD>
+<TD><a href="https://www.doteasy.com/SignUp3_17" onmouseover="Button_Active('signup')" onmouseout="Button_InActive('signup')"><img src="/_skin/200604/img/btn_signup.gif" width="70" height="27" alt="" border=0 name="signup"></TD>
+<TD><img src="/_skin/200604/img/nav_div.gif" width="2" height="27" alt=""></TD>
+<TD><a href="http://www.doteasy.com/Services/Affiliate" onmouseover="Button_Active('affiliate')" onmouseout="Button_InActive('affiliate')"><img src="/_skin/200604/img/btn_affiliate.gif" width="87" height="27" alt="" border=0 name="affiliate"></a></TD>
+<TD><img src="/_skin/200604/img/nav_div.gif" width="2" height="27" alt=""></TD>
+<TD><a href="http://www.doteasy.com/Support" onmouseover="Button_Active('support')" onmouseout="Button_InActive('support')"><img src="/_skin/200604/img/btn_support.gif" width="79" height="27" alt="" border=0 name="support"></a></TD>
+<TD><img src="/_skin/200604/img/nav_div.gif" width="2" height="27" alt=""></TD>
+<TD><a href="http://www.doteasy.com/ContactUs" onmouseover="Button_Active('contact')" onmouseout="Button_InActive('contact')"><img src="/_skin/200604/img/btn_contact.gif" width="115" height="27" alt="" border=0 name="contact"></a></TD>
+</TR>
+</TABLE>
+                         </TD>
+                </TR>
+               </TABLE>
+			   
+<!--top nav -->
+
+
+
+<!-- content -->
+
+<DIV STYLE="margin-top: 15px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td WIDTH="100%" VALIGN="top" STYLE="padding-right:10px;">
+
+
+
+<!-- signin box and domain package -->
+
+              <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=777>
+			  
+			                 <TR><TD COLSPAN=2 ALIGN=RIGHT><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0><TR><TD><img src="/_skin/200604/img/slogan2.gif" width="530" height="20" alt=""></TD><TD><img src="/_skin/200604/img/ad_top.jpg" width="137" height="64" alt=""></TD></TR></TABLE></TD></TR>
+			                 <TR>
+							        <TD WIDTH=203 valign="top">
+<img src="/_skin/200604/img/title_webmail.gif" width="116" height="18" alt=""><br>
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD BACKGROUND="/_skin/200604/img/bg_webmail.gif" HEIGHT=129 WIDTH=203 VALIGN=TOP>
+<DIV STYLE="margin-top: 6px; margin-left:15px; font-size: 8pt;">
+<FORM METHOD="POST" ACTION="/EmailSignIn/EmailSignIn.cfm"
+><INPUT TYPE="hidden" NAME="r" VALUE="7A412D770376F330041B6084A4DE1807">
+<DIV><strong>Full Email Address:</strong>
+memberID@yourdomain.com</DIV>
+<DIV> <INPUT NAME="EmailAddress" SIZE="15" STYLE="width:120px;" TABINDEX="10"></DIV>
+<DIV> Password:&nbsp;&nbsp;(<A HREF="https://member.doteasy.com/MemberSignIn/ForgetPassword/" CLASS="nounderline">forget?</A>)</DIV>
+<DIV> <INPUT TYPE="password" NAME="Password" SIZE="15" STYLE="width:120px;" TABINDEX="10">&nbsp;<input type="image" src="/_skin/200604/img/btn_go.gif" width="21" height="21" alt="" border="0" align="absbottom"></DIV>
+<DIV STYLE="margin-top: 1px;"><a href="/EmailSignIn/BoxPromo.cfm"><strong>Create your own sign-in box</strong></a></DIV>
+</form>
+</DIV>
+</TD>
+
+</TR>
+</TABLE>
+
+</TD>
+									
+									<TD ALIGN=RIGHT VALIGN=TOP ROWSPAN=2>
+									                 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+													               <TR>
+																          <TD  VALIGN=TOP BACKGROUND="/_skin/200604/img/bg_zerohosting.gif" WIDTH=174 HEIGHT=179>
+                                                                            <DIV CLASS="zerohosting"><SPAN CLASS="yellow"><strong>100 MB AD-Free HOSTING<br>FREE SETUP <br>NO MONTHLY FEE<br>NO HIDDEN FEE</strong></SPAN><br><SPAN CLASS="white"><strong>Included with each and every domain name. <a href="/Services/WebHosting/Zero/"><SPAN STYLE="color:#33ff33;">More</SPAN></a></strong></SPAN></DIV>
+																		  </TD>
+																		  <TD WIDTH="4"></TD><TD><img src="/_skin/200604/img/ad_bottom.jpg" width="391" height="179" alt="" usemap="#signup" border=0></TD>
+																	</TR>
+													
+													 </TABLE>
+									</TD>
+									
+							 </TR>
+							 
+							 <TR><TD><a href="https://member.doteasy.com"><img src="/_skin/200604/img/btn_memberzone.gif" width="203" height="28" alt="" border="0"></a></TD></TR>
+			  </TABLE>
+			  
+<!-- signin box and domain package -->
+
+<!-- other contents -->
+<DIV STYLE="margin-top:5px;">
+                                 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=777>
+								         
+								         <TR>
+										 
+										 <TD VALIGN=TOP WIDTH=203>
+										 
+										 <!-- Tools Library -->
+										        <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 bgcolor="#8E8E8E">
+												           <TR>
+														            <TD><img src="/_skin/200604/img/frame1_top.gif" alt=""></TD>
+														  </TR>
+														  <TR>
+														            <TD>
+																	     
+																		 <DIV CLASS="feature">
+																		 <img src="/_skin/200604/img/title_tools.gif" alt=""><br>
+																		 Select our Ultra Hosting & Unlimited Hosting Plan, you may choose from the newest <SPAN STYLE="color: #FFDE00;"><strong>Free Scripts</strong></SPAN> to juice up your website.<br>
+																		 <img src="/_skin/200604/img/title_featurescripts.gif" alt=""><br>
+																		 Calendar - <a href="http://www.doteasy.com/ToolsLibrary/calendar_01.cfm" target="_new">Calendarix</a><br>
+																		 Discussion Board - <a href="http://www.doteasy.com/ToolsLibrary/discussion_02.cfm" target="_new">PunBB</a><br>
+																		 Image Galleries - <a href="http://www.doteasy.com/ToolsLibrary/gallery_01.cfm" target="_new">Coppermine Photo Gallery</a><br>
+																		 E-Commerce - <a href="http://www.doteasy.com/ToolsLibrary/ecommerce_02.cfm" target="_new">Zen Cart</a><br>
+																		 Content Management - <a href="http://www.doteasy.com/ToolsLibrary/cms_01.cfm" target="_new">PHP-Fusion</a><br>
+																		 And <a href="http://www.doteasy.com/ToolsLibrary/samplesite_index.cfm" target="_new">More...</a><br>
+																		 </DIV>
+																		
+																	</TD>
+														  </TR>
+														  <TR>
+														            <TD><img src="/_skin/200604/img/frame1_btm.gif" alt=""></TD>
+														  </TR>
+												</TABLE>
+										 <!-- Tools Library -->
+										 
+										 <DIV STYLE="margin-top: 5px;"></DIV>
+										 
+										 <!-- More Services -->
+										        <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 bgcolor="#F4F4F4">
+												           <TR>
+														            <TD><img src="/_skin/200604/img/frame2_top.gif" alt=""></TD>
+														  </TR>
+														  <TR>
+														            <TD>
+																	     
+																		 <DIV CLASS="moreservice">
+																		 <img src="/_skin/200604/img/title_moreservices.gif" alt=""><br>
+																		 <ul class="navlist">
+                                                                              <li><a href="/Services/Affiliate"><strong>Earn up to $70 per referral</strong></a><br>sign up now!</li>
+                                                                              <li><a href="/Buddy"><strong>100MB Buddy Program</strong></a><br>Get extra space for free, learn how.</li>
+                                                                              <li><a href="/Services/WebHosting/MailFirewall"><strong>Spam & Email Virus Protection </strong></a> Stop them before they reach your computer.</li>
+                                                                              <li><a href="/Services/GeoTrust"><strong>Add GeoTrust SSL</strong></a> to secure your website for commerce.</li>
+                                                                              <li><a href="http://www.in2net.com/" target="_new"><strong>Doteasy Partner</strong></a><br>Affordable dedicated servers available from in2net.</li>
+                                                                         </ul>
+																		 </DIV>
+																		
+																	</TD>
+														  </TR>
+														  <TR>
+														            <TD><img src="/_skin/200604/img/frame2_btm.gif" alt=""></TD>
+														  </TR>
+												</TABLE>
+												
+										 <!-- More Services -->
+										 
+										 </TD>
+										 
+										 <TD WIDTH=6></TD>
+										 
+										 <TD VALIGN=TOP WIDTH=568>
+										 
+										          <!-- insert new promo -->
+												  <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0><TR><TD height="70">
+												  
+												  <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
+ WIDTH="565" HEIGHT="70" id="eu" ALIGN="">
+ <PARAM NAME=movie VALUE="/_skin/200604/img/eu.swf"> <PARAM NAME=quality VALUE=best> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="/_skin/200604/img/eu.swf" quality=best bgcolor=#FFFFFF  WIDTH="565" HEIGHT="70" NAME="eu" ALIGN=""
+ TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>
+</OBJECT>
+												  
+												  </TD></TR></TABLE>
+												  <DIV STYLE="margin-top:5px; margin-left:5px;"></DIV>
+												  <!-- insert new promo -->
+										 
+										 
+										 
+										 
+										         <!-- domain select -->
+												 
+
+
+<SCRIPT SRC="/Common/popDomainGift.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+	function popCCDomain() {
+		popCC = window.open('/SignUp3_17/Pages/CCDomain.cfm?skip_header=1', 'popCC', 'width=580,height=400,menu=yes,scrollbars=yes,resizable=yes');
+		popCC.focus();
+	}
+</SCRIPT>
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING="0">
+<TR>
+<TD WIDTH=565 HEIGHT=106 background="/_skin/200604/img/bg_domainselect.gif" VALIGN=TOP>
+<FORM NAME="BrowserForm" ACTION="https://www.doteasy.com/SignUp3_17/index.cfm" METHOD="post">
+<INPUT TYPE="hidden" NAME="ProcessPath" VALUE="Main">
+<INPUT TYPE="hidden" NAME="ProcessPage" VALUE="SelDomainType">
+<INPUT TYPE="hidden" NAME="StartSession" VALUE="1">
+<INPUT TYPE="hidden" NAME="Source" VALUE="HomePage">
+
+<DIV STYLE="margin-top:5px; margin-left:5px;">
+
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0>
+<TR><TD><INPUT TYPE="radio" NAME="SignUpType" VALUE="New" Checked></TD><TD COLSPAN=2><strong>Register your domain here and get 100MB Web Hosting completely free:</strong></TD></TR>
+<TR><TD></TD><TD COLSPAN=2><INPUT TYPE="text" NAME="DomainNameNoExt" VALUE=""
+><SELECT NAME="ExtensionList">
+<OPTION VALUE=".com">.com</OPTION><OPTION VALUE=".net">.net</OPTION><OPTION VALUE=".org">.org</OPTION><OPTION VALUE=".biz">.biz</OPTION><OPTION VALUE=".info">.info</OPTION><OPTION VALUE=".co.uk">.co.uk</OPTION><OPTION VALUE=".org.uk">.org.uk</OPTION><OPTION VALUE=".us">.us</OPTION><OPTION VALUE=".ca">.ca</OPTION><OPTION VALUE=".tv">.tv</OPTION><OPTION VALUE=".eu">.eu</OPTION>
+</SELECT>&nbsp; (<A HREF="javascript:popCCDomain()">Other Domain Extensions</A>) <img src="img/blank.gif" width="7" height="1" alt=""><a href="/Services/DomainNameRegistration"><strong>Domain Registration Fees</strong></a></TD></TR>
+<TR><TD><INPUT TYPE="radio" NAME="SignUpType" VALUE="Gift"></TD><TD><strong><A HREF="javascript:popDomainGift()" style="color:orange;"><SPAN CLASS="orange">Gift Domain</SPAN></A></strong></TD><TD ROWSPAN=2 ALIGN=RIGHT VALIGN=BOTTOM><input type="image" src="/_skin/200604/img/btn_search.gif" alt="" align="absmiddle" border=0></TD></TR>
+<TR><TD><INPUT TYPE="radio" NAME="SignUpType" VALUE="TransferHosting"></TD><TD><strong>I already have a registered domain (<a href="/Rebate">Transfer Hosting</a>)</strong></TD></TR>
+</TABLE>
+
+</DIV>
+</TD></TR>
+</FORM>
+</TABLE>
+
+
+												 <!-- domain select -->
+</DIV>
+												 
+												 <!--Free extra and power hosting -->
+<DIV STYLE="margin-top:5px;">
+												 
+												  <TABLE BORDER=0 CELLPADDING=0 CELLSPACING="0" WIDTH=568>
+												  <TR>
+												          <TD WIDTH=197 VALIGN=TOP>
+														        <DIV CLASS="freeTitle"><img src="/_skin/200604/img/title_freeextra.gif" alt=""></DIV>
+																<DIV>
+																         <TABLE BORDER=0 CELLPADDING=2 CELLSPACING=3>
+																		 <TR><TD><img src="/_skin/200604/img/icon_extra.gif" width="32" height="32" alt=""></TD><TD class="grey"><strong>Free with every domain registration</strong></TD></TR>
+                                                                         <TR><TD COLSPAN=2>
+																		  * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> 100MB Ad-Free Hosting<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> 1GB Monthly Traffic<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> 10 Email Accounts<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> Web/POP Email Access<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> FTP Access<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> Website Creator<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> Doteasy Web Tools<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> Starter Web Page<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> <a href="/Services/PrivateRegistration">Private Registration</a><br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> Domain Management<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> Domain Forward & Masking<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> Change of Registration<br>
+																		 * <SPAN CLASS="orange"><strong>FREE</strong></SPAN> Support<br>
+																		 </TD></TR>
+																		 </TABLE>
+																		
+																</DIV>
+														  </TD>
+														  
+														  
+														  <TD WIDTH=369 VALIGN=TOP>
+														  <DIV CLASS="powerTitle"><img src="/_skin/200604/img/title_powerhosting.gif" alt=""></DIV>
+														  <DIV>
+																         <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=3>
+																		 <TR><TD><img src="/_skin/200604/img/icon_powerhosting.gif" width="32" height="32" alt=""></TD><TD class="grey"><strong>For websites that demand the highest performance,  Doteasy Ultra Hosting & Unlimited Hosting is your first choice.</strong></TD></TR>
+                                                                         <TR><TD colspan="2"><a href="https://www.doteasy.com/SignUp3_17"><img src="/_skin/200604/img/795.gif" alt="" align="right" border="0"></a><SPAN CLASS="powerhostingTitle"><strong><a href="/Services/WebHosting/Ultra">Ultra Hosting</a></strong></SPAN><br><strong>1000 MB</strong> Web storage, <strong>20 GB</strong> monthly traffic,<strong>100</strong> POP/Web Email Accounts, Free Scripts Library, PHP/MySQL/CGI/Frontpage/<br>FTP,
+And <a href="/Services/WebHosting/Ultra"><strong>More ...</strong></a><br><br></TD></TR>
+                                                                         <TR><TD COLSPAN=2 CLASS="blueDivider">&nbsp;</TD></TR>
+																		 <TR><TD colspan="2"><a href="https://www.doteasy.com/SignUp3_17"><img src="/_skin/200604/img/995.gif" alt="" align="right" border="0"></a><SPAN CLASS="powerhostingTitle"><strong><a href="/Services/WebHosting/Unlimited">Unlimited Hosting</a></strong></SPAN><br>Includes <strong>All</strong> Ultra Hosting features, plus :<br> <strong>20 GB</strong> Web Storage, <strong>Unmetered</strong> Monthly 
+Traffic, <strong>Unlimited</strong> POP/Web Email Accounts, <strong>100</strong> MySQL Database, <strong>Unlimited</strong> Sub-domains Hosting,
+And <a href="/Services/WebHosting/Unlimited"><strong>More ...</strong></a><br><br></TD></TR>
+																		 </TABLE>
+																		
+															</DIV>
+														    </TD>
+														  
+														  
+												  </TR>
+												  </TABLE>
+												 
+												 <!--Free extra and power hosting -->
+												 
+												 <!-- Free Tools -->
+												 
+												 <DIV ALIGN=CENTER>
+												 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="80%">
+												 
+												     <TR>
+													     <TD><img src="/_skin/200604/img/bgtool_tl.gif" width="5" height="5" alt=""></TD>
+														 <TD WIDTH="100%" background="/_skin/200604/img/bgtool_top.gif"></TD>
+														 <TD><img src="/_skin/200604/img/bgtool_tr.gif" width="5" height="5" alt=""></TD>
+													 </TR>
+													 
+													 <TR><TD COLSPAN=3 ALIGN=CENTER><DIV CLASS="freetoolContent"><SPAN CLASS="red">Free Tools</SPAN> for Everyone : <img src="/_skin/200604/img/icon_tools.gif" alt="" align="absmiddle">&nbsp; <a href="http://www.freesitedesigner.com/" target="_new">Website Creator</a></DIV></TD></TR>
+													 
+													 <TR>
+													     <TD><img src="/_skin/200604/img/bgtool_bl.gif" width="5" height="5" alt=""></TD>
+														 <TD WIDTH="100%" background="/_skin/200604/img/bgtool_btm.gif"></TD>
+														 <TD><img src="/_skin/200604/img/bgtool_br.gif" width="5" height="5" alt=""></TD>
+													 </TR>
+												 </TABLE>
+												 </DIV>
+												 
+												 <!-- Free Tools -->
+												 
+										 </TD>
+										 
+										 </TR>
+								       
+								 </TABLE>
+								 
+
+
+<!--image map-->
+<map name="signup">
+<area alt="" coords="24,19,189,37" href="http://www.doteasy.com/Services/PrivateRegistration/">
+<area alt="" coords="25,119,224,162" href="https://www.doteasy.com/SignUp3_17/">
+</map>
+<!-- image map -->
+
+
+
+</td>
+
+	
+	
+
+</tr>
+</table>
+</div>
+<!-- content -->
+
+
+<!-- footer -->
+                              
+<br>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
+<TR><TD CLASS="footer">
+	<a href="http://www.in2net.com/Legal/DRA/" target="_blank"><strong>Domain Registration Agreement</strong></a>
+	| <a href="/Terms/index.cfm?T=TAC&bodyClass=pageCenter"><strong>Terms & Conditions</strong></a>
+	| <a href="/Terms/index.cfm?T=PP&bodyClass=pageCenter"><strong>Privacy Policy</strong></a></TD></TR>
+<TR><TD ALIGN=CENTER CLASS="footerCopyright">Copyright &copy; 2000-2006 Doteasy Technology Inc. All Rights Reserved. All other trademarks and copyrights are the property of their respective holders. </TD></TR>
+</TABLE>
+
+<!-- footer -->
+
+</DIV>
+</DIV>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+
+<element name='tabbox'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/tabpanel.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_tabbox.html</reference>
+  A container used to display tabbed pages of elements to the user. The  tabbox should contain two children, the first a tabs element which contains  the tabs and the second a tabpanels element which contains the contents of  the pages. This is a type of box that defaults to vertical orientation.  
+
+<implements>nsIAccessibleProvider</implements>
+<attr name='eventnode'>
+  Indicates from where keyboard navigation events are listened from. If this  attribute is not specified, events are listened to from the tabbox. Thus, if  this attribute is not used, the tabbox or an element inside it must have the  focus for the keyboard navigation to apply.
+<value name='parent'>
+    Keyboard navigation is captured at the parent of the tabbox.
+</value>
+<value name='window'>
+    Keyboard navigation is captured at the window level. Tab navigation will
+    occur as long as any element in the window is focused.
+</value>
+<value name='document'>
+    Keyboard navigation is captured at the document level. Tab navigation will
+    occur as long as any element in the document is focused.
+</value>
+</attr>
+<attr name='handleCtrlPageUpDown' type='boolean'>
+  If set to true or omitted, the tabbox will switch to the next tab when the  Control and Page Up or Page Down keys are pressed. If this attribute is set  to false, these keys do not navigate between tabs.
+</attr>
+<attr name='handleCtrlTab' type='boolean'>
+  If set to true or omitted, the tabbox will switch to the next tab when the  Control and Tab keys are pressed. If the Shift key is also held down, the  previous tab will be displayed. If this attribute is set to false, these  keys do not navigate between tabs.
+</attr>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the tabbox.
+</prop>
+<prop name='eventNode'/>
+<prop name='handleCtrlPageUpDown'/>
+<prop name='handleCtrlTab'/>
+<prop name='selectedIndex' type='integer'>
+  Gets and sets the index of the currently selected tab. A non-bubbling select  event will be sent to the tabs element when the selection is changed.
+</prop>
+<prop name='selectedPanel' type='tabpanel element'>
+  Holds a reference to the currently selected tabpanel. You can assign a  value to this property to change the displayed tab.
+</prop>
+<prop name='selectedTab' type='tab element'>
+  A reference to the currently selected tab, which will always be one of the tab  elements in the tabs element. Assign a value to this property to modify the  currently selected tab. 
+</prop>
+</element>

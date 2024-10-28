@@ -1,0 +1,237 @@
+<?xml version='1.0'?>
+
+<element name='tabbrowser'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_tabbrowser.html</reference>
+  This element is used for holding a set of read-only views of Web documents.  Similar to the browser element, except that mutliple documents can be  displayed, each in a separate tab. This element is implemented as a set of  browser elements inside a tabbox.  
+
+<attr name='autocompleteenabled' spec=' Firefox only ' type='boolean'>
+  Set to true to enable autocomplete of fields.
+</attr>
+<attr name='autocompletepopup' type='id of popup element'>
+  The id of a popup element used to hold autocomplete results for the tabbrowser.
+</attr>
+<attr name='autoscroll' spec=' Firefox only ' type='boolean'>
+  Set to false to disable autoscroll for this tabbrowser. If this attribute is set to  true or omitted, autoscroll will be enabled or depending on the user  preference 'general.autoScroll'.
+</attr>
+<attr name='contentcontextmenu' type='id of a menupopup element'>
+  A reference to the context menu for the content area in the tabbrowser.
+</attr>
+<attr name='contenttooltip' type='id of a tooltip element'>
+  A reference to the tooltip element to be used for the content area in the  tabbrowser.
+</attr>
+<attr name='handleCtrlPageUpDown' type='boolean'>
+  If set to true or omitted, the tabbrowser will switch to the next tab when the  Control and Page Up or Page Down keys are pressed. If this attribute is set  to false, these keys do not navigate between tabs.
+</attr>
+<attr name='onbookmarkgroup' spec=' Not in Firefox ' type='script code'>
+  This code executes when the user chooses the 'Bookmark This Group of Tabs'  command.
+</attr>
+<attr name='onnewtab' spec=' Not in Firefox ' type='script code'>
+  This script will be called when the new tab button is clicked.
+</attr>
+<method name='addProgressListener'>
+<prototype> addProgressListener ( listener ) </prototype>
+  
+  Add a progress listener to the tabbrowser which will monitor loaded documents. The  progress listener should implement the   nsIWebProgressListener   interface.
+</method>
+<method name='addTab' returns='tab element'>
+<prototype> addTab ( url ) </prototype>
+  
+  Displays a new tab loading the specified URL as the document.  The row of tabs will appear if needed.
+</method>
+<method name='appendGroup' spec=' Not in Firefox '>
+<prototype> appendGroup ( group ) </prototype>
+  
+  Add several new tabs to the end of the existing tabs. The argument should be  an array of objects, one for each document to load. The objects may be  defined in script and contain a 'URI' property for the URL of the page to  load. A 'referrerURI' property may also be optionally used to set the  referrer page.
+</method>
+<prop name='browsers' type='nodelist of browser elements'>
+  Holds a list of the browser elements inside the tabbrowser.
+</prop>
+<prop name='canGoBack' type='boolean'>
+  This read-only property is true if there is a page to go back to in the session  history and the Back button should be enabled.
+</prop>
+<prop name='canGoForward' type='boolean'>
+  This read-only property is true if there is a page to go forward to in the session  history and the Forward button should be enabled.
+</prop>
+<prop name='contentDocument' type='document'>
+  This read-only property contains the document object in the tabbrowser.
+</prop>
+<prop name='contentTitle' type='string'>
+  This read-only property contains the title of the document object in the tabbrowser.
+</prop>
+<prop name='contentViewerEdit' type='nsIContentViewerEdit'>
+  This read-only property contains the nsIContentViewerEdit which handles clipboard  operations on the document.
+</prop>
+<prop name='contentViewerFile' type='nsIContentViewerFile'>
+  Reference to the nsIContentViewerFile interface for the document.
+</prop>
+<prop name='contentWindow' type='window'>
+  This read-only property contains the window object in the tabbrowser.
+</prop>
+<prop name='currentURI' type='string current URI'>
+  This read-only property contains the currently loaded URL. To change the  URL, use the loadURI method.
+</prop>
+<prop name='docShell' type='nsIDocShell'>
+  This read-only property contains the nsIDocShell object for the document.
+</prop>
+<prop name='documentCharsetInfo' type='nsIDocumentCharsetInfo'>
+  This read-only property contains the nsIDocumentCharsetInfo object for the document  which is used to handle which character set should be used to display the document.
+</prop>
+<method name='getBrowserForTab' returns='browser element'>
+<prototype> getBrowserForTab ( tab ) </prototype>
+  
+  Returns a browser for specific tab element.
+</method>
+<method name='goBack'>
+<prototype> goBack ( ) </prototype>
+  
+  Go back one page in the history.
+</method>
+<method name='goBackGroup' spec=' Not in Firefox '>
+<prototype> goBackGroup ( ) </prototype>
+  
+  Return to the previous group of tabs.
+</method>
+<method name='goForward'>
+<prototype> goForward ( ) </prototype>
+  
+  Go forward one page in the history.
+</method>
+<method name='goForwardGroup' spec=' Not in Firefox '>
+<prototype> goForwardGroup ( ) </prototype>
+  
+  Go forward to the next group of tabs.
+</method>
+<method name='goHome'>
+<prototype> goHome ( ) </prototype>
+  
+  Load the user's home page into the tabbrowser.
+</method>
+<method name='gotoIndex'>
+<prototype> gotoIndex ( index ) </prototype>
+  
+  Navigate to the page in the history with the given index. Use a positive  number to go forward and a negative number to go back.
+</method>
+<prop name='homePage' type='string home page URL'>
+  This property holds the value of the user's home page setting.
+</prop>
+<method name='loadGroup' spec=' Not in Firefox ' returns='the first tab'>
+<prototype> loadGroup ( group ) </prototype>
+  
+  Loads a group of pages into multiple tabs. They are either appended or  replaced depending on the state of the preference 'browser.tabs.loadGroup'.  The argument should be an array of objects, one for each document to load.  The objects may be defined in script and contain a 'URI' property for the  URL of the page to load. A 'referrerURI' property may also be optionally  used to set the referrer page. This function returns a reference to the  first tab loaded.
+</method>
+<method name='loadURI'>
+<prototype> loadURI ( uri , referrer , charset ) </prototype>
+  
+  Load a URL into the document, with the given referrer and character set.
+</method>
+<method name='loadURIWithFlags'>
+<prototype> loadURIWithFlags ( uri , flags , referrer , charset ) </prototype>
+  
+  Load a URL into the document, with the specified load flags and the given  referrer and character set. In addition to the flags allowed for the  reloadWithFlags methods, the following flags are also valid:
+<value name='LOAD_FLAGS_IS_REFRESH'>
+    This flag is used when the URL is loaded because of a meta tag refresh or redirect.
+</value>
+<value name='LOAD_FLAGS_IS_LINK'>
+    This flag is used when the URL is loaded because a user clicked on a link. The
+    HTTP Referer header is set accordingly.
+</value>
+<value name='LOAD_FLAGS_BYPASS_HISTORY'>
+    Do not add the URL to the session history.
+</value>
+<value name='LOAD_FLAGS_REPLACE_HISTORY'>
+    Replace the current URL in the session history with a new one. This flag might be
+    used for a redirect.
+</value>
+</method>
+<prop name='markupDocumentViewer' type='nsIMarkupDocumentViewer'>
+  This read-only property contains the nsIMarkupDocumentViewer which is responsible  for drawing the document.
+</prop>
+<method name='reload'>
+<prototype> reload ( ) </prototype>
+  
+  Reloads the document in the tabbrowser.
+</method>
+<method name='reloadAllTabs'>
+<prototype> reloadAllTabs ( ) </prototype>
+  
+  Reloads the contents of all of the tabs.
+</method>
+<method name='reloadTab'>
+<prototype> reloadTab ( tab ) </prototype>
+  
+  Reloads the contents of a specific tab.
+</method>
+<method name='reloadWithFlags'>
+<prototype> reloadWithFlags ( flags ) </prototype>
+  
+  Reloads the document in the tabbrowser with the given load flags. The flags listed below  may be used, which are all constants of the webNavigation property (or the  nsIWebNavigation interface). You may combine flags using a or symbol ( | )
+<value name='LOAD_FLAGS_NONE'>
+    No special flags. The document is loaded normally.
+</value>
+<value name='LOAD_FLAGS_BYPASS_CACHE'>
+    Reload the page, ignoring if it is already in the cache. This is the flag used
+    when the reload button is pressed while the Shift key is held down.
+</value>
+<value name='LOAD_FLAGS_BYPASS_PROXY'>
+    Reload the page, ignoring the proxy server.
+</value>
+<value name='LOAD_FLAGS_CHARSET_CHANGE'>
+    This flag is used if the document needs to be reloaded because the character
+    set changed.
+</value>
+</method>
+<method name='removeAllTabsBut'>
+<prototype> removeAllTabsBut ( tabElement ) </prototype>
+  
+  Removes all of the tab panels except for the one corresponding to  the specified tab. If only one tab page is displayed, this method  does nothing.
+</method>
+<method name='removeCurrentTab' returns='tab element'>
+<prototype> removeCurrentTab ( ) </prototype>
+  
+  Removes the currently displayed tab page. If it is the only displayed  tab, this method does nothing.
+</method>
+<method name='removeProgressListener'>
+<prototype> removeProgressListener ( listener ) </prototype>
+  
+  Remove a progress listener from the tabbrowser.
+</method>
+<method name='removeTab'>
+<prototype> removeTab ( tabElement ) </prototype>
+  
+  Removes a specific tabbed page corresponding to the given tab element.  If only one tab is displayed, this method does nothing. If needed, the  row of tabs will collapse if only one tab remains.
+</method>
+<method name='replaceGroup' spec=' Not in Firefox ' returns='array of session history objects'>
+<prototype> replaceGroup ( group ) </prototype>
+  
+  replaces existing tabs with a new set. If there were more tabs before, the  additional ones are not removed. You can use the removeTab function to  remove the existing tabs first if that is desired. The argument should be an  array of objects, one for each document to load. The objects may be defined  in script and contain a 'URI' property for the URL of the page to load. A  'referrerURI' property may also be optionally used to set the referrer page.  This method returns an array of the session history objects for the tabs  that were removed.
+</method>
+<prop name='securityUI' type='nsISecureBrowserUI'>
+  The readonly property holds an object which may be used to determine the  security level of the loaded document.
+</prop>
+<prop name='selectedBrowser' type='browser element'>
+  This readonly property returns the currently displayed browser element.
+</prop>
+<prop name='selectedTab' type='tab element'>
+  Holds the currently selected tab. You can modify this property to  change the currently selected tab page.
+</prop>
+<prop name='sessionHistory' type='nsISHistory'>
+  This read-only property contains the nsISHistory object which holds the session  history.
+</prop>
+<method name='stop'>
+<prototype> stop ( ) </prototype>
+  
+  Equivalent to pressing the Stop button, this method stops the currently loading  document.
+</method>
+<prop name='tabContainer' type='tabs element'>
+  Returns the tabs element that contains the tabs.
+</prop>
+<prop name='webBrowserFind' type='nsIWebBrowserFind'>
+  This read-only property contains an nsIWebBrowserFind object which can be used  to search for text in the document.
+</prop>
+<prop name='webNavigation' type='nsIWebNavigation'>
+  This read-only property contains the nsIWebNavigation object for the document.  Most of its methods are callable directly on the tabbrowser itself, such as goBack and  goForward. It also contains the load constants used by reloadWithFlags and  loadURIWithFlags.
+</prop>
+<prop name='webProgress' type='nsIWebProgress'>
+  This read-only property contains an nsIWebProgress object which is used to monitor  the progress of a document loading.
+</prop>
+</element>

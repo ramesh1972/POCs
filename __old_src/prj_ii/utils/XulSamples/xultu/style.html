@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="persist.html"> 
+ <link rel="next" href="treestyle.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Adding Style Sheets</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 10.1 - Adding Style Sheets 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <SPAN CLASS="currentpage">Adding Style Sheets</SPAN></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="9.6 - Persistent Data"
+     href="persist.html">Previous</a>
+
+
+  <a class="nextlink" title="10.2 - Styling a Tree"
+     href="treestyle.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Adding Style Sheets</h2>
+
+<P>
+We have hardly modified the look of the elements we have created so far.
+XUL uses CSS (Cascading Style Sheets) to customize elements.
+</P>
+
+<H3>Style Sheets</H3>
+
+<P>
+A style sheet is a file which contains style information for elements. It
+was originally designed for HTML elements but can be applied to XUL
+elements also, or to any XML for that matter. The style sheet contains
+information such as the fonts, colors, borders, and size of elements.
+</P>
+
+<P>
+Mozilla applies a default style sheet to each XUL window. In many cases, it
+will suffice to leave the defaults as is. Other times, however, you will want
+to provide a custom style sheet. In general, you will associate a single
+style sheet with each XUL file.
+</P>
+
+<P>
+You can place a style sheet anywhere you wish. If your XUL file is stored
+remotely and accessed via an HTTP URL, you can store the style sheet remotely
+as well. If you are creating a XUL package to be installed as part of the
+chrome system, you have two choices. First, you could store the style sheet
+in the same directory as the XUL file. This method has the disadvantage
+because it means your application will not be themeable. The second method
+involves placing your files as part of a theme.
+</P>
+
+<P>
+Let's assume that we are building the find files dialog for themeability,
+because the find files dialog can be referred to with the URL
+chrome://findfile/content/findfile.xul so the style sheet file will be stored
+in chrome://findfile/skin/findfile.css.
+</P>
+
+<P>
+All the XUL examples so far have actually been using a style sheet already.
+The second line has always been:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;</PRE></DIV>
+
+
+
+<P>
+This line indicates that we want to use the style provided by chrome://global/skin/.
+In Mozilla, this will be translated as the file global.css, which contains default
+style information for XUL elements. You could leave the line out and the elements
+will still work, however they will look fairly plain. The style sheet applies
+various fonts, colors and borders to make the elements look more suitable.
+</P>
+
+<H3>Changing the Styles</H3>
+
+<P>
+However, there will be times when the default look of elements will not give the
+look that is desired. For this, we will need to add a style sheet of our own.
+So far, we have been applying styles using the <SPAN CLASS="attrib">style</SPAN>
+attribute on elements. Although this works, it is not really the best thing to
+do. It is much better to create a separate style sheet. The reason is so that
+different looks, or skins, can be applied easily.
+</P>
+
+<P>
+There may be certain cases where the <SPAN CLASS="attrib">style</SPAN> attribute
+is acceptable. An example would be when a script changes the style, or where
+a difference in layout might change the meaning of the element. However you
+should avoid this as much as possible.
+</P>
+
+<P>
+For installed files, you'll have to create or modify a manifest file and install
+the skin.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+Let's modify the find files dialog so that its style comes from a separate 
+style file. First, the modifed lines of findfile.xul:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+<SPAN STYLE="color: red;">&lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;</SPAN>
+  ...
+<SPAN STYLE="color: red;">&lt;spacer class="titlespace"/&gt;</SPAN>
+  &lt;groupbox orient="horizontal"&gt;
+    &lt;caption label="Search Criteria"/&gt;
+
+      &lt;menulist id="searchtype"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Name"/&gt;
+          &lt;menuitem label="Size"/&gt;
+          &lt;menuitem label="Date Modified"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+      <SPAN STYLE="color: red;">&lt;spacer class="springspace"/&gt;</SPAN>
+      &lt;menulist id="searchmode"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Is"/&gt;
+          &lt;menuitem label="Is Not"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+
+      <SPAN STYLE="color: red;">&lt;spacer class="springspace"/&gt;
+      &lt;menulist id="find-text" flex="1"</SPAN>
+          editable="true"
+          datasources="file:///mozilla/recents.rdf"
+          ref="http://www.xulplanet.com/rdf/recent/all"/&gt;
+  ...
+<SPAN STYLE="color: red;">&lt;spacer class="titlespace"/&gt;
+&lt;hbox&gt;
+
+  &lt;progressmeter id="progmeter" value="50%" style="display:none;"/&gt;</SPAN></PRE></DIV>
+
+
+
+</DIV>
+
+<P>
+The new <SPAN CLASS="tag">xml-stylesheet</SPAN> line is used to import the
+style sheet. It will contain the styles instead of having them directly in
+the XUL file. You can include any number of style sheets in a similar way.
+Here the style sheet is placed in the same directory as findfile.xul.
+</P>
+
+<P>
+Some of the styles in the code above have been removed. One that wasn't was
+the <SPAN CLASS="attrib">display</SPAN> property on the
+<SPAN CLASS="attrib">progressmeter</SPAN>. This will be changed by a script
+so it was left in, as it doesn't really make sense to have the progress bar
+visible initially. You could still put this in a separate style sheet if you
+really wanted to. A <SPAN CLASS="attrib">class</SPAN> was added to the spacers
+so that they can be referred to.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+A style sheet also needs to be created. Create a file findfile.css
+in the same directory as the XUL file. (It would normally be put into
+a separate skin). In this file, we'll add the style declarations, as
+shown below:
+</P>
+
+
+<DIV CLASS="sample"><PRE>#find-text {
+  min-width: 15em;
+}
+
+#progmeter {
+  margin: 4px;
+}
+
+.springspace {
+  width: 10px;
+}
+
+.titlespace {
+  height: 10px;
+}
+</PRE></DIV>
+
+
+
+<P>
+Notice how these styles are equivalent to the styles we had before. However,
+it is much easier for someone to change the look of the find files dialog
+now because they could add or modify the style declarations by either modifying
+the file or by changing the skin. If the user changes the interface skin,
+the files in a directory other than default will be applied.
+</P>
+
+</DIV>
+
+<H3>Importing Style Sheets</H3>
+
+<P>
+We've already seen how to import style sheets for use. An example is shown
+below:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;?xml-stylesheet href="chrome://bookmarks/skin/" type="text/css"?&gt;</PRE></DIV>
+
+
+
+<P>
+This might be the first lines of a  bookmarks window. It imports the bookmarks
+style sheet, which is bookmarks.css. Mozilla's skin system is smart enough to
+figure out which style sheet to use, because the specific filename was not
+indicated here. We have done a similar thing with the global style sheet file
+(chrome://global/skin).
+</P>
+
+<P>
+A style sheet may import styles from another stylesheet using the import
+directive. Normally, you will only import one style sheet from each XUL file.
+The global style sheet can be imported from within the style sheet associated
+with the XUL file. This can be done with the code below, allowing you to remove
+the import from the XUL file:
+</P>
+
+
+<DIV CLASS="sample"><PRE><B>Style import from XUL:</B>
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+<B>Style import from CSS:</B>
+@import url(chrome://global/skin/);</PRE></DIV>
+
+
+
+<P>
+The second syntax is preferred because it reduces the number of dependencies within
+the XUL file itself.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+Remove the global style sheet import from findfile.xul and add the import to findfile.css.
+</P>
+
+</DIV>
+
+<P>
+All elements can be styled using CSS. You can use selectors to select the element that
+you wish to have styled. (The selector is the part before the curly brace in a style
+rule). The following table summarizes some of the selectors available:
+</P>
+
+<TABLE BORDER=1>
+<TR>
+<TD>button</TD>
+<TD>Matches all button tags</TD>
+</TR>
+<TR>
+<TD>#special-button</TD>
+<TD>Matches the element with an <SPAN CLASS="attrib">id</SPAN> of
+<SPAN CLASS="aval">special-button</SPAN></TD>
+</TR>
+<TR>
+<TD>.bigbuttons</TD>
+<TD>Matches all elements with a <SPAN CLASS="attrib">class</SPAN> of
+<SPAN CLASS="aval">bigbuttons</SPAN></TD>
+</TR>
+<TR>
+<TD>button.bigbuttons</TD>
+<TD>Matches all button elements with a <SPAN CLASS="attrib">class</SPAN>
+of <SPAN CLASS="aval">bigbuttons</SPAN></TD>
+</TR>
+<TR>
+<TD>toolbar &gt; button</TD>
+<TD>Matches all buttons that are directly inside toolbar elements.</TD>
+</TR>
+<TR>
+<TD>toolbar &gt; button.bigbuttons</TD>
+<TD>Matches all button elements with a <SPAN CLASS="attrib">class</SPAN>
+of <SPAN CLASS="aval">bigbuttons</SPAN> that are directly inside toolbar
+elements.</TD>
+</TR>
+<TR>
+<TD>button.bugbuttons:hover</TD>
+<TD>Matches all button elements with a <SPAN CLASS="attrib">class</SPAN>
+of <SPAN CLASS="aval">bigbuttons</SPAN> but only while the mouse is
+over them.</TD>
+</TR>
+<TR>
+<TD>button#special-button:active</TD>
+<TD>Matches all button elements with an <SPAN CLASS="attrib">id</SPAN>
+of <SPAN CLASS="aval">special-button</SPAN> but only while they are active
+(being clicked on).</TD>
+</TR>
+<TR>
+<TD>box[orient="horizontal"]</TD>
+<TD>Matches all box elements that have an <SPAN CLASS="attrib">orient</SPAN>
+attribute that is set to <SPAN CLASS="aval">horizontal</SPAN>.</TD>
+</TR>
+</TABLE>
+
+<P>
+You can combine these rules in any way that you wish. It is always a good idea
+to be as precise as possible when specifying what gets styled. It is more
+efficient and it also reduces the likelihood that you'll style the wrong thing.
+</P>
+
+<HR>
+<P>
+<A HREF="treestyle.html">(Next)</A>
+In the next section, we will look at how to apply styles to trees.
+
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-style.xul.txt'>Source</A>
+<A HREF="examples/findfile/findfile-style.xul" ONCLICK="window.open('examples/findfile/findfile-style.xul','xulff','chrome,resizable'); return false;">View</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="9.6 - Persistent Data"
+     href="persist.html">Previous</a>
+
+
+  <a class="nextlink" title="10.2 - Styling a Tree"
+     href="treestyle.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

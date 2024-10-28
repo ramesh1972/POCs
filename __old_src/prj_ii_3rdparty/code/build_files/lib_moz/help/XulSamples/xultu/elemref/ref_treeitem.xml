@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+
+<element name='treeitem'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/trees.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_treeitem.html</reference>
+  A treeitem should be placed inside a treechildren element and should contain  treerow elements. The treeitem can be clicked by the user to select the row  of the tree. The treeitem contains a single row and all of what appear to the  user as that row's descendants.        In a template condition, you should use a treeitem instead of a content  element when the 'dont-build-content' flag is specified. Set the uri attribute  to the variable name to bind to a content node during matching.  
+<html><![CDATA[
+<p>  A treeitem should be placed inside a treechildren element and should contain  treerow elements. The treeitem can be clicked by the user to select the row  of the tree. The treeitem contains a single row and all of what appear to the  user as that row's descendants.  </p>  <p>  In a template condition, you should use a treeitem instead of a content  element when the 'dont-build-content' flag is specified. Set the uri attribute  to the variable name to bind to a content node during matching.  </p>
+]]></html>
+
+<attr name='container' type='boolean'>
+  Set to true if the element is to act as a container which can have child  elements. This would be used for folders. This will be set by the template  builder as needed.
+</attr>
+<attr name='empty' type='boolean'>
+  Set to true if the element is a container that contains no children.
+</attr>
+<attr name='label' type='string'>
+  For trees with only a single column, the label may be placed directly on the  treeitem without the need for a treerow and treecell inside.
+</attr>
+<attr name='open' type='boolean'>
+  If true, the treeitem is open, allowing child elements to be displayed.
+</attr>
+<attr name='uri'>
+  Used to specify the variable name for the content in a template condition.  When a rule is evaluated, it scans through each resource in the RDF  datasource looking for a match. Each resource is placed in the variable  specified in the uri attribute in turn. Then, the other rules are evaluated  for a match.
+</attr>
+</element>

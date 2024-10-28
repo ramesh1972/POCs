@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+
+<element name='resources' lang='xbl'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblresources.html</reference>
+  Used to specify a list of resources that the binding uses. This includes  images, using the xbl element or style sheets using the xbl  element. The resources element should be placed directly inside the xbl  element.  
+
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the resources with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+</element>

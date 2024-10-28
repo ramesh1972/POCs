@@ -1,0 +1,2054 @@
+<body scroll=no topmargin=0 bottommargin=0 leftmargin=0 rightmargin=0 bgcolor="gray">
+</body>
+<script langauge=javascript>
+function _debug(t)
+{
+	if (!gdebugging)
+		return;	
+		
+	if (t == null)
+		t = "Not Set";
+
+	if (gdebug != null)
+		gdebug.innerHTML+= t +  "<BR>";
+}
+
+function _dump_section(section)
+{
+	 _debug("section id: " + section.id);
+	 _debug("left=" + section.left + "," + "top=" + section.top + "," + "width=" + section.width + "," + "height=" + section.height);
+	 _debug("dock: " + section.dock_position);
+}
+</script>
+
+<!-- Class Definitions -->
+<script language=javascript>
+function CRect()
+{
+	this.left = 0;
+	this.top = 0;
+	this.width = 0;
+	this.height = 0;
+}
+
+function CSection()
+{
+	this.div_object = null;
+	this.title_object = null;
+	this.view_object = null;
+	this.oframe = null;
+	this.parent_object = null;
+	
+	this.id = "";
+	this.is_iframe = false;
+	this.src = "";
+
+	this.initialized = false;
+	this.size_changed = false;
+	this.limit_already_checked = false;
+	this.docked_to_window_right = false;
+	this.docked_to_window_bottom = false;
+	this.is_left_dockset = false;
+			
+	this.position_type = "float"; // float, dock, slide, popup, modal, list, tile, cascade
+	this.dock_position = "none"; // left, top, right, bottom
+	this.is_resizable = true;
+
+	this.left = 0;
+	this.top = 0;
+	this.width = 0;
+	this.height = 0;
+	
+	this.width_prcnt = -1;
+	this.height_prcnt = -1;
+
+	this.border_left = null;
+	this.border_right = null;
+	this.border_top = null;
+	this.border_bottom = null;
+}
+
+function CBorder()
+{
+	this.div_object = null;
+	
+	this.left = 0;
+	this.top = 0;
+	this.width=0;
+	this.height=0;
+	
+	this.position = ""; //left, right etc.
+	this.can_merge = true;
+	this.owner_section = null;
+}
+</script>
+
+<!-- Section/Border Core Functions -->
+<script language=javascript>
+function create_view_area_section()
+{
+	// create the outer div
+  	var html="<div id=viewarea>";
+	
+	html += "</div>";
+	document.write(html);
+
+	// set the object
+	var obj = document.all("viewarea");
+
+	gviewsection = new CSection();
+
+	gviewsection.div_object = obj;
+	gviewsection.parent_object = document.body;
+	
+	// defaults
+	obj.style.position = "absolute";
+	obj.style.marginLeft=0;	
+	obj.style.paddingLeft=0;
+	obj.style.borderWidth = 1;
+	obj.style.marginTop=0;	
+	obj.style.paddingTop=0;
+	obj.style.marginBottom=0;	
+	obj.style.paddingBottom=0;
+	obj.style.marginRight=0;	
+	obj.style.paddingRight=0;
+	obj.style.borderStyle="solid";
+	obj.style.borderColor="black";
+	obj.style.backgroundColor="gray";
+	obj.style.overflow = "auto";
+}
+
+function create_section(section, parent)
+{
+	// create the outer section
+	var oouter = document.createElement("div");
+	oouter.id = section.id;
+
+	// this section is a child off? (either the browser or the view area)
+	if (parent != null)
+		section.parent_object = parent.div_object;
+	else
+		section.parent_object = document.body;
+	
+	section.parent_object.appendChild(oouter);
+
+	oouter.style.position = "absolute";
+	
+	// create the title bar
+	var otitle = document.createElement("div");
+	otitle.id = "titlebar_" + section.id;
+	oouter.appendChild(otitle);
+	otitle.style.position = "absolute";
+	
+	// create the inner section
+	var oinner = document.createElement("div");
+	oinner.id = "inner_" + section.id;
+	oouter.appendChild(oinner);
+	oinner.style.position = "absolute";
+
+	// for back reference of the div objects from section
+	section.div_object = oouter;
+	section.title_object = otitle;
+	section.view_object = oinner;
+	
+	// if there is a frame create the same
+	var oframe = null;
+  	if (section.is_iframe)
+  	{
+		section.oframe = oframe;
+  		oframe = document.createElement("iframe");
+  		oframe.id = "frame_" + section.id;
+  		oframe.src = section.src;
+  		oinner.appendChild(oframe);
+  		oframe.style.position="absolute";  		
+  	}
+  	
+  	// default styles
+  	set_section_default_style(section);
+  	
+	// signal for sizing
+	section.size_changed = true;
+	
+	// add the section to the collection
+	gsections[gcount++] = section;
+}
+
+function set_section_default_style(section)
+{
+	var oouter = section.div_object;
+	var otitle = section.title_object;
+	var oinner = section.view_object;
+	
+	// defaults
+	// for outer section
+	oouter.style.backgroundColor="red";
+	oouter.style.overflow = "hidden";
+	oouter.style.borderStyle="none";
+	oouter.style.marginLeft=0;	
+	oouter.style.paddingLeft=0;
+	oouter.style.marginTop=0;	
+	oouter.style.paddingTop=0;
+	oouter.style.marginBottom=0;	
+	oouter.style.paddingBottom=0;
+	oouter.style.marginRight=0;	
+	oouter.style.paddingRight=0;
+
+	// for title
+	otitle.innerHTML = "<font size=2 color=white>" + "<B>" + section.id + "</B>" + "</font>";
+	otitle.style.backgroundColor="#0000F0";
+	otitle.style.overflow = "hidden";
+	otitle.style.borderTopStyle="outset";
+	otitle.style.borderTopWidth=".01cm";
+	otitle.style.borderTopColor="#00FFF1";
+	otitle.style.borderLeftStyle="outset";
+	otitle.style.borderLeftWidth=".05cm";
+	otitle.style.borderLeftColor="#0000f0";
+	otitle.style.borderBottomStyle="inset";
+	otitle.style.borderBottomWidth=".05cm";
+	otitle.style.borderBottomColor="#0000F0";
+	otitle.style.borderRightStyle="inset";
+	otitle.style.borderRightWidth=".05cm";
+	otitle.style.borderRightColor="#0000F0";
+	otitle.style.marginLeft=0;	
+	otitle.style.paddingLeft=0;
+	otitle.style.marginTop=0;	
+	otitle.style.paddingTop=0;
+	otitle.style.marginBottom=0;	
+	otitle.style.paddingBottom=0;
+	otitle.style.marginRight=0;	
+	otitle.style.paddingRight=0;
+
+	// for inner section
+	oinner.style.backgroundColor="yellow"; //#0000F0";	
+	oinner.style.overflow="auto";
+	oinner.style.borderWidth = ".01cm";
+	oinner.style.borderStyle="ridge";
+	oinner.style.borderColor="#0000F0";	
+	oinner.style.borderTopStyle="none";
+	oinner.style.marginLeft=0;	
+	oinner.style.paddingLeft=0;
+	oinner.style.borderWidth = 1;
+	oinner.style.marginTop=0;	
+	oinner.style.paddingTop=0;
+	oinner.style.marginBottom=0;	
+	oinner.style.paddingBottom=0;
+	oinner.style.marginRight=0;	
+	oinner.style.paddingRight=0;
+
+	// for frame
+	if (section.is_iframe)
+	{
+		var oframe = section.oframe;
+		
+		oinner.style.overflow="hidden";
+  		oframe.style.borderWidth=1;
+		oframe.style.borderStyle="solid";
+
+		oframe.style.marginLeft=0;	
+		oframe.style.paddingLeft=0;
+		oframe.style.marginTop=0;	
+		oframe.style.paddingTop=0;
+		oframe.style.marginBottom=0;	
+		oframe.style.paddingBottom=0;
+		oframe.style.marginRight=0;	
+		oframe.style.paddingRight=0;
+	}
+}
+
+function reset_limit_check()
+{
+	for (var idx=0; idx < gcount;idx++)
+	{
+		gsections[idx].size_changed = false;
+		gsections[idx].limit_already_checked = false;
+	}
+}
+
+function section_sorter(x,y)
+{
+	if (x.height < y.height)
+		return -1;
+	return 1;
+}
+
+function get_surrounding_sections(section, lsss, rsss, tsss, bsss)
+{
+	for (var idx=0; idx < gcount;idx++)
+	{
+		var ss = gsections[idx];
+		if (ss.id == section.id)
+			continue;
+			
+		var ssd = ss.div_object.style;
+		var sectiond = section.div_object.style;
+		
+		if (sectiond.posLeft == ssd.posLeft + ssd.posWidth + cborder_thickness)
+			lsss.push(ss);
+		else if (sectiond.posLeft + sectiond.posWidth + cborder_thickness == ssd.posLeft)
+			rsss.push(ss);
+
+		if (sectiond.posTop + sectiond.posHeight + cborder_thickness == ssd.posTop)
+			bsss.push(ss);
+		else if (sectiond.posTop == ssd.posTop + ssd.posHeight + cborder_thickness)
+			tsss.push(ss);
+	}	
+	
+	// sort the arrays
+	// if array of bottoms, then sort by height ascending
+	tsss = tsss.sort(section_sorter);
+	bsss = bsss.sort(section_sorter);
+}
+
+function create_border(section)
+{
+	// create the outer div
+	var oimg = document.createElement("image");
+	oimg.id = "border_" + gborder_count;
+	oimg.src = "border_red.gif";
+
+	section.parent_object.appendChild(oimg);
+	
+	// set sizing handlers	
+	oimg.onmouseover = border_mouseover;  
+	oimg.ondragstart = border_dragstart;
+	oimg.ondrag = border_drag;
+	oimg.ondragend = border_dragend;
+	
+	// default styles
+	oimg.style.position = "absolute";
+	
+	oimg.style.marginLeft=0;	
+	oimg.style.paddingLeft=0;
+	oimg.style.marginTop=0;	
+	oimg.style.paddingTop=0;
+	oimg.style.marginBottom=0;	
+	oimg.style.paddingBottom=0;
+	oimg.style.marginRight=0;	
+	oimg.style.paddingRight=0;
+
+	// add to the borders collection
+	var obj = document.all("border_" + gborder_count);
+	var border = new CBorder();
+	border.div_object = obj;
+	gborders[gborder_count++] = border;
+	
+	return border;
+}
+
+function get_border_object(id)
+{
+	for (var idx=0; idx <gborder_count; idx++)
+	{
+		if (gborders[idx] == null || gborders[idx].div_object == null)
+			continue;
+
+		if (gborders[idx].div_object.id == id)
+			return gborders[idx];
+			
+		if (gborders[idx].div_object.style.visibility == "hidden")
+			continue;
+	}
+}
+
+function get_border_from_event(evnt)
+{
+	if (evnt.srcElement == null)
+	{
+		// _debug("null event");
+		return null;
+	}
+		
+	if (evnt.srcElement.tagName != "IMG")
+		return null;
+
+	var obj = evnt.srcElement;
+		
+	// check if this is a sizing image
+	if (obj.id.search("border_") < 0)
+		return null;
+			
+	// _debug("fetching border object for id:" + obj.id);
+		
+	var border = get_border_object(obj.id);
+		
+	if (border == null)
+		return;
+			
+	// _debug("got border object for id:" + border.div_object.id);
+	return border;
+}
+
+function create_left_dockset_section(section)
+{
+	var caboveindex = -1;
+	var cbelowindex = -1;
+
+	// find the dock row and the section in it above/below where the current one has to be displayed							
+	var dmaxleft = 0;
+	for (var idx1 = 0; idx1 < gcount; idx1++)
+	{
+		if (gsections[idx1].id == section.id)
+			break;
+			
+		if (gsections[idx1].position_type != "dock" || gsections[idx1].dock_position != "left")
+			continue;
+						
+		var dx = gsections[idx1].left;
+					
+		// find a section in the desired dock row
+		if (section.left > dx && dx >= dmaxleft)
+			dmaxleft = dx;
+		else if (section.left == dx)
+		{
+			dmaxleft = dx;// TODO: then a complete new column
+		}
+	}
+
+	var dmaxtop = 0;
+	for (var idx2 = 0; idx2 < gcount; idx2++)
+	{
+		if (gsections[idx2].id == section.id)
+			break;
+
+		if (gsections[idx2].position_type != "dock" || gsections[idx2].dock_position != "left")
+			continue;
+						
+		var dx = gsections[idx2].left;
+		var dy = gsections[idx2].top;
+					
+		// find a section in the desired dock row
+		if (dx >= dmaxleft)
+		{
+			if (section.top > dy)
+			{
+				if (dy >= dmaxtop)
+				{
+					caboveindex = idx2;
+					cmaxtop = dy;
+				}
+			}
+			else 
+			{
+				if (cbelowindex == -1 || dy <= gsections[cbelowindex].top)
+					cbelowindex = idx2;
+			}
+		}
+	}
+
+	if (caboveindex != -1)
+	{
+		gsections[caboveindex].is_left_dockset = true;
+		gsections[caboveindex].is_left_dockset_topmost = true;
+		
+		// set limits for sizing
+		var maxtop = gsections[caboveindex].top;
+		var maxbot = gsections[caboveindex].top + gsections[caboveindex].height;
+				
+		if (cbelowindex != -1)
+			maxbot = gsections[cbelowindex].top + gsections[cbelowindex].height;;
+
+		// set dimensions of current section and cabove section
+		// set left, width easy
+		section.left = gsections[caboveindex].left;
+					
+		if (section.width <= gsections[caboveindex].width)
+			section.width = gsections[caboveindex].width;
+		else
+		{
+			gsections[caboveindex].width = section.width;
+			gmaxleft+= (section.width-gsections[caboveindex].width);
+		}
+					
+		if (cbelowindex != -1)
+		{
+			gsections[cbelowindex].left = gsections[caboveindex].left;
+			gsections[cbelowindex].width = gsections[caboveindex].width;
+		}
+				
+		// set top and bottom
+		if (section.top -60 < maxtop)
+		{
+			gsections[caboveindex].height = 60; // minimum height
+			section.top = gsections[caboveindex].top + gsections[caboveindex].height + cborder_thickness;
+		}
+		else	
+			gsections[caboveindex].height = section.top - maxtop - cborder_thickness;				
+				
+		// set the dimensions of the below section
+		if (cbelowindex != -1)									
+		{
+			gsections[cbelowindex].top=section.top+section.height+cborder_thickness;
+			gsections[cbelowindex].height = maxbot - gsections[cbelowindex].top;
+		}
+		else
+			section.height = maxbot - section.top;
+					
+		// set the min limits, all heights must be atleast 60
+		if (gsections[caboveindex].height < 60)
+		{
+			if (section.height > 0)
+			{
+				gsections[caboveindex].height = 60;
+				section.top = gsections[caboveindex].top + gsections[caboveindex].height + cborder_thickness;
+			}
+		}
+				
+		// check height
+		if (section.height < 60)
+		{
+			if (cbelowindex != -1)
+			{
+				if (gsections[cbelowindex].height > 60)
+				{
+					section.height = 60;
+					gsections[cbelowindex].top=section.top+section.height+cborder_thickness;				
+					gsections[cbelowindex].height = maxbot - gsections[cbelowindex].top;
+				}
+			}
+			else
+			{
+				if (gsections[caboveindex].height > 60)
+				{
+					section.height = 60;
+					section.top = maxbot-60;
+					gsections[caboveindex].height = section.top-maxtop-cborder_thickness;
+				}
+			}
+		}
+				
+		if (cbelowindex != -1 && gsections[cbelowindex].height  < 60)
+		{
+			if (section.height > 60)
+			{
+				section.height-=(60-gsections[cbelowindex].height);
+				gsections[cbelowindex].top=section.top+section.height+cborder_thickness;				
+				gsections[cbelowindex].height = maxbot - gsections[cbelowindex].top;
+			}
+		}
+
+		// check tops and bottoms
+		if (gsections[caboveindex].top < maxtop)
+			gsections[caboveindex].top = maxtop;
+					
+		if (gsections[caboveindex].top +  gsections[caboveindex].height > maxbot)
+			gsections[caboveindex].height = maxbot-gsections[caboveindex].top;
+				
+		if (section.top < maxtop)
+			section.top = maxtop;
+					
+		if (section.top +  section.height > maxbot)
+			section.height = maxbot-section.top;
+				
+		if (cbelowindex != -1)
+		{
+			if (gsections[cbelowindex].top < maxtop)
+				gsections[cbelowindex].top = maxtop;
+						
+			if (gsections[cbelowindex].top +  gsections[cbelowindex].height > maxbot)
+				gsections[cbelowindex].height = maxbot-gsections[cbelowindex].top;
+		}
+				
+	}						
+	else if (cbelowindex != -1 && gsections[cbelowindex] != null)
+	{	
+		section.is_left_dockset_topmost = true;
+		gsections[cbelowindex].is_left_dockset = true;
+		
+		// set limits for sizing
+		var maxtop = gsections[cbelowindex].top;
+		var maxbot = gsections[cbelowindex].top + gsections[cbelowindex].height;
+
+		// set the dimensions of this section and the cbelowsection
+		section.left = gsections[cbelowindex].left;
+			
+		if (section.width <= gsections[cbelowindex].width)
+		{
+			section.width = gsections[cbelowindex].width;
+			// _debug("have set section.width " +section.width);					
+		}
+		else
+		{
+			gmaxleft+= (section.width-gsections[cbelowindex].width);
+			gsections[cbelowindex].width = section.width;
+		}				
+
+		section.top = maxtop;
+		gsections[cbelowindex].top = section.top + section.height+cborder_thickness;
+		gsections[cbelowindex].height = maxbot - gsections[cbelowindex].top;
+				
+		// check the limits, all heights have to be atleast 60;
+		if (section.height < 60)
+		{
+			if (gsections[cbelowindex].height > 60)
+			{
+				section.height = 60;
+				gsections[cbelowindex].top=60+cborder_thickness;
+				gsections[cbelowindex].height = maxbot-gsections[cbelowindex].top;
+			}
+		}
+		if (gsections[cbelowindex].height < 60)
+		{
+			if (section.height > 60)
+			{
+				gsections[cbelowindex].height = 60;
+				gsections[cbelowindex].top=maxbot-60;
+				section.height=gsections[cbelowindex].top-section.top-cborder_thickness;
+			}
+		}
+				
+		// check tops and bottoms
+		if (section.top < maxtop)
+			section.top = maxtop;
+					
+		if (section.top +  section.height > maxbot)
+			section.height = maxbot-section.top;
+				
+		if (gsections[cbelowindex].top < maxtop)
+			gsections[cbelowindex].top = maxtop;
+						
+		if (gsections[cbelowindex].top +  gsections[cbelowindex].height > maxbot)
+			gsections[cbelowindex].height = maxbot-gsections[cbelowindex].top;
+	}
+	else
+		;//	TODO Display the dock at maxleft
+		
+	if (caboveindex != -1 || cbelowindex != -1)
+	{
+		if (section.border_left == null)
+			section.border_left = create_border(section);
+		section.border_left.can_merge = true;
+					
+		if (section.border_top == null)
+			section.border_top = create_border(section);
+		section.border_top.can_merge = false;
+					
+		if (section.border_right == null)				
+			section.border_right = create_border(section);
+		section.border_right.can_merge = true;
+					
+		if (section.border_bottom == null)
+			section.border_bottom = create_border(section);
+		section.border_bottom.can_merge = false;
+		
+		// redisp above and below sections
+		if (caboveindex != -1)
+		{
+			_dump_section(gsections[caboveindex]);
+			layout_section(gsections[caboveindex]);
+		}
+						
+		if (cbelowindex != -1)
+		{
+			_dump_section(gsections[cbelowindex]);
+			layout_section(gsections[cbelowindex]);
+		}
+				
+		_dump_section(section);
+		
+		return true; // indicate  left dockset was found and section created
+	}
+	
+	// indicate not left dockset was found
+	return false;
+}
+
+function create_section_borders(section)
+{
+	var x = section.left;
+	var y = section.top;
+	var w = section.width;
+	var h = section.height;
+
+	// bbottom
+	//	create the bottom border. This exists for all sections which are not docked to the bottom of the browser
+	// _debug("begin create border bottom");
+	// _debug(y + h + "," + document.body.clientHeight);
+	if (section.position_type == "float" || y + h < document.body.clientHeight)
+	{
+		if (section.border_bottom == null)
+			section.border_bottom = create_border(section);
+
+		// compute the left and width of the image border to be displayed
+		section.border_bottom.left = x;
+		section.border_bottom.width = w;
+		section.border_bottom.top = section.top+section.height;
+		section.border_bottom.height = cborder_thickness;
+		section.border_bottom.position = "bottom";
+		// _debug("did not set border bottom to null");
+	}
+	else
+	{
+		// _debug("have set border bottom to null");
+		if (section.border_bottom != null)
+		{
+			section.border_bottom.div_object.style.visibility = "hidden";
+			section.parent_object.removeChild(section.border_bottom.div_object);
+			section.border_bottom.div_object = null;
+			section.border_bottom = null;
+		}
+	}
+
+	// create the top border for the section. For section docked to top of the browser, there is no top border
+	// btop
+	if (y > 1)
+	{
+		if (section.border_top == null)
+			section.border_top = create_border(section);
+				
+		section.border_top.left = x;
+		section.border_top.width = w;
+		section.border_top.top = section.top-cborder_thickness;
+		section.border_top.height = cborder_thickness;
+		section.border_top.position = "top";
+	}
+	else
+	{
+		// _debug("have set border top to null");
+		if (section.border_top != null)
+		{
+			section.border_top.div_object.style.visibility = "hidden";
+			section.parent_object.removeChild(section.border_top.div_object);
+			section.border_top.div_object = null;
+			section.border_top = null;
+		}
+	}
+	
+	// bleft
+	// create the left border for the sections. All sections have a left border except for the ones docked to the left of the browser
+	if (section.position_type == "float" || x> 1)
+	{
+		if (section.border_left == null)
+			section.border_left = create_border(section);
+
+		section.border_left.top = y;
+		section.border_left.height = h;
+		section.border_left.left = section.left-cborder_thickness;
+		section.border_left.width = cborder_thickness;
+		section.border_left.position = "left";
+	}
+	else
+	{
+		// _debug("have set border left to null");
+		if (section.border_left != null)
+		{
+			section.border_left.div_object.style.visibility = "hidden";
+			section.parent_object.removeChild(section.border_left.div_object);
+			section.border_left.div_object = null;
+			section.border_left = null;
+		}
+	}
+
+	// bright
+	// create the right border, all sections except for the ones docked to the right of the browser have a right border
+	if (section.position_type == "float" || x + w < document.body.clientWidth)
+	{
+		if (section.border_right == null)
+			section.border_right = create_border(section);
+	
+		section.border_right.top = y;
+		// _debug("setting border right top:" + y);
+		section.border_right.height = h;
+		section.border_right.width = cborder_thickness;
+		section.border_right.left = section.left+section.width;
+		section.border_right.position = "right";
+	}
+	else
+	{
+		// _debug("have set border right to null");
+		if (section.border_right != null)
+		{
+			section.border_right.div_object.style.visibility = "hidden";
+			section.parent_object.removeChild(section.border_right.div_object);
+			section.border_right.div_object = null;
+			section.border_right = null;
+		}
+	}
+	
+	// more stuff for the float
+	if (section.position_type == "float")
+	{
+		section.border_top.width+=cborder_thickness+.5;
+		
+		section.border_right.left += .5;
+		section.border_right.height+=cborder_thickness;
+		
+		section.border_bottom.left-=cborder_thickness;
+		section.border_bottom.width+=cborder_thickness+.5;
+				
+		section.border_left.top-= cborder_thickness;				
+		section.border_left.height+= 2*cborder_thickness;
+	}
+}
+
+function set_section_page_limits(section)
+{
+	var x = section.left;
+	var y = section.top;
+	var w = section.width;
+	var h = section.height;
+
+/*	if (w < gmin_section_dim)
+		w =gmin_section_dim;
+	
+	if (h < gmin_section_dim)
+		h =gmin_section_dim;
+*/		
+	// set the min/max limts dimensions of the section
+	if (y < 0)
+	{
+		y = 0;
+		if (section.border_right != null)
+			section.border_right.top = 0;
+		if (section.border_left != null)
+			section.border_left.top = 0;
+	}
+			
+	if (x < 0)
+	{
+		x = 0;
+		if (section.border_top != null)
+			section.border_top.left = 0;
+		if (section.border_bottom != null)
+			section.border_bottom.left = 0;
+	}
+	
+	if (y + h >= document.body.clientHeight)
+	{
+		h = document.body.clientHeight - y;
+		if (section.border_right != null)
+			section.border_right.height = h;
+		if (section.border_left != null)
+			section.border_left.height = h;
+	}
+
+	if (x+ w >= document.body.clientWidth)
+	{
+		w = document.body.clientWidth - x;
+		if (section.border_top != null)
+			section.border_top.width = w;
+		if (section.border_bottom != null)
+			section.border_bottom.width = w;
+	}
+	
+	// reset the sections dims
+  	section.left = x;
+	section.top = y;
+	section.width = w;
+	section.height = h;
+}
+
+function set_section_position_and_size(section)
+{
+	// position the section
+	var obj = section.div_object;
+	var tobj = section.title_object;
+	var iobj = section.view_object;
+
+	// the outer section
+  	obj.style.posLeft = section.left;
+	obj.style.posTop = section.top;
+	obj.style.posWidth = section.width;
+	obj.style.posHeight = section.height;
+
+	// title bar
+  	tobj.style.posLeft = 0;
+	tobj.style.posTop = 0;
+	tobj.style.posWidth = obj.style.posWidth;
+	tobj.style.posHeight = 16; // standard height for title
+
+	// inner section
+  	iobj.style.posLeft = 0;
+	iobj.style.posTop = tobj.style.posHeight;
+	iobj.style.posWidth = obj.style.posWidth;
+	iobj.style.posHeight = obj.style.posHeight-tobj.style.posHeight;
+
+	// if there is a iframe within inner section, then position the same
+	if (section.is_iframe)
+	{
+  		var objf = document.all("frame_" + section.id);
+  		objf.style.posLeft = -1;
+  		objf.style.posTop = 0;
+  		objf.style.posWidth = iobj.style.posWidth-2;
+  		objf.style.posHeight = iobj.style.posHeight-2;
+	}
+	
+	if (section.left + section.width == document.body.clientWidth)
+		section.docked_to_window_right = true;
+		
+	if (section.top + section.height == document.body.clientHeight)
+		section.docked_to_window_bottom = true;
+}
+</script>
+
+<!-- Page/Section/boder/Size/Resize/Layout functions -->
+<script language=javascript>
+function layout_page()
+{
+	// TODO: clashing with other sections for space.
+	
+	// current limits of the render area. initally the whole browser
+	gmaxleft=0, gmaxtop=0, gmaxbottom=document.body.clientHeight, gmaxright=document.body.clientWidth;
+	var lb_added = 0, rb_added = 0, bb_added = 0, tb_added = 0;
+	
+	var refresh = false;
+	// go through the collection of sections and render each section	
+	for (var idx=0; idx < gcount; idx++)
+	{
+		var section = gsections[idx];
+		var recalc_limits = true;
+		
+		// _debug("in main loop");
+		//_dump_section(section);
+		if (section.initialized == false)
+		{
+			if (section.dock_position == "left")
+			{
+				var is_left_dockset = false;
+					
+				// cleftdockrow
+				if (gmaxleft != 0 && section.left < gmaxleft) 
+					is_left_dockset = create_left_dockset_section(section);
+				
+				section.is_left_dockset = is_left_dockset;
+					
+				if (!is_left_dockset)
+				{
+					section.left = gmaxleft;
+					section.top = gmaxtop;
+					section.height = gmaxbottom-section.top;
+				}
+				else
+				{
+					// display the section
+					recalc_limits = false;
+				}
+			}
+
+			else if (section.dock_position == "top")
+			{
+				section.top = gmaxtop;
+				section.left = gmaxleft;
+				section.width = gmaxright-section.left;
+			}
+
+			else if (section.dock_position == "bottom")
+			{
+				section.top = gmaxbottom-section.height;
+				section.left = gmaxleft;
+				section.width = gmaxright-section.left;
+			}
+					
+			else if (section.dock_position == "right")
+			{
+	 			section.left = gmaxright-section.width;
+				section.top = gmaxtop;
+				section.height = gmaxbottom-section.top;
+			}
+		}
+		
+		// floats have to be set always
+		if (section.position_type == "float") 
+			section.size_changed = true;
+			
+		// now it is time to display the section and then the border
+		// reset x,y,w,h with newly computed dimensions
+		var x = section.left;
+		var y = section.top;
+		var w = section.width;
+		var h = section.height;
+
+		// TODO: section.size_changed is currently always true. Need to set this appropriately and save performance
+		section.size_changed = true;
+		if (section.size_changed == true)
+			layout_section(section);
+
+		// set section limits
+		set_section_page_limits(section);
+		
+		// recalculate the limits
+		if (recalc_limits)
+			recalculate_page_limits(section, x, y, w, h);
+			
+		section.initialized = true;			
+	} // end code for section
+	
+	// layout the global view area (itself a section) for floating sections. So a section of sections
+	gviewsection.div_object.style.posLeft = gmaxleft;
+	gviewsection.div_object.style.posTop = gmaxtop;
+	gviewsection.div_object.style.posWidth = gmaxright-gmaxleft;
+	gviewsection.div_object.style.posHeight = gmaxbottom-gmaxtop;
+
+	// now finally remove any overlapped borders
+	remove_overlapped_borders(false);
+}
+
+function layout_section(section)
+{
+	// _debug("FUNC:::::::layout_section");
+	// _dump_section(section);
+
+	// create the borders
+	create_section_borders(section);
+
+	// set pos and size
+	set_section_position_and_size(section);
+	
+	//set_check_section_min_max_limits(section, null,null,null,null);
+	check_set_surrounding_section_limits(section);
+	reset_limit_check();
+	
+	// finally show the borders
+	layout_section_borders(section);
+}
+
+function layout_section_borders(section)
+{
+	// layout the borders for the section
+	layout_border(section, section.border_left);
+	layout_border(section, section.border_top);
+	layout_border(section, section.border_right);
+	layout_border(section, section.border_bottom);		
+}
+
+function layout_border(section, border)
+{
+	if (border == null)
+		return;
+
+	border.owner_section = section;
+	var obj = border.div_object;
+	
+	// _debug("in layout border:top:" + border.top);
+	obj.style.posLeft = border.left;
+	obj.style.posTop = border.top; 
+	obj.style.posWidth = border.width;
+	obj.style.posHeight = border.height;
+	obj.style.visibility = "visible";
+}
+
+function remove_overlapped_borders(restart)
+{
+	// check to see if a border is already displayed. IF so just ignore this
+	// basically a double loop. for each border check against every border. 
+	// if it is contained within a bigger border, then remove it (hide it)
+	// _debug("normalise--------------");
+	for (var idx=0; idx < gborder_count; idx++)
+	{
+		var border = gborders[idx];
+		if (border == null || border.div_object == null)
+			continue;
+
+		if (border.owner_section != null && border.owner_section.position_type == "float")
+			continue;
+		
+		if (border.div_object.style.visibility == "hidden")
+			continue;
+			
+		for (var idx1=0; idx1 < gborder_count; idx1++)
+		{
+			if (idx == idx1)
+				continue;
+
+			var border1 = gborders[idx1];
+			if (border1 == null || border1.div_object == null)
+				continue;
+
+			if (border1.owner_section != null && border1.owner_section.position_type == "float")
+				continue;
+			
+			if (border1.div_object.style.visibility == "hidden")
+				continue;
+
+			// vertical
+			if ((border.position == "left" || border.position == "right") && (border1.position == "left" || border1.position == "right"))
+			{
+				if (border.left == border1.left)
+				{
+					if (border1.top <= border.top && border1.top+border1.height >= border.top+border.height)
+					{
+						border.div_object.style.visibility ="hidden";
+						border.left = border1.left;
+						border.width = border1.width;
+						border.top = border1.top;
+						border.height = border1.height;
+
+						break;
+					}
+					else if (border.top <= border1.top && border.top+border.height >= border1.top+border1.height)
+					{
+						border1.div_object.style.visibility ="hidden";
+						border1.left = border.left;
+						border1.width = border.width;
+						border1.top = border.top;
+						border1.height = border.height;
+
+						break;
+					}
+					else if (border.can_merge && border1.can_merge)
+					{
+//						_debug("merging");
+						border.div_object.style.visibility ="hidden";
+						if (border.top < border1.top)
+						{
+							border1.height = border1.top+border1.height-border.top;
+							border1.top = border.top;
+						}
+						else
+							border1.height = border.top+border.height-border1.top;
+
+						border.left = border1.left;
+						border.width = border1.width;
+						border.top = border1.top;
+						border.height = border1.height;
+						layout_border(border1.owner_section, border1);
+					}
+				}
+			}
+
+			if ((border.position == "top" || border.position == "bottom") && ( border1.position == "top" || border1.position == "bottom"))
+			{
+				if (border.top == border1.top)
+				{
+//					 // _debug("====");
+//					 // _debug("tops matched");
+//					 // _debug("border=" + border.div_object.id);
+					if (border1.left >= border.left && border1.left+border1.width <= border.left+border.width)
+					{
+//						 // _debug("going to hide");
+						border1.div_object.style.visibility ="hidden";
+						border1.left = border.left;
+						border1.width = border.width;
+						border1.top = border.top;
+						border1.height = border.height;
+						break;
+					}
+					else if (border.left >= border1.left && border.left+border.width <= border1.left+border1.width)
+					{
+//						 // _debug("going to hide");
+						border.div_object.style.visibility ="hidden";
+						border.left = border1.left;
+						border.width = border1.width;
+						border.top = border1.top;
+						border.height = border1.height;
+						break;
+					}
+					else if (border.can_merge && border1.can_merge)
+					{
+						border.div_object.style.visibility ="hidden";
+						if (border.left < border1.left)
+						{
+							border1.width = border1.left+border1.width-border.left;
+							border1.left = border.left;
+						}
+						else
+							border1.width = border.left+border.width-border1.left;
+
+						border.left = border1.left;
+						border.width = border1.width;
+						border.top = border1.top;
+						border.height = border1.height;
+
+						layout_border(border1.owner_section, border1);
+					}
+				}
+			}
+		}
+	}
+}
+
+function recalculate_page_limits(section, x, y, w, h)
+{
+	if (x + w < document.body.clientWidth && section.dock_position == "left")
+	{
+		// increment the gmaxleft appropraitely
+		gmaxleft = section.left + section.width + cborder_thickness;
+	}
+					
+	if (x> 1 && section.dock_position == "right")
+	{
+		gmaxright = section.left-cborder_thickness;				
+	}
+						
+	if (y > 1 && section.dock_position == "bottom")
+	{
+		gmaxbottom = section.top-cborder_thickness;
+	}
+						
+	if (y + h < document.body.clientHeight && section.dock_position == "top")
+	{
+		// compute the new gmaxtop before which nothing should be displayed
+		gmaxtop = section.top+section.height+cborder_thickness;
+	}
+}
+
+// call this function on a section whose dimensions are "changed" 
+// to set set the dimensions of the neighboring sections. This is recursive and
+// set the dimensions of all the sections in the layout, based on the initial change.
+// NOTE: This function should be called before doing the physical layout, that is posTOp, posWidth etc..
+// should not be changed. On returning from this function simply call page_relayout()
+//  ... example...say if a section x changed in height, then 
+//			check_set_surrounding_section_limits(x);
+//			relayout_page();
+// these are enough to set the display of the whole page right
+function check_set_surrounding_section_limits(section)
+{
+	// get surrounding sections
+	var lsss = new Array();
+	var rsss = new Array();
+	var tsss = new Array();
+	var bsss = new Array();
+
+	get_surrounding_sections(section, lsss, rsss, tsss, bsss);
+	set_check_section_min_max_limits(section, lsss, rsss, tsss, bsss);
+	
+	// check the left ones
+	for (var idx=0; idx<lsss.length;idx++)
+	{
+		var lss = lsss[idx];
+		if (lss.limit_already_checked == false)
+		{
+			set_dockset_sections_dimensions(section, lss);
+			if (section.left - lss.left - cborder_thickness < gmin_section_dim)
+			{
+				//alert(2.1 + section.id + "," + lss.id);
+
+				lss.width = gmin_section_dim;				
+				section.width = section.left +  section.width - (lss.left + lss.width + cborder_thickness);
+				section.left = lss.left + lss.width + cborder_thickness;
+
+				for (var idx1 = 0;idx1 < lsss.length;idx1++)
+				{
+					if (lsss[idx1].id == lss.id)
+						continue;
+
+					if (lss.div_object.style.posLeft + lss.div_object.style.posWidth == lsss[idx1].div_object.style.posLeft + lsss[idx1].div_object.style.posWidth)
+					{
+						lsss[idx1].width = (lss.left + lss.width) - (lsss[idx1].left);
+						lsss[idx1].limit_already_checked = true;
+					}
+				}
+				
+				section.limit_already_checked = true;				
+				check_set_surrounding_section_limits(lss);								
+			}
+			else if (lss.left + lss.width + cborder_thickness > section.left)
+			{
+				//alert(2.2 + section.id + "," + lss.id);
+
+				lss.width -= (lss.left + lss.width + cborder_thickness) - section.left;
+				section.left = (lss.left + lss.width + cborder_thickness);
+
+				section.limit_already_checked = true;				
+				check_set_surrounding_section_limits(lss);								
+			}
+			else if (section.left > lss.left + lss.width + cborder_thickness)
+			{
+				//alert(2.3 + section.id + "," + lss.id);
+				
+				lss.width += section.left - (lss.left + lss.width + cborder_thickness);
+				section.left = lss.left + lss.width + cborder_thickness;
+
+				section.limit_already_checked = true;				
+				check_set_surrounding_section_limits(lss);				
+			}
+		}
+	}
+	
+	// check the right sections
+	for (idx=0; idx<rsss.length;idx++)
+	{
+		var rss = rsss[idx];
+		if (rss.limit_already_checked == false)
+		{
+			set_dockset_sections_dimensions(section, rss);
+			if (rss.width - (section.left + section.width + cborder_thickness) + (rss.left) < gmin_section_dim)			
+			{
+				//alert(3.1 + section.id + "," + rss.id);
+				
+				section.width = rss.left + rss.width - section.left - gmin_section_dim - cborder_thickness;
+				rss.width = gmin_section_dim;
+				rss.left = section.left+section.width+cborder_thickness;
+
+				for (var idx1 = 0;idx1 < rsss.length;idx1++)
+				{
+					if (rsss[idx1].id == rss.id)
+						continue;
+						
+					if (rss.div_object.style.posLeft == rsss[idx1].div_object.style.posLeft)
+					{
+						rsss[idx1].width += rsss[idx1].left - rss.left;
+						rsss[idx1].left = rss.left;
+						rsss[idx1].limit_already_checked = true;				
+					}
+				}				
+				
+				section.limit_already_checked = true;				
+				check_set_surrounding_section_limits(rss);												
+			}
+			else if (section.left + section.width + cborder_thickness > rss.left)
+			{
+				//alert(3.2 + section.id + "," + rss.id);
+
+				rss.width = rss.width - (section.left + section.width + cborder_thickness) + (rss.left);
+				rss.left = section.left+section.width+cborder_thickness;
+
+				section.limit_already_checked = true;				
+				check_set_surrounding_section_limits(rss);												
+			}
+			else if (section.left + section.width + cborder_thickness < rss.left)
+			{
+				//alert(3.3 + section.id + "," + rss.id);
+
+				rss.width += rss.left - (section.left + section.width + cborder_thickness);
+				rss.left =  section.left + section.width + cborder_thickness;
+				
+				section.limit_already_checked = true;					
+				check_set_surrounding_section_limits(rss);							
+			}
+		}
+	}	
+
+	// check the top sections
+	for (idx=0; idx<tsss.length;idx++)
+	{
+		var tss = tsss[idx];
+		
+		if (tss.limit_already_checked == false)
+		{
+			set_dockset_sections_dimensions(section, tss);
+			
+			if (section.top - tss.top - cborder_thickness < gmin_section_dim)
+			{
+				//alert(4.1 + section.id + "," + tss.id);
+			
+				tss.height = gmin_section_dim;				
+				section.height = section.top +  section.height - (tss.top + tss.height + cborder_thickness);
+				section.top = tss.top + tss.height + cborder_thickness;
+
+				for (var idx1 = 0;idx1 < tsss.length;idx1++)
+				{
+					if (tsss[idx1].id == tss.id)
+						continue;
+
+					if (tss.div_object.style.posTop + tss.div_object.style.posHeight == tsss[idx1].div_object.style.posTop + tsss[idx1].div_object.style.posHeight)
+					{
+						tsss[idx1].height = (tss.top + tss.height) - (tsss[idx1].top);
+						tsss[idx1].limit_already_checked = true;
+					}
+				}
+				
+				section.limit_already_checked = true;			
+				check_set_surrounding_section_limits(tss);								
+			}
+			else if (tss.top + tss.height + cborder_thickness > section.top)
+			{
+				//alert(4.2 + section.id + "," + tss.id);
+				
+				tss.height -= (tss.top + tss.height + cborder_thickness) - section.top;
+				section.top = (tss.top + tss.height + cborder_thickness);
+				
+				section.limit_already_checked = true;				
+				check_set_surrounding_section_limits(tss);								
+			}
+			if (section.top > tss.top + tss.height + cborder_thickness)
+			{
+				//alert(4.3 + section.id + "," + tss.id);
+				
+				tss.height += section.top - (tss.top + tss.height + cborder_thickness);
+				section.top = tss.top + tss.height + cborder_thickness;
+				
+				section.limit_already_checked = true;				
+				check_set_surrounding_section_limits(tss);				
+			}
+		}
+	}	
+
+	// check the bottom sections
+	for (idx=0; idx<bsss.length;idx++)
+	{
+		var bss = bsss[idx];
+		if (bss.limit_already_checked == false)
+		{
+			set_dockset_sections_dimensions(section, bss);
+			
+			if (bss.height - (section.top + section.height + cborder_thickness) + (bss.top) < gmin_section_dim)			
+			{
+				//alert(5.1 + section.id + "," + bss.id);
+				
+				section.height = bss.top + bss.height - section.top - gmin_section_dim - cborder_thickness;
+				bss.height = gmin_section_dim;
+				bss.top = section.top+section.height+cborder_thickness;
+
+				for (var idx1 = 0;idx1 < bsss.length;idx1++)
+				{
+					if (bsss[idx1].id == bss.id)
+						continue;
+						
+					if (bss.div_object.style.posTop == bsss[idx1].div_object.style.posTop)
+					{
+						bsss[idx1].height += bsss[idx1].top - bss.top;
+						bsss[idx1].top = bss.top;
+						bsss[idx1].limit_already_checked = true;
+					}
+				}
+				section.limit_already_checked = true;		
+
+				check_set_surrounding_section_limits(bss);												
+			}
+			else if (section.top + section.height + cborder_thickness > bss.top)
+			{
+				//alert(5.2 + section.id + "," + bss.id);
+				
+				bss.height = bss.height - (section.top + section.height + cborder_thickness) + (bss.top);
+				bss.top = section.top+section.height+cborder_thickness;
+
+				section.limit_already_checked = true;				
+				check_set_surrounding_section_limits(bss);												
+			}
+			else if (section.top + section.height + cborder_thickness < bss.top)
+			{
+				//alert(5.3 + section.id + "," + bss.id);
+
+				bss.height += bss.top - (section.top + section.height + cborder_thickness);
+				bss.top =  section.top + section.height + cborder_thickness;
+
+				section.limit_already_checked = true;					
+				check_set_surrounding_section_limits(bss);							
+			}
+		}
+	}	
+}
+
+function set_check_section_min_max_limits(section, lsss, rsss, tsss, bsss)
+{
+	// check the min limits
+	if (section.top < 0)
+		section.top == 0;
+	
+	if (section.top + section.height > document.body.clientHeight)
+		section.top == document.body.clientHeight - section.top;
+	
+	// check max limits
+	if (section.height > document.body.clientHeight)
+		section.height = 0;
+		
+	if (section.width > document.body.clientWidth)
+		section.width = 0;
+
+	// check the view area limits
+	if (section.dock_position == "top" && section.top+section.height > gmaxbottom-gmin_section_dim)
+	{	
+		//alert(1.1 + section.id);
+		
+		section.height = gmaxbottom-gmin_section_dim-section.top-cborder_thickness;
+		section.top = gmaxbottom-gmin_section_dim - section.height-cborder_thickness;
+		
+	}			
+	else if (section.dock_position == "bottom" && section.top < gmaxtop+gmin_section_dim)
+	{	
+		//alert(1.2 + section.id);
+		
+		section.height = section.top+section.height - (gmaxtop+gmin_section_dim);
+		section.top = gmaxtop+gmin_section_dim;		
+	}
+	else if (section.dock_position == "left" && section.left+section.width > gmaxright-gmin_section_dim)
+	{	
+		//alert(1.3 + section.id);
+		
+		section.width = gmaxright-gmin_section_dim-section.left -cborder_thickness;
+		section.left = gmaxright-gmin_section_dim - section.width-cborder_thickness;
+	}			
+	else if (section.dock_position == "right" && section.left < gmaxleft+gmin_section_dim)
+	{	
+		//alert(1.4 + section.id);
+		
+		section.width = section.left+section.width - (gmaxleft+gmin_section_dim);
+		section.left = gmaxleft+gmin_section_dim;		
+	}
+
+	// finally check the minimum height/width requirements with sacrifice
+	if (section.height < gmin_section_dim)
+	{
+		if (document.body.clientHeight < gmin_section_dim)
+			; // do nothing
+		else
+		{
+			//alert(1.5 + section.id);
+			if (section.dock_position != "top" && section.top == section.div_object.style.posTop) // then it is being dragged down
+				section.top -=  gmin_section_dim - section.height;
+			else if (section.top > section.div_object.style.posTop) // then it is being dragged down
+				section.top -=  gmin_section_dim - section.height;
+				
+
+			section.height= gmin_section_dim;		
+		}
+	}
+
+	if (section.width < gmin_section_dim)
+	{
+		if (document.body.clientWidth < gmin_section_dim)
+			; // do nothing
+		else
+		{
+			//alert(1.6 + section.id);
+			if (section.dock_position != "left" && section.left == section.div_object.style.posLeft) // then it is being dragged down
+				section.left -=  gmin_section_dim - section.width;
+			else if (section.left > section.div_object.style.posLeft) // then it is being dragged down
+				section.left -=  gmin_section_dim - section.width;
+				
+			section.width= gmin_section_dim;			
+		}
+	}
+}
+
+function set_dockset_sections_dimensions(changed_section, dockset_section)
+{
+	if (changed_section. id == dockset_section.id)
+		return;
+		
+	var ssd = changed_section.div_object.style;
+	var sectiond = dockset_section.div_object.style;
+
+	if ((changed_section.dock_position == "left" && dockset_section.dock_position == "left") ||
+		(changed_section.dock_position == "right" && dockset_section.dock_position == "right"))
+	{
+		if (ssd.posLeft == sectiond.posLeft  && ssd.posLeft+ssd.posWidth == sectiond.posLeft + sectiond.posWidth)
+			dockset_section.width = changed_section.width;
+	}
+}
+
+function resize_page()
+{
+/*
+	// get the difference in height and width
+	var px = (document.body.clientWidth - gbody_width)/document.body.clientWidth;
+	var py = (document.body.clientHeight - gbody_height)/document.body.clientHeight;
+	
+	for (var idx=0; idx < gcount; idx++)
+	{
+		var section = gsections[idx];
+	
+		var oh = section.height;
+		section.width+= section.width*px;
+		section.width = Math.ceil(section.width);
+		section.height+=section.height*py;
+		section.height = Math.ceil(section.height);
+		
+		section.initialized = false;
+	}
+
+	layout_page();
+	
+	gbody_width = document.body.clientWidth;
+	gbody_height = document.body.clientHeight;
+*/	
+}
+
+// functions for sizing using borders
+function border_mouseover()
+{
+	if (gresizing)
+	{
+		if (obj.style.posHeight == cborder_thickness) // horz
+			obj.style.cursor = "row-resize";	
+		else
+			obj.style.cursor = "col-resize";	
+		return;
+	}
+			
+	var border = get_border_from_event(window.event);			
+	if (border == null)
+		return;
+	
+	var obj = border.div_object;
+	if (obj == null)
+		return;
+			
+	// _debug("got border object in mouseover for id:" + border.div_object.id);
+	if (obj.style.posHeight == cborder_thickness) // horz
+		obj.style.cursor = "row-resize";	
+	else
+		obj.style.cursor = "col-resize";	
+}
+
+function border_dragstart()
+{
+// _debug("dragstart");
+	if (gresizing)
+		return;
+
+	gresizing = true;		
+	var border = get_border_from_event(window.event);			
+	if (border == null)
+		return;
+	
+	var obj = border.div_object;
+	if (obj == null)
+		return;
+
+	gsizing_border_object = border;
+	gstartx = window.event.x;
+	gstarty = window.event.y;
+	
+	// _debug("about to resize section:id:" + gsizing_border_object.div_object.id);
+	// _debug("about_to_resize " +  obj.id);
+}
+
+function border_drag()
+{
+	if (gsizing_border_object == null)
+	{
+		gresizing = false;
+		return;
+	}
+
+	var oimg = gsizing_border_object.div_object;
+	oimg.style.zIndex = 5;
+				
+	if (gsizing_border_object.width == cborder_thickness)
+		oimg.style.posLeft = window.event.x - gsizing_border_object.div_object.parentNode.style.posLeft;
+	else
+		oimg.style.posTop = window.event.y - gsizing_border_object.div_object.parentNode.style.posTop;
+
+	// TODO: To set the cursor
+	// _debug("resizing " + gsizing_border_object.div_object.id + "," + window.event.x);
+	// _debug("resizing section" + gsizing_border_object.owner_section.id+","+ eval(gsizing_border_object.owner_section.div_object.style.posLeft+gsizing_border_object.owner_section.div_object.style.posWidth));  
+}
+
+function border_dragend()
+{
+	if (gsizing_border_object == null)
+	{
+		gresizing = false;
+		return;
+	}
+
+	// need to reposition the view area, if affected by sizing
+	var vsd_style = gviewsection.div_object.style;		
+	
+	// // _debug("gsizing_border_object id:" + gsizing_border_object.div_object.id);
+	// // _debug ("width = " + gsizing_border_object.width);
+	// // _debug ("height = " + gsizing_border_object.height);
+
+	// compute the relative mouse pointer	
+	var rel_mousex = window.event.x - gsizing_border_object.div_object.parentNode.style.posLeft;
+	var rel_mousey = window.event.y - gsizing_border_object.div_object.parentNode.style.posTop;
+
+	// store the original dims of the border
+	var ol = gsizing_border_object.left;
+	var ot = gsizing_border_object.top;
+	var ow = gsizing_border_object.width;
+	var oh = gsizing_border_object.height;
+	
+	// for the current border, get all the sections that are related.
+	//	- go through the array of sections, check the border objects and create an array of sections
+	for (var idx=0;idx<gcount;idx++)
+	{
+		var layout_the_section = false;
+		
+		// // _debug("-----------");
+		// for each section in the array of sections check if the border is part of it based on the horz/vert sizig
+		var section = gsections[idx];
+		if (section.position_type != "dock")
+			continue;
+		//_dump_section(section);		
+
+		var right_section_exists = false;
+		var left_section_exists = false;
+		var top_section_exists = false;
+		var bottom_section_exists = false;
+		
+		// if this is an horizontal move then size the sections on either side of the border image
+		if (gsizing_border_object.width == cborder_thickness)
+		{
+			// check if the section should participate in the sizing
+			// _debug("checking vertical move");
+			//_dump_section(section);
+			// _debug("border left=" + ol + " top=" + ot);
+			// _debug("border width=" + ow + " height=" + oh);
+			
+			if (section.div_object.style.posLeft == ol + ow &&
+				section.div_object.style.posTop >= ot &&
+				section.div_object.style.posTop+section.div_object.style.posHeight <= ot + oh)
+			{
+				right_section_exists = true;
+				
+			}
+			else if (section.div_object.style.posLeft + section.div_object.style.posWidth == ol &&
+				section.div_object.style.posTop >= ot &&
+				section.div_object.style.posTop+section.div_object.style.posHeight <= ot + oh)
+			{
+				left_section_exists = true;
+			}
+
+			// if this is a move to the right
+			if (rel_mousex > gstartx) // if moving right
+			{
+				// if the section is on the left side of the border image, increase width
+				if (left_section_exists)
+					section.width = rel_mousex-section.left-cborder_thickness;
+
+				// if the section is on the right side of the border image, move left pos 				
+				else if (right_section_exists)
+				{
+					section.width -= rel_mousex-section.left;
+					section.left = rel_mousex;
+				}
+			}
+			//	if this is a move to the left
+			else if (rel_mousex < gstartx)
+			{
+				// // _debug("horz moving left");
+				// if the section is on the left side of the border image, descrese width
+				if (left_section_exists)
+					section.width = rel_mousex-section.left-cborder_thickness;
+					
+				// if the section is on the right side of the border image, change left pos and increase width
+				else if (right_section_exists)
+				{
+					section.width+= section.left-rel_mousex;
+					section.left = rel_mousex;
+				}
+			}
+			// else do nothing
+		}
+		
+		// if this is an vertical move then size the sections on either side of the border image
+		else if (gsizing_border_object.height == cborder_thickness)
+		{
+			 // _debug("vertical move");
+
+			// check if the section should participate in the sizing
+			// _debug("checking vertical move");
+			//_dump_section(section);// _debug(section.dock_position);
+			// _debug("border left=" + ol + " top=" + ot);
+			// _debug("border width=" + ow + " height=" + oh);
+			
+			if (section.div_object.style.posTop == ot + oh &&
+				section.div_object.style.posLeft >= ol &&
+				section.div_object.style.posLeft+section.div_object.style.posWidth <= ol + ow)
+			{
+				// _debug("bottom exists");
+				bottom_section_exists = true;
+			}
+			else if (section.div_object.style.posTop + section.div_object.style.posHeight == ot &&
+				section.div_object.style.posLeft >= ol &&
+				section.div_object.style.posLeft+section.div_object.style.posWidth <= ol + ow)
+			{
+				// _debug("top exists");
+				top_section_exists = true;
+			}
+			
+			// if this is a move to the bottom
+			if (rel_mousey > gstarty)
+			{
+				// // _debug("moving down");
+				// if the section is on the top side of the border image, increase height
+				if (top_section_exists)
+				{
+					// // _debug("increasing height");
+					section.height = rel_mousey - section.top-cborder_thickness;
+					gsections[idx] = section;
+				}
+				// if the section is on the bottom side of the border image, decrease height
+				else if (bottom_section_exists)
+				{
+					// // _debug("decreaing h");
+					section.height -= rel_mousey-section.top;
+					section.top = rel_mousey;
+				}
+			}
+			// if this is a move to the top
+			else if (rel_mousey < gstarty)
+			{
+				// if the section is on the top side of the border image, decrease height
+				if (top_section_exists)
+					section.height = rel_mousey-section.top-cborder_thickness;
+				//	if the section is on the bottom side of the border image, increase height
+				
+				else if (bottom_section_exists)
+				{	
+					// _debug("moving bottom section");
+					section.height += section.top - rel_mousey;
+					section.top = rel_mousey;
+				}
+			}
+			// else do nothing
+		}
+		
+		// _debug("going to set size");
+		//_dump_section(section);
+
+		// set original values for the view section
+		gmaxleft=vsd_style.posLeft, gmaxtop=vsd_style.posTop, gmaxbottom=vsd_style.posHeight+gmaxtop, gmaxright=vsd_style.posWidth+gmaxleft;	
+			
+		// compute new values for the view section
+		if (section.dock_position == "left")
+		{
+			if (gmaxleft-cborder_thickness == section.div_object.style.posLeft+section.div_object.style.posWidth)
+			{
+				vsd_style.posLeft = section.left + section.width+cborder_thickness;
+				vsd_style.posWidth += (gmaxleft-vsd_style.posLeft);
+			}
+		}
+		else if (section.dock_position == "top")
+		{
+			if (gmaxtop-cborder_thickness == section.div_object.style.posTop+section.div_object.style.posHeight)
+			{
+				vsd_style.posTop = section.top + section.height+cborder_thickness;
+				vsd_style.posHeight += (gmaxtop-vsd_style.posTop);
+			}
+		}
+		else if (section.dock_position == "right")
+		{
+			if (gmaxright+cborder_thickness == section.div_object.style.posLeft)
+			{
+				vsd_style.posWidth = (section.left-gmaxleft-cborder_thickness);
+			}
+		}
+		else if (section.dock_position == "bottom")
+		{
+			if (gmaxbottom + cborder_thickness == section.div_object.style.posTop)
+			{
+				vsd_style.posHeight = section.top - gmaxtop -cborder_thickness;
+			}
+		}
+
+		// set the resized section and surrounding pos and dims
+		if (top_section_exists || bottom_section_exists || left_section_exists || right_section_exists)
+		{
+			check_set_surrounding_section_limits(section);					
+			break;	
+		}
+	}
+	
+	// reset the limit checking for next resize
+	reset_limit_check();
+	
+	// all the sections have been set correctly with pos and dim, now display them 
+	layout_page();
+
+	// complete sizing
+	gresizing = false;
+	gsizing_border_object = null;
+	gstartx = 0;
+	gstarty = 0;
+}
+</script>
+
+<Script language=javascript>
+// debugging
+var gdebug;
+gdebugging = true;
+
+// view section used for viewing html pages
+var gviewsection = null;
+
+// collections of sections and borders
+var gsections = new Array();
+var gcount = 0;
+var gborders = new Array();
+var gborder_count = 0;
+var cborder_thickness = 4;
+
+// sizing using borders
+var gresizing =false;
+var gstartx = 0;
+var gstarty = 0;
+var gsizing_border_object = null;
+
+// section creation/page layout params
+var gmaxleft = 0;
+var gmaxtop = 0;
+var gmaxright = document.body.clientWidth;
+var gmaxbottom = document.body.clientHeight;
+var gmin_section_dim = 50;
+
+// browser resize params
+var browser_size_changed = false;
+var gbody_width = document.body.clientWidth;
+var gbody_height = document.body.clientHeight;
+</script>
+
+<!-- starter creation functions -->
+<script language=javascript>
+function create_floating_div_section(id, x, y, w, h, src)
+{
+	var section = new CSection();
+	section.id = "sf_" + id; // for floating section
+	section.position_type = "float";
+	
+	section.left = x;
+	section.top = y;
+	section.width = w;
+	section.height = h;
+
+	if (src != "")
+	{
+		section.is_iframe = true;
+		section.src = src;
+	}
+
+	create_section(section, gviewsection);
+
+	var x1, y1, w1, h1;
+  	x1 = section.left;
+	y1 = section.top;
+	
+
+	if (section.width_prcnt != -1)
+	{
+		var p_w = document.body.style.posWidth;
+		w1 = (p_w*section.width_prcnt)/100;
+	}
+	else
+		w1 = section.width;
+
+		
+	if (section.height_prcnt != -1)
+	{
+		var p_h = document.body.style.posHeight;
+		h1 = (p_h*section.height_prcnt)/100;
+	}
+	else
+	{
+		h1 = section.height;
+	}	
+
+	return section;
+}
+
+function create_docking_div_section(id, x, y, w, h, src, dock_pos, wp, hp)
+{
+	var section = new CSection();
+	
+	var alpha = "";
+	if (dock_pos == "left")
+		alpha = "l";
+	else if (dock_pos == "right")
+		alpha = "r";
+	else if (dock_pos == "bottom")
+		alpha = "b";
+	else if (dock_pos == "top")
+		alpha = "t";
+	else
+		return;
+		
+	section.id = "sd" + alpha + "_" + id;
+
+	section.position_type = "dock";
+	section.dock_position = dock_pos;
+	section.left = x;
+	section.top = y;
+	section.width = w;
+	section.height = h;
+	
+	section.width_prcnt = wp;
+	section.height_prcnt = hp;
+
+	if (src != "")
+	{
+		section.is_iframe = true;
+		section.src = src;
+	}
+
+	create_section(section, null);
+
+	var x1, y1, w1, h1;
+	if (dock_pos == "top")
+	{
+	  	x1 = 0;
+		y1 = 0;
+	
+
+		w1 = document.body.clientWidth;
+		var p_w = document.body.clientWidth;
+		w1 = p_w;
+	
+		if (section.height_prcnt != -1)
+		{
+			var p_h = document.body.clientHeight;
+			h1 = (p_w*section.height_prcnt)/100;
+		}
+		else
+			h1 = section.height;
+
+		return section;
+	}
+	if (dock_pos == "bottom")
+	{
+	  	x1 = 0;
+		Y1 = 0;	
+
+		w1 = document.body.clientWidth;
+		var p_w = document.body.clientWidth;
+		w1 = p_w;
+	
+		if (section.height_prcnt != -1)
+		{
+			var p_h = document.body.clientHeight;
+			h1 = (p_w*section.height_prcnt)/100;
+		}
+		else
+			h1 = section.height;
+
+		y1 = document.body.clientHeight-h1;
+
+		return section;
+	}
+
+	if (dock_pos == "left")
+	{
+	  	x1 = 0;
+		y1 = 0;
+
+		h1 = document.body.clientHeight;
+
+		if (section.width_prcnt != -1)
+		{
+			var p_w = document.body.style.posWidth;
+			w1 = (p_w*section.width_prcnt)/100;
+		}
+		else
+			w1 = section.width;
+	
+		return section;
+	}
+
+	if (dock_pos == "right")
+	{
+	  	x1 = 0;
+		y1 = 0;
+
+		h1 = document.body.clientHeight;
+		if (section.width_prcnt != -1)
+		{
+			var p_w = document.body.style.posWidth;
+			w1 = (p_w*section.width_prcnt)/100;
+		}
+		else
+			w1 = section.width;
+			
+
+		x1 = document.body.clientWidth-w1;		
+
+	
+		return section;
+	}
+}
+</script>
+<!-- standard inits -->
+<Script language=javascript>
+function page_init()
+{
+	create_view_area_section();
+	layout_page();
+	document.body.onresize = resize_page;
+}
+
+page_init();
+</script>
+
+<script src="start.js"></script>
+
+

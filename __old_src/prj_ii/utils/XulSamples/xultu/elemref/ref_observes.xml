@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+
+<element name='observes'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/broadob.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_observes.html</reference>
+  The observes element can be used to listen to a broadcaster and receive  events and attributes from it. The observes element should be placed inside  the element that wants to observe the broadcaster. When an observed  attribute is modified on the broadcaster, the attribute's value will be  forwarded and set on the parent element of the observer.  
+
+<attr name='attribute' type='attribute name'>
+  The attribute that the observer is observing. When the value of the  attribute changes, the broadcast event is called on the observer. Use the  value '*' to observe all attribute of the broadcasters. The id, ref and  persist attributes are not observed.
+</attr>
+<attr name='element' type='broadcaster element id'>
+  The id of the broadcaster element that the observer is observing.
+</attr>
+</element>

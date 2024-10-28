@@ -1,0 +1,324 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<script language="JScript">
+// Global vars
+var bExpanded0;
+var bHeaderCreated0;
+var bExpanded1;
+var bHeaderCreated1;
+var bExpanded2;
+var bHeaderCreated2;
+var bExpanded3;
+var bHeaderCreated3;
+
+// Init vars
+bExpanded0 = false;
+bHeaderCreated0 = false;
+bExpanded1 = false;
+bHeaderCreated1 = false;
+bExpanded2 = false;
+bHeaderCreated2 = false;
+bExpanded3 = false;
+bHeaderCreated3 = false;
+
+// Function to expand and collapse listings
+function ExpandCollapse0() {
+	var iIdx,iLen;
+	
+	// If expanding call CreateBody0 else collapse
+	if (bExpanded0 == true) {
+		iLen = oTBody0.rows.length;
+		for (iIdx=1; iIdx<iLen ; iIdx++) {
+			oTBody0.deleteRow();
+		}
+		bExpanded0 = false;
+	}
+	else {
+		CreateBody0();
+	}
+}
+
+// Function to expand and collapse listings
+function ExpandCollapse1() {
+	var iIdx,iLen;
+	
+	// If expanding call CreateBody0 else collapse
+	if (bExpanded1 == true) {
+		iLen = oTBody1.rows.length;
+		for (iIdx=1; iIdx<iLen ; iIdx++) {
+			oTBody1.deleteRow();
+		}
+		bExpanded1 = false;
+	}
+	else {
+		CreateBody1();
+	}
+}
+
+// Function to expand and collapse listings
+function ExpandCollapse2() {
+	var iIdx,iLen;
+	
+	// If expanding call CreateBody0 else collapse
+	if (bExpanded2 == true) {
+		iLen = oTBody2.rows.length;
+		for (iIdx=1; iIdx<iLen ; iIdx++) {
+			oTBody2.deleteRow();
+		}
+		bExpanded2 = false;
+	}
+	else {
+		CreateBody2();
+	}
+}
+
+// Function to expand and collapse listings
+function ExpandCollapse3() {
+	var iIdx,iLen;
+	
+	// If expanding call CreateBody0 else collapse
+	if (bExpanded3 == true) {
+		iLen = oTBody3.rows.length;
+		for (iIdx=1; iIdx<iLen ; iIdx++) {
+			oTBody3.deleteRow();
+		}
+		bExpanded3 = false;
+	}
+	else {
+		CreateBody3();
+	}
+}
+
+// Function to create the tbody innerHTML content
+function CreateBody0() {
+	//Declare variables and create the header, footer, and caption.
+	var oRow, oCell;
+	var iIdx, iBody0Count;
+	
+	// Init vars
+	bExpanded0 = true;
+	iBody0Count = 4;
+
+	// hrefs
+	var aLinks = new Array;
+	aLinks[0] = "Visual Basic";
+	aLinks[1] = "http://www.microst.com";
+	aLinks[2] = "http://www.master.com";
+	aLinks[3] = "http://www.vb.com";
+
+	// Description
+	var aDesc = new Array;
+	aDesc[0] = "";
+	aDesc[1] = "Microsoft Visual Basic";
+	aDesc[2] = "Master VB";
+	aDesc[3] = "VB";
+
+	// Insert rows and cells into the first body.
+	for (iIdx=0; iIdx<iBody0Count; iIdx++)
+	{
+		if (iIdx == 0) {
+			if (bHeaderCreated0 == false) {
+				oRow = oTBody0.insertRow();
+				oCell = oRow.insertCell();
+				oCell.innerHTML = "<A href=javascript:ExpandCollapse0()><B>" + aLinks[iIdx] + "</B></A>";	
+				bHeaderCreated0 = true;
+			}
+		}
+		else {
+			oRow = oTBody0.insertRow();
+			oCell = oRow.insertCell();
+			oCell.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;<A href=" + aLinks[iIdx] + ">" + aDesc[iIdx] + "</A>";  
+		}
+	}
+
+	// Set the background color of the first body.
+	oTBody0.bgColor = "lemonchiffon";
+}
+
+// Function to create the tbody innerHTML content
+function CreateBody1() {
+	//Declare variables and create the header, footer, and caption.
+	var oRow, oCell;
+	var iIdx, iBody1Count;
+	
+	// Init vars
+	bExpanded1 = true;
+	iBody1Count = 4;
+
+	// hrefs
+	var aLinks = new Array;
+	aLinks[0] = "Active Server Pages";
+	aLinks[1] = "http://www.microst.com";
+	aLinks[2] = "http://www.master.com";
+	aLinks[3] = "http://www.vb.com";
+
+	// Description
+	var aDesc = new Array;
+	aDesc[0] = "";
+	aDesc[1] = "Microsoft Visual Basic";
+	aDesc[2] = "Master VB";
+	aDesc[3] = "VB";
+
+	// Insert rows and cells into the first body.
+	for (iIdx=0; iIdx<iBody1Count; iIdx++)
+	{
+		if (iIdx == 0) {
+			if (bHeaderCreated1 == false) {
+				oRow = oTBody1.insertRow();
+				oCell = oRow.insertCell();
+				oCell.innerHTML = "<A href=javascript:ExpandCollapse1()><B>" + aLinks[iIdx] + "</B></A>";	
+				bHeaderCreated1 = true;
+			}
+		}
+		else {
+			oRow = oTBody1.insertRow();
+			oCell = oRow.insertCell();
+			oCell.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;<A href=" + aLinks[iIdx] + ">" + aDesc[iIdx] + "</A>";  
+		}
+	}
+
+	// Set the background color of the first body.
+	oTBody1.bgColor = "lemonchiffon";
+}
+
+// Function to create the tbody innerHTML content
+function CreateBody2() {
+	//Declare variables and create the header, footer, and caption.
+	var oRow, oCell;
+	var iIdx, iBody2Count;
+	
+	// Init vars
+	bExpanded2 = true;
+	iBody2Count = 4;
+
+	// hrefs
+	var aLinks = new Array;
+	aLinks[0] = ".NET Framework";
+	aLinks[1] = "http://www.microst.com";
+	aLinks[2] = "http://www.master.com";
+	aLinks[3] = "http://www.vb.com";
+
+	// Description
+	var aDesc = new Array;
+	aDesc[0] = "";
+	aDesc[1] = "Microsoft Visual Basic";
+	aDesc[2] = "Master VB";
+	aDesc[3] = "VB";
+
+	// Insert rows and cells into the first body.
+	for (iIdx=0; iIdx<iBody2Count; iIdx++)
+	{
+		if (iIdx == 0) {
+			if (bHeaderCreated2 == false) {
+				oRow = oTBody2.insertRow();
+				oCell = oRow.insertCell();
+				oCell.innerHTML = "<A href=javascript:ExpandCollapse2()><B>" + aLinks[iIdx] + "</B></A>";	
+				bHeaderCreated2 = true;
+			}
+		}
+		else {
+			oRow = oTBody2.insertRow();
+			oCell = oRow.insertCell();
+			oCell.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;<A href=" + aLinks[iIdx] + ">" + aDesc[iIdx] + "</A>";  
+		}
+	}
+
+	// Set the background color of the first body.
+	oTBody2.bgColor = "lemonchiffon";
+}
+
+// Function to create the tbody innerHTML content
+function CreateBody3() {
+	//Declare variables and create the header, footer, and caption.
+	var oRow, oCell;
+	var iIdx, iBody3Count;
+	
+	// Init vars
+	bExpanded3 = true;
+	iBody3Count = 4;
+
+	// hrefs
+	var aLinks = new Array;
+	aLinks[0] = "Database";
+	aLinks[1] = "http://www.microst.com";
+	aLinks[2] = "http://www.master.com";
+	aLinks[3] = "http://www.vb.com";
+
+	// Description
+	var aDesc = new Array;
+	aDesc[0] = "";
+	aDesc[1] = "Microsoft Visual Basic";
+	aDesc[2] = "Master VB";
+	aDesc[3] = "VB";
+
+	// Insert rows and cells into the first body.
+	for (iIdx=0; iIdx<iBody3Count; iIdx++)
+	{
+		if (iIdx == 0) {
+			if (bHeaderCreated3 == false) {
+				oRow = oTBody3.insertRow();
+				oCell = oRow.insertCell();
+				oCell.innerHTML = "<A href=javascript:ExpandCollapse3()><B>" + aLinks[iIdx] + "</B></A>";	
+				bHeaderCreated3 = true;
+			}
+		}
+		else {
+			oRow = oTBody3.insertRow();
+			oCell = oRow.insertCell();
+			oCell.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;<A href=" + aLinks[iIdx] + ">" + aDesc[iIdx] + "</A>";  
+		}
+	}
+
+	// Set the background color of the first body.
+	oTBody3.bgColor = "lemonchiffon";
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<TABLE width=300 align="center" ID="oTable" BGCOLOR="lightslategray">
+<TBODY ID="oTBody0"></TBODY>
+</TABLE>
+
+<TABLE width=300 align="center" ID="oTable1" BGCOLOR="lightslategray">
+<TBODY ID="oTBody1"></TBODY>
+</TABLE>
+
+<TABLE width=300 align="center" ID="oTable2" BGCOLOR="lightslategray">
+<TBODY ID="oTBody2"></TBODY>
+</TABLE>
+
+<TABLE width=300 align="center" ID="oTable3" BGCOLOR="lightslategray">
+<TBODY ID="oTBody3"></TBODY>
+</TABLE>
+
+<SCRIPT language="JScript">
+var oRow, oCell;
+var oTHead = oTable.createTHead();
+
+// Declare aLinks data that would normally be retrieved from a aLinks Web site.
+var aHeading = new Array;
+aHeading[0] = "Links";
+
+// Insert a row into the header.
+oRow = oTHead.insertRow();
+oTHead.bgColor = "lightskyblue";
+
+// Insert cells into the header row.
+oCell = oRow.insertCell();
+oCell.align = "center";
+oCell.style.fontWeight = "bold";
+oCell.innerText = aHeading[0];
+
+// Create the table in a collapsed start initially
+CreateBody0();
+ExpandCollapse0();
+CreateBody1();
+ExpandCollapse1();
+CreateBody2();
+ExpandCollapse2();
+CreateBody3();
+ExpandCollapse3();
+</SCRIPT>
+</BODY>
+</HTML>

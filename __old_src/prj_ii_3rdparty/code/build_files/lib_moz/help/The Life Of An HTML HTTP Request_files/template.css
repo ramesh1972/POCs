@@ -1,0 +1,57 @@
+BODY {
+	MARGIN: 20px; min-width: 610px
+}
+#container {
+	MARGIN: 0px auto; max-width: 70em
+}
+#mBody {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 1em; PADDING-TOP: 0px
+}
+#side {
+	FLOAT: left; MARGIN-BOTTOM: 1em; WIDTH: 23%
+}
+#mainContent {
+	MARGIN-LEFT: 25%
+}
+.nomenu #mainContent {
+	MARGIN-LEFT: 0px
+}
+.bodyleft {
+	MARGIN-LEFT: 25%! important
+}
+.right#mainContent {
+	FLOAT: left; MARGIN-BOTTOM: 1em; MARGIN-LEFT: 0px; WIDTH: 62%
+}
+.right#side {
+	FLOAT: none; MARGIN-LEFT: 65%; WIDTH: auto
+}
+#header {
+	MARGIN-BOTTOM: 1em
+}
+#header UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 1em; PADDING-TOP: 0px
+}
+#header LI {
+	PADDING-RIGHT: 20px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; WHITE-SPACE: nowrap
+}
+#getcd {
+	MARGIN: 1em 0px 0px 45px
+}
+#footer {
+	CLEAR: both; MARGIN-TOP: 1em
+}
+#footer UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 1em; PADDING-TOP: 0px
+}
+#footer LI {
+	PADDING-RIGHT: 20px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; WHITE-SPACE: nowrap
+}
+#footer P {
+	MARGIN: 0.6em 0px
+}
+.skipLink {
+	LEFT: -999px; WIDTH: 990px; POSITION: absolute
+}
+HR.hide {
+	DISPLAY: none
+}

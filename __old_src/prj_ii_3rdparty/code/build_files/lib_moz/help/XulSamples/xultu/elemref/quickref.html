@@ -1,0 +1,993 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+
+  <title>XUL Quick Reference</title>
+
+<style type="text/css">
+
+div.header {
+  font-family: sans-serif;
+  font-size: 15pt;
+  margin-left: 50px;
+}
+
+td {
+  font-family: sans-serif;
+  font-size: 10pt;
+}
+
+h3 {
+  font-family: sans-serif;
+}
+
+h4 {
+  font-family: sans-serif;
+}
+
+.eblock {
+  border: 1px solid black;
+  border: 1px solid black;
+}
+
+.bblock {
+  border: 1px solid black;
+}
+
+</style>
+
+</head>
+
+<body bgcolor='white'>
+
+<div align='center'>
+<h3>XUL Element and Script Reference</h3>
+</div>
+<h4>General Object</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_XULElement.html'>XUL Element</a></strong><br>  A XUL element. The following lists attribute and properties common to  all XUL elements. Some only have any meaning in particular situations such as  when placed inside a template or overlay.
+
+<br><strong>Attributes</strong>:
+align, allowevents, allownegativeassertions, class, coalesceduplicatearcs, collapsed, container, containment, context, contextmenu, datasources, debug, dir, empty, equalsize, flags, flex, height, hidden, id, insertafter, insertbefore, left, maxheight, maxwidth, menu, minheight, minwidth, mousethrough, observes, ordinal, orient, pack, persist, popup, position, ref, removeelement, sortDirection, sortResource, sortResource2, statustext, style, template, tooltip, tooltiptext, top, uri, wait-cursor, width
+<br><strong>Properties and Methods</strong>:
+align, allowEvents, blur, boxObject, boxObject.element, boxObject.getLookAndFeelMetric, boxObject.height, boxObject.screenX, boxObject.screenY, boxObject.width, boxObject.x, boxObject.y, builder, className, click, collapsed, contextMenu, controllers, database, datasources, dir, doCommand, flex, focus, getElementsByAttribute, height, hidden, id, left, maxHeight, maxWidth, menu, minHeight, minWidth, observes, ordinal, orient, pack, persist, ref, resource, statusText, style, tooltip, tooltipText, top, width
+</p>
+</td></tr></table>
+<h4>Box Elements</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_box.html'>box</a></strong><br>  A container element which can contain any number of child elements. If the  box has an orient attribute that is set to horizontal, the child elements  are laid out from left to right in the order that they appear in the box.  If orient is set to vertical, the child elements are laid out from top to  bottom. Child elements do not overlap. The default orientation is horizontal.  
+
+</p>
+
+<p><strong><a href='ref_hbox.html'>hbox</a></strong><br>  A container element which can contain any number of child elements. This is  equivalent to the box element.  
+
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_bbox.html'>bbox</a></strong><br>  A horizontal box that is baseline aligned. It is equivalent to using  an hbox element with an align attribute set to baseline.
+
+</p>
+
+<p><strong><a href='ref_vbox.html'>vbox</a></strong><br>  A container element which can contain any number of child elements. This is  equivalent to the box element, except it defaults to vertical orientation.  
+
+</p>
+</td></tr></table>
+<h4>Other Layout Elements</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_stack.html'>stack</a></strong><br>  An element that renders its children on top of each other. The first element  if placed on the bottom, and each successive child is place above the  previous one. All elements are displayed at once. Child elements may also  be placed at absolute positions within the stack.  
+
+</p>
+
+<p><strong><a href='ref_deck.html'>deck</a></strong><br>  An element that displays only one of its children at a time. The selectedIndex  attribute determines which child is displayed.  
+
+<br><strong>Attributes</strong>:
+selectedIndex
+<br><strong>Properties and Methods</strong>:
+selectedIndex, selectedPanel
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_scrollbox.html'>scrollbox</a></strong><br>  A box that has additional functions that can be used to scroll the content. Note  that a scrollbox doesn't cause scrollbars to be displayed. It is intended to be  used when an application wants to be able to adjust the scroll position itself.  If you just want scrollbars to appear, add style='overflow: auto;'. This may also  be used with any other container element.
+
+</p>
+
+<p><strong><a href='ref_arrowscrollbox.html'>arrowscrollbox</a></strong><br>  A box which provides scroll arrows along its edges for scolling through  the contents of the box. The user only needs to hover the mouse over the  arrows to scroll the box. This element is typically used for large popup  menus.  
+
+<br><strong>Properties and Methods</strong>:
+scrollByIndex
+</p>
+</td></tr></table>
+<h4>Grid Elements</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_grid.html'>grid</a></strong><br>  A grid is an element that contains both rows and columns elements. It is used  to create a grid of elements. Both the rows and columns are displayed at once  although only one will typically contain content, while the other may provide  size information. Whichever is last in the grid is displayed on top.  
+
+</p>
+
+<p><strong><a href='ref_columns.html'>columns</a></strong><br>  Defines the columns of a grid. Each child of a columns element should be a  column element.  
+
+</p>
+
+<p><strong><a href='ref_column.html'>column</a></strong><br>  A single column in a columns element. Each child of the column element is placed  in each successive cell of the grid. The column with the most child elements  determines the number of rows in each column.  
+
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_rows.html'>rows</a></strong><br>  Defines the rows of a grid. Each child of a rows element should be a row  element.  
+
+</p>
+
+<p><strong><a href='ref_row.html'>row</a></strong><br>  A single row in a rows element. Each child of the row element is placed in  each successive cell of the grid. The row with the most child elements  determines the number of columns in each row.  
+
+</p>
+</td></tr></table>
+<h4>List Elements</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_listbox.html'>listbox</a></strong><br>  This element is used to create a list of items. This is a simpler version of  a tree. Nested rows are not supported, but a listbox may contain multiple  columns. There are numerous methods which allow the items in the listbox to  be retrieved and modified.  
+
+<br><strong>Attributes</strong>:
+disableKeyNavigation, disabled, rows, seltype, suppressonselect, tabindex, value
+<br><strong>Properties and Methods</strong>:
+accessible, addItemToSelection, appendItem, clearSelection, currentItem, disableKeyNavigation, disabled, ensureElementIsVisible, ensureIndexIsVisible, getIndexOfFirstVisibleRow, getIndexOfItem, getItemAtIndex, getNextItem, getNumberOfVisibleRows, getPreviousItem, getRowCount, getSelectedItem, insertItemAt, invertSelection, listBoxObject, removeItemAt, removeItemFromSelection, scrollToIndex, selType, selectAll, selectItem, selectItemRange, selectedCount, selectedIndex, selectedItem, selectedItems, timedSelect, toggleItemSelection, value
+</p>
+
+<p><strong><a href='ref_listcols.html'>listcols</a></strong><br>  A container for the columns of a listbox, each of which are created with  the listcol element. There should be only one listcols element in a list  box. If there is no listcols element, the list box has a single column.  
+
+</p>
+
+<p><strong><a href='ref_listcol.html'>listcol</a></strong><br>  A column in a list box. You can make some columns flexible and other columns  non-flexible.  
+
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_listitem.html'>listitem</a></strong><br>  A single row in a list box. The text of the listitem is specified either  using listcell elements, or by placing a label attribute directly on the  listitem element. You may also place other elements inside the listitem for  more complex content.  
+
+<br><strong>Attributes</strong>:
+accesskey, checked, command, crop, current, disabled, image, label, selected, type, value
+<br><strong>Properties and Methods</strong>:
+accessKey, accessible, checked, control, crop, current, disabled, image, label, selected, value
+</p>
+
+<p><strong><a href='ref_listcell.html'>listcell</a></strong><br>  A single cell of a listbox, used for cells which contain text only.  
+
+<br><strong>Attributes</strong>:
+crop, disabled, image, label, type
+</p>
+
+<p><strong><a href='ref_listhead.html'>listhead</a></strong><br>  A header row of a listbox. It is usual to place listheader elements  inside the listhead, one for each column.  
+
+</p>
+
+<p><strong><a href='ref_listheader.html'>listheader</a></strong><br>  A header for a single column in a listbox.
+
+<br><strong>Attributes</strong>:
+crop, label, sortDirection
+</p>
+</td></tr></table>
+<h4>Tree Elements</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_tree.html'>tree</a></strong><br>  A container which can be used to hold a tabular or hierarchical set of rows  of elements. The tree may contain any number of rows and any number of  columns. Each row of the tree may contain child rows which are displayed  indented from the parent. Unlike other elements, the data to display inside  the tree is not specified using tags, but is determined from a view object.  The view object implements the  <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a>  interface. The view is queried for the data to appear in the tree.   There are several ways in which trees are used, as listed below. The second  column lists the interfaces available via the tree's view property. The  third column indicates whether treeitem element are used.    
+
+<br><strong>Attributes</strong>:
+alternatingbackground, disableKeyNavigation, enableColumnDrag, flags, hidecolumnpicker, onselect, rows, seltype, statedatasource
+<br><strong>Properties and Methods</strong>:
+accessible, builderView, contentView, currentIndex, disableKeyNavigation, enableColumnDrag, firstOrdinalColumn, selstyle, treeBoxObject, view
+</p>
+
+<p><strong><a href='ref_treecols.html'>treecols</a></strong><br>  A group of treecol elements. There should one and only one treecols element  in a tree.  
+
+<br><strong>Attributes</strong>:
+pickertooltiptext
+<br><strong>Properties and Methods</strong>:
+accessible
+</p>
+
+<p><strong><a href='ref_treecol.html'>treecol</a></strong><br>  A column of a tree. It displays the column header and holds the size and other  information about the column. You can also place splitter elements between the  columns to allow column resizing. You should always place an id attribute on  a treecol element to ensure that the column positioning is handled properly.   
+
+<br><strong>Attributes</strong>:
+crop, cycler, dragging, fixed, hidden, hideheader, ignoreincolumnpicker, label, primary, sort, sortActive, sortDirection, src, type
+<br><strong>Properties and Methods</strong>:
+accessible
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_treechildren.html'>treechildren</a></strong><br>  This element is the body of the tree. For content trees, the content will  be placed inside this element. This element is also used to define container  rows in the tree.  
+
+</p>
+
+<p><strong><a href='ref_treeitem.html'>treeitem</a></strong><br>  A treeitem should be placed inside a treechildren element and should contain  treerow elements. The treeitem can be clicked by the user to select the row  of the tree. The treeitem contains a single row and all of what appear to the  user as that row's descendants.  
+
+<br><strong>Attributes</strong>:
+container, empty, label, open, uri
+</p>
+
+<p><strong><a href='ref_treerow.html'>treerow</a></strong><br>  A single row in a tree. It should be placed inside a treeitem element.  Children of the treerow should be treecell elements. If child rows are  necessary, they should be placed in a treechildren element inside the parent  treeitem.  
+
+<br><strong>Attributes</strong>:
+properties
+</p>
+
+<p><strong><a href='ref_treecell.html'>treecell</a></strong><br>  A single cell in a tree. This element should be placed inside a treerow. You  can set the text for the cell using the label attribute.  
+
+<br><strong>Attributes</strong>:
+label, mode, properties, ref, src, value
+</p>
+
+<p><strong><a href='ref_treeseparator.html'>treeseparator</a></strong><br>  Used to place a seperator row in a tree.  
+
+<br><strong>Attributes</strong>:
+properties
+</p>
+</td></tr></table>
+<h4>Frames</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_iframe.html'>iframe</a></strong><br>  An inner frame that works much the HTML iframe element. The src attribute can  be used to specify the content of the frame. This content is a separate  document. The children of the iframe are ignored.  
+
+<br><strong>Attributes</strong>:
+src
+<br><strong>Properties and Methods</strong>:
+accessible, contentDocument, contentWindow, docShell, webNavigation
+</p>
+
+<p><strong><a href='ref_browser.html'>browser</a></strong><br>  A frame which is expected to contain a view of a Web document. It is  similar to an iframe except that it holds a page history and contains  additional methods to manipulate the currently displayed page.  
+
+<br><strong>Attributes</strong>:
+autocompleteenabled, autocompletepopup, autoscroll, disablehistory, disablesecurity, homepage, src, type
+<br><strong>Properties and Methods</strong>:
+accessible, addProgressListener, canGoBack, canGoForward, contentDocument, contentTitle, contentViewerEdit, contentViewerFile, contentWindow, currentURI, docShell, documentCharsetInfo, goBack, goForward, goHome, gotoIndex, homePage, loadURI, loadURIWithFlags, markupDocumentViewer, preferences, reload, reloadWithFlags, removeProgressListener, securityUI, sessionHistory, stop, webBrowserFind, webNavigation, webProgress
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_tabbrowser.html'>tabbrowser</a></strong><br>  This element is used for holding a set of read-only views of Web documents.  Similar to the browser element, except that mutliple documents can be  displayed, each in a separate tab. This element is implemented as a set of  browser elements inside a tabbox.  
+
+<br><strong>Attributes</strong>:
+autocompleteenabled, autocompletepopup, autoscroll, contentcontextmenu, contenttooltip, handleCtrlPageUpDown, onbookmarkgroup, onnewtab
+<br><strong>Properties and Methods</strong>:
+addProgressListener, addTab, appendGroup, browsers, canGoBack, canGoForward, contentDocument, contentTitle, contentViewerEdit, contentViewerFile, contentWindow, currentURI, docShell, documentCharsetInfo, getBrowserForTab, goBack, goBackGroup, goForward, goForwardGroup, goHome, gotoIndex, homePage, loadGroup, loadURI, loadURIWithFlags, markupDocumentViewer, reload, reloadAllTabs, reloadTab, reloadWithFlags, removeAllTabsBut, removeCurrentTab, removeProgressListener, removeTab, replaceGroup, securityUI, selectedBrowser, selectedTab, sessionHistory, stop, tabContainer, webBrowserFind, webNavigation, webProgress
+</p>
+
+<p><strong><a href='ref_editor.html'>editor</a></strong><br>  A frame which is expected to contain an editable document. Set the value of  the editortype attribute to 'html' to create an editor document. Mozilla  provides two types of editors, the HTML editor and the plaintext editor.  The editor does not provide any editing user interface; you would supply that  yourself. However, text editing, image resizing, and table row and cell  editing capabilities are provided. If you do not set the editortype  attribute on an editor, you must enable editing using the makeEditable  method.  
+
+<br><strong>Attributes</strong>:
+editortype, src, type
+<br><strong>Properties and Methods</strong>:
+accessible, commandManager, contentDocument, contentWindow, docShell, editingSession, editortype, getEditor, getHTMLEditor, makeEditable, webBrowserFind, webNavigation
+</p>
+</td></tr></table>
+<h4>Main Widgets</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_button.html'>button</a></strong><br>  A button that can be pressed by the user. Event handlers can be used to trap  mouse, keyboard and other events. It is typically rendered as a grey outset  rectangle. You can specify the label of the button using the label attribute  or by placing content inside the button.  
+
+<br><strong>Attributes</strong>:
+accesskey, autoCheck, checkState, checked, command, crop, dir, disabled, dlgType, group, image, label, open, orient, tabindex, type
+<br><strong>Properties and Methods</strong>:
+accessKey, accessible, autoCheck, checkState, checked, command, crop, dir, disabled, dlgType, group, image, label, open, orient, type
+</p>
+
+<p><strong><a href='ref_checkbox.html'>checkbox</a></strong><br>  An element that can be turned on and off. This is most commonly rendered as  a box when the element is off and a box with a check when the element is on.  The user can switch the state of the check box by selecting it with the mouse.  A label, specified with the label attribute may be added beside the check box  to indicate to the user as to its function.  
+
+<br><strong>Attributes</strong>:
+accesskey, checked, command, crop, disabled, image, label, tabindex
+<br><strong>Properties and Methods</strong>:
+accessKey, accessible, checked, command, crop, disabled, image, label
+</p>
+
+<p><strong><a href='ref_radio.html'>radio</a></strong><br>  An element that can be turned on and off. Radio buttons are almost always  grouped together in groups. Only one radio button within the same  radiogroup may be selected at a time. The user can switch which radio  button is turned on by selecting it with the mouse or keyboard. Other radio  buttons in the same group are turned off. A label, specified with the label  attribute may be added beside the radio button to indicate to the user as to  its function.  
+
+<br><strong>Attributes</strong>:
+accesskey, command, crop, disabled, focused, label, selected, src, value
+<br><strong>Properties and Methods</strong>:
+accessKey, accessible, crop, disabled, label, radioGroup, selected, value
+</p>
+
+<p><strong><a href='ref_textbox.html'>textbox</a></strong><br>  A text input field in which the user can enter text. It is similar to the  HTML input element. Only one line of text is displayed by default. The  multiline attribute can be specified to display a field with multiple rows.  
+
+<br><strong>Attributes</strong>:
+cols, disabled, maxlength, multiline, onchange, oninput, readonly, rows, size, tabindex, timeout, type, value, wrap
+<br><strong>Properties and Methods</strong>:
+accessible, disabled, inputField, maxLength, readonly, select, selectionEnd, selectionStart, setSelectionRange, size, textLength, timeout, type, value
+</p>
+
+<p><strong><a href='ref_textbox+_Mozilla+Auto+Complete.html'>textbox+(Mozilla+Auto+Complete)</a></strong><br>  This element is created by setting the type attribute of a textbox to 'autocomplete'.  It is used to create a textbox with a popup containing a list of possible completions  for what the user has started to type.  
+
+<br><strong>Attributes</strong>:
+alwaysopenpopup, autoFill, autoFillAfterMatch, crop, disableAutocomplete, disabled, disablehistory, focused, forceComplete, ignoreBlurWhileSearching, inputtooltiptext, label, maxlength, maxrows, minResultsForPopup, nomatch, onerrorcommand, ontextcommand, ontextrevert, open, searchSessions, showCommentColumn, showpopup, size, tabScrolling, tabindex, timeout, type, userAction, value
+<br><strong>Properties and Methods</strong>:
+accessible, addSession, alwaysOpenPopup, autoFill, autoFillAfterMatch, clearResults, crop, disableAutocomplete, disabled, editable, focused, forceComplete, getDefaultSession, getResultAt, getResultCount, getResultValueAt, getSession, getSessionByName, getSessionResultAt, getSessionStatusAt, getSessionValueAt, ignoreBlurWhileSearching, inputField, isSearching, isWaiting, label, maxLength, maxRows, minResultsForPopup, noMatch, open, removeSession, resultsPopup, searchSessions, select, selectionEnd, selectionStart, sessionCount, setSelectionRange, showCommentColumn, showPopup, size, syncSessions, tabScrolling, textLength, timeout, type, userAction, value
+</p>
+
+<p><strong><a href='ref_textbox+_Firefox+Auto+Complete.html'>textbox+(Firefox+Auto+Complete)</a></strong><br>  This element is created by setting the type attribute of a textbox to 'autocomplete'.  It is used to create a textbox with a popup containing a list of possible completions  for what the user has started to type.  
+
+<br><strong>Attributes</strong>:
+accesskey, autocompletepopup, autocompletesearch, autocompletesearchparam, completedefaultindex, crop, disableautocomplete, disabled, disablekeynavigation, enablehistory, focused, forcecomplete, ignoreblurwhilesearching, inputtooltiptext, label, maxlength, maxrows, minresultsforpopup, nomatch, onchange, oninput, onsearchcomplete, ontextentered, ontextreverted, open, readonly, showcommentcolumn, size, tabindex, tabscrolling, timeout, type, value
+<br><strong>Properties and Methods</strong>:
+accessible, completeDefaultIndex, controller, crop, disableAutoComplete, disableKeyNavigation, disabled, editable, focused, forceComplete, getSearchAt, ignoreBlurWhileSearching, inputField, label, maxLength, maxRows, minResultsForPopup, onSearchComplete, onTextEntered, onTextReverted, open, popup, popupOpen, searchCount, searchParam, select, selectionEnd, selectionStart, setSelectionRange, showCommentColumn, size, tabScrolling, textLength, textValue, timeout, type, value
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_description.html'>description</a></strong><br>  This element is used to create a block of text. The text can be set either  with the value attribute or by placing text inside the open and close  description tags. The value attribute is used to set text that appears in  a single line. If text appears as a child of the description, it will wrap  to multiple lines. If may contain arbitrary markup, which can be styled  as needed.  
+
+<br><strong>Attributes</strong>:
+crop, disabled, value
+<br><strong>Properties and Methods</strong>:
+accessible, crop, disabled, value
+</p>
+
+<p><strong><a href='ref_label.html'>label</a></strong><br>  This element is used to provide a label for an control element, If the user  clicks the label, it will move the focus to the associated control, specified  with the control attribute.  
+
+<br><strong>Attributes</strong>:
+accesskey, control, crop, disabled, value
+<br><strong>Properties and Methods</strong>:
+accessKey, accessible, control, crop, disabled, value
+</p>
+
+<p><strong><a href='ref_image.html'>image</a></strong><br>  An element that displays an image, much like the HTML img element. The src  attribute can be used to specify the URL of the image.  
+
+<br><strong>Attributes</strong>:
+onerror, onload, src, validate
+<br><strong>Properties and Methods</strong>:
+accessible, src
+</p>
+
+<p><strong><a href='ref_separator.html'>separator</a></strong><br>  Creates a small separating gap between elements. This type of separator should be  used to separate parts of a dialog. It doesn't draw a bar visually, but is just a  small space. It is functionally equivalent to a spacer except it defaults to a  small size (usually 1.5 ems).  
+
+<br><strong>Attributes</strong>:
+orient
+</p>
+
+<p><strong><a href='ref_spacer.html'>spacer</a></strong><br>  An element that takes up space but does not display anything. It is usually  used to place spacing within a container. If you don't specify that the  spacer has a size or is flexible, the spacer does not occupy any space. If  you want a small gap, consider using a separator instead.  
+
+</p>
+
+<p><strong><a href='ref_scrollbar.html'>scrollbar</a></strong><br>  When a container contains contents which are larger that the size of the  content, scroll bars may be placed at the side of the container to allow the  user to scroll around in the container. The scroll bar may also be used  independently when a numeric value or percentage needs to be selected by the  user. The user can adjust the position of the scroll bar by clicking arrows  on either end of the scroll bar or by dragging the scroll bar thumb around.  
+
+<br><strong>Attributes</strong>:
+curpos, increment, maxpos, pageincrement
+</p>
+</td></tr></table>
+<h4>Menus</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_menubar.html'>menubar</a></strong><br>  A container that usually contains menu elements. On the Macintosh, the menubar  is displayed along the top of the screen, and all non-menu related elements  inside the menubar will be ignored.  
+
+<br><strong>Attributes</strong>:
+accessible, grippyhidden, statusbar
+<br><strong>Properties and Methods</strong>:
+statusbar
+</p>
+
+<p><strong><a href='ref_menu.html'>menu</a></strong><br>  An element, much like a button, that is placed on a menu bar. When the user  clicks the menu element, the child menupopup of the menu will be displayed.  This element is also used to create submenus.  
+
+<br><strong>Attributes</strong>:
+acceltext, accesskey, allowevents, crop, disabled, key, label, menuactive, open, sizetopopup, value
+<br><strong>Properties and Methods</strong>:
+value
+</p>
+
+<p><strong><a href='ref_menupopup.html'>menupopup</a></strong><br>  A container used to display menus. It should be placed inside a menu,  menulist or menu-type button element. It can contain any element but  usually will contain menuitem elements. It is a type of box that defaults  to vertical orientation.  
+
+<br><strong>Attributes</strong>:
+ignorekeys, left, onpopuphidden, onpopuphiding, onpopupshowing, onpopupshown, position, top
+<br><strong>Properties and Methods</strong>:
+accessible, hidePopup, moveTo, popupBoxObject, position, showPopup, sizeTo
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_menuitem.html'>menuitem</a></strong><br>  A single choice in a menupopup element. It acts much like a button but it is  rendered on a menu.  
+
+<br><strong>Attributes</strong>:
+acceltext, accessible, accesskey, allowevents, autocheck, checked, command, crop, disabled, image, key, label, name, selected, type, validate, value
+<br><strong>Properties and Methods</strong>:
+label, value
+</p>
+
+<p><strong><a href='ref_menulist.html'>menulist</a></strong><br>  An element that can be used for drop-down choice lists. The user may select one  of the elements displayed in the menulist. The currently selected choice is  displayed on the menulist element. To create the drop-down, put a menupopup  inside the menulist containing the choices as menuitem elements.  
+
+<br><strong>Attributes</strong>:
+accesskey, crop, disableautoselect, disabled, editable, focused, image, label, open, src, tabindex, value
+<br><strong>Properties and Methods</strong>:
+accessible, appendItem, crop, disableautoselect, disabled, inputField, insertItemAt, label, menuBoxObject, menupopup, open, removeAllItems, removeItemAt, select, selectedIndex, selectedItem, src, value
+</p>
+
+<p><strong><a href='ref_menuseparator.html'>menuseparator</a></strong><br>  Used to create a separator between menu items. Typically drawn as a thin line.  
+
+<br><strong>Properties and Methods</strong>:
+accessible
+</p>
+</td></tr></table>
+<h4>Popups</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_popupset.html'>popupset</a></strong><br>  A container for popup elements. You should declare all popup elements as  children of a popupset. This element does not directly display on screen.  Child popups will be displayed when asked to by other elements.  
+
+</p>
+
+<p><strong><a href='ref_popup.html'>popup</a></strong><br>  A container that appears in a child window. The popup window does not have any  special frame. Popups can be displayed when an element is clicked by assigning  the id of the popup to either the popup, context or tooltip attribute of the  element. A popup is a type of box that defaults to vertical orientation.  
+
+<br><strong>Attributes</strong>:
+ignorekeys, left, onpopuphidden, onpopuphiding, onpopupshowing, onpopupshown, position, top
+<br><strong>Properties and Methods</strong>:
+accessible, hidePopup, moveTo, popupBoxObject, position, showPopup, sizeTo
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_tooltip.html'>tooltip</a></strong><br>  This element is used for the tooltip popups. For text only tooltips, this  element doesn't need to be used; instead you may just add a tooltiptext  attribute to an element.  
+
+<br><strong>Attributes</strong>:
+crop, default, label, noautohide, onpopuphidden, onpopuphiding, onpopupshowing, onpopupshown, position
+<br><strong>Properties and Methods</strong>:
+hidePopup, label, moveTo, popupBoxObject, position, showPopup, sizeTo
+</p>
+</td></tr></table>
+<h4>Toolbars</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_toolbox.html'>toolbox</a></strong><br>  A container for toolbars. It is a type of box but defaults to vertical  orientation. If a toolbar is placed inside a toolbox, a grippy is displayed  on its left or upper edge. The user may click the grippy to collapse the  toolbar. If multiple toolbars are placed in the same toolbox, they will  all collapse into the same row. The Firefox browser does not have  grippies so toolbars cannot be collapsed and expanded.  
+
+<br><strong>Properties and Methods</strong>:
+accessible, appendCustomToolbar, collapseToolbar, customToolbarCount, expandToolbar, palette, toolbarset
+</p>
+
+<p><strong><a href='ref_toolbar.html'>toolbar</a></strong><br>  A container which typically contains a row of buttons. It is a type of box  that defaults to horizontal orientation. It can be collapsed with a grippy  when the toolbar is placed inside a toolbox. The toolbar should always have  an id attribute. Firefox supports toolbar customization, whereas the Mozilla  browser does not.  
+
+<br><strong>Attributes</strong>:
+currentset, customindex, customizable, defaultset, grippyhidden, grippytooltiptext, toolbarname
+<br><strong>Properties and Methods</strong>:
+accessible, currentSet, firstPermanentChild, insertItem, lastPermanentChild, toolbarName
+</p>
+
+<p><strong><a href='ref_toolbarpalette.html'>toolbarpalette</a></strong><br>  The item is a palette of available toolbar items. It is not displayed,  but is used by the toolbar customization dialog to display the list  of items. The children of the toolbarpalette should be the complete  list of toolbarbuttons and toolbaritems that can be added to the  toolbar. Do not add the various spacing items, as those are added  automatically.  
+
+</p>
+
+<p><strong><a href='ref_toolbarset.html'>toolbarset</a></strong><br>  This element is used as a container for custom toolbars, which are added in  the custom toolbar dialog.
+
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_toolbarbutton.html'>toolbarbutton</a></strong><br>  A button that appears on a toolbar. It is equivalent to a regular button  except that it may be rendered differently. Typically, it is expected to  have an image.  
+
+<br><strong>Attributes</strong>:
+accesskey, autoCheck, checkState, checked, command, crop, dir, disabled, dlgType, group, image, label, open, orient, tabindex, type, validate
+<br><strong>Properties and Methods</strong>:
+accessKey, accessible, autoCheck, checkState, checked, command, crop, dir, disabled, dlgType, group, image, label, open, orient, type
+</p>
+
+<p><strong><a href='ref_toolbaritem.html'>toolbaritem</a></strong><br>  An item that appears on a toolbar. This element should wrap all items  that are not buttons, which should instead be created using the  toolbarbutton element. The element is used, for example, to hold  the url field.
+
+</p>
+
+<p><strong><a href='ref_toolbarseparator.html'>toolbarseparator</a></strong><br>  Creates a separator between a group of toolbar buttons. It is functionally equivalent  to a normal separator but some themes may apply a different appearance.  
+
+<br><strong>Properties and Methods</strong>:
+accessible
+</p>
+
+<p><strong><a href='ref_toolbarspacer.html'>toolbarspacer</a></strong><br>  A space between toolbar items.
+
+<br><strong>Properties and Methods</strong>:
+accessible
+</p>
+
+<p><strong><a href='ref_toolbarspring.html'>toolbarspring</a></strong><br>  A flexible space between toolbar items.
+
+<br><strong>Properties and Methods</strong>:
+accessible
+</p>
+
+<p><strong><a href='ref_toolbargrippy.html'>toolbargrippy</a></strong><br>  The notch on the side of a toolbar which can be used to collapse and expand it.  This element is used internally by the toolbar and should only be used directly  when modifying its theme.  
+
+<br><strong>Properties and Methods</strong>:
+accessible
+</p>
+</td></tr></table>
+<h4>Tabboxes</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_tabbox.html'>tabbox</a></strong><br>  A container used to display tabbed pages of elements to the user. The  tabbox should contain two children, the first a tabs element which contains  the tabs and the second a tabpanels element which contains the contents of  the pages. This is a type of box that defaults to vertical orientation.  
+
+<br><strong>Attributes</strong>:
+eventnode, handleCtrlPageUpDown, handleCtrlTab
+<br><strong>Properties and Methods</strong>:
+accessible, eventNode, handleCtrlPageUpDown, handleCtrlTab, selectedIndex, selectedPanel, selectedTab
+</p>
+
+<p><strong><a href='ref_tabs.html'>tabs</a></strong><br>  A row of tabs. A tabs element should be placed inside a tabbox and should  contain tab elements.  
+
+<br><strong>Attributes</strong>:
+closebutton, disableclose, first-tab, last-tab, onclosetab, onnewtab, onselect, setfocus, tooltiptextnew
+<br><strong>Properties and Methods</strong>:
+advanceSelectedTab, appendItem, insertItemAt, removeItemAt, selectedIndex, selectedItem
+</p>
+
+<p><strong><a href='ref_tab.html'>tab</a></strong><br>  A single tab which should be placed inside a tabs element. The user may click  a tab to bring the associated page of the tabbox to the front.  
+
+<br><strong>Attributes</strong>:
+accesskey, afterselected, beforeselected, crop, disabled, image, label, linkedpanel, selected, validate
+<br><strong>Properties and Methods</strong>:
+accessible, label, linkedPanel, selected, tabs
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_tabpanels.html'>tabpanels</a></strong><br>  A container to hold the set of pages in a tabbox. The tabpanels element  should be placed in a tabbox. The children of the tabpanels element become  the panels of the tabbox. Usually, the children are tabpanel elements. By  clicking the first tab, the first panel will be displayed. By clicking the  second tab, the second panel will be displayed and so on.  
+
+<br><strong>Attributes</strong>:
+selectedIndex
+<br><strong>Properties and Methods</strong>:
+accessible, selectedIndex, selectedPanel
+</p>
+
+<p><strong><a href='ref_tabpanel.html'>tabpanel</a></strong><br>  A individual panel in a tabpanels element. This element is optional and you may  just use any other container in place of it.  
+
+</p>
+</td></tr></table>
+<h4>Status Bars</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_statusbar.html'>statusbar</a></strong><br>  An element used to create a status bar, usually placed along the bottom of  a window. It is virtually equivalent to a standard box, but may be rendered  differently.  
+
+<br><strong>Properties and Methods</strong>:
+accessible
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_statusbarpanel.html'>statusbarpanel</a></strong><br>  An individual element of a statusbar. This is a special type of button  which is drawn differently. Unlike normal buttons, a statusbarpanel can only  have a label or an image but not both. This element is often used with a  short label or icon to indicate status, for instance whether the user is  online or whether there are new messages.  
+
+<br><strong>Attributes</strong>:
+crop, label, src
+<br><strong>Properties and Methods</strong>:
+label, src
+</p>
+</td></tr></table>
+<h4>Group Elements</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_radiogroup.html'>radiogroup</a></strong><br>  A group of radio buttons. Only one radio button inside the group can be  selected at a time. The radio buttons may either direct children of the  radiogroup or descendants. Place the radiogroup inside a groupbox if you  would like a border or caption around the group. The radiogroup defaults  to vertical orientation.  
+
+<br><strong>Attributes</strong>:
+disabled, focused, tabindex, value
+<br><strong>Properties and Methods</strong>:
+accessible, appendItem, checkAdjacentElement, disabled, focusedItem, insertItemAt, removeItemAt, selectedIndex, selectedItem, value
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_groupbox.html'>groupbox</a></strong><br>  A box that draws a frame around it, intended to group a set of elements  together. If a caption element is placed inside the groupbox, it will be  used as a caption which appears along the top of the groupbox.  
+
+<br><strong>Properties and Methods</strong>:
+accessible
+</p>
+
+<p><strong><a href='ref_caption.html'>caption</a></strong><br>  A header for a groupbox. It may contain either a text label, using the  label attribute, or child elements for a more complex caption.  
+
+<br><strong>Attributes</strong>:
+accesskey, crop, image, label
+<br><strong>Properties and Methods</strong>:
+accessKey, crop, image, label
+</p>
+</td></tr></table>
+<h4>Miscellaneous Widgets</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_progressmeter.html'>progressmeter</a></strong><br>  A meter which can be used to display the progress of a lengthy operation.  It is drawn as a bar that is filled as the operation completes. In addition,  an undeterminate progressmeter may be created by setting the mode attribute.  This is used when the length of time to complete an operation is not known  beforehand.  
+
+<br><strong>Attributes</strong>:
+mode, value
+<br><strong>Properties and Methods</strong>:
+accessible, mode, value
+</p>
+
+<p><strong><a href='ref_colorpicker.html'>colorpicker</a></strong><br>  An element that the user may use to select a color from. Mozilla renders  this as a grid of colors. The user may select a color by clicking on one of  the grid cells.  
+
+<br><strong>Attributes</strong>:
+color, onchange, type
+<br><strong>Properties and Methods</strong>:
+color
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_splitter.html'>splitter</a></strong><br>  An element which should appear before or after an element inside a container.  When the splitter is dragged, the sibling elements of the splitter are resized.  If a grippy in placed inside the splitter, one sibling element of the  splitter is collapsed when the grippy is clicked.  
+
+<br><strong>Attributes</strong>:
+collapse, resizeafter, resizebefore, state
+</p>
+
+<p><strong><a href='ref_grippy.html'>grippy</a></strong><br>  An element that may be used inside a splitter which can be used to  collapse a sibling element of the splitter.  
+
+</p>
+</td></tr></table>
+<h4>Keyboard Shortcuts</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_keyset.html'>keyset</a></strong><br>  A container element for key elements. The keyset and its descendants are not  displayed.  
+
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_key.html'>key</a></strong><br>  The key element defines a keyboard shortcut. Event handlers can be used  to respond when the appropriate keys are pressed. A key element must be  placed inside a keyset element.  
+
+<br><strong>Attributes</strong>:
+command, disabled, key, keycode, keytext, modifiers, oncommand, phase
+</p>
+</td></tr></table>
+<h4>Broadcast Elements</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_broadcasterset.html'>broadcasterset</a></strong><br>  A container element for broadcaster elements. The broadcasterset and its  descendants are not displayed.  
+
+</p>
+
+<p><strong><a href='ref_broadcaster.html'>broadcaster</a></strong><br>  A broadcaster is used whn you want multiple elements to share one or more  attribute values, or when you want elements to respond to a state change.  Any elements that are observing the broadcaster will share the attributes  placed on the broadcaster. For instance, if the broadcaster has a label  attribute, the observes will use that label. If the label changes, the  labels of the observers will update automatically. An onbroadcast event  will be sent to the observers when a change is made.  
+
+</p>
+
+<p><strong><a href='ref_observes.html'>observes</a></strong><br>  The observes element can be used to listen to a broadcaster and receive  events and attributes from it. The observes element should be placed inside  the element that wants to observe the broadcaster. When an observed  attribute is modified on the broadcaster, the attribute's value will be  forwarded and set on the parent element of the observer.  
+
+<br><strong>Attributes</strong>:
+attribute, element
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_commandset.html'>commandset</a></strong><br>  This element is not displayed and serves as a container for command elements.  
+
+<br><strong>Attributes</strong>:
+commandupdater, events, oncommandupdate, targets
+</p>
+
+<p><strong><a href='ref_command.html'>command</a></strong><br>  A command element can be used to invoke an operation that can come from multiple  sources. For example, a clipboard paste operation can be invoked from the Edit  menu, a context menu and by pressing a keyboard shortcut. You attach the code  to the command using the oncommand attribute. It will be called no matter how it  is invoked by the user. In addition, disabling the command will automatically  disable the menu items and keyboard shortcuts.  
+
+<br><strong>Attributes</strong>:
+disabled, label, oncommand
+</p>
+</td></tr></table>
+<h4>Templates</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_template.html'>template</a></strong><br>  Used to declare a template for rule-based construction of elements. Elements  are constructed from a datasource. For more information see the rule element.  
+
+</p>
+
+<p><strong><a href='ref_rule.html'>rule</a></strong><br>  A rule is used in a template. The children of the rule are used to declare the  conditions in which the rule matches and the content that is generated. When  the content needs to be displayed, the template builder scans through the  RDF datasource searching for nodes that match the rules. When a rule is  matched, the corresponding content is generated.  
+
+<br><strong>Attributes</strong>:
+iscontainer, isempty, parent, parsetype
+</p>
+
+<p><strong><a href='ref_bindings.html'>bindings</a></strong><br>  Should be contained within a rule. Used to specify a set of variable  bindings for a rule. This element should contain one or more binding  elements.  
+
+</p>
+
+<p><strong><a href='ref_binding.html'>binding</a></strong><br>  Should be contained within a bindings element. A binding is used to  bind a variable to a node. Like the triple element in syntax, it can  be used to bind a particular property of a matched node to a particular  variable name. That name can then be used within the action of a rule.  
+
+<br><strong>Properties and Methods</strong>:
+object, predicate, subject
+</p>
+
+<p><strong><a href='ref_action.html'>action</a></strong><br>  Should be contained within a rule element. It is used to specify the generated  content for each matched node. Within the action, attributes are parsed for  <a href="/tutorials/xultu/templateex.html">resource and variable references</a>.  
+
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_conditions.html'>conditions</a></strong><br>  This element should appear directly inside a rule element and is used to  define conditions for the rule. Within the conditions can be placed content,  member and triple elements. These may have attributes whose value is a  variable name beginning with a question mark (?). When evaluating the rule for  a particular RDF resource, the variables are replaced with values from the  resource. If all variables can be replaced, the rule matched.  
+
+</p>
+
+<p><strong><a href='ref_content.html'>content</a></strong><br>  This element should appear inside a conditions element. A rule's conditions  should contain one and only one content element. The content element should  also have a uri attribute. It is used to bind a variable to a content node  during matching. When using a tree with the 'flags' attribute set to  'dont-build-content', use a treeitem element instead.  
+
+<br><strong>Properties and Methods</strong>:
+tag, uri
+</p>
+
+<p><strong><a href='ref_triple.html'>triple</a></strong><br>  A triple can be included inside a rule's conditions element. It is used check  for an assertion within a graph. If such an assertion exists, the rule may  match, assuming that all the conditions match. If the assertion does not exist,  the rule will not match. Both the subject and object attributes may be variables.  
+
+<br><strong>Properties and Methods</strong>:
+object, predicate, subject
+</p>
+
+<p><strong><a href='ref_member.html'>member</a></strong><br>  Used within a rule's conditions element to match elements that are containers  or are contained within another element. Both the container and child  attributes may use variables.  
+
+<br><strong>Properties and Methods</strong>:
+child, container
+</p>
+
+<p><strong><a href='ref_textnode.html'>textnode</a></strong><br>  Normally when substituting RDF resources in template rules, you place the RDF  property name inside an attribute value preceded with 'rdf:'. In the case of the  textnode element, the entire node is replaced with text corresponding to the result  of the value attribute.   
+
+<br><strong>Attributes</strong>:
+value
+</p>
+</td></tr></table>
+<h4>Wizard Elements</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_wizard.html'>wizard</a></strong><br>  This element is used to construct a step-by-step wizard found in some  applications to guide users through a task. It is used for a window with  several steps contained on several pages. This element provides the header  and buttons along the bottom, and also handles navigation between the pages.  Each page should be constructed using a wizardpage. The pages are  displayed in the order that they are placed in the wizard, unless you use  the next and pageid attributes on the pages to change the sequence. The  wizard will rendered in a manner suitable for the user's selected theme and  platform. In newer versions of Mozilla, a statusbar may be placed directly  inside the wizard element which will be shared among all pages.  
+
+<br><strong>Attributes</strong>:
+firstpage, lastpage, onwizardback, onwizardcancel, onwizardfinish, onwizardnext, pagestep, title
+<br><strong>Properties and Methods</strong>:
+advance, canAdvance, canRewind, cancel, currentPage, getButton, getPageById, goTo, onFirstPage, onLastPage, pageCount, pageIndex, pageStep, rewind, title, wizardPages
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_wizardpage.html'>wizardpage</a></strong><br>  This element defines a page in a wizard. The content in the pages should be placed  inside the wizardpage element.  
+
+<br><strong>Attributes</strong>:
+description, label, next, onpageadvanced, onpagehide, onpagerewound, onpageshow, pageid
+<br><strong>Properties and Methods</strong>:
+next, pageid
+</p>
+</td></tr></table>
+<h4>Windows and Scripts</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_window.html'>window</a></strong><br>  Describes the structure of a top-level window. It is the root node of a XUL  document. It is by default a horizontally oriented box. As it is a box, all  box attributes can be used. By default, the window will have a  platform-specific frame around it.  
+
+<br><strong>Attributes</strong>:
+height, hidechrome, id, screenX, screenY, sizemode, title, width, windowtype
+</p>
+
+<p><strong><a href='ref_dialog.html'>dialog</a></strong><br>  This element should be used in place of the window element for dialog boxes.  The buttons attribute may be used to set which buttons should appear in the  dialog box. These buttons will be placed in the correct locations for the  user's platform.  
+
+<br><strong>Attributes</strong>:
+buttonalign, buttondir, buttonorient, buttonpack, buttons, ondialogaccept, ondialogcancel, ondialogdisclosure, ondialoghelp, title
+<br><strong>Properties and Methods</strong>:
+acceptDialog, buttons, cancelDialog, centerWindowOnScreen, enterDefaultAlways, getButton, moveToAlertPosition
+</p>
+
+<p><strong><a href='ref_dialogheader.html'>dialogheader</a></strong><br>  A heading row for a dialog box. This element should be placed inside a  dialog element. The header may have a title and a description.
+
+<br><strong>Attributes</strong>:
+crop, description, title
+</p>
+
+<p><strong><a href='ref_page.html'>page</a></strong><br>  Similar to a window, except it should be used for XUL files that are  to be loaded into an iframe.
+
+</p>
+
+<p><strong><a href='ref_overlay.html'>overlay</a></strong><br>  An overlay is used when it is desirable for a block of content to be shared  between several different windows. In addition, it can be used to append or  alter content in an existing window. An overlay is defined in a separate XUL  file. Overlays are applied while the XUL is being loaded.  
+
+<br><strong>Attributes</strong>:
+class, id
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_script.html'>script</a></strong><br>  Much like the HTML script element, this is used to declare a script to be  used by the XUL window. You should usually put scripts in a separate file  pointed to by the src attribute, but you may also place the script inline  inside the opening and closing script tags.  
+
+<br><strong>Attributes</strong>:
+src, type
+</p>
+
+<p><strong><a href='ref_titlebar.html'>titlebar</a></strong><br>  Used to represent a title bar. This element is used to create a custom  titlebar by placing the contents as children inside the titlebar. When  the titlebar is clicked and dragged, the window moves with it. Any  elements inside the titlebar do not receive events. The titlebar will send  a command event after the move is complete.  
+
+</p>
+
+<p><strong><a href='ref_resizer.html'>resizer</a></strong><br>  An element used for window resizing. If you place a custom resizing button  inside the resizer, the user will be able to resize the window by dragging  it. The resizer will send a command event after the resize is complete.
+
+<br><strong>Attributes</strong>:
+dir
+</p>
+
+<p><strong><a href='ref_stringbundle.html'>stringbundle</a></strong><br>  An element which can be used to load localized resources from property files.  Stringbundles should be placed inside a stringbundleset element.  
+
+<br><strong>Attributes</strong>:
+src
+<br><strong>Properties and Methods</strong>:
+appLocale, getFormattedString, getString, src, stringBundle
+</p>
+
+<p><strong><a href='ref_stringbundleset.html'>stringbundleset</a></strong><br>    A container for stringbundle elements.
+
+</p>
+</td></tr></table>
+<h4>Event Handlers</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_EventHandlers.html'>Event Handlers</a></strong><br>  The following describes the event handler attributes that are valid for most XUL  elements. The event name is the attribute without the 'on' prefix.  
+
+<br><strong>Attributes</strong>:
+CheckboxStateChange, DOMAttrModified, DOMMenuItemActive, DOMMenuItemInactive, DOMMouseScroll, DOMNodeInserted, DOMNodeRemoved, RadioStateChange, onblur, onbroadcast, onchange, onclick, onclose, oncommand, oncommandupdate, oncontextmenu, ondblclick, ondragdrop, ondragenter, ondragexit, ondraggesture, ondragover, onfocus, oninput, onkeydown, onkeypress, onkeyup, onload, onmousedown, onmousemove, onmouseout, onmouseover, onmouseup, onoverflow, onoverflowchanged, onpopuphidden, onpopuphiding, onpopupshowing, onpopupshown, onselect, onunderflow, onunload
+</p>
+</td></tr></table>
+<h4>XBL Elements</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_xblbindings.html'>bindings</a></strong><br>  The root node of an XBL file. It should contain one or more binding tags.  
+
+<br><strong>Attributes</strong>:
+id
+</p>
+
+<p><strong><a href='ref_xblbinding.html'>binding</a></strong><br>  Declares a binding. The id attribute is used to identify a binding and refer to  it within a style sheet via the -moz-binding property. The same binding can be  used to attach to any number of elements.  
+
+<br><strong>Attributes</strong>:
+display, extends, id, inheritstyle
+</p>
+
+<p><strong><a href='ref_xblcontent.html'>content</a></strong><br>  Used to define the anonymous content of a binding. The elements within the  content tag become the anonymous content of the element bound to. The content  is visible on screen as if it was present directly in the XUL file, however  the elements cannot be seen via the normal DOM functions.  
+
+<br><strong>Attributes</strong>:
+id
+</p>
+
+<p><strong><a href='ref_xblchildren.html'>children</a></strong><br>  Specifies the location where any child elements of the bound element are  placed in the generated content.  
+
+<br><strong>Attributes</strong>:
+id, includes
+</p>
+
+<p><strong><a href='ref_xblhandlers.html'>handlers</a></strong><br>  Used to hold handler elements, which are used to declare event  handlers.  
+
+<br><strong>Attributes</strong>:
+id
+</p>
+
+<p><strong><a href='ref_xblhandler.html'>handler</a></strong><br>  Specifies event handlers which the XBL element responds to. You can provide  default handling which can be overriden by an appropriate handler on the  bound element. When the event occurs, the code contained in the action  attribute or, if the action is not present, the content of the handler tag is  executed.  
+
+<br><strong>Attributes</strong>:
+action, button, charcode, clickcount, command, event, id, keycode, modifiers, phase, preventdefault
+</p>
+
+<p><strong><a href='ref_xblimplementation.html'>implementation</a></strong><br>  This element should contain all of the field, property and method  declarations for the binding.  
+
+<br><strong>Attributes</strong>:
+id, implements, name
+</p>
+
+<p><strong><a href='ref_xblproperty.html'>property</a></strong><br>  Declares a JavaScript property that is added to the element's object. The  property element may have a getter child element and a setter  child element to get and set the value of the property respectively.  
+
+<br><strong>Attributes</strong>:
+id, name, onget, onset, readonly
+</p>
+
+<p><strong><a href='ref_xblfield.html'>field</a></strong><br>  A field is similar to a property, except that should not have a  getter or setter. It is useful as a simple holder for a value.  
+
+<br><strong>Attributes</strong>:
+id, name, readonly
+</p>
+
+<p><strong><a href='ref_xblgetter.html'>getter</a></strong><br>  Defines code which is called to retrieve the value of a property.  The code should return the value of the property.  
+
+<br><strong>Attributes</strong>:
+id
+</p>
+
+<p><strong><a href='ref_xblsetter.html'>setter</a></strong><br>  Defines code which is called to modify the value of a property. The  variable val is defined as the value to set the property to.  
+
+<br><strong>Attributes</strong>:
+id
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_xblmethod.html'>method</a></strong><br>  Declares a JavaScript method that is added to the element's object. The  method may take arguments, declared with the parameter element.  
+
+<br><strong>Attributes</strong>:
+id, name
+</p>
+
+<p><strong><a href='ref_xblparameter.html'>parameter</a></strong><br>  Declares a parameter to a method. Each parameter has a name attribute  with becomes a variable that is declared in the method body and has the  value that was passed in to the method.  
+
+<br><strong>Attributes</strong>:
+id, name
+</p>
+
+<p><strong><a href='ref_xblbody.html'>body</a></strong><br>  The content of the body element should be the code to execute when the  method is called.  
+
+<br><strong>Attributes</strong>:
+id
+</p>
+
+<p><strong><a href='ref_xblconstructor.html'>constructor</a></strong><br>  The code inside this element is called when the binding is attached to an element.  You can use this to initialize the content the binding uses. The constructor  should be placed inside the implementation element.  
+
+<br><strong>Attributes</strong>:
+action, id
+</p>
+
+<p><strong><a href='ref_xbldestructor.html'>destructor</a></strong><br>  The code inside this element is called when the binding is removed from an element.  You can use this to unload resources to free memory. The destructor should be placed  inside the implementation element.  
+
+<br><strong>Attributes</strong>:
+action, id
+</p>
+
+<p><strong><a href='ref_xblresources.html'>resources</a></strong><br>  Used to specify a list of resources that the binding uses. This includes  images, using the image element or style sheets using the stylesheet  element. The resources element should be placed directly inside the binding  element.  
+
+<br><strong>Attributes</strong>:
+id
+</p>
+
+<p><strong><a href='ref_xblimage.html'>image</a></strong><br>  Declares an image resource used by the binding. The image is loaded as soon as the  binding is used. You can use this to preload a number of images for later use.  
+
+<br><strong>Attributes</strong>:
+id, src
+</p>
+
+<p><strong><a href='ref_xblstylesheet.html'>stylesheet</a></strong><br>  Declares a style sheet used by the binding. Using this element is preferred over  using an XML processing instruction. The style rules in the style sheet will only  be applied to the binding, not to other elements in the document.  
+
+<br><strong>Attributes</strong>:
+id, src
+</p>
+</td></tr></table>
+<h4>XPInstall Objects</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_InstallTrigger.html'>InstallTrigger</a></strong><br>  Used to trigger an installation of a component. The component should be  an XPI file containing the files to installed. The XPI file will be downloaded  and the install.js script within the installer will be executed. This object  is a global object and its methods can be called directly.  
+
+<br><strong>Properties and Methods</strong>:
+compareVersion, enabled, getVersion, install, installChrome, startSoftwareUpdate
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_Install.html'>Install</a></strong><br>  An object used for installations. This object is only available within an installation  script.  
+
+<br><strong>Properties and Methods</strong>:
+Install, addDirectory, addFile, alert, archive, arguments, buildID, cancelInstall, confirm, deleteRegisteredFile, execute, gestalt, getComponentFolder, getFolder, getLastError, getWinProfile, getWinRegistry, initInstall, jarfile, loadResources, logComment, patch, performInstall, platform, refreshPlugins, registerChrome, resetError, setPackageFolder, uninstall, url
+</p>
+
+<p><strong><a href='ref_File.html'>File</a></strong><br>  The File object can be used to manipulate files. Like the Install functions, the  functions of the File object only assign an operation to be performed once the  installation has begun.
+
+<br><strong>Properties and Methods</strong>:
+copy, dirCreate, dirGetParent, dirRemove, dirRename, diskSpaceAvailable, execute, exists, isDirectory, isFile, macAlias, modDate, modDateChanged, move, nativeVersion, remove, rename, size, unixLink, windowsRegisterServer, windowsShortcut
+</p>
+</td></tr></table>
+<h4>Some of Mozilla's Built-in Datasources</h4>
+<table>
+<tr><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_rdfbookmarks.html'>rdf:bookmarks</a></strong><br>  This datasource holds the user's bookmarks. Each bookmark holds a title and URL  and information about when the user has visited the bookmark and the schedule  for checking when the URL is checked for updates. The root of the bookmarks  datasource is NC:BookmarksRoot. You can also use the roots NC:PersonalToolbarFolder  for the folder holding personal toolbar items and NC:IEFavoritesRoot for the folder  containing the imported IE favorites.  
+
+<br><strong>Resource Properties</strong>:
+rdf:BookmarkAddDate, rdf:Description, rdf:LastModifiedDate, rdf:LastVisitDate, rdf:Name, rdf:Schedule, rdf:ShortcutURL, rdf:URL, rdf:status, rdf:type
+<br><strong>Resource Commands</strong>:
+rdf:deletebookmark, rdf:deletebookmarkfolder, rdf:deletebookmarkseparator, rdf:export, rdf:import, rdf:newbookmark, rdf:newfolder, rdf:newseparator, rdf:setnewbookmarkfolder, rdf:setnewsearchfolder, rdf:setpersonaltoolbarfolder
+</p>
+</td><td class='bblock' width='50%' valign='top'>
+
+<p><strong><a href='ref_rdfhistory.html'>rdf:history</a></strong><br>  The history datasource holds a list of the pages that the user has visited. It is  available in two forms, a flat list by using NC:HistoryRoot and organized by day  by using NC:HistoryByDate. In this latter form, items are stored in one of seven  folders, storing URLs visited in each of the recent seven days. URLs visited earlier  are placed in the last folder.  
+
+<br><strong>Resource Properties</strong>:
+rdf:Date, rdf:FirstVisitDate, rdf:Hostname, rdf:Name, rdf:Referrer, rdf:URL, rdf:VisitCount
+</p>
+
+<p><strong><a href='ref_rdffiles.html'>rdf:files</a></strong><br>  The files datasource holds a tree of the user's filesystem. Use NC:FilesRoot in  a ref attribute to grab the file list from the root. Alternatively, you can use  a file URL to specify a particular directory.  
+
+<br><strong>Resource Properties</strong>:
+rdf:Content-Length, rdf:LastModifiedDate, rdf:Name, rdf:URL, rdf:extension
+</p>
+
+<p><strong><a href='ref_rdfwindow-mediator.html'>rdf:window-mediator</a></strong><br>  This datasource holds a list of all of the open windows. Use a ref value of  NC:WindowMediatorRoot in a template.  
+
+<br><strong>Resource Properties</strong>:
+rdf:Name
+</p>
+
+</table>
+</body>
+</html>

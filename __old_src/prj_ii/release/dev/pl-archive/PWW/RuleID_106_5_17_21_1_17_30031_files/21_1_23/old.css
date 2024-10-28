@@ -1,0 +1,28 @@
+SMALL, .small, .smallbold, .small td { font-size: 12px; }
+.smaller, .smaller td { font-size: 11px; }
+.smallest, .smallest td { font-size: 10px; }
+.smallbold { font-weight: bold; }
+PRE, .pre { font-family: courier new, monospace }
+
+
+.nounderline { text-decoration:  none; }
+.header, .sub-head { font-size: 19px; font-weight: bold; }
+.header { margin-bottom: 10px; margin-top: 5px; }
+.sub-head { font-size: 16px; }
+.selectsmall { font-size: 10px; }
+.error { font-size: 11pt; font-weight: bold; color: black; }
+.crossout { text-decoration: line-through; color: #888888}
+
+
+/* new css  */
+.promoBorder { border : 1px solid #B5B1B1; }
+.sidemenuHead{ font-family : arial; font-weight : bold; font-size : 9pt; color : #4FA017; }
+.matrixHead { background-color:#E3E3E3; }
+.matrixItem { background-color:#F2F1F1; }
+.matrixCell1{ background-color:#E8F3E1; }
+.matrixCell2 { background-color:#D4E4CA; }
+
+.smaller-slogan{ font-family : arial; font-weight : bold; font-size : 11pt; color : #3B7A0A; }
+.small-slogan{ font-family : arial; font-weight : bold; font-size : 13pt; color : #000000; }
+.point {color:#3B7A0A;  }
+/* new css  */

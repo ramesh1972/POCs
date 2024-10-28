@@ -1,0 +1,602 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="advmenu.html"> 
+ <link rel="next" href="menuscroll.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Popup Menus</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 5.4 - Popup Menus 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <SPAN CLASS="currentpage">Popup Menus</SPAN></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="5.3 - More Menu Features"
+     href="advmenu.html">Previous</a>
+
+
+  <a class="nextlink" title="5.5 - Scrolling Menus"
+     href="menuscroll.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Popup Menus</h2>
+
+<P>
+In the last section, we looked at creating a menu on a menu bar. XUL also has the
+capability of creating popup menus. Popup menus are typically displayed when the
+user presses the right mouse button.
+</P>
+
+<H3>Creating a Popup Menu</H3>
+
+<P>
+XUL has three different types of popups, described below. The main difference is
+the way in which they appear.
+</P>
+
+<UL>
+  <LI><DIV><STRONG>Plain Popups</STRONG></DIV>
+      The plain popup is a popup window which appears when the user presses the left
+      mouse button on an element. They are much like the menus on the menu bar,
+      except that they can be placed anywhere and can contain any content. A good
+      example is the drop down menu that appears when you hold the mouse button
+      down over the back and forward buttons in a browser window.
+  </LI>
+  <LI><DIV><STRONG>Context Popups</STRONG></DIV>
+      The context popup is a popup window which appears when the user presses the
+      context menu button, which is usually the right mouse button. On some platforms,
+      this may be a different button - but it is always the button or combination of
+      key press and mouse button which invokes a context-specific menu. On the
+      Macintosh for example, the user must either press the Control key and click
+      the mouse button, or hold the mouse button down for a moment.
+  </LI>
+  <LI><DIV><STRONG>Tooltips</STRONG></DIV>
+      A tooltip popup window will appear when the user hovers over an element with
+      the mouse. This type of popup is usually used to provide a description of a
+      button in more detail than can be provided on the button itself.
+  </LI>
+</UL>
+
+<P>
+All three types of popups differ in the way that the user invokes them. They can
+contain any content, although menus are common for the plain and context popups
+and a simple string of text is common for a tooltip. The type of popup is
+determined by the element that invokes the popup.
+</P>
+
+<P>
+A popup is described using the <A CLASS="tag" HREF="elemref/ref_popup.html">popup</A> element. It has no
+special attributes and is a type of box. When invoked, it will display a window
+containing whatever you put inside the <A CLASS="tag" HREF="elemref/ref_popup.html">popup</A>. However,
+you should always put an <SPAN CLASS="attrib">id</SPAN> attribute on the popup
+as it used to associate the popup with an element. We'll see what this means
+soon. First, an example:
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;popupset&gt;
+  &lt;popup id="clipmenu"&gt;
+    &lt;menuitem label="Cut"/&gt;
+    &lt;menuitem label="Copy"/&gt;
+    &lt;menuitem label="Paste"/&gt;
+  &lt;/popup&gt;
+&lt;/popupset&gt;</PRE></DIV>
+
+
+
+<P>
+As can be seen here, a simple popup menu with three commands on it has been
+created. The <A CLASS="tag" HREF="elemref/ref_popup.html">popup</A> element surrounds the three menu
+items. It is much like the <A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A> element. It
+is a type of box and defaults to vertical orientation. You will also notice that
+the <SPAN CLASS="attrib">id</SPAN> has been set on the
+<A CLASS="tag" HREF="elemref/ref_popup.html">popup</A> element itself.
+</P>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_popupset.html">popupset</A> element surrounds the entire popup menu
+declaration. This is a generic container for popups, and is optional. It does
+not draw on screen but instead is used as a placeholder where you would declare
+all of your popups. As the name <A CLASS="tag" HREF="elemref/ref_popupset.html">popupset</A> implies, you
+can put multiple popup declarations inside it. Juts add additional ones after
+the first <A CLASS="tag" HREF="elemref/ref_popup.html">popup</A> element. You can have more than one
+<A CLASS="tag" HREF="elemref/ref_popupset.html">popupset</A> in a file, but usually you will have only
+one.
+</P>
+
+<P>
+Now that we've created the popup, it's time to make the popup appear. To do
+this we need to associate the popup with an element where it should appear.
+We do this because we only want the popup to appear when the user clicks in a
+certain area of a window. Typically, this will be a specific button or a box.
+</P>
+
+<P>
+To associate the popup with an element, you add one of three attributes to the
+element. The attribute you add depends on which type of popup you want to
+create. For plain popups, add a <SPAN CLASS="attrib">popup</SPAN> attribute
+to the element. For context popups, add a <SPAN CLASS="attrib">context</SPAN>
+attribute. Finally, for tooltip popups, add a <SPAN CLASS="attrib">tooltip</SPAN>
+attribute.
+</P>
+
+<P>
+The value of the attribute must be set to the <SPAN CLASS="attrib">id</SPAN>
+of the <A CLASS="tag" HREF="elemref/ref_popup.html">popup</A> that you want to have appear. This is
+why you must put the id on the popup. That way it's easy to have multiple popups
+in a file.
+</P>
+
+<P>
+In the example above, we want to make the popup a context menu. That means that we
+need to use the <SPAN CLASS="attrib">context</SPAN> attribute and add it to the
+element which we want to have the popup associated with. The sample below shows
+how we might do this:
+</P>
+
+
+Example 5.4.1:
+<A HREF='examples/ex_popups_1.xul.txt'>Source</A>
+<A HREF="examples/ex_popups_1.xul" ONCLICK="window.open('examples/ex_popups_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;popupset&gt;
+  &lt;popup id="clipmenu"&gt;
+    &lt;menuitem label="Cut"/&gt;
+    &lt;menuitem label="Copy"/&gt;
+    &lt;menuitem label="Paste"/&gt;
+  &lt;/popup&gt;
+&lt;/popupset&gt;
+
+&lt;box context="clipmenu"&gt;
+  &lt;description value="Context click for menu"/&gt;
+&lt;/box&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/popups-ex1.jpg" ALIGN="left" ALT="" WIDTH=168 HEIGHT=103>
+Here, the popup has been associated with a box. Whenever you context-click
+(right-click) anywhere inside the box, the popup menu will appear. The
+popup will also appear even if you click on the children of the box so it
+will work if you click on the <A CLASS="tag" HREF="elemref/ref_description.html">description</A> element also. The
+<SPAN CLASS="attrib">context</SPAN> attribute has been used to associate the
+box with a popup with the same <SPAN CLASS="attrib">id</SPAN>. In this case,
+the popup <SPAN CLASS="aval">clipmenu</SPAN> will appear. This way, you can
+have a number of popups and associate them with different elements.
+</P>
+
+<P>
+You could associate multiple popups with the same element by putting more
+attributes of different types on an element. You could also associate the
+same popup with multiple elements which is one advantage of using the
+popup syntax. Popups can only be associated with XUL elements. They cannot
+be associated with HTML elements.
+</P>
+
+<H3>Tooltips</H3>
+
+<P>
+We'll look at a simple way to create tooltips here. There are two ways to
+create a tooltip. The simplest way, which is much more common, is to add a
+<SPAN CLASS="attrib">tooltiptext</SPAN> attribute to an element for which
+you want to assign a tooltip.
+</P>
+
+<P>
+The second method is to use a <A CLASS="tag" HREF="elemref/ref_tooltip.html">tooltip</A> element
+containing the content of a tooltip. This requires you to have a separate
+block of content for each tooltip or have a script which sets the content,
+however it does allow you to use any content besides text in a tooltip.
+</P>
+
+
+Example 5.4.2:
+<A HREF='examples/ex_popups_2.xul.txt'>Source</A>
+<A HREF="examples/ex_popups_2.xul" ONCLICK="window.open('examples/ex_popups_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;button label="Save" tooltiptext="Click here to save your stuff"/&gt;
+
+&lt;popupset&gt;
+  &lt;tooltip id="moretip" orient="vertical" style="background-color: #33DD00;"&gt;
+    &lt;description value="Click here to see more information"/&gt;
+    &lt;description value="Really!" style="color: red;"/&gt;
+  &lt;/tooltip&gt;
+&lt;/popupset&gt;
+
+&lt;button label="More" tooltip="moretip"/&gt;</PRE></DIV>
+
+
+
+<P>
+These two buttons each have a tooltip. The first uses the default tooltip
+style. The second uses a custom tooltip that has a different background
+color and styled text. The tooltip is associated with the More button
+using the <SPAN CLASS="attrib">tooltip</SPAN> attribute, which is set to
+the corresponding <SPAN CLASS="attrib">id</SPAN> of the 
+<A CLASS="tag" HREF="elemref/ref_tooltip.html">tooltip</A> element. Note that the
+<A CLASS="tag" HREF="elemref/ref_tooltip.html">tooltip</A> element is still placed inside a
+<A CLASS="tag" HREF="elemref/ref_popupset.html">popupset</A> element like other popup types.
+</P>
+
+<H3>Popup Alignment</H3>
+
+<P>
+By default, the popup and context windows will appear where the mouse pointer
+is. Tooltips will be placed slightly below the element so that the mouse pointer
+does not obscure it. There are cases however, where you will want to indicate in
+more detail where the popup appears. For example, the popup menu that appears
+when you click the Back button in a browser should appear underneath the back
+button, not where the mouse pointer is.
+</P>
+
+<P>
+To change the popup position, you can use an additional attribute,
+<SPAN CLASS="attrib">position</SPAN>, on the
+<A CLASS="tag" HREF="elemref/ref_popup.html">popup</A>. You can also add it to the
+<A CLASS="tag" HREF="elemref/ref_menupopup.html">menupopup</A> element. This attribute is used to indicate
+the placement of the popup relative to the element invoking the popup. It can
+be set to a number of values, which are described briefly below:
+</P>
+
+<UL>
+  <LI><DIV CLASS="aval">after_start</DIV>
+      The popup appears below the element with the left edges of the element and
+      the popup window aligned. If the popup window is larger than the
+      element, is extends to the right. This is the value used for the drop-down
+      menus associated with the browser's Back and Froward buttons.
+  </LI>
+  <LI><DIV CLASS="aval">after_end</DIV>
+      The popup appears below the element with the right edges of the element and
+      the popup window aligned.
+  </LI>
+  <LI><DIV CLASS="aval">before_start</DIV>
+      The popup appears above the element with the left edges of the element and
+      the popup window aligned.
+  </LI>
+  <LI><DIV CLASS="aval">before_end</DIV>
+      The popup appears above the element with the right edges of the element and
+      the popup window aligned.
+  </LI>
+  <LI><DIV CLASS="aval">end_after</DIV>
+      The popup appears to the right of the element with the bottom edges of the
+      element and the popup window aligned.
+  </LI>
+  <LI><DIV CLASS="aval">end_before</DIV>
+      The popup appears to the right of the element with the top edges of the
+      element and the popup window aligned.
+  </LI>
+  <LI><DIV CLASS="aval">start_after</DIV>
+      The popup appears to the left of the element with the bottom edges of the
+      element and the popup window aligned.
+  </LI>
+  <LI><DIV CLASS="aval">start_before</DIV>
+      The popup appears to the left of the element with the top edges of the
+      element and the popup window aligned.
+  </LI>
+  <LI><DIV CLASS="aval">overlap</DIV>
+      The popup appears on top of the element.
+  </LI>
+  <LI><DIV CLASS="aval">at_pointer</DIV>
+      The popup appears at the mouse pointer position.
+  </LI>
+  <LI><DIV CLASS="aval">after_pointer</DIV>
+      The popup appears at the same horizontal position as the mouse pointer but
+      appears below the element. This is how tooltips appear.
+  </LI>
+</UL>
+
+<P>
+By adding one or both of these attributes to an element, you can specify
+precisely where the popup appears. You cannot specify an exact pixel position.
+The <SPAN CLASS="attrib">position</SPAN> attribute can be used with all three
+popup types, although you probably wouldn't change the value for tooltips.
+</P>
+
+<P>
+The example below demonstrates creating a back button with a popup menu:
+</P>
+
+
+Example 5.4.3:
+<A HREF='examples/ex_popups_3.xul.txt'>Source</A>
+<A HREF="examples/ex_popups_3.xul" ONCLICK="window.open('examples/ex_popups_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;popupset&gt;
+  &lt;popup id="backpopup" position="after_start"&gt;
+    &lt;menuitem label="Page 1"/&gt;
+    &lt;menuitem label="Page 2"/&gt;
+  &lt;/popup&gt;
+&lt;/popupset&gt;
+
+&lt;button label="Pop Me Up" popup="backpopup"/&gt;</PRE></DIV>
+
+
+
+<H3>Popup Example</H3>
+
+<DIV CLASS="task">
+
+<P>
+Let's add a simple popup menu to the find files dialog. For simplicity,
+we'll just replicate the contents of the Edit menu. Let's have the popup
+appear when clicking over the first tab panel:
+</P>
+
+
+<DIV CLASS="sample"><PRE><SPAN STYLE="color: red;">&lt;popupset&gt;
+  &lt;popup id="editpopup"&gt;
+    &lt;menuitem label="Cut" accesskey="t"/&gt;
+    &lt;menuitem label="Copy" accesskey="c"/&gt;
+    &lt;menuitem label="Paste" accesskey="p" disabled="true"/&gt;
+  &lt;/popup&gt;
+&lt;/popupset&gt;
+</SPAN>
+&lt;vbox flex="1"&gt;
+.
+.
+.
+
+<SPAN STYLE="color: red;">&lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;</SPAN></PRE></DIV>
+
+
+
+<P>
+Here a simple popup that is similar to the edit menu has been added to the first
+tabpanel. If you right-click (Control-click on the Macintosh) anywhere on the
+first panel, the popup will appear. However, the popup will not appear if you
+click anywhere else. Note that the textbox has its own built-in popup menu which
+will override the one we specified.
+</P>
+
+</DIV>
+
+<HR>
+<P>
+<A HREF="menuscroll.html">(Next)</A>
+Next, we'll look at how to create scrolling menus.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_popups_1.xul.txt'>5.4.1</A>
+  <A HREF='examples/ex_popups_2.xul.txt'>5.4.2</A>
+  <A HREF='examples/ex_popups_3.xul.txt'>5.4.3</A>
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-popups.xul.txt'>Source</A>
+<A HREF="examples/findfile/findfile-popups.xul" ONCLICK="window.open('examples/findfile/findfile-popups.xul','xulff','chrome,resizable'); return false;">View</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="5.3 - More Menu Features"
+     href="advmenu.html">Previous</a>
+
+
+  <a class="nextlink" title="5.5 - Scrolling Menus"
+     href="menuscroll.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+
+<element name='constructor' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblmethods.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblconstructor.html</reference>
+  The code inside this element is called when the binding is attached to an element.  You can use this to initialize the content the binding uses. The constructor  should be placed inside the xbl element.  
+
+<attr name='action'>
+  The code contained in the action value is executed for the constructor.  Alternatively, you can put the code inside the constructor element.
+</attr>
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the constructor with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+</element>

@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='toolbarspacer' spec='Firefox'>
+<reference>http://www.xulplanet.com/reference/elemref/ref_toolbarspacer.html</reference>
+  A space between toolbar items.
+
+<implements>nsIAccessibleProvider</implements>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the toolbarspacer.
+</prop>
+</element>

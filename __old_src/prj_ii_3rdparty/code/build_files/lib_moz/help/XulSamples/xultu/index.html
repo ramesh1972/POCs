@@ -1,0 +1,315 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - XUL Tutorial</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+
+ XUL Tutorial 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+
+<a name="apps">Utilities</a>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xpimaker/">XPI Maker</A><br>
+      A visual utility to help in building in chrome packages.
+  </li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/rdfds/">RDF Library</a><br>
+      A library for manipulating RDF datasources.
+  </li>
+  <li><a href="examples/allelem/allelem.xul"
+onclick="window.open('examples/allelem/allelem.xul','allelem','chrome,resizeable'); return false;">All
+Elements Example</a> (<a href="examples/allelem/">Source Files</a>)<br>
+      An example demonstrating all of the XUL elements.
+  </li>
+  <li><a href="examples/aligner.xul"
+onclick="window.open('examples/aligner.xul','aligner','chrome,resizeable'); return false;">Box
+Alignment Example</a><br>
+      An example to test the box alignment properties.
+  </li>
+</ul>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+
+
+
+
+<h1>XUL Tutorial</h1>
+
+<P>
+The XUL Tutorial was created by <A HREF="http://www.xulplanet.com/ndeakin/">Neil Deakin</A>
+</P>
+
+<P>
+Last updated on March 18, 2005
+</P>
+
+<P>
+Welcome to the XUL tutorial. This tutorial describes XUL, the XML User-interface
+Language. This language was created for the Mozilla application and is used to
+define its user interface.
+</P>
+
+<P>
+This tutorial describes XUL as it is used in Mozilla 1.4.
+</P>
+
+<DIV ID="contentsblock">
+
+<UL>
+  <LI><STRONG>1.</STRONG> Introduction
+  <UL>
+    <LI><STRONG>1.1</STRONG> <A HREF="intro.html">Introduction</A></LI>
+    <LI><STRONG>1.2</STRONG> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI><STRONG>1.3</STRONG> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI><STRONG>1.4</STRONG> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>2.</STRONG> Simple Elements
+  <UL>
+    <LI><STRONG>2.1</STRONG> <A HREF="window.html">Creating a Window</A></LI>
+    <LI><STRONG>2.2</STRONG> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI><STRONG>2.3</STRONG> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI><STRONG>2.4</STRONG> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI><STRONG>2.5</STRONG> <A HREF="lists.html">List Controls</A></LI>
+    <LI><STRONG>2.6</STRONG> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI><STRONG>2.7</STRONG> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI><STRONG>2.8</STRONG> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI><STRONG>2.9</STRONG> <A HREF="advbtns.html">More Button Features</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>3.</STRONG> The Box Model
+  <UL>
+    <LI><STRONG>3.1</STRONG> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI><STRONG>3.2</STRONG> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI><STRONG>3.3</STRONG> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI><STRONG>3.4</STRONG> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI><STRONG>3.5</STRONG> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>4.</STRONG> More Layout Elements
+  <UL>
+    <LI><STRONG>4.1</STRONG> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI><STRONG>4.2</STRONG> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI><STRONG>4.3</STRONG> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI><STRONG>4.4</STRONG> <A HREF="grids.html">Grids</A></LI>
+    <LI><STRONG>4.5</STRONG> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI><STRONG>4.6</STRONG> <A HREF="splitter.html">Splitters</A></LI>
+    <LI><STRONG>4.7</STRONG> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>5.</STRONG> Toolbars and Menus
+  <UL>
+    <LI><STRONG>5.1</STRONG> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI><STRONG>5.2</STRONG> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI><STRONG>5.3</STRONG> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI><STRONG>5.4</STRONG> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI><STRONG>5.5</STRONG> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>6.</STRONG> Events and Scripts
+  <UL>
+    <LI><STRONG>6.1</STRONG> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI><STRONG>6.2</STRONG> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI><STRONG>6.3</STRONG> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI><STRONG>6.4</STRONG> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI><STRONG>6.5</STRONG> <A HREF="commands.html">Commands</A></LI>
+    <LI><STRONG>6.6</STRONG> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI><STRONG>6.7</STRONG> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>7.</STRONG> Document Object Model
+  <UL>
+    <LI><STRONG>7.1</STRONG> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI><STRONG>7.2</STRONG> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI><STRONG>7.3</STRONG> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI><STRONG>7.4</STRONG> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI><STRONG>7.5</STRONG> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI><STRONG>7.6</STRONG> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>8.</STRONG> Trees
+  <UL>
+    <LI><STRONG>8.1</STRONG> <A HREF="trees.html">Trees</A></LI>
+    <LI><STRONG>8.2</STRONG> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI><STRONG>8.3</STRONG> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI><STRONG>8.4</STRONG> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI><STRONG>8.5</STRONG> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI><STRONG>8.6</STRONG> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>9.</STRONG> RDF and Templates
+  <UL>
+    <LI><STRONG>9.1</STRONG> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI><STRONG>9.2</STRONG> <A HREF="templates.html">Templates</A></LI>
+    <LI><STRONG>9.3</STRONG> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI><STRONG>9.4</STRONG> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI><STRONG>9.5</STRONG> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI><STRONG>9.6</STRONG> <A HREF="persist.html">Persistent Data</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>10.</STRONG> Skins and Locales
+  <UL>
+    <LI><STRONG>10.1</STRONG> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI><STRONG>10.2</STRONG> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI><STRONG>10.3</STRONG> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI><STRONG>10.4</STRONG> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI><STRONG>10.5</STRONG> <A HREF="locale.html">Localization</A></LI>
+    <LI><STRONG>10.6</STRONG> <A HREF="locprops.html">Property Files</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>11.</STRONG> Bindings
+  <UL>
+    <LI><STRONG>11.1</STRONG> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI><STRONG>11.2</STRONG> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI><STRONG>11.3</STRONG> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI><STRONG>11.4</STRONG> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI><STRONG>11.5</STRONG> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI><STRONG>11.6</STRONG> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI><STRONG>11.7</STRONG> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI><STRONG>11.8</STRONG> <A HREF="xblex.html">XBL Example</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>12.</STRONG> Specialized Window Types
+  <UL>
+    <LI><STRONG>12.1</STRONG> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI><STRONG>12.2</STRONG> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI><STRONG>12.3</STRONG> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI><STRONG>12.4</STRONG> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI><STRONG>12.5</STRONG> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI><STRONG>12.6</STRONG> <A HREF="overlay.html">Overlays</A></LI>
+    <LI><STRONG>12.7</STRONG> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </UL>
+  </LI>
+  <LI><STRONG>13.</STRONG> Installation
+  <UL>
+    <LI><STRONG>13.1</STRONG> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI><STRONG>13.2</STRONG> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI><STRONG>13.3</STRONG> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </UL>
+</UL>
+
+</DIV>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+

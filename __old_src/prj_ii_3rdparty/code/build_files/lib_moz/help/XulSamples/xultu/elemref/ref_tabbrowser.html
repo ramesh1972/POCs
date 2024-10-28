@@ -1,0 +1,570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Tabbrowser Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Tabbrowser 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Tabbrowser</h3>
+
+<p>
+  This element is used for holding a set of read-only views of Web documents.  Similar to the <a href='ref_browser.html'>browser</a> element, except that mutliple documents can be  displayed, each in a separate tab. This element is implemented as a set of  browser elements inside a <a href='ref_tabbox.html'>tabbox</a>.  </p>
+<div class='aphead'><p>Attributes:</p><table class='apheadbody'><tr>
+<td><a href='#attr_autocompleteenabled'>autocompleteenabled</a></td>
+<td><a href='#attr_autocompletepopup'>autocompletepopup</a></td>
+<td><a href='#attr_autoscroll'>autoscroll</a></td>
+<td><a href='#attr_contentcontextmenu'>contentcontextmenu</a></td>
+<td><a href='#attr_contenttooltip'>contenttooltip</a></td>
+</tr><tr>
+<td><a href='#attr_handleCtrlPageUpDown'>handleCtrlPageUpDown</a></td>
+<td><a href='#attr_onbookmarkgroup'>onbookmarkgroup</a></td>
+<td><a href='#attr_onnewtab'>onnewtab</a></td>
+</tr></table>
+</div>
+<div class='aphead'><p>Properties and Methods:</p><table class='apheadbody'><tr>
+<td><a href='#prop_'></a></td>
+<td><a href='#prop_addProgressListener'>addProgressListener</a></td>
+<td><a href='#prop_addTab'>addTab</a></td>
+<td><a href='#prop_appendGroup'>appendGroup</a></td>
+<td><a href='#prop_browsers'>browsers</a></td>
+</tr><tr>
+<td><a href='#prop_canGoBack'>canGoBack</a></td>
+<td><a href='#prop_canGoForward'>canGoForward</a></td>
+<td><a href='#prop_contentDocument'>contentDocument</a></td>
+<td><a href='#prop_contentTitle'>contentTitle</a></td>
+<td><a href='#prop_contentViewerEdit'>contentViewerEdit</a></td>
+</tr><tr>
+<td><a href='#prop_contentViewerFile'>contentViewerFile</a></td>
+<td><a href='#prop_contentWindow'>contentWindow</a></td>
+<td><a href='#prop_currentURI'>currentURI</a></td>
+<td><a href='#prop_docShell'>docShell</a></td>
+<td><a href='#prop_documentCharsetInfo'>documentCharsetInfo</a></td>
+</tr><tr>
+<td><a href='#prop_getBrowserForTab'>getBrowserForTab</a></td>
+<td><a href='#prop_goBack'>goBack</a></td>
+<td><a href='#prop_goBackGroup'>goBackGroup</a></td>
+<td><a href='#prop_goForward'>goForward</a></td>
+<td><a href='#prop_goForwardGroup'>goForwardGroup</a></td>
+</tr><tr>
+<td><a href='#prop_goHome'>goHome</a></td>
+<td><a href='#prop_gotoIndex'>gotoIndex</a></td>
+<td><a href='#prop_homePage'>homePage</a></td>
+<td><a href='#prop_loadGroup'>loadGroup</a></td>
+<td><a href='#prop_loadURI'>loadURI</a></td>
+</tr><tr>
+<td><a href='#prop_loadURIWithFlags'>loadURIWithFlags</a></td>
+<td><a href='#prop_markupDocumentViewer'>markupDocumentViewer</a></td>
+<td><a href='#prop_reload'>reload</a></td>
+<td><a href='#prop_reloadAllTabs'>reloadAllTabs</a></td>
+<td><a href='#prop_reloadTab'>reloadTab</a></td>
+</tr><tr>
+<td><a href='#prop_reloadWithFlags'>reloadWithFlags</a></td>
+<td><a href='#prop_removeAllTabsBut'>removeAllTabsBut</a></td>
+<td><a href='#prop_removeCurrentTab'>removeCurrentTab</a></td>
+<td><a href='#prop_removeProgressListener'>removeProgressListener</a></td>
+<td><a href='#prop_removeTab'>removeTab</a></td>
+</tr><tr>
+<td><a href='#prop_replaceGroup'>replaceGroup</a></td>
+<td><a href='#prop_securityUI'>securityUI</a></td>
+<td><a href='#prop_selectedBrowser'>selectedBrowser</a></td>
+<td><a href='#prop_selectedTab'>selectedTab</a></td>
+<td><a href='#prop_sessionHistory'>sessionHistory</a></td>
+</tr><tr>
+<td><a href='#prop_stop'>stop</a></td>
+<td><a href='#prop_tabContainer'>tabContainer</a></td>
+<td><a href='#prop_webBrowserFind'>webBrowserFind</a></td>
+<td><a href='#prop_webNavigation'>webNavigation</a></td>
+<td><a href='#prop_webProgress'>webProgress</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='attrblk'>Attributes:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#attr_align'>align</a><br>
+<a href='ref_XULElement.html#attr_allowevents'>allowevents</a><br>
+<a href='ref_XULElement.html#attr_allownegativeassertions'>allownegativeassertions</a><br>
+<a href='ref_XULElement.html#attr_class'>class</a><br>
+<a href='ref_XULElement.html#attr_coalesceduplicatearcs'>coalesceduplicatearcs</a><br>
+<a href='ref_XULElement.html#attr_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#attr_container'>container</a><br>
+<a href='ref_XULElement.html#attr_containment'>containment</a><br>
+<a href='ref_XULElement.html#attr_context'>context</a><br>
+<a href='ref_XULElement.html#attr_contextmenu'>contextmenu</a><br>
+<a href='ref_XULElement.html#attr_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#attr_debug'>debug</a><br>
+<a href='ref_XULElement.html#attr_dir'>dir</a><br>
+<a href='ref_XULElement.html#attr_empty'>empty</a><br>
+<a href='ref_XULElement.html#attr_equalsize'>equalsize</a><br>
+<a href='ref_XULElement.html#attr_flags'>flags</a><br>
+<a href='ref_XULElement.html#attr_flex'>flex</a><br>
+<a href='ref_XULElement.html#attr_height'>height</a><br>
+<a href='ref_XULElement.html#attr_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#attr_id'>id</a><br>
+<a href='ref_XULElement.html#attr_insertafter'>insertafter</a><br>
+<a href='ref_XULElement.html#attr_insertbefore'>insertbefore</a><br>
+<a href='ref_XULElement.html#attr_left'>left</a><br>
+<a href='ref_XULElement.html#attr_maxheight'>maxheight</a><br>
+<a href='ref_XULElement.html#attr_maxwidth'>maxwidth</a><br>
+<a href='ref_XULElement.html#attr_menu'>menu</a><br>
+<a href='ref_XULElement.html#attr_minheight'>minheight</a><br>
+<a href='ref_XULElement.html#attr_minwidth'>minwidth</a><br>
+<a href='ref_XULElement.html#attr_mousethrough'>mousethrough</a><br>
+<a href='ref_XULElement.html#attr_observes'>observes</a><br>
+<a href='ref_XULElement.html#attr_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#attr_orient'>orient</a><br>
+<a href='ref_XULElement.html#attr_pack'>pack</a><br>
+<a href='ref_XULElement.html#attr_persist'>persist</a><br>
+<a href='ref_XULElement.html#attr_popup'>popup</a><br>
+<a href='ref_XULElement.html#attr_position'>position</a><br>
+<a href='ref_XULElement.html#attr_ref'>ref</a><br>
+<a href='ref_XULElement.html#attr_removeelement'>removeelement</a><br>
+<a href='ref_XULElement.html#attr_sortDirection'>sortDirection</a><br>
+<a href='ref_XULElement.html#attr_sortResource'>sortResource</a><br>
+<a href='ref_XULElement.html#attr_sortResource2'>sortResource2</a><br>
+<a href='ref_XULElement.html#attr_statustext'>statustext</a><br>
+<a href='ref_XULElement.html#attr_style'>style</a><br>
+<a href='ref_XULElement.html#attr_template'>template</a><br>
+<a href='ref_XULElement.html#attr_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#attr_tooltiptext'>tooltiptext</a><br>
+<a href='ref_XULElement.html#attr_top'>top</a><br>
+<a href='ref_XULElement.html#attr_uri'>uri</a><br>
+<a href='ref_XULElement.html#attr_wait-cursor'>wait-cursor</a><br>
+<a href='ref_XULElement.html#attr_width'>width</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='attr_autocompleteenabled'><span class='attrib'>autocompleteenabled</span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Firefox only </span></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Set to true to enable autocomplete of fields.</p>
+  <h5><a name='attr_autocompletepopup'><span class='attrib'>autocompletepopup</span></a></h5>
+<p class='aptype'>Type:&nbsp;id of popup element</p>  <p>
+  The id of a popup element used to hold autocomplete results for the tabbrowser.</p>
+  <h5><a name='attr_autoscroll'><span class='attrib'>autoscroll</span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Firefox only </span></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  Set to false to disable autoscroll for this tabbrowser. If this attribute is set to  true or omitted, autoscroll will be enabled or depending on the user  preference 'general.autoScroll'.</p>
+  <h5><a name='attr_contentcontextmenu'><span class='attrib'>contentcontextmenu</span></a></h5>
+<p class='aptype'>Type:&nbsp;id of a menupopup element</p>  <p>
+  A reference to the context menu for the content area in the tabbrowser.</p>
+  <h5><a name='attr_contenttooltip'><span class='attrib'>contenttooltip</span></a></h5>
+<p class='aptype'>Type:&nbsp;id of a tooltip element</p>  <p>
+  A reference to the tooltip element to be used for the content area in the  tabbrowser.</p>
+  <h5><a name='attr_handleCtrlPageUpDown'><span class='attrib'>handleCtrlPageUpDown</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  If set to true or omitted, the tabbrowser will switch to the next tab when the  Control and Page Up or Page Down keys are pressed. If this attribute is set  to false, these keys do not navigate between tabs.</p>
+  <h5><a name='attr_onbookmarkgroup'><span class='attrib'>onbookmarkgroup</span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Not in Firefox </span></h5>
+<p class='aptype'>Type:&nbsp;script code</p>  <p>
+  This code executes when the user chooses the 'Bookmark This Group of Tabs'  command.</p>
+  <h5><a name='attr_onnewtab'><span class='attrib'>onnewtab</span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Not in Firefox </span></h5>
+<p class='aptype'>Type:&nbsp;script code</p>  <p>
+  This script will be called when the new tab button is clicked.</p>
+</div>
+<hr class='propsplit'><h4 class='propslist'><a name='propsblk'>Properties and Methods:</a></h4>
+<div class='apinherits'>
+<p>Inherited from <a href='ref_XULElement.html'>XUL Element</a>: </p><p class='apheadbody'>
+<a href='ref_XULElement.html#prop_align'>align</a><br>
+<a href='ref_XULElement.html#prop_allowEvents'>allowEvents</a><br>
+<a href='ref_XULElement.html#prop_blur'>blur</a><br>
+<a href='ref_XULElement.html#prop_boxObject'>boxObject</a><br>
+<a href='ref_XULElement.html#prop_boxObject.element'>boxObject.element</a><br>
+<a href='ref_XULElement.html#prop_boxObject.getLookAndFeelMetric'>boxObject.getLookAndFeelMetric</a><br>
+<a href='ref_XULElement.html#prop_boxObject.height'>boxObject.height</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenX'>boxObject.screenX</a><br>
+<a href='ref_XULElement.html#prop_boxObject.screenY'>boxObject.screenY</a><br>
+<a href='ref_XULElement.html#prop_boxObject.width'>boxObject.width</a><br>
+<a href='ref_XULElement.html#prop_boxObject.x'>boxObject.x</a><br>
+<a href='ref_XULElement.html#prop_boxObject.y'>boxObject.y</a><br>
+<a href='ref_XULElement.html#prop_builder'>builder</a><br>
+<a href='ref_XULElement.html#prop_className'>className</a><br>
+<a href='ref_XULElement.html#prop_click'>click</a><br>
+<a href='ref_XULElement.html#prop_collapsed'>collapsed</a><br>
+<a href='ref_XULElement.html#prop_contextMenu'>contextMenu</a><br>
+<a href='ref_XULElement.html#prop_controllers'>controllers</a><br>
+<a href='ref_XULElement.html#prop_database'>database</a><br>
+<a href='ref_XULElement.html#prop_datasources'>datasources</a><br>
+<a href='ref_XULElement.html#prop_dir'>dir</a><br>
+<a href='ref_XULElement.html#prop_doCommand'>doCommand</a><br>
+<a href='ref_XULElement.html#prop_flex'>flex</a><br>
+<a href='ref_XULElement.html#prop_focus'>focus</a><br>
+<a href='ref_XULElement.html#prop_getElementsByAttribute'>getElementsByAttribute</a><br>
+<a href='ref_XULElement.html#prop_height'>height</a><br>
+<a href='ref_XULElement.html#prop_hidden'>hidden</a><br>
+<a href='ref_XULElement.html#prop_id'>id</a><br>
+<a href='ref_XULElement.html#prop_left'>left</a><br>
+<a href='ref_XULElement.html#prop_maxHeight'>maxHeight</a><br>
+<a href='ref_XULElement.html#prop_maxWidth'>maxWidth</a><br>
+<a href='ref_XULElement.html#prop_menu'>menu</a><br>
+<a href='ref_XULElement.html#prop_minHeight'>minHeight</a><br>
+<a href='ref_XULElement.html#prop_minWidth'>minWidth</a><br>
+<a href='ref_XULElement.html#prop_observes'>observes</a><br>
+<a href='ref_XULElement.html#prop_ordinal'>ordinal</a><br>
+<a href='ref_XULElement.html#prop_orient'>orient</a><br>
+<a href='ref_XULElement.html#prop_pack'>pack</a><br>
+<a href='ref_XULElement.html#prop_persist'>persist</a><br>
+<a href='ref_XULElement.html#prop_ref'>ref</a><br>
+<a href='ref_XULElement.html#prop_resource'>resource</a><br>
+<a href='ref_XULElement.html#prop_statusText'>statusText</a><br>
+<a href='ref_XULElement.html#prop_style'>style</a><br>
+<a href='ref_XULElement.html#prop_tooltip'>tooltip</a><br>
+<a href='ref_XULElement.html#prop_tooltipText'>tooltipText</a><br>
+<a href='ref_XULElement.html#prop_top'>top</a><br>
+<a href='ref_XULElement.html#prop_width'>width</a><br>
+</p>
+<p>Inherited from Element:</p>
+<p class='apheadbody'>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_addEventListener'>addEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_appendChild'>appendChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_attributes'>attributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_childNodes'>childNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_cloneNode'>cloneNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_dispatchEvent'>dispatchEvent</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_firstChild'>firstChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttribute'>getAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNS'>getAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNode'>getAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getAttributeNodeNS'>getAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagName'>getElementsByTagName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_getElementsByTagNameNS'>getElementsByTagNameNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttribute'>hasAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributeNS'>hasAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasAttributes'>hasAttributes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_hasChildNodes'>hasChildNodes</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_insertBefore'>insertBefore</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_isSupported'>isSupported</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_lastChild'>lastChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_localName'>localName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_namespaceURI'>namespaceURI</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nextSibling'>nextSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeName'>nodeName</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeType'>nodeType</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_nodeValue'>nodeValue</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_normalize'>normalize</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_ownerDocument'>ownerDocument</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_parentNode'>parentNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_prefix'>prefix</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_previousSibling'>previousSibling</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttribute'>removeAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNS'>removeAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeAttributeNode'>removeAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeChild'>removeChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_removeEventListener'>removeEventListener</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_replaceChild'>replaceChild</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttribute'>setAttribute</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNS'>setAttributeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNode'>setAttributeNode</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#method_setAttributeNodeNS'>setAttributeNodeNS</a><br>
+<a href='http://www.xulplanet.com/references/objref/XULElement.html#prop_tagName'>tagName</a><br>
+</p>
+</div>
+<div class='ref_apblk'>
+  <h5><a name='prop_addProgressListener'><span class='attrib'> addProgressListener ( listener ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Add a progress listener to the tabbrowser which will monitor loaded documents. The  progress listener should implement the  <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIWebProgressListener.html">nsIWebProgressListener</a>  interface.</p>
+  <h5><a name='prop_addTab'><span class='attrib'> addTab ( url ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;tab element</p>  <p>
+  
+  Displays a new tab loading the specified URL as the document.  The row of tabs will appear if needed.</p>
+  <h5><a name='prop_appendGroup'><span class='attrib'> appendGroup ( group ) </span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Not in Firefox </span></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Add several new tabs to the end of the existing tabs. The argument should be  an array of objects, one for each document to load. The objects may be  defined in script and contain a 'URI' property for the URL of the page to  load. A 'referrerURI' property may also be optionally used to set the  referrer page.</p>
+  <h5><a name='prop_browsers'><span class='attrib'>browsers</span></a></h5>
+<p class='aptype'>Type:&nbsp;nodelist of browser elements</p>  <p>
+  Holds a list of the browser elements inside the tabbrowser.</p>
+  <h5><a name='prop_canGoBack'><span class='attrib'>canGoBack</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  This read-only property is true if there is a page to go back to in the session  history and the Back button should be enabled.</p>
+  <h5><a name='prop_canGoForward'><span class='attrib'>canGoForward</span></a></h5>
+<p class='aptype'>Type:&nbsp;boolean</p>  <p>
+  This read-only property is true if there is a page to go forward to in the session  history and the Forward button should be enabled.</p>
+  <h5><a name='prop_contentDocument'><span class='attrib'>contentDocument</span></a></h5>
+<p class='aptype'>Type:&nbsp;document</p>  <p>
+  This read-only property contains the document object in the tabbrowser.</p>
+  <h5><a name='prop_contentTitle'><span class='attrib'>contentTitle</span></a></h5>
+<p class='aptype'>Type:&nbsp;string</p>  <p>
+  This read-only property contains the title of the document object in the tabbrowser.</p>
+  <h5><a name='prop_contentViewerEdit'><span class='attrib'>contentViewerEdit</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIContentViewerEdit.html'>nsIContentViewerEdit</a></p>  <p>
+  This read-only property contains the nsIContentViewerEdit which handles clipboard  operations on the document.</p>
+  <h5><a name='prop_contentViewerFile'><span class='attrib'>contentViewerFile</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIContentViewerFile.html'>nsIContentViewerFile</a></p>  <p>
+  Reference to the nsIContentViewerFile interface for the document.</p>
+  <h5><a name='prop_contentWindow'><span class='attrib'>contentWindow</span></a></h5>
+<p class='aptype'>Type:&nbsp;window</p>  <p>
+  This read-only property contains the window object in the tabbrowser.</p>
+  <h5><a name='prop_currentURI'><span class='attrib'>currentURI</span></a></h5>
+<p class='aptype'>Type:&nbsp;string current URI</p>  <p>
+  This read-only property contains the currently loaded URL. To change the  URL, use the loadURI method.</p>
+  <h5><a name='prop_docShell'><span class='attrib'>docShell</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIDocShell.html'>nsIDocShell</a></p>  <p>
+  This read-only property contains the nsIDocShell object for the document.</p>
+  <h5><a name='prop_documentCharsetInfo'><span class='attrib'>documentCharsetInfo</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIDocumentCharsetInfo.html'>nsIDocumentCharsetInfo</a></p>  <p>
+  This read-only property contains the nsIDocumentCharsetInfo object for the document  which is used to handle which character set should be used to display the document.</p>
+  <h5><a name='prop_getBrowserForTab'><span class='attrib'> getBrowserForTab ( tab ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;browser element</p>  <p>
+  
+  Returns a browser for specific tab element.</p>
+  <h5><a name='prop_goBack'><span class='attrib'> goBack ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Go back one page in the history.</p>
+  <h5><a name='prop_goBackGroup'><span class='attrib'> goBackGroup ( ) </span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Not in Firefox </span></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Return to the previous group of tabs.</p>
+  <h5><a name='prop_goForward'><span class='attrib'> goForward ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Go forward one page in the history.</p>
+  <h5><a name='prop_goForwardGroup'><span class='attrib'> goForwardGroup ( ) </span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Not in Firefox </span></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Go forward to the next group of tabs.</p>
+  <h5><a name='prop_goHome'><span class='attrib'> goHome ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Load the user's home page into the tabbrowser.</p>
+  <h5><a name='prop_gotoIndex'><span class='attrib'> gotoIndex ( index ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Navigate to the page in the history with the given index. Use a positive  number to go forward and a negative number to go back.</p>
+  <h5><a name='prop_homePage'><span class='attrib'>homePage</span></a></h5>
+<p class='aptype'>Type:&nbsp;string home page URL</p>  <p>
+  This property holds the value of the user's home page setting.</p>
+  <h5><a name='prop_loadGroup'><span class='attrib'> loadGroup ( group ) </span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Not in Firefox </span></h5>
+<p class='aptype'>Return Type:&nbsp;the first tab</p>  <p>
+  
+  Loads a group of pages into multiple tabs. They are either appended or  replaced depending on the state of the preference 'browser.tabs.loadGroup'.  The argument should be an array of objects, one for each document to load.  The objects may be defined in script and contain a 'URI' property for the  URL of the page to load. A 'referrerURI' property may also be optionally  used to set the referrer page. This function returns a reference to the  first <a href='ref_tab.html'>tab</a> loaded.</p>
+  <h5><a name='prop_loadURI'><span class='attrib'> loadURI ( uri , referrer , charset ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Load a URL into the document, with the given referrer and character set.</p>
+  <h5><a name='prop_loadURIWithFlags'><span class='attrib'> loadURIWithFlags ( uri , flags , referrer , charset ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Load a URL into the document, with the specified load flags and the given  referrer and character set. In addition to the flags allowed for the  reloadWithFlags methods, the following flags are also valid:</p>
+  <ul>
+    <li><span class='aval'>LOAD_FLAGS_IS_REFRESH</span>:
+          This flag is used when the URL is loaded because of a meta tag refresh or redirect.
+
+</li>
+    <li><span class='aval'>LOAD_FLAGS_IS_LINK</span>:
+          This flag is used when the URL is loaded because a user clicked on a link. The
+    HTTP Referer header is set accordingly.
+
+</li>
+    <li><span class='aval'>LOAD_FLAGS_BYPASS_HISTORY</span>:
+          Do not add the URL to the session history.
+
+</li>
+    <li><span class='aval'>LOAD_FLAGS_REPLACE_HISTORY</span>:
+          Replace the current URL in the session history with a new one. This flag might be
+    used for a redirect.
+
+</li>
+  </ul>
+  <h5><a name='prop_markupDocumentViewer'><span class='attrib'>markupDocumentViewer</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIMarkupDocumentViewer.html'>nsIMarkupDocumentViewer</a></p>  <p>
+  This read-only property contains the nsIMarkupDocumentViewer which is responsible  for drawing the document.</p>
+  <h5><a name='prop_reload'><span class='attrib'> reload ( ) </span></a></h5>
+  <p>
+  
+  Reloads the document in the tabbrowser.</p>
+  <h5><a name='prop_reloadAllTabs'><span class='attrib'> reloadAllTabs ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Reloads the contents of all of the tabs.</p>
+  <h5><a name='prop_reloadTab'><span class='attrib'> reloadTab ( tab ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Reloads the contents of a specific tab.</p>
+  <h5><a name='prop_reloadWithFlags'><span class='attrib'> reloadWithFlags ( flags ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Reloads the document in the tabbrowser with the given load flags. The flags listed below  may be used, which are all constants of the webNavigation property (or the  nsIWebNavigation interface). You may combine flags using a or symbol ( | )</p>
+  <ul>
+    <li><span class='aval'>LOAD_FLAGS_NONE</span>:
+          No special flags. The document is loaded normally.
+
+</li>
+    <li><span class='aval'>LOAD_FLAGS_BYPASS_CACHE</span>:
+          Reload the page, ignoring if it is already in the cache. This is the flag used
+    when the reload button is pressed while the Shift key is held down.
+
+</li>
+    <li><span class='aval'>LOAD_FLAGS_BYPASS_PROXY</span>:
+          Reload the page, ignoring the proxy server.
+
+</li>
+    <li><span class='aval'>LOAD_FLAGS_CHARSET_CHANGE</span>:
+          This flag is used if the document needs to be reloaded because the character
+    set changed.
+
+</li>
+  </ul>
+  <h5><a name='prop_removeAllTabsBut'><span class='attrib'> removeAllTabsBut ( tabElement ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Removes all of the tab panels except for the one corresponding to  the specified tab. If only one tab page is displayed, this method  does nothing.</p>
+  <h5><a name='prop_removeCurrentTab'><span class='attrib'> removeCurrentTab ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;tab element</p>  <p>
+  
+  Removes the currently displayed tab page. If it is the only displayed  tab, this method does nothing.</p>
+  <h5><a name='prop_removeProgressListener'><span class='attrib'> removeProgressListener ( listener ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Remove a progress listener from the tabbrowser.</p>
+  <h5><a name='prop_removeTab'><span class='attrib'> removeTab ( tabElement ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Removes a specific tabbed page corresponding to the given tab element.  If only one tab is displayed, this method does nothing. If needed, the  row of tabs will collapse if only one tab remains.</p>
+  <h5><a name='prop_replaceGroup'><span class='attrib'> replaceGroup ( group ) </span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Not in Firefox </span></h5>
+<p class='aptype'>Return Type:&nbsp;array of session history objects</p>  <p>
+  
+  replaces existing tabs with a new set. If there were more tabs before, the  additional ones are not removed. You can use the removeTab function to  remove the existing tabs first if that is desired. The argument should be an  array of objects, one for each document to load. The objects may be defined  in script and contain a 'URI' property for the URL of the page to load. A  'referrerURI' property may also be optionally used to set the referrer page.  This method returns an array of the session history objects for the tabs  that were removed.</p>
+  <h5><a name='prop_securityUI'><span class='attrib'>securityUI</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsISecureBrowserUI.html'>nsISecureBrowserUI</a></p>  <p>
+  The readonly property holds an object which may be used to determine the  security level of the loaded document.</p>
+  <h5><a name='prop_selectedBrowser'><span class='attrib'>selectedBrowser</span></a></h5>
+<p class='aptype'>Type:&nbsp;browser element</p>  <p>
+  This readonly property returns the currently displayed <a href='ref_browser.html'>browser</a> element.</p>
+  <h5><a name='prop_selectedTab'><span class='attrib'>selectedTab</span></a></h5>
+<p class='aptype'>Type:&nbsp;tab element</p>  <p>
+  Holds the currently selected tab. You can modify this property to  change the currently selected tab page.</p>
+  <h5><a name='prop_sessionHistory'><span class='attrib'>sessionHistory</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsISHistory.html'>nsISHistory</a></p>  <p>
+  This read-only property contains the nsISHistory object which holds the session  history.</p>
+  <h5><a name='prop_stop'><span class='attrib'> stop ( ) </span></a></h5>
+<p class='aptype'>Return Type:&nbsp;no return value</p>  <p>
+  
+  Equivalent to pressing the Stop button, this method stops the currently loading  document.</p>
+  <h5><a name='prop_tabContainer'><span class='attrib'>tabContainer</span></a></h5>
+<p class='aptype'>Type:&nbsp;tabs element</p>  <p>
+  Returns the <a href='ref_tabs.html'>tabs</a> element that contains the tabs.</p>
+  <h5><a name='prop_webBrowserFind'><span class='attrib'>webBrowserFind</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIWebBrowserFind.html'>nsIWebBrowserFind</a></p>  <p>
+  This read-only property contains an nsIWebBrowserFind object which can be used  to search for text in the document.</p>
+  <h5><a name='prop_webNavigation'><span class='attrib'>webNavigation</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIWebNavigation.html'>nsIWebNavigation</a></p>  <p>
+  This read-only property contains the nsIWebNavigation object for the document.  Most of its methods are callable directly on the tabbrowser itself, such as goBack and  goForward. It also contains the load constants used by reloadWithFlags and  loadURIWithFlags.</p>
+  <h5><a name='prop_webProgress'><span class='attrib'>webProgress</span></a></h5>
+<p class='aptype'>Type:&nbsp;<a href='http://www.xulplanet.com/references/xpcomref/ifaces/nsIWebProgress.html'>nsIWebProgress</a></p>  <p>
+  This read-only property contains an nsIWebProgress object which is used to monitor  the progress of a document loading.</p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

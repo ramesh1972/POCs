@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+
+<element name='getter' lang='xbl'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/xblprops.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_xblgetter.html</reference>
+  Defines code which is called to retrieve the value of a property.  The code should return the value of the property.  
+
+<example>
+<![CDATA[
+    &lt;property name=&quot;time&quot;&gt;
+      &lt;getter&gt;
+       &lt;![CDATA[
+        var hour=this.getAttribute(&quot;hour&quot;);
+        var minute=this.getAttribute(&quot;minute&quot;);
+        var second=this.getAttribute(&quot;second&quot;);
+        return hour + &quot;:&quot; + minute + &quot;:&quot; + second;
+       ]]&gt;
+      &lt;/getter&gt;
+    &lt;/property&gt;
+
+]]>
+</example>
+<attr name='id' type='element id, must be unique in the window'>
+  A unique identifier so that you can identify the getter with. You can use this as  a parameter to getElementById and other DOM functions and to reference the  element in style sheets.
+</attr>
+</element>

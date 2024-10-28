@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="scroll.html"> 
+ <link rel="next" href="menubar.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Toolbars</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 5.1 - Toolbars 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <A HREF="grids.html">Grids</A></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <SPAN CLASS="currentpage">Toolbars</SPAN></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="4.7 - Scroll Bars"
+     href="scroll.html">Previous</a>
+
+
+  <a class="nextlink" title="5.2 - Simple Menu Bars"
+     href="menubar.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Toolbars</h2>
+
+<P>
+A toolbar is usually placed along the top of a window and contains a number
+of buttons that perform common functions. XUL has a method to create toolbars.
+</P>
+
+<H3>Adding a Toolbar</H3>
+
+<P>
+Like a number of elements, XUL toolbars are a type of box. Usually, a row of
+buttons would appear in the toolbar, but any element can be placed in a toolbar.
+For example, the Mozilla browser window contains a textbox that displays the
+page URL.
+</P>
+
+<P>
+Toolbars may be placed on any side of the window, either horizontally or
+vertically. Of course you wouldn't normally put a textbox in a vertical
+toolbar. Actually, because toolbars are just boxes they can actually go anywhere
+you want, even in the middle of a window. Typically, however, a set of toolbars
+would appear along the top of a window. When more than one toolbar is placed next
+to each other, they are typically grouped together in something called a toolbox.
+</P>
+
+<P>
+Along the left side of the toolbar is a little notch which, if clicked, will
+collapse the toolbar so that only the notch is visible. The notch is called
+a grippy. When mutliple toolbars are all placed in the same toolbox, the
+grippies will collapse into a single row. This shrinks the total amount of
+space that is used. Vertical toolbars have their grippies along their top
+edge. The user will usually collapse the toolbar if they want more space for
+the main window.
+</P>
+
+<P>
+Here is a example of a simple toolbar inside a toolbox.
+</P>
+
+
+Example 5.1.1:
+<A HREF='examples/ex_toolbar_1.xul.txt'>Source</A>
+<A HREF="examples/ex_toolbar_1.xul" ONCLICK="window.open('examples/ex_toolbar_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;toolbox&gt;
+  &lt;toolbar id="nav-toolbar"&gt;
+    &lt;toolbarbutton label="Back"/&gt;
+    &lt;toolbarbutton label="Forward"/&gt;
+  &lt;/toolbar&gt;
+&lt;/toolbox&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/toolbar1.jpg" ALIGN="right" ALT="" WIDTH=119 HEIGHT=25>
+This has created a toolbar containing two buttons, a Back button and a Forward
+button. The one toolbar has been placed inside the toolbox. This has involved
+four new tags, which are described here.
+</P>
+
+<UL>
+  <LI><DIV CLASS="tag">toolbox</DIV>
+      A box that contains toolbars.
+  </LI>
+  <LI><DIV CLASS="tag">toolbar</DIV>
+      A single toolbar that contains toolbar items such as buttons. Toolbars
+      can be collapsed using the grippy on its left or top side.
+  </LI>
+  <LI><DIV CLASS="tag">toolbarbutton</DIV>
+      A button on a toolbar, which has all the same features of a regular button
+      but is usually drawn differently.
+  </LI>
+  <LI><DIV CLASS="tag">toolbargrippy</DIV>
+      This element creates the notch that is used to collapse and expand the
+      toolbar. You don't need to use it directly as it is added automatically.
+  </LI>
+</UL>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_toolbar.html">toolbar</A> is the main element that creates the actual
+toolbar. Inside it are placed the individual toolbar items, usually buttons, but
+they can be other elements. The toolbar should have an <SPAN CLASS="attrib">id</SPAN>
+attribute or the grippy won't be able to collapse or expand the toolbar properly.
+</P>
+
+<P>
+In the example above, only one toolbar was created. Multiple toolbars can be
+created just as easily by adding more <A CLASS="tag" HREF="elemref/ref_toolbar.html">toolbar</A>
+elements after the first one.
+</P>
+
+<P>
+The <A CLASS="tag" HREF="elemref/ref_toolbox.html">toolbox</A> is a container for toolbars. In some
+applications, you will have several toolbars along the top of the window. You
+can put them all inside a <A CLASS="tag" HREF="elemref/ref_toolbox.html">toolbox</A>.
+</P>
+
+<P>
+You do not have to put <A CLASS="tag" HREF="elemref/ref_toolbar.html">toolbar</A> elements
+inside a <A CLASS="tag" HREF="elemref/ref_toolbox.html">toolbox</A>. 
+</P>
+
+<P>
+The grippies on the toolbox are created using another element, a
+<A CLASS="tag" HREF="elemref/ref_toolbargrippy.html">toolbargrippy</A>. It doesn't really make any sense to 
+use it outside of a toolbar as it will have no special purpose as it will have 
+nothing to collapse. However, you may wish to style it differently. You can
+hide the grippy by adding the <SPAN CLASS="attribute">grippyhidden</SPAN>
+attribute to the <SPAN CLASS="attrib">toolbar</SPAN> element, set to the
+value <SPAN CLASS="aval">true</SPAN>.
+</P>
+
+<P>
+<IMG SRC="images/toolbar2.jpg" ALIGN="middle" ALT="" WIDTH=121 HEIGHT=99>
+A toolbox with three toolbars in it:
+</P>
+
+<P>
+<IMG SRC="images/toolbar3.jpg" ALIGN="middle" ALT="" WIDTH=121 HEIGHT=61>
+The same set of toolbars but two have been collapsed.
+</P>
+
+<DIV CLASS="task">
+
+<P>
+Let's add a toolbar to the find files dialog. We don't really need one but we'll
+add one anyway to demonstrate its use. Two buttons will be added, an Open
+button and a Save button. Presumably, they would allow the user to save search
+results and re-open them later.
+</P>
+
+
+<DIV CLASS="sample"><PRE>&lt;vbox flex="1"&gt;
+  <SPAN STYLE="color: red;">&lt;toolbox&gt;
+    &lt;toolbar id="findfiles-toolbar"&gt;
+      &lt;toolbarbutton id="opensearch" label="Open"/&gt;
+      &lt;toolbarbutton id="savesearch" label="Save"/&gt;
+    &lt;/toolbar&gt;
+  &lt;/toolbox&gt;</SPAN>
+  &lt;tabbox&gt;</PRE></DIV>
+
+
+
+<P>
+A toolbar with two buttons has been added here. In the image, you can see
+them appear horizontally along the top. The grippy also appears on the left
+side of the toolbar. Notice that the toolbar has been placed inside the vertical
+box just above the tabbox. This is because we need the vertical orientation
+so that the toolbar will appear above everything else.
+</P>
+
+<P>
+<IMG SRC="images/toolbar5.jpg" WIDTH=487 ALT="" HEIGHT=125>
+</P>
+
+</DIV>
+
+<HR>
+<P>
+<A HREF="menubar.html">(Next)</A>
+Next, we'll find out how to add a menu bar to a window.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_toolbar_1.xul.txt'>5.1.1</A>
+</P>
+<P>Find files example so far:
+<A HREF='examples/findfile/findfile-toolbar.xul.txt'>Source</A>
+<A HREF="examples/findfile/findfile-toolbar.xul" ONCLICK="window.open('examples/findfile/findfile-toolbar.xul','xulff','chrome,resizable'); return false;">View</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="4.7 - Scroll Bars"
+     href="scroll.html">Previous</a>
+
+
+  <a class="nextlink" title="5.2 - Simple Menu Bars"
+     href="menubar.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

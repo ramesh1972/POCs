@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<script language="JScript">
+var expanded;
+var heading;
+
+expanded = false;
+header_created = false;
+
+function ExpandCollapse0() {
+	var i,j;
+	
+	if (expanded == true) {
+		j = oTBody0.rows.length;
+		for (i=1; i<j ; i++) {
+			oTBody0.deleteRow();
+		}
+		expanded = false;
+	}
+	else {
+		CreateBody0(false);
+	}
+}
+
+function CreateBody0() {
+//Declare variables and create the header, footer, and caption.
+var oRow, oCell;
+var i, j;
+
+expanded = true;
+
+var links = new Array;
+links["0"] = "Visual Basic";
+links["1"] = "http://www.microst.com";
+links["2"] = "http://www.master.com";
+links["3"] = "http://www.vb.com";
+
+var desc = new Array;
+desc[0] = "";
+desc[1] = "Microsoft Visual Basic";
+desc[2] = "Master VB";
+desc[3] = "VB";
+
+// Insert rows and cells into the first body.
+for (i=0; i<4; i++)
+{
+  if (i == 0) {
+	if (header_created == false) {
+		oRow = oTBody0.insertRow();
+		oCell = oRow.insertCell();
+		oCell.innerHTML = "<A href=javascript:ExpandCollapse0()><B>" + links[i] + "</B></A>";	
+		header_created = true;
+	}
+  }
+  else {
+	oRow = oTBody0.insertRow();
+	oCell = oRow.insertCell();
+	oCell.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;<A href=" + links[i] + ">" + desc[i] + "</A>";  
+  }
+}
+
+// Set the background color of the first body.
+oTBody0.bgColor = "lemonchiffon";
+}
+
+</script>
+</HEAD>
+<BODY>
+<TABLE align="center" ID="oTable" BGCOLOR="lightslategray">
+<TBODY ID="oTBody0"></TBODY>
+<TBODY ID="oTBody1"></TBODY>
+</TABLE>
+
+<script language="JScript">
+var oRow, oCell;
+var oTHead = oTable.createTHead();
+var oTFoot = oTable.createTFoot();
+var oCaption = oTable.createCaption();
+
+// Declare links data that would normally be retrieved from a links Web site.
+var heading = new Array;
+heading[0] = "Links";
+
+// Insert a row into the header.
+oRow = oTHead.insertRow();
+oTHead.bgColor = "lightskyblue";
+
+// Insert cells into the header row.
+oCell = oRow.insertCell();
+oCell.align = "center";
+oCell.style.fontWeight = "bold";
+oCell.innerText = heading[0];
+
+CreateBody0();
+ExpandCollapse0();
+
+// Insert rows and cells into the footer row.
+oRow = oTFoot.insertRow();
+oCell = oRow.insertCell();
+oCell.innerText = "Quotes are for example only.";
+oCell.colSpan = "4";
+oCell.bgColor = "lightskyblue";
+
+// Set the innerText of the caption and position it at the bottom of the table.
+oCaption.innerText = "Created using Table Object Model."
+oCaption.style.fontSize = "10";
+oCaption.align = "bottom";
+
+</script>
+</BODY>
+</HTML>

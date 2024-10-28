@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - File Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ File 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">File</h3>
+
+<p>
+  The File object can be used to manipulate files. Like the <a href='ref_Install.html'>Install</a> functions, the  functions of the File object only assign an operation to be performed once the  installation has begun.</p>  <p>  Most functions take a file or folder as an argument. This  argument must be one returned by the  <a href="ref_Install.html#prop_getFolder">Install.getFolder</a> function.  </p>  <p>  This object is only available in an installation script.  </p><p><a class='extlink' href='http://www.xulplanet.com/tutorials/xultu/xpiadv.html'>More information about File<a></p>
+<div class='aphead'><p>Properties and Methods:</p><table class='apheadbody'><tr>
+<td><a href='#prop_copy'>copy</a></td>
+<td><a href='#prop_dirCreate'>dirCreate</a></td>
+<td><a href='#prop_dirGetParent'>dirGetParent</a></td>
+<td><a href='#prop_dirRemove'>dirRemove</a></td>
+<td><a href='#prop_dirRename'>dirRename</a></td>
+</tr><tr>
+<td><a href='#prop_diskSpaceAvailable'>diskSpaceAvailable</a></td>
+<td><a href='#prop_execute'>execute</a></td>
+<td><a href='#prop_exists'>exists</a></td>
+<td><a href='#prop_isDirectory'>isDirectory</a></td>
+<td><a href='#prop_isFile'>isFile</a></td>
+</tr><tr>
+<td><a href='#prop_macAlias'>macAlias</a></td>
+<td><a href='#prop_modDate'>modDate</a></td>
+<td><a href='#prop_modDateChanged'>modDateChanged</a></td>
+<td><a href='#prop_move'>move</a></td>
+<td><a href='#prop_nativeVersion'>nativeVersion</a></td>
+</tr><tr>
+<td><a href='#prop_remove'>remove</a></td>
+<td><a href='#prop_rename'>rename</a></td>
+<td><a href='#prop_size'>size</a></td>
+<td><a href='#prop_unixLink'>unixLink</a></td>
+<td><a href='#prop_windowsRegisterServer'>windowsRegisterServer</a></td>
+</tr><tr>
+<td><a href='#prop_windowsShortcut'>windowsShortcut</a></td>
+</tr></table>
+</div>
+<hr><h4 class='propslist'><a name='propsblk'>Properties and Methods:</a></h4>
+<div class='ref_apblk'>
+  <h5><a name='prop_copy'><span class='attrib'> copy ( source , dest ) </span></a></h5>
+  <p>
+  
+  Assigns a file to be copied. The file specified by source is copied to the location  specified by dest.</p>
+  <h5><a name='prop_dirCreate'><span class='attrib'> dirCreate ( folder ) </span></a></h5>
+  <p>
+  
+  Assigns the directory referred to by the folder argument to be created. This folder must  have been returned by the Install.getFolder function.</p>
+  <h5><a name='prop_dirGetParent'><span class='attrib'> dirGetParent ( folder ) </span></a></h5>
+  <p>
+  
+  Returns the parent directory of the folder argument. This folder must have  been returned by the Install.getFolder function.</p>
+  <h5><a name='prop_dirRemove'><span class='attrib'> dirRemove ( folder , recurse ) </span></a></h5>
+  <p>
+  
+  Assigns the directory referred to by the folder argument to be removed. If recurse is set  to true, the directory is deleted recursively. If false, the directory is only deleted if  it is empty.</p>
+  <h5><a name='prop_dirRename'><span class='attrib'> dirRename ( folder , newname ) </span></a></h5>
+  <p>
+  
+  Assigns the directory referred to by the folder argument to be renamed. The newname  argument should be set to a string that contains the new name of the directory.</p>
+  <h5><a name='prop_diskSpaceAvailable'><span class='attrib'> diskSpaceAvailable ( folder ) </span></a></h5>
+  <p>
+  
+  Returns the number of bytes of available space on the disk on which the given folder  is located on.</p>
+  <h5><a name='prop_execute'><span class='attrib'> execute ( file , args ) </span></a></h5>
+  <p>
+  
+  Assigns a file to be executed during the installation. You may optionally specify arguments.  This function is not the same as the  <a href="ref_Install.html#prop_execute">Install.execute</a> function. That function runs  files from inside the installer archive only. This function is used to run files which  are already on disk.</p>
+  <h5><a name='prop_exists'><span class='attrib'> exists ( file ) </span></a></h5>
+  <p>
+  
+  Returns true if the file exists.</p>
+  <h5><a name='prop_isDirectory'><span class='attrib'> isDirectory ( folder ) </span></a></h5>
+  <p>
+  
+  Returns true if the given folder is a reference to a directory.</p>
+  <h5><a name='prop_isFile'><span class='attrib'> isFile ( file ) </span></a></h5>
+  <p>
+  
+  Returns true if the given folder is a reference to a file.</p>
+  <h5><a name='prop_macAlias'><span class='attrib'> macAlias ( sourceFolder , sourceFile , aliasFolder ) </span></a></h5>
+  <p>
+  
+  Assigns a Macintosh shortcut to another file be created. On non-Macintosh systems, this  function does nothing. Arguments are as follows:  <table>    <tr>      <td>sourceFolder</td><td>Refers to the folder containing the file which the alias points                               to. This argument must be returned by getFolder.</td>   </tr><tr>      <td>sourceFile</td><td>A string that holds the filename of the alias.</td>   </tr><tr>      <td>aliasFolder</td><td>Refers to the location of the new alias. This argument must be                            returned by getFolder.</td>   </tr>  </table></p>
+  <h5><a name='prop_modDate'><span class='attrib'> modDate ( file ) </span></a></h5>
+  <p>
+  
+  Returns the last modified date of the given file. The date is returned as a number,  which you can then pass to the JavaScript Date object.</p>
+  <h5><a name='prop_modDateChanged'><span class='attrib'> modDateChanged ( file , date ) </span></a></h5>
+  <p>
+  
+  Returns true if last modified date of the given file is different than the date  given by the second argument. This might be used to compare versions of files.</p>
+  <h5><a name='prop_move'><span class='attrib'> move ( source , dest ) </span></a></h5>
+  <p>
+  
+  Assigns a file given by source to be moved to a different location given by dest.</p>
+  <h5><a name='prop_nativeVersion'><span class='attrib'> nativeVersion ( file ) </span></a></h5>
+  <p>
+  
+</p>
+  <h5><a name='prop_remove'><span class='attrib'> remove ( file ) </span></a></h5>
+  <p>
+  
+  Assigns a file to be removed.</p>
+  <h5><a name='prop_rename'><span class='attrib'> rename ( file , newname ) </span></a></h5>
+  <p>
+  
+  Assigns the file referred to by the file argument to be renamed. The newname  argument should be set to a string that contains the new name of the file.</p>
+  <h5><a name='prop_size'><span class='attrib'> size ( file ) </span></a></h5>
+  <p>
+  
+  Returns the size in bytes of the given file.</p>
+  <h5><a name='prop_unixLink'><span class='attrib'> unixLink ( source , flags ) </span></a></h5>
+  <p>
+  
+</p>
+  <h5><a name='prop_windowsRegisterServer'><span class='attrib'> windowsRegisterServer ( folder ) </span></a></h5>
+  <p>
+  
+  Used to register Windows COM servers. The argument folder should refer to the library  file.</p>
+  <h5><a name='prop_windowsShortcut'><span class='attrib'> windowsShortcut ( target , shortcut , desc , workingDir , args , icon , iconid ) </span></a></h5>
+  <p>
+  
+  Assigns a Windows shortcut to another file to be created. On non-Windows systems, this  function does nothing. Arguments are as follows:  <table>    <tr>      <td>target</td><td>A string that holds the target of the shortcut.</td>   </tr><tr>      <td>shortcut</td><td>A string that holds the path and filename of the shortcut.</td>   </tr><tr>      <td>desc</td><td>The description of the shortcut.</td>   </tr><tr>      <td>workingDir</td><td>The working directory of the shortcut, when it is executed,                             assuming that the shortcut points to an executable file.</td>   </tr><tr>      <td>args</td><td>The arguments passed to the shortcut when executed.</td>   </tr><tr>      <td>icon</td><td>A string that holds the path of the file that contains the shortcut's                       icon.</td>   </tr><tr>      <td>iconid</td><td>The ID of the icon within the icon file.</td>   </tr>  </table></p>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

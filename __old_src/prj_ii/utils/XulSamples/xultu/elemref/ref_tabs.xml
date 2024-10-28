@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+
+<element name='tabs'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/tabpanel.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_tabs.html</reference>
+  A row of tabs. A tabs element should be placed inside a tabbox and should  contain tab elements.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULSelectControlElement</implements>
+<attr name='closebutton' type='boolean'>
+  If this attribute is set to true, the tabs row will have a new tab button  and close button on the ends. This feature is used by the tabbrowser to  add the capability to add new tabs and close existing tabs. You can set an  image to the new and close buttons by applying them to the 'tabs-newbutton'  and 'tabs-closebutton' classes respectively.
+</attr>
+<attr name='disableclose' type='boolean'>
+  If tis attribute is true, the close button will be disabled.
+</attr>
+<attr name='first-tab' type='boolean'>
+  This attribute will be set to true for the first tab. This attribute should  not be set manually, but is useful in a theme if the first tab should be  styled differently.
+</attr>
+<attr name='last-tab' type='boolean'>
+  This attribute will be set to true for the last tab. This attribute should  not be set manually, but is useful in a theme if the last tab should be  styled differently.
+</attr>
+<attr name='onclosetab' type='script code'>
+  This script will be called when the close tab button is clicked.
+</attr>
+<attr name='onnewtab' spec=' Not in Firefox ' type='script code'>
+  This script will be called when the new tab button is clicked.
+</attr>
+<attr name='onselect' type='script code'>
+  This event is sent to the tabs element when the tab is changed.
+</attr>
+<attr name='setfocus' type='boolean'>
+  If true or omitted, the focus will be given to the first element in the  corresponding tabpanel when the tabs are navigated via the keyboard. If  this attribute is false, the focus does not change during navigation.
+</attr>
+<attr name='tooltiptextnew' spec=' Not in Firefox ' type='string'>
+  Used to set the text which appears in the tooltip when the user moves the  mouse over the new button in the tab row.
+</attr>
+<method name='advanceSelectedTab'>
+<prototype> advanceSelectedTab ( dir ) </prototype>
+  
+  If the argument dir is set to 1, the currently selected tab changes to the next  tab. If the argument dir is set to -1, the currently selected tab changes to the  previous tab.
+</method>
+<method name='appendItem'>
+<prototype> appendItem ( label , value ) </prototype>
+  
+  Creates a new tab element and adds it to the end of the list of tabs. You  may optionally set a value. Note that a new tabpanel is not created. This  method returns the added tab. The function returns the new item.
+</method>
+<method name='insertItemAt' returns='tab element'>
+<prototype> insertItemAt ( index, label , value ) </prototype>
+  
+  Creates a new tab element and inserts it at a specific position in the  list of tabs. You may optionally set a value. This method returns the added tab.  The function returns the new item.
+</method>
+<method name='removeItemAt' returns='tab element'>
+<prototype> removeItemAt ( index ) </prototype>
+  
+  Removes the child tab in the menu at the given index.  The function returns the removed item.
+</method>
+<prop name='selectedIndex'/>
+<prop name='selectedItem' type='tab element'>
+  Holds a reference to the currently selected tab element. Assign a value to this  property to modify the currently selected tab. 
+</prop>
+</element>

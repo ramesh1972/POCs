@@ -1,0 +1,113 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winresrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_PWW MENU DISCARDABLE 
+BEGIN
+    POPUP "WWW"
+    BEGIN
+        MENUITEM "Open",                        ID_WWW_OPEN
+        MENUITEM "Show Location Controls",      ID_WWW_SHOWTOOLBAR, CHECKED
+        POPUP "Samples"
+        BEGIN
+            MENUITEM "Site1",                       ID_CHROMIUM_TODAY_SITE1
+            MENUITEM "Site2",                       ID_CHROMIUM_TODAY_SITE2
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Save Page",                   ID_WWW_SAVEPAGE, GRAYED
+        MENUITEM "Exit",                        ID_CHROMIUM_EXIT
+    END
+    POPUP "PWW"
+    BEGIN
+        MENUITEM "New Web Page",                ID_PWW_IMERGE_CREATEWINDOW
+        MENUITEM "Pick Content",                ID_PWW_IMERGE_WWWPWWBEGIN
+    END
+    POPUP "Alert"
+    BEGIN
+        MENUITEM "Pick Content",                ID_ALERT_ALERTDESIGNMODE
+        MENUITEM "Alert",                       ID_ALERT_LOADALERTEDPAGE
+    END
+    POPUP "Tests"
+    BEGIN
+        MENUITEM "Open Page",                   ID_WWW_OPEN
+        MENUITEM "Pick Content",                ID_ALERT_ALERTDESIGNMODE
+        MENUITEM "Show Picked Content",         ID_TESTS_LOADSPOTTEDNODE
+        MENUITEM SEPARATOR
+        MENUITEM "Clear Rules",                 ID_RULESDB_CLEARRULES
+        MENUITEM "Show Rules",                  ID_TESTS_SHOWRULES, GRAYED
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resources.h""\r\n"
+    "#include ""winresrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR  DISCARDABLE     "cursor1.cur"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

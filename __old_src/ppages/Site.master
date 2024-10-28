@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Welcome to Personal Pages</title>
+
+    <asp:ContentPlaceHolder id="MainHead" runat="server">
+    <script type="text/javascript" language="javascript" src="scripts/ii-page.js"></script>
+
+    <script type="text/javascript" language="javascript" src="scripts/ii-wrapper-html.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-wrapper-xml.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-globals.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-utils.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-debug_js.js"></script>
+
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-dimensions.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-collection.js"></script>
+
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-popout.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-control-text.js"></script>
+
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-border.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-bar.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-tab.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-paws.js"></script>
+
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-layout.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-re-layout.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ii-section-create.js"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <input type=hidden id=tabsXml runat=server Value="" />
+    <div>
+        <asp:ContentPlaceHolder id="MainBody" runat="server">
+            <!-- Load the Page -->
+            <script type="text/javascript" language="javascript">
+                page_boot();
+            </script>
+        </asp:ContentPlaceHolder>        
+    </div>
+    </form>        
+</body>
+</html>

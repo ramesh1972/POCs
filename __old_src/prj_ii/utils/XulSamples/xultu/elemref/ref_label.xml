@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+
+<element name='label'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/textimage.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_label.html</reference>
+  This element is used to provide a label for an control element, If the user  clicks the label, it will move the focus to the associated control, specified  with the control attribute.  
+
+<implements>nsIAccessibleProvider</implements>
+<implements>nsIDOMXULLabelElement</implements>
+<attr name='accesskey' type='character'>
+  This should be set to a letter that is used as a shortcut key. This letter  should be one of the characters that appears in the label text for the label.  This letter will typically be drawn underlined, although this behavior will  be platform and theme specific. When the user presses ALT (or a similar key  that varies on each platform) and the access key, the label will be activated  from anywhere in the window. Although the value is case insensitive, a  letter with the case matching the accesskey attribute will used if both  cases exist in the label.
+</attr>
+<attr name='control' type='element id'>
+  This attribute should be set to the id of an element that the label is  associated with. When the user clicks on the label, the associated element  is given the focus.
+</attr>
+<attr name='crop'>
+  If the label of the label is too small to fit in its given space, the  text will be cropped on the side specified by the crop attribute.  An ellipsis will be used in place of the cropped text. If the box  direction is reversed, the cropping is reversed.
+<value name='start'>
+    The text will be cropped on its left side. 
+</value>
+<value name='end'>
+    The text will be cropped on its right side.
+</value>
+<value name='left'>
+     (Deprecated)  The text will be cropped on its left side.
+</value>
+<value name='right'>
+     (Deprecated)  The text will be cropped on its right side.
+</value>
+<value name='center'>
+    The text will be cropped on both sides.
+</value>
+<value name='none'>
+    The text will be not be cropped using an ellipsis. However, the text will
+    simply be cut off if it is too large. The side depends on the CSS text
+    alignment.
+</value>
+</attr>
+<attr name='disabled' type='boolean'>
+  If this attribute is set to true, the label is disabled. This is usually  drawn with the text in grey. Leave the attribute out entirely for a regular  enabled label.
+</attr>
+<attr name='value' type='string'>
+  The text to be used for the label.
+</attr>
+<class name='header'>
+  A class used for headings. Typically, this will cause the text to  appear bold.
+</class>
+<class name='indent'>
+  This class causes the text to be indented on its left side.
+</class>
+<class name='monospace'>
+  This class causes the text to be displayed in a monospace font.
+</class>
+<class name='plain'>
+  This class causes the text to be displayed with no border or margin.
+</class>
+<class name='small-margin'>
+  This class causes the text to be displayed with a smaller margin.
+</class>
+<prop name='accessKey'/>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the label.
+</prop>
+<prop name='control'/>
+<prop name='crop'/>
+<prop name='disabled'/>
+<prop name='value'/>
+</element>

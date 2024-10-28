@@ -1,0 +1,467 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="../styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="../styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="../styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+
+
+
+
+
+
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Style Properties Reference</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="../images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+
+
+  <a href="index.html">Element Reference</a> :
+
+ Style Properties 
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+
+
+<div>
+
+	<div id="catagories">
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/tutorials/">Tutorials</a></h3>
+			Everything you need to know about XUL all in one place.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/references/">References</a></h3>
+			For a quick lookup of any element, attribute, or component.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/downloads/">Downloads</a></h3>
+			A library of XUL apps for you to download.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/">About XulPlanet</a></h3>
+			Who we are, what we do, why we do it.
+		</div>
+
+		<div class="category">
+			<h3><a href="http://www.xulplanet.com/about/contact.html">Contact Us</a></h3>
+		</div>
+	</div>
+
+  <hr>
+
+</div>
+
+
+
+</div>
+
+<div id="content">
+
+<div class="navlinks-pnc">
+  <a href="index.html">Contents</a>
+</div>
+ 
+<h3 align="center">Style Properties</h3>
+
+<p>
+  The following lists some of the custom style properties that Mozilla supports.  </p>
+<hr><h4 class='propslist'><a name='propsblk'>Properties:</a></h4>
+<div class='ref_apblk'>
+  <h5><a name='prop_-moz-appearance'><span class='attrib'>-moz-appearance</span></a></h5>
+  <p>
+  Used to cause an element to take its border, background style and size from the  operating system's theme. This causes XUL elements to be drawn similar to the  way the user's system draws such elements. This currently only has an effect on  Windows XP and Mac OS X.</p>
+  <h5><a name='prop_-moz-background-clip'><span class='attrib'>-moz-background-clip</span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Moz1.2 </span></h5>
+  <p>
+  Indicates whether the background, either the color or image, should extend  into the border area of the element. This property is similar to the CSS3  <a href="http://www.w3.org/TR/css3-background/#background-clip">background-clip</a>  property.</p>
+  <ul>
+    <li><span class='aval'>border</span>:
+          The background extends into the border of the element. It will be drawn
+    behind the border.
+
+</li>
+    <li><span class='aval'>padding</span>:
+          The background does not extend into the border.
+
+</li>
+  </ul>
+  <h5><a name='prop_-moz-background-inline-policy'><span class='attrib'>-moz-background-inline-policy</span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Moz1.3 </span></h5>
+  <p>
+  Specifies how the background image of an inline element is determined when  the content of the inline element wraps onto multiple lines.</p>
+  <ul>
+    <li><span class='aval'>bounding-box</span>:
+      
+</li>
+    <li><span class='aval'>continuous</span>:
+          The background image wraps around on to each line as if the text had no
+    line breaks. For example, if the image is 500 pixels and the inline box is
+    300 pixels, the first 300 pixels of the image appears on the first line,
+    and the last 200 pixels followed by the first 100 pixels of the image
+    appear on the second line. The image repeats until the end of the content.
+
+</li>
+    <li><span class='aval'>each-box</span>:
+      
+</li>
+  </ul>
+  <h5><a name='prop_-moz-background-origin'><span class='attrib'>-moz-background-origin</span></a><span class='spec'>&nbsp;&nbsp;&nbsp; Moz1.2 </span></h5>
+  <p>
+  Determines how the background-position property is determined.  This property is similar to the CSS3  <a href="http://www.w3.org/TR/css3-background/#background-origin">background-origin</a>  property.</p>
+  <ul>
+    <li><span class='aval'>content</span>:
+          The position is relative to the content.
+
+</li>
+    <li><span class='aval'>border</span>:
+          The position is relative to the border.
+
+</li>
+    <li><span class='aval'>padding</span>:
+          The position is relative to the padding.
+
+</li>
+  </ul>
+  <h5><a name='prop_-moz-binding'><span class='attrib'>-moz-binding</span></a></h5>
+  <p>
+  Used to specify an XBL binding to use for the element. The property should be a  URL of an XBL file containing the binding. The URL should contain an anchor to  point to a specific binding with the XBL file, referenced by its id attribute.</p>
+  <h5><a name='prop_-moz-border-bottom-colors'><span class='attrib'>-moz-border-bottom-colors</span></a></h5>
+  <p>
+  Sets the border colors for the bottom edge. It should be set to a list  of colors. When an element has a border that is larger than a single  pixel, each line of pixels uses the next color specified in this  property. This eliminates the need for nested boxes. If the border  is wider than the number of colors specified for this property, the  remaining part of the border is the color specified by the border  property.</p>
+  <h5><a name='prop_-moz-border-left-colors'><span class='attrib'>-moz-border-left-colors</span></a></h5>
+  <p>
+  Sets the border colors for the bottom edge. See the -moz-border-colors-bottom  property for more information.</p>
+  <h5><a name='prop_-moz-border-radius'><span class='attrib'>-moz-border-radius</span></a></h5>
+  <p>
+  This property can be used to give borders rounded corners. This should be set  to a numeric value indicating the amount of rounding to use. You must use a unit  (usually px for pixels). A higher number makes the border rounder.</p>
+  <h5><a name='prop_-moz-border-radius-bottomleft'><span class='attrib'>-moz-border-radius-bottomleft</span></a></h5>
+  <p>
+  Sets the rounding of the lower left corner of the border.</p>
+  <h5><a name='prop_-moz-border-radius-bottomright'><span class='attrib'>-moz-border-radius-bottomright</span></a></h5>
+  <p>
+  Sets the rounding of the lower right corner of the border.</p>
+  <h5><a name='prop_-moz-border-radius-topleft'><span class='attrib'>-moz-border-radius-topleft</span></a></h5>
+  <p>
+  Sets the rounding of the upper left corner of the border.</p>
+  <h5><a name='prop_-moz-border-radius-topright'><span class='attrib'>-moz-border-radius-topright</span></a></h5>
+  <p>
+  Sets the rounding of the upper right corner of the border.</p>
+  <h5><a name='prop_-moz-border-right-colors'><span class='attrib'>-moz-border-right-colors</span></a></h5>
+  <p>
+  Sets the border colors for the right edge. See the -moz-border-colors-bottom  property for more information.</p>
+  <h5><a name='prop_-moz-border-top-colors'><span class='attrib'>-moz-border-top-colors</span></a></h5>
+  <p>
+  Sets the border colors for the top edge. See the -moz-border-colors-bottom  property for more information.</p>
+  <h5><a name='prop_-moz-box-align'><span class='attrib'>-moz-box-align</span></a></h5>
+  <p>
+  The align attribute specifies how child elements of the box are aligned, when  the size of the box is larger than the total size of the children. For boxes that  have horizontal orientation, it specifies how its children will be aligned  vertically. For boxes that have vertical orientation, it is used to specify how  its children are algined horizontally. The pack attribute is related to the alignment  but is used to specify the position in the opposite direction. You  can also specify the value of align using the style property '-moz-box-align'.</p>
+  <ul>
+    <li><span class='aval'>start</span>:
+          Child elements are align starting from the left or top edge of the box. If
+    the box is larger than the total size of the children, the extra space is
+    placed on the right or bottom side.
+
+</li>
+    <li><span class='aval'>center</span>:
+          Extra space is split equally along each side of the child elements, resulting
+    the children being placed in the center of the box.
+
+</li>
+    <li><span class='aval'>end</span>:
+          Child elements are placed on the right or bottom edge of the box. If the box
+    is larger than the total size of the children, the extra space is placed on
+    the left or top side.
+
+</li>
+    <li><span class='aval'>baseline</span>:
+          This value applies to horizontally oriented boxes only. It causes the child
+    elements to be aligned so that their text labels are lined up.
+
+</li>
+    <li><span class='aval'><span class='aval-default'>stretch</span></span>:
+          The child elements are stretched to fit the size of the box. For a horizontal
+    box, the children are stretched to be the height of the box. For a vertical
+    box, the children are stretched to be the width of the box. If the size of the
+    box changes, the children stretch to fit. Use the flex attribute to create
+    elements that stretch in the opposite direction.
+
+</li>
+  </ul>
+  <h5><a name='prop_-moz-box-direction'><span class='attrib'>-moz-box-direction</span></a></h5>
+  <p>
+  Specifies the direction in the which the children of a box are placed.</p>
+  <ul>
+    <li><span class='aval'><span class='aval-default'>normal</span></span>:
+          Children are placed either from left to right or top to bottom in the
+    order the elements appear in the XUL source or document tree.
+
+</li>
+    <li><span class='aval'>reverse</span>:
+          Children are placed either from right to left or bottom to top in the
+    order the elements appear in the XUL source or document tree.
+
+</li>
+  </ul>
+  <h5><a name='prop_-moz-box-flex'><span class='attrib'>-moz-box-flex</span></a></h5>
+  <p>
+  Indicates the flexibility of an element. Flexible elements grow and shrink  to fit their given space. The actual value is not relevant unless there are  other flexible elements within the same container. Elements with larger  flex values will grow more than elements with lower flex values, at the  ratio determined by the two elements.</p>
+  <h5><a name='prop_-moz-box-ordinal-group'><span class='attrib'>-moz-box-ordinal-group</span></a></h5>
+  <p>
+  Indicates the ordinal group the element belongs to. Elements with a lower  ordinal group are displayed before those with a higher ordinal group.</p>
+  <h5><a name='prop_-moz-box-orient'><span class='attrib'>-moz-box-orient</span></a></h5>
+  <p>
+  This is the corresponding style property for a XUL element's orient attribute.  For elements that are types of boxes, it determines whether the children are  laid out horizontally or vertically.</p>
+  <ul>
+    <li><span class='aval'><span class='aval-default'>horizontal</span></span>:
+          The children of the element are placed horizontally in a row.
+
+</li>
+    <li><span class='aval'>vertical</span>:
+          The children of the element are placed vertically in a column.
+
+</li>
+  </ul>
+  <h5><a name='prop_-moz-box-pack'><span class='attrib'>-moz-box-pack</span></a></h5>
+  <p>
+  The pack attribute specifies where child elements of the box are placed when  the box is larger that the size of the children. For boxes with horizontal  orientation, it is used to indicate the position of children horizontally.  For boxes with vertical orientation, it is used to indicate the position of  children vertically. The align attribute is used to specify the position in the  opposite direction. You can also specify the value of pack using the style property  '-moz-box-pack'.</p>
+  <ul>
+    <li><span class='aval'><span class='aval-default'>start</span></span>:
+          Child elements are placed starting from the left or top edge of the box. If
+    the box is larger than the total size of the children, the extra space is
+    placed on the right or bottom side.
+
+</li>
+    <li><span class='aval'>center</span>:
+          Extra space is split equally along each side of the child elements, resulting
+    the children being placed in the center of the box.
+
+</li>
+    <li><span class='aval'>end</span>:
+          Child elements are placed on the right or bottom edge of the box. If the box
+    is larger than the total size of the children, the extra space is placed on
+    the left or top side.
+
+</li>
+  </ul>
+  <h5><a name='prop_-moz-box-sizing'><span class='attrib'>-moz-box-sizing</span></a></h5>
+  <p>
+  This property determines how the width and height of the element is calculated.  It affects the width and height properties.</p>
+  <ul>
+    <li><span class='aval'>content-box</span>:
+          The width and height properties specify the size of the element including the
+    padding.
+
+</li>
+    <li><span class='aval'>border-box</span>:
+          The width and height properties specify the size of the element including the
+    padding and border.
+
+</li>
+    <li><span class='aval'>padding-box</span>:
+          The width and height properties specify the size of the element. The padding,
+    border and margin are added outside of this size.
+
+</li>
+  </ul>
+  <h5><a name='prop_-moz-image-region'><span class='attrib'>-moz-image-region</span></a></h5>
+  <p>
+  For elements that have an image, this property sets the area of the image  that is used. You can set multiple elements to use the same image but use  a different region of the image, reducing the amount of memory required.  You can change this property to simulate animation. The syntax is similar  to the clip property. All four values are relative to the upper left corner  of the image.   <pre>    -moz-image-region: rect(top, right, bottom, left);  </pre></p>
+  <h5><a name='prop_-moz-key-equivalent'><span class='attrib'>-moz-key-equivalent</span></a></h5>
+<br>
+  <h5><a name='prop_-moz-opacity'><span class='attrib'>-moz-opacity</span></a></h5>
+  <p>
+  This property can be used to make an element partially transparent. Any content  behind the element will be partially visible. This should be a decimal number  between 0 and 1, where 0 means invisible and 1 means fully opaque. Thus, 0.5  means half-way between. Newer versions of Mozilla (1.7 and later) support  the CSS3 property 'opacity'.</p>
+  <h5><a name='prop_-moz-outline'><span class='attrib'>-moz-outline</span></a></h5>
+  <p>
+  This property can be used to set the outline of the element. An outline is  like a border but has some differences in the way it is drawn. This is similar to  the CSS2 outline property which Mozilla does not currently support.</p>
+  <h5><a name='prop_-moz-outline-color'><span class='attrib'>-moz-outline-color</span></a></h5>
+  <p>
+  Sets the color of the outline.</p>
+  <h5><a name='prop_-moz-outline-radius'><span class='attrib'>-moz-outline-radius</span></a></h5>
+  <p>
+  This property can be used to give outlines rounded corners. This should be set  to a numeric value indicating the amount of rounding to use. You must use a unit  (usually px for pixels). A higher number makes the outline rounder.</p>
+  <h5><a name='prop_-moz-outline-radius-bottomleft'><span class='attrib'>-moz-outline-radius-bottomleft</span></a></h5>
+  <p>
+  Sets the rounding of the lower left corner of the outline.</p>
+  <h5><a name='prop_-moz-outline-radius-bottomright'><span class='attrib'>-moz-outline-radius-bottomright</span></a></h5>
+  <p>
+  Sets the rounding of the lower right corner of the outline.</p>
+  <h5><a name='prop_-moz-outline-radius-topleft'><span class='attrib'>-moz-outline-radius-topleft</span></a></h5>
+  <p>
+  Sets the rounding of the upper left corner of the outline.</p>
+  <h5><a name='prop_-moz-outline-radius-topright'><span class='attrib'>-moz-outline-radius-topright</span></a></h5>
+  <p>
+  Sets the rounding of the upper right corner of the outline.</p>
+  <h5><a name='prop_-moz-outline-style'><span class='attrib'>-moz-outline-style</span></a></h5>
+  <p>
+  Sets the style of the border, which can have the same values as the border-style  property.</p>
+  <h5><a name='prop_-moz-outline-width'><span class='attrib'>-moz-outline-width</span></a></h5>
+  <p>
+  Sets the width of the outline.</p>
+  <h5><a name='prop_-moz-user-focus'><span class='attrib'>-moz-user-focus</span></a></h5>
+  <p>
+  Used to indicate whether the element can have the focus. By setting this to  'ignore', you can disable focusing the element, which means that the user will  not be able to activate the element. The element will be skipped in the tab  sequence. A similar property 'user-focus' has been proposed for CSS3.</p>
+  <ul>
+    <li><span class='aval'>ignore</span>:
+          The element does not accept the keyboard focus and will be skipped in the
+    tab order.
+
+</li>
+    <li><span class='aval'>normal</span>:
+          The element can accept the keyboard focus.
+
+</li>
+  </ul>
+  <h5><a name='prop_-moz-user-input'><span class='attrib'>-moz-user-input</span></a></h5>
+  <p>
+  This can be used to indicate whether the value of the element can be modifed.  This mainly applies to textboxes.</p>
+  <ul>
+    <li><span class='aval'>disabled</span>:
+          The user cannot edit the value of the textbox. The user may still select text
+    in the textbox.
+
+</li>
+    <li><span class='aval'>enabled</span>:
+          The user can edit the value of the textbox.
+
+</li>
+  </ul>
+  <h5><a name='prop_-moz-user-select'><span class='attrib'>-moz-user-select</span></a></h5>
+  <p>
+  Used to indicate whether the text of the element can be selected. This doesn't  have any affect on content loaded as chrome, except in textboxes. A similar  property 'user-select' has been proposed for CSS3.</p>
+  <ul>
+    <li><span class='aval'>none</span>:
+          The text of the element cannot be selected.
+
+</li>
+    <li><span class='aval'>normal</span>:
+          The text can be selected by the user.
+
+</li>
+  </ul>
+  <h5><a name='prop_display'><span class='attrib'>display</span></a></h5>
+  <p>
+  Although the display property is part of standard CSS, some additional values  are allowed, for the XUL layout styles. You can use these values for non-XUL  elements too, although they may produce unusual results.</p>
+  <ul>
+    <li><span class='aval'>-moz-box</span>:
+          Child elements are laid out horizontally or vertically.
+
+</li>
+    <li><span class='aval'>-moz-inline-box</span>:
+      
+</li>
+    <li><span class='aval'>-moz-grid</span>:
+          Child elements are laid out as a XUL <a href='ref_grid.html'>grid</a>.
+
+</li>
+    <li><span class='aval'>-moz-inline-grid</span>:
+      
+</li>
+    <li><span class='aval'>-moz-grid-group</span>:
+          Child elements are laid out as a group of grid columns or rows. This is the
+    layout used by the <a href='ref_rows.html'>rows</a> and <a href='ref_columns.html'>columns</a> elements. You can use the orientation
+    (-moz-box-orient) to set which direction. Rows would normally have vertical
+    orientation and columns would have a horizontal orientation.
+
+</li>
+    <li><span class='aval'>-moz-grid-line</span>:
+          Child elements are laid out as a single column or row of a grid. You can use
+    the orientation (-moz-box-orient) to set which direction.
+
+</li>
+    <li><span class='aval'>-moz-stack</span>:
+          Child elements are laid out one on top of each other like the XUL <a href='ref_stack.html'>stack</a>
+    element.
+
+</li>
+    <li><span class='aval'>-moz-inline-stack</span>:
+      
+</li>
+    <li><span class='aval'>-moz-deck</span>:
+          Child elements are laid out one on top of each other like the XUL <a href='ref_deck.html'>deck</a>
+    element. Unlike a stack, only the top element is displayed.
+
+</li>
+    <li><span class='aval'>-moz-popup</span>:
+      
+</li>
+    <li><span class='aval'>-moz-groupbox</span>:
+      
+</li>
+  </ul>
+  <h5><a name='prop_overflow'><span class='attrib'>overflow</span></a></h5>
+  <p>
+  Mozilla supports some additional values for the overflow property that are not  in standard CSS. The overflow property is used to specify what happens when the  content is too large for the container.</p>
+  <ul>
+    <li><span class='aval'>-moz-scrollbars-horizontal</span>:
+          Indicates that horizontal scrollbars should appear.
+
+</li>
+    <li><span class='aval'>-moz-scrollbars-vertical</span>:
+          Indicates that vertical scrollbars should appear.
+
+</li>
+    <li><span class='aval'>-moz-scrollbars-none</span>:
+          Indicates that no scrollbars should appear.
+
+</li>
+  </ul>
+</div>
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<element name='action'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/advrules.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_action.html</reference>
+  Should be contained within a rule element. It is used to specify the generated  content for each matched node. Within the action, attributes are parsed for   resource and variable references .  
+<html><![CDATA[
+<p>  Should be contained within a rule element. It is used to specify the generated  content for each matched node. Within the action, attributes are parsed for  <a href="/tutorials/xultu/templateex.html">resource and variable references</a>.  </p>
+]]></html>
+
+</element>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="example-window" title="Example 3.3.1"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<hbox flex="1">
+  <button label="Left" style="min-width: 100px;" flex="1"/>
+  <spacer flex="1"/>
+  <button label="Right" style="min-width: 100px;" flex="1"/>
+</hbox>
+
+
+</window>
+

@@ -1,0 +1,571 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" title="Default Style" href="styles/default/main.css" type="text/css">
+<link rel="stylesheet" href="styles/default/xultu.css" type="text/css">
+
+
+<link rel="stylesheet" href="styles/default/xultu-print.css" type="text/css" media="print">
+
+
+<link rel="home"   href="http://www.xulplanet.com/"            title="http://www.XulPlanet.com/">
+<link rel="search" href="http://www.xulplanet.com/cgi-bin/search/search.cgi" title="Search XulPlanet">
+<link rel="author" href="http://www.xulplanet.com/ndeakin" title="Neil Deakin">
+ <link rel="up" href="http://www.xulplanet.com/tutorials/" title="Up"> 
+ <link rel="first" href="intro.html" title="First"> 
+ <link rel="last" href="end.html" title="Last"> 
+
+ <link rel="prev" href="tabpanel.html"> 
+ <link rel="next" href="cpanels.html"> 
+
+<meta name="Description" content="Step by step tutorial of the XML User Interface Language">
+
+<title>XulPlanet.com - Grids</title>
+
+</head>
+<body>
+
+<div id="header">
+  <a href="http://www.xulplanet.com/">
+    <img id="logo" src="images/xulplanet.png" width="215" height="65" alt="XUL Planet">
+  </a>
+
+<div id="locationlinks">
+  <a href="http://www.xulplanet.com/">Home</a> &gt;
+
+  <a href="http://www.xulplanet.com/tutorials/">Tutorials</a> :
+
+
+  <a href="index.html">XUL Tutorial</a> :
+
+
+
+ 4.4 - Grids 
+</div>
+
+
+
+</div>
+
+
+
+<hr class="edgesplit">
+
+<div id="sidebar">
+
+<div id="search">
+  <form action="/cgi-bin/search/search.cgi" method="get">
+    Search:<br>
+    <input id="search-box" name="Terms" type="text">
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<hr>
+
+<ul class="sidebar-section-links">
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/allofit.zip">Single Document Version</a></li>
+  <li><a href="http://www.xulplanet.com/tutorials/xultu/xultu.zip">Download the XUL Tutorial</a><br></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/">Element Reference</a></li>
+  <li><a href="http://www.xulplanet.com/references/elemref/quickref.html">Quick Reference</a><br></li>
+  <li><a href="keyref.html">Key Code Reference</a></li>
+  <li><a href="templateex.html">Template Syntax Examples</a></li>
+</ul>
+
+<hr>
+
+
+
+<OL id="sidebar-docs-index">
+  <LI class="sidebar-section-title">Introduction
+  <OL>
+    <LI> <A HREF="intro.html">Introduction</A></LI>
+    <LI> <A HREF="xulfile.html">XUL Structure</A></LI>
+    <LI> <A HREF="chromeurl.html">The Chrome URL</A></LI>
+    <LI> <A HREF="packaging.html">Contents.rdf Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Simple Elements
+  <OL>
+    <LI> <A HREF="window.html">Creating a Window</A></LI>
+    <LI> <A HREF="buttons.html">Adding Buttons</A></LI>
+    <LI> <A HREF="textimage.html">Adding Labels and Images</A></LI>
+    <LI> <A HREF="inputs.html">Input Controls</A></LI>
+    <LI> <A HREF="lists.html">List Controls</A></LI>
+    <LI> <A HREF="progress.html">Progress Meters</A></LI>
+    <LI> <A HREF="htmlelem.html">Adding HTML Elements</A></LI>
+    <LI> <A HREF="springs.html">Using Spacers</A></LI>
+    <LI> <A HREF="advbtns.html">More Button Features</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">The Box Model
+  <OL>
+    <LI> <A HREF="boxes.html">The Box Model</A></LI>
+    <LI> <A HREF="boxstyle.html">Element Positioning</A></LI>
+    <LI> <A HREF="boxdet.html">Box Model Details</A></LI>
+    <LI> <A HREF="titledbox.html">Groupboxes</A></LI>
+    <LI> <A HREF="boxfinal.html">Adding More Elements</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">More Layout Elements
+  <OL>
+    <LI> <A HREF="stacks.html">Stacks and Decks</A></LI>
+    <LI> <A HREF="bulletins.html">Stack Positioning</A></LI>
+    <LI> <A HREF="tabpanel.html">Tabboxes</A></LI>
+    <LI> <SPAN CLASS="currentpage">Grids</SPAN></LI>
+    <LI> <A HREF="cpanels.html">Content Panels</A></LI>
+    <LI> <A HREF="splitter.html">Splitters</A></LI>
+    <LI> <A HREF="scroll.html">Scroll Bars</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Toolbars and Menus
+  <OL>
+    <LI> <A HREF="toolbar.html">Toolbars</A></LI>
+    <LI> <A HREF="menubar.html">Simple Menu Bars</A></LI>
+    <LI> <A HREF="advmenu.html">More Menu Features</A></LI>
+    <LI> <A HREF="popups.html">Popup Menus</A></LI>
+    <LI> <A HREF="menuscroll.html">Scrolling Menus</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Events and Scripts
+  <OL>
+    <LI> <A HREF="events.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="advevents.html">More Event Handlers</A></LI>
+    <LI> <A HREF="keyshort.html">Keyboard Shortcuts</A></LI>
+    <LI> <A HREF="focus.html">Focus and Selection</A></LI>
+    <LI> <A HREF="commands.html">Commands</A></LI>
+    <LI> <A HREF="commandupdate.html">Updating Commands</A></LI>
+    <LI> <A HREF="broadob.html">Broadcasters and Observers</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Document Object Model
+  <OL>
+    <LI> <A HREF="dom.html">Document Object Model</A></LI>
+    <LI> <A HREF="dommodify.html">Modifying a XUL Interface</A></LI>
+    <LI> <A HREF="domlists.html">Manipulating Lists</A></LI>
+    <LI> <A HREF="boxobject.html">Box Objects</A></LI>
+    <LI> <A HREF="xpcom.html">XPCOM Interfaces</A></LI>
+    <LI> <A HREF="xpcomex.html">XPCOM Examples</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Trees
+  <OL>
+    <LI> <A HREF="trees.html">Trees</A></LI>
+    <LI> <A HREF="advtrees.html">More Tree Features</A></LI>
+    <LI> <A HREF="seltree.html">Tree Selection</A></LI>
+    <LI> <A HREF="treeview.html">Custom Tree Views</A></LI>
+    <LI> <A HREF="treeviewdet.html">Tree View Details</A></LI>
+    <LI> <A HREF="treeboxobject.html">Tree Box Objects</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">RDF and Templates
+  <OL>
+    <LI> <A HREF="intrordf.html">Introduction to RDF</A></LI>
+    <LI> <A HREF="templates.html">Templates</A></LI>
+    <LI> <A HREF="treetempl.html">Trees and Templates</A></LI>
+    <LI> <A HREF="datasrc.html">RDF Datasources</A></LI>
+    <LI> <A HREF="advrules.html">Advanced Rules</A></LI>
+    <LI> <A HREF="persist.html">Persistent Data</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Skins and Locales
+  <OL>
+    <LI> <A HREF="style.html">Adding Style Sheets</A></LI>
+    <LI> <A HREF="treestyle.html">Styling a Tree</A></LI>
+    <LI> <A HREF="defskin.html">Modifying the Default Skin</A></LI>
+    <LI> <A HREF="cskin.html">Creating a Skin</A></LI>
+    <LI> <A HREF="locale.html">Localization</A></LI>
+    <LI> <A HREF="locprops.html">Property Files</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Bindings
+  <OL>
+    <LI> <A HREF="introxbl.html">Introduction to XBL</A></LI>
+    <LI> <A HREF="xblcontent.html">Anonymous Content</A></LI>
+    <LI> <A HREF="xblatin.html">XBL Attribute Inheritance</A></LI>
+    <LI> <A HREF="xblprops.html">Adding Properties</A></LI>
+    <LI> <A HREF="xblmethods.html">Adding Methods</A></LI>
+    <LI> <A HREF="xblevents.html">Adding Event Handlers</A></LI>
+    <LI> <A HREF="xblinherit.html">XBL Inheritance</A></LI>
+    <LI> <A HREF="xblex.html">XBL Example</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Specialized Window Types
+  <OL>
+    <LI> <A HREF="featwin.html">Features of a Window</A></LI>
+    <LI> <A HREF="dialogs.html">Creating Dialogs</A></LI>
+    <LI> <A HREF="filedialog.html">Open and Save Dialogs</A></LI>
+    <LI> <A HREF="wizard.html">Creating a Wizard</A></LI>
+    <LI> <A HREF="advwiz.html">More Wizards</A></LI>
+    <LI> <A HREF="overlay.html">Overlays</A></LI>
+    <LI> <A HREF="crosspov.html">Cross Package Overlays</A></LI>
+  </OL>
+  </LI>
+  <LI class="sidebar-section-title">Installation
+  <OL>
+    <LI> <A HREF="xpinstall.html">Creating an Installer</A></LI>
+    <LI> <A HREF="xpiscript.html">Install Scripts</A></LI>
+    <LI> <A HREF="xpiadv.html">Additional Install Features</A></LI>
+  </OL>
+</OL>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="4.3 - Tabboxes"
+     href="tabpanel.html">Previous</a>
+
+
+  <a class="nextlink" title="4.5 - Content Panels"
+     href="cpanels.html">Next</a>
+
+</div>
+
+<div class="xultu-content">
+
+<h2>Grids</h2>
+
+<P>
+XUL has a set of elements for creating tabular grids.
+</P>
+
+<H3>XUL Tabular Layout</H3>
+
+<P>
+XUL has a set of elements for doing layout of elements in a grid-like manner using
+the <A CLASS="tag" HREF="elemref/ref_grid.html">grid</A> element. It has some similarities to the HTML
+<SPAN CLASS= "tag">table</SPAN> tag. The grid does not display anything itself; it
+is used only to position elements in a tabular form with rows and columns.
+</P>
+
+<P>
+A grid contains elements that are aligned in rows just like tables. Inside a
+<A CLASS="tag" HREF="elemref/ref_grid.html">grid</A>, you declare two things, the columns that are
+used and the rows that are used. Just like HTML tables, you put content
+such as labels and buttons inside the rows. However, the grid allows either row
+or column based organization so you may put content in either rows or in columns.
+It is most common to use rows, as with a table. However, you can still use columns
+to specify the size and appearance of the columns in a grid. Alternatively, you can
+put content inside the columns, and use the rows to specify the appearance. We'll
+look at the case of organizing elements by row first.
+</P>
+
+<P>
+To declare a set of rows, use the <A CLASS="tag" HREF="elemref/ref_rows.html">rows</A> tag, which
+should be a child element of <SPAN CLASS="tag">grid.</SPAN> Inside that you
+should add <A CLASS="tag" HREF="elemref/ref_row.html">row</A> elements, which are used for each row.
+Inside the <A CLASS="tag" HREF="elemref/ref_row.html">row</A> element, you should place the content
+that you want inside that row.
+</P>
+
+<P>
+Similarly, the columns are declared with the <A CLASS="tag" HREF="elemref/ref_columns.html">columns</A>
+element, which should be placed as a child element of the
+<A CLASS="tag" HREF="elemref/ref_grid.html">grid</A>. Inside that go individual
+<A CLASS="tag" HREF="elemref/ref_column.html">column</A> elements, one for each column you want in the
+grid.
+</P>
+
+<P>
+This should be easier to understand with an example.
+</P>
+
+
+Example 4.4.1:
+<A HREF='examples/ex_grids_1.xul.txt'>Source</A>
+<A HREF="examples/ex_grids_1.xul" ONCLICK="window.open('examples/ex_grids_1.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;grid flex="1"&gt;
+  &lt;columns&gt;
+    &lt;column flex="2"/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;button label="Rabbit"/&gt;
+      &lt;button label="Elephant"/&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;button label="Koala"/&gt;
+      &lt;button label="Gorilla"/&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/grids1.jpg" ALIGN="left" WIDTH=236 HEIGHT=87>
+Two rows and two columns have been added to a grid. Each column is declared
+with the <A CLASS="tag" HREF="elemref/ref_column.html">column</A> tag. Each column has been given a
+<SPAN CLASS="attrib">flex</SPAN> attribute. Each row contains two elements,
+both buttons. The first element in each <A CLASS="tag" HREF="elemref/ref_row.html">row</A> element
+is placed in the first column of the grid and the second element is each row is
+placed in the second column. Note that you do not need an element to
+declare a cell -- there is no equivalent of the HTML <SPAN CLASS= "tag">td</SPAN>
+element. Instead, you put the contents of cells directly in the
+<A CLASS="tag" HREF="elemref/ref_row.html">row</A> elements.
+</P>
+
+<P>
+You can use any element besides a <A CLASS="tag" HREF="elemref/ref_button.html">button</A> element of
+course. If you wanted one particular cell to contain multiple elements, you can
+use a nested <A CLASS="tag" HREF="elemref/ref_hbox.html">hbox</A> or other box element. An hbox is a
+single element but you can put as many elements that you want inside it. For
+example:
+</P>
+
+
+Example 4.4.2:
+<A HREF='examples/ex_grids_2.xul.txt'>Source</A>
+<A HREF="examples/ex_grids_2.xul" ONCLICK="window.open('examples/ex_grids_2.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;grid flex="1"&gt;
+  &lt;columns&gt;
+    &lt;column/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label control="doctitle" value="Document Title:"/&gt;
+      &lt;textbox id="doctitle" flex="1"/&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;label control="docpath" value="Path:"/&gt;
+      &lt;hbox flex="1"&gt;
+        &lt;textbox id="docpath" flex="1"/&gt;
+        &lt;button label="Browse..."/&gt;
+      &lt;/hbox&gt;   
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;</PRE></DIV>
+
+
+
+<P>
+<IMG SRC="images/grids2.jpg" ALIGN="right" ALT="" WIDTH=342 HEIGHT=79>
+Notice in the image how the first column of elements containg the labels
+has only a single element in each row. The second column contains a box
+in its second row, which in turn contains two elements, a
+<A CLASS="tag" HREF="elemref/ref_textbox.html">textbox</A> and a <A CLASS="tag" HREF="elemref/ref_button.html">button</A>.
+You could add additional nested boxes or even another grid inside inside
+a single cell.
+</P>
+
+<P>
+If you resize the window of the last example, you will see that the textboxes
+resize, but no other elements do. This is because of the
+<SPAN CLASS="attrib">flex</SPAN> attributes added to the textboxes and the
+second column. The first column does not need to be flexible as the labels do
+not need to change size.
+</P>
+
+<P>
+The initial width of a column is determined by the largest element in the
+column. Similarly, the height of a row is determined by the size of the
+elements in a row. You can use the
+<SPAN CLASS="attrib">minwidth</SPAN> and <SPAN CLASS="attrib">maxwidth</SPAN>
+and related attributes to further define the size.
+</P>
+
+<P>
+You can also place the elements inside the <A CLASS="tag" HREF="elemref/ref_column.html">column</A>
+elements instead of the rows. If you do this, the rows are just declared to
+specify how many rows there are.
+</P>
+
+
+Example 4.4.3:
+<A HREF='examples/ex_grids_3.xul.txt'>Source</A>
+<A HREF="examples/ex_grids_3.xul" ONCLICK="window.open('examples/ex_grids_3.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;grid&gt;
+  &lt;rows&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+  &lt;/rows&gt;
+
+  &lt;columns&gt;
+    &lt;column&gt;
+      &lt;label control="first" value="First Name:"/&gt;
+      &lt;label control="middle" value="Middle Name:"/&gt;
+      &lt;label control="last" value="Last Name:"/&gt;
+    &lt;/column&gt;
+    &lt;column&gt;
+      &lt;textbox id="first"/&gt;
+      &lt;textbox id="middle"/&gt;
+      &lt;textbox id="last"/&gt;
+    &lt;/column&gt;
+  &lt;/columns&gt;
+
+&lt;/grid&gt;</PRE></DIV>
+
+
+
+<P>
+This grid has three rows and two columns. The <A CLASS="tag" HREF="elemref/ref_row.html">row</A>
+elements are just placeholders to specify how many there are. You may add the
+<SPAN CLASS="attrib">flex</SPAN> attribute to a row to make it flexible. The
+content is placed inside in each column. The first element inside each
+<A CLASS="tag" HREF="elemref/ref_column.html">column</A> element is placed in the first row, the second
+element in the second row and the third element is placed in the third row.
+</P>
+
+<P>
+If you put content in both the columns and the rows, the content will overlap
+each other, although they will align in a grid properly. It creates an effect
+much like a grid of <A CLASS="tag" HREF="elemref/ref_stack.html">stack</A> elements.
+</P>
+
+<P>
+The order of the elements in the <A CLASS="tag" HREF="elemref/ref_grid.html">grid</A> determines which
+is displayed on top and which is placed underneath. If the
+<A CLASS="tag" HREF="elemref/ref_rows.html">rows</A> element is placed after the
+<A CLASS="tag" HREF="elemref/ref_columns.html">columns</A> element, the content within the rows is
+displayed on top. If the <A CLASS="tag" HREF="elemref/ref_columns.html">columns</A> element is placed
+after the <A CLASS="tag" HREF="elemref/ref_rows.html">rows</A> element, the content within the columns
+is displayed on top. Similarly, events such as mouse buttons and keypresses
+are sent only to the set on top. This is why the columns were declared after the
+rows in the above example. If the columns has been placed first, the rows would
+have grabbed the events and you would not be able to type into the fields.
+</P>
+
+<P>
+One advantage that grids have over a set of nested boxes is that you can create
+cells that are flexible both horizontally and vertically. You can do this
+by putting a <SPAN CLASS="attrib">flex</SPAN> attribute on both a row and a
+column. The following example demonstrates this:
+</P>
+
+
+Example 4.4.4:
+<A HREF='examples/ex_grids_4.xul.txt'>Source</A>
+<A HREF="examples/ex_grids_4.xul" ONCLICK="window.open('examples/ex_grids_4.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;grid flex="1"&gt;
+ &lt;columns&gt;
+  &lt;column flex="5"/&gt;
+  &lt;column/&gt;
+  &lt;column/&gt;
+ &lt;/columns&gt;
+ &lt;rows&gt;
+  &lt;row flex="10"&gt;
+    &lt;button label="Cherry"/&gt;
+    &lt;button label="Lemon"/&gt;
+    &lt;button label="Grape"/&gt;
+  &lt;/row&gt;
+  &lt;row flex="1"&gt;
+    &lt;button label="Strawberry"/&gt;
+    &lt;button label="Raspberry"/&gt;
+    &lt;button label="Peach"/&gt;
+  &lt;/row&gt;
+ &lt;/rows&gt;
+&lt;/grid&gt;</PRE></DIV>
+
+
+
+<P>
+The first column and both rows have been made flexible. This will result in
+every cell in the first column being flexible horizontally. In addition, every
+cell will be flexible vertically because both rows are flexible, although the
+first row is more so. The cell in the first column and first row (the Cherry
+button) will be flexible by a factor of 5 horizontally and flexible by a factor
+of 10 vertically. The next cell, (Lemon) will only be flexible vertically.
+</P>
+
+<P>
+The <SPAN CLASS="attrib">flex</SPAN> attribute has also been added to the
+<A CLASS="tag" HREF="elemref/ref_grid.html">grid</A> element so that the entire grid is flexible,
+otherwise it would only grow in one direction.
+</P>
+
+<H3>Column Spanning</H3>
+
+<P>
+There is no means of making a cell span a particular number of multiple columns
+or rows. However, it is possible to make a row or column that spans the entire
+width or height of the grid. To do this, just add an element inside the
+<A CLASS="tag" HREF="elemref/ref_rows.html">rows</A> element that inside a
+<A CLASS="tag" HREF="elemref/ref_row.html">row</A> element. You can use a box type for example, and put
+other elements inside it if you want to use several elements. Here is a simple
+example:
+</P>
+
+
+Example 4.4.5:
+<A HREF='examples/ex_grids_5.xul.txt'>Source</A>
+<A HREF="examples/ex_grids_5.xul" ONCLICK="window.open('examples/ex_grids_5.xul','xulex','chrome,resizable'); return false;">View</A>
+<DIV CLASS="example"><PRE>&lt;grid&gt;
+  &lt;columns&gt;
+    &lt;column flex="1"/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label value="Northwest"/&gt;
+      &lt;label value="Northeast"/&gt;
+    &lt;/row&gt;
+    &lt;button label="Equator"/&gt;
+    &lt;row&gt;
+      &lt;label value="Southeast"/&gt;
+      &lt;label value="Northeast"/&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;</PRE></DIV>
+
+
+
+<P>
+The button will stretch to fit the entire width of the grid as it is not inside a
+grid row. You can use a similar technique to add an element in-between two columns.
+It would stretch to fit the height of the grid. You could also do both if that is
+desired.
+</P>
+
+<HR>
+<P>
+<A HREF="cpanels.html">(Next)</A>
+Next, we'll look at adding content panels.
+
+</P>
+<P>
+
+Examples:
+  <A HREF='examples/ex_grids_1.xul.txt'>4.4.1</A>
+  <A HREF='examples/ex_grids_2.xul.txt'>4.4.2</A>
+  <A HREF='examples/ex_grids_3.xul.txt'>4.4.3</A>
+  <A HREF='examples/ex_grids_4.xul.txt'>4.4.4</A>
+  <A HREF='examples/ex_grids_5.xul.txt'>4.4.5</A>
+</P>
+</div>
+
+<div class="navlinks-pnc">
+
+  <a class="prevlink" title="4.3 - Tabboxes"
+     href="tabpanel.html">Previous</a>
+
+
+  <a class="nextlink" title="4.5 - Content Panels"
+     href="cpanels.html">Next</a>
+
+</div>
+
+</div>
+
+<hr class="edgesplit">
+
+<div id="copyblock">
+  Copyright (C) 1999 - 2004 XulPlanet.com
+</div>
+
+</body>
+</html>
+

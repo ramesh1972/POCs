@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+
+<element name='script'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/events.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_script.html</reference>
+  Much like the HTML script element, this is used to declare a script to be  used by the XUL window. You should usually put scripts in a separate file  pointed to by the src attribute, but you may also place the script inline  inside the opening and closing script tags.  
+
+<example>
+<![CDATA[
+    &lt;script src=&quot;test.js&quot;/&gt;
+
+]]>
+</example>
+<attr name='src' type='script URL'>
+  The URL of the script.
+</attr>
+<attr name='type' type='language content type'>
+  The language of the script. Usually, you would set this to  'application/x-javascript'. 
+</attr>
+</element>

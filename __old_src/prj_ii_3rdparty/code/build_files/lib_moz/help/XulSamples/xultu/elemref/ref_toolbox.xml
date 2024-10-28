@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+
+<element name='toolbox'>
+<documentation>http://www.xulplanet.com/tutorials/xultu/toolbar.html</documentation>
+<reference>http://www.xulplanet.com/reference/elemref/ref_toolbox.html</reference>
+  A container for toolbars. It is a type of box but defaults to vertical  orientation. If a toolbar is placed inside a toolbox, a grippy is displayed  on its left or upper edge. The user may click the grippy to collapse the  toolbar. If multiple toolbars are placed in the same toolbox, they will  all collapse into the same row. The Firefox browser does not have  grippies so toolbars cannot be collapsed and expanded.  
+
+<implements>nsIAccessibleProvider</implements>
+<prop name='accessible' type='nsIAccessible'>
+  Returns the accessibility object for the toolbox.
+</prop>
+<method name='appendCustomToolbar' spec=' Firefox only '>
+<prototype> appendCustomToolbar ( name , currentset ) </prototype>
+  
+  Adds a custom toolbar to the toolbox with the given name. You  can supply a comma-separated list of toolbar item ids as the  second argument to add some items by default.
+</method>
+<method name='collapseToolbar' spec=' Not in Firefox '>
+<prototype> collapseToolbar ( toolbar ) </prototype>
+  
+  Collapse the given toolbar which should be contained in the toolbox.
+</method>
+<prop name='customToolbarCount' spec=' Firefox only '>
+  The number of custom toolbars currently within the toolbox.
+</prop>
+<method name='expandToolbar' spec=' Not in Firefox '>
+<prototype> expandToolbar ( toolbar ) </prototype>
+  
+  Expand the given toolbar which should be contained in the toolbox.
+</method>
+<prop name='palette' spec=' Firefox only '>
+  The toolbarpalette within the toolbox.
+</prop>
+<prop name='toolbarset' spec=' Firefox only '>
+  The toolbarset within the toolbox.
+</prop>
+</element>

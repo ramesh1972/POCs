@@ -1,0 +1,411 @@
+<%@ Language=JavaScript%>
+<Html>
+<Head>
+
+<!-- DATA FORM BEGINS -->
+<!-- -----------------------STORE------------------------------- -->
+<Form id=data_stores_tree>
+<input type=hidden id=Root Value="Node_1000">
+<input type=hidden id=Node_1000 Value="Node_1002,Node_1007">
+<input type=hidden id=Node_1002 Value="Node_1003,Node_1004,Node_1005,Node_1006">
+</Form>
+
+<Form id=data_stores>
+<input type=hidden id=Node_1000 Value="RootStore,ClientRootStore,data_stores">
+<input type=hidden id=Node_1002 Value="ControlStore,NewScriptureDeckStore,frm_ds_new_script_deck_store">
+<input type=hidden id=Node_1003 Value="ControlStore,ScripturePanelStore,frm_ds_script_panel_store">
+<input type=hidden id=Node_1004 Value="ControlStore,InfoPanelStore,frm_ds_info_panel_store">
+<input type=hidden id=Node_1005 Value="ControlStore,SigPanelStore,frm_ds_sig_panel_store">
+<input type=hidden id=Node_1006 Value="ControlStore,HistPanelStore,frm_ds_hist_panel_store">
+<input type=hidden id=Node_1007 Value="DataStore,NewScriptureDataSore,HtmlForm,frm_ds_new_script_data_store">
+</Form>
+
+<!-- ---------------------DATA----------------------------------- -->
+<Form id=frm_ds_new_script_deck_store_tree>
+<input type=hidden id=Node_400 Value="Node_401,Node_403">
+<input type=hidden id=Node_403 Value="Node_404,Node_405,Node_406,Node_407,Node_408,Node_409,Node_410,Node_411,Node_412,Node_413,Node_414,Node_415">
+<input type=hidden id=Node_415 Value="Node_416,Node_417,Node_418,Node_419,Node_420,Node_421,Node_422,Node_423,Node_424,Node_425,Node_426,Node_430">
+<input type=hidden id=Node_430 Value="Node_431,Node_432,Node_433,Node_434,Node_435,Node_436,Node_437,Node_438,Node_439,Node_440,Node_441,Node_450,Node_470,Node_490">
+<input type=hidden id=Node_450 Value="Node_451,Node_452,Node_453,Node_454,Node_455,Node_456,Node_457,Node_458,Node_459,Node_460,Node_461">
+<input type=hidden id=Node_470 Value="Node_471,Node_472,Node_473,Node_474,Node_475,Node_476,Node_477,Node_478,Node_479,Node_480,Node_481">
+<input type=hidden id=Node_490 Value="Node_491,Node_492,Node_493,Node_494,Node_495,Node_496,Node_497,Node_498,Node_499,Node_500,Node_501">
+</Form>
+
+<Form id=frm_ds_head_panel_store_tree>
+<input type=hidden id=Node_300 Value="Node_301,Node_302,Node_303">
+<input type=hidden id=Node_304 Value="Node_305,Node_306,Node_307">
+<input type=hidden id=Node_308 Value="Node_309,Node_310,Node_311">
+<input type=hidden id=Node_312 Value="Node_313,Node_314,Node_315">
+<input type=hidden id=Node_316 Value="Node_317,Node_318,Node_319,Node_320,Node_321">
+<input type=hidden id=Node_100 Value="Node_101,Node_102,Node_103,Node_105,Node_106,Node_107">
+
+</Form>
+<Form id=frm_ds_script_panel_store_tree>
+<input type=hidden id=Node_108 Value="Node_109,Node_110">
+<input type=hidden id=Node_111 Value="Node_112,Node_113,Node_114,Node_115,Node_116,Node_117">
+<input type=hidden id=Node_120 Value="Node_121,Node_122">
+<input type=hidden id=Node_130 Value="Node_131,Node_132,Node_133,Node_134,Node_136">
+<input type=hidden id=Node_140 Value="Node_141,Node_142,Node_143,Node_144,Node_145,Node_146">
+<input type=hidden id=Node_150 Value="Node_151,Node_152,Node_153,Node_154,Node_155,Node_156,Node_157,Node_158">
+<input type=hidden id=Node_160 Value="Node_161,Node_162,Node_163,Node_164,Node_165,Node_166">
+<input type=hidden id=Node_170 Value="Node_171,Node_172,Node_173,Node_174,Node_175,Node_176">
+<input type=hidden id=Node_180 Value="Node_181,Node_182,Node_183,Node_184,Node_185,Node_186,Node_187">
+<input type=hidden id=Node_190 Value="Node_191,Node_192">
+<input type=hidden id=Node_193 Value="Node_194,Node_195,Node_196,Node_197,Node_198">
+<input type=hidden id=Node_210 Value="Node_211,Node_212,Node_213,Node_214,Node_215,Node_216,Node_217">
+<input type=hidden id=Node_220 Value="Node_221,Node_222,Node_223,Node_224,Node_225">
+<input type=hidden id=Node_230 Value="Node_231,Node_232,Node_233,Node_234,Node_235">
+<input type=hidden id=Node_240 Value="Node_241,Node_242,Node_243,Node_244,Node_245,Node_246,Node_247">
+<input type=hidden id=Node_250 Value="Node_251,Node_252,Node_253,Node_254,Node_255,Node_256,Node_257">
+<input type=hidden id=Node_260 Value="Node_261,Node_262,Node_263,Node_264,Node_265,Node_266,Node_267">
+<input type=hidden id=Node_270 Value="Node_271,Node_272,Node_273,Node_274,Node_275">
+<input type=hidden id=Node_280 Value="Node_281,Node_282,Node_283,Node_284,Node_285">
+</Form>
+
+<Form id=frm_ds_new_script_data_store_tree>
+<input type=hidden id=Node_0 Value="Node_1">
+<input type=hidden id=Node_1 Value="Node_2,Node_3,Node_4,Node_5,Node_6,Node_7,Node_8,Node_9">
+<input type=hidden id=Node_12 Value="Node_13,Node_14">
+<input type=hidden id=Node_15 Value="Node_16,Node_17">
+<input type=hidden id=Node_18 Value="Node_19,Node_20">
+<input type=hidden id=Node_21 Value="Node_22,Node_23">
+<input type=hidden id=Node_24 Value="Node_25,Node_26">
+<input type=hidden id=Node_27 Value="Node_28,Node_29">
+<input type=hidden id=Node_40 Value="Node_41,Node_42,Node_43">
+<input type=hidden id=Node_200 Value="Node_201,Node_202,Node_203,Node_204,Node_205,Node_206">
+</Form>
+
+<Form id=frm_ds_new_script_deck_store>
+<input type=hidden id=Node_400 Value="Deck,ScriptureEditDeck,">
+<input type=hidden id=Node_401 Value="NameValue,PanelID,MainDeck">
+
+<input type=hidden id=Node_403 Value="TreeNode,Panel,">
+<input type=hidden id=Node_404 Value="NameValue,PanelID,Cell_OuterRim3">
+<input type=hidden id=Node_405 Value="NameValue,PanelCol,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelRow,1">
+<input type=hidden id=Node_407 Value="NameValue,PanelZAxis,1">
+<input type=hidden id=Node_408 Value="NameValue,PanelColWidth,100%">
+<input type=hidden id=Node_409 Value="NameValue,PanelRowHeight,100%">
+<input type=hidden id=Node_410 Value="NameValue,PanelOuterBorderWidth,12">
+<input type=hidden id=Node_411 Value="NameValue,PanelInnerBorderWidth,1">
+<input type=hidden id=Node_412 Value="NameValue,PanelColAlign,center">
+<input type=hidden id=Node_413 Value="NameValue,PanelRowAlign,top">
+<input type=hidden id=Node_414 Value="NameValue,PanelStyle,border-collapse:collapse;border-color:deepskyblue">
+
+<input type=hidden id=Node_415 Value="TreeNode,Panel,">
+<input type=hidden id=Node_416 Value="NameValue,PanelID,Cell_OuterRim2">
+<input type=hidden id=Node_417 Value="NameValue,PanelCol,1">
+<input type=hidden id=Node_418 Value="NameValue,PanelRow,1">
+<input type=hidden id=Node_419 Value="NameValue,PanelZAxis,1">
+<input type=hidden id=Node_420 Value="NameValue,PanelColWidth,100%">
+<input type=hidden id=Node_421 Value="NameValue,PanelRowHeight,100%">
+<input type=hidden id=Node_422 Value="NameValue,PanelOuterBorderWidth,8">
+<input type=hidden id=Node_423 Value="NameValue,PanelInnerBorderWidth,1">
+<input type=hidden id=Node_424 Value="NameValue,PanelColAlign,center">
+<input type=hidden id=Node_425 Value="NameValue,PanelRowAlign,top">
+<input type=hidden id=Node_426 Value="NameValue,PanelStyle,border-collapse:collapse;border-color:aqua">
+
+<input type=hidden id=Node_430 Value="TreeNode,Panel,">
+<input type=hidden id=Node_431 Value="NameValue,PanelID,Cell_OuterRim1">
+<input type=hidden id=Node_432 Value="NameValue,PanelCol,1">
+<input type=hidden id=Node_433 Value="NameValue,PanelRow,1">
+<input type=hidden id=Node_434 Value="NameValue,PanelZAxis,1">
+<input type=hidden id=Node_435 Value="NameValue,PanelColWidth,100%">
+<input type=hidden id=Node_436 Value="NameValue,PanelRowHeight,100%">
+<input type=hidden id=Node_437 Value="NameValue,PanelOuterBorderWidth,6">
+<input type=hidden id=Node_438 Value="NameValue,PanelInnerBorderWidth,1">
+<input type=hidden id=Node_439 Value="NameValue,PanelColAlign,center">
+<input type=hidden id=Node_440 Value="NameValue,PanelRowAlign,top">
+<input type=hidden id=Node_441 Value="NameValue,PanelStyle,border-collapse:collapse;border-color:lightblue">
+
+<input type=hidden id=Node_450 Value="TreeNode,Panel,">
+<input type=hidden id=Node_451 Value="NameValue,PanelID,HeadPanel">
+<input type=hidden id=Node_452 Value="NameValue,PanelCol,1">
+<input type=hidden id=Node_453 Value="NameValue,PanelRow,1">
+<input type=hidden id=Node_454 Value="NameValue,PanelZAxis,1">
+<input type=hidden id=Node_455 Value="NameValue,PanelColWidth,50%">
+<input type=hidden id=Node_456 Value="NameValue,PanelRowHeight,10%">
+<input type=hidden id=Node_457 Value="NameValue,PanelOuterBorderWidth,5">
+<input type=hidden id=Node_458 Value="NameValue,PanelInnerBorderWidth,8,1">
+<input type=hidden id=Node_459 Value="NameValue,PanelColAlign,center">
+<input type=hidden id=Node_460 Value="NameValue,PanelRowAlign,top">
+<input type=hidden id=Node_461 Value="NameValue,PanelStyle,border-color:blue">
+
+<input type=hidden id=Node_470 Value="TreeNode,Panel,">
+<input type=hidden id=Node_471 Value="NameValue,PanelID,BodyPanel">
+<input type=hidden id=Node_472 Value="NameValue,PanelCol,1">
+<input type=hidden id=Node_473 Value="NameValue,PanelRow,2">
+<input type=hidden id=Node_474 Value="NameValue,PanelZAxis,1">
+<input type=hidden id=Node_475 Value="NameValue,PanelColWidth,50%">
+<input type=hidden id=Node_476 Value="NameValue,PanelRowHeight,10%">
+<input type=hidden id=Node_477 Value="NameValue,PanelOuterBorderWidth,2">
+<input type=hidden id=Node_478 Value="NameValue,PanelInnerBorderWidth,1">
+<input type=hidden id=Node_479 Value="NameValue,PanelColAlign,center">
+<input type=hidden id=Node_480 Value="NameValue,PanelRowAlign,top">
+<input type=hidden id=Node_481 Value="NameValue,PanelStyle,border-color:yellow">
+
+<input type=hidden id=Node_490 Value="TreeNode,Panel">
+<input type=hidden id=Node_491 Value="NameValue,PanelID,BodyPanel1">
+<input type=hidden id=Node_492 Value="NameValue,PanelCol,2">
+<input type=hidden id=Node_493 Value="NameValue,PanelRow,2">
+<input type=hidden id=Node_494 Value="NameValue,PanelZAxis,1">
+<input type=hidden id=Node_495 Value="NameValue,PanelColWidth,50%">
+<input type=hidden id=Node_496 Value="NameValue,PanelRowHeight,10%">
+<input type=hidden id=Node_497 Value="NameValue,PanelOuterBorderWidth,2">
+<input type=hidden id=Node_498 Value="NameValue,PanelInnerBorderWidth,1">
+<input type=hidden id=Node_499 Value="NameValue,PanelColAlign,center">
+<input type=hidden id=Node_500 Value="NameValue,PanelRowAlign,top">
+<input type=hidden id=Node_501 Value="NameValue,PanelStyle,border-color:red">
+</Form>
+
+<Form id=frm_ds_head_panel_store></Form>
+<input type=hidden id=Node_300 Value="LinkControl,ScriptureTabLink,">
+<input type=hidden id=Node_301 Value="NameValue,LinkHREF,#">
+<input type=hidden id=Node_302 Value="NameValue,LinkText,Scripture Text For Sure">
+<input type=hidden id=Node_303 Value="NameValue,ControlOnClick,LoadPanel('Scripture'&COMMA'oDivBodyPanel')">
+
+<input type=hidden id=Node_304 Value="LinkControl,InformationTabLink,">
+<input type=hidden id=Node_305 Value="NameValue,LinkHREF,#">
+<input type=hidden id=Node_306 Value="NameValue,LinkText,Info">
+<input type=hidden id=Node_307 Value="NameValue,ControlOnClick,LoadPanel('Information'&COMMA'oDivBodyPanel')">
+
+<input type=hidden id=Node_308 Value="LinkControl,SignificanceTabLink,Root,8">
+<input type=hidden id=Node_309 Value="NameValue,LinkHREF,#">
+<input type=hidden id=Node_310 Value="NameValue,LinkText,Siginifcant Benefits">
+<input type=hidden id=Node_311 Value="NameValue,ControlOnClick,LoadPanel('Significance'&COMMA'oDivBodyPanel')">
+
+<input type=hidden id=Node_312 Value="LinkControl,HistoryTabLink,">
+<input type=hidden id=Node_313 Value="NameValue,LinkHREF,#">
+<input type=hidden id=Node_314 Value="NameValue,LinkText,Hist">
+<input type=hidden id=Node_315 Value="NameValue,ControlOnClick,LoadPanel('History'&COMMA'oDivBodyPanel')">
+
+<input type=hidden id=Node_316 Value="ButtonControl,NewScriptureButton,">
+<input type=hidden id=Node_317 Value="NameValue,CotrolID,Btn_NewScript">
+<input type=hidden id=Node_318 Value="NameValue,ControlLabel,&nbsp;&nbsp;&nbsp;&nbsp; Or Create ">
+<input type=hidden id=Node_319 Value="NameValue,ButtonText,New Scripture">
+<input type=hidden id=Node_320 Value="NameValue,ControlStyle,border-width:1;width:90;font-weight:bold;font-size:10;color:blue">
+<input type=hidden id=Node_321 Value="NameValue,ControlOnClick,">
+
+<input type=hidden id=Node_100 Value="SelectControl,SelectScript,">
+<input type=hidden id=Node_101 Value="NameValue,ControlID,Cmb_Scripts">
+<input type=hidden id=Node_102 Value="NameValue,ControlLabel,">
+<input type=hidden id=Node_103 Value="NameValue,ControlStyle,border-width:1;width:480">
+<input type=hidden id=Node_105 Value="NameValueList,SelValues,Om,Gayatri Mantram,Vishnu Sahasra Namam">
+<input type=hidden id=Node_106 Value="NameValueList,SelCodes,1,2,3">
+<input type=hidden id=Node_107 Value="NameValue,ControlOnChange,">
+</Form>
+
+<Form id=frm_ds_script_panel_store>
+<input type=hidden id=Node_108 Value="TextControl,LabelSelectScript,">
+<input type=hidden id=Node_109 Value="NameValue,ControlStyle,font-face:arial;color:blue;font-weight:bold">
+<input type=hidden id=Node_110 Value="NameValue,TextString,Select Script To Edit">
+
+<input type=hidden id=Node_111 Value="TextBoxControl,ScriptName,">
+<input type=hidden id=Node_112 Value="NameValue,ControlID,Txt_ScriptName">
+<input type=hidden id=Node_113 Value="Element,ControlLabel,Node_120,LabelEnterScriptName">
+<input type=hidden id=Node_114 Value="NameValue,ControlStyle,border-width:1;border-color:gray">
+<input type=hidden id=Node_115 Value="NameValue,ControlSize,96">
+<input type=hidden id=Node_116 Value="NameValue,ControlValue,Om">
+<input type=hidden id=Node_117 Value="NameValue,ControlOnChange,SaveControlValue('Txt_ScriptName'&COMMA'Node_2' &COMMA 'ScriptName')">
+
+<input type=hidden id=Node_120 Value="TextControl,LabelEnterScriptName,">
+<input type=hidden id=Node_121 Value="NameValue,ControlStyle,font-face:arial;color:blue;font-weight:bold">
+<input type=hidden id=Node_122 Value="NameValue,TextString,Enter Scripture Name&LINEBREAK">
+
+<input type=hidden id=Node_130 Value="SelectControl,SelectOrgVersionLang,Root,8">
+<input type=hidden id=Node_131 Value="NameValue,ControlID,Cmb_Org_Lang">
+<input type=hidden id=Node_132 Value="NameValue,ControlLabel,Original Version Language&LINEBREAK">
+<input type=hidden id=Node_133 Value="NameValue,ControlStyle,border-width:1;border-color:gray;width:320">
+<input type=hidden id=Node_134 Value="NameValueList,SelValues,Sanskrit,Tamil,Telugu">
+<input type=hidden id=Node_135 Value="NameValueList,SelCodes,1,2,3">
+<input type=hidden id=Node_136 Value="NameValue,ControlOnChange,">
+
+<input type=hidden id=Node_140 Value="SelectControl,SelectThisVersionLang,Root,8">
+<input type=hidden id=Node_141 Value="NameValue,ControlID,Cmb_ThisLang">
+<input type=hidden id=Node_142 Value="NameValue,ControlLabel,This Version Language&LINEBREAK">
+<input type=hidden id=Node_143 Value="NameValue,ControlStyle,border-width:1;border-color:gray;width:160">
+<input type=hidden id=Node_144 Value="NameValueList,SelValues,Sanskrit,Tamil,Telugu">
+<input type=hidden id=Node_145 Value="NameValueList,SelCodes,1,2,3">
+<input type=hidden id=Node_146 Value="NameValue,ControlOnChange,6,">
+
+<input type=hidden id=Node_150 Value="SelectControl,SelectOtherVersionLang,Root,8">
+<input type=hidden id=Node_151 Value="NameValue,ControlID,Cmb_OtherLangs">
+<input type=hidden id=Node_152 Value="NameValue,ControlLabel,Other Languages&LINEBREAK">
+<input type=hidden id=Node_153 Value="NameValue,ControlStyle,border-width:1;border-color:gray;width:160">
+<input type=hidden id=Node_154 Value="NameValueList,SelValues,Sanskrit,Tamil,Telugu">
+<input type=hidden id=Node_155 Value="NameValueList,SelCodes,1,2,3">
+<input type=hidden id=Node_156 Value="NameValue,ControlOnChange,">
+<input type=hidden id=Node_157 Value="NameValue,SelType,Multiple">
+<input type=hidden id=Node_158 Value="NameValue,ControlSize,3">
+
+<input type=hidden id=Node_160 Value="TextBoxControl,StanzaCount,">
+<input type=hidden id=Node_161 Value="NameValue,ControlID,Txt_StanzaCnt">
+<input type=hidden id=Node_162 Value="NameValue,ControlLabel,Number Of Stanzas&LINEBREAK">
+<input type=hidden id=Node_163 Value="NameValue,ControlStyle,border-width:1;border-color:gray">
+<input type=hidden id=Node_164 Value="NameValue,ControlSize,6">
+<input type=hidden id=Node_165 Value="NameValue,ControlValue,1">
+<input type=hidden id=Node_166 Value="NameValue,ControlOnChange,SaveControlValue('Txt_StanzaCnt'&COMMA'Node_7' &COMMA 'StanzaCount')">
+
+<input type=hidden id=Node_170 Value="TextBoxControl,LinesPerStanza,">
+<input type=hidden id=Node_171 Value="NameValue,ControlID,Txt_LinesCnt">
+<input type=hidden id=Node_172 Value="NameValue,ControlLabel,Number Of Lines Per Stanza&LINEBREAK">
+<input type=hidden id=Node_173 Value="NameValue,ControlStyle,border-width:1;border-color:gray">
+<input type=hidden id=Node_174 Value="NameValue,ControlSize,6">
+<input type=hidden id=Node_175 Value="NameValue,ControlValue,1">
+<input type=hidden id=Node_176 Value="NameValue,ControlOnChange,SaveControlValue('Txt_LinesCnt'&COMMA'Node_8' &COMMA 'LinesPerStanza')">
+
+<input type=hidden id=Node_180 Value="TextAreaControl,RecitationProcedure,">
+<input type=hidden id=Node_181 Value="NameValue,ControlID,Txt_Procedure">
+<input type=hidden id=Node_182 Value="NameValue,ControlLabel,Procedure for Recitation&LINEBREAK">
+<input type=hidden id=Node_183 Value="NameValue,ControlStyle,border-width:1;border-color:gray;width:87%">
+<input type=hidden id=Node_184 Value="NameValue,ControlCols,20">
+<input type=hidden id=Node_185 Value="NameValue,ControlRows,4">
+<input type=hidden id=Node_186 Value="NameValue,ControlValue,">
+<input type=hidden id=Node_187 Value="NameValue,ControlOnChange,SaveControlValue('Txt_Procedure'&COMMA'Node_9' &COMMA 'RecitationProcedure')">
+
+<input type=hidden id=Node_190 Value="TextControl,LabelSelectStanza,">
+<input type=hidden id=Node_191 Value="NameValue,ControlStyle,font-face:arial;color:blue;font-weight:bold">
+<input type=hidden id=Node_192 Value="NameValue,TextString,Select Stanza To Edit">
+
+<input type=hidden id=Node_193 Value="ButtonControl,NewStanzaButton,">
+<input type=hidden id=Node_194 Value="NameValue,CotrolID,Btn_NewStanza">
+<input type=hidden id=Node_195 Value="NameValue,ControlLabel,Or Create ">
+<input type=hidden id=Node_196 Value="NameValue,ButtonText,New Stanza">
+<input type=hidden id=Node_197 Value="NameValue,ControlStyle,border-width:1;width:90;font-weight:bold;font-size:10;color:blue">
+<input type=hidden id=Node_198 Value="NameValue,ControlOnClick,">
+
+<input type=hidden id=Node_210 Value="SelectControl,SelectStanzaToEdit,">
+<input type=hidden id=Node_211 Value="NameValue,ControlID,LstBox_Stanzas">
+<input type=hidden id=Node_212 Value="NameValue,ControlLabel,">
+<input type=hidden id=Node_213 Value="NameValue,ControlStyle,border-width:1;width:520">
+<input type=hidden id=Node_214 Value="Node,SelValues,Node_200,Stanza">
+<input type=hidden id=Node_215 Value="Node,SelCodes,Node_200,Stanza">
+<input type=hidden id=Node_216 Value="NameValue,ControlOnChange,">
+<input type=hidden id=Node_217 Value="NameValue,ControlSize,4">
+
+<input type=hidden id=Node_220 Value="ButtonControl,MoveStanzaUp,">
+<input type=hidden id=Node_221 Value="NameValue,CotrolID,Btn_MoveStanzaUp">
+<input type=hidden id=Node_222 Value="NameValue,ControlLabel,">
+<input type=hidden id=Node_223 Value="NameValue,ButtonText,Up">
+<input type=hidden id=Node_224 Value="NameValue,ControlStyle,border-width:1;width:40;font-weight:bold;font-size:10;color:blue">
+<input type=hidden id=Node_225 Value="NameValue,ControlOnClick,">
+
+<input type=hidden id=Node_230 Value="ButtonControl,MoveStanzaDown,">
+<input type=hidden id=Node_231 Value="NameValue,CotrolID,Btn_MoveStanzaDown">
+<input type=hidden id=Node_232 Value="NameValue,ControlLabel,">
+<input type=hidden id=Node_233 Value="NameValue,ButtonText,Down">
+<input type=hidden id=Node_234 Value="NameValue,ControlStyle,border-width:1;width:40;font-weight:bold;font-size:10;color:blue">
+<input type=hidden id=Node_235 Value="NameValue,ControlOnClick,">
+
+<input type=hidden id=Node_240 Value="TextAreaControl,EnterStanzaLines,">
+<input type=hidden id=Node_241 Value="NameValue,ControlID,Txt_StanzaLines">
+<input type=hidden id=Node_242 Value="NameValue,ControlLabel,Enter the Lines for the Selected Stanza&LINEBREAK">
+<input type=hidden id=Node_243 Value="NameValue,ControlStyle,border-width:1;border-color:gray;width:87%">
+<input type=hidden id=Node_244 Value="NameValue,ControlCols,20">
+<input type=hidden id=Node_245 Value="NameValue,ControlRows,4">
+<input type=hidden id=Node_246 Value="NameValue,ControlValue,">
+<input type=hidden id=Node_247 Value="NameValue,ControlOnChange,">
+
+<input type=hidden id=Node_250 Value="TextAreaControl,EnterStanzaLinesWordsTrans,">
+<input type=hidden id=Node_251 Value="NameValue,ControlID,Txt_StanzaLinesWordsTrans">
+<input type=hidden id=Node_252 Value="NameValue,ControlLabel,Enter the Word-By-Word Translation for the Selected Stanza&LINEBREAK">
+<input type=hidden id=Node_253 Value="NameValue,ControlStyle,border-width:1;border-color:gray;width:87%">
+<input type=hidden id=Node_254 Value="NameValue,ControlCols,20">
+<input type=hidden id=Node_255 Value="NameValue,ControlRows,4">
+<input type=hidden id=Node_256 Value="NameValue,ControlValue,">
+<input type=hidden id=Node_257 Value="NameValue,ControlOnChange,">
+
+<input type=hidden id=Node_260 Value="TextAreaControl,EnterStanzaLinesTrans,">
+<input type=hidden id=Node_261 Value="NameValue,ControlID,Txt_EnterStanzaLinesTrans">
+<input type=hidden id=Node_262 Value="NameValue,ControlLabel,Enter the Line-By-Line Translation for the Selected Stanza&LINEBREAK">
+<input type=hidden id=Node_263 Value="NameValue,ControlStyle,border-width:1;border-color:gray;width:87%">
+<input type=hidden id=Node_264 Value="NameValue,ControlCols,20">
+<input type=hidden id=Node_265 Value="NameValue,ControlRows,4">
+<input type=hidden id=Node_266 Value="NameValue,ControlValue,">
+<input type=hidden id=Node_267 Value="NameValue,ControlOnChange,">
+
+<input type=hidden id=Node_270 Value="ButtonControl,PrevStanza,">
+<input type=hidden id=Node_271 Value="NameValue,CotrolID,Btn_GoPrevStanza">
+<input type=hidden id=Node_272 Value="NameValue,ControlLabel,">
+<input type=hidden id=Node_273 Value="NameValue,ButtonText,<< Previous Stanza">
+<input type=hidden id=Node_274 Value="NameValue,ControlStyle,border-width:1;width:120;font-weight:bold;font-size:10;color:blue">
+<input type=hidden id=Node_275 Value="NameValue,ControlOnClick,">
+
+<input type=hidden id=Node_280 Value="ButtonControl,NextStanza,">
+<input type=hidden id=Node_281 Value="NameValue,CotrolIDBtn_GoNextStanza">
+<input type=hidden id=Node_282 Value="NameValue,ControlLabel,">
+<input type=hidden id=Node_283 Value="NameValue,ButtonText,Next Stanza >>">
+<input type=hidden id=Node_284 Value="NameValue,ControlStyle,border-width:1;width:120;font-weight:bold;font-size:10;color:blue">
+<input type=hidden id=Node_285 Value="NameValue,ControlOnClick,">
+</Form>
+
+<Form id=frm_ds_new_script_data_store>
+<input type=hidden id=Node_0 Value="TreeRoot,RootNode,">
+
+<input type=hidden id=Node_1 Value="DataSet,ScriptData,">
+<input type=hidden id=Node_2 Value="NameValue,ScriptName,OmMantra">
+<input type=hidden id=Node_3 Value="NameValue,ScriptOrgLang,Telugu">
+<input type=hidden id=Node_4 Value="NameValue,ScriptOthLang,Sanskrit">
+<input type=hidden id=Node_5 Value="NameValue,ScriptThisLang,Tamil">
+<input type=hidden id=Node_6 Value="NameValue,OriginHow,Came from the fires.">
+<input type=hidden id=Node_7 Value="NameValue,StanzaCount,8">
+<input type=hidden id=Node_8 Value="NameValue,LinesPerStanza,2">
+<input type=hidden id=Node_9 Value="NameValue,RecitiationProcedure,11 times every morning.">
+
+<input type=hidden id=Node_12 Value="DataSet,ScriptTypes,Node_13,Node_14">
+<input type=hidden id=Node_13 Value="NameValueList,ScriptTypesNames,Manthra,Sloka,Sthothra">
+<input type=hidden id=Node_14 Value="NameValueList,ScriptTypesCodes,Manthra,Sloka,Sthothra">
+
+<input type=hidden id=Node_15 Value="DataSet,ScriptSrcs,Node_16,Node_17">
+<input type=hidden id=Node_16 Value="NameValueList,ScriptSrcNames,Book1,Book2,Tape1,Tape2">
+<input type=hidden id=Node_17 Value="NameValueList,ScriptSrcCodes,Book1,Book2,Tape1,Tape2">
+
+<input type=hidden id=Node_18 Value="DataSet,Gods,Node_19,Node_20">
+<input type=hidden id=Node_19 Value="NameValueList,GodNames,Sai,Ganesh,Murugan">
+<input type=hidden id=Node_20 Value="NameValueList,GodNameCodes,Sai,Ganesh,Murugan">
+
+<input type=hidden id=Node_21 Value="DataSet,Authors,Node_22,Node_23">
+<input type=hidden id=Node_22 Value="NameValueList,AuthorNames,Viswamitra,Kalidasa,Valmiki,Bana,Drona">
+<input type=hidden id=Node_23 Value="NameValueList,AuthorCodes,Viswamitra,Kalidasa,Valmiki,Bana,Drona">
+
+<input type=hidden id=Node_24 Value="DataSet,Works,Node_25,Node_26">
+<input type=hidden id=Node_25 Value="NameValueList,WorksNames,Ramayanam,Mahabharath,Rig Veda">
+<input type=hidden id=Node_26 Value="NameValueList,WorksCodes,Ramayanam,Mahabharath,Rig Veda">
+
+<input type=hidden id=Node_27 Value="DataSet,LocationWhere,Node_28,Node_29">
+<input type=hidden id=Node_28 Value="NameValueList,LocationNames,East India,West India,South India,North India">
+<input type=hidden id=Node_29 Value="NameValueList,LocationCodes,East India,West India,South India,North India">
+
+<input type=hidden id=Node_40 Value="Date,Calendar,">
+<input type=hidden id=Node_41 Value="NameValueRange,Years,5,10,1, , , BC, AD">
+<input type=hidden id=Node_42 Value="NameValueList,Months,January,Febrauary,March,April,May,June,July,August,September,October,November,December">
+<input type=hidden id=Node_43 Value="NameValueRange,Days,1,31">
+
+<input type=hidden id=Node_200 Value="Collection,ScriptOrgLang,">
+<input type=hidden id=Node_201 Value="NameValue,Stanza,Om Bhur Bhuhasvaha">
+<input type=hidden id=Node_202 Value="NameValue,Line,Om Bhur Bhuhassvaha">
+<input type=hidden id=Node_203 Value="NameValue,Line,Thathsavithurvayenyum">
+<input type=hidden id=Node_204 Value="NameValue,Line,Bhurgodevasa Dhimahi">
+<input type=hidden id=Node_205 Value="NameValue,Line,Liyo yonaha prachodayath">
+<input type=hidden id=Node_206 Value="NameValue,Stanza,Om Bhur Bhuhasvaha1">
+</Form>
+<!-- DATA FORM ENDS -->
+
+<!-- ALL jAVASCRIPT FILES includes BEGIN -->
+<!-- <script language=javascript src="start.js"></script>
+<script language=javascript src="general.js"></script> 
+<script language=javascript src="node.js"></script> 
+<script language=javascript src="control.js"></script>
+<script language=javascript src="panel.js"></script> 
+<script language=javascript src="deck.js"></script> -->
+<!-- ALL jAVASCRIPT FILES includes END -->
+</Head>
+
+<Body leftmargin=0 rightmargin=0 topmargin=0 bottommargin=0>
+</Body>
+
+<script language=javascript>
+//start(); 
+</script>
+
+</Html>
