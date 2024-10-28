@@ -1,0 +1,103 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: pl - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP7D.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\..\COMMON\PUBLIC" /I "..\..\PL\PUBLIC" /I "..\..\PWW\PUBLIC" /I "C:\My3rdParty\CGIPP" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\string" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\nspr" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpcom" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\necko" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\uriloader" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\gfx" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\gfxwin" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\widget" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\windowwatcher" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\layout" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\docshell" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\dom" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webbrwsr" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webshell" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\content" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\htmlparser" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\profdirserviceProvider" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\pref" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpconnect" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xmlextras" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webbrowserpersist" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\view" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\imglib2" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\locale" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\embed_base" /D "_DEBUG" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "_X86_" /D "XP_WIN" /D "XP_WIN32" /U "NS_DEBUG" /FR"Debug/" /Fp"Debug/pl.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\MyFiles\Projects\dev\intrainter\pl\src\rvRuleProcessor.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP7D.tmp" 
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP7E.tmp" with contents
+[
+/nologo /out:"..\..\build\Debug\pl.lib" 
+.\Debug\rvDOMEventListener.obj
+.\Debug\rvRuleBase.obj
+.\Debug\rvRuleCreator.obj
+.\Debug\rvRuleProcessor.obj
+.\Debug\rvRuleRenderer.obj
+.\Debug\rvRulesCollection.obj
+.\Debug\rvRulesDefines.obj
+.\Debug\rvRuleSetProcessor.obj
+.\Debug\rvRulesProcessor.obj
+\MyFiles\Projects\dev\intrainter\build\Debug\common.lib
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP7E.tmp"
+<h3>Output Window</h3>
+Compiling...
+rvRuleProcessor.cpp
+Creating library...
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP7F.tmp" with contents
+[
+/nologo /o"Debug/pl.bsc" 
+.\Debug\rvDOMEventListener.sbr
+.\Debug\rvRuleBase.sbr
+.\Debug\rvRuleCreator.sbr
+.\Debug\rvRuleProcessor.sbr
+.\Debug\rvRuleRenderer.sbr
+.\Debug\rvRulesCollection.sbr
+.\Debug\rvRulesDefines.sbr
+.\Debug\rvRuleSetProcessor.sbr
+.\Debug\rvRulesProcessor.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP7F.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+<h3>
+--------------------Configuration: pww - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP80.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\..\COMMON\PUBLIC" /I "..\..\PL\PUBLIC" /I "..\..\PWW\PUBLIC" /I "C:\My3rdParty\CGIPP" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\string" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\nspr" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpcom" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\necko" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\uriloader" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\gfx" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\gfxwin" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\widget" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\windowwatcher" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\layout" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\docshell" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\dom" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webbrwsr" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webshell" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\content" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\htmlparser" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\profdirserviceProvider" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\pref" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpconnect" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xmlextras" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webbrowserpersist" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\view" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\imglib2" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\locale" /I "C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\embed_base" /D "_DEBUG" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "_X86_" /D "XP_WIN" /D "XP_WIN32" /U "NS_DEBUG" /FR"Debug/" /Fp"Debug/pww.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\MyFiles\Projects\dev\intrainter\pl\src\rvRuleProcessor.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP80.tmp" 
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP81.tmp" with contents
+[
+user32.lib xpcom.lib gkgfx.lib plds4.lib nspr4.lib cgipp.lib common.lib pl.lib profdirserviceprovider_s.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/pww.pdb" /debug /machine:I386 /nodefaultlib:"LIBCMTD.lib" /out:"C:\MyReleases\intrainter\dev\pww.exe" /pdbtype:sept /libpath:"..\..\BUILD\DEBUG" /libpath:"C:\My3rdParty\Cgipp\CGIPP\Debug" /libpath:"C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\lib" 
+.\Debug\nsWebBrowserChrome.obj
+.\Debug\rvDOMEventListener.obj
+.\Debug\rvFormWindow.obj
+.\Debug\rvMainWindow.obj
+.\Debug\rvMyMozApp.obj
+.\Debug\rvParentWindow.obj
+.\Debug\rvWindowCreator.obj
+.\Debug\rvWinMain.obj
+.\Debug\pww.res
+.\Debug\rvRuleProcessor.obj
+\My3rdParty\Cgipp\CGIPP\Debug\CGIPP.lib
+\MyFiles\Projects\dev\intrainter\build\Debug\common.lib
+\MyFiles\Projects\dev\intrainter\build\Debug\pl.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP81.tmp"
+<h3>Output Window</h3>
+Compiling...
+rvRuleProcessor.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP83.tmp" with contents
+[
+/nologo /o"Debug/pww.bsc" 
+.\Debug\nsWebBrowserChrome.sbr
+.\Debug\rvDOMEventListener.sbr
+.\Debug\rvFormWindow.sbr
+.\Debug\rvMainWindow.sbr
+.\Debug\rvMyMozApp.sbr
+.\Debug\rvParentWindow.sbr
+.\Debug\rvWindowCreator.sbr
+.\Debug\rvWinMain.sbr
+.\Debug\rvRuleProcessor.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP83.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+pww.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

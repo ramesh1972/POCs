@@ -1,0 +1,21 @@
+RUP,UML, Design patterns, estimates
+
+component model, architectures
+
+Rouge Wave
+awk,sed, crontab
+remoting, web services, soap, ado
+database, index, cluster..., stored proc,
+internet, rss, sip
+sorting algorithms.
+
+c++ internals
+	- polymorphism
+	- object structure
+	- binary exe, dll
+
+process internals
+power builder
+-------------------------------------------------- 
+
+

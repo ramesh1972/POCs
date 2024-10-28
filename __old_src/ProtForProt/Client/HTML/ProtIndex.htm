@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<script language=vbscript>
+function AddName()
+	Dim lObj
+
+	Set lObj = CreateObject("ProtServer.CoNames")
+	Call lObj.AddName(ebFirst.value, ebLast.value)
+
+	Set lObj = Nothing   
+	
+	Call BrowseNames()
+end function
+
+function BrowseNames()
+	Dim lObj
+	Dim lStr
+
+	Set lObj = CreateObject("ProtServer.CoNames")
+	
+	oDivBrowse.innerHTML = lObj.BrowseNames() 
+
+	Set lObj = Nothing   
+end function
+</script>
+</HEAD>
+<BODY>
+
+<table align=center width=80% border=1 style="border-collapse:collapse">
+<tr bgcolor=green>
+<td colspan=2>Enter your name</td>
+</tr>
+<tr>
+<td width=50%>First Name <Input type=text size=10 id=ebFirst></td>
+<td width=50%>Last Name <Input type=text size=10 id=ebLast></td>
+</tr>
+<tr>
+<td colspan=2 align=center><Input type=button Value='Add' onclick="Call AddName()"></td>
+</tr>
+</table>
+<BR>
+<table align=center width=80% border=1 style="border-collapse:collapse">
+<tr bgcolor=green>
+<td width=100%><A href=# onclick="Call BrowseNames()">Browse names</A></td>
+</tr>
+<tr>
+<td width=100%><Div id=oDivBrowse></Div></td>
+</tr>
+</table>
+</BODY>
+</HTML>

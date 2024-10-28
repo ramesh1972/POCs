@@ -1,0 +1,421 @@
+Types & Links
+-------------
+	a type can be one of the following,
+		a) construct type - a real class.
+				- construct sub-type - a logical type that is an extension (an object of) of a real type,
+			 either a real construct class or any other real class that the user may declare.
+		b) user's types. This typically is in the users programming language.
+				- user types logical
+		c) processor native type - These are also very important for the processor "to know".
+		d) user consrtuct types -. The user can create a class using the processor and then
+															 that becomes a type.
+		
+		e) logical types - all the above, should have a a logical name, a unique id (processor, global contexts) 
+											 and type info. esentially an array of function pointers,
+											 that covert a generic (void*) value to itself and return in the native type.
+											 THis is the key to linking user and native data, in a common way, for 
+											 different user and native languages (even at runtime). So if you see, it is really the 
+											 function pointers that are doing the real runtime linking to native and methods,
+											 from simply the logical type(declared in the processor, using the constructs language(s)).
+
+											 So it is very important to expand the range of "linkage", that the processor
+											 needs in order for it to be any useful. Once the linkage mechanism is accomplished,
+											 then its only a step away to support the destinations types.
+											 for e.g. c++ int or class.
+
+												The construct type class maintains a list of all these logical types.
+												These logical types are related to each other via inheritance.
+												So the children of a type is its derivations and each of which, 
+												could be derived many times further, thus giving rise to sub types.
+
+												Every logical type has at least one link, which is called, the 
+												native_data_type_link...that is the link that will get a generic value 
+												in real native type. This is discussed in the previous paragraphs.
+												
+												a logical type could have several other links each of which doing a specific function related to the type,
+												probably converting a value from a gereric type to native date/time format.
+												Since the types tree is a tree of inhertiance, all the rules that apply to
+												accessing its methods or really links are essentially OO. So if a link is not found in a sub_type,
+												then it is searched for in the parent type, until the root, which is the "construct_type" 
+												constructs class.
+
+												A logical type can also be created by composition. For e.g. a struct is
+												made of members of different types. (that are already declared in the processor).
+												and further these can have links an can be inherited...etc..
+
+												This current language constructs language, supports classes essentially,
+												which takes care of everything. Even further deriving this type concept,
+												all the core construct types created until the class_construct type, will be re-defined as class_construct types
+												with logical methods and variables that link to real classes that were already implemented in the library before,
+												which do the user-2-constructs-2-native linkage.
+
+
+
+
+coding plan - Sep 4th, 06
+-------------------------------
+- implement global variable, with hard coded value setting and display.
+	- class contruct and variable required.
+	- assume data type to be a string
+	- implement class data_type
+	- implement int, string, long, setting and display
+- implement global method, with hard coded mapping.
+	- requires class method and link.
+	- implement a simple method call that display "hello".
+	- implement a method with arguments and return.
+		- involves linking real and text based argument data mapping.
+1
+====================================================================================================	
+- implement the processor
+	- this requires class processor, stack, data and methods sections, register mechanism,
+	  dispatch mechanism and a linkage mechanism.
+	- calls the global main method
+		- the main method calls a function with an argument and displays the same
+			- may be changes the value in some way and displays.
+		- the main method calls several functions.
+			- may be queries the db and displays the record set.
+		- the actual c++ main function will create the processor object, stack and resiter the data and
+			and methods. Also the dispatcher and linkage objects are loaded. Then process() (main) is called.
+				- This can contain simple c++ code or do the things mentioned in
+				  the previous 2 points.
+		- if there is no process function described, then the config is used to see the next tasks,
+		- if not nothing is done.
+1, 2
+====================================================================================================	
+- general 
+	- stl c++ to be used
+	- hard coded values and registration.
+	- improvement could be made on data_types and scoping.
+	- at the end, 
+		variable, types, method calls, processing, dispatch and linkage will be working.
+1, 3
+====================================================================================================
+- implement a simple class context, scope
+	- a simple member variable display.
+	- a simple method call.
+- implement a simple inhertiance
+- implement a simple composition
+- implement collection
+
+- redefine class class using class collection (forward decl).
+- redfine dispatch and linkage.
+- improve upon class linkage and derivation mainly (including runtime derivation, when a construct object changes).
+2, 5
+====================================================================================================
+- things that would remain will be
+	- context
+	- definition in xml and hence moz wil be required.
+	- ability to create an exe from xml.
+	- database ...Not sure how to convert from db to c++, straight or via memdb?
+	- look at the other language constructs (from the hand written notes)
+	- implement persistance.
+	- implement event handling, bubbling (via different parent links).
+		- This would require an event processor...and eventq..
+		- This will be useful to integrate 3rd party events, 
+		  which require specific type of linkage.
+	- standardizing code, namespaces, introducing exception handling, logging.
+	- c++ internal linkage, dll linkage.
+3, 8		
+====================================================================================================
+- implement all this in javascript as well.
+- introduce ability to edit a construct from the internet.
+- introduce ability to upload libs, write code, build and execture remotely.
+4, 12
+====================================================================================================
+WILL BE READY FOR CREATING THE COMPONENT MODEL, SYSTEM, SERVICES, SERVERS, TASKS, METHODS
+WITH SUPPORT FOR
+	- Component creation, editing, registering, loading, mapping etc,
+	- Component loading from flat xml files, db, memdb and runtime..
+	- All this in JS to create Section coding, including event handling
+	- Much improvement on the client side required.
+	
+The above will give ability to create code and execute essentially in a very organsized way
+for the client and the server.
+IMPLEMENT NAMED PIPE, SOCKET CAPABILITIES, DATABASE, CLIENT, SYStem, Server, Services Design capabilities.
+VERSIONING OF COMPONENTS
+ALSO IMPLEMENT II COMPONENT EDITING CAPABILITIES (design mode)
+MOVE SOME OF THE CODE TO Language component and 3rd party if needed.
+15, 27
+===================================================================================================
+IMPROVE the COMPONENT MODEL's Core and 3rd party. 
+	Try to keep Component c++, js code only using language component, 
+	ii component, system components methods, ii core and generic js, c++ code. 
+	no 3rd party code should directly be called.
+3, 30
+===================================================================================================
+3, 33
+IMPROVE the COMPONENT MODEL TO THE WEB.
+===================================================================================================
+3, 36
+READY FOR PUTTING IN SEVERAL DEMO Sites related to iil, ii component, with diff. linkages mainly. 
+Also diff. gui capabilities.
+===================================================================================================
+3, 39
+P L U G I N E X I S T I N G C + +  Code.
+===================================================================================================
+3, 42
+Time To Think about improving PL features and what all to release how?
+===================================================================================================
+
+
+CONSTRUCT DATA STRUCTURE
+========================
+
+Processor
+	Memory
+		TypeInfo
+		Constructs
+	Dispatcher
+		Methods/Statements
+	Boot
+	Run
+
+
+namespaces & INCLUDES 
+=====================
+The order of includes is as below
+language
+	native_internal.h - contains all 3rd party code in the form of global functions. 
+						These are registered during processor startup. see next point.
+							dispatch(construct)
+								return_cons = construct->link_now()
+							return_cons->get_native_link()
+								return_native_link = ctype->clink
+							return_native_link->get()
+								this->clink (native_interface_Fptr (HERE: THis points to a global function with native code)
+									
+							so path to the native interface...from a give construct.									
+							construct(for e.g. a var)->ctype(cons_type)->clink(native_interface)->clink(3rd party)
+
+							path to get a composed construct_object 
+							object->links[cmp_name]->construct_ptr;
+
+	implementation.h -  contains the processor that boots, and calls process where the user code exists in cl exists.
+					    contains the memory that holds all the constructs and pointers to key memory areas (basically construct objects)				
+							memory also has a simple buffer which holds the last variable.
+						dispatcher that essentially calls link_now on constructs in which eventually
+						Either returns a construct object or calls a function and returns..
+
+						All constructs have a base type and base link associated, which does different things based on the construct type..
+						either on construct objects or calling native methods essentially or text based invocation.
+						See construct.h below.
+
+	construct.h		  - Generic Construct. Includes collection functions as well and 
+						virtual functions common for all construct types
+	constructs.h	  - Defines the most basic constructs...variable, method, link, type etc..
+						Also has native_link constructs..whose clink is a function pointer...
+						All the Good Work goes here and native_interface.h!!!!
+	rtlc_constructs.h - Defines the macros, essentially the langauge constructs 
+						that can be used to write code, config and messages.
+
+
+cons_exe_app
+------------
+	main.cpp
+	rtlc_tests.cpp
+
+/* following is the layers of memory bottom up. 
+	This note kind of also describes the plan of development as well.
+				cpu, registers
+				actual memory, RAM
+				windows process virtual memory and heap
+				c++/js native data, object, fptrs memory
+				3rd party layer - libs
+	---------------------------------------------------
+				abstract data and function ptrs.. Code level linkage and runtime linkage
+	---------------------------------------------------
+				construct memory - all are constructs (native_object_ptr_refs)
+					types		This is construct*, var*, method* etc...construct*
+					code. 	costruct link language virtual memory amd kind of stack, register, heap etc..
+					This can exist as cll code, or stl data structures, 
+					or custom collection, xml documents, files, database, shared files.
+					IT DEPENDS THE DEPTH (length, breadth as well) AT WHICH LINKAGE CAN BE PROVIDED.
+					cross language runtime linkage should be possible with no complile time depenency.
+					Atleast some good depth of linking can be easily provided via namedpipes, but it would involve 
+					changing the server code.)
+
+					db/xml -> memdb/xml -> lcl objects -> abstract processor libs -> native processor objects
+					(out of process constructs memory and linkage is also possible)										
+	---------------------------------------------------
+				runtime creations
+					construct** - These are esentially refs of construct types and code memory segments that are used by construct objects
+												that are created/executed at runtime.
+					This reference needs to be only used in this memory segment and the layers following
+  ------------------------------------------------------------------------------------
+				class construct
+					- ability to create objects in constructions area with very good linkage support.
+						essentially all constructs are classes that have propertiers, methods, events, statements ,data etc..
+						and further constructs are made of constructs and linked in various different ways.
+						like via inheritance or via composition, or global.
+						class constructs can be created on the stack and heap, i.e the one created by the cll.
+						class_construct which essentially a construct gives the ability to create a construct 
+						at runtime. It also gives all the object oriented types of linkage, hence making
+						linking, memory management, logic simple.
+						class constructs contain methods and properties mainly.
+					construct class
+						- this is derived from class construct and gives the ability to re-write the cll in 
+						 oll language. 
+							- So that the user code can be entirely abstracted from cll, unless compile time 
+							  linkage is required.
+							- class objects can be easily represented in tree data structures like xml and db.
+							- the binary image can be stored/transported to other ocll processors,
+							- easily create new types of contructs, key words, data handlers. etc..
+					BUT PHYSICALLY CLASS CONSTRUCTS ARE IN the windows heap, 
+					but phyisically it points a node in an xml document, mem file etc.
+					
+					So an object of type class construct if created, it is in the constructions stack memory as (class_construct, class_construct*). to the native heap, 
+					and if it is created in the cll heap, then i
+					otherwise, class construct is similar to that of variable, method.
+		----------------------------------------------------------
+		ocll language based code
+		----------------------------------------------------------
+		data handling
+			linker->loadfromdb
+					construct objects data linker handler --> get all children, deep, depth
+							->call db..
+							->xml
+								<- get records representing a construct object..
+							->store 
+								-> in construct cobjects collection handler or
+								-> in xml
+			data in xml format can come from flat files, args, or other inputs like http inputs..
+		----------------------
+		cll  - ocll  - xocll - dbxocll ,, logging, error handling, datam memory, process structure
+		high level of automation (in proc)
+		--------------------------------------
+		Component - all the above essentially could be components running in their own process space and
+		are shared by multiple systems.
+		So this requires, new compile and runtime linkings like dll, com or java
+		Also would require ipc support and data type conversions, marshalling, ,ulti threading, async.
+		
+		The component layer takes care of all these + all the basic class_constructs essentially can be converted into a component, 
+		and hence probably the ocll, or cll code could exist within a com component, thus completely moving
+		away from the concept of static linking, which means constructs can be derived at runtime,
+		remotely...and a whole perspective of system arises, in which components and task dispatch mechanism
+		exist, with support to several types of linking data types, client handling, processin handling,
+		core libs, logging, etc...services.
+		----------------------------------------
+		System layer, a system component could be as large couple of servers and workstations performing certain tasks,
+		or could be as small, as a microcell with a small client, small amount of data and say a databse update.
+		When there is real need of developing a system, this layer is useful.
+		plenty has been thought about this. And this is the aim.
+		Aim is create ability to create system and service, tasks and contexts on the fly,  incuding client and server side coding and data handling. hmmm
+		with lots of system service as goodies like log, performance, error handing, email, deveice integration , database server integration, user management security etc..
+		
+			NOTE: Most of this work is easily done by using cll, ocll and with a simple xml and db editor.
+
+		If needed very simple steps can be taken to link personal code if it 
+		is not possible without doing it.code editing, compiling, debugging, can be provided on the internet/user interface.
+		------------------------------------------------------------------------------
+		VERY GOOD USER INTERFACE CREATION AND FORMATTING, LAYOUT CAPABILITY FOR ALL THESE THINGS.
+		----------------------------------------------------------------------------------------
+		PLan some 50 good web sites and launch. This shoudld be all the key things that can be
+		possibly done with the above stack. this will interest different parties
+		------------------
+
+	F U N T I M E
+	--------------
+	After all that work finally get back to where it was all started. The page let service website.
+	aournd 30% is remaining in c++ and 100% remainaing on the client, But with the help of the above layers,
+	it should be very easy to complete.
+	create several juicy content web sites like search site or email site...or 
+	hotel/beer price comparion website. etc...
+	USING the II PL Service WebSite..
+
+SO ESSENTIALLY LOT OF INITIAL HARD WORK and then will lead to the creation of several products, essentially and that are of very mush interest to me!
+*/
+
+
+	/*
+	accessor via links...these for a variable, method can be fptr link.
+	for an object, it can be inherticance (object is inherited), 
+	composition (object is composed, aggregation (object is an aggregation) etc..
+
+	hence a construct can have mustringiple parents or mutliple links to different parent constructs, 
+	just as links to child constructs. The objects of these are created at 
+	runtime based on constructor link
+		- mustringiple base classes 
+		- composed in mustringiple parents. a construct has a owner and is refed from other constructs, where the 
+		  construct ref is actually composed.
+		- runtime derivation or extension and state persistance. 
+		- Relinking to the latest or particular derivation by the client
+		- Or an construct object collapsing its derivation chain and notifying its referrers.
+		- So runtime_construct_object is itself a type of construct
+		
+	The construct class object created at runtime itself is a derivation of its type class, but actually not adding anything to the type,
+		That object called the construct object (ptr and ref) resides in the constructions area just like other variables, and methods, the
+		only difference is that new constructs are created at runtime by the processor, for which types or no information exists,
+		and all that is avialable vai a simple derivation. 
+		-	The idea is to persist every instance of linking and keep it as means of 
+			enabling runtime dynamic linking of a construct class or a base object across mustringiple users or during dynamic links.
+			So Once a class is extended at runtime, there is an option of publishing the extended interface , back up the chain of,
+			derivation, thus saving the new version of the original and collapsing the derivations.
+
+	The following function is very important. while the get_child functions gets children, the get_member_link, will get,
+	the most derived version of the child, if that member does not exist.
+
+	The actual links exists in the type info space separate from the constructions area.
+	So the member, for e.g. a variable, or a method, will have only a ref to that type and the parents of the type are 
+	generally inter-linked via inherticance, just like in oop.
+
+	Since a construct can be inhertied from mustringiple classes, the recursive find of the link,
+	can happen in mustringiple parent paths from left to right ( or top to bottom). This can be controlled by passing app.. flags.
+
+	Similaly there are methods like events that can be bubbled through compositions. These events are links that are defined in one or more base classes.
+	So an event if not handled by the child, can be handled by the "composing" parent. In this case
+	the tree upward traversal is done via refs and ref type links..essentially.
+
+	So The design is,
+		construct objects are created by other construct objects via the dispatcher which actually,
+		creates the object in the processor's memory. 
+		So the construct object is accessible to the user interface only via the dispatcher as object ptrs.
+		To maintain relation ships or links between construct objects, a collection class is implemented.
+		And every construct has a ref to the pointer of the collection.
+		So to access an object, a construct should use its sub-collection ptr ref (*, ref type) from which construct* can be accessed.
+		This essentially translates to a link between construct objects, even at runtime, anytime.
+		This link can be used to make the processor portable and interoperable very easily.
+
+		The memory handler can decide to store the construct* and all its information, in RAM or in XML, DB, file or pipe, request
+		etc..Changing this will not and should not change the processor code, constructs, native, 
+		user code unless the native language or os itself are being changed.
+*/
+
+/*
+class link =============================================
+when a link becomes live or (jumped), it is locked from being executed by 
+any other link, until this link is complete. kind of atomic call. 
+so the links params and return buffer are to be protected.
+the links' children are essentially params that have to be added at runtime. 
+these are variables. also the return type is set at runtime as a child. 
+once the link is executed these values are set to null.
+
+====================== IMPORTANT ======================
+NOTE: these methods are to be thread safe. 
+as of now only single thread support is included and 
+static linking of this procosser.
+====================== IMPORTANT ====================== 
+
+Types of links supported
+------------------------
+1) fptr: basic types and user defined types of function pointers, both global and class level, with static linking
+2) cpp_optr:core constructs like method, variable, context type links..essentially some of these are c++ class object pointers, or construct_ref
+3) native pointers...mainly for variable types, but also since fptrs are to be typedefed somewhere in the code
+	 they also have native pointers..easy to type case at the least..and gets things working!
+4) construct pointers, a pointer to another construct in (heap)memory, 
+5) params for a function can also be passed as ref..either object(variable or int) ,object_ptr, construct_ref(like variable**), construct pointer like construct*
+6) void_p also is a special type that is used to hold the data of the construct (in buffer member). So while linking to functions,
+   these can also be passed.
+
+The user->dispatch->variable, method, argument->link<-user->link->process() classes together perform the linking..
+So the dispatcher::dispatch, variable::process, method::process, argument::process and link::process() are important functions.
+Also all the native links and the marco that lanuches the native link on a variable/void and returns the data in native format.
+
+User
+	Construct/Method/Variable
+	->dispatch(link_name)
+		->method::process()
+<----- return link
+	link->process() or link::process(...)
+		-> native function...
+		-> or returns the data in appropriate format.
+*/

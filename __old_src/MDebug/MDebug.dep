@@ -1,0 +1,249 @@
+# Microsoft Developer Studio Generated Dependency File, included by MDebug.mak
+
+.\viewer\windows\nsButton.cpp : \
+	".\viewer\windows\nsButton.h"\
+	".\viewer\windows\nsdefs.h"\
+	
+
+.\viewer\windows\nsCheckButton.cpp : \
+	".\viewer\windows\nsCheckButton.h"\
+	".\viewer\windows\nsdefs.h"\
+	
+
+.\viewer\windows\nsLabel.cpp : \
+	".\viewer\windows\nsdefs.h"\
+	".\viewer\windows\nsLabel.h"\
+	
+
+.\viewer\windows\nsTextHelper.cpp : \
+	".\viewer\windows\nsdefs.h"\
+	".\viewer\windows\nsTextHelper.h"\
+	
+
+.\viewer\windows\nsTextWidget.cpp : \
+	".\viewer\windows\nsdefs.h"\
+	".\viewer\windows\nsTextHelper.h"\
+	".\viewer\windows\nsTextWidget.h"\
+	
+
+.\viewer\JSConsole.cpp : \
+	".\viewer\JSConsole.h"\
+	".\viewer\jsconsres.h"\
+	
+
+.\viewer\nsBaseDialog.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	
+
+.\viewer\nsBeOSMain.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	
+
+.\viewer\nsBrowserWindow.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsEditorMode.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	".\viewer\nsWidgetSupport.h"\
+	".\viewer\nsXPBaseWindow.h"\
+	".\viewer\resources.h"\
+	
+
+.\viewer\nsEditorMode.cpp : \
+	".\viewer\nsEditorMode.h"\
+	".\viewer\resources.h"\
+	
+
+.\viewer\nsFindDialog.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsFindDialog.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	
+
+.\viewer\nsImageInspectorDialog.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	
+
+.\viewer\nsMacMain.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	".\viewer\resources.h"\
+	
+
+.\viewer\nsOS2Main.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	".\viewer\resources.h"\
+	
+
+.\viewer\nsPhMain.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	".\viewer\resources.h"\
+	
+
+.\viewer\nsPhMenu.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\resources.h"\
+	
+
+.\viewer\nsPrintSetupDialog.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	
+
+.\viewer\nsTableInspectorDialog.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	
+
+.\viewer\nsThrobber.cpp : \
+	".\viewer\nsThrobber.h"\
+	
+
+.\viewer\nsViewerApp.cpp : \
+	".\viewer\JSConsole.h"\
+	".\viewer\jsconsres.h"\
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	".\viewer\nsWidgetSupport.h"\
+	".\viewer\nsWindowCreator.h"\
+	".\viewer\nsXPBaseWindow.h"\
+	".\viewer\resources.h"\
+	
+
+.\viewer\nsWebBrowserChrome.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	
+
+.\viewer\nsWebCrawler.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	
+
+.\viewer\nsWidgetSupport.cpp : \
+	".\viewer\nsWidgetSupport.h"\
+	
+
+.\viewer\nsWindowCreator.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	".\viewer\nsWindowCreator.h"\
+	
+
+.\viewer\nsWinMain.cpp : \
+	".\viewer\JSConsole.h"\
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	
+
+.\viewer\nsXPBaseWindow.cpp : \
+	".\viewer\nsBaseDialog.h"\
+	".\viewer\nsBrowserWindow.h"\
+	".\viewer\nsImageInspectorDialog.h"\
+	".\viewer\nsPrintSetupDialog.h"\
+	".\viewer\nsTableInspectorDialog.h"\
+	".\viewer\nsThrobber.h"\
+	".\viewer\nsViewerApp.h"\
+	".\viewer\nsWebBrowserChrome.h"\
+	".\viewer\nsWebCrawler.h"\
+	".\viewer\nsXPBaseWindow.h"\
+	

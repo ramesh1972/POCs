@@ -1,0 +1,678 @@
+<begin>
+  <open container="html">
+    <newline/>
+    <open container="head">
+      <newline/>
+      <title value="Example 0"/>
+      <newline/>
+      <leaf tag="style">
+            </leaf>
+      <newline/>
+      <leaf tag="meta">
+       <attr key="name" value="crc"/>
+       <attr key="content" value="3268488385&quot;"/>
+            </leaf>
+      <newline/>
+    <close container="head">
+    <open container="body">
+       <attr key="bgcolor" value="#FFFFFF"/>
+       <attr key="text" value="#000000"/>
+            </open>
+      <newline/>
+      <newline/>
+      <newline/>
+      <newline/>
+      <newline/>
+      <newline/>
+      <newline/>
+      <newline/>
+      <newline/>
+      <newline/>
+      <open container="h1">
+        <text value="Example 0: Basic HTML Text Styles"/>
+      <close container="h1">
+      <newline/>
+      <newline/>
+      <open container="p">
+        <leaf tag="br"/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="h2">
+        <text value="Formatted Text"/>
+      <close container="h2">
+      <newline/>
+      <newline/>
+      <open container="p">
+        <newline/>
+        <text value=" "/>
+        <text value="This is a basic paragraph with "/>
+        <open container="b">
+          <text value="bold"/>
+        <close container="b">
+        <text value=", "/>
+        <open container="i">
+          <text value="italic"/>
+        <close container="i">
+        <text value=" "/>
+        <text value="and&#13;&#10; "/>
+        <open container="i">
+          <open container="b">
+            <text value="bold"/>
+          <close container="b">
+        <close container="i">
+        <open container="b">
+          <open container="i">
+            <text value="-italic "/>
+          <close container="i">
+        <close container="b">
+        <newline/>
+        <text value=" "/>
+        <text value="text. It also includes "/>
+        <open container="font">
+           <attr key="color" value="#FF0000"/>
+                    </open>
+          <text value="red"/>
+        <close container="font">
+        <text value=",&#13;&#10; "/>
+        <open container="font">
+           <attr key="color" value="#00FF00"/>
+                    </open>
+          <text value="green"/>
+        <close container="font">
+        <text value=" &#10; "/>
+        <text value="and "/>
+        <open container="font">
+           <attr key="color" value="#0000FF"/>
+                    </open>
+          <text value="blue"/>
+        <close container="font">
+        <text value=" "/>
+        <text value="text.&#13;&#10; It has "/>
+        <open container="s">
+          <text value="strikethru"/>
+        <close container="s">
+        <text value=" "/>
+        <text value="and "/>
+        <open container="u">
+          <text value="underline"/>
+        <close container="u">
+        <text value=".&#13;&#10; "/>
+        <open container="u">
+          <text value=" "/>
+        <close container="u">
+        <newline/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="p">
+        <newline/>
+        <text value="  "/>
+        <text value="Text decoration color test:&#13;&#10;&#9;"/>
+        <open container="span">
+           <attr key="style" value="color: red"/>
+                    </open>
+          <newline/>
+          <text value="&#9;  "/>
+          <text value="red &#13;&#10;&#9;  "/>
+          <open container="span">
+             <attr key="style" value="text-decoration: underline"/>
+                        </open>
+            <newline/>
+            <text value="&#9;&#9;"/>
+            <text value="underline&#13;&#10;&#9;&#9;"/>
+            <open container="span">
+               <attr key="style" value="color: cyan"/>
+                            </open>
+              <newline/>
+              <text value="&#9;&#9;  "/>
+              <text value="cyan &#13;&#10;&#9;&#9;  "/>
+              <open container="span">
+                 <attr key="style" value="text-decoration: line-through"/>
+                                </open>
+                <newline/>
+                <text value="&#9;&#9;&#9;"/>
+                <text value="line-through&#13;&#10;&#9;&#9;&#9;"/>
+                <open container="span">
+                   <attr key="style" value="color: blue"/>
+                                    </open>
+                  <newline/>
+                  <text value="&#9;&#9;&#9;  "/>
+                  <text value="blue &#13;&#10;&#9;&#9;&#9;  "/>
+                  <open container="span">
+                     <attr key="style" value="text-decoration: overline"/>
+                                        </open>
+                    <newline/>
+                    <text value="&#9;&#9;&#9;&#9;"/>
+                    <text value="overline&#13;&#10;&#9;&#9;&#9;&#9;"/>
+                    <open container="span">
+                       <attr key="style" value="color: black"/>
+                                            </open>
+                      <newline/>
+                      <text value="&#9;&#9;&#9;&#9;  "/>
+                      <text value="black &#13;&#10;&#9;&#9;&#9;&#9;"/>
+                    <close container="span">
+                    <newline/>
+                    <text value="&#9;&#9;&#9;&#9;"/>
+                    <text value="overline&#13;&#10;&#9;&#9;&#9;  "/>
+                  <close container="span">
+                  <newline/>
+                  <text value="&#9;&#9;&#9;   "/>
+                  <text value="blue&#13;&#10;&#9;&#9;&#9;"/>
+                <close container="span">
+                <newline/>
+                <text value="&#9;&#9;&#9;"/>
+                <text value="line-through&#13;&#10;&#9;&#9;  "/>
+              <close container="span">
+              <newline/>
+              <text value="&#9;&#9;   "/>
+              <text value="cyan&#13;&#10;&#9;&#9;"/>
+            <close container="span">
+            <newline/>
+            <text value="&#9;&#9;"/>
+            <text value="underline&#13;&#10;&#9;  "/>
+          <close container="span">
+          <newline/>
+          <text value="&#9;  "/>
+          <text value="red&#13;&#10;&#9;"/>
+        <close container="span">
+        <newline/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="p">
+        <text value="This is a paragraph with font variations: "/>
+        <open container="b">
+          <open container="font">
+             <attr key="face" value="Arial, Helvetica, sans-serif"/>
+                        </open>
+            <text value="Bold Arial,"/>
+          <close container="font">
+        <close container="b">
+        <open container="font">
+           <attr key="face" value="Arial, Helvetica, sans-serif"/>
+                    </open>
+          <text value=" &#10;  "/>
+          <open container="i">
+            <open container="font">
+               <attr key="face" value="Verdana, Arial, Helvetica, sans-serif"/>
+                            </open>
+              <text value="Italic Verdana"/>
+            <close container="font">
+            <text value=","/>
+          <close container="i">
+          <text value=" "/>
+          <open container="font">
+             <attr key="face" value="courier"/>
+                        </open>
+            <text value="COURIER, &#13;&#10;  "/>
+            <open container="font">
+               <attr key="face" value="Times New Roman, Times, serif"/>
+                            </open>
+              <text value="Times New Roman."/>
+            <close container="font">
+          <close container="font">
+        <close container="font">
+      <close container="p">
+      <newline/>
+      <open container="p">
+        <open container="font">
+           <attr key="size" value="7"/>
+                    </open>
+          <text value="Font size=7, "/>
+        <close container="font">
+        <open container="font">
+           <attr key="size" value="6"/>
+                    </open>
+          <text value="Font size=6, "/>
+        <close container="font">
+        <open container="font">
+           <attr key="size" value="5"/>
+                    </open>
+          <text value="Font &#13;&#10;  size=5, "/>
+        <close container="font">
+        <open container="font">
+           <attr key="size" value="4"/>
+                    </open>
+          <text value="Font size=4, "/>
+        <close container="font">
+        <open container="font">
+           <attr key="size" value="3"/>
+                    </open>
+          <text value="Font size=3, "/>
+        <close container="font">
+        <open container="font">
+           <attr key="size" value="2"/>
+                    </open>
+          <text value="Font &#13;&#10;  size=2, "/>
+        <close container="font">
+        <open container="font">
+           <attr key="size" value="1"/>
+                    </open>
+          <text value="Font size=1, "/>
+        <close container="font">
+        <open container="font">
+           <attr key="point-size" value="24"/>
+           <attr key="font-weight" value="700"/>
+                    </open>
+          <text value="Font &#13;&#10;  point-size=24 font-weight=700"/>
+        <close container="font">
+        <leaf tag="br"/>
+        <newline/>
+        <text value=" "/>
+        <open container="span">
+           <attr key="style" value="font-family: Verdana Bold, Times; font-weight: bold; font-size: 18pt; font-variant: small-caps;"/>
+                    </open>
+          <text value="This Text Is Small-caps.&#13;&#10;"/>
+          <newline/>
+        <close container="span">
+        <newline/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="h2">
+        <text value="Text styles"/>
+      <close container="h2">
+      <newline/>
+      <newline/>
+      <open container="p">
+        <newline/>
+        <text value=" "/>
+        <open container="span">
+           <attr key="style" value="text-transform: capitalize;"/>
+                    </open>
+          <newline/>
+          <text value="  "/>
+          <text value="this text was capitalized. "/>
+          <leaf tag="br"/>
+          <newline/>
+          <text value="latin "/>
+          <entity value="ring"/>
+          <text value=" "/>
+          <entity value="grave"/>
+          <text value=" "/>
+          <text value="should be displayed as "/>
+          <entity value="ring"/>
+          <text value=" "/>
+          <text value="&amp;Egrave."/>
+          <leaf tag="br"/>
+          <newline/>
+          <text value="german character "/>
+          <entity value="zlig"/>
+          <text value=" &#10;"/>
+          <text value="should be displayed as &quot;SS&quot;.&#13;&#10; "/>
+        <close container="span">
+        <newline/>
+        <text value=" "/>
+        <leaf tag="br"/>
+        <newline/>
+        <text value=" "/>
+        <open container="span">
+           <attr key="style" value="text-transform: lowercase;"/>
+                    </open>
+          <newline/>
+          <text value="  "/>
+          <text value="THIS TEXT WAS LOWERCASED "/>
+          <leaf tag="br"/>
+          <newline/>
+          <text value="LATIN "/>
+          <entity value="ring"/>
+          <text value=" "/>
+          <entity value="grave"/>
+          <text value=" "/>
+          <text value="SHOULD BE DISPLAYED AS "/>
+          <entity value="ring"/>
+          <text value=" "/>
+          <text value="&amp;egrave."/>
+          <newline/>
+          <text value=" "/>
+        <close container="span">
+        <newline/>
+        <text value=" "/>
+        <leaf tag="br"/>
+        <newline/>
+        <text value=" "/>
+        <open container="span">
+           <attr key="style" value="text-transform: uppercase;"/>
+                    </open>
+          <newline/>
+          <text value="  "/>
+          <text value="this text was uppercased. "/>
+          <leaf tag="br"/>
+          <newline/>
+          <text value="latin "/>
+          <entity value="ring"/>
+          <text value=" "/>
+          <entity value="grave"/>
+          <text value=" "/>
+          <text value="should displayed as "/>
+          <entity value="ring"/>
+          <text value=" "/>
+          <text value="&amp;Egrave."/>
+          <text value=" "/>
+          <leaf tag="br"/>
+          <newline/>
+          <text value="german character "/>
+          <entity value="zlig"/>
+          <text value=" &#10;"/>
+          <text value="should be displayed as &quot;SS&quot;.&#13;&#10; "/>
+        <close container="span">
+        <newline/>
+        <text value=" "/>
+        <leaf tag="br"/>
+        <newline/>
+        <text value=" "/>
+        <open container="span">
+           <attr key="style" value="letter-spacing: 2em;"/>
+                    </open>
+          <newline/>
+          <text value="  "/>
+          <text value="Letter spacing set to 2em's.&#13;&#10; "/>
+        <close container="span">
+        <newline/>
+        <text value=" "/>
+        <leaf tag="br"/>
+        <newline/>
+        <text value=" "/>
+        <open container="span">
+           <attr key="style" value="word-spacing: 2em;"/>
+                    </open>
+          <newline/>
+          <text value="  "/>
+          <text value="Word spacing set to 2em's.&#13;&#10; "/>
+        <close container="span">
+        <newline/>
+        <text value=" "/>
+        <leaf tag="br"/>
+        <newline/>
+        <text value=" "/>
+        <open container="span">
+           <attr key="style" value="text-transform: capitalize; letter-spacing: 1em; word-spacing: 5em; font-variant: small-caps;"/>
+                    </open>
+          <newline/>
+          <text value="  "/>
+          <text value="this text is capitalized small-caps with letter spacing set to 1em and&#13;&#10;  the word spacing set to 5em's. enjoy!&#13;&#10; "/>
+        <close container="span">
+        <newline/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="h2">
+        <text value="Pseudo-element tests"/>
+      <close container="h2">
+      <newline/>
+      <newline/>
+      <open container="p">
+         <attr key="ID" value="line"/>
+                </open>
+        <newline/>
+        <text value=" "/>
+        <text value="This paragraph demonstrates the :first-line pseudo&#13;&#10; element. The first line of text should use a font twice the size and&#13;&#10; have the letter spacing set so that the text is jammed together in an&#13;&#10; unpleasant fashion.&#13;&#10;"/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="p">
+         <attr key="ID" value="letter"/>
+                </open>
+        <newline/>
+        <text value=" "/>
+        <text value="First letter style is really cool. The facility is very powerful because it&#13;&#10; takes an innocuous looking content model and spices it up dramatically while&#13;&#10; allowing a backwards compatible answer for older browsers.&#13;&#10;"/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="h2">
+        <leaf tag="br"/>
+        <newline/>
+      <close container="h2">
+      <newline/>
+      <open container="h2">
+        <text value="Listings"/>
+      <close container="h2">
+      <newline/>
+      <open container="h3">
+        <text value="Bulleted List "/>
+      <close container="h3">
+      <newline/>
+      <open container="ul">
+        <newline/>
+        <text value="  "/>
+        <open container="li">
+          <text value="One"/>
+        <close container="li">
+        <newline/>
+        <text value="  "/>
+        <open container="li">
+          <text value="Two&#13;&#10;    "/>
+          <open container="ul">
+            <newline/>
+            <text value="      "/>
+            <open container="li">
+              <text value="Apples"/>
+            <close container="li">
+            <newline/>
+            <text value="      "/>
+            <open container="li">
+              <text value="Oranges"/>
+            <close container="li">
+            <newline/>
+            <text value="      "/>
+            <open container="li">
+              <text value="Bananas"/>
+            <close container="li">
+            <newline/>
+            <text value="    "/>
+          <close container="ul">
+          <newline/>
+          <text value="  "/>
+        <close container="li">
+        <newline/>
+        <text value="  "/>
+        <open container="li">
+          <text value="Three"/>
+        <close container="li">
+        <newline/>
+      <close container="ul">
+      <newline/>
+      <leaf tag="br"/>
+      <newline/>
+      <open container="h3">
+        <text value="Numbered List "/>
+      <close container="h3">
+      <newline/>
+      <open container="ol">
+        <newline/>
+        <text value="  "/>
+        <open container="li">
+          <text value="One"/>
+        <close container="li">
+        <newline/>
+        <text value="  "/>
+        <open container="li">
+          <text value="Two &#13;&#10;    "/>
+          <open container="ol">
+            <newline/>
+            <text value="      "/>
+            <open container="li">
+              <text value="Apples"/>
+            <close container="li">
+            <newline/>
+            <text value="      "/>
+            <open container="li">
+              <text value="Oranges"/>
+            <close container="li">
+            <newline/>
+            <text value="      "/>
+            <open container="li">
+              <text value="Bananas"/>
+            <close container="li">
+            <newline/>
+            <text value="    "/>
+          <close container="ol">
+          <newline/>
+          <text value="  "/>
+        <close container="li">
+        <newline/>
+        <text value="  "/>
+        <open container="li">
+          <text value="Three"/>
+        <close container="li">
+        <newline/>
+      <close container="ol">
+      <newline/>
+      <newline/>
+      <open container="h2">
+        <text value="Justified Text"/>
+      <close container="h2">
+      <newline/>
+      <newline/>
+      <open container="p">
+         <attr key="align" value="left"/>
+                </open>
+        <newline/>
+        <text value=" "/>
+        <text value="This paragraph is aligned "/>
+        <open container="b">
+          <text value="left"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="left"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="left"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="left"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="left"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="left"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="left"/>
+        <close container="b">
+        <text value=".&#13;&#10;"/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="p">
+         <attr key="align" value="center"/>
+                </open>
+        <newline/>
+        <text value=" "/>
+        <text value="This paragraph is aligned "/>
+        <open container="b">
+          <text value="center"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="center"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="center"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="center"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="center"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="center"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="center"/>
+        <close container="b">
+        <text value=".&#13;&#10;"/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="p">
+         <attr key="align" value="right"/>
+                </open>
+        <newline/>
+        <text value=" "/>
+        <text value="This paragraph is aligned "/>
+        <open container="b">
+          <text value="right"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="right"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="right"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="right"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="right"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="right"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is aligned "/>
+        <open container="b">
+          <text value="right"/>
+        <close container="b">
+        <text value=".&#13;&#10;"/>
+      <close container="p">
+      <newline/>
+      <newline/>
+      <open container="p">
+         <attr key="align" value="justify"/>
+                </open>
+        <newline/>
+        <text value=" "/>
+        <text value="This paragraph is "/>
+        <open container="b">
+          <text value="justified"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is "/>
+        <open container="b">
+          <text value="justified"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is "/>
+        <open container="b">
+          <text value="justified"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is "/>
+        <open container="b">
+          <text value="justified"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is "/>
+        <open container="b">
+          <text value="justified"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is "/>
+        <open container="b">
+          <text value="justified"/>
+        <close container="b">
+        <text value=".&#13;&#10; This paragraph is "/>
+        <open container="b">
+          <text value="justified"/>
+        <close container="b">
+        <text value=".&#13;&#10;"/>
+      <close container="p">
+      <newline/>
+      <newline/>
+    <close container="body">
+  <close container="html">
+</begin>

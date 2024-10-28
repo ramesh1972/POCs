@@ -1,0 +1,71 @@
+Steps to be taken when the project structure changes.
+-----------------------------------------------------
+- change the env.
+	- moz related
+- build mozilla
+	- change the env setting MOZCONFIG
+	- delete old obj- folder
+	- test if viewer.exe is working, if mozilla.exe is working.
+- reninstall the following under installs
+	- Apache
+		- Save the old folder
+		- reinstall
+		- change all .conf files and makesure localhost is working fine.
+	- MySQL
+		- UNinstall the database
+		- reinstall
+		- recreate temp\stock table
+- change all dsp files to load the files from new location if changed.
+	- update the dsp settings to reflect new structure.
+	- clean all libs, dlls, exes, objs etc....rebuild all. save settings
+- test the following
+	- http://localhost/ 
+	- test shell script if changed
+	- test moztools if changed
+	- make sure moz related projects work
+	- make sure the section site works
+	- jsdb demo should also work.
+
+- repeat the above everytime a change is made to the project files structure.
+
+Project Conventions
+-------------------
+1) Not too many directories to store project files, code and release files.
+2) All source code, project files, build files go into a single directory for all dsps...very simple!..
+3) release for all apps in the project go directly under either of dev, prod, test etc..dirs..A few simple dirs like bin and script, images by default created for any type of release.
+4) Generally the dsp files correspond to a namespace.
+5) in the source code, distinction between namespace and class should be clear. Mainly namespace is a boundary, while class is a template of useful live object with data and methods.
+6) static libs and exes to start with should follow this standard
+7) all web related code also follows the same standard.
+
+generic dir structure for a developer is,
+-----------------------------------------
+_usr\ 
+ installs - all installs related to all imp. projects should go here. 
+ libs_3rdprty - all installs of imp. 3rd party source code and hence their libs should go here
+ _projects - a flat dir of all projects..
+
+a project can have all these dirs
+_usr\_projects\sample\ - some project name
+			 _code -- all source code, editor stuff, a flat dir of files pref..and 3rd party stuff, like editor files.
+				  all 3rd party code is in the _usr\_libs_3rdparty\ folder.
+			 _docs -- any plans, ideas could go into this folder
+			 _release -- the result of the builds (debug) and anything that is required for running the application(s)(prod). This could include 3rd party related directories/files as well, pref..so that reinstall of the 3rd party becomes simple.
+
+
+The core idea is to keep all data in flat directories and use applications or search to access the files in a more logical way. 
+This makes it extremely simple in terms of management, esp when there are lot of sub projects involved.
+
+a more complex dir structure would result in maintaining a huge tree of folders. there are already namespaces and classes that have both physical and logical relations to manage apart from the actual source code. And also there will other dimensions like config, dev, test or prod etc..or user based management, importantly source control and versioning.
+
+
+
+
+
+
+
+
+
+
+
+

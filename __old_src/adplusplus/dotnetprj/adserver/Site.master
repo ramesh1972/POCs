@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form runat="server">
+    <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr valign=top align=left height=110px>
+            <td width=90%>
+                <div class=topbar></div>
+                <div class="sideblock">
+                    <div class="sideblockInner"></div>
+                </div>
+                <div class="yellowbar"></div>
+                    
+                <span class="title">Welcome to <span class="websitename">adPlusPlus.com</span></span>
+
+                <div class=bluebar_top></div>
+                <div class="bluebar_bottom"></div>
+                    
+                <div class=titleNoteOuter>
+                    <span class="titleNote">A <Span class="titleNoteFreeWord">Free</Span> Symbiotic Contextual Online Advertising Platform</span>
+                </div>
+
+                <div class="leftTitleUnderLineOuter">
+                    <div class="leftTitleUnderLineInner"></div>
+                </div>
+
+                <div class="rightTitleUnderLineOuter">
+                    <div class="rightTitleUnderLineInner"></div>
+                </div>
+            </td>
+            <td>
+                <table width=100% height=100% border=1 style="border-collapse:collapse;border-width:2mm;border-color:Silver">
+                    <tr valign=middle align=center class=siteButton height=34px><td><a href=Default.aspx>Home</a></td></tr>
+                    <tr valign=middle align=center class=siteButton height=34px><td><a href=About.aspx>About Us</a></td></tr>
+                    <tr valign=middle align=center class=siteButton height=34px><td><a href=Contact.aspx>Contact Us</a></td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width=100% height=100% border=0>
+        <tr valign=top height=100%>
+            <td align=left width=70%><asp:ContentPlaceHolder ID="mainContent" runat=server></asp:ContentPlaceHolder></td>
+            <td align=left><asp:ContentPlaceHolder ID="mainStats" runat=server></asp:ContentPlaceHolder></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

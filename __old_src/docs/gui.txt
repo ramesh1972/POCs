@@ -1,0 +1,156 @@
+GUI
+---
+Page, Root Section, Child Sections, Leaf Section, 
+
+Root Section - IIL Context Based
+
+Child Section - Empty, IIL Standard, Frame, Style, Script, Sub Sections
+Sub Section - Logical Sections
+
+Leaf Sections - Non-Control Sections, Control Sections
+	 
+Non-Control Section - Text, Image, Empty, HTML, Script, IIL JS, Hidden,
+Control Section -  Atomic Control - Button, Link, DropDown, Radio etc..
+		   Composite Control - Menu, Table, List, Tree, Slider etc... 
+
+
+Child Section Derived Types
+	- Section Collection 
+	- Container
+	- Tabs Container
+	- Section Bar
+	- Border Section
+	- Paw Section etc...
+
+
+All These are editable, persistable
+- Site Or Page Or any Section can be trimmed
+- re-grouped
+- changed
+- format can be changed...visually.
+
+Format Themes
+-------------
+- Every Section (type) basically has different styles...
+- I call it the GUI Section View Style, GUIS Views
+- A Style Change can be replicated to all the related sections and their relations or to the whole page, site and 
+fcourse just for the section. Only if the sections have that style implemented, then the change will be applied. 
+- Alternatively user should be able to select specific instances of sections and set the style. THis style can be a 
+  very high level or very low level change
+- Everything is a Style, even the views. for e.g. a tree control can be viewed with or without the child explorer table view section...
+So this becomes a style for the tree control...while this will not exist probably for no other control.
+Another e.g., will the section have a close button...or will it have a close button disp..while on mouse over..
+This is a style parameter which probably will be used by most controls.
+- Styles are inherited from base styles for every user and every time the section is loaded...Just like the section itself..
+- Style is just another Section which is basically derived from base_section which has 2 sections...inner and outer, which are
+  derived from client_section, which is derived from class_contruct...
+
+- Multiple Styles can be applied for a section.
+- Sections should be made editable
+	- Its Properties, methods, events, data, styles, server code etc...should be made editable.
+	- The Layout and Styles can be edited 
+		- in-place using context menu or tool bars
+		- using a section inside viewer
+			- list of all props, meths, events etc..
+			- each can be edited in its own way..
+
+- When ever a section is edited, it is extended from the original and is persisted..
+- A Sophisticated Clip Board Should Exist with Advanced Undo features.
+---------------------------------------------------------------------------------------------
+
+Other
+- The Same for thick GUI..also
+- Need to get into graphics 
+- Need to think about other devices...
+- translation from existing gui apis to/from iil gui.
+
+
+GUI - Browser
+-------------
+
+section : class_construct
+	user_actions* acts;
+	events* evts;
+
+base_section : section
+	section* outer;
+	section* inner;
+
+
+section bar : base_section
+	multiple, dockable, sizable section bars..
+	section title bar (action controls, text, drag/drop)
+		
+-------------------------------------------------------------------------------------------------------------------------------------
+NOTE: the section is contained in a bigger object which drives the business logic, which has the section(s) and also business methods, 
+data...etc..and links to the server side...or other system components
+so section is derived from class_construct...
+and section object is contained in some class_object_construct...
+SO SECTION IS PURELY GUI RELATED.
+-------------------------------------------------------------------------------------------------------------------------------------
+user_action: method - a tree of methods that map to controls..
+user_actions are generally user related and methods are general. so the distinction
+every section has user_actions,
+
+event: method (both c++ and js)
+events are posted and processed by the code, either native (IE, mozilla browsers) or iil or js code. 
+every section has events and infact anyone can post events and set callbacks which are methods...
+event_callbacks : event
+-------------------------------------------------------------------------------------------------------------------------------------
+derivations of base_section
+---------------------------
+
+base_section has a collection of related_sections...so all these go in there.(using the iil js)...
+-------------------------------------------------------------------------------------------------------------------------------------
+standard_browser_section : base_Section
+composed_section : standard_browser_section
+	standard_browser_section*;
+	section* driver;
+
+empty_Section : composed_Section
+root_section : composed_section
+standard_section : composed_section
+
+sub_section : composed_section
+composite_control_section : composed_section
+control_section : standard_browser_section
+
+section_collection : composed_Section
+composite_control_section_collection : section_collection
+
+user_menu : composite_control_section
+	user_menu_type; (standard menu, with_image, with_buttons, with_sub_menus, with_list_view, with_dialog_view, with_text, with_popin_dialog, mixed, etc...)
+	user_action;
+
+user_menu_list : composite_control_section_collection
+	user_menu* sub_menus
+	- view_type	
+
+
+----------------------------------------------------------------------------------
+button_control : composite_control_section
+text_control : composite_control_section
+link_control : composite_control_Section
+
+etc...
+
+deriviations of these..
+rich_text_control
+or popin_text_control : popin_section
+or error_text_control
+or balloon_text_control
+or callout_text_control
+-----------------------------------------------
+
+layout_types....
+dock 
+tabbed 
+float
+
+special derivations
+-------------------
+dock_container
+nondock_container
+tab_container
+
+

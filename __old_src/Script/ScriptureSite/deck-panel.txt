@@ -1,0 +1,87 @@
+<input type=hidden id=Node_400 Value="Deck,ScriptureEditDeck,Root,8">
+<input type=hidden id=Node_401 Value="NameValue,DeckID,Node_400,1,MainDeck">
+<input type=hidden id=Node_402 Value="TreeCollection,Panels,Node_400,2,">
+<input type=hidden id=Node_403 Value="TreeNode,Panel,Node_402,1,">
+<input type=hidden id=Node_404 Value="NameValue,PanelID,Node_403,1,Cell_OuterRim3">
+<input type=hidden id=Node_405 Value="NameValue,PanelCol,Node_403,2,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelRow,Node_403,3,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelZAxis,Node_403,4,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColWidth,Node_403,5,87%">
+<input type=hidden id=Node_406 Value="NameValue,PanelRowHeight,Node_403,6,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelOuterBorderWidth,Node_403,7,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelInnerBorderWidth,Node_403,8,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColAlign,Node_403,9,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelRowAlign,Node_403,10,1">
+<input type=hidden id=Node_407 Value="NameValue,PanelStyle,Node_403,11,border-width:1;border-color:gray">
+
+<input type=hidden id=Node_408 Value="TreeNode,Panel,Node_403,7">
+<input type=hidden id=Node_409 Value="NameValue,PanelID,Node_408,1,Cell_OuterRim2">
+<input type=hidden id=Node_405 Value="NameValue,PanelCol,Node_403,2,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelRow,Node_403,3,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelZAxis,Node_403,4,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColWidth,Node_403,5,87%">
+<input type=hidden id=Node_406 Value="NameValue,PanelRowHeight,Node_403,6,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelOuterBorderWidth,Node_403,7,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelInnerBorderWidth,Node_403,8,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColAlign,Node_403,9,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelRowAlign,Node_403,10,1">
+<input type=hidden id=Node_407 Value="NameValue,PanelStyle,Node_403,11,border-width:1;border-color:gray">
+
+<input type=hidden id=Node_420 Value="TreeNode,Panel,Node_408,7">
+<input type=hidden id=Node_421 Value="NameValue,PanelID,Node_420,1,Cell_OuterRim1">
+<input type=hidden id=Node_405 Value="NameValue,PanelCol,Node_403,2,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelRow,Node_403,3,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelZAxis,Node_403,4,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColWidth,Node_403,5,87%">
+<input type=hidden id=Node_406 Value="NameValue,PanelRowHeight,Node_403,6,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelOuterBorderWidth,Node_403,7,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelInnerBorderWidth,Node_403,8,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColAlign,Node_403,9,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelRowAlign,Node_403,10,1">
+<input type=hidden id=Node_407 Value="NameValue,PanelStyle,Node_403,11,border-width:1;border-color:gray">
+
+<input type=hidden id=Node_430 Value="TreeNode,Panel,Node_420,7">
+<input type=hidden id=Node_431 Value="NameValue,PanelID,Node_430,1,HeadPanel">
+<input type=hidden id=Node_405 Value="NameValue,PanelCol,Node_403,2,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelRow,Node_403,3,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelZAxis,Node_403,4,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColWidth,Node_403,5,87%">
+<input type=hidden id=Node_406 Value="NameValue,PanelRowHeight,Node_403,6,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelOuterBorderWidth,Node_403,7,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelInnerBorderWidth,Node_403,8,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColAlign,Node_403,9,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelRowAlign,Node_403,10,1">
+<input type=hidden id=Node_407 Value="NameValue,PanelStyle,Node_403,11,border-width:1;border-color:gray">
+
+<input type=hidden id=Node_440 Value="TreeNode,Panel,Node_430,7">
+<input type=hidden id=Node_431 Value="NameValue,PanelID,Node_440,1,BodyPanel">
+<input type=hidden id=Node_405 Value="NameValue,PanelCol,Node_403,2,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelRow,Node_403,3,1">
+<input type=hidden id=Node_406 Value="NameValue,PanelZAxis,Node_403,4,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColWidth,Node_403,5,87%">
+<input type=hidden id=Node_406 Value="NameValue,PanelRowHeight,Node_403,6,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelOuterBorderWidth,Node_403,7,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelInnerBorderWidth,Node_403,8,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelColAlign,Node_403,9,1">
+<input type=hidden id=Node_405 Value="NameValue,PanelRowAlign,Node_403,10,1">
+<input type=hidden id=Node_407 Value="NameValue,PanelStyle,Node_403,11,border-width:1;border-color:gray">
+
+"<Table style='border-collapse:collapse;border-width:12;border-color:deepskyblue' border=1 width=100% height=100%>" + 
+"<Tr><Td>" +
+"<Table style='border-collapse:collapse;border-width:8;border-color:aqua' border=1 width=100% height=100%>" +
+"<Tr><Td>" + 
+"<Table style='border-collapse:collapse;border-width:6;border-color:lightblue' border=1 width=100% height=100%>" + 
+"<Tr><Td valign=top align=center>" + 
+"<Table width=100%>" + 
+"<Tr><Td valign=top align=center>" + 
+"<BR>" +
+"<Div id=oDivHeadPanel style='WIDTH: 90%;position:relative' valign=top align=center></Div>" +
+"<BR>" +
+"</Td></Tr>" +
+"<Tr><Td valign=top align=center>" +
+"<Div id=oDivBodyPanel style='WIDTH: 90%;position:relative' valign=top align=center></Div>" +
+"<BR>" +							
+"</Td></Tr></Table>" +
+"</Td></Tr></Table>" +
+"</Td></Tr></Table>" +
+"</Td></Tr></Table>";

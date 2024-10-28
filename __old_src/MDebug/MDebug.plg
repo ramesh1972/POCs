@@ -1,0 +1,137 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MDebug - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/viewer.res" /i "viewer" /d "_DEBUG" "C:\MyFiles\Projects\analyst\MDebug\viewer\viewer.rc"" 
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP1F5C.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "c:\myfiles\projects\analyst\mdebug\viewer\public" /I "C:\mozilla\mozilla\nsprpub\pr\include" /I "C:\mozilla\mozilla\obj-i586-pc-msvc\dom\public\idl\core\_xpidlgen" /I "C:\mozilla\mozilla\xpcom\string\public" /I "C:\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpcom\\" /I "C:\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpcom\base" /I ".\widget" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_X86_" /D "XP_WIN" /D "XP_WIN32" /D "USE_LOCAL_WIDGETS" /FR"Debug/" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\MyFiles\Projects\analyst\MDebug\viewer\windows\nsButton.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\windows\nsCheckButton.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\windows\nsLabel.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\windows\nsTextHelper.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\windows\nsTextWidget.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\JSConsole.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsBaseDialog.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsBrowserWindow.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsEditorMode.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsFindDialog.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsImageInspectorDialog.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsPrintSetupDialog.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsTableInspectorDialog.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsThrobber.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsViewerApp.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsWebBrowserChrome.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsWebCrawler.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsWidgetSupport.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsWindowCreator.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsWinMain.cpp"
+"C:\MyFiles\Projects\analyst\MDebug\viewer\nsXPBaseWindow.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP1F5C.tmp" 
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP1F5D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib widget_windows.lib nspr4.lib basedocshell_s.lib uriloaderbase_s.lib neckobase_s.lib neckodns_s.lib neckosocket_s.lib mozutil_s.lib unicharutil_s.lib gfxshared_s.lib xpcom.lib string_s.lib embed_base_s.lib jsdombase_s.lib jsdomevents_s.lib nslocale_s.lib htmleditor_s.lib nswebbrowser_s.lib viewer_windows_s.lib prefetch_s.lib windowwatcher_s.lib xpcomcomponents_s.lib gkgfx.lib xpwidgets_s.lib widgetsupport_s.lib plc4.lib plds4.lib js3250.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/MDebug.pdb" /debug /machine:I386 /nodefaultlib:"libcd.lib" /out:"Debug/MDebug.exe" /pdbtype:sept 
+.\Debug\nsButton.obj
+.\Debug\nsCheckButton.obj
+.\Debug\nsLabel.obj
+.\Debug\nsTextHelper.obj
+.\Debug\nsTextWidget.obj
+.\Debug\JSConsole.obj
+.\Debug\nsBaseDialog.obj
+.\Debug\nsBrowserWindow.obj
+.\Debug\nsEditorMode.obj
+.\Debug\nsFindDialog.obj
+.\Debug\nsImageInspectorDialog.obj
+.\Debug\nsPrintSetupDialog.obj
+.\Debug\nsTableInspectorDialog.obj
+.\Debug\nsThrobber.obj
+.\Debug\nsViewerApp.obj
+.\Debug\nsWebBrowserChrome.obj
+.\Debug\nsWebCrawler.obj
+.\Debug\nsWidgetSupport.obj
+.\Debug\nsWindowCreator.obj
+.\Debug\nsWinMain.obj
+.\Debug\nsXPBaseWindow.obj
+.\Debug\viewer.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP1F5D.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+nsButton.cpp
+nsCheckButton.cpp
+nsLabel.cpp
+nsTextHelper.cpp
+nsTextWidget.cpp
+JSConsole.cpp
+nsBaseDialog.cpp
+nsBrowserWindow.cpp
+nsEditorMode.cpp
+nsFindDialog.cpp
+nsImageInspectorDialog.cpp
+nsPrintSetupDialog.cpp
+nsTableInspectorDialog.cpp
+nsThrobber.cpp
+nsViewerApp.cpp
+nsWebBrowserChrome.cpp
+
+NOTE: WINVER has been defined as 0x0500 or greater which enables
+Windows NT 5.0 and Windows 98 features. When these headers were released,
+Windows NT 5.0 beta 1 and Windows 98 beta 2.1 were the current versions.
+
+For this release when WINVER is defined as 0x0500 or greater, you can only
+build beta or test applications.  To build a retail application,
+set WINVER to 0x0400 or visit http://www.microsoft.com/msdn/sdk
+to see if retail Windows NT 5.0 or Windows 98 headers are available.
+
+See the SDK release notes for more information.
+
+nsWebCrawler.cpp
+nsWidgetSupport.cpp
+nsWindowCreator.cpp
+nsWinMain.cpp
+Generating Code...
+Compiling...
+nsXPBaseWindow.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP1F5F.tmp" with contents
+[
+/nologo /o"Debug/MDebug.bsc" 
+.\Debug\nsButton.sbr
+.\Debug\nsCheckButton.sbr
+.\Debug\nsLabel.sbr
+.\Debug\nsTextHelper.sbr
+.\Debug\nsTextWidget.sbr
+.\Debug\JSConsole.sbr
+.\Debug\nsBaseDialog.sbr
+.\Debug\nsBrowserWindow.sbr
+.\Debug\nsEditorMode.sbr
+.\Debug\nsFindDialog.sbr
+.\Debug\nsImageInspectorDialog.sbr
+.\Debug\nsPrintSetupDialog.sbr
+.\Debug\nsTableInspectorDialog.sbr
+.\Debug\nsThrobber.sbr
+.\Debug\nsViewerApp.sbr
+.\Debug\nsWebBrowserChrome.sbr
+.\Debug\nsWebCrawler.sbr
+.\Debug\nsWidgetSupport.sbr
+.\Debug\nsWindowCreator.sbr
+.\Debug\nsWinMain.sbr
+.\Debug\nsXPBaseWindow.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\Ramesh\LOCALS~1\Temp\RSP1F5F.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MDebug.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

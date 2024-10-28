@@ -1,0 +1,38 @@
+﻿body
+{
+	font-family:Tahoma;
+	background-color:Aqua
+	
+}
+
+.page_content_title
+{
+	font-size:large;
+	color:Blue
+}
+
+.control_label
+{
+	font-size:small;
+	font-weight:bold;
+	padding-left:4px
+}
+
+.control_text
+{
+	font-size:small;
+	padding-left:4px
+}
+
+.form_title
+{
+	font-size:medium;
+	font-weight:bold;
+	color:Green
+}
+
+.error_string
+{
+	font-size:small;
+	color:red
+}

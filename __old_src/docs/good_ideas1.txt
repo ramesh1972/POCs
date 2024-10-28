@@ -1,0 +1,142 @@
+are sourceforge and freshmeat marketing sites? Looks like they are lke download.com.
+
+long way away from selling/even thinking of releasing. I have to build support for plugins & plugons(applets & java class files for e..g). I have to kind of automate or if not log/report that the embed failed. I have already have support for this, but need to make sure editing works. I also need to work on confirmation dialogs, cookies, http-equiv refreshes (any auto refreshes), base tag(base uri and referrer uri), target windows (we need or atleast give option to open links (hrefs) on a pagelet in a new window/tab or in the same page let), may be save the http header to support anything new in the future,
+and multiple selection of content. I have added support for all the other elements, frames, iframes, popups, forms, image maps, scripts, stylesheets, links(server side includes).
+
+Actually the tough ones are done. Its only the applet(embed object) action tracking. Yet to see if it is possible. Got few ideas. 
+
+With this i think we will have the most complete and reliable engine. It is not easy(not worth it, too complex or too cheap). I don't think anybody is going to do it with great detail.
+
+ramesh
+> -----Original Message-----
+> From: sthyagarajan@lycos.com
+> Sent: Mon, 17 Apr 2006 13:25:05 -0500
+> To: rvk@inbox.com
+> Subject: RE: Hi Tyagi
+> 
+> I meant companies actually. The sites i use are freshmeat and
+> sourceforge. I am quite sure you are familiar with them. They have
+> different rating mechanisms for sites as well.
+> 
+> btw..at some point you will want to build (i meant as support for the
+> site that sells/distributes the product) a structure around the basic
+> site with a wiki, trac etc and gauge the level of acceptance and build a
+> community.
+> 
+> 
+>> ----- Original Message -----
+>> From: "r v" <rvk@inbox.com>
+>> To: "Thyagi Shankar" <sthyagarajan@lycos.com>
+>> Subject: RE: Hi Tyagi
+>> Date: Sat, 15 Apr 2006 23:47:02 -0800
+>> 
+>> 
+>> who are business users?
+>> 
+>>> -----Original Message-----
+>>> From: sthyagarajan@lycos.com
+>>> Sent: Sat, 15 Apr 2006 16:41:42 -0500
+>>> To: rvk@inbox.com
+>>> Subject: RE: Hi Tyagi
+>>> 
+>>> Yes OS sites is the best way to begin. Need to check the different
+>>> license agreements - there are some protected licenses as well.  If the
+>>> OS community embraces the product then that will lead to huge success
+>>> in
+>>> itself. The next round after that might be figuring out how to get it
+>>> to
+>>> the business users.
+>>> 
+>>> Will keep thinking about this.
+>>>> ----- Original Message -----
+>>>> From: "r v" <rvk@inbox.com>
+>>>> To: sthyagarajan@lycos.com
+>>>> Subject: RE: Hi Tyagi
+>>>> Date: Sat, 15 Apr 2006 03:46:25 -0800
+>>>> 
+>>>> 
+>>>> 
+>>>> other thing is like a small business can have pww.xyz.com,
+>>>> a new user can create www.zbc.com and create say comapre sites,
+>>>> airfare sites using pl service. so that url will point to
+>>>> intrainter.com internally.
+>>>> 
+>>>> ramesh
+>>>> 
+>>>>> -----Original Message-----
+>>>>> From: rvk@inbox.com
+>>>>> Sent: Sat, 15 Apr 2006 03:40:59 -0800
+>>>>> To: sthyagarajan@lycos.com
+>>>>> Subject: Hi Tyagi
+>>>>> 
+>>>>> I think those are realy good points. Focusing on small business by
+>>>>> giving
+>>>>> it for free download. But would require install of apache (or their
+>>>>> own
+>>>>> web server) and mysql. I think that is good, since end users would
+>>>>> not
+>>>>> end up downloading the software. Also i think there should be a limit
+>>>>> on
+>>>>> the number of page lets.say 200 or something like that. Any other
+>>>>> limitations that we might want to impose would become clear later. we
+>>>>> can
+>>>>> have an affiliate suite and pages for the same.
+>>>>> 
+>>>>> Also since it is going to be free, we should put it on the open
+>>>>> source
+>>>>> websites. That is a place, where myself i search a lot for software.
+>>>>> 
+>>>>> I am currently working on the core service. Got in a logging and
+>>>>> exception handling. Anyway, i think once i get the core suite working
+>>>>> (around 10/20 pl tools), i think you will get a feel and then you can
+>>>>> write up naming conventions, descriptions, feature list, benefits
+>>>>> etc..
+>>>>> 
+>>>>> I got another idea. I can get tons of content cds, like britanica,
+>>>>> wildlife etc...for dirt cheap here. I can convert all those to pls,
+>>>>> somehow automate it.
+>>>>> 
+>>>>> as far as the content suite is, a local city, area directory like
+>>>>> businesses, telephones, good things, bad things, entertainment, shows
+>>>>> etc..for all the areas,cities in the world. The data will come from
+>>>>> 100s
+>>>>> of city/area guides that are available on the internet/cds. With a
+>>>>> uniform ui for the whole world (with detail for every city/area)...i
+>>>>> think this will be a great thing.+ in the future, we can add
+>>>>> shopping/ticketing.
+>>>>> 
+>>>>> Ya, ia m eyeing for a time when i we can start putting in content
+>>>>> with
+>>>>> ease, be it anything emails, search, or air fares. until then it is
+>>>>> all
+>>>>> always undone.
+>>>>> keep the ideas coming.
+>>>>> ramesh
+>>> 
+>>>> 
+>>> 
+>>> 
+>>> --
+>>> _______________________________________________
+>>> 
+>>> Search for businesses by name, location, or phone number.  -Lycos
+>>> Yellow
+>>> Pages
+>>> 
+>>> http://r.lycos.com/r/yp_emailfooter/http://yellowpages.lycos.com/default.asp?SRC=lycos10
+>> 
+>> ____________________________________________________________
+>> 100% Spam Free Email - Get FREE 2GB Email with Challenge/Response
+>> feature!
+>> Get your free email account at http://www.inbox.com/spam !
+> 
+>> 
+> 
+> 
+> --
+> _______________________________________________
+> 
+> Search for businesses by name, location, or phone number.  -Lycos Yellow
+> Pages
+> 
+> http://r.lycos.com/r/yp_emailfooter/http://yellowpages.lycos.com/default.asp?SRC=lycos10

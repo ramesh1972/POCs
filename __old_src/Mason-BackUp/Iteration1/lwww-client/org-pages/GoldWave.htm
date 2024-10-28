@@ -1,0 +1,379 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY text="#000000" link="#0000ff" vlink="#551a8b" alink="#ff0000" bgcolor="#FFFFFF">
+
+<p align="center"><font size="+3">GoldWave<sup></sup> Manual</font>
+
+<br><br>
+<p align="center">Copyright &copy; 2002 GoldWave Inc.
+
+<br><br>
+<p align="center"><font size="+1">Do not upload or include this document on a website.</font>
+
+<br><br>
+<p align="center"><font size="+1">March 2002</font>
+
+<br><br>
+<font color="C00000">
+<center>
+Figures are available to registered users by request.
+<br>
+All figures must be located in the same folder as this HTML document.
+</center>
+</font>
+
+<br><br>
+<hr>
+<br><br>
+<strong><font size="+3">Table of Contents</font></strong>
+
+<OL type="I">
+<LI><strong><a href="#Introduction">Introduction</a></strong><br>
+	<OL type="1">
+	<LI><a href="#Features">Features</a>
+	<LI><a href="#How to Use This Manual">How to Use This Manual</a>
+	<LI><a href="#Notation">Notation</a>
+</OL>
+
+
+<LI><strong><a href="#Getting Started">Getting Started</a></strong><br>
+	<OL type="1">
+	<LI><a href="#System Requirements">System Requirements</a>
+	<LI><a href="#Installation">Installation</a>
+		<OL type="a">
+		<LI><a href="#Installation From a Downloaded Program (Exe) File">Installation From a Downloaded Program (Exe) File</a>
+		<LI><a href="#Installation From a Downloaded Zip File">Installation From a Downloaded Zip File</a>
+		<LI><a href="#General Installation Instructions">General Installation Instructions</a>
+			<OL type="i">
+			<LI><a href="#Adding a Shortcut">Adding a Shortcut</a>
+			<LI><a href="#Setting Audio Devices">Setting Audio Devices</a>
+			<LI><a href="#Additional Settings">Additional Settings</a>
+			</OL>
+		</OL>
+	</OL>
+	
+
+<LI><strong><a href="#Using GoldWave">Using GoldWave</a></strong><br>
+	<OL type="1">
+	<LI><a href="#Interface Overview">Interface Overview</a>
+	<LI><a href="#Device Controls Overview">Device Controls Overview</a>
+		<OL type="a">
+		<LI><a href="#Properties">Properties</a>
+			<OL type="i">
+			<LI><a href="#Playback Properties">Playback Properties</a>
+			<LI><a href="#Record Properties">Record Properties</a>
+			<LI><a href="#Volume Properties">Volume Properties</a>
+			<LI><a href="#Graph Properties">Graph Properties</a>
+			<LI><a href="#Device Properties">Device Properties</a>
+			</OL>
+		<LI><a href="#Playing Sounds">Playing Sounds</a>
+		<LI><a href="#Pausing Playback">Pausing Playback</a>
+		<LI><a href="#Stopping Playback">Stopping Playback</a>
+		<LI><a href="#Rewinding and Fast Forwarding">Rewinding and Fast Forwarding</a>
+		<LI><a href="#Recording Sounds">Recording Sounds</a>
+		<LI><a href="#Volume and Balance Faders">Volume and Balance Faders</a>
+		<LI><a href="#Speed Fader">Speed Fader</a>
+		</OL>
+
+	<LI><a href="#Editing Overview">Editing Overview</a>
+		<OL type="a">
+		<LI><a href="#Selecting Part of a Sound">Selecting Part of a Sound</a>
+		<LI><a href="#Editing the Waveform with the Mouse">Editing the Waveform with the Mouse</a>
+		<LI><a href="#Mixing and Cross-Fading">Mixing and Cross-Fading</a>
+		</OL>
+
+	<LI><a href="#Storage Overview">Storage Overview</a>
+		<OL type="a">
+		<LI><a href="#Direct-to-Disk">Direct-to-Disk</a>
+		<LI><a href="#RAM">RAM</a>
+		<LI><a href="#Flash">Flash</a>
+		</OL>
+
+	<LI><a href="#File Menu Commands">File Menu Commands</a>
+		<OL type="a">
+		<LI><a href="#File Format">File Format</a>
+		<LI><a href="#New">New</a>
+		<LI><a href="#Open">Open</a>
+		<LI><a href="#Close">Close</a>
+		<LI><a href="#Information">Information</a>
+		<LI><a href="#Batch conversion">Batch conversion</a>
+		<LI><a href="#Save">Save</a>
+		<LI><a href="#Save as">Save as</a>
+		<LI><a href="#Save selection as">Save selection as</a>
+		<LI><a href="#Exit">Exit</a>
+		<LI><a href="#File History">File History</a>
+		</OL>
+
+	<LI><a href="#Edit Menu Commands">Edit Menu Commands</a>
+		<OL type="a">
+		<LI><a href="#Undo">Undo</a>
+		<LI><a href="#Cut">Cut</a>
+		<LI><a href="#Copy">Copy</a>
+		<LI><a href="#Copy to">Copy to</a>
+		<LI><a href="#Paste new">Paste new</a>
+		<LI><a href="#Paste and Paste at">Paste and Paste at</a>
+		<LI><a href="#Mix">Mix</a>
+		<LI><a href="#Replace">Replace</a>
+		<LI><a href="#Delete">Delete</a>
+		<LI><a href="#Trim">Trim</a>
+		<LI><a href="#Insert silence">Insert silence</a>
+		<LI><a href="#Select view">Select view</a>
+		<LI><a href="#Select all">Select all</a>
+		<LI><a href="#Channel">Channel</a>
+		<LI><a href="#Marker">Marker</a>
+			<OL type="i">
+			<LI><a href="#Set">Set</a>
+			<LI><a href="#Recall positions">Recall positions</a>
+			<LI><a href="#Store positions">Store positions</a>
+			<LI><a href="#Drop start/finish">Drop start/finish</a>
+			<LI><a href="#Snap to zero-crossing">Snap to zero-crossing</a>
+			</OL>
+		<LI><a href="#Deflash">Deflash</a>
+		</OL>
+
+	<LI><a href="#Effects Menu Commands">Effects Menu Commands</a>
+		<OL type="a">
+		<LI><a href="#Special Controls for Effects">Special Controls for Effects</a>
+			<OL type="i">
+			<LI><a href="#Presets">Presets</a>
+			<LI><a href="#Shape Controls">Shape Controls</a>
+			</OL>
+		<LI><a href="#Doppler">Doppler</a>
+		<LI><a href="#Dynamics">Dynamics</a>
+		<LI><a href="#Echo">Echo</a>
+		<LI><a href="#Expand/Compress">Expand/Compress</a>
+		<LI><a href="#Filter">Filter</a>
+			<OL type="i">
+			<LI><a href="#Noise gate">Noise gate</a>
+			<LI><a href="#Noise reduction">Noise reduction</a>
+			<LI><a href="#Low/Highpass">Low/Highpass</a>
+			<LI><a href="#Bandpass/stop">Bandpass/stop</a>
+			<LI><a href="#Equalizer">Equalizer</a>
+			<LI><a href="#Parametric EQ">Parametric EQ</a>
+			<LI><a href="#Pop/Click">Pop/Click</a>
+			<LI><a href="#User defined">User defined</a>
+			</OL>
+		<LI><a href="#Flange">Flange</a>
+		<LI><a href="#Interpolate">Interpolate</a>
+		<LI><a href="#Invert">Invert</a>
+		<LI><a href="#Mechanize">Mechanize</a>
+		<LI><a href="#Offset">Offset</a>
+		<LI><a href="#Pitch">Pitch</a>
+		<LI><a href="#Reverse">Reverse</a>
+		<LI><a href="#Silence">Silence</a>
+		<LI><a href="#Stereo">Stereo</a>
+			<OL type="i">
+			<LI><a href="#Exchange channels">Exchange channels</a>
+			<LI><a href="#Pan">Pan</a>
+			<LI><a href="#Remove vocals">Remove vocals</a>
+			</OL>
+		<LI><a href="#Time warp">Time warp</a>
+		<LI><a href="#Volume">Volume</a>
+			<OL type="i">
+			<LI><a href="#Change">Change</a>
+			<LI><a href="#Fade in">Fade in</a>
+			<LI><a href="#Fade out">Fade out</a>
+			<LI><a href="#Maximize (Normalize)">Maximize (Normalize)</a>
+			<LI><a href="#Shape">Shape</a>
+			</OL>
+		<LI><a href="#Playback rate">Playback rate</a>
+		<LI><a href="#Resample">Resample</a>
+		</OL>
+
+	<LI><a href="#View Menu Commands">View Menu Commands</a>
+		<OL type="a">
+		<LI><a href="#All">All</a>
+		<LI><a href="#Other">Other</a>
+		<LI><a href="#Previous zoom">Previous zoom</a>
+		<LI><a href="#Selection">Selection</a>
+		<LI><a href="#User">User</a>
+		<LI><a href="#Zoom in">Zoom in</a>
+		<LI><a href="#Zoom out">Zoom out</a>
+		<LI><a href="#Zoom 10:1 and 5:1">Zoom 10:1 and 5:1</a>
+		<LI><a href="#Zoom 1:1">Zoom 1:1</a>
+		<LI><a href="#Zoom 1:10, 1:100, 1:1000">Zoom 1:10, 1:100, 1:1000</a>
+		<LI><a href="#Vertical zoom all">Vertical zoom all</a>
+		<LI><a href="#Vertical zoom in">Vertical zoom in</a>
+		<LI><a href="#Vertical zoom out">Vertical zoom out</a>
+		<LI><a href="#Start and Finish">Start and Finish</a>
+		</OL>
+
+	<LI><a href="#Tools Menu Commands">Tools Menu Commands</a>
+		<OL type="a">
+		<LI><a href="#Cue points">Cue points</a>
+		<LI><a href="#Expression evaluator">Expression evaluator</a>
+		<LI><a href="#CD player">CD player</a>
+		<LI><a href="#Volume controls">Volume controls</a>
+		<LI><a href="#Device controls">Device controls</a>
+		<LI><a href="#CD audio extraction">CD audio extraction</a>
+		</OL>
+
+	<LI><a href="#Options Menu Commands">Options Menu Commands</a>
+		<OL type="a">
+		<LI><a href="#Colours">Colours</a>
+		<LI><a href="#Controls">Controls</a>
+		<LI><a href="#File">File</a>
+		<LI><a href="#File types">File types</a>
+		<LI><a href="#Tool bar">Tool bar</a>
+		<LI><a href="#Window">Window</a>
+		</OL>
+
+	<LI><a href="#Window Menu Commands">Window Menu Commands</a>
+
+	<LI><a href="#Help Menu Commands">Help Menu Commands</a>
+	</OL>
+
+
+	
+<LI><strong><a href="#General Information">General Information</a></strong>
+	<OL type="1">
+	<LI><a href="#Warranty, Trademarks, and Copyright">Warranty, Trademarks, and Copyright</a>
+	<LI><a href="#Support and Updates">Support and Updates</a>
+	</OL>
+</OL>
+
+
+
+<OL type="A">
+<LI><strong><a href="#Appendix: An Introduction to Digital Audio">Appendix: An Introduction to Digital Audio</a></strong>
+	<OL type="1">
+	<LI><a href="#Digital Audio Attributes">Digital Audio Attributes</a>
+	<LI><a href="#Byte Swapping and Sign">Byte Swapping and Sign</a>
+	<LI><a href="#Frequency and Pitch">Frequency and Pitch</a>
+		<OL type="a">
+		<LI><a href="#Frequency Ranges">Frequency Ranges</a>
+		<LI><a href="#Frequency Range and Sampling Rate">Frequency Range and Sampling Rate</a>
+		<LI><a href="#Frequency Spectrum Graphs">Frequency Spectrum Graphs</a>
+		</OL>
+	<LI><a href="#Problems with Recording">Problems with Recording</a>
+	</OL>
+
+
+<LI><strong><a href="#Appendix: Keyboard Commands">Appendix: Keyboard Commands</a></strong>
+
+
+<LI><strong><a href="#Appendix: Expression Evaluator">Appendix: Expression Evaluator</a></strong>
+	<OL type="1">
+	<LI><a href="#Overview">Overview</a>
+	<LI><a href="#Evaluation Range, Variables, and Constants">Evaluation Range, Variables, and Constants</a>
+		<OL type="a">
+		<LI><a href="#Using Time in an Expression">Using Time in an Expression</a>
+		<LI><a href="#Using the Sample Index in an Expression">Using the Sample Index in an Expression</a>
+		<LI><a href="#User Variable f">User Variable f</a>
+		<LI><a href="#Conversion Between Variables">Conversion Between Variables</a>
+		</OL>
+	<LI><a href="#Group name and Expression name">Group name and Expression name</a>
+	<LI><a href="#Evaluator Operators and Functions">Evaluator Operators and Functions</a>
+	<LI><a href="#Signal Generation">Signal Generation</a>
+	<LI><a href="#Custom Filters">Custom Filters</a>
+	</OL>
+
+
+<LI><strong><a href="#Appendix: Troubleshooting">Appendix: Troubleshooting and Q&amp;A</a></strong>
+	<OL type="1">
+	<LI><a href="#Troubleshooting">Troubleshooting</a>
+	<LI><a href="#Common Questions and Answers">Common Questions and Answers</a>
+	</OL>
+</OL>
+
+<br><br>
+<hr>
+<br><br>
+<a name="Introduction"></a>
+<font size="+3"><strong>1  Introduction</strong></font>
+
+<br><br>
+GoldWave<sup></sup> is a comprehensive digital audio editor that plays, records,
+edits, and converts audio on your computer.  This section lists some of the
+features of GoldWave and outlines the notation and organization of the
+manual.
+
+<br><br>
+<br><br>
+<br><br>
+<hr>
+
+<a name="Features"></a>
+<font size="+1"><strong>Features</font></strong>
+
+<br><br>
+GoldWave includes a full set of features that rival even the most expensive
+audio processors:
+
+<br><br>
+<ul>
+  <li> An intuitive and customizable user interface makes
+editing easy.</li>
+  <li> An independent <strong>Device Controls</strong> window provides direct access to
+audio devices.  It contains controls for playback, rewind &amp; fast
+forward, recording, volume, and speed.  LED meters and
+real-time graphs display the sound during playback and
+recording.</li>
+  <li> A multiple document interface (MDI) allows many files to be
+opened at one time, simplifying file-to-file editing.</li>
+  <li> Huge files can be edited using <strong>hard disk</strong> storage.  Small files can
+be edited quickly using <strong>RAM</strong> storage.</li>
+  <li> Sounds are displayed graphically as a waveform and the level of
+detail can be changed by zooming in or out. The waveform can be
+reshaped directly with the mouse when zoomed in.</li>
+  <li> Many audio effects, such as <strong>Reverse</strong>, <strong>Echo</strong>, <strong>Pan</strong>, <strong>Flange</strong>,
+<strong>Dynamics</strong>, and <strong>Time warp</strong>, enhance, distort, or
+alter sounds in various ways.</li>
+  <li> Sophisticated filters such as the <strong>Noise reduction</strong>
+   and <strong>Pop/Click</strong> filters help restore audio.
+  <li> The <strong>Batch conversion</strong> command converts a group of
+sound files to a different format and type.  It can convert stereo to mono,
+8 to 16 bits, or any combination of attributes supported
+by a file type.  With an MPEG codec installed, you can compress audio
+to a fraction of its original size while still keeping excellent
+quality in MP3 format.</li>
+  <li> The <strong>CD Audio Extraction</strong> tool copies audio from a CD
+to a file on your system.  Audio can be extracted directly to MP3 format to
+minimize storage space.
+  <li> An <strong>Expression Evaluator</strong> allows you to generate everything from
+simple tones to complex filters.  Expressions for telephone dial
+tones, waves, and effects are included.</li>
+</ul>
+
+<hr>
+
+<a name="How to Use This Manual"></a>
+<font size="+2"><strong>How to Use This Manual</strong></font>
+
+<br><br>
+Familiarity with the Windows interface, such as property dialogs, tool
+bars, etc., is recommended before reading this manual.
+
+<br><br>
+For those who are unfamiliar with digital audio, <strong>Appendix A</strong> briefly
+introduces some of the fundamentals of computer audio.  It also provides
+some solutions to common recording problems.  <strong>Appendix D</strong> contains
+troubleshooting information and answers to common questions.
+
+<br><br>
+<strong>Section 2: Getting Started</strong>, covers system requirements and installation.
+<strong>Section 3: Using GoldWave</strong> explains the interface and menu structure in
+detail.  Topics are covered in the order that they appear in GoldWave's
+menu.  <strong>Section 4: General Information</strong>, provides support, copyright, and
+warranty information.
+
+<br><br>
+<br><br>
+<br><br>
+<hr>
+
+<a name="Notation"></a>
+<font size="+2"><strong>Notation</strong></font>
+
+<br><br>
+<strong>Bold</strong> text and a vertical bar are used to denote menu commands.
+<strong>File&nbsp;|&nbsp;New</strong>, for example,  means to select the <strong>New</strong> command from the <strong>File</strong>
+menu.  This notation is used to refer to other sections within this manual as
+well.  In the above example, you can find information by looking for <strong>New</strong>
+under the <strong>File Menu Commands</strong> section.  If the first word is <strong>Start</strong>, select
+the command from the Windows task bar menu structure.
+
+<br><br>
+

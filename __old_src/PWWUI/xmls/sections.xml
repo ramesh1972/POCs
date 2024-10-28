@@ -1,0 +1,25 @@
+<Sections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:noNamespaceSchemaLocation="Sections.xsd">
+  <section type="section" dock_position="top" bar="none" position="dock" id="tab_1" tab_position="top" tab_text="tab1" backcolor="#332222">
+    <section type="section" dock_position="top" bar="none" position="tab" id="tab_3" tab_position="left" tab_text="tab1.1" backcolor="#ff00ff">
+      <section type="section" dock_position="top" bar="none" position="tab" id="tab_12" tab_position="left" tab_text="ffff" backcolor="#dddddd" />
+      <section type="section" dock_position="top" bar="none" position="tab" id="tab_13" tab_position="left" tab_text="jhjh" backcolor="#333333" />
+    </section>
+  </section>
+</Sections>
+<!--
+<Sections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:noNamespaceSchemaLocation="Sections.xsd">
+  <section type="section" dock_position="top" bar="none" position="dock" id="tab_1" tab_position="top" tab_text="tab1" backcolor="#332222">
+    <section type="section" dock_position="top" bar="none" position="tab" id="tab_3" tab_position="left" tab_text="tab1.1" backcolor="#ff00ff" />
+    <section type="section" dock_position="top" bar="none" position="dock" id="tab_4" tab_position="left" tab_text="tab1.2" backcolor="#00ff00">
+      <section type="section" dock_position="top" bar="none" position="tab" id="tab_5" tab_position="bottom" tab_text="tab1.4.1" backcolor="#555555">
+        <section type="section" dock_position="top" bar="none" position="tab" id="tab_10" tab_position="left" tab_text="ffff" backcolor="#dddddd" />
+        <section type="section" dock_position="top" bar="none" position="dock" id="tab_11" tab_position="left" tab_text="jhjh" backcolor="#333333" />
+      </section>
+      <section type="section" dock_position="top" bar="none" position="dock" id="tab_8" tab_position="bottom" tab_text="jhjh" backcolor="#454545" >
+        <section type="section" dock_position="top" bar="none" position="tab" id="tab_7" tab_position="right" tab_text="ffff" backcolor="#dddddd" />
+        <section type="section" dock_position="top" bar="none" position="dock" id="tab_9" tab_position="right" tab_text="jhjh" backcolor="#333333" />
+      </section>
+    </section>
+  </section>
+  <section type="section" dock_position="top" bar="none" position="tab" id="tab_2" tab_position="top" tab_text="tab2" backcolor="#332222" />
+</Sections>-->

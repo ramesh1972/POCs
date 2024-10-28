@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Sections"
+    targetNamespace="http://tempuri.org/Sections.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/Sections.xsd"
+    xmlns:mstns="http://tempuri.org/Sections.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <!-- definition of section attributes -->
+  <xs:attributeGroup name="sectionattrgroup">
+    <xs:attribute name="real_type" type="xs:string"/>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+
+    <xs:attribute name="title" type="xs:string"/>
+    <xs:attribute name="bar" type="xs:string"/>
+
+    <xs:attribute name="is_visible" type="xs:boolean"/>
+
+    <xs:attribute name="position" type="xs:string" use="required"/>
+    <xs:attribute name="dock_position" type="xs:string"/>
+    <xs:attribute name="stick_left" type="xs:boolean"/>
+    <xs:attribute name="stick_top" type="xs:boolean"/>
+    <xs:attribute name="stick_right" type="xs:boolean"/>
+    <xs:attribute name="stick_bottom" type="xs:boolean"/>
+
+    <xs:attribute name="left" type="xs:positiveInteger"/>
+    <xs:attribute name="top" type="xs:positiveInteger"/>
+    <xs:attribute name="width" type="xs:positiveInteger"/>
+    <xs:attribute name="height" type="xs:positiveInteger"/>
+    <xs:attribute name="min_section_width" type="xs:positiveInteger"/>
+    <xs:attribute name="min_section_height" type="xs:positiveInteger"/>
+    <xs:attribute name="is_fixed_Width" type="xs:boolean"/>
+    <xs:attribute name="is_fixed_height" type="xs:boolean"/>
+
+    <xs:attribute name="border_thickness" type="xs:positiveInteger"/>
+    <xs:attribute name="is_sizable" type="xs:boolean"/>
+    <xs:attribute name="is_left_sizable" type="xs:boolean"/>
+    <xs:attribute name="is_top_sizable" type="xs:boolean"/>
+    <xs:attribute name="is_right_sizable" type="xs:boolean"/>
+    <xs:attribute name="is_bottom_sizable" type="xs:boolean"/>
+
+    <xs:attribute name="is_movable" type="xs:boolean"/>
+    <xs:attribute name="is_floatable" type="xs:boolean"/>
+    <xs:attribute name="is_dockable" type="xs:boolean"/>
+    <xs:attribute name="is_tabbable" type="xs:boolean"/>
+    <xs:attribute name="is_stickable" type="xs:boolean"/>
+
+
+    <xs:attribute name="can_have_drops" type="xs:boolean"/>
+    <xs:attribute name="can_have_docks" type="xs:boolean"/>
+    <xs:attribute name="can_have_floats" type="xs:boolean"/>
+    <xs:attribute name="can_have_sticks" type="xs:boolean"/>
+    <xs:attribute name="can_have_tabs" type="xs:boolean"/>
+
+
+    <xs:attribute name="is_always_on_top" type="xs:boolean"/>
+    <xs:attribute name="tab_position" type="xs:string"/>
+    <xs:attribute name="tab_length" type="xs:positiveInteger"/>
+    <xs:attribute name="tab_breadth" type="xs:positiveInteger"/>
+    <xs:attribute name="tabs_overlap" type="xs:positiveInteger"/>
+    <xs:attribute name="tab_length_fixed" type="xs:boolean"/>
+    <xs:attribute name="tabbar_padding" type="xs:positiveInteger"/>
+    <xs:attribute name="tab_is_active" type="xs:boolean"/>
+  </xs:attributeGroup>
+
+  
+  <xs:element name="section">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="html" maxOccurs="1" />
+        <xs:element ref="section"  maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="sectionattrgroup"></xs:attributeGroup>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sections">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="section"  maxOccurs="unbounded">
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

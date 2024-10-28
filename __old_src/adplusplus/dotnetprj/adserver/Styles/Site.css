@@ -1,0 +1,365 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+body
+{
+    margin:0px;
+    width:100%;
+    height:100%;
+    left:0px;
+    top:0px;
+    position:absolute;
+}
+
+
+.adclass
+{
+    COLOR:BLUE;
+    border-bottom-width: 3px;
+    border-bottom-style:double;
+    border-bottom-color:BLUE;
+    cursor:pointer
+    
+}
+
+.standard_font
+{
+    font-family:Arial Tahoma;
+    font-style:normal;
+    font-size:14px
+}
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+.divblock
+{
+    width:100%;
+    height:100%;
+    background-color:blue
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+    height:24px;
+    position:absolute;
+    top:36px;left:246px;
+    font-family:Arial;
+    font-size:28px;
+    font-weight:bolder;
+    color:blue;
+}
+
+
+.titleNote
+{
+    display: block;
+    float: left;
+    margin:4px;
+    text-align: left;
+    margin-left:9px;
+    width: auto;
+    font-family:Arial;
+    font-size:16px;
+    font-weight:bold;
+    color:Red;
+    z-index:999
+}
+
+.titleNoteOuter
+{
+    width:450px;
+    height:26px;
+    position:absolute;
+    left:600px;
+    top:1px;
+    background-color:Yellow;
+    margin:0px;
+    top:6px;
+    padding:0px
+}
+
+.titleNoteFreeWord
+{
+    font-weight:bolder;
+    font-style:italic;
+    color:Blue
+}
+
+.leftTitleUnderLineOuter
+{
+    width:60px;
+    height:24px;
+    background-color:Yellow;
+    position:absolute;
+    left:170px;
+    top:64px
+}
+
+.leftTitleUnderLineInner
+{
+    width:52px;
+    height:24px;
+    background-color:Red;
+    margin-left:4px;
+    top:16px;
+    padding:0px;
+    text-align:center;
+    vertical-align:middle;
+    text-decoration:blink;
+    color:Blue;    
+    font-size:24px;
+    font-weight:bold;
+}
+
+.rightTitleUnderLineOuter
+{
+    width:60px;
+    height:24px;
+    background-color:Yellow;
+    position:absolute;
+    left:460px;
+    top:64px;
+}
+
+.rightTitleUnderLineInner
+{
+    width:52px;
+    height:26px;
+    background-color:Red;
+    margin-left:4px;
+    top:16px;
+    padding:0px;
+    text-align:center;
+    vertical-align:middle;
+    text-decoration:blink;
+    color:Blue;    
+    font-size:24px;
+    font-weight:bold;
+}
+
+.siteButton
+{   
+    font-family:Tahoma Arial;
+    font-size:14px;
+    font-weight:normal;
+    background-color:aqua;
+    color:Red;
+}
+
+.topbar
+{
+    width:80%;
+    height:20px;
+    background-color:blue;
+    border-right:1mm solid yellow;
+    margin:0px;
+    padding:0px
+}
+
+.sideblock
+{
+    width:54px;
+    height:20px;
+    background-color:Yellow;
+    margin:0px;
+    margin-left:0px;
+    padding:0px 
+}
+
+.sideblockInner
+{
+    width:46px;
+    height:16px;
+    background-color:blue;
+    margin-left:4px;
+    margin-right:4px;
+    margin-bottom:4px;
+    margin-top:0px;
+    padding:0px
+}
+
+.yellowbar
+{
+    width:580px;
+    height:4px;
+    background-color:Yellow;
+    position:absolute;
+    left:30px;
+    top:16px
+}
+
+.websitename
+{
+    font-family:Arial Tahoma;
+    color:orange
+}
+
+.bluebar_top
+{
+    width:382px;
+    height:2px;
+    background-color:Blue;
+    margin-top:-1px;
+    margin-left:80px;
+    position:absolute;
+    top:72px;
+    left:74px;
+    padding:0px
+}
+
+.bluebar_bottom
+{
+    width:382px;
+    height:2px;
+    background-color:Blue;
+    margin-top:4px;
+    margin-left:80px;
+    position:absolute;
+    top:74px;
+    left:74px;
+    padding:0px
+}
+
+.adPlusPlus_normal_text
+{
+    font-family:Arial Tahoma;
+    color:orange;
+    font-style:italic;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.para_title
+{
+    font-family:arial Tahoma 'Courier New';
+    font-size:14px;
+    font-weight:bold;
+    margin:0px;
+    padding:4px;
+    background-color:aqua
+}
+
+.para_key_lines
+{
+    font-family:arial Tahoma 'Courier New';
+    font-size:16px;
+    font-weight:bold;
+    font-style:oblique;
+    color:Red;
+    margin:0px;
+    padding-left:32px;
+    background-color:white
+}
+
+.para
+{
+    font-family:arial Tahoma 'Courier New';
+    font-size:14px;
+    font-weight:normal;
+    margin:0px;
+    padding:8px;
+    background-color:white
+}
+
+.para_indent4
+{
+    font-family:arial Tahoma 'Courier New';
+    font-size:14px;
+    font-weight:normal;
+    padding-left:24px;
+    padding-right:8px;
+    padding-top:6px;
+    margin:0px;
+    background-color:White
+}
+
+.para_indent8
+{
+    font-family:arial Tahoma Times New Toman;
+    font-size:14px;
+    font-weight:normal;
+    margin:0px;
+    padding-left:52px;
+    padding-right:8px;
+    padding-top:6px;
+    margin:0px;
+    background-color:White
+}
+
+.para_indent8_last
+{
+    font-family:arial Tahoma Times New Toman;
+    font-size:14px;
+    font-weight:normal;
+    margin:0px;
+    padding-left:52px;
+    padding-right:8px;
+    padding-top:6px;
+    padding-bottom:6px;
+    margin:0px;
+    background-color:White
+}
+
+.alternate_block
+{
+    margin:0px;
+    background-color:aqua;
+}
+
+.test_drive_menu
+{  
+    font-family:Tahoma Arial;
+    font-size:12px;
+    font-weight:normal;
+    background-color:aqua;
+}
+
+.generated_script
+{
+    font-family:Arial Tahoma;
+    font-style:normal;
+    font-size:14px;
+    color:black;
+    border-collapse:collapse;
+}

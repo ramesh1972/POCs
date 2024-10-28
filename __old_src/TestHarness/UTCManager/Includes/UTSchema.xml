@@ -1,0 +1,119 @@
+<UnitTestCaseSchema>
+<UTCase>
+	<UTVariable></UTVariable>
+	<UTCExecution></UTCExecution>
+	<UTCAction></UTCAction>
+</UTCase>
+
+<UTVariable>
+	<VarName></VarName>
+	<VarDesc></VarDesc>
+</UTVariable>
+
+<UTCExecution>
+	<Single>
+		<Value></Value>
+	</Single>
+	<Random>
+		<Seed></Seed>
+		<Min></Min>
+		<Max></Max>
+	</Random>
+	<Sequence>
+		<Step></Step>
+		<Start></Start>
+		<End></End>
+	</Sequence>
+	<ValueList>
+		<Value></Value>
+	</ValueList>
+</UTCExecution>
+
+<UTCAction></UTCAction>
+
+<UTCResult>
+	<Result></Result>
+	<ResultDesc></ResultDesc>
+	<ResultComment></ResultComment>
+</UTCResult>
+
+<UTSetVar>
+	<UTVariable></UTVariable>	
+	<Skip></Skip>
+	<UTCExecution></UTCExecution>
+</UTSetVar>
+
+<UTCheckNum>
+	<UTCheckNumEqual>
+		<UTVariable></UTVariable>	
+		<Skip>No</Skip>
+		<Check>
+			<Base></Base>
+			<Value></Value>
+			<Length></Length>
+			<Precision></Precision>
+		</Check>
+		<UTCResult></UTCResult>
+	</UTCheckNumEqual>
+	<UTCheckNumRange>
+		<UTVariable></UTVariable>	
+		<Skip>No</Skip>
+		<Check>
+			<Base></Base>
+			<MinValue></MinValue>
+			<MaxValue></MaxValue>
+		</Check>
+		<UTCResult></UTCResult>
+	</UTCheckNumRange>
+</UTCheckNum>
+
+<UTCheckString>
+	<UTCheckStrEqual>
+		<UTVariable></UTVariable>	
+		<Skip></Skip>
+		<Check>
+			<Value></Value>
+		</Check>
+		<UTCResult>
+			<Result></Result>
+			<ResultDesc></ResultDesc>
+		</UTCResult>
+	</UTCheckStrEqual>
+	<UTCheckStrLen>
+		<UTVariable></UTVariable>	
+		<Skip></Skip>
+		<Check>
+			<MaxLength></MaxLength>
+			<MinLength></MinLength>
+		</Check>
+		<UTCResult></UTCResult>
+	</UTCheckStrLen>
+	<UTCheckStrPattern>
+		<UTVariable></UTVariable>	
+		<Skip>No</Skip>
+		<Check>
+			<RegExp></RegExp>
+		</Check>
+		<UTCResult></UTCResult>
+	</UTCheckStrPattern>
+</UTCheckString>
+
+<UTCheckBool>
+	<UTVariable></UTVariable>	
+	<Skip>No</Skip>
+	<Check>
+		<Value></Value>
+	</Check>
+	<UTCResult></UTCResult>
+</UTCheckBool>
+
+<UTCheckEnum>
+	<UTVariable></UTVariable>	
+	<Skip>No</Skip>
+	<Check>
+		<EnumValues>
+			<EnumValue></EnumValue>
+		</EnumValues>
+	</Check>
+</UTCheckEnum>
+</UnitTestCaseSchema>

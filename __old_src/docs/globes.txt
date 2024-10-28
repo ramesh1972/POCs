@@ -1,0 +1,18 @@
+spherical map....
+	- series of images rotated...
+	- use spherical filter on images
+	- interface with google maps
+	- zoom in/out...
+	- show any content_types(s) places
+	- show only user picked places	
+		- all the user content
+		- based on content_type (s)
+
+	- key content-types
+		- name
+		- geography type
+		- tourism
+		- things to do
+		- travel/vacation related
+		- air routes/train/bus routes
+	

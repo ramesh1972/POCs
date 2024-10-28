@@ -1,0 +1,20 @@
+MyMoz
+-----
+Include nsXPCOM.h to access NS_InitXPCOM2
+Include nsDebug.h to access assertion functions
+Inlcude xpcom.lib in project
+
+declare the MainApp class and with ISupports interface
+implement queryinterface, addref and release functions
+include npsr4.lib for the addref and release support  functions.
+
+initialize
+get component manager and do autoregister
+
+setup cookies?? why now
+
+setup the windowcreator by creating a class from IWindowCreator base
+get the windowwatcher interface and register this windowcreator.
+WindowCreator is the class for creating all child windows and not sure what the window watcher is going to do with this class???
+
+Setup the event handler and call Create and then show visible.

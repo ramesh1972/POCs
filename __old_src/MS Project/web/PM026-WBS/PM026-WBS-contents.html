@@ -1,0 +1,438 @@
+<HTML>
+<style>
+A {text-decoration:none;}
+</style>
+
+<HEAD>
+<script LANGUAGE="JavaScript">
+var total=1;
+var db = new Array();
+
+// create the tree
+dbAdd( true ,'Project/Product Development','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=176' ,0, '' , 0);
+dbAdd( true ,'Proposal and Contract','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=309' ,1, '' , 0);
+dbAdd( false,'Proposal and Contract Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=310' ,2, '' , 0);
+dbAdd( false,'Proposal and Contract Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=311' ,2, '' , 0);
+dbAdd( false,'Proposal and Contract Submission','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=312' ,2, '' , 0);
+dbAdd( false,'Proposal and Contract Sign-off','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=313' ,2, '' , 0);
+dbAdd( true ,'Requirements Phase','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=136' ,1, '' , 0);
+dbAdd( true ,'SRS','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=215' ,2, '' , 0);
+dbAdd( false,'SRS Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=92' ,3, '' , 0);
+dbAdd( false,'SRS - Internal Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=179' ,3, '' , 0);
+dbAdd( false,'SRS Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=180' ,3, '' , 0);
+dbAdd( false,'SRS - Customer Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=184' ,3, '' , 0);
+dbAdd( false,'SRS Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=185' ,3, '' , 0);
+dbAdd( false,'SRS - Customer Sign off','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=183' ,3, '' , 0);
+dbAdd( true ,'Test Strategy Plan','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=205' ,2, '' , 0);
+dbAdd( false,'Test Strategy Plan Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=206' ,3, '' , 0);
+dbAdd( false,'Test Strategy Plan - Internal Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=207' ,3, '' , 0);
+dbAdd( false,'Test Strategy Plan Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=208' ,3, '' , 0);
+dbAdd( false,'Test Strategy Plan - Quality Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=209' ,3, '' , 0);
+dbAdd( false,'Test Strategy Plan Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=210' ,3, '' , 0);
+dbAdd( false,'Test Strategy Plan Approval','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=211' ,3, '' , 0);
+dbAdd( true ,'System Test Plan','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=230' ,2, '' , 0);
+dbAdd( false,'STP Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=231' ,3, '' , 0);
+dbAdd( false,'STP - Internal  Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=232' ,3, '' , 0);
+dbAdd( false,'STP - Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=233' ,3, '' , 0);
+dbAdd( true ,'Feature Sheet','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=237' ,2, '' , 0);
+dbAdd( false,'FSD Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=238' ,3, '' , 0);
+dbAdd( false,'FSD Review and Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=239' ,3, '' , 0);
+dbAdd( true ,'End Stage Processing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=482' ,2, '' , 0);
+dbAdd( true ,'Document Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=483' ,3, '' , 0);
+dbAdd( false,'Process Handbook','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=484' ,4, '' , 0);
+dbAdd( false,'Project Plan','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=485' ,4, '' , 0);
+dbAdd( false,'Feature Sheet','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=486' ,4, '' , 0);
+dbAdd( false,'CM Processing and Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=490' ,3, '' , 0);
+dbAdd( false,'Estimates and Sizing Revisions','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=491' ,3, '' , 0);
+dbAdd( false,'Metrics Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=492' ,3, '' , 0);
+dbAdd( false,'Work Product Audit','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=519' ,3, '' , 0);
+dbAdd( false,'End Stage Report, Meeting and Action Items','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=493' ,3, '' , 0);
+dbAdd( true ,'Design Phase','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=1' ,1, '' , 0);
+dbAdd( true ,'High Level Design','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=247' ,2, '' , 0);
+dbAdd( false,'HLD Preperation and Documentation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=248' ,3, '' , 0);
+dbAdd( false,'HLD - Internal Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=249' ,3, '' , 0);
+dbAdd( false,'HLD - Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=250' ,3, '' , 0);
+dbAdd( false,'HLD - Customer Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=263' ,3, '' , 0);
+dbAdd( false,'HLD Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=264' ,3, '' , 0);
+dbAdd( false,'HLD Customer Approval','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=265' ,3, '' , 0);
+dbAdd( true ,'Product Specification Document','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=240' ,2, '' , 0);
+dbAdd( false,'PSD Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=320' ,3, '' , 0);
+dbAdd( false,'PSD Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=321' ,3, '' , 0);
+dbAdd( false,'PSD Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=322' ,3, '' , 0);
+dbAdd( true ,'Integration Test Plan','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=261' ,2, '' , 0);
+dbAdd( false,'ITP Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=8' ,3, '' , 0);
+dbAdd( false,'ITP - Internal Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=9' ,3, '' , 0);
+dbAdd( false,'ITP Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=262' ,3, '' , 0);
+dbAdd( true ,'Low Level Design','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=253' ,2, '' , 0);
+dbAdd( true ,'NA of Wales Web Server','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=651' ,3, '' , 0);
+dbAdd( true ,'Web Pages - ASP, HTML, DHTML','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=650' ,4, '' , 0);
+dbAdd( false,'Browse Catalogues & Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=649' ,5, '' , 0);
+dbAdd( false,'Search/Advanced Search','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=648' ,5, '' , 0);
+dbAdd( false,'View Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=647' ,5, '' , 0);
+dbAdd( false,'Order Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=646' ,5, '' , 0);
+dbAdd( false,'Print Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=645' ,5, '' , 0);
+dbAdd( true ,'Business Components - VB, VC++ DLLs','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=644' ,4, '' , 0);
+dbAdd( false,'Browse Catalogues & Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=643' ,5, '' , 0);
+dbAdd( false,'Search/Advanced Search','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=642' ,5, '' , 0);
+dbAdd( false,'View Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=641' ,5, '' , 0);
+dbAdd( false,'Order Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=640' ,5, '' , 0);
+dbAdd( false,'Print Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=639' ,5, '' , 0);
+dbAdd( true ,'NA of Wales Administration Site','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=638' ,3, '' , 0);
+dbAdd( true ,'Web Pages - ASP, HTML, DHTML','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=637' ,4, '' , 0);
+dbAdd( false,'Meta Data management','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=636' ,5, '' , 0);
+dbAdd( false,'Translating Meta Data and other Web Site pages','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=635' ,5, '' , 0);
+dbAdd( false,'Upload of Client Publications and Properties remotely','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=634' ,5, '' , 0);
+dbAdd( true ,'Business Components - VB, VC++ DLLs','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=633' ,4, '' , 0);
+dbAdd( false,'Meta Data management','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=632' ,5, '' , 0);
+dbAdd( false,'Translating Meta Data and other Web Site pages','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=631' ,5, '' , 0);
+dbAdd( false,'Upload of Client Publications and Properties remotely','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=630' ,5, '' , 0);
+dbAdd( true ,'Indexing Services','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=629' ,3, '' , 0);
+dbAdd( false,'Managing Indexing Properties/Tags for Catalogues, Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=628' ,4, '' , 0);
+dbAdd( false,'Database Indexing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=627' ,4, '' , 0);
+dbAdd( false,'Multi-Lingual indexing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=626' ,4, '' , 0);
+dbAdd( true ,'Data Import - From Unicorn into Wales Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=625' ,3, '' , 0);
+dbAdd( true ,'File Transfer Routine','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=624' ,4, '' , 0);
+dbAdd( false,' FTP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=623' ,5, '' , 0);
+dbAdd( false,'TCP/IP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=622' ,5, '' , 0);
+dbAdd( true ,'Auto Synchronization','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=621' ,4, '' , 0);
+dbAdd( false,' Incremental Download, Online.','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=620' ,5, '' , 0);
+dbAdd( false,' Full Download','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=619' ,5, '' , 0);
+dbAdd( true ,'Unicorn-Client Database Relationship','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=618' ,4, '' , 0);
+dbAdd( false,'One Unicorn to Many Client Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=617' ,5, '' , 0);
+dbAdd( false,'Many unicorn to One Client Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=616' ,5, '' , 0);
+dbAdd( false,'Many unicorn to Many Client Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=615' ,5, '' , 0);
+dbAdd( true ,'Security','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=614' ,3, '' , 0);
+dbAdd( false,'Network ','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=613' ,4, '' , 0);
+dbAdd( false,'Operating System','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=612' ,4, '' , 0);
+dbAdd( false,'Web Server ','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=611' ,4, '' , 0);
+dbAdd( false,'Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=610' ,4, '' , 0);
+dbAdd( false,'Component ','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=609' ,4, '' , 0);
+dbAdd( false,'User Session time outs, auto logoff','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=608' ,4, '' , 0);
+dbAdd( false,'Application Security, Encryption/Decryption','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=607' ,4, '' , 0);
+dbAdd( false,'Encrypted URLs','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=606' ,4, '' , 0);
+dbAdd( false,'Database Scripts -Tables, View, Stored Procedures etc..','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=604' ,4, '' , 0);
+dbAdd( true ,'Unit Test Plan','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=494' ,1, '' , 0);
+dbAdd( false,'UTP Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=495' ,2, '' , 0);
+dbAdd( false,'UTP Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=496' ,2, '' , 0);
+dbAdd( false,'UTP Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=497' ,2, '' , 0);
+dbAdd( true ,'End Stage Processing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=101' ,1, '' , 0);
+dbAdd( true ,'Document Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=499' ,2, '' , 0);
+dbAdd( false,'Process Handbook','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=500' ,3, '' , 0);
+dbAdd( false,'Project Plan','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=501' ,3, '' , 0);
+dbAdd( false,'Feature Sheet','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=502' ,3, '' , 0);
+dbAdd( false,'SRS','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=503' ,3, '' , 0);
+dbAdd( false,'STP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=504' ,3, '' , 0);
+dbAdd( false,'HLD','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=505' ,3, '' , 0);
+dbAdd( false,'CM Processing and Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=506' ,2, '' , 0);
+dbAdd( false,'Estimates and Sizing Revisions','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=507' ,2, '' , 0);
+dbAdd( false,'Metrics Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=508' ,2, '' , 0);
+dbAdd( false,'Work Product Audit','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=520' ,2, '' , 0);
+dbAdd( false,'End Stage Report, Meeting and Action Items','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=509' ,2, '' , 0);
+dbAdd( true ,'Coding and Unit Testing Phase','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=10' ,1, '' , 0);
+dbAdd( true ,'NA of Wales Web Server','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=600' ,2, '' , 0);
+dbAdd( true ,'Web Pages - ASP, HTML, DHTML','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=599' ,3, '' , 0);
+dbAdd( false,'Browse Catalogues & Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=598' ,4, '' , 0);
+dbAdd( false,'Search/Advanced Search','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=597' ,4, '' , 0);
+dbAdd( false,'View Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=596' ,4, '' , 0);
+dbAdd( false,'Order Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=595' ,4, '' , 0);
+dbAdd( false,'Print Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=594' ,4, '' , 0);
+dbAdd( true ,'Business Components - VB, VC++ DLLs','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=593' ,3, '' , 0);
+dbAdd( false,'Browse Catalogues & Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=592' ,4, '' , 0);
+dbAdd( false,'Search/Advanced Search','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=591' ,4, '' , 0);
+dbAdd( false,'View Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=590' ,4, '' , 0);
+dbAdd( false,'Order Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=589' ,4, '' , 0);
+dbAdd( false,'Print Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=588' ,4, '' , 0);
+dbAdd( true ,'NA of Wales Administration Site','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=587' ,2, '' , 0);
+dbAdd( true ,'Web Pages - ASP, HTML, DHTML','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=586' ,3, '' , 0);
+dbAdd( false,'Meta Data management','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=585' ,4, '' , 0);
+dbAdd( false,'Translating Meta Data and other Web Site pages','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=584' ,4, '' , 0);
+dbAdd( false,'Upload of Client Publications and Properties remotely','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=583' ,4, '' , 0);
+dbAdd( true ,'Business Components - VB, VC++ DLLs','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=582' ,3, '' , 0);
+dbAdd( false,'Meta Data management','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=581' ,4, '' , 0);
+dbAdd( false,'Translating Meta Data and other Web Site pages','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=580' ,4, '' , 0);
+dbAdd( false,'Upload of Client Publications and Properties remotely','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=579' ,4, '' , 0);
+dbAdd( true ,'Indexing Services','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=577' ,2, '' , 0);
+dbAdd( false,'Managing Indexing Properties/Tags for Catalogues, Publications','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=576' ,3, '' , 0);
+dbAdd( false,'Database Indexing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=575' ,3, '' , 0);
+dbAdd( false,'Multi-Lingual indexing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=574' ,3, '' , 0);
+dbAdd( true ,'Data Import - From Unicorn into Wales Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=573' ,2, '' , 0);
+dbAdd( true ,'File Transfer Routine','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=572' ,3, '' , 0);
+dbAdd( false,' FTP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=571' ,4, '' , 0);
+dbAdd( false,'TCP/IP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=570' ,4, '' , 0);
+dbAdd( true ,'Auto Synchronization','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=569' ,3, '' , 0);
+dbAdd( false,' Incremental Download, Online.','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=568' ,4, '' , 0);
+dbAdd( false,' Full Download','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=567' ,4, '' , 0);
+dbAdd( true ,'Unicorn-Client Database Relationship','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=566' ,3, '' , 0);
+dbAdd( false,'One Unicorn to Many Client Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=565' ,4, '' , 0);
+dbAdd( false,'Many unicorn to One Client Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=564' ,4, '' , 0);
+dbAdd( false,'Many unicorn to Many Client Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=563' ,4, '' , 0);
+dbAdd( true ,'Security','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=562' ,2, '' , 0);
+dbAdd( false,'Network ','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=561' ,3, '' , 0);
+dbAdd( false,'Operating System','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=560' ,3, '' , 0);
+dbAdd( false,'Web Server ','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=559' ,3, '' , 0);
+dbAdd( false,'Database','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=558' ,3, '' , 0);
+dbAdd( false,'Component ','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=557' ,3, '' , 0);
+dbAdd( false,'User Session time outs, auto logoff','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=556' ,3, '' , 0);
+dbAdd( false,'Application Security, Encryption/Decryption','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=555' ,3, '' , 0);
+dbAdd( false,'Encrypted URLs','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=554' ,3, '' , 0);
+dbAdd( false,'Database Scripts -Tables, View, Stored Procedures etc..','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=553' ,2, '' , 0);
+dbAdd( true ,'Test Tools','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=276' ,1, '' , 0);
+dbAdd( false,'Test Tools - Design, Documentation, Review and Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=277' ,2, '' , 0);
+dbAdd( false,'Test Tools Development - Coding and Code Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=278' ,2, '' , 0);
+dbAdd( false,'Test Tools Testing and Verification','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=279' ,2, '' , 0);
+dbAdd( false,'Test Tools Setup','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=280' ,2, '' , 0);
+dbAdd( true ,'Unit Testing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=15' ,1, '' , 0);
+dbAdd( false,'Test Data Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=76' ,2, '' , 0);
+dbAdd( false,'Unit Testing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=30' ,2, '' , 0);
+dbAdd( false,'Test Records and Fault Records Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=82' ,2, '' , 0);
+dbAdd( false,'CL Updation with Tested Code','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=46' ,2, '' , 0);
+dbAdd( false,'Test Report Preperation, Review and Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=57' ,2, '' , 0);
+dbAdd( true ,'Porting Process Document','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=290' ,1, '' , 0);
+dbAdd( false,'PPD Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=342' ,2, '' , 0);
+dbAdd( false,'PPD Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=343' ,2, '' , 0);
+dbAdd( false,'PPD Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=344' ,2, '' , 0);
+dbAdd( false,'PPD - Technical Writing Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=345' ,2, '' , 0);
+dbAdd( false,'PPD Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=346' ,2, '' , 0);
+dbAdd( true ,'User Manual','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=118' ,1, '' , 0);
+dbAdd( false,'User Manual Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=266' ,2, '' , 0);
+dbAdd( false,'User Manual Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=267' ,2, '' , 0);
+dbAdd( false,'User Manual Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=268' ,2, '' , 0);
+dbAdd( false,'User Manual - Technical Writing Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=269' ,2, '' , 0);
+dbAdd( false,'User Manual Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=270' ,2, '' , 0);
+dbAdd( true ,'End Stage Processing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=418' ,1, '' , 0);
+dbAdd( true ,'Document Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=419' ,2, '' , 0);
+dbAdd( false,'Process Handbook','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=420' ,3, '' , 0);
+dbAdd( false,'Project Plan','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=421' ,3, '' , 0);
+dbAdd( false,'Feature Sheet','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=422' ,3, '' , 0);
+dbAdd( false,'SRS','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=423' ,3, '' , 0);
+dbAdd( false,'STP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=425' ,3, '' , 0);
+dbAdd( false,'HLD','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=424' ,3, '' , 0);
+dbAdd( false,'ITP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=431' ,3, '' , 0);
+dbAdd( false,'CM Processing and Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=479' ,2, '' , 0);
+dbAdd( false,'Estimates and Sizing Revisions','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=426' ,2, '' , 0);
+dbAdd( false,'Metrics Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=427' ,2, '' , 0);
+dbAdd( false,'Work Product Audit','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=521' ,2, '' , 0);
+dbAdd( false,'End Stage Report, Meeting and Action Items','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=428' ,2, '' , 0);
+dbAdd( false,'','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=524' ,2, '' , 0);
+dbAdd( true ,'Integration Testing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=16' ,1, '' , 0);
+dbAdd( false,'Modules Linking and Software Build','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=135' ,2, '' , 0);
+dbAdd( true ,'Integration Test Tools','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=459' ,2, '' , 0);
+dbAdd( false,'Integration Test Tools - Design, Documentation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=460' ,3, '' , 0);
+dbAdd( false,'Integration Test Tools Development - Coding and Code Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=461' ,3, '' , 0);
+dbAdd( false,'Integration Test Tools Testing and Verification','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=462' ,3, '' , 0);
+dbAdd( false,'Integration Test Tools Setup','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=463' ,3, '' , 0);
+dbAdd( false,'Test Data Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=465' ,2, '' , 0);
+dbAdd( false,'Integration Testing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=466' ,2, '' , 0);
+dbAdd( false,'Test Records and Fault Records Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=467' ,2, '' , 0);
+dbAdd( false,'CL Updation with Tested Code','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=468' ,2, '' , 0);
+dbAdd( false,'Test Report Preperation, Review and Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=469' ,2, '' , 0);
+dbAdd( true ,'End Stage Processing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=432' ,2, '' , 0);
+dbAdd( true ,'Document Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=433' ,3, '' , 0);
+dbAdd( false,'Process Handbook','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=434' ,4, '' , 0);
+dbAdd( false,'Project Plan','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=435' ,4, '' , 0);
+dbAdd( false,'Feature Sheet','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=436' ,4, '' , 0);
+dbAdd( false,'SRS','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=437' ,4, '' , 0);
+dbAdd( false,'STP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=438' ,4, '' , 0);
+dbAdd( false,'HLD','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=439' ,4, '' , 0);
+dbAdd( false,'ITP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=440' ,4, '' , 0);
+dbAdd( false,'CM Processing and Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=480' ,3, '' , 0);
+dbAdd( false,'Estimates and Sizing Revisions','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=441' ,3, '' , 0);
+dbAdd( false,'Metrics Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=442' ,3, '' , 0);
+dbAdd( false,'Work Product Audit','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=522' ,3, '' , 0);
+dbAdd( false,'End Stage Report, Meeting and Action Items','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=443' ,3, '' , 0);
+dbAdd( true ,'System Testing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=17' ,1, '' , 0);
+dbAdd( false,'Modules Linking and Software Build','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=470' ,2, '' , 0);
+dbAdd( true ,'System Test Tools','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=471' ,2, '' , 0);
+dbAdd( false,'System Test Tools - Design, Documentation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=472' ,3, '' , 0);
+dbAdd( false,'System Test Tools Development - Coding and Code Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=473' ,3, '' , 0);
+dbAdd( false,'System Test Tools Testing and Verification','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=474' ,3, '' , 0);
+dbAdd( false,'System Test Tools Setup','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=475' ,3, '' , 0);
+dbAdd( false,'Test Data Preperation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=134' ,2, '' , 0);
+dbAdd( false,'Tester Software Enhancement','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=34' ,2, '' , 0);
+dbAdd( false,'System Testing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=61' ,2, '' , 0);
+dbAdd( false,'Test Records and Fault Records Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=87' ,2, '' , 0);
+dbAdd( false,'CL Updation with Tested Code','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=63' ,2, '' , 0);
+dbAdd( false,'Test Report Preperation, Review and Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=35' ,2, '' , 0);
+dbAdd( true ,'End Stage Processing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=444' ,2, '' , 0);
+dbAdd( true ,'Document Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=445' ,3, '' , 0);
+dbAdd( false,'Process Handbook','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=446' ,4, '' , 0);
+dbAdd( false,'Project Plan','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=447' ,4, '' , 0);
+dbAdd( false,'Feature Sheet','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=448' ,4, '' , 0);
+dbAdd( false,'SRS','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=449' ,4, '' , 0);
+dbAdd( false,'STP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=450' ,4, '' , 0);
+dbAdd( false,'HLD','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=451' ,4, '' , 0);
+dbAdd( false,'ITP','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=452' ,4, '' , 0);
+dbAdd( false,'CM Processing and Review','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=481' ,3, '' , 0);
+dbAdd( false,'Estimates and Sizing Revisions','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=453' ,3, '' , 0);
+dbAdd( false,'Metrics Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=454' ,3, '' , 0);
+dbAdd( false,'Work Product Audit','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=523' ,3, '' , 0);
+dbAdd( false,'End Stage Report, Meeting and Action Items','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=455' ,3, '' , 0);
+dbAdd( true ,'Release','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=18' ,1, '' , 0);
+dbAdd( false,'Baselining Code and Doucments','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=477' ,2, '' , 0);
+dbAdd( false,'Release Plan and Release Checklist','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=122' ,2, '' , 0);
+dbAdd( false,'Release Plan Review and Updation','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=36' ,2, '' , 0);
+dbAdd( false,'Release Testing','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=37' ,2, '' , 0);
+dbAdd( false,'Release Report - Final Inspection Report and Concession Report, if necessary, Archival Request','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=71' ,2, '' , 0);
+dbAdd( false,'Release Certificate','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=45' ,2, '' , 0);
+dbAdd( true ,'User Training','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=456' ,1, '' , 0);
+dbAdd( false,'Training','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=457' ,2, '' , 0);
+dbAdd( true ,'Project Close Out','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=178' ,1, '' , 0);
+dbAdd( false,'Close-out Repport, Meeting and MOM.','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=54' ,2, '' , 0);
+dbAdd( false,'Warranty/Customer Support','PM026-WBS-view.asp?MSProject=D:\Wales-Docs\PM026-WBS.mpp&TaskID=458' ,1, '' , 0);
+
+
+// Get current cookie setting
+var current=getCurrState()
+
+// tree functions
+function getCurrState() {
+  var label = "currState="
+  var labelLen = label.length
+  var cLen = document.cookie.length
+  var i = 0
+  while (i < cLen) {
+    var j = i + labelLen
+    if (document.cookie.substring(i,j) == label) {
+      var cEnd = document.cookie.indexOf(";",j)
+      if (cEnd == -1) { cEnd = document.cookie.length }
+      return unescape(document.cookie.substring(j,cEnd))
+    }
+    i++
+  }
+  return ""
+}
+
+// Add an entry to the database
+function dbAdd(mother,display,URL,indent,top,newitem) {
+  db[total] = new Object;
+  db[total].mother = mother
+  db[total].display = display
+  db[total].URL = URL
+  db[total].indent = indent
+  db[total].top = top
+  db[total].newitem = newitem
+  total++
+  }
+
+// Record current settings in cookie
+function setCurrState(setting) {
+  var expire = new Date();
+  expire.setTime(expire.getTime() + ( 7*24*60*60*1000 ) ); // expire in 1 week
+  document.cookie = "currState=" + escape(setting) + "; expires=" + expire.toGMTString();
+  }
+
+// toggles an outline mother entry, storing new value in the cookie
+function toggle(n) {
+  if (n != 0) {
+    var newString = ""
+    var expanded = current.substring(n-1,n) // of clicked item
+    newString += current.substring(0,n-1)
+    newString += expanded ^ 1 // Bitwise XOR clicked item
+    newString += current.substring(n,current.length)
+    setCurrState(newString) // write new state back to cookie
+  }
+}
+
+// returns padded spaces (in mulTIPles of 2) for indenting
+function pad(n) {
+  var result = ""
+  for (var i = 1; i <= n; i++) { result += "&nbsp;&nbsp;&nbsp;&nbsp;" }
+  return result
+}
+
+// Expand everything
+function explode() {
+  current = "";
+  initState="";
+  for (var i = 1; i < db.length; i++) { 
+    initState += "1"
+    current += "1"
+    }
+  setCurrState(initState);
+  history.go(0);
+  }
+
+// Collapse everything
+function contract() {
+  current = "";
+  initState="";
+  for (var i = 1; i < db.length; i++) { 
+    initState += "0"
+    current += "0"
+    }
+  setCurrState(initState);
+  history.go(0);
+  }
+</script>
+</HEAD>
+
+<BODY bgcolor=#ffffff LINK="#006666" VLINK="#004444">
+<script LANGUAGE="JavaScript">
+// Set the initial state if no current state or length changed
+if (current == "" || current.length != (db.length-1)) {
+  current = ""
+  initState = ""
+  for (i = 1; i < db.length; i++) { 
+    initState += "0"
+    current += "0"
+    }
+  setCurrState(initState)
+  }
+var prevIndentDisplayed = 0
+var showMyDaughter = 0
+
+var Outline=""
+// cycle through each entry in the outline array
+for (var i = 1; i < db.length; i++) {
+  var currIndent = db[i].indent           // get the indent level
+  var expanded = current.substring(i-1,i) // current state
+  var top = db[i].top
+  if (top == "") { top="content" }
+  // display entry only if it meets one of three criteria
+  if ((currIndent == 0 || currIndent <= prevIndentDisplayed || (showMyDaughter == 1 && (currIndent - prevIndentDisplayed == 1)))) {
+  Outline += pad(currIndent)
+
+  // Insert the appropriate GIF and HREF
+  newitem = "";
+  if (db[i].newitem) { newitem="_new"; }
+  if (!(db[i].mother)) {
+    Outline += "<IMG SRC=\"../images/blank.gif\" WIDTH=16 HEIGHT=16 BORDER=0><IMG SRC=\"../images/document" + newitem + ".gif\" WIDTH=16 HEIGHT=16 BORDER=0>"
+    } 
+  else { 
+      if (current.substring(i-1,i) == 1) {
+        Outline += "<A HREF=\"javascript:history.go(0)\" onMouseOver=\"window.parent.status=\'Click to collapse\';return true;\" onClick=\"toggle(" + i + ")\">";
+        Outline += "<IMG SRC=\"../images/minus.gif\" WIDTH=16 HEIGHT=16 BORDER=0><IMG SRC=\"../images/open" + newitem + ".gif\" WIDTH=16 HEIGHT=16 BORDER=0>"
+        Outline += "</A>"
+        }
+      else {
+	    Outline += "<A HREF=\"javascript:history.go(0)\" onMouseOver=\"window.parent.status=\'Click to expand\';return true;\" onClick=\"toggle(" + i + ")\">"
+        Outline += "<IMG SRC=\"../images/plus.gif\" WIDTH=16 HEIGHT=16 BORDER=0><IMG SRC=\"../images/closed" + newitem + ".gif\" WIDTH=16 HEIGHT=16 BORDER=0>"
+        Outline += "</A>"
+        }
+      }
+    Outline += "&nbsp;";
+     
+    if (db[i].URL == "" || db[i].URL == null) {
+      Outline += " " + db[i].display      // no link, just a listed item  
+      }
+    else {
+      Outline += " <A HREF=\"" + db[i].URL + "\" TARGET=\"fNodeBody" + "\">" + db[i].display + "</A>"
+      }
+	// Bold if at level 0
+    if (currIndent == 0) { 
+      Outline = "<B>" + Outline + "</B>"
+      }
+    Outline += "<BR>"
+    prevIndentDisplayed = currIndent
+    showMyDaughter = expanded
+    // if (i == 1) { Outline = ""}
+    if (db.length > 25) {
+      document.write(Outline)
+      Outline = ""
+      }
+    }
+  }
+document.write(Outline)
+</script>
+</BODY>
+</HTML>

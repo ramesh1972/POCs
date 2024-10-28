@@ -1,0 +1,110 @@
+Vision Site (Vision Tree & growth)
+-----------
+1) Root is Vision&Progress
+2) Immediate Children are Sub Visions
+3) Then the tree can be like,
+	Vision
+		Sub Vision
+			Sub Vision
+				Initiative
+					Project
+						Sub Project
+							Requirement
+								Sub requirement
+									Task
+										Sub Task
+											Action Item
+
+
+5) Properties common to all	
+	- A name (Definitive)
+	- A nick name (creative)
+	- Short Description
+	- Detailed Notes (Chapters, Paragraphs, Images, Links, tables)	
+	
+	- Who?
+	- Benifits
+	- Risks
+	- Issues
+	- requirements
+	- design
+	- development
+	- Output documentation
+	- Result documented
+	
+	- Start date planned
+	- Start Date end
+	- Timeline Nature (Flexible, Must)
+	- Number of Hours Planned
+	- Start date actual
+	- End date actual
+	- number of hours actual
+	- Hours spent per day
+
+	- Rank	
+	- Progress Percentage (Sum of all child nodes)
+	- Status (NEW, REVIEWED, STARTED, DELAYED, CLOSED, TESTED, DEPLOYED, REALISED, CANCELLED, DEFERRED)
+	- Progress Notes
+
+6) The tool should have the ability
+	- to add new stereotype
+	- to add/remove/change common properties
+	- associate a stereotype with a set of properties from the common set.
+	- to change those property names based on the steretype
+	- to add/remove/change nodes
+	- to re-order nodes
+	- to move nodes up and down the tree.
+	- To set font for name and short description
+
+7) There should be concurrency supported and multiple users can use the site
+	
+	
+How?
+---
+Data
+A def table of properties
+A def table of stereotypes
+A def table associating sterertypes and properties
+A def table customizing that association
+
+A data table of nodes and stereotype
+A data table for each property having value for a node
+A data table for detailed notes as well which itself is a tree of items
+a data table for each type of detained note item, that holds the item contents for the tree of detailed node and all the detailed notes of all nodes in the Vision tree fall
+
+Any static data tables can be added at anytime and associated with the system.
+
+A table of users.
+
+A table for holding a view template for each stereotype
+
+GUI
+---
+A tree view
+	- View mode
+	- edit mode
+		- to add node in place
+		- to edit node in place
+		- to order in place
+		- to move up and down in place
+	- In both modes only a certain depth is showed per page 
+		- all child nodes to be displayed+number of total sub child nodes per child to be computed against the remaining quota for display. With a percentage per child computed and with the average percentage required for the immediate children, the depth per child is determined and the nodes are fetched. The same logic will hold for all child node and sub child nodes)
+	- Once a node is clicked, its view is displayed, with the path at the top.
+	- and above and below the view the siblings names are displayed.
+	- Use of iframes within iframes to display the nodes of the chldred, thus giving a full picture of the tree
+	- properties to be displayed for the tree can be selected/unselected.
+	- Views of all the child nodes can be displayed and only those properties selected to be displayed on the view.
+
+Logic
+-----
+1) Logic is quite simple it is database and gui that the driving force here.
+2) On the server side, it is mostly queries and building an xml document ot be sent to the client.
+3) On the client side a display of the xml document is the main
+4) Also great ability to manage the tree in the xml data document, so good javascript and xml .js lib is needed
+5) three xmls are needed on the client
+	a) a data document tree
+	b) all other def data.
+	c) and client/web server action node.
+
+
+

@@ -1,0 +1,59 @@
+1) Getting it up and running
+	- gui codes
+	- gui grids (associations)
+	= inhertiance of props,childs for spec entities
+	= implement entity_id_ref data type.
+
+2) Setup the Session and loading.
+3) Build a expression bool and math parser in C# and Javascript.
+4) constraints
+	= implement stage
+5) enrichments 
+6) entity language
+	$ENTITY.prop or $prop
+	$ENTITY.Relations() or $Relations()
+	Loop(Over relation)
+	{ // act like a template code...
+		expression or conditional expression over $RELATIVE.prop values
+	}
+	$ENTITY.ROOT
+	$ENTITY.OWNER	
+	etc...
+7) Suck it all into the grave
+	= Implement Grave System
+	= Implement AJAX
+	= Implement Trees
+	= Implement GRAVE Requests
+	- Get
+	- PostBack
+	- AJAX
+	= all have SystemID, EntityID, Arguments
+	= Arguments generally should be
+		- entity code name or id...
+		- command name or id..
+		- otherwise entityID home is displayed
+		- otherwise systemID home is displayed
+	= Complete language, graveweb site 
+
+
+8) Implement Reports
+	= Implement multi assoc
+9) Implement Permissions and Reg/Login/
+	= implement multi assoc
+
+10) Create a Lore site	
+	- with base URL as http://host/graveweb?SystemID=1001
+
+	Implement all Vasans requriements
+	- Create appropriate menu
+	- Lore Exporer
+	- Home Page
+	- COnfig Pages...
+
+
+11) Reverese References
+12) Implement Documents Management System.
+
+
+	
+	

@@ -1,0 +1,137 @@
+<HTML>
+<BODY BACKGROUND="BGnd.jpg" BGCOLOR= "#C0D9D9">
+This page describes how to connect synthesizers to your computer.
+<ul>
+<dt><a href="#Connect1"><b>Connecting one synthesizer to your computer</b></a>
+<dt><a href="#Connect2"><b>Connecting multiple Sound Modules to your computer </b></a>
+<dt><a href="#Connect3"><b>Connecting multiple synthesizer keyboards with only one MIDI Controller</b></a>
+<dt><a href="#Connect4"><b>Connecting multiple MIDI Controllers and Patch Bays to your computer</b></a>
+<dt><a href="#EchoMidi"><b>Echo incoming MIDI events to all synthesizers</b></a>
+</ul>
+<br>
+
+<hr>
+<h3><a name="Connect1">Connecting One Synthesizer to your Computer</h3>
+Your computer communicates with synthesizers and sound modules through a <b>MIDI Controller</b> card installed in your computer.  Some MIDI Controllers connect to your computer's parallel port.  The MIDI controller is sometimes called a soundcard adapter or Patch Bay adapter.  Many MIDI controllers also have a built-in Internal Synthesizer, used for playing MIDI music on your computer.
+Select <a href="-ZZSyn"><b>Synthesizers</b></a>
+from the <b>View</b> menu to see
+all of the MIDI controllers and Internal Sound Card Synthesizers that are connected to your computer.
+<br><br>
+
+The MIDI controller should be connected to your synthesizer with MIDI Cables as shown in the following diagram.
+<ul>
+<IMG WIDTH=240 HEIGHT=220 align=center SRC="cable1.gif">
+</ul><br>
+
+<hr>
+<h3><a name="Connect2">Connecting multiple Sound Modules to your computer </h3>
+The difference between a synthesizer and a sound module is, a synthesizer has a keyboard while a sound module does not.  One MIDI controller can communicate with several synthesizers and sound modules connected to it through a series of MIDI Cables.  The recommended way to do this with Anvil Studio is shown below.
+<ul>
+<IMG WIDTH=240 HEIGHT=440 align=center SRC="cable2.gif">
+</ul>
+The MIDI cables that let your computer make sounds through your synthesizer and sound modules run:
+<ul>
+<li>
+from the MIDI controller's MIDI OUT port to the first synthesizer's MIDI IN port, and
+<li>
+from the first synthesizer's MIDI THRU port to the next Sound Module's synthesizer's MIDI IN port, and
+<li>
+so on to the last Sound Module's MIDI IN port.
+</ul>
+
+The MIDI cables that let your computer listen to and record the keys that are pressed on your synthesizer keyboard run from your synthesizer's MIDI OUT port to the MIDI controller's MIDI IN port.
+<br><br>
+Some synthesizers have a mode that causes the MIDI Out port to echo all MIDI In events as well as locally generated ones.  Some synthesizer manufacturers call this <b>MIDI Thru mode</b> or <b>MIDI Merge mode</b>.  If your synthesizer supports this feature, then follow the synthesizer manufacturer's directions for putting the synthesizer in this mode, and connect your MIDI equipment as shown in the diagram below: 
+<ul>
+<IMG WIDTH=240 HEIGHT=470 align=center SRC="cable2a.gif">
+</ul>
+<br>
+<br>
+
+<hr>
+<h3><a name="Connect3">Connecting multiple synthesizer keyboards with only one MIDI Controller</h3>
+Some synthesizers have a mode that causes the MIDI Out port to echo all MIDI In events as well as locally generated ones.  Some synthesizer manufacturers call this <b>MIDI Thru mode</b> or <b>MIDI Merge mode</b>.  If your synthesizers support this feature, then you can connect multiple synthesizers and sound modules to a single MIDI Controller as shown below:
+<ul>
+<IMG WIDTH=240 HEIGHT=580 align=center SRC="cable3.gif">
+</ul>
+Care must be taken to ensure that each keyboard connected to the same MIDI Input Controller generates notes on a different MIDI channel.
+<br><br>
+If your synthesizer does not support MIDI Thru mode, or MIDI Merge mode, the best way to connect multiple synthesizer keyboards to your computer is with multiple MIDI Controllers, as described below.
+<br><br>
+
+<hr>
+<h3><a name="Connect4"> Connecting multiple MIDI Controllers and Patch Bays to your computer</h3>
+Your computer may have several MIDI controller cards installed in it. Each of these MIDI controllers has a unique name.  
+Select <a href="-ZZSyn"><b>Synthesizers</b></a>
+from the <b>View</b> menu to see
+all of the MIDI controllers that are connected to your computer.
+<br><br>
+If you have the <b><I>Anvil Studio</I></b> <b>MIDI Manager Accessory</b> installed, then Anvil Studio can play music over more than 16 MIDI channels through multiple MIDI Controllers and Patch Bays connected to your computer, as shown in the diagram below:
+<ul>
+<IMG WIDTH=460 HEIGHT=480 align=center SRC="cable4.gif">
+</ul>
+
+<hr>
+<h3><a name="EchoMidi"> Echo incoming MIDI events to all synthesizers</h3>
+The <b>Mixer</b> page has a button that looks like:
+<IMG SRC="nechosyn.gif">
+, and the <b>Synthesizers</b> page has a check box named
+<b>Echo incoming MIDI events to all synthesizers</b>.
+These have no effect, and are not even visible,
+if your computer has only a Sound Card's internal synthesizer and/or audio,
+but no external MIDI port.  In this case, you can ignore this section.
+<br><br>
+When Anvil Studio runs for the first time, Echoing MIDI events is initially disabled.
+
+<h4>Why you might want to <b>enable</b> echoing MIDI events</h4>
+You would want to turn this on if you are recording a MIDI track,
+and you want to play notes on one synthesizer keyboard, but have them
+played by a different synthesizer or your computer's sound card.
+In this case, the synthesizer keyboard you are playing will remain silent,
+and the recorded notes will be echoed, and later played back, on the
+synthesizer assigned to the track being recorded.
+For example, try turning this check box on and then select <b>Mixer</b>
+from the View menu and create a Rhythm track.
+Now, press keys on an external synthesizer to hear drum sounds.
+While still on the Mixer page, press the Record button and press keys
+on your synthesizer to record a rhythm track.
+
+<h4>Why you might want to <b>disable</b> echoing MIDI events</h4>
+You will want to turn this off for any of the following reasons:
+<dir>
+<li>If your computer's Sound Card is not <i>Full Duplex</i>, that is,
+it cannot send and receive MIDI events at the same time.
+<li>If your computer's Sound Card is the type that cannot listen
+to the MIDI port and Audio-in port at the same time.
+<li>If you do not have enough MIDI cables to connect:
+<dir>
+<li>the synthesizer's MIDI OUT port to the computer's MIDI IN port, and
+<li>the computer's MIDI OUT port to the synthesizer's MIDI IN port.
+</dir>
+In this case, you need to re-connect a MIDI cable to different ports
+depending on whether you are recording or playing back.
+<li>If you notice delays between the time you press a note and when
+you hear the note played.
+<li>If you don't here anything when you press a key on the synthesizer
+keyboard.
+</dir>
+
+<h4>Program behavior when Echo MIDI Events is enabled</h4>
+During start-up the program opens MIDI OUT and MIDI IN ports,
+and immediately sends LocalControlOff messages to all channels.
+<br>
+When not recording, it simply echoes any MIDI event to all MIDI OUT ports.
+<br>
+When recording, it echoes the received notes, after changing the channel
+number to the active track's channel number.
+
+<h4>Program behavior when Echo MIDI Events is disabled</h4>
+The program only opens MIDI IN ports when recording a MIDI track,
+or when Anvil Studio is turned to a page that needs to listen to MIDI events.
+<br>
+The program only opens MIDI OUT ports when playing one or more MIDI tracks,
+or when Anvil Studio is turned to a page that needs to play MIDI notes.
+
+</body>
+</HTML> 
+

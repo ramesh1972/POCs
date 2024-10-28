@@ -1,0 +1,22 @@
+<%@ Master Language="C#" AutoEventWireup="false" CodeFile="FrontOffice.master.cs" Inherits="FrontOffice" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Liquid Advance Portal</title>
+    <link rel=stylesheet href=FrontOffice.css />
+</head>
+<body style="width:98%;height:82%" >
+    <form id="form1" runat="server">
+    <div>
+        <h2>Loan Application System - Front Office</h2>
+    </div>
+    <hr />
+    
+    <asp:contentplaceholder id="FrontOffice_Content" runat="server">
+    </asp:contentplaceholder>        
+
+    </form>
+</body>
+</html>

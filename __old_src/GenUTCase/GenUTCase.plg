@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GenUTCase - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\HomeUser\LOCALS~1\Temp\RSP7D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/GenUTCase.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"D:\My Files\GenUTCase\GenUTCaseDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\HomeUser\LOCALS~1\Temp\RSP7D.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/GenUTCase.pdb" /debug /machine:I386 /out:"Debug/GenUTCase.exe" /pdbtype:sept  ".\Debug\GenUTCase.obj" ".\Debug\GenUTCaseDlg.obj" ".\Debug\StdAfx.obj" ".\Debug\GenUTCase.res" "
+<h3>Output Window</h3>
+Compiling...
+GenUTCaseDlg.cpp
+D:\My Files\GenUTCase\GenUTCaseDlg.cpp(178) : error C2065: 'IXMLDOMDocument' : undeclared identifier
+D:\My Files\GenUTCase\GenUTCaseDlg.cpp(178) : error C2146: syntax error : missing ';' before identifier 'ptr'
+D:\My Files\GenUTCase\GenUTCaseDlg.cpp(178) : error C2065: 'ptr' : undeclared identifier
+D:\My Files\GenUTCase\GenUTCaseDlg.cpp(180) : error C2228: left of '.CreateInstance' must have class/struct/union type
+D:\My Files\GenUTCase\GenUTCaseDlg.cpp(181) : error C2228: left of '.load' must have class/struct/union type
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+GenUTCase.exe - 5 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
