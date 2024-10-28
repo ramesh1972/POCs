@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../sample-templates/coreui-free-angular-admin-template-main"
+		}
+	],
+	"settings": {}
+}

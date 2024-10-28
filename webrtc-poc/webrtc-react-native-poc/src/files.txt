@@ -1,0 +1,581 @@
+Folder PATH listing for volume New Volume
+Volume serial number is EA34-B5A0
+D:.
+¦   files.txt
+¦   
++---assets
+¦   +---fonts
+¦   ¦       SpaceMono-Regular.ttf
+¦   ¦       
+¦   +---icons
+¦   ¦       add_user.png
+¦   ¦       add_user@2x.png
+¦   ¦       add_user@3x.png
+¦   ¦       add_user_1.png
+¦   ¦       add_user_1@2x.png
+¦   ¦       add_user_1@3x.png
+¦   ¦       all_select.png
+¦   ¦       all_select@2x.png
+¦   ¦       all_select@3x.png
+¦   ¦       announcements.png
+¦   ¦       announcements@2x.png
+¦   ¦       announcements@3x.png
+¦   ¦       arrival_msg.png
+¦   ¦       arrival_msg@2x.png
+¦   ¦       arrival_msg@3x.png
+¦   ¦       attendance_logs.png
+¦   ¦       attendance_logs@2x.png
+¦   ¦       attendance_logs@3x.png
+¦   ¦       audio_file.png
+¦   ¦       auto_register.png
+¦   ¦       auto_register@2x.png
+¦   ¦       auto_register@3x.png
+¦   ¦       back_arrow.png
+¦   ¦       back_arrow@2x.png
+¦   ¦       back_arrow@3x.png
+¦   ¦       calander.png
+¦   ¦       calander@2x.png
+¦   ¦       calander@3x.png
+¦   ¦       calendar_tick.png
+¦   ¦       calendar_tick@2x.png
+¦   ¦       calendar_tick@3x.png
+¦   ¦       camera.png
+¦   ¦       camera@2x.png
+¦   ¦       camera@3x.png
+¦   ¦       camera_off.png
+¦   ¦       camera_off@2x.png
+¦   ¦       camera_off@3x.png
+¦   ¦       camera_permission.png
+¦   ¦       camera_permission@2x.png
+¦   ¦       camera_permission@3x.png
+¦   ¦       checkin_marker.png
+¦   ¦       checkin_marker@2x.png
+¦   ¦       checkin_marker@3x.png
+¦   ¦       checkout_marker.png
+¦   ¦       checkout_marker@2x.png
+¦   ¦       checkout_marker@3x.png
+¦   ¦       checkout_status.png
+¦   ¦       checkout_status@2x.png
+¦   ¦       checkout_status@3x.png
+¦   ¦       clock_outline.png
+¦   ¦       clock_outline@2x.png
+¦   ¦       clock_outline@3x.png
+¦   ¦       close.png
+¦   ¦       close@2x.png
+¦   ¦       close@3x.png
+¦   ¦       close_grey.png
+¦   ¦       close_grey@2x.png
+¦   ¦       close_grey@3x.png
+¦   ¦       close_grey_circle.png
+¦   ¦       close_grey_circle@2x.png
+¦   ¦       close_grey_circle@3x.png
+¦   ¦       close_white.png
+¦   ¦       close_white@2x.png
+¦   ¦       close_white@3x.png
+¦   ¦       close_white_thin.png
+¦   ¦       close_white_thin@2x.png
+¦   ¦       close_white_thin@3x.png
+¦   ¦       colab.png
+¦   ¦       colab@2x.png
+¦   ¦       colab@3x.png
+¦   ¦       confirm_password.png
+¦   ¦       confirm_password@2x.png
+¦   ¦       confirm_password@3x.png
+¦   ¦       csv.png
+¦   ¦       csv@2x.png
+¦   ¦       csv@3x.png
+¦   ¦       dark_mode.png
+¦   ¦       dark_mode@2x.png
+¦   ¦       dark_mode@3x.png
+¦   ¦       delete.png
+¦   ¦       delete_outline.png
+¦   ¦       delete_outline@2x.png
+¦   ¦       delete_outline@3x.png
+¦   ¦       description.png
+¦   ¦       description@2x.png
+¦   ¦       description@3x.png
+¦   ¦       desktop.png
+¦   ¦       desktop@2x.png
+¦   ¦       desktop@3x.png
+¦   ¦       deviceid.png
+¦   ¦       deviceid@2x.png
+¦   ¦       deviceid@3x.png
+¦   ¦       docs_thumbnail.png
+¦   ¦       docs_thumbnail@2x.png
+¦   ¦       docs_thumbnail@3x.png
+¦   ¦       double_tick.png
+¦   ¦       download.png
+¦   ¦       download@2x.png
+¦   ¦       download@3x.png
+¦   ¦       earlybird.png
+¦   ¦       earlybird@2x.png
+¦   ¦       earlybird@3x.png
+¦   ¦       earlybirdframe.png
+¦   ¦       earlybirdframe@2x.png
+¦   ¦       earlybirdframe@3x.png
+¦   ¦       edit_outline.png
+¦   ¦       edit_outline@2x.png
+¦   ¦       edit_outline@3x.png
+¦   ¦       emoji.png
+¦   ¦       emoji@2x.png
+¦   ¦       emoji@3x.png
+¦   ¦       empty_announcements.png
+¦   ¦       empty_announcements@2x.png
+¦   ¦       empty_announcements@3x.png
+¦   ¦       end_call.png
+¦   ¦       end_call@2x.png
+¦   ¦       end_call@3x.png
+¦   ¦       excel_file.png
+¦   ¦       excel_file@2x.png
+¦   ¦       excel_file@3x.png
+¦   ¦       file.png
+¦   ¦       file@2x.png
+¦   ¦       file@3x.png
+¦   ¦       file_pin.png
+¦   ¦       file_pin@2x.png
+¦   ¦       file_pin@3x.png
+¦   ¦       file_upload_error.png
+¦   ¦       file_upload_error@2x.png
+¦   ¦       file_upload_error@3x.png
+¦   ¦       filter.png
+¦   ¦       filter@2x.png
+¦   ¦       filter@3x.png
+¦   ¦       folder.png
+¦   ¦       folder@2x.png
+¦   ¦       folder@3x.png
+¦   ¦       forgot_pass_image.png
+¦   ¦       forgot_pass_image@2x.png
+¦   ¦       forgot_pass_image@3x.png
+¦   ¦       forward_outline.png
+¦   ¦       forward_outline@2x.png
+¦   ¦       forward_outline@3x.png
+¦   ¦       gallery.png
+¦   ¦       gallery@2x.png
+¦   ¦       gallery@3x.png
+¦   ¦       home.png
+¦   ¦       home@2x.png
+¦   ¦       home@3x.png
+¦   ¦       icon_location.png
+¦   ¦       icon_mail_white.png
+¦   ¦       icon_password.png
+¦   ¦       icon_person.png
+¦   ¦       ic_map_marker.png
+¦   ¦       ic_map_marker@2x.png
+¦   ¦       ic_map_marker@3x.png
+¦   ¦       ic_search.png
+¦   ¦       image_outline.png
+¦   ¦       image_outline@2x.png
+¦   ¦       image_outline@3x.png
+¦   ¦       image_thumbnail.png
+¦   ¦       image_thumbnail@2x.png
+¦   ¦       image_thumbnail@3x.png
+¦   ¦       like_outline.png
+¦   ¦       like_outline@2x.png
+¦   ¦       like_outline@3x.png
+¦   ¦       link_black.png
+¦   ¦       link_black@2x.png
+¦   ¦       link_black@3x.png
+¦   ¦       link_white.png
+¦   ¦       link_white@2x.png
+¦   ¦       link_white@3x.png
+¦   ¦       location.png
+¦   ¦       location@2x.png
+¦   ¦       location@3x.png
+¦   ¦       location_permission.png
+¦   ¦       location_permission@2x.png
+¦   ¦       location_permission@3x.png
+¦   ¦       location_pin.png
+¦   ¦       location_pin@2x.png
+¦   ¦       location_pin@3x.png
+¦   ¦       location_pin_grey.png
+¦   ¦       location_pin_grey@2x.png
+¦   ¦       location_pin_grey@3x.png
+¦   ¦       location_pin_red.png
+¦   ¦       location_pin_red@2x.png
+¦   ¦       location_pin_red@3x.png
+¦   ¦       location_reset.png
+¦   ¦       location_reset@2x.png
+¦   ¦       location_reset@3x.png
+¦   ¦       location_reset_2.png
+¦   ¦       location_reset_2@2x.png
+¦   ¦       location_reset_2@3x.png
+¦   ¦       logout.png
+¦   ¦       logout@2x.png
+¦   ¦       logout@3x.png
+¦   ¦       map_marker_red.png
+¦   ¦       map_marker_red@2x.png
+¦   ¦       map_marker_red@3x.png
+¦   ¦       members.png
+¦   ¦       members@2x.png
+¦   ¦       members@3x.png
+¦   ¦       messenger.png
+¦   ¦       messenger@2x.png
+¦   ¦       messenger@3x.png
+¦   ¦       mic_off.png
+¦   ¦       mic_off@2x.png
+¦   ¦       mic_off@3x.png
+¦   ¦       mic_on.png
+¦   ¦       mic_on@2x.png
+¦   ¦       mic_on@3x.png
+¦   ¦       missed_checkout_marker.png
+¦   ¦       missed_checkout_marker@2x.png
+¦   ¦       missed_checkout_marker@3x.png
+¦   ¦       more_down_arrow.png
+¦   ¦       more_down_arrow@2x.png
+¦   ¦       more_down_arrow@3x.png
+¦   ¦       my_files.png
+¦   ¦       my_files@2x.png
+¦   ¦       my_files@3x.png
+¦   ¦       my_space.png
+¦   ¦       my_space@2x.png
+¦   ¦       my_space@3x.png
+¦   ¦       no_preview.png
+¦   ¦       no_preview@2x.png
+¦   ¦       no_preview@3x.png
+¦   ¦       other_file.png
+¦   ¦       other_file@2x.png
+¦   ¦       other_file@3x.png
+¦   ¦       pdf_file.png
+¦   ¦       pdf_file@2x.png
+¦   ¦       pdf_file@3x.png
+¦   ¦       personal_information.png
+¦   ¦       personal_information@2x.png
+¦   ¦       personal_information@3x.png
+¦   ¦       person_outline.png
+¦   ¦       person_outline@2x.png
+¦   ¦       person_outline@3x.png
+¦   ¦       phone.png
+¦   ¦       phone@2x.png
+¦   ¦       phone@3x.png
+¦   ¦       pinned.png
+¦   ¦       pinned@2x.png
+¦   ¦       pinned@3x.png
+¦   ¦       pinned_large.png
+¦   ¦       pinned_large@2x.png
+¦   ¦       pinned_large@3x.png
+¦   ¦       plus.png
+¦   ¦       plus@2x.png
+¦   ¦       plus@3x.png
+¦   ¦       ppt_file.png
+¦   ¦       ppt_file@2x.png
+¦   ¦       ppt_file@3x.png
+¦   ¦       preference.png
+¦   ¦       preference@2x.png
+¦   ¦       preference@3x.png
+¦   ¦       privacy_policy.png
+¦   ¦       privacy_policy@2x.png
+¦   ¦       privacy_policy@3x.png
+¦   ¦       profile.png
+¦   ¦       profile@2x.png
+¦   ¦       profile@3x.png
+¦   ¦       rar_file.png
+¦   ¦       rar_file@2x.png
+¦   ¦       rar_file@3x.png
+¦   ¦       reply.png
+¦   ¦       reply@2x.png
+¦   ¦       reply@3x.png
+¦   ¦       reply_arrows_circle.png
+¦   ¦       reply_arrows_circle@2x.png
+¦   ¦       reply_arrows_circle@3x.png
+¦   ¦       reset.png
+¦   ¦       reset@2x.png
+¦   ¦       reset@3x.png
+¦   ¦       reset_icon.png
+¦   ¦       reset_icon@2x.png
+¦   ¦       reset_icon@3x.png
+¦   ¦       right_arrow_circle.png
+¦   ¦       right_arrow_circle@2x.png
+¦   ¦       right_arrow_circle@3x.png
+¦   ¦       search_grey.png
+¦   ¦       search_grey@2x.png
+¦   ¦       search_grey@3x.png
+¦   ¦       search_grey_cross.png
+¦   ¦       search_grey_cross@2x.png
+¦   ¦       search_grey_cross@3x.png
+¦   ¦       search_pen.png
+¦   ¦       search_pen@2x.png
+¦   ¦       search_pen@3x.png
+¦   ¦       search_white.png
+¦   ¦       search_white@2x.png
+¦   ¦       search_white@3x.png
+¦   ¦       select_outline.png
+¦   ¦       select_outline@2x.png
+¦   ¦       select_outline@3x.png
+¦   ¦       send_message.png
+¦   ¦       send_message@2x.png
+¦   ¦       send_message@3x.png
+¦   ¦       settings.png
+¦   ¦       settings@2x.png
+¦   ¦       settings@3x.png
+¦   ¦       set_status.png
+¦   ¦       set_status@2x.png
+¦   ¦       set_status@3x.png
+¦   ¦       share_location_button.png
+¦   ¦       share_location_button@2x.png
+¦   ¦       share_location_button@3x.png
+¦   ¦       share_outline.png
+¦   ¦       share_outline@2x.png
+¦   ¦       share_outline@3x.png
+¦   ¦       speaker_off.png
+¦   ¦       speaker_off@2x.png
+¦   ¦       speaker_off@3x.png
+¦   ¦       speaker_on.png
+¦   ¦       speaker_on@2x.png
+¦   ¦       speaker_on@3x.png
+¦   ¦       storage_permission.png
+¦   ¦       storage_permission@2x.png
+¦   ¦       storage_permission@3x.png
+¦   ¦       Support.png
+¦   ¦       Support@2x.png
+¦   ¦       Support@3x.png
+¦   ¦       synced.png
+¦   ¦       synced@2x.png
+¦   ¦       synced@3x.png
+¦   ¦       tag.png
+¦   ¦       tag@2x.png
+¦   ¦       tag@3x.png
+¦   ¦       tick.png
+¦   ¦       time_capture.png
+¦   ¦       time_capture@2x.png
+¦   ¦       time_capture@3x.png
+¦   ¦       tnc.png
+¦   ¦       tnc@2x.png
+¦   ¦       tnc@3x.png
+¦   ¦       txt_file.png
+¦   ¦       txt_file@2x.png
+¦   ¦       txt_file@3x.png
+¦   ¦       unpinned.png
+¦   ¦       unpinned@2x.png
+¦   ¦       unpinned@3x.png
+¦   ¦       unpinned_large.png
+¦   ¦       unpinned_large@2x.png
+¦   ¦       unpinned_large@3x.png
+¦   ¦       un_synced.png
+¦   ¦       un_synced@2x.png
+¦   ¦       un_synced@3x.png
+¦   ¦       user.png
+¦   ¦       user@2x.png
+¦   ¦       user@3x.png
+¦   ¦       userthumbnail.png
+¦   ¦       userthumbnail@2x.png
+¦   ¦       userthumbnail@3x.png
+¦   ¦       userthumbnail_light.png
+¦   ¦       userthumbnail_light@2x.png
+¦   ¦       userthumbnail_light@3x.png
+¦   ¦       user_filled.png
+¦   ¦       user_filled@2x.png
+¦   ¦       user_filled@3x.png
+¦   ¦       verify_pass_screen.png
+¦   ¦       verify_pass_screen@2x.png
+¦   ¦       verify_pass_screen@3x.png
+¦   ¦       vertical_dots.png
+¦   ¦       vertical_dots@2x.png
+¦   ¦       vertical_dots@3x.png
+¦   ¦       video_call.png
+¦   ¦       video_call@2x.png
+¦   ¦       video_call@3x.png
+¦   ¦       watcher.png
+¦   ¦       watcher@2x.png
+¦   ¦       watcher@3x.png
+¦   ¦       watcher_off.png
+¦   ¦       watcher_off@2x.png
+¦   ¦       watcher_off@3x.png
+¦   ¦       watcher_on.png
+¦   ¦       watcher_on@2x.png
+¦   ¦       watcher_on@3x.png
+¦   ¦       wave.png
+¦   ¦       wave@2x.png
+¦   ¦       wave@3x.png
+¦   ¦       word_file.png
+¦   ¦       word_file@2x.png
+¦   ¦       word_file@3x.png
+¦   ¦       zip_file.png
+¦   ¦       zip_file@2x.png
+¦   ¦       zip_file@3x.png
+¦   ¦       
+¦   +---images
+¦           adaptive-icon.png
+¦           app_logo.png
+¦           app_logo_transparent.png
+¦           app_logo_transparent@2x.png
+¦           app_logo_transparent@3x.png
+¦           app_maintainence.png
+¦           app_maintainence@2x.png
+¦           app_maintainence@3x.png
+¦           app_update.png
+¦           app_update@2x.png
+¦           app_update@3x.png
+¦           colab_search.png
+¦           colab_search@2x.png
+¦           colab_search@3x.png
+¦           device_registration.png
+¦           device_registration@2x.png
+¦           device_registration@3x.png
+¦           device_registration_cross.png
+¦           device_registration_cross@2x.png
+¦           device_registration_cross@3x.png
+¦           docs.png
+¦           docs@2x.png
+¦           docs@3x.png
+¦           favicon.png
+¦           filter_icon.png
+¦           filter_icon@2x.png
+¦           filter_icon@3x.png
+¦           filter_tick.png
+¦           filter_tick@2x.png
+¦           filter_tick@3x.png
+¦           forward_search_empty.png
+¦           forward_search_empty@2x.png
+¦           forward_search_empty@3x.png
+¦           gallery.png
+¦           gallery@2x.png
+¦           gallery@3x.png
+¦           icon.png
+¦           in_circle.png
+¦           in_circle@2x.png
+¦           in_circle@3x.png
+¦           in_circle_light.png
+¦           in_circle_light@2x.png
+¦           in_circle_light@3x.png
+¦           link.png
+¦           link@2x.png
+¦           link@3x.png
+¦           map_empty.png
+¦           map_empty@2x.png
+¦           map_empty@3x.png
+¦           multimedia.png
+¦           multimedia@2x.png
+¦           multimedia@3x.png
+¦           no_collaboration.png
+¦           no_collaboration@2x.png
+¦           no_collaboration@3x.png
+¦           out_circle.png
+¦           out_circle@2x.png
+¦           out_circle@3x.png
+¦           out_circle_light.png
+¦           out_circle_light@2x.png
+¦           out_circle_light@3x.png
+¦           partial-react-logo.png
+¦           people.png
+¦           people@2x.png
+¦           people@3x.png
+¦           react-logo.png
+¦           react-logo@2x.png
+¦           react-logo@3x.png
+¦           red_circle.png
+¦           red_circle@2x.png
+¦           red_circle@3x.png
+¦           splash.png
+¦           splash_logo.png
+¦           splash_logo@2x.png
+¦           splash_logo@3x.png
+¦           splash_logo_light.png
+¦           splash_logo_light@2x.png
+¦           splash_logo_light@3x.png
+¦           video_play_button.png
+¦           video_play_button@2x.png
+¦           video_play_button@3x.png
+¦           warning.png
+¦           warning@2x.png
+¦           warning@3x.png
+¦           
++---components
+¦   ¦   app-image.js
+¦   ¦   app-text.js
+¦   ¦   Collapsible.tsx
+¦   ¦   ExternalLink.tsx
+¦   ¦   ThemedText.tsx
+¦   ¦   ThemedView.tsx
+¦   ¦   
+¦   +---chat-screen
+¦   ¦   ¦   ChatBox.tsx
+¦   ¦   ¦   ChatMessagesWindow.tsx
+¦   ¦   ¦   
+¦   ¦   +---call-strip
+¦   ¦   ¦       call-events.js
+¦   ¦   ¦       call-strip-chat.js
+¦   ¦   ¦       index.js
+¦   ¦   ¦       
+¦   ¦   +---call-window
+¦   ¦           call-window-audio.js
+¦   ¦           call-window-share-screen.js
+¦   ¦           call-window-video.js
+¦   ¦           call-window.js
+¦   ¦           screen-capture.js
+¦   ¦           
+¦   +---navigation
+¦   ¦       TabBarIcon.tsx
+¦   ¦       
+¦   +---__tests__
+¦       ¦   ThemedText-test.tsx
+¦       ¦   
+¦       +---__snapshots__
+¦               ThemedText-test.tsx.snap
+¦               
++---constants
+¦       Colors.ts
+¦       colors1.js
+¦       fonts.js
+¦       icons.js
+¦       images.js
+¦       index.js
+¦       
++---hooks
+¦       useColorScheme.ts
+¦       useColorScheme.web.ts
+¦       useThemeColor.ts
+¦       
++---libs
+¦   +---webrtc
+¦       ¦   WebRTCAudioStreaming.ts
+¦       ¦   WebRTCHandler.ts
+¦       ¦   WebRTCScreenSharing.ts
+¦       ¦   WebRTCSendAudioMessage.ts
+¦       ¦   WebRTCSendSystemCommandMessage.ts
+¦       ¦   WebRTCSendTextMessage.ts
+¦       ¦   WebRTCSendVideoMessage.ts
+¦       ¦   WebRTCVideoStreaming.ts
+¦       ¦   
+¦       +---core
+¦       ¦       WebRTCCallService.ts
+¦       ¦       WebRTCCallServiceFacade.ts
+¦       ¦       WebRTCChannelsCollection.ts
+¦       ¦       
+¦       +---models
+¦       ¦       Channel.ts
+¦       ¦       ChannelMessage.ts
+¦       ¦       ChannelMessages.ts
+¦       ¦       DataChannelLabel.ts
+¦       ¦       SignalingMessage.ts
+¦       ¦       SystemCommand.ts
+¦       ¦       
+¦       +---utils
+¦               colabLog.ts
+¦               turnServerList.ts
+¦               
++---redux
+¦   ¦   store.js
+¦   ¦   
+¦   +---actions
+¦   ¦       call-action.js
+¦   ¦       chat-action.js
+¦   ¦       index.js
+¦   ¦       types.js
+¦   ¦       user-action.js
+¦   ¦       
+¦   +---reducers
+¦           call-state.js
+¦           chat-state.js
+¦           index.js
+¦           user-state.js
+¦           
++---scripts
+¦       reset-project.js
+¦       
++---store
+¦       channelList.ts
+¦       dummyMessages.ts
+¦       
++---utils
+        utils.js
+        

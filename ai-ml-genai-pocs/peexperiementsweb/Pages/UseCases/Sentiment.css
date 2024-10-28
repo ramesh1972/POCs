@@ -1,0 +1,14 @@
+.upload-button, .display-button, .sentiment-analysis-button, .save-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Add margin to separate the buttons */
+}
+
+.upload-button:hover, .display-button:hover, .sentiment-analysis-button:hover, .save-button {
+    background-color: #2980b9;
+}

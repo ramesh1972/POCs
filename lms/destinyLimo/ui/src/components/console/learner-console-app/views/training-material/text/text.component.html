@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="grid-header-row">
+        <div class="grid-title">View Course Content & Mark Complete</div>
+
+        <div class="complete-checkboxes">
+            <form [formGroup]="formRadio1">
+                <c-button-group aria-label="Basic radio toggle button group" role="group">
+                    <input class="btn-check" formControlName="radio1" type="radio" value="All" />
+                    <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline"
+                        color="danger">All</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Completed" />
+                    <label (click)="setRadioValue('Completed')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Completed</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="YetToComplete" />
+                    <label (click)="setRadioValue('YetToComplete')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Yet To Complete</label>
+
+                </c-button-group>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <app-accordian-parent [list]="text" [onSlotComplete]="this.onComplete.bind(this)" title="View Course Content">
+
+            <ng-template #myAccordianBodyTemplate; let-text="listItem">
+                <div style="border: 2px solid black">
+                    <c-card>
+                        <c-card-header class="title_header">
+                            <span class="card-title title-header-text">{{ text.title
+                                }}</span><br />
+                            <div class="title-header">
+                                <h6 cCardSubtitle class="mb-2" class="overlay-text"
+                                    style="background-color: lightcyan;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
+                                    Category&nbsp;
+                                </h6>
+                                <h6 cCardSubtitle class="mb-2" class="overlay-text"
+                                    style="border-bottom-left-radius: 0px;border-top-left-radius: 0px;">
+                                    {{ text.category_name }}
+                                </h6>
+                            </div>
+                        </c-card-header>
+
+                        <c-card-body>
+                            <div class="form-check" style="padding:10px; color:black;font-weight: 500;">
+                                {{ text.text }}
+                            </div>
+                        </c-card-body>
+                    </c-card>
+                </div>
+            </ng-template>
+        </app-accordian-parent>
+    </div>
+</div>

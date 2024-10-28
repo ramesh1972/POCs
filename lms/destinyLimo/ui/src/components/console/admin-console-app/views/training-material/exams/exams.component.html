@@ -1,0 +1,124 @@
+<app-accordian-parent [list]="mcqs" [addEntityString]="newPostString" [onSlotAdd]="this.onAdd.bind(this)"
+    [onSlotDelete]="this.onDelete.bind(this)" [onSlotSave]="this.onSave.bind(this)"
+    [onSlotEdit]="this.onEdit.bind(this)" [onSlotCancel]="this.onCancel.bind(this)" [softDeleteFlag]="true"
+    [activeFlag]="true" [publicFlag]="true" title="View & Manage MCQs">
+    
+    <ng-template #myAccordianBodyTemplate; let-mcq="listItem" title="View & Manage MCQs">
+        <div *ngIf="!(mcq.editing || mcq.adding)">
+            <c-card style="border: 2px solid blue">
+                <c-card-header class="title_header">
+                  <span class="card-title" style="width:calc(100% - 300px);margin-bottom: 35px;font-size:16px;overflow: hidden;text-wrap: wrap;height: 100%;">{{
+                        mcq.description }}</span>
+                    <span class="card-title"
+                        style="width:300px;margin-bottom: 60px;text-align:right;font-size:16px"><strong>Category:</strong>
+                        {{mcq.category_name}}</span><br />
+                </c-card-header>
+
+                <c-card-header>
+                    <span class="card-title"><b>{{ mcq.question_text }}</b></span>
+                </c-card-header>
+                <c-card-body style="background-color: rgba(200, 168, 243,.3);padding: 6px;padding-top: 16px;">
+                    <div class="form-check">
+                        <c-form-check [switch]="true">
+                            <input cFormCheckInput id="answer_1" type="checkbox" [checked]="mcq.correct_1" disabled>
+                            <label cFormCheckLabel for="answer_1">{{ mcq.answer_1 }}</label>
+                        </c-form-check>
+                        <c-form-check [switch]="true">
+                            <input cFormCheckInput id="answer_2" type="checkbox" [checked]="mcq.correct_2" disabled>
+                            <label cFormCheckLabel for="answer_2">{{ mcq.answer_2 }}</label>
+                        </c-form-check>
+                        <c-form-check [switch]="true">
+                            <input cFormCheckInput id="answer_3" type="checkbox" [checked]="mcq.correct_3" disabled>
+                            <label cFormCheckLabel for="answer_3">{{ mcq.answer_3 }}</label>
+                        </c-form-check>
+                        <c-form-check [switch]="true">
+                            <input cFormCheckInput id="answer_4" type="checkbox" [checked]="mcq.correct_4" disabled>
+                            <label cFormCheckLabel for="answer_4">{{ mcq.answer_4 }}</label>
+                        </c-form-check>
+                    </div>
+                    <div *ngIf="(mcq.editing || mcq.adding)">
+                        <div style="padding-top:10px;padding-bottom: 10px;padding-left: 24px;">
+                            <span style="font-size: 16px;">* <strong
+                                    style="background-color: yellow;font-size: 12px;">Use
+                                    the switch control to mark correct answers </strong></span>
+                        </div>
+                    </div>
+                </c-card-body>
+            </c-card>
+        </div>
+
+        <!-- editing/adding-->
+        <div *ngIf="(mcq.editing || mcq.adding)">
+            <c-card style="border: 2px solid blue;z-index: 9;">
+                <c-card-header class="title_header" style="background-color: rgba(208, 208, 49, .2)">
+
+                    <div class="card-title" style="width:calc(100% - 400px);margin-bottom: 55px;font-size:16px">
+                        <c-input-group class="mb-3" style="font-size:16px;margin-top:15px">
+                            <span cInputGroupText>Description</span>
+                            <input aria-label="Description" cFormControl placeholder="Description"
+                                [ngModel]="mcq.description" (ngModelChange)="mcq.description = $event" />
+                        </c-input-group>
+                    </div>
+                    <div class="title-header" >
+                        <c-input-group style="width:400px;text-align:right;font-size:16px;padding:4px;justify-content: end;">
+                            <span cInputGroupText>Category</span>
+                            <c-dropdown
+                                style="font-size:16px;z-index: 999;max-height: 350px;">
+                                <button cButton cDropdownToggle
+                                    color="secondary">{{getCurrentCategoryName(mcq)}}</button>
+                                <ul cDropdownMenu dark style="max-height: 200px; overflow-y: scroll;">
+                                    <li *ngFor="let cat of categories; let i = index">
+                                        <button cDropdownItem [active]="cat.category_name === mcq.category_name"
+                                            (click)="selectCategory(cat.category_name, i)">{{cat.category_name}}</button>
+                                    </li>
+                                </ul>
+                            </c-dropdown>
+                        </c-input-group>
+                    </div>
+                </c-card-header>
+
+                <c-card-header class="title_header" style="background-color: rgba(208, 208, 49, .2)">
+                    <c-input-group class="mb-3" style="margin-top:15px;">
+                        <span cInputGroupText>Question</span>
+                        <input aria-label="Question" cFormControl placeholder="Question" [ngModel]="mcq.question_text"
+                            (ngModelChange)="mcq.question_text = $event" />
+                    </c-input-group>
+                </c-card-header>
+
+                <c-card-body style="background-color: rgba(200, 168, 243,.3);padding: 6px;padding-top: 16px;">
+                    <div class="form-check">
+                        <c-form-check [switch]="true"
+                            style="display: flex; flex-direction: row; vertical-align: middle; align-items: center;margin-bottom:6px">
+                            <input cFormCheckInput id="answer_1" type="checkbox" [checked]="mcq.correct_1" [ngModel]="mcq.correct_1" (ngModelChange)="mcq.correct_1 = $event" >
+                            <input aria-label="Choice 1" cFormControl placeholder="Choice 1" [ngModel]="mcq.answer_1"
+                                (ngModelChange)="mcq.answer_1 = $event" />
+                        </c-form-check>
+                        <c-form-check [switch]="true"
+                            style="display: flex; flex-direction: row; vertical-align: middle; align-items: center;margin-bottom:6px">
+                            <input cFormCheckInput id="answer_2" type="checkbox" [checked]="mcq.correct_2" [ngModel]="mcq.correct_2" (ngModelChange)="mcq.correct_2 = $event">
+                            <input aria-label="Choice 2" cFormControl placeholder="Choice 2" [ngModel]="mcq.answer_2"
+                                (ngModelChange)="mcq.answer_2 = $event" />
+                        </c-form-check>
+                        <c-form-check [switch]="true"
+                            style="display: flex; flex-direction: row; vertical-align: middle; align-items: center;margin-bottom:6px">
+                            <input cFormCheckInput id="answer_3" type="checkbox" [checked]="mcq.correct_3" [ngModel]="mcq.correct_3" (ngModelChange)="mcq.correct_3 = $event">
+                            <input aria-label="Choice 3" cFormControl placeholder="Choice 3" [ngModel]="mcq.answer_3"
+                                (ngModelChange)="mcq.answer_3 = $event" />
+                        </c-form-check>
+                        <c-form-check [switch]="true"
+                            style="display: flex; flex-direction: row; vertical-align: middle; align-items: center;margin-bottom:6px">
+                            <input cFormCheckInput id="answer_4" type="checkbox" [checked]="mcq.correct_4" [ngModel]="mcq.correct_4" (ngModelChange)="mcq.correct_4 = $event">
+                            <input aria-label="Choice 4" cFormControl placeholder="Choice 4" [ngModel]="mcq.answer_4"
+                                (ngModelChange)="mcq.answer_4 = $event" />
+                        </c-form-check>
+                    </div>
+                    <div *ngIf="(mcq.editing || mcq.adding)">
+                        <div class="edit-text">
+                            <strong>* Use the Switch Controls to Mark the Correct Answers</strong>
+                        </div>
+                    </div>
+                </c-card-body>
+            </c-card>
+        </div>
+    </ng-template>
+</app-accordian-parent>

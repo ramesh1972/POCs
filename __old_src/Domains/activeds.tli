@@ -1,0 +1,4657 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (bf8f67d8).
+//
+// activeds.tli
+//
+// Wrapper implementations for Win32 type library c:\winnt\system32\activeds.tlb
+// compiler-generated file created 01/02/03 at 16:50:17 - DO NOT EDIT!
+
+
+//
+// interface IADs wrapper method implementations
+//
+
+#pragma implementation_key(1)
+inline _bstr_t IADs::GetName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(2)
+inline _bstr_t IADs::GetClass ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Class(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(3)
+inline _bstr_t IADs::GetGUID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_GUID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(4)
+inline _bstr_t IADs::GetADsPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ADsPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(5)
+inline _bstr_t IADs::GetParent ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Parent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(6)
+inline _bstr_t IADs::GetSchema ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Schema(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(7)
+inline HRESULT IADs::GetInfo ( ) {
+    HRESULT _hr = raw_GetInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(8)
+inline HRESULT IADs::SetInfo ( ) {
+    HRESULT _hr = raw_SetInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(9)
+inline _variant_t IADs::Get ( _bstr_t bstrName ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_Get(bstrName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(10)
+inline HRESULT IADs::Put ( _bstr_t bstrName, const _variant_t & vProp ) {
+    HRESULT _hr = raw_Put(bstrName, vProp);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(11)
+inline _variant_t IADs::GetEx ( _bstr_t bstrName ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetEx(bstrName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(12)
+inline HRESULT IADs::PutEx ( long lnControlCode, _bstr_t bstrName, const _variant_t & vProp ) {
+    HRESULT _hr = raw_PutEx(lnControlCode, bstrName, vProp);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(13)
+inline HRESULT IADs::GetInfoEx ( const _variant_t & vProperties, long lnReserved ) {
+    HRESULT _hr = raw_GetInfoEx(vProperties, lnReserved);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsContainer wrapper method implementations
+//
+
+#pragma implementation_key(14)
+inline long IADsContainer::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(15)
+inline IUnknownPtr IADsContainer::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+#pragma implementation_key(16)
+inline _variant_t IADsContainer::GetFilter ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Filter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(17)
+inline void IADsContainer::PutFilter ( const _variant_t & pVar ) {
+    HRESULT _hr = put_Filter(pVar);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(18)
+inline _variant_t IADsContainer::GetHints ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Hints(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(19)
+inline void IADsContainer::PutHints ( const _variant_t & pvFilter ) {
+    HRESULT _hr = put_Hints(pvFilter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(20)
+inline IDispatchPtr IADsContainer::GetObject ( _bstr_t ClassName, _bstr_t RelativeName ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetObject(ClassName, RelativeName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(21)
+inline IDispatchPtr IADsContainer::Create ( _bstr_t ClassName, _bstr_t RelativeName ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_Create(ClassName, RelativeName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(22)
+inline HRESULT IADsContainer::Delete ( _bstr_t bstrClassName, _bstr_t bstrRelativeName ) {
+    HRESULT _hr = raw_Delete(bstrClassName, bstrRelativeName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(23)
+inline IDispatchPtr IADsContainer::CopyHere ( _bstr_t SourceName, _bstr_t NewName ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_CopyHere(SourceName, NewName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(24)
+inline IDispatchPtr IADsContainer::MoveHere ( _bstr_t SourceName, _bstr_t NewName ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_MoveHere(SourceName, NewName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IADsCollection wrapper method implementations
+//
+
+#pragma implementation_key(25)
+inline IUnknownPtr IADsCollection::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+#pragma implementation_key(26)
+inline HRESULT IADsCollection::Add ( _bstr_t bstrName, const _variant_t & vItem ) {
+    HRESULT _hr = raw_Add(bstrName, vItem);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(27)
+inline HRESULT IADsCollection::Remove ( _bstr_t bstrItemToBeRemoved ) {
+    HRESULT _hr = raw_Remove(bstrItemToBeRemoved);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(28)
+inline _variant_t IADsCollection::GetObject ( _bstr_t bstrName ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetObject(bstrName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface IADsMembers wrapper method implementations
+//
+
+#pragma implementation_key(29)
+inline long IADsMembers::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(30)
+inline IUnknownPtr IADsMembers::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+#pragma implementation_key(31)
+inline _variant_t IADsMembers::GetFilter ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Filter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(32)
+inline void IADsMembers::PutFilter ( const _variant_t & pvFilter ) {
+    HRESULT _hr = put_Filter(pvFilter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsPropertyList wrapper method implementations
+//
+
+#pragma implementation_key(33)
+inline long IADsPropertyList::GetPropertyCount ( ) {
+    long _result;
+    HRESULT _hr = get_PropertyCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(34)
+inline _variant_t IADsPropertyList::Next ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_Next(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(35)
+inline HRESULT IADsPropertyList::Skip ( long cElements ) {
+    HRESULT _hr = raw_Skip(cElements);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(36)
+inline HRESULT IADsPropertyList::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(37)
+inline _variant_t IADsPropertyList::Item ( const _variant_t & varIndex ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_Item(varIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(38)
+inline _variant_t IADsPropertyList::GetPropertyItem ( _bstr_t bstrName, long lnADsType ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetPropertyItem(bstrName, lnADsType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(39)
+inline HRESULT IADsPropertyList::PutPropertyItem ( const _variant_t & varData ) {
+    HRESULT _hr = raw_PutPropertyItem(varData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(40)
+inline HRESULT IADsPropertyList::ResetPropertyItem ( const _variant_t & varEntry ) {
+    HRESULT _hr = raw_ResetPropertyItem(varEntry);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(41)
+inline HRESULT IADsPropertyList::PurgePropertyList ( ) {
+    HRESULT _hr = raw_PurgePropertyList();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsPropertyEntry wrapper method implementations
+//
+
+#pragma implementation_key(42)
+inline HRESULT IADsPropertyEntry::Clear ( ) {
+    HRESULT _hr = raw_Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(43)
+inline _bstr_t IADsPropertyEntry::GetName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(44)
+inline void IADsPropertyEntry::PutName ( _bstr_t retval ) {
+    HRESULT _hr = put_Name(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(45)
+inline long IADsPropertyEntry::GetADsType ( ) {
+    long _result;
+    HRESULT _hr = get_ADsType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(46)
+inline void IADsPropertyEntry::PutADsType ( long retval ) {
+    HRESULT _hr = put_ADsType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(47)
+inline long IADsPropertyEntry::GetControlCode ( ) {
+    long _result;
+    HRESULT _hr = get_ControlCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(48)
+inline void IADsPropertyEntry::PutControlCode ( long retval ) {
+    HRESULT _hr = put_ControlCode(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(49)
+inline _variant_t IADsPropertyEntry::GetValues ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Values(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(50)
+inline void IADsPropertyEntry::PutValues ( const _variant_t & retval ) {
+    HRESULT _hr = put_Values(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsPropertyValue wrapper method implementations
+//
+
+#pragma implementation_key(51)
+inline HRESULT IADsPropertyValue::Clear ( ) {
+    HRESULT _hr = raw_Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(52)
+inline long IADsPropertyValue::GetADsType ( ) {
+    long _result;
+    HRESULT _hr = get_ADsType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(53)
+inline void IADsPropertyValue::PutADsType ( long retval ) {
+    HRESULT _hr = put_ADsType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(54)
+inline _bstr_t IADsPropertyValue::GetDNString ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DNString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(55)
+inline void IADsPropertyValue::PutDNString ( _bstr_t retval ) {
+    HRESULT _hr = put_DNString(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(56)
+inline _bstr_t IADsPropertyValue::GetCaseExactString ( ) {
+    BSTR _result;
+    HRESULT _hr = get_CaseExactString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(57)
+inline void IADsPropertyValue::PutCaseExactString ( _bstr_t retval ) {
+    HRESULT _hr = put_CaseExactString(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(58)
+inline _bstr_t IADsPropertyValue::GetCaseIgnoreString ( ) {
+    BSTR _result;
+    HRESULT _hr = get_CaseIgnoreString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(59)
+inline void IADsPropertyValue::PutCaseIgnoreString ( _bstr_t retval ) {
+    HRESULT _hr = put_CaseIgnoreString(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(60)
+inline _bstr_t IADsPropertyValue::GetPrintableString ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PrintableString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(61)
+inline void IADsPropertyValue::PutPrintableString ( _bstr_t retval ) {
+    HRESULT _hr = put_PrintableString(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(62)
+inline _bstr_t IADsPropertyValue::GetNumericString ( ) {
+    BSTR _result;
+    HRESULT _hr = get_NumericString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(63)
+inline void IADsPropertyValue::PutNumericString ( _bstr_t retval ) {
+    HRESULT _hr = put_NumericString(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(64)
+inline long IADsPropertyValue::GetBoolean ( ) {
+    long _result;
+    HRESULT _hr = get_Boolean(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(65)
+inline void IADsPropertyValue::PutBoolean ( long retval ) {
+    HRESULT _hr = put_Boolean(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(66)
+inline long IADsPropertyValue::GetInteger ( ) {
+    long _result;
+    HRESULT _hr = get_Integer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(67)
+inline void IADsPropertyValue::PutInteger ( long retval ) {
+    HRESULT _hr = put_Integer(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(68)
+inline _variant_t IADsPropertyValue::GetOctetString ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_OctetString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(69)
+inline void IADsPropertyValue::PutOctetString ( const _variant_t & retval ) {
+    HRESULT _hr = put_OctetString(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(70)
+inline IDispatchPtr IADsPropertyValue::GetSecurityDescriptor ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_SecurityDescriptor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(71)
+inline void IADsPropertyValue::PutSecurityDescriptor ( IDispatch * retval ) {
+    HRESULT _hr = put_SecurityDescriptor(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(72)
+inline IDispatchPtr IADsPropertyValue::GetLargeInteger ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_LargeInteger(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(73)
+inline void IADsPropertyValue::PutLargeInteger ( IDispatch * retval ) {
+    HRESULT _hr = put_LargeInteger(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(74)
+inline DATE IADsPropertyValue::GetUTCTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_UTCTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(75)
+inline void IADsPropertyValue::PutUTCTime ( DATE retval ) {
+    HRESULT _hr = put_UTCTime(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsPropertyValue2 wrapper method implementations
+//
+
+#pragma implementation_key(76)
+inline _variant_t IADsPropertyValue2::GetObjectProperty ( long * lnADsType ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetObjectProperty(lnADsType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(77)
+inline HRESULT IADsPropertyValue2::PutObjectProperty ( long lnADsType, const _variant_t & vProp ) {
+    HRESULT _hr = raw_PutObjectProperty(lnADsType, vProp);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IPrivateDispatch wrapper method implementations
+//
+
+#pragma implementation_key(78)
+inline HRESULT IPrivateDispatch::ADSIInitializeDispatchManager ( long dwExtensionId ) {
+    HRESULT _hr = raw_ADSIInitializeDispatchManager(dwExtensionId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(79)
+inline HRESULT IPrivateDispatch::ADSIGetTypeInfoCount ( unsigned int * pctinfo ) {
+    HRESULT _hr = raw_ADSIGetTypeInfoCount(pctinfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(80)
+inline HRESULT IPrivateDispatch::ADSIGetTypeInfo ( unsigned int itinfo, unsigned long lcid, struct ITypeInfo * * ppTInfo ) {
+    HRESULT _hr = raw_ADSIGetTypeInfo(itinfo, lcid, ppTInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(81)
+inline HRESULT IPrivateDispatch::ADSIGetIDsOfNames ( GUID * riid, unsigned short * * rgszNames, unsigned int cNames, unsigned long lcid, long * rgdispid ) {
+    HRESULT _hr = raw_ADSIGetIDsOfNames(riid, rgszNames, cNames, lcid, rgdispid);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(82)
+inline HRESULT IPrivateDispatch::ADSIInvoke ( long dispidMember, GUID * riid, unsigned long lcid, unsigned short wFlags, struct DISPPARAMS * pdispparams, VARIANT * pvarResult, struct EXCEPINFO * pexcepinfo, unsigned int * puArgErr ) {
+    HRESULT _hr = raw_ADSIInvoke(dispidMember, riid, lcid, wFlags, pdispparams, pvarResult, pexcepinfo, puArgErr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IPrivateUnknown wrapper method implementations
+//
+
+#pragma implementation_key(83)
+inline HRESULT IPrivateUnknown::ADSIInitializeObject ( _bstr_t lpszUserName, _bstr_t lpszPassword, long lnReserved ) {
+    HRESULT _hr = raw_ADSIInitializeObject(lpszUserName, lpszPassword, lnReserved);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(84)
+inline HRESULT IPrivateUnknown::ADSIReleaseObject ( ) {
+    HRESULT _hr = raw_ADSIReleaseObject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsExtension wrapper method implementations
+//
+
+#pragma implementation_key(85)
+inline HRESULT IADsExtension::Operate ( unsigned long dwCode, const _variant_t & varData1, const _variant_t & varData2, const _variant_t & varData3 ) {
+    HRESULT _hr = raw_Operate(dwCode, varData1, varData2, varData3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(86)
+inline HRESULT IADsExtension::PrivateGetIDsOfNames ( GUID * riid, unsigned short * * rgszNames, unsigned int cNames, unsigned long lcid, long * rgdispid ) {
+    HRESULT _hr = raw_PrivateGetIDsOfNames(riid, rgszNames, cNames, lcid, rgdispid);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(87)
+inline HRESULT IADsExtension::PrivateInvoke ( long dispidMember, GUID * riid, unsigned long lcid, unsigned short wFlags, struct DISPPARAMS * pdispparams, VARIANT * pvarResult, struct EXCEPINFO * pexcepinfo, unsigned int * puArgErr ) {
+    HRESULT _hr = raw_PrivateInvoke(dispidMember, riid, lcid, wFlags, pdispparams, pvarResult, pexcepinfo, puArgErr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsDeleteOps wrapper method implementations
+//
+
+#pragma implementation_key(88)
+inline HRESULT IADsDeleteOps::DeleteObject ( long lnFlags ) {
+    HRESULT _hr = raw_DeleteObject(lnFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsNamespaces wrapper method implementations
+//
+
+#pragma implementation_key(89)
+inline _bstr_t IADsNamespaces::GetDefaultContainer ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DefaultContainer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(90)
+inline void IADsNamespaces::PutDefaultContainer ( _bstr_t retval ) {
+    HRESULT _hr = put_DefaultContainer(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsClass wrapper method implementations
+//
+
+#pragma implementation_key(91)
+inline _bstr_t IADsClass::GetPrimaryInterface ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PrimaryInterface(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(92)
+inline _bstr_t IADsClass::GetCLSID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_CLSID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(93)
+inline void IADsClass::PutCLSID ( _bstr_t retval ) {
+    HRESULT _hr = put_CLSID(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(94)
+inline _bstr_t IADsClass::GetOID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_OID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(95)
+inline void IADsClass::PutOID ( _bstr_t retval ) {
+    HRESULT _hr = put_OID(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(96)
+inline VARIANT_BOOL IADsClass::GetAbstract ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Abstract(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(97)
+inline void IADsClass::PutAbstract ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_Abstract(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(98)
+inline VARIANT_BOOL IADsClass::GetAuxiliary ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Auxiliary(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(99)
+inline void IADsClass::PutAuxiliary ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_Auxiliary(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(100)
+inline _variant_t IADsClass::GetMandatoryProperties ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_MandatoryProperties(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(101)
+inline void IADsClass::PutMandatoryProperties ( const _variant_t & retval ) {
+    HRESULT _hr = put_MandatoryProperties(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(102)
+inline _variant_t IADsClass::GetOptionalProperties ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_OptionalProperties(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(103)
+inline void IADsClass::PutOptionalProperties ( const _variant_t & retval ) {
+    HRESULT _hr = put_OptionalProperties(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(104)
+inline _variant_t IADsClass::GetNamingProperties ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_NamingProperties(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(105)
+inline void IADsClass::PutNamingProperties ( const _variant_t & retval ) {
+    HRESULT _hr = put_NamingProperties(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(106)
+inline _variant_t IADsClass::GetDerivedFrom ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_DerivedFrom(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(107)
+inline void IADsClass::PutDerivedFrom ( const _variant_t & retval ) {
+    HRESULT _hr = put_DerivedFrom(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(108)
+inline _variant_t IADsClass::GetAuxDerivedFrom ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_AuxDerivedFrom(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(109)
+inline void IADsClass::PutAuxDerivedFrom ( const _variant_t & retval ) {
+    HRESULT _hr = put_AuxDerivedFrom(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(110)
+inline _variant_t IADsClass::GetPossibleSuperiors ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_PossibleSuperiors(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(111)
+inline void IADsClass::PutPossibleSuperiors ( const _variant_t & retval ) {
+    HRESULT _hr = put_PossibleSuperiors(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(112)
+inline _variant_t IADsClass::GetContainment ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Containment(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(113)
+inline void IADsClass::PutContainment ( const _variant_t & retval ) {
+    HRESULT _hr = put_Containment(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(114)
+inline VARIANT_BOOL IADsClass::GetContainer ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Container(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(115)
+inline void IADsClass::PutContainer ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_Container(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(116)
+inline _bstr_t IADsClass::GetHelpFileName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HelpFileName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(117)
+inline void IADsClass::PutHelpFileName ( _bstr_t retval ) {
+    HRESULT _hr = put_HelpFileName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(118)
+inline long IADsClass::GetHelpFileContext ( ) {
+    long _result;
+    HRESULT _hr = get_HelpFileContext(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(119)
+inline void IADsClass::PutHelpFileContext ( long retval ) {
+    HRESULT _hr = put_HelpFileContext(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(120)
+inline IADsCollectionPtr IADsClass::Qualifiers ( ) {
+    struct IADsCollection * _result;
+    HRESULT _hr = raw_Qualifiers(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IADsCollectionPtr(_result, false);
+}
+
+//
+// interface IADsProperty wrapper method implementations
+//
+
+#pragma implementation_key(121)
+inline _bstr_t IADsProperty::GetOID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_OID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(122)
+inline void IADsProperty::PutOID ( _bstr_t retval ) {
+    HRESULT _hr = put_OID(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(123)
+inline _bstr_t IADsProperty::GetSyntax ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Syntax(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(124)
+inline void IADsProperty::PutSyntax ( _bstr_t retval ) {
+    HRESULT _hr = put_Syntax(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(125)
+inline long IADsProperty::GetMaxRange ( ) {
+    long _result;
+    HRESULT _hr = get_MaxRange(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(126)
+inline void IADsProperty::PutMaxRange ( long retval ) {
+    HRESULT _hr = put_MaxRange(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(127)
+inline long IADsProperty::GetMinRange ( ) {
+    long _result;
+    HRESULT _hr = get_MinRange(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(128)
+inline void IADsProperty::PutMinRange ( long retval ) {
+    HRESULT _hr = put_MinRange(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(129)
+inline VARIANT_BOOL IADsProperty::GetMultiValued ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_MultiValued(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(130)
+inline void IADsProperty::PutMultiValued ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_MultiValued(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(131)
+inline IADsCollectionPtr IADsProperty::Qualifiers ( ) {
+    struct IADsCollection * _result;
+    HRESULT _hr = raw_Qualifiers(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IADsCollectionPtr(_result, false);
+}
+
+//
+// interface IADsSyntax wrapper method implementations
+//
+
+#pragma implementation_key(132)
+inline long IADsSyntax::GetOleAutoDataType ( ) {
+    long _result;
+    HRESULT _hr = get_OleAutoDataType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(133)
+inline void IADsSyntax::PutOleAutoDataType ( long retval ) {
+    HRESULT _hr = put_OleAutoDataType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsLocality wrapper method implementations
+//
+
+#pragma implementation_key(134)
+inline _bstr_t IADsLocality::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(135)
+inline void IADsLocality::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(136)
+inline _bstr_t IADsLocality::GetLocalityName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_LocalityName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(137)
+inline void IADsLocality::PutLocalityName ( _bstr_t retval ) {
+    HRESULT _hr = put_LocalityName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(138)
+inline _bstr_t IADsLocality::GetPostalAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PostalAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(139)
+inline void IADsLocality::PutPostalAddress ( _bstr_t retval ) {
+    HRESULT _hr = put_PostalAddress(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(140)
+inline _variant_t IADsLocality::GetSeeAlso ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_SeeAlso(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(141)
+inline void IADsLocality::PutSeeAlso ( const _variant_t & retval ) {
+    HRESULT _hr = put_SeeAlso(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsO wrapper method implementations
+//
+
+#pragma implementation_key(142)
+inline _bstr_t IADsO::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(143)
+inline void IADsO::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(144)
+inline _bstr_t IADsO::GetLocalityName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_LocalityName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(145)
+inline void IADsO::PutLocalityName ( _bstr_t retval ) {
+    HRESULT _hr = put_LocalityName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(146)
+inline _bstr_t IADsO::GetPostalAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PostalAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(147)
+inline void IADsO::PutPostalAddress ( _bstr_t retval ) {
+    HRESULT _hr = put_PostalAddress(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(148)
+inline _bstr_t IADsO::GetTelephoneNumber ( ) {
+    BSTR _result;
+    HRESULT _hr = get_TelephoneNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(149)
+inline void IADsO::PutTelephoneNumber ( _bstr_t retval ) {
+    HRESULT _hr = put_TelephoneNumber(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(150)
+inline _bstr_t IADsO::GetFaxNumber ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FaxNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(151)
+inline void IADsO::PutFaxNumber ( _bstr_t retval ) {
+    HRESULT _hr = put_FaxNumber(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(152)
+inline _variant_t IADsO::GetSeeAlso ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_SeeAlso(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(153)
+inline void IADsO::PutSeeAlso ( const _variant_t & retval ) {
+    HRESULT _hr = put_SeeAlso(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsOU wrapper method implementations
+//
+
+#pragma implementation_key(154)
+inline _bstr_t IADsOU::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(155)
+inline void IADsOU::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(156)
+inline _bstr_t IADsOU::GetLocalityName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_LocalityName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(157)
+inline void IADsOU::PutLocalityName ( _bstr_t retval ) {
+    HRESULT _hr = put_LocalityName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(158)
+inline _bstr_t IADsOU::GetPostalAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PostalAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(159)
+inline void IADsOU::PutPostalAddress ( _bstr_t retval ) {
+    HRESULT _hr = put_PostalAddress(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(160)
+inline _bstr_t IADsOU::GetTelephoneNumber ( ) {
+    BSTR _result;
+    HRESULT _hr = get_TelephoneNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(161)
+inline void IADsOU::PutTelephoneNumber ( _bstr_t retval ) {
+    HRESULT _hr = put_TelephoneNumber(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(162)
+inline _bstr_t IADsOU::GetFaxNumber ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FaxNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(163)
+inline void IADsOU::PutFaxNumber ( _bstr_t retval ) {
+    HRESULT _hr = put_FaxNumber(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(164)
+inline _variant_t IADsOU::GetSeeAlso ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_SeeAlso(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(165)
+inline void IADsOU::PutSeeAlso ( const _variant_t & retval ) {
+    HRESULT _hr = put_SeeAlso(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(166)
+inline _bstr_t IADsOU::GetBusinessCategory ( ) {
+    BSTR _result;
+    HRESULT _hr = get_BusinessCategory(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(167)
+inline void IADsOU::PutBusinessCategory ( _bstr_t retval ) {
+    HRESULT _hr = put_BusinessCategory(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsDomain wrapper method implementations
+//
+
+#pragma implementation_key(168)
+inline VARIANT_BOOL IADsDomain::GetIsWorkgroup ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsWorkgroup(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(169)
+inline long IADsDomain::GetMinPasswordLength ( ) {
+    long _result;
+    HRESULT _hr = get_MinPasswordLength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(170)
+inline void IADsDomain::PutMinPasswordLength ( long retval ) {
+    HRESULT _hr = put_MinPasswordLength(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(171)
+inline long IADsDomain::GetMinPasswordAge ( ) {
+    long _result;
+    HRESULT _hr = get_MinPasswordAge(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(172)
+inline void IADsDomain::PutMinPasswordAge ( long retval ) {
+    HRESULT _hr = put_MinPasswordAge(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(173)
+inline long IADsDomain::GetMaxPasswordAge ( ) {
+    long _result;
+    HRESULT _hr = get_MaxPasswordAge(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(174)
+inline void IADsDomain::PutMaxPasswordAge ( long retval ) {
+    HRESULT _hr = put_MaxPasswordAge(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(175)
+inline long IADsDomain::GetMaxBadPasswordsAllowed ( ) {
+    long _result;
+    HRESULT _hr = get_MaxBadPasswordsAllowed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(176)
+inline void IADsDomain::PutMaxBadPasswordsAllowed ( long retval ) {
+    HRESULT _hr = put_MaxBadPasswordsAllowed(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(177)
+inline long IADsDomain::GetPasswordHistoryLength ( ) {
+    long _result;
+    HRESULT _hr = get_PasswordHistoryLength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(178)
+inline void IADsDomain::PutPasswordHistoryLength ( long retval ) {
+    HRESULT _hr = put_PasswordHistoryLength(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(179)
+inline long IADsDomain::GetPasswordAttributes ( ) {
+    long _result;
+    HRESULT _hr = get_PasswordAttributes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(180)
+inline void IADsDomain::PutPasswordAttributes ( long retval ) {
+    HRESULT _hr = put_PasswordAttributes(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(181)
+inline long IADsDomain::GetAutoUnlockInterval ( ) {
+    long _result;
+    HRESULT _hr = get_AutoUnlockInterval(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(182)
+inline void IADsDomain::PutAutoUnlockInterval ( long retval ) {
+    HRESULT _hr = put_AutoUnlockInterval(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(183)
+inline long IADsDomain::GetLockoutObservationInterval ( ) {
+    long _result;
+    HRESULT _hr = get_LockoutObservationInterval(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(184)
+inline void IADsDomain::PutLockoutObservationInterval ( long retval ) {
+    HRESULT _hr = put_LockoutObservationInterval(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsComputer wrapper method implementations
+//
+
+#pragma implementation_key(185)
+inline _bstr_t IADsComputer::GetComputerID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ComputerID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(186)
+inline _bstr_t IADsComputer::GetSite ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Site(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(187)
+inline _bstr_t IADsComputer::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(188)
+inline void IADsComputer::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(189)
+inline _bstr_t IADsComputer::GetLocation ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Location(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(190)
+inline void IADsComputer::PutLocation ( _bstr_t retval ) {
+    HRESULT _hr = put_Location(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(191)
+inline _bstr_t IADsComputer::GetPrimaryUser ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PrimaryUser(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(192)
+inline void IADsComputer::PutPrimaryUser ( _bstr_t retval ) {
+    HRESULT _hr = put_PrimaryUser(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(193)
+inline _bstr_t IADsComputer::GetOwner ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Owner(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(194)
+inline void IADsComputer::PutOwner ( _bstr_t retval ) {
+    HRESULT _hr = put_Owner(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(195)
+inline _bstr_t IADsComputer::GetDivision ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Division(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(196)
+inline void IADsComputer::PutDivision ( _bstr_t retval ) {
+    HRESULT _hr = put_Division(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(197)
+inline _bstr_t IADsComputer::GetDepartment ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Department(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(198)
+inline void IADsComputer::PutDepartment ( _bstr_t retval ) {
+    HRESULT _hr = put_Department(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(199)
+inline _bstr_t IADsComputer::GetRole ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Role(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(200)
+inline void IADsComputer::PutRole ( _bstr_t retval ) {
+    HRESULT _hr = put_Role(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(201)
+inline _bstr_t IADsComputer::GetOperatingSystem ( ) {
+    BSTR _result;
+    HRESULT _hr = get_OperatingSystem(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(202)
+inline void IADsComputer::PutOperatingSystem ( _bstr_t retval ) {
+    HRESULT _hr = put_OperatingSystem(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(203)
+inline _bstr_t IADsComputer::GetOperatingSystemVersion ( ) {
+    BSTR _result;
+    HRESULT _hr = get_OperatingSystemVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(204)
+inline void IADsComputer::PutOperatingSystemVersion ( _bstr_t retval ) {
+    HRESULT _hr = put_OperatingSystemVersion(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(205)
+inline _bstr_t IADsComputer::GetModel ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Model(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(206)
+inline void IADsComputer::PutModel ( _bstr_t retval ) {
+    HRESULT _hr = put_Model(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(207)
+inline _bstr_t IADsComputer::GetProcessor ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Processor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(208)
+inline void IADsComputer::PutProcessor ( _bstr_t retval ) {
+    HRESULT _hr = put_Processor(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(209)
+inline _bstr_t IADsComputer::GetProcessorCount ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ProcessorCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(210)
+inline void IADsComputer::PutProcessorCount ( _bstr_t retval ) {
+    HRESULT _hr = put_ProcessorCount(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(211)
+inline _bstr_t IADsComputer::GetMemorySize ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MemorySize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(212)
+inline void IADsComputer::PutMemorySize ( _bstr_t retval ) {
+    HRESULT _hr = put_MemorySize(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(213)
+inline _bstr_t IADsComputer::GetStorageCapacity ( ) {
+    BSTR _result;
+    HRESULT _hr = get_StorageCapacity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(214)
+inline void IADsComputer::PutStorageCapacity ( _bstr_t retval ) {
+    HRESULT _hr = put_StorageCapacity(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(215)
+inline _variant_t IADsComputer::GetNetAddresses ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_NetAddresses(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(216)
+inline void IADsComputer::PutNetAddresses ( const _variant_t & retval ) {
+    HRESULT _hr = put_NetAddresses(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsComputerOperations wrapper method implementations
+//
+
+#pragma implementation_key(217)
+inline IDispatchPtr IADsComputerOperations::Status ( ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(218)
+inline HRESULT IADsComputerOperations::Shutdown ( VARIANT_BOOL bReboot ) {
+    HRESULT _hr = raw_Shutdown(bReboot);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsGroup wrapper method implementations
+//
+
+#pragma implementation_key(219)
+inline _bstr_t IADsGroup::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(220)
+inline void IADsGroup::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(221)
+inline IADsMembersPtr IADsGroup::Members ( ) {
+    struct IADsMembers * _result;
+    HRESULT _hr = raw_Members(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IADsMembersPtr(_result, false);
+}
+
+#pragma implementation_key(222)
+inline VARIANT_BOOL IADsGroup::IsMember ( _bstr_t bstrMember ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_IsMember(bstrMember, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(223)
+inline HRESULT IADsGroup::Add ( _bstr_t bstrNewItem ) {
+    HRESULT _hr = raw_Add(bstrNewItem);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(224)
+inline HRESULT IADsGroup::Remove ( _bstr_t bstrItemToBeRemoved ) {
+    HRESULT _hr = raw_Remove(bstrItemToBeRemoved);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsUser wrapper method implementations
+//
+
+#pragma implementation_key(225)
+inline _bstr_t IADsUser::GetBadLoginAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_BadLoginAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(226)
+inline long IADsUser::GetBadLoginCount ( ) {
+    long _result;
+    HRESULT _hr = get_BadLoginCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(227)
+inline DATE IADsUser::GetLastLogin ( ) {
+    DATE _result;
+    HRESULT _hr = get_LastLogin(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(228)
+inline DATE IADsUser::GetLastLogoff ( ) {
+    DATE _result;
+    HRESULT _hr = get_LastLogoff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(229)
+inline DATE IADsUser::GetLastFailedLogin ( ) {
+    DATE _result;
+    HRESULT _hr = get_LastFailedLogin(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(230)
+inline DATE IADsUser::GetPasswordLastChanged ( ) {
+    DATE _result;
+    HRESULT _hr = get_PasswordLastChanged(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(231)
+inline _bstr_t IADsUser::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(232)
+inline void IADsUser::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(233)
+inline _bstr_t IADsUser::GetDivision ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Division(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(234)
+inline void IADsUser::PutDivision ( _bstr_t retval ) {
+    HRESULT _hr = put_Division(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(235)
+inline _bstr_t IADsUser::GetDepartment ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Department(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(236)
+inline void IADsUser::PutDepartment ( _bstr_t retval ) {
+    HRESULT _hr = put_Department(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(237)
+inline _bstr_t IADsUser::GetEmployeeID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_EmployeeID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(238)
+inline void IADsUser::PutEmployeeID ( _bstr_t retval ) {
+    HRESULT _hr = put_EmployeeID(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(239)
+inline _bstr_t IADsUser::GetFullName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FullName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(240)
+inline void IADsUser::PutFullName ( _bstr_t retval ) {
+    HRESULT _hr = put_FullName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(241)
+inline _bstr_t IADsUser::GetFirstName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FirstName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(242)
+inline void IADsUser::PutFirstName ( _bstr_t retval ) {
+    HRESULT _hr = put_FirstName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(243)
+inline _bstr_t IADsUser::GetLastName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_LastName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(244)
+inline void IADsUser::PutLastName ( _bstr_t retval ) {
+    HRESULT _hr = put_LastName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(245)
+inline _bstr_t IADsUser::GetOtherName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_OtherName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(246)
+inline void IADsUser::PutOtherName ( _bstr_t retval ) {
+    HRESULT _hr = put_OtherName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(247)
+inline _bstr_t IADsUser::GetNamePrefix ( ) {
+    BSTR _result;
+    HRESULT _hr = get_NamePrefix(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(248)
+inline void IADsUser::PutNamePrefix ( _bstr_t retval ) {
+    HRESULT _hr = put_NamePrefix(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(249)
+inline _bstr_t IADsUser::GetNameSuffix ( ) {
+    BSTR _result;
+    HRESULT _hr = get_NameSuffix(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(250)
+inline void IADsUser::PutNameSuffix ( _bstr_t retval ) {
+    HRESULT _hr = put_NameSuffix(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(251)
+inline _bstr_t IADsUser::GetTitle ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Title(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(252)
+inline void IADsUser::PutTitle ( _bstr_t retval ) {
+    HRESULT _hr = put_Title(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(253)
+inline _bstr_t IADsUser::GetManager ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Manager(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(254)
+inline void IADsUser::PutManager ( _bstr_t retval ) {
+    HRESULT _hr = put_Manager(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(255)
+inline _variant_t IADsUser::GetTelephoneHome ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_TelephoneHome(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(256)
+inline void IADsUser::PutTelephoneHome ( const _variant_t & retval ) {
+    HRESULT _hr = put_TelephoneHome(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(257)
+inline _variant_t IADsUser::GetTelephoneMobile ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_TelephoneMobile(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(258)
+inline void IADsUser::PutTelephoneMobile ( const _variant_t & retval ) {
+    HRESULT _hr = put_TelephoneMobile(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(259)
+inline _variant_t IADsUser::GetTelephoneNumber ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_TelephoneNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(260)
+inline void IADsUser::PutTelephoneNumber ( const _variant_t & retval ) {
+    HRESULT _hr = put_TelephoneNumber(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(261)
+inline _variant_t IADsUser::GetTelephonePager ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_TelephonePager(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(262)
+inline void IADsUser::PutTelephonePager ( const _variant_t & retval ) {
+    HRESULT _hr = put_TelephonePager(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(263)
+inline _variant_t IADsUser::GetFaxNumber ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_FaxNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(264)
+inline void IADsUser::PutFaxNumber ( const _variant_t & retval ) {
+    HRESULT _hr = put_FaxNumber(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(265)
+inline _variant_t IADsUser::GetOfficeLocations ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_OfficeLocations(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(266)
+inline void IADsUser::PutOfficeLocations ( const _variant_t & retval ) {
+    HRESULT _hr = put_OfficeLocations(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(267)
+inline _variant_t IADsUser::GetPostalAddresses ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_PostalAddresses(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(268)
+inline void IADsUser::PutPostalAddresses ( const _variant_t & retval ) {
+    HRESULT _hr = put_PostalAddresses(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(269)
+inline _variant_t IADsUser::GetPostalCodes ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_PostalCodes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(270)
+inline void IADsUser::PutPostalCodes ( const _variant_t & retval ) {
+    HRESULT _hr = put_PostalCodes(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(271)
+inline _variant_t IADsUser::GetSeeAlso ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_SeeAlso(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(272)
+inline void IADsUser::PutSeeAlso ( const _variant_t & retval ) {
+    HRESULT _hr = put_SeeAlso(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(273)
+inline VARIANT_BOOL IADsUser::GetAccountDisabled ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_AccountDisabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(274)
+inline void IADsUser::PutAccountDisabled ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_AccountDisabled(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(275)
+inline DATE IADsUser::GetAccountExpirationDate ( ) {
+    DATE _result;
+    HRESULT _hr = get_AccountExpirationDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(276)
+inline void IADsUser::PutAccountExpirationDate ( DATE retval ) {
+    HRESULT _hr = put_AccountExpirationDate(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(277)
+inline long IADsUser::GetGraceLoginsAllowed ( ) {
+    long _result;
+    HRESULT _hr = get_GraceLoginsAllowed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(278)
+inline void IADsUser::PutGraceLoginsAllowed ( long retval ) {
+    HRESULT _hr = put_GraceLoginsAllowed(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(279)
+inline long IADsUser::GetGraceLoginsRemaining ( ) {
+    long _result;
+    HRESULT _hr = get_GraceLoginsRemaining(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(280)
+inline void IADsUser::PutGraceLoginsRemaining ( long retval ) {
+    HRESULT _hr = put_GraceLoginsRemaining(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(281)
+inline VARIANT_BOOL IADsUser::GetIsAccountLocked ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsAccountLocked(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(282)
+inline void IADsUser::PutIsAccountLocked ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_IsAccountLocked(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(283)
+inline _variant_t IADsUser::GetLoginHours ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_LoginHours(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(284)
+inline void IADsUser::PutLoginHours ( const _variant_t & retval ) {
+    HRESULT _hr = put_LoginHours(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(285)
+inline _variant_t IADsUser::GetLoginWorkstations ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_LoginWorkstations(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(286)
+inline void IADsUser::PutLoginWorkstations ( const _variant_t & retval ) {
+    HRESULT _hr = put_LoginWorkstations(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(287)
+inline long IADsUser::GetMaxLogins ( ) {
+    long _result;
+    HRESULT _hr = get_MaxLogins(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(288)
+inline void IADsUser::PutMaxLogins ( long retval ) {
+    HRESULT _hr = put_MaxLogins(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(289)
+inline long IADsUser::GetMaxStorage ( ) {
+    long _result;
+    HRESULT _hr = get_MaxStorage(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(290)
+inline void IADsUser::PutMaxStorage ( long retval ) {
+    HRESULT _hr = put_MaxStorage(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(291)
+inline DATE IADsUser::GetPasswordExpirationDate ( ) {
+    DATE _result;
+    HRESULT _hr = get_PasswordExpirationDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(292)
+inline void IADsUser::PutPasswordExpirationDate ( DATE retval ) {
+    HRESULT _hr = put_PasswordExpirationDate(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(293)
+inline long IADsUser::GetPasswordMinimumLength ( ) {
+    long _result;
+    HRESULT _hr = get_PasswordMinimumLength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(294)
+inline void IADsUser::PutPasswordMinimumLength ( long retval ) {
+    HRESULT _hr = put_PasswordMinimumLength(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(295)
+inline VARIANT_BOOL IADsUser::GetPasswordRequired ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_PasswordRequired(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(296)
+inline void IADsUser::PutPasswordRequired ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_PasswordRequired(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(297)
+inline VARIANT_BOOL IADsUser::GetRequireUniquePassword ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_RequireUniquePassword(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(298)
+inline void IADsUser::PutRequireUniquePassword ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_RequireUniquePassword(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(299)
+inline _bstr_t IADsUser::GetEmailAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_EmailAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(300)
+inline void IADsUser::PutEmailAddress ( _bstr_t retval ) {
+    HRESULT _hr = put_EmailAddress(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(301)
+inline _bstr_t IADsUser::GetHomeDirectory ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomeDirectory(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(302)
+inline void IADsUser::PutHomeDirectory ( _bstr_t retval ) {
+    HRESULT _hr = put_HomeDirectory(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(303)
+inline _variant_t IADsUser::GetLanguages ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Languages(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(304)
+inline void IADsUser::PutLanguages ( const _variant_t & retval ) {
+    HRESULT _hr = put_Languages(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(305)
+inline _bstr_t IADsUser::GetProfile ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Profile(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(306)
+inline void IADsUser::PutProfile ( _bstr_t retval ) {
+    HRESULT _hr = put_Profile(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(307)
+inline _bstr_t IADsUser::GetLoginScript ( ) {
+    BSTR _result;
+    HRESULT _hr = get_LoginScript(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(308)
+inline void IADsUser::PutLoginScript ( _bstr_t retval ) {
+    HRESULT _hr = put_LoginScript(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(309)
+inline _variant_t IADsUser::GetPicture ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Picture(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(310)
+inline void IADsUser::PutPicture ( const _variant_t & retval ) {
+    HRESULT _hr = put_Picture(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(311)
+inline _bstr_t IADsUser::GetHomePage ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomePage(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(312)
+inline void IADsUser::PutHomePage ( _bstr_t retval ) {
+    HRESULT _hr = put_HomePage(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(313)
+inline IADsMembersPtr IADsUser::Groups ( ) {
+    struct IADsMembers * _result;
+    HRESULT _hr = raw_Groups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IADsMembersPtr(_result, false);
+}
+
+#pragma implementation_key(314)
+inline HRESULT IADsUser::SetPassword ( _bstr_t NewPassword ) {
+    HRESULT _hr = raw_SetPassword(NewPassword);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(315)
+inline HRESULT IADsUser::ChangePassword ( _bstr_t bstrOldPassword, _bstr_t bstrNewPassword ) {
+    HRESULT _hr = raw_ChangePassword(bstrOldPassword, bstrNewPassword);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsPrintQueue wrapper method implementations
+//
+
+#pragma implementation_key(316)
+inline _bstr_t IADsPrintQueue::GetPrinterPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PrinterPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(317)
+inline void IADsPrintQueue::PutPrinterPath ( _bstr_t retval ) {
+    HRESULT _hr = put_PrinterPath(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(318)
+inline _bstr_t IADsPrintQueue::GetModel ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Model(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(319)
+inline void IADsPrintQueue::PutModel ( _bstr_t retval ) {
+    HRESULT _hr = put_Model(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(320)
+inline _bstr_t IADsPrintQueue::GetDatatype ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Datatype(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(321)
+inline void IADsPrintQueue::PutDatatype ( _bstr_t retval ) {
+    HRESULT _hr = put_Datatype(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(322)
+inline _bstr_t IADsPrintQueue::GetPrintProcessor ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PrintProcessor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(323)
+inline void IADsPrintQueue::PutPrintProcessor ( _bstr_t retval ) {
+    HRESULT _hr = put_PrintProcessor(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(324)
+inline _bstr_t IADsPrintQueue::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(325)
+inline void IADsPrintQueue::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(326)
+inline _bstr_t IADsPrintQueue::GetLocation ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Location(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(327)
+inline void IADsPrintQueue::PutLocation ( _bstr_t retval ) {
+    HRESULT _hr = put_Location(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(328)
+inline DATE IADsPrintQueue::GetStartTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_StartTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(329)
+inline void IADsPrintQueue::PutStartTime ( DATE retval ) {
+    HRESULT _hr = put_StartTime(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(330)
+inline DATE IADsPrintQueue::GetUntilTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_UntilTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(331)
+inline void IADsPrintQueue::PutUntilTime ( DATE retval ) {
+    HRESULT _hr = put_UntilTime(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(332)
+inline long IADsPrintQueue::GetDefaultJobPriority ( ) {
+    long _result;
+    HRESULT _hr = get_DefaultJobPriority(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(333)
+inline void IADsPrintQueue::PutDefaultJobPriority ( long retval ) {
+    HRESULT _hr = put_DefaultJobPriority(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(334)
+inline long IADsPrintQueue::GetPriority ( ) {
+    long _result;
+    HRESULT _hr = get_Priority(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(335)
+inline void IADsPrintQueue::PutPriority ( long retval ) {
+    HRESULT _hr = put_Priority(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(336)
+inline _bstr_t IADsPrintQueue::GetBannerPage ( ) {
+    BSTR _result;
+    HRESULT _hr = get_BannerPage(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(337)
+inline void IADsPrintQueue::PutBannerPage ( _bstr_t retval ) {
+    HRESULT _hr = put_BannerPage(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(338)
+inline _variant_t IADsPrintQueue::GetPrintDevices ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_PrintDevices(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(339)
+inline void IADsPrintQueue::PutPrintDevices ( const _variant_t & retval ) {
+    HRESULT _hr = put_PrintDevices(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(340)
+inline _variant_t IADsPrintQueue::GetNetAddresses ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_NetAddresses(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(341)
+inline void IADsPrintQueue::PutNetAddresses ( const _variant_t & retval ) {
+    HRESULT _hr = put_NetAddresses(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsPrintQueueOperations wrapper method implementations
+//
+
+#pragma implementation_key(342)
+inline long IADsPrintQueueOperations::GetStatus ( ) {
+    long _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(343)
+inline IADsCollectionPtr IADsPrintQueueOperations::PrintJobs ( ) {
+    struct IADsCollection * _result;
+    HRESULT _hr = raw_PrintJobs(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IADsCollectionPtr(_result, false);
+}
+
+#pragma implementation_key(344)
+inline HRESULT IADsPrintQueueOperations::Pause ( ) {
+    HRESULT _hr = raw_Pause();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(345)
+inline HRESULT IADsPrintQueueOperations::Resume ( ) {
+    HRESULT _hr = raw_Resume();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(346)
+inline HRESULT IADsPrintQueueOperations::Purge ( ) {
+    HRESULT _hr = raw_Purge();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsPrintJob wrapper method implementations
+//
+
+#pragma implementation_key(347)
+inline _bstr_t IADsPrintJob::GetHostPrintQueue ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HostPrintQueue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(348)
+inline _bstr_t IADsPrintJob::GetUser ( ) {
+    BSTR _result;
+    HRESULT _hr = get_User(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(349)
+inline _bstr_t IADsPrintJob::GetUserPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_UserPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(350)
+inline DATE IADsPrintJob::GetTimeSubmitted ( ) {
+    DATE _result;
+    HRESULT _hr = get_TimeSubmitted(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(351)
+inline long IADsPrintJob::GetTotalPages ( ) {
+    long _result;
+    HRESULT _hr = get_TotalPages(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(352)
+inline long IADsPrintJob::GetSize ( ) {
+    long _result;
+    HRESULT _hr = get_Size(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(353)
+inline _bstr_t IADsPrintJob::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(354)
+inline void IADsPrintJob::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(355)
+inline long IADsPrintJob::GetPriority ( ) {
+    long _result;
+    HRESULT _hr = get_Priority(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(356)
+inline void IADsPrintJob::PutPriority ( long retval ) {
+    HRESULT _hr = put_Priority(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(357)
+inline DATE IADsPrintJob::GetStartTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_StartTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(358)
+inline void IADsPrintJob::PutStartTime ( DATE retval ) {
+    HRESULT _hr = put_StartTime(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(359)
+inline DATE IADsPrintJob::GetUntilTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_UntilTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(360)
+inline void IADsPrintJob::PutUntilTime ( DATE retval ) {
+    HRESULT _hr = put_UntilTime(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(361)
+inline _bstr_t IADsPrintJob::GetNotify ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Notify(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(362)
+inline void IADsPrintJob::PutNotify ( _bstr_t retval ) {
+    HRESULT _hr = put_Notify(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(363)
+inline _bstr_t IADsPrintJob::GetNotifyPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_NotifyPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(364)
+inline void IADsPrintJob::PutNotifyPath ( _bstr_t retval ) {
+    HRESULT _hr = put_NotifyPath(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsPrintJobOperations wrapper method implementations
+//
+
+#pragma implementation_key(365)
+inline long IADsPrintJobOperations::GetStatus ( ) {
+    long _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(366)
+inline long IADsPrintJobOperations::GetTimeElapsed ( ) {
+    long _result;
+    HRESULT _hr = get_TimeElapsed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(367)
+inline long IADsPrintJobOperations::GetPagesPrinted ( ) {
+    long _result;
+    HRESULT _hr = get_PagesPrinted(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(368)
+inline long IADsPrintJobOperations::GetPosition ( ) {
+    long _result;
+    HRESULT _hr = get_Position(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(369)
+inline void IADsPrintJobOperations::PutPosition ( long retval ) {
+    HRESULT _hr = put_Position(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(370)
+inline HRESULT IADsPrintJobOperations::Pause ( ) {
+    HRESULT _hr = raw_Pause();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(371)
+inline HRESULT IADsPrintJobOperations::Resume ( ) {
+    HRESULT _hr = raw_Resume();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsService wrapper method implementations
+//
+
+#pragma implementation_key(372)
+inline _bstr_t IADsService::GetHostComputer ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HostComputer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(373)
+inline void IADsService::PutHostComputer ( _bstr_t retval ) {
+    HRESULT _hr = put_HostComputer(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(374)
+inline _bstr_t IADsService::GetDisplayName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DisplayName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(375)
+inline void IADsService::PutDisplayName ( _bstr_t retval ) {
+    HRESULT _hr = put_DisplayName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(376)
+inline _bstr_t IADsService::GetVersion ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Version(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(377)
+inline void IADsService::PutVersion ( _bstr_t retval ) {
+    HRESULT _hr = put_Version(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(378)
+inline long IADsService::GetServiceType ( ) {
+    long _result;
+    HRESULT _hr = get_ServiceType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(379)
+inline void IADsService::PutServiceType ( long retval ) {
+    HRESULT _hr = put_ServiceType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(380)
+inline long IADsService::GetStartType ( ) {
+    long _result;
+    HRESULT _hr = get_StartType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(381)
+inline void IADsService::PutStartType ( long retval ) {
+    HRESULT _hr = put_StartType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(382)
+inline _bstr_t IADsService::GetPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Path(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(383)
+inline void IADsService::PutPath ( _bstr_t retval ) {
+    HRESULT _hr = put_Path(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(384)
+inline _bstr_t IADsService::GetStartupParameters ( ) {
+    BSTR _result;
+    HRESULT _hr = get_StartupParameters(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(385)
+inline void IADsService::PutStartupParameters ( _bstr_t retval ) {
+    HRESULT _hr = put_StartupParameters(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(386)
+inline long IADsService::GetErrorControl ( ) {
+    long _result;
+    HRESULT _hr = get_ErrorControl(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(387)
+inline void IADsService::PutErrorControl ( long retval ) {
+    HRESULT _hr = put_ErrorControl(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(388)
+inline _bstr_t IADsService::GetLoadOrderGroup ( ) {
+    BSTR _result;
+    HRESULT _hr = get_LoadOrderGroup(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(389)
+inline void IADsService::PutLoadOrderGroup ( _bstr_t retval ) {
+    HRESULT _hr = put_LoadOrderGroup(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(390)
+inline _bstr_t IADsService::GetServiceAccountName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ServiceAccountName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(391)
+inline void IADsService::PutServiceAccountName ( _bstr_t retval ) {
+    HRESULT _hr = put_ServiceAccountName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(392)
+inline _bstr_t IADsService::GetServiceAccountPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ServiceAccountPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(393)
+inline void IADsService::PutServiceAccountPath ( _bstr_t retval ) {
+    HRESULT _hr = put_ServiceAccountPath(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(394)
+inline _variant_t IADsService::GetDependencies ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Dependencies(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(395)
+inline void IADsService::PutDependencies ( const _variant_t & retval ) {
+    HRESULT _hr = put_Dependencies(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsServiceOperations wrapper method implementations
+//
+
+#pragma implementation_key(396)
+inline long IADsServiceOperations::GetStatus ( ) {
+    long _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(397)
+inline HRESULT IADsServiceOperations::Start ( ) {
+    HRESULT _hr = raw_Start();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(398)
+inline HRESULT IADsServiceOperations::Stop ( ) {
+    HRESULT _hr = raw_Stop();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(399)
+inline HRESULT IADsServiceOperations::Pause ( ) {
+    HRESULT _hr = raw_Pause();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(400)
+inline HRESULT IADsServiceOperations::Continue ( ) {
+    HRESULT _hr = raw_Continue();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(401)
+inline HRESULT IADsServiceOperations::SetPassword ( _bstr_t bstrNewPassword ) {
+    HRESULT _hr = raw_SetPassword(bstrNewPassword);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsFileService wrapper method implementations
+//
+
+#pragma implementation_key(402)
+inline _bstr_t IADsFileService::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(403)
+inline void IADsFileService::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(404)
+inline long IADsFileService::GetMaxUserCount ( ) {
+    long _result;
+    HRESULT _hr = get_MaxUserCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(405)
+inline void IADsFileService::PutMaxUserCount ( long retval ) {
+    HRESULT _hr = put_MaxUserCount(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsFileServiceOperations wrapper method implementations
+//
+
+#pragma implementation_key(406)
+inline IADsCollectionPtr IADsFileServiceOperations::Sessions ( ) {
+    struct IADsCollection * _result;
+    HRESULT _hr = raw_Sessions(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IADsCollectionPtr(_result, false);
+}
+
+#pragma implementation_key(407)
+inline IADsCollectionPtr IADsFileServiceOperations::Resources ( ) {
+    struct IADsCollection * _result;
+    HRESULT _hr = raw_Resources(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IADsCollectionPtr(_result, false);
+}
+
+//
+// interface IADsFileShare wrapper method implementations
+//
+
+#pragma implementation_key(408)
+inline long IADsFileShare::GetCurrentUserCount ( ) {
+    long _result;
+    HRESULT _hr = get_CurrentUserCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(409)
+inline _bstr_t IADsFileShare::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(410)
+inline void IADsFileShare::PutDescription ( _bstr_t retval ) {
+    HRESULT _hr = put_Description(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(411)
+inline _bstr_t IADsFileShare::GetHostComputer ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HostComputer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(412)
+inline void IADsFileShare::PutHostComputer ( _bstr_t retval ) {
+    HRESULT _hr = put_HostComputer(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(413)
+inline _bstr_t IADsFileShare::GetPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Path(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(414)
+inline void IADsFileShare::PutPath ( _bstr_t retval ) {
+    HRESULT _hr = put_Path(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(415)
+inline long IADsFileShare::GetMaxUserCount ( ) {
+    long _result;
+    HRESULT _hr = get_MaxUserCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(416)
+inline void IADsFileShare::PutMaxUserCount ( long retval ) {
+    HRESULT _hr = put_MaxUserCount(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsSession wrapper method implementations
+//
+
+#pragma implementation_key(417)
+inline _bstr_t IADsSession::GetUser ( ) {
+    BSTR _result;
+    HRESULT _hr = get_User(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(418)
+inline _bstr_t IADsSession::GetUserPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_UserPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(419)
+inline _bstr_t IADsSession::GetComputer ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Computer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(420)
+inline _bstr_t IADsSession::GetComputerPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ComputerPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(421)
+inline long IADsSession::GetConnectTime ( ) {
+    long _result;
+    HRESULT _hr = get_ConnectTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(422)
+inline long IADsSession::GetIdleTime ( ) {
+    long _result;
+    HRESULT _hr = get_IdleTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IADsResource wrapper method implementations
+//
+
+#pragma implementation_key(423)
+inline _bstr_t IADsResource::GetUser ( ) {
+    BSTR _result;
+    HRESULT _hr = get_User(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(424)
+inline _bstr_t IADsResource::GetUserPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_UserPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(425)
+inline _bstr_t IADsResource::GetPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Path(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(426)
+inline long IADsResource::GetLockCount ( ) {
+    long _result;
+    HRESULT _hr = get_LockCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IADsOpenDSObject wrapper method implementations
+//
+
+#pragma implementation_key(427)
+inline IDispatchPtr IADsOpenDSObject::OpenDSObject ( _bstr_t lpszDNName, _bstr_t lpszUserName, _bstr_t lpszPassword, long lnReserved ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_OpenDSObject(lpszDNName, lpszUserName, lpszPassword, lnReserved, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IDirectoryObject wrapper method implementations
+//
+
+#pragma implementation_key(428)
+inline HRESULT IDirectoryObject::GetObjectInformation ( struct _ads_object_info * * ppObjInfo ) {
+    HRESULT _hr = raw_GetObjectInformation(ppObjInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(429)
+inline HRESULT IDirectoryObject::GetObjectAttributes ( LPWSTR * pAttributeNames, unsigned long dwNumberAttributes, struct _ads_attr_info * * ppAttributeEntries, unsigned long * pdwNumAttributesReturned ) {
+    HRESULT _hr = raw_GetObjectAttributes(pAttributeNames, dwNumberAttributes, ppAttributeEntries, pdwNumAttributesReturned);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(430)
+inline HRESULT IDirectoryObject::SetObjectAttributes ( struct _ads_attr_info * pAttributeEntries, unsigned long dwNumAttributes, unsigned long * pdwNumAttributesModified ) {
+    HRESULT _hr = raw_SetObjectAttributes(pAttributeEntries, dwNumAttributes, pdwNumAttributesModified);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(431)
+inline HRESULT IDirectoryObject::CreateDSObject ( LPWSTR pszRDNName, struct _ads_attr_info * pAttributeEntries, unsigned long dwNumAttributes, IDispatch * * ppObject ) {
+    HRESULT _hr = raw_CreateDSObject(pszRDNName, pAttributeEntries, dwNumAttributes, ppObject);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(432)
+inline HRESULT IDirectoryObject::DeleteDSObject ( LPWSTR pszRDNName ) {
+    HRESULT _hr = raw_DeleteDSObject(pszRDNName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDirectorySearch wrapper method implementations
+//
+
+#pragma implementation_key(433)
+inline HRESULT IDirectorySearch::SetSearchPreference ( struct ads_searchpref_info * pSearchPrefs, unsigned long dwNumPrefs ) {
+    HRESULT _hr = raw_SetSearchPreference(pSearchPrefs, dwNumPrefs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(434)
+inline HRESULT IDirectorySearch::ExecuteSearch ( LPWSTR pszSearchFilter, LPWSTR * pAttributeNames, unsigned long dwNumberAttributes, void * * phSearchResult ) {
+    HRESULT _hr = raw_ExecuteSearch(pszSearchFilter, pAttributeNames, dwNumberAttributes, phSearchResult);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(435)
+inline HRESULT IDirectorySearch::AbandonSearch ( void * phSearchResult ) {
+    HRESULT _hr = raw_AbandonSearch(phSearchResult);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(436)
+inline HRESULT IDirectorySearch::GetFirstRow ( void * hSearchResult ) {
+    HRESULT _hr = raw_GetFirstRow(hSearchResult);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(437)
+inline HRESULT IDirectorySearch::GetNextRow ( void * hSearchResult ) {
+    HRESULT _hr = raw_GetNextRow(hSearchResult);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(438)
+inline HRESULT IDirectorySearch::GetPreviousRow ( void * hSearchResult ) {
+    HRESULT _hr = raw_GetPreviousRow(hSearchResult);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(439)
+inline HRESULT IDirectorySearch::GetNextColumnName ( void * hSearchHandle, LPWSTR * ppszColumnName ) {
+    HRESULT _hr = raw_GetNextColumnName(hSearchHandle, ppszColumnName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(440)
+inline HRESULT IDirectorySearch::GetColumn ( void * hSearchResult, LPWSTR szColumnName, struct ads_search_column * pSearchColumn ) {
+    HRESULT _hr = raw_GetColumn(hSearchResult, szColumnName, pSearchColumn);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(441)
+inline HRESULT IDirectorySearch::FreeColumn ( struct ads_search_column * pSearchColumn ) {
+    HRESULT _hr = raw_FreeColumn(pSearchColumn);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(442)
+inline HRESULT IDirectorySearch::CloseSearchHandle ( void * hSearchResult ) {
+    HRESULT _hr = raw_CloseSearchHandle(hSearchResult);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDirectorySchemaMgmt wrapper method implementations
+//
+
+#pragma implementation_key(443)
+inline HRESULT IDirectorySchemaMgmt::EnumAttributes ( LPWSTR * ppszAttrNames, unsigned long dwNumAttributes, struct _ads_attr_def * * ppAttrDefinition, unsigned long * pdwNumAttributes ) {
+    HRESULT _hr = raw_EnumAttributes(ppszAttrNames, dwNumAttributes, ppAttrDefinition, pdwNumAttributes);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(444)
+inline HRESULT IDirectorySchemaMgmt::CreateAttributeDefinition ( LPWSTR pszAttributeName, struct _ads_attr_def * pAttributeDefinition ) {
+    HRESULT _hr = raw_CreateAttributeDefinition(pszAttributeName, pAttributeDefinition);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(445)
+inline HRESULT IDirectorySchemaMgmt::WriteAttributeDefinition ( LPWSTR pszAttributeName, struct _ads_attr_def * pAttributeDefinition ) {
+    HRESULT _hr = raw_WriteAttributeDefinition(pszAttributeName, pAttributeDefinition);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(446)
+inline HRESULT IDirectorySchemaMgmt::DeleteAttributeDefinition ( LPWSTR pszAttributeName ) {
+    HRESULT _hr = raw_DeleteAttributeDefinition(pszAttributeName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(447)
+inline HRESULT IDirectorySchemaMgmt::EnumClasses ( LPWSTR * ppszClassNames, unsigned long dwNumClasses, struct _ads_class_def * * ppClassDefinition, unsigned long * pdwNumClasses ) {
+    HRESULT _hr = raw_EnumClasses(ppszClassNames, dwNumClasses, ppClassDefinition, pdwNumClasses);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(448)
+inline HRESULT IDirectorySchemaMgmt::WriteClassDefinition ( LPWSTR pszClassName, struct _ads_class_def * pClassDefinition ) {
+    HRESULT _hr = raw_WriteClassDefinition(pszClassName, pClassDefinition);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(449)
+inline HRESULT IDirectorySchemaMgmt::CreateClassDefinition ( LPWSTR pszClassName, struct _ads_class_def * pClassDefinition ) {
+    HRESULT _hr = raw_CreateClassDefinition(pszClassName, pClassDefinition);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(450)
+inline HRESULT IDirectorySchemaMgmt::DeleteClassDefinition ( LPWSTR pszClassName ) {
+    HRESULT _hr = raw_DeleteClassDefinition(pszClassName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsAggregatee wrapper method implementations
+//
+
+#pragma implementation_key(451)
+inline HRESULT IADsAggregatee::ConnectAsAggregatee ( IUnknown * pOuterUnknown ) {
+    HRESULT _hr = raw_ConnectAsAggregatee(pOuterUnknown);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(452)
+inline HRESULT IADsAggregatee::DisconnectAsAggregatee ( ) {
+    HRESULT _hr = raw_DisconnectAsAggregatee();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(453)
+inline HRESULT IADsAggregatee::RelinquishInterface ( GUID * riid ) {
+    HRESULT _hr = raw_RelinquishInterface(riid);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(454)
+inline HRESULT IADsAggregatee::RestoreInterface ( GUID * riid ) {
+    HRESULT _hr = raw_RestoreInterface(riid);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsAggregator wrapper method implementations
+//
+
+#pragma implementation_key(455)
+inline HRESULT IADsAggregator::ConnectAsAggregator ( IUnknown * pAggregatee ) {
+    HRESULT _hr = raw_ConnectAsAggregator(pAggregatee);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(456)
+inline HRESULT IADsAggregator::DisconnectAsAggregator ( ) {
+    HRESULT _hr = raw_DisconnectAsAggregator();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsAccessControlEntry wrapper method implementations
+//
+
+#pragma implementation_key(457)
+inline long IADsAccessControlEntry::GetAccessMask ( ) {
+    long _result;
+    HRESULT _hr = get_AccessMask(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(458)
+inline void IADsAccessControlEntry::PutAccessMask ( long retval ) {
+    HRESULT _hr = put_AccessMask(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(459)
+inline long IADsAccessControlEntry::GetAceType ( ) {
+    long _result;
+    HRESULT _hr = get_AceType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(460)
+inline void IADsAccessControlEntry::PutAceType ( long retval ) {
+    HRESULT _hr = put_AceType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(461)
+inline long IADsAccessControlEntry::GetAceFlags ( ) {
+    long _result;
+    HRESULT _hr = get_AceFlags(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(462)
+inline void IADsAccessControlEntry::PutAceFlags ( long retval ) {
+    HRESULT _hr = put_AceFlags(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(463)
+inline long IADsAccessControlEntry::GetFlags ( ) {
+    long _result;
+    HRESULT _hr = get_Flags(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(464)
+inline void IADsAccessControlEntry::PutFlags ( long retval ) {
+    HRESULT _hr = put_Flags(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(465)
+inline _bstr_t IADsAccessControlEntry::GetObjectType ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ObjectType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(466)
+inline void IADsAccessControlEntry::PutObjectType ( _bstr_t retval ) {
+    HRESULT _hr = put_ObjectType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(467)
+inline _bstr_t IADsAccessControlEntry::GetInheritedObjectType ( ) {
+    BSTR _result;
+    HRESULT _hr = get_InheritedObjectType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(468)
+inline void IADsAccessControlEntry::PutInheritedObjectType ( _bstr_t retval ) {
+    HRESULT _hr = put_InheritedObjectType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(469)
+inline _bstr_t IADsAccessControlEntry::GetTrustee ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Trustee(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(470)
+inline void IADsAccessControlEntry::PutTrustee ( _bstr_t retval ) {
+    HRESULT _hr = put_Trustee(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsAccessControlList wrapper method implementations
+//
+
+#pragma implementation_key(471)
+inline long IADsAccessControlList::GetAclRevision ( ) {
+    long _result;
+    HRESULT _hr = get_AclRevision(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(472)
+inline void IADsAccessControlList::PutAclRevision ( long retval ) {
+    HRESULT _hr = put_AclRevision(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(473)
+inline long IADsAccessControlList::GetAceCount ( ) {
+    long _result;
+    HRESULT _hr = get_AceCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(474)
+inline void IADsAccessControlList::PutAceCount ( long retval ) {
+    HRESULT _hr = put_AceCount(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(475)
+inline HRESULT IADsAccessControlList::AddAce ( IDispatch * pAccessControlEntry ) {
+    HRESULT _hr = raw_AddAce(pAccessControlEntry);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(476)
+inline HRESULT IADsAccessControlList::RemoveAce ( IDispatch * pAccessControlEntry ) {
+    HRESULT _hr = raw_RemoveAce(pAccessControlEntry);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(477)
+inline IDispatchPtr IADsAccessControlList::CopyAccessList ( ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_CopyAccessList(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(478)
+inline IUnknownPtr IADsAccessControlList::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IADsSecurityDescriptor wrapper method implementations
+//
+
+#pragma implementation_key(479)
+inline long IADsSecurityDescriptor::GetRevision ( ) {
+    long _result;
+    HRESULT _hr = get_Revision(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(480)
+inline void IADsSecurityDescriptor::PutRevision ( long retval ) {
+    HRESULT _hr = put_Revision(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(481)
+inline long IADsSecurityDescriptor::GetControl ( ) {
+    long _result;
+    HRESULT _hr = get_Control(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(482)
+inline void IADsSecurityDescriptor::PutControl ( long retval ) {
+    HRESULT _hr = put_Control(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(483)
+inline _bstr_t IADsSecurityDescriptor::GetOwner ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Owner(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(484)
+inline void IADsSecurityDescriptor::PutOwner ( _bstr_t retval ) {
+    HRESULT _hr = put_Owner(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(485)
+inline VARIANT_BOOL IADsSecurityDescriptor::GetOwnerDefaulted ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_OwnerDefaulted(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(486)
+inline void IADsSecurityDescriptor::PutOwnerDefaulted ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_OwnerDefaulted(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(487)
+inline _bstr_t IADsSecurityDescriptor::GetGroup ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Group(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(488)
+inline void IADsSecurityDescriptor::PutGroup ( _bstr_t retval ) {
+    HRESULT _hr = put_Group(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(489)
+inline VARIANT_BOOL IADsSecurityDescriptor::GetGroupDefaulted ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_GroupDefaulted(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(490)
+inline void IADsSecurityDescriptor::PutGroupDefaulted ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_GroupDefaulted(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(491)
+inline IDispatchPtr IADsSecurityDescriptor::GetDiscretionaryAcl ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_DiscretionaryAcl(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(492)
+inline void IADsSecurityDescriptor::PutDiscretionaryAcl ( IDispatch * retval ) {
+    HRESULT _hr = put_DiscretionaryAcl(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(493)
+inline VARIANT_BOOL IADsSecurityDescriptor::GetDaclDefaulted ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_DaclDefaulted(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(494)
+inline void IADsSecurityDescriptor::PutDaclDefaulted ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_DaclDefaulted(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(495)
+inline IDispatchPtr IADsSecurityDescriptor::GetSystemAcl ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_SystemAcl(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(496)
+inline void IADsSecurityDescriptor::PutSystemAcl ( IDispatch * retval ) {
+    HRESULT _hr = put_SystemAcl(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(497)
+inline VARIANT_BOOL IADsSecurityDescriptor::GetSaclDefaulted ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_SaclDefaulted(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(498)
+inline void IADsSecurityDescriptor::PutSaclDefaulted ( VARIANT_BOOL retval ) {
+    HRESULT _hr = put_SaclDefaulted(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(499)
+inline IDispatchPtr IADsSecurityDescriptor::CopySecurityDescriptor ( ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_CopySecurityDescriptor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IADsLargeInteger wrapper method implementations
+//
+
+#pragma implementation_key(500)
+inline long IADsLargeInteger::GetHighPart ( ) {
+    long _result;
+    HRESULT _hr = get_HighPart(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(501)
+inline void IADsLargeInteger::PutHighPart ( long retval ) {
+    HRESULT _hr = put_HighPart(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(502)
+inline long IADsLargeInteger::GetLowPart ( ) {
+    long _result;
+    HRESULT _hr = get_LowPart(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(503)
+inline void IADsLargeInteger::PutLowPart ( long retval ) {
+    HRESULT _hr = put_LowPart(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsNameTranslate wrapper method implementations
+//
+
+#pragma implementation_key(504)
+inline void IADsNameTranslate::PutChaseReferral ( long _arg1 ) {
+    HRESULT _hr = put_ChaseReferral(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(505)
+inline HRESULT IADsNameTranslate::Init ( long lnSetType, _bstr_t bstrADsPath ) {
+    HRESULT _hr = raw_Init(lnSetType, bstrADsPath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(506)
+inline HRESULT IADsNameTranslate::InitEx ( long lnSetType, _bstr_t bstrADsPath, _bstr_t bstrUserID, _bstr_t bstrDomain, _bstr_t bstrPassword ) {
+    HRESULT _hr = raw_InitEx(lnSetType, bstrADsPath, bstrUserID, bstrDomain, bstrPassword);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(507)
+inline HRESULT IADsNameTranslate::Set ( long lnSetType, _bstr_t bstrADsPath ) {
+    HRESULT _hr = raw_Set(lnSetType, bstrADsPath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(508)
+inline _bstr_t IADsNameTranslate::Get ( long lnFormatType ) {
+    BSTR _result;
+    HRESULT _hr = raw_Get(lnFormatType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(509)
+inline HRESULT IADsNameTranslate::SetEx ( long lnFormatType, const _variant_t & pVar ) {
+    HRESULT _hr = raw_SetEx(lnFormatType, pVar);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(510)
+inline _variant_t IADsNameTranslate::GetEx ( long lnFormatType ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetEx(lnFormatType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface IADsCaseIgnoreList wrapper method implementations
+//
+
+#pragma implementation_key(511)
+inline _variant_t IADsCaseIgnoreList::GetCaseIgnoreList ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_CaseIgnoreList(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(512)
+inline void IADsCaseIgnoreList::PutCaseIgnoreList ( const _variant_t & retval ) {
+    HRESULT _hr = put_CaseIgnoreList(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsFaxNumber wrapper method implementations
+//
+
+#pragma implementation_key(513)
+inline _bstr_t IADsFaxNumber::GetTelephoneNumber ( ) {
+    BSTR _result;
+    HRESULT _hr = get_TelephoneNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(514)
+inline void IADsFaxNumber::PutTelephoneNumber ( _bstr_t retval ) {
+    HRESULT _hr = put_TelephoneNumber(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(515)
+inline _variant_t IADsFaxNumber::GetParameters ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Parameters(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(516)
+inline void IADsFaxNumber::PutParameters ( const _variant_t & retval ) {
+    HRESULT _hr = put_Parameters(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsNetAddress wrapper method implementations
+//
+
+#pragma implementation_key(517)
+inline long IADsNetAddress::GetAddressType ( ) {
+    long _result;
+    HRESULT _hr = get_AddressType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(518)
+inline void IADsNetAddress::PutAddressType ( long retval ) {
+    HRESULT _hr = put_AddressType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(519)
+inline _variant_t IADsNetAddress::GetAddress ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Address(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(520)
+inline void IADsNetAddress::PutAddress ( const _variant_t & retval ) {
+    HRESULT _hr = put_Address(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsOctetList wrapper method implementations
+//
+
+#pragma implementation_key(521)
+inline _variant_t IADsOctetList::GetOctetList ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_OctetList(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(522)
+inline void IADsOctetList::PutOctetList ( const _variant_t & retval ) {
+    HRESULT _hr = put_OctetList(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsEmail wrapper method implementations
+//
+
+#pragma implementation_key(523)
+inline long IADsEmail::GetType ( ) {
+    long _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(524)
+inline void IADsEmail::PutType ( long retval ) {
+    HRESULT _hr = put_Type(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(525)
+inline _bstr_t IADsEmail::GetAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Address(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(526)
+inline void IADsEmail::PutAddress ( _bstr_t retval ) {
+    HRESULT _hr = put_Address(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsPath wrapper method implementations
+//
+
+#pragma implementation_key(527)
+inline long IADsPath::GetType ( ) {
+    long _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(528)
+inline void IADsPath::PutType ( long retval ) {
+    HRESULT _hr = put_Type(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(529)
+inline _bstr_t IADsPath::GetVolumeName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_VolumeName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(530)
+inline void IADsPath::PutVolumeName ( _bstr_t retval ) {
+    HRESULT _hr = put_VolumeName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(531)
+inline _bstr_t IADsPath::GetPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Path(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(532)
+inline void IADsPath::PutPath ( _bstr_t retval ) {
+    HRESULT _hr = put_Path(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsReplicaPointer wrapper method implementations
+//
+
+#pragma implementation_key(533)
+inline _bstr_t IADsReplicaPointer::GetServerName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ServerName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(534)
+inline void IADsReplicaPointer::PutServerName ( _bstr_t retval ) {
+    HRESULT _hr = put_ServerName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(535)
+inline long IADsReplicaPointer::GetReplicaType ( ) {
+    long _result;
+    HRESULT _hr = get_ReplicaType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(536)
+inline void IADsReplicaPointer::PutReplicaType ( long retval ) {
+    HRESULT _hr = put_ReplicaType(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(537)
+inline long IADsReplicaPointer::GetReplicaNumber ( ) {
+    long _result;
+    HRESULT _hr = get_ReplicaNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(538)
+inline void IADsReplicaPointer::PutReplicaNumber ( long retval ) {
+    HRESULT _hr = put_ReplicaNumber(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(539)
+inline long IADsReplicaPointer::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(540)
+inline void IADsReplicaPointer::PutCount ( long retval ) {
+    HRESULT _hr = put_Count(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(541)
+inline _variant_t IADsReplicaPointer::GetReplicaAddressHints ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_ReplicaAddressHints(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(542)
+inline void IADsReplicaPointer::PutReplicaAddressHints ( const _variant_t & retval ) {
+    HRESULT _hr = put_ReplicaAddressHints(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsAcl wrapper method implementations
+//
+
+#pragma implementation_key(543)
+inline _bstr_t IADsAcl::GetProtectedAttrName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ProtectedAttrName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(544)
+inline void IADsAcl::PutProtectedAttrName ( _bstr_t retval ) {
+    HRESULT _hr = put_ProtectedAttrName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(545)
+inline _bstr_t IADsAcl::GetSubjectName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_SubjectName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(546)
+inline void IADsAcl::PutSubjectName ( _bstr_t retval ) {
+    HRESULT _hr = put_SubjectName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(547)
+inline long IADsAcl::GetPrivileges ( ) {
+    long _result;
+    HRESULT _hr = get_Privileges(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(548)
+inline void IADsAcl::PutPrivileges ( long retval ) {
+    HRESULT _hr = put_Privileges(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(549)
+inline IDispatchPtr IADsAcl::CopyAcl ( ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_CopyAcl(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IADsTimestamp wrapper method implementations
+//
+
+#pragma implementation_key(550)
+inline long IADsTimestamp::GetWholeSeconds ( ) {
+    long _result;
+    HRESULT _hr = get_WholeSeconds(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(551)
+inline void IADsTimestamp::PutWholeSeconds ( long retval ) {
+    HRESULT _hr = put_WholeSeconds(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(552)
+inline long IADsTimestamp::GetEventID ( ) {
+    long _result;
+    HRESULT _hr = get_EventID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(553)
+inline void IADsTimestamp::PutEventID ( long retval ) {
+    HRESULT _hr = put_EventID(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsPostalAddress wrapper method implementations
+//
+
+#pragma implementation_key(554)
+inline _variant_t IADsPostalAddress::GetPostalAddress ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_PostalAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(555)
+inline void IADsPostalAddress::PutPostalAddress ( const _variant_t & retval ) {
+    HRESULT _hr = put_PostalAddress(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsBackLink wrapper method implementations
+//
+
+#pragma implementation_key(556)
+inline long IADsBackLink::GetRemoteID ( ) {
+    long _result;
+    HRESULT _hr = get_RemoteID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(557)
+inline void IADsBackLink::PutRemoteID ( long retval ) {
+    HRESULT _hr = put_RemoteID(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(558)
+inline _bstr_t IADsBackLink::GetObjectName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ObjectName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(559)
+inline void IADsBackLink::PutObjectName ( _bstr_t retval ) {
+    HRESULT _hr = put_ObjectName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsTypedName wrapper method implementations
+//
+
+#pragma implementation_key(560)
+inline _bstr_t IADsTypedName::GetObjectName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ObjectName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(561)
+inline void IADsTypedName::PutObjectName ( _bstr_t retval ) {
+    HRESULT _hr = put_ObjectName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(562)
+inline long IADsTypedName::GetLevel ( ) {
+    long _result;
+    HRESULT _hr = get_Level(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(563)
+inline void IADsTypedName::PutLevel ( long retval ) {
+    HRESULT _hr = put_Level(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(564)
+inline long IADsTypedName::GetInterval ( ) {
+    long _result;
+    HRESULT _hr = get_Interval(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(565)
+inline void IADsTypedName::PutInterval ( long retval ) {
+    HRESULT _hr = put_Interval(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsHold wrapper method implementations
+//
+
+#pragma implementation_key(566)
+inline _bstr_t IADsHold::GetObjectName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ObjectName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(567)
+inline void IADsHold::PutObjectName ( _bstr_t retval ) {
+    HRESULT _hr = put_ObjectName(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(568)
+inline long IADsHold::GetAmount ( ) {
+    long _result;
+    HRESULT _hr = get_Amount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(569)
+inline void IADsHold::PutAmount ( long retval ) {
+    HRESULT _hr = put_Amount(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsObjectOptions wrapper method implementations
+//
+
+#pragma implementation_key(570)
+inline _variant_t IADsObjectOptions::GetOption ( long lnOption ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetOption(lnOption, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(571)
+inline HRESULT IADsObjectOptions::SetOption ( long lnOption, const _variant_t & vValue ) {
+    HRESULT _hr = raw_SetOption(lnOption, vValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IADsPathname wrapper method implementations
+//
+
+#pragma implementation_key(572)
+inline HRESULT IADsPathname::Set ( _bstr_t bstrADsPath, long lnSetType ) {
+    HRESULT _hr = raw_Set(bstrADsPath, lnSetType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(573)
+inline HRESULT IADsPathname::SetDisplayType ( long lnDisplayType ) {
+    HRESULT _hr = raw_SetDisplayType(lnDisplayType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(574)
+inline _bstr_t IADsPathname::Retrieve ( long lnFormatType ) {
+    BSTR _result;
+    HRESULT _hr = raw_Retrieve(lnFormatType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(575)
+inline long IADsPathname::GetNumElements ( ) {
+    long _result;
+    HRESULT _hr = raw_GetNumElements(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(576)
+inline _bstr_t IADsPathname::GetElement ( long lnElementIndex ) {
+    BSTR _result;
+    HRESULT _hr = raw_GetElement(lnElementIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(577)
+inline HRESULT IADsPathname::AddLeafElement ( _bstr_t bstrLeafElement ) {
+    HRESULT _hr = raw_AddLeafElement(bstrLeafElement);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(578)
+inline HRESULT IADsPathname::RemoveLeafElement ( ) {
+    HRESULT _hr = raw_RemoveLeafElement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(579)
+inline IDispatchPtr IADsPathname::CopyPath ( ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_CopyPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+#pragma implementation_key(580)
+inline _bstr_t IADsPathname::GetEscapedElement ( long lnReserved, _bstr_t bstrInStr ) {
+    BSTR _result;
+    HRESULT _hr = raw_GetEscapedElement(lnReserved, bstrInStr, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(581)
+inline long IADsPathname::GetEscapedMode ( ) {
+    long _result;
+    HRESULT _hr = get_EscapedMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(582)
+inline void IADsPathname::PutEscapedMode ( long retval ) {
+    HRESULT _hr = put_EscapedMode(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsADSystemInfo wrapper method implementations
+//
+
+#pragma implementation_key(583)
+inline _bstr_t IADsADSystemInfo::GetUserName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_UserName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(584)
+inline _bstr_t IADsADSystemInfo::GetComputerName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ComputerName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(585)
+inline _bstr_t IADsADSystemInfo::GetSiteName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_SiteName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(586)
+inline _bstr_t IADsADSystemInfo::GetDomainShortName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DomainShortName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(587)
+inline _bstr_t IADsADSystemInfo::GetDomainDNSName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DomainDNSName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(588)
+inline _bstr_t IADsADSystemInfo::GetForestDNSName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ForestDNSName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(589)
+inline _bstr_t IADsADSystemInfo::GetPDCRoleOwner ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PDCRoleOwner(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(590)
+inline _bstr_t IADsADSystemInfo::GetSchemaRoleOwner ( ) {
+    BSTR _result;
+    HRESULT _hr = get_SchemaRoleOwner(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(591)
+inline VARIANT_BOOL IADsADSystemInfo::GetIsNativeMode ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsNativeMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+#pragma implementation_key(592)
+inline _bstr_t IADsADSystemInfo::GetAnyDCName ( ) {
+    BSTR _result;
+    HRESULT _hr = raw_GetAnyDCName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(593)
+inline _bstr_t IADsADSystemInfo::GetDCSiteName ( _bstr_t szServer ) {
+    BSTR _result;
+    HRESULT _hr = raw_GetDCSiteName(szServer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(594)
+inline HRESULT IADsADSystemInfo::RefreshSchemaCache ( ) {
+    HRESULT _hr = raw_RefreshSchemaCache();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+#pragma implementation_key(595)
+inline _variant_t IADsADSystemInfo::GetTrees ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetTrees(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface IADsWinNTSystemInfo wrapper method implementations
+//
+
+#pragma implementation_key(596)
+inline _bstr_t IADsWinNTSystemInfo::GetUserName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_UserName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(597)
+inline _bstr_t IADsWinNTSystemInfo::GetComputerName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ComputerName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(598)
+inline _bstr_t IADsWinNTSystemInfo::GetDomainName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DomainName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(599)
+inline _bstr_t IADsWinNTSystemInfo::GetPDC ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PDC(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IADsDNWithBinary wrapper method implementations
+//
+
+#pragma implementation_key(600)
+inline _variant_t IADsDNWithBinary::GetBinaryValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_BinaryValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+#pragma implementation_key(601)
+inline void IADsDNWithBinary::PutBinaryValue ( const _variant_t & retval ) {
+    HRESULT _hr = put_BinaryValue(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(602)
+inline _bstr_t IADsDNWithBinary::GetDNString ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DNString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(603)
+inline void IADsDNWithBinary::PutDNString ( _bstr_t retval ) {
+    HRESULT _hr = put_DNString(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IADsDNWithString wrapper method implementations
+//
+
+#pragma implementation_key(604)
+inline _bstr_t IADsDNWithString::GetStringValue ( ) {
+    BSTR _result;
+    HRESULT _hr = get_StringValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(605)
+inline void IADsDNWithString::PutStringValue ( _bstr_t retval ) {
+    HRESULT _hr = put_StringValue(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#pragma implementation_key(606)
+inline _bstr_t IADsDNWithString::GetDNString ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DNString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+#pragma implementation_key(607)
+inline void IADsDNWithString::PutDNString ( _bstr_t retval ) {
+    HRESULT _hr = put_DNString(retval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}

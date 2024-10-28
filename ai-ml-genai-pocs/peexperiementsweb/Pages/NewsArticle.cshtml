@@ -1,0 +1,63 @@
+@page
+@model PEExperimentsWeb.Pages.ExtractNewsModel
+@{
+    ViewData["Title"] = "News - Articles";
+}
+
+<style>
+    .center-button {
+        text-align: center;
+    }
+
+    .center-button button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .center-button button:hover {
+        background-color: orange;
+    }
+</style>
+
+<div class="container">
+    <h1 class="display-4 text-center">Get News Article Topics</h1>
+
+    <form method="post">
+        <div class="mb-3">
+            <div class="mb-3">
+                <textarea id="newsArticleTextArea" rows="6" required class="form-control" asp-for="newsArticle.Article" placeholder="Enter Your Data Here...."></textarea>
+            </div>
+            <div class="center-button">
+                <button type="submit" class="btn btn-primary">Get- Topics</button>
+                <button type="button" id="clearButton" class="btn btn-danger">Clear- Text</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Display the response -->
+    <div class="row">
+        <div class="col">
+            @if (!string.IsNullOrEmpty(Model.Response))
+            {
+                <h2>Generated Topics :</h2>
+                <p>@Model.Response</p>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#clearButton").click(function () {
+                // Clear the text input field
+                $("#newsArticleTextArea").val("");
+            });
+        });
+    </script>
+}

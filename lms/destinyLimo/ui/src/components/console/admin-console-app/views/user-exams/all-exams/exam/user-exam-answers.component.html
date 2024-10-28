@@ -1,0 +1,96 @@
+<div class="answers-container-root">
+    <div class="grid-header-row">
+        <div class="grid-title">Exam Correction Sheet for Exam No. {{exam.examId}} taken on {{exam.dateStartedString}}</div>
+        <div class="complete-checkboxes">
+            <form [formGroup]="formRadio1">
+                <c-button-group aria-label="Basic radio toggle button group" role="group">
+                    <input class="btn-check" formControlName="radio1" type="radio" value="All" />
+                    <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline"
+                        color="danger">All</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Correct" />
+                    <label (click)="setRadioValue('Correct')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Correct</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Incorrect" />
+                    <label (click)="setRadioValue('Incorrect')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Incorrect</label>
+                </c-button-group>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="card-title" *ngIf="filteredUserAnswers.length === 0" style="margin-top: -5px;">
+        No Answers Found
+    </div>
+
+    <div class="answers-container" *ngIf="filteredUserAnswers.length > 0">
+        <div *ngFor="let answer of filteredUserAnswers; let i = index">
+            <c-card style="border: 1px solid blue;width:100%;">
+                
+
+                <c-card-header>
+                    <div style="display: flex;flex-direction: row; vertical-align: middle;">
+                        <span class="card-title-question"><b>{{
+                            answer.question_text
+                            }}</b></span>
+
+                        <span *ngIf="answer.is_correctly_answered" class="card-title result-text">You got it
+                            Right!</span>
+                        <span *ngIf="!answer.is_correctly_answered" class="card-title result-text"
+                            style="background-color: red;color:white;">You
+                            got it Wrong</span>
+
+                    </div>
+                </c-card-header>
+
+                <c-card-body
+                    style="background-color: rgba(200, 168, 243,.3);padding: 6px;padding-top: 6px;padding-left: 16px;">
+                    <div class="checkbox-row">
+                        <span *ngIf="answer.choice_1_answer" class="checkbox-box">Y</span>
+                        <span *ngIf="!answer.choice_1_answer" class="checkbox-box"
+                            style="background-color: red;">N</span>
+
+                        <span *ngIf="answer.correct_1" class="checkbox-box">Y</span>
+                        <span *ngIf="!answer.correct_1" class="checkbox-box" style="background-color: red;">N</span>
+
+                        <span style="margin-left:4px; font-size: 16px;width: calc(100% - 80px);">{{ answer.answer_1 }}</span>
+                    </div>
+                    <div class="checkbox-row">
+                        <span *ngIf="answer.choice_2_answer" class="checkbox-box">Y</span>
+                        <span *ngIf="!answer.choice_2_answer" class="checkbox-box"
+                            style="background-color: red;">N</span>
+
+                        <span *ngIf="answer.correct_2" class="checkbox-box">Y</span>
+                        <span *ngIf="!answer.correct_2" class="checkbox-box" style="background-color: red;">N</span>
+
+                        <span style="margin-left:4px; font-size: 16px;width: calc(100% - 80px);">{{ answer.answer_2 }}</span>
+                    </div>
+                    <div class="checkbox-row">
+                        <span *ngIf="answer.choice_3_answer" class="checkbox-box">Y</span>
+                        <span *ngIf="!answer.choice_3_answer" class="checkbox-box"
+                            style="background-color: red;">N</span>
+
+                        <span *ngIf="answer.correct_3" class="checkbox-box">Y</span>
+                        <span *ngIf="!answer.correct_3" class="checkbox-box" style="background-color: red;">N</span>
+
+                        <span style="margin-left:4px; font-size: 16px;width: calc(100% - 80px);">{{ answer.answer_3 }}</span>
+                    </div>
+                    <div class="checkbox-row">
+                        <span *ngIf="answer.choice_4_answer" class="checkbox-box">Y</span>
+                        <span *ngIf="!answer.choice_4_answer" class="checkbox-box"
+                            style="background-color: red;">N</span>
+
+                        <span *ngIf="answer.correct_4" class="checkbox-box">Y</span>
+                        <span *ngIf="!answer.correct_4" class="checkbox-box" style="background-color: red;">N</span>
+
+                        <span style="margin-left:4px; font-size: 16px;width: calc(100% - 80px);">{{ answer.answer_4 }}</span>
+                    </div>
+                    <div style="margin-top:10px; margin-left: -2px;font-size:14px"><strong>* Legend -></strong> Your
+                        Answer, Correct Answer, Choice Text</div>
+                </c-card-body>
+            </c-card>
+        </div>
+    </div>
+</div>

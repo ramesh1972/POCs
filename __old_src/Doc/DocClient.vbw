@@ -1,0 +1,10 @@
+frmDocClient = 44, 44, 409, 492, , 22, 22, 387, 470, C
+CHTMLDocument = 88, 88, 564, 493, 
+CXMLClientData = 0, 0, 365, 448, 
+CXMLServerData = 66, 66, 542, 471, 
+Global = 0, 0, 436, 444, 
+CxNode = 110, 110, 602, 554, 
+CBlock = 66, 66, 616, 510, 
+CTextBlock = 132, 132, 682, 576, 
+CTextBoxBlock = 154, 154, 704, 598, 
+CButtonBlock = 110, 110, 612, 554, 

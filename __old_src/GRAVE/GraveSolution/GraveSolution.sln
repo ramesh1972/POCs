@@ -1,0 +1,59 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gravesrv", "gravesrv\gravesrv.csproj", "{AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gravecln", "gravecln\gravecln.csproj", "{AA24BC78-A2E1-4215-B101-EFBCBF420C12}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D} = {AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gravetst", "gravetst\gravetst.csproj", "{7C9FE606-B541-4BE6-B685-7CC2CDBFB294}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D} = {AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D}
+		{AA24BC78-A2E1-4215-B101-EFBCBF420C12} = {AA24BC78-A2E1-4215-B101-EFBCBF420C12}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gravegig", "http://localhost/gravegig/gravegig.csproj", "{695A9D8B-4EC5-41DB-92A0-B87D1CD24538}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D} = {AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D}
+		{AA24BC78-A2E1-4215-B101-EFBCBF420C12} = {AA24BC78-A2E1-4215-B101-EFBCBF420C12}
+		{C66F49CC-B999-4067-9AA1-04760B97D6DB} = {C66F49CC-B999-4067-9AA1-04760B97D6DB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graveweb", "http://localhost/graveweb/graveweb.csproj", "{C66F49CC-B999-4067-9AA1-04760B97D6DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D} = {AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D}
+		{AA24BC78-A2E1-4215-B101-EFBCBF420C12} = {AA24BC78-A2E1-4215-B101-EFBCBF420C12}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D}.Debug.ActiveCfg = Debug|.NET
+		{AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D}.Debug.Build.0 = Debug|.NET
+		{AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D}.Release.ActiveCfg = Release|.NET
+		{AAC3F62C-4E47-4731-B2BB-B6DEDC5B701D}.Release.Build.0 = Release|.NET
+		{AA24BC78-A2E1-4215-B101-EFBCBF420C12}.Debug.ActiveCfg = Debug|.NET
+		{AA24BC78-A2E1-4215-B101-EFBCBF420C12}.Debug.Build.0 = Debug|.NET
+		{AA24BC78-A2E1-4215-B101-EFBCBF420C12}.Release.ActiveCfg = Release|.NET
+		{AA24BC78-A2E1-4215-B101-EFBCBF420C12}.Release.Build.0 = Release|.NET
+		{7C9FE606-B541-4BE6-B685-7CC2CDBFB294}.Debug.ActiveCfg = Debug|.NET
+		{7C9FE606-B541-4BE6-B685-7CC2CDBFB294}.Debug.Build.0 = Debug|.NET
+		{7C9FE606-B541-4BE6-B685-7CC2CDBFB294}.Release.ActiveCfg = Release|.NET
+		{7C9FE606-B541-4BE6-B685-7CC2CDBFB294}.Release.Build.0 = Release|.NET
+		{695A9D8B-4EC5-41DB-92A0-B87D1CD24538}.Debug.ActiveCfg = Debug|.NET
+		{695A9D8B-4EC5-41DB-92A0-B87D1CD24538}.Release.ActiveCfg = Release|.NET
+		{C66F49CC-B999-4067-9AA1-04760B97D6DB}.Debug.ActiveCfg = Debug|.NET
+		{C66F49CC-B999-4067-9AA1-04760B97D6DB}.Debug.Build.0 = Debug|.NET
+		{C66F49CC-B999-4067-9AA1-04760B97D6DB}.Release.ActiveCfg = Release|.NET
+		{C66F49CC-B999-4067-9AA1-04760B97D6DB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

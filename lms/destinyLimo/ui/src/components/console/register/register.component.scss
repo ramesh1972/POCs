@@ -1,0 +1,55 @@
+.register-part {
+    padding: 20px;
+    padding-bottom:5px;
+    margin-bottom:20px;
+    background-color: orange;
+
+    font-family: vsystem-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.form-field {
+  height: 40px;
+  width: 150px; 
+  background-color: rgb(243, 220, 247);
+  font-family: vsystem-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.form-control {
+  height: 40px;
+  width: calc(100% - 150px);
+  font-size: 16px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+
+}
+
+.form-control-2-col {
+  width:157px;
+  max-height:40px;
+}
+
+.error-text {
+  color: darkred;
+  font-size: 14px;
+  font-family: vsystem-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media screen and (max-width: 600px) {
+
+  .form-control-2-col {
+    width:100%;
+  }
+  
+}
+
+.avatar-preview {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #f8f9fa;
+  background-color: #f8f9fa;
+  background-size: contain;
+  background-position: center;
+  overflow: hidden;
+}

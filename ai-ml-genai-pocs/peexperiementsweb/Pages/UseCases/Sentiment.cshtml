@@ -1,0 +1,240 @@
+﻿
+@page
+@{
+    Layout = "_Layout.cshtml";
+}
+
+@model SentimentIndexModel
+@{
+    ViewData["Title"] = "Use Cases";
+}
+<style>
+    .center-button {
+        text-align: center;
+    }
+
+    .center-button button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .center-button button:hover {
+        background-color: orange;
+    }
+</style>
+
+<div class="container">
+    <h2 class="display-4 text-center">Sentiment - Analysis</h2>
+
+    <form method="post">
+        <div class="mb-3">
+           
+            <div class="mb-3">
+                <textarea id="sentimentReviewTextArea" rows="20" required class="form-control"
+                    asp-for="sentimentReview.ReviewText" placeholder="Enter Your Data Here...."></textarea>
+            </div>
+           
+            <div class="center-button">
+                <button type="SentimentAnalysis" class="btn btn-primary">SentimentAnalysis</button>
+                <button type="button" id="clearButton" class="btn btn-danger">Clear- Text</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Display the response -->
+    <div class="row">
+        <div class="col">
+            @if (!string.IsNullOrEmpty(Model.Response))
+            {
+                <h2>Generated Response:</h2>
+                <p>@Model.Response</p>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#clearButton").click(function () {
+                // Clear the text input field
+                $("#sentimentReviewTextArea").val("");
+            });
+        });
+    </script>
+}
+
+<!-- model code -->
+
+<!-- -->
+<div class="text-center">
+    <h1 class="display-4">Available Books</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Books[0].review_id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Books[0].book_title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Books[0].author)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Books[0].rating)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Books[0].ReviewText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Books[0].Sentiment)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Books)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.review_id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.author)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.rating)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReviewText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sentiment)
+                    </td>
+
+                    <td>
+                        @Model.Response;
+                    </td>
+
+                </tr>
+            }
+</div>
+
+
+
+<!--
+<script>
+    // Get references to the input 
+    const jsonFileInput = document.getElementById("jsonFileInput");
+    const fileNameSpan = document.getElementById("fileName");
+    const jsonContentDiv = document.getElementById("jsonContent");
+    const jsonDisplay = document.getElementById("jsonDisplay");
+    const displayButton = document.getElementById("displayButton");
+
+// Function to display the JSON content
+function displayJsonContent() {
+    if (jsonFileInput.files.length > 0) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            try {
+                const jsonData = JSON.parse(event.target.result);
+                const bookReviews = jsonData.book_reviews;
+
+                if (Array.isArray(bookReviews) && bookReviews.length > 0) {
+
+                    // Display the JSON content
+                    jsonContentDiv.style.display = "block";
+                    const table = document.getElementById("jsonTable");
+                    table.innerHTML = "";
+
+                    // Create table headers
+                    const headerRow = table.insertRow(0);
+                    for (const key in bookReviews[0]) {
+                        const headerCell = headerRow.insertCell(-1);
+                        headerCell.textContent = key;
+                    }
+
+                    // Create table rows with data
+                    for (let i = 0; i < bookReviews.length; i++) {
+                        const dataRow = table.insertRow(i + 1);
+                        for (const key in bookReviews[i]) {
+                            const cell = dataRow.insertCell(-1);
+                            cell.textContent = bookReviews[i][key];
+                        }
+                    }
+                } else {
+                    alert("The 'book_reviews' property is not an array or is empty.");
+                }
+            } catch (error) {
+                alert("Invalid JSON file. Please select a valid JSON file.");
+            }
+        };
+        reader.readAsText(jsonFileInput.files[0]);
+    } else {
+        alert("No file selected. Please upload a JSON file first.");
+    }
+}
+
+    // Add an event listener to the file input
+    jsonFileInput.addEventListener("change", function () {
+        if (jsonFileInput.files.length > 0) {
+            const fileName = jsonFileInput.files[0].name;
+            fileNameSpan.textContent = fileName;
+        } else {
+            fileNameSpan.textContent = "No file selected";
+        }
+    });
+
+// Function to save the JSON content as a TXT file
+function saveAsTxt() {
+    if (jsonFileInput.files.length > 0) {
+        const fileName = jsonFileInput.files[0].name;
+        const jsonData = JSON.stringify(bookReviews, null, 2); // Convert the JSON data to a formatted string
+        const blob = new Blob([jsonData], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = "/peexperimentsweb/Pages/UseCases/save.txt";
+        a.download = fileName.replace('.json', '.txt'); // Change the file extension to .txt
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+        URL.revokeObjectURL(url);
+    } else {
+        alert("No file selected. Please upload a JSON file first.");
+    }
+}
+
+// Add an event listener to the "Save as TXT" button
+const saveAsTxtButton = document.getElementById("saveAsTxtButton");
+saveAsTxtButton.addEventListener("click", saveAsTxt);
+
+
+ // Function to hide the "Display File Contents" button and show the "Sentiment Analysis" button
+function hideDisplayButtonAndShowSentimentButton() {
+    displayButton.style.display = "none";
+    sentimentAnalysisButton.style.display = "block";
+    saveAsTxtButton.style.display = "block"; // Show the "Save as TXT" button
+}
+
+
+    // Add an event listener to the display button
+    displayButton.addEventListener("click", function () {
+        displayJsonContent();
+        hideDisplayButtonAndShowSentimentButton(); // Call the function to hide the display button
+    });
+
+</script>
+
+
+-->

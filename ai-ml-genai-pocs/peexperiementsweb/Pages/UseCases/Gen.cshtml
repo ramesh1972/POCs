@@ -1,0 +1,27 @@
+@page
+@{
+    Layout = "_Layout.cshtml";
+}
+
+@model GenIndexModel
+@{
+    ViewData["Title"] = "Use Cases";
+}
+
+<div class="text-left">
+    <h4>This is Generate Description Page</h4>
+    <button class="btn btn-primary" id="descriptionButton">Description</button>
+</div>
+
+<script>
+    document.getElementById("descriptionButton").addEventListener("click", function () {
+        var descriptionContainer = document.getElementById("descriptionContainer");
+        descriptionContainer.style.display = "block";
+    });
+</script>
+
+
+
+
+
+

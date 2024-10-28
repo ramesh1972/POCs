@@ -1,0 +1,132 @@
+@page
+@model ContentCreation.Pages.Lahari_ContentModel
+@{
+    ViewData["Title"] = "Content Creation";
+}
+<html>
+<head>
+<style>
+    body {
+  background-image: url('https://cdn.wallpapersafari.com/66/45/kJZ8wj.jpg');
+}
+
+</style>
+</head>
+<body>
+<section data-bs-version="5.1" class="offerm5 article2 cid-tD6aDb8Fmp" id="article02-3">
+    
+
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 col-md-12 m-auto">
+                
+                <h3 class="mbr-section-subtitle mbr-fonts-style align-left pb-3 display-5">Content Creation Tool</h3>
+                <div class="mbr-text align-center">
+                    <p class="mbr-text mbr-fonts-style align-left pb-3 display-7">
+                    Are you enthusiastic about software or keen to stay updated on the ever-evolving tech landscape? Your search ends here! Our platform is your key to authoring compelling and informative blogs across a diverse spectrum of software subjects.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+    <div class="text-center">
+        <h3 text-align: left>Enter the topic for creation of blog: </h3>
+        <form method="post">
+        <div class="mb-3">
+        <textarea id="ReviewTextArea" rows="1" class="form-control" asp-for="contents.UserInput"  placeholder="Enter topic" required></textarea>
+        </div>
+        <br>
+        <div class="center-button">
+        <button type="submit" class="btn btn-primary" name="action" value="GenerateContent">Generate Content</button>
+         @if (!string.IsNullOrEmpty(Model.Response))
+            {
+                <button type="submit" class="btn btn-primary" name="action" value="ReGenerate">ReGenerate</button>
+                <button type="submit" class="btn btn-primary" name="action" value="RePhrase">Re-Phrase</button>
+            }
+        </div>
+        </form>
+    </div>
+    <div class="row">
+<div class="col">
+            
+                @if (Model.blog != null)
+{
+    <div>
+        @foreach (var section in Model.blog.Sections)
+        {
+            if (section.Type == ContentType.Title)
+            {
+                <p>@Html.Raw(section.Text)</p>
+            }
+            if (section.Type == ContentType.Paragraph)
+            {
+                <p>@Html.Raw(section.Text)</p>
+                <button type="submit" class="btn btn-primary" name="action" value="RePhrase">Re-Phrase</button>
+            }
+            else if (section.Type == ContentType.BulletPoint)
+            {
+                <ul>
+                     @foreach (var point in section.BulletPoints.Points)
+                    {
+                        <li>@point</li>
+                    }
+                </ul>
+                 
+                <button type="submit" class="btn btn-primary" name="action" value="RePhrase">Re-Phrase</button>
+            }
+            else if (section.Type ==  ContentType.Code)
+            {
+                <pre><code>@Html.Raw(section.Text)</code></pre>
+                <button type="submit" class="btn btn-primary" name="action" value="RePhrase">Re-Phrase</button>
+            }
+        }
+    </div>
+}
+ @if (!string.IsNullOrEmpty(Model.Response))
+            {
+<h2>Generated Result :</h2>
+                @Html.Raw(Model.Response)
+
+                
+
+        
+            <h1>Questions and Answers</h1>
+            
+    @if (Model.deserializedContent != null)
+{
+    <ul>
+    
+        @foreach (var question in Model.deserializedContent.questions)
+        {
+            <li>
+                <strong>Type: @question.type</strong>
+                <p>Question: @question.question</p>
+                 @if (question.options != null)
+            {
+                <ul>
+                    @foreach (var option in question.options)
+                    {
+                        <label>
+                    <input type="checkbox" name="q1" value="a"> @option</label>
+
+                    }<input type="hidden" name="correctAnswer" value="@question.answer" />
+                </ul>
+            }
+                <p>Answer: @question.answer</p>
+            </li>
+        }
+    </ul>
+}
+     
+            }
+</div>
+</div>
+
+</body>
+</html>
+ 
+
+

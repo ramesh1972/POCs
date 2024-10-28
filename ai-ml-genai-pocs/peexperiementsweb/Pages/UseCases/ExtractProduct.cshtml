@@ -1,0 +1,33 @@
+@page
+@model PEExperimentsWeb.Pages.ExtractProductModel
+@{
+    ViewData["Title"] = "Extract Product";
+}
+
+    <div class="text-center">
+        <h2 text-align: center>Extract Product Information </h2>
+         <form method="post">
+        <div class="mb-3">
+        <textarea id="ReviewTextArea" rows="6" class="form-control" asp-for="product.Review"  placeholder="Enter Review"></textarea>
+        </div>
+        <br>
+        <div class="center-button">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </form>
+    </div>
+
+       <!-- Display the response -->
+<div class="row">
+<div class="col">
+            @if (!string.IsNullOrEmpty(Model.Response))
+            {
+                <h2>Generated Result :</h2>
+                <p>@Model.Response</p>
+            }
+</div>
+</div>
+</div>
+ 
+
+

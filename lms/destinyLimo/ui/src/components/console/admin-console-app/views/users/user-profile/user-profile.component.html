@@ -1,0 +1,118 @@
+<div class="bg-light dark:bg-transparent min-vh-100 d-flex flex-column justify-content-left" style="margin-top: -10px"
+  *ngIf="user !== undefined">
+  <div style="width: 100%;">
+    <div class="grid-title-user-profile">Profile for User {{user?.userProfile?.firstName + ' ' +
+      user?.userProfile?.lastName}}</div>
+  </div>
+  <c-container style="width: 600px;margin-left: -35px;">
+    <c-row class="justify-content-left">
+      <c-col lg="7" md="9" xl="6" style="width: 450px;">
+        <c-card class="mx-4">
+          <form cForm style="padding: 10px;">
+            <div class="user-profile-container" style="background-color: lightgoldenrodyellow;">
+              <c-input-group class="mb-3" style="justify-content: center;">
+                <label class="user-profile-status" [ngStyle]="{'background-color': user?.userStatusBGColor }"
+                  style="border-top-right-radius: 6px;border-bottom-right-radius: 6px;">User is
+                  {{user?.userStatus}}</label>
+                <div class="user-profile-reject-row"
+                  *ngIf="user?.userStatus === 'Approved' || user?.userStatus === 'Pending Approval'">
+                  <span class="user-profile-field"
+                    style="width: 120px;height: 30px;padding:2px;padding-left:6px;">Reject Reason</span>
+                  <input class="user-profile-label"
+                    style="width: calc(100% - 115px);padding:2px;padding-left:6px;margin-right: -2px;height: 30px;"
+                    name="approveRejectReason" value="{{user?.approveRejectReason}}"
+                    [(ngModel)]="user.approveRejectReason" placeholder="Enter reject reason" />
+                </div>
+                <div style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+                 
+                  <div class="d-flex flex-row"
+                    style="justify-content: center;padding:10px;border:0px;margin-bottom: -5px;">
+                    <button *ngIf="user?.userStatus === 'Pending Approval' || user?.userStatus === 'Rejected'" cButton
+                      color="primary" style="width: fit-content;height:40px;text-align: center;"
+                      (click)="onApprove()">{{user?.userStatus === 'Rejected' ? 'Approve Again': 'Approve'}}</button>
+                    <button *ngIf="user?.userStatus === 'Approved' || user?.userStatus === 'Pending Approval'" cButton
+                      color="warning" style="width: fit-content;height:40px;margin-left:10px; text-align: center"
+                      (click)="onReject()">Reject</button>
+                    <button *ngIf="user?.userStatus !== 'Locked'" cButton color="primary" variant="outline"
+                      style="width: fit-content; height:40px; margin-left:10px;text-align: center;"
+                      (click)="onLock()">Lock</button>
+                    <button *ngIf="user?.userStatus === 'Locked'" cButton color="primary" variant="outline"
+                      style="width: fit-content;height:40px;margin-left:10px;text-align: center;"
+                      (click)="onUnlock()">Unlock</button>
+                  </div>
+                  <label *ngIf="successResponse !== ''"
+                    style="color: green; margin-left: 10px;margin-top: 10px;font-size: 18px;">{{successResponse}}</label>
+                </div>
+
+              </c-input-group>
+            </div>
+
+            <div class="user-profile-container">
+              <c-input-group class="mb-3">
+                <span class="user-profile-field" style="width:110px">
+                  <svg cIcon name="cilUser"></svg>
+                  Username
+                </span>
+                <label class="user-profile-label" style="width:100px">{{user?.username}}</label>
+              </c-input-group>
+
+              <c-input-group class="mb-3">
+                <span class="user-profile-field">Full Name</span>
+                <label class="user-profile-label" style="width: fit-content;">{{user?.userProfile?.firstName + '' +
+                  user?.userProfile?.lastName}}</label>
+
+              </c-input-group>
+
+              <c-input-group class="mb-4" style="margin-bottom: 10px;">
+                <span class="user-profile-field">Photo</span>
+                <img src="{{user?.userProfile?.avatar}}" alt="User Photo"
+                  style="margin-left:12px;width: 40px;height:40px;border-radius: 50%;border: 1px solid lightgray;">
+              </c-input-group>
+
+              <c-input-group class="mb-3">
+                <span class="user-profile-field">
+                  Date of Birth
+                </span>
+                <label class="user-profile-label" style="width:100px">{{user?.userProfile?.dob |
+                  date:'shortDate'}}</label>
+              </c-input-group>
+            </div>
+
+            <div class="user-profile-container">
+              <c-input-group class="mb-3">
+                <span class="user-profile-field" style="width:80px">Email</span>
+                <label class="user-profile-label" style="width:220px">{{user?.userProfile?.email}}</label>
+              </c-input-group>
+              <c-input-group class="mb-3">
+                <span class="user-profile-field" style="width:80px">Mobile</span>
+                <label class="user-profile-label" style="width:220px">{{user?.userProfile?.phoneNumber}}</label>
+              </c-input-group>
+
+              <c-input-group class="mb-3">
+                <span class="user-profile-field" style="width:80px">Address</span>
+                <span class="user-profile-span">{{user?.userProfile?.address}}</span>
+              </c-input-group>
+            </div>
+
+            <div class="user-profile-container">
+              <c-input-group class="mb-3">
+                <span class="user-profile-field" style="width: 140px;">License Number</span>
+                <label class="user-profile-label" style="width:180px">{{user?.userProfile?.licenseNumber}}</label>
+              </c-input-group>
+              <c-input-group class="mb-3">
+                <span class="user-profile-field" style="width: 140px;">Issue Date</span>
+                <label class="user-profile-label" style="width:180px">{{user?.userProfile?.licenseIssueDate |
+                  date:'shortDate'}}</label>
+              </c-input-group>
+              <c-input-group class="mb-3">
+                <span class="user-profile-field" style="width: 140px;">Expiry Date</span>
+                <label class="user-profile-label" style="width:180px">{{user?.userProfile?.licenseExpiryDate |
+                  date:'shortDate'}}</label>
+              </c-input-group>
+            </div>
+          </form>
+        </c-card>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>

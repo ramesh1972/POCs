@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="grid-header-row">
+        <div class="grid-title">View Course Videos & Mark Complete</div>
+
+        <div class="complete-checkboxes">
+            <form [formGroup]="formRadio1">
+                <c-button-group aria-label="Basic radio toggle button group" role="group">
+                    <input class="btn-check" formControlName="radio1" type="radio" value="All" />
+                    <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline"
+                        color="danger">All</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Completed" />
+                    <label (click)="setRadioValue('Completed')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Completed</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="YetToComplete" />
+                    <label (click)="setRadioValue('YetToComplete')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Yet To Complete</label>
+
+                </c-button-group>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <div class="row" style="row-gap: 20px">
+            <div class="col-md-4" *ngFor="let video of videos">
+                <div
+                    style="display: flex;flex-direction: row;justify-content: flex-end;  align-self: end;width:100%;z-index: 101;padding-right:10px;">
+                    <h6 cCardSubtitle class="mb-2" class="overlay-text"
+                        style="background-color: lightcyan;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
+                        Category&nbsp;
+                    </h6>
+                    <h6 cCardSubtitle class="mb-2" class="overlay-text"
+                        style="border-bottom-left-radius: 0px;border-top-left-radius: 0px;">
+                        {{ video.category_name }}
+                    </h6>
+                </div>
+                <c-card class="mb-3"
+                    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);background-color: rgb(195 225 209 / 70%);">
+                    <img [cCardImg] src="/images/backgrounds/courses.jpg"
+                        style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
+
+                    <span cCardTitle class="overlay-text-title">{{video.title}}</span>
+
+                    <c-card-body class="card-body-container">
+                        <video width="100%" controls height="100">
+                            <source [src]="video.url" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </c-card-body>
+                    <c-card-footer style="background-color: rgba(236, 246, 67, 0.7);">
+
+                        <div class="d-flex justify-content-between">
+                            <button cButton color="light">Mark Complete</button>
+                        </div>
+
+                    </c-card-footer>
+                </c-card>
+            </div>
+        </div>
+    </div>
+</div>

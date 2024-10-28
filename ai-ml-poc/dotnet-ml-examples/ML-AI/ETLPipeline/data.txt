@@ -1,0 +1,5 @@
+Label,Text
+1,This is a positive sentence
+0,Negative sentiment detected in this text
+1,Feeling good about this
+0,Not happy with the outcome

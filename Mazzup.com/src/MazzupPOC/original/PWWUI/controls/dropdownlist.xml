@@ -1,0 +1,12 @@
+﻿<sections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xmls/sections.xsd">
+  <section type="section" id="ddl_container" position="stack" left="0" top="0" width="400" height="20" border_thickness="0" bar="none" is_sizable="false"></section>
+  <section type="section" id="ddl_drop_arrow" position="stack" left="401" top="0" width="20" height="20" border_thickness="0" bar="none" is_sizable="false">
+     <html>
+      <body></body>
+    </html>
+  </section>
+  <section real_type="script" id="script1" owning_sections="ddl_drop_arrow, ddl_container" event="onclick">
+    alert(100);
+  </section>
+
+</sections>

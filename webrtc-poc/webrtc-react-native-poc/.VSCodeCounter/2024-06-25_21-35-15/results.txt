@@ -1,0 +1,46 @@
+Date : 2024-06-25 21:35:15
+Directory : d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc
+Total : 18 files,  2443 codes, 221 comments, 715 blanks, all 3379 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| TypeScript |         18 |      2,443 |        221 |        715 |      3,379 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                       | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                          |         18 |      2,443 |        221 |        715 |      3,379 |
+| . (Files)                                                                                                  |          7 |        997 |         77 |        286 |      1,360 |
+| core                                                                                                       |          3 |      1,227 |        119 |        370 |      1,716 |
+| models                                                                                                     |          6 |        176 |         24 |         48 |        248 |
+| utils                                                                                                      |          2 |         43 |          1 |         11 |         55 |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                   | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\WebRTCAudioStreaming.ts           | TypeScript |         24 |          2 |          8 |         34 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\WebRTCHandler.ts                  | TypeScript |        770 |         64 |        209 |      1,043 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\WebRTCSendAudioMessage.ts         | TypeScript |         67 |          2 |         21 |         90 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\WebRTCSendSystemCommandMessage.ts | TypeScript |         24 |          2 |          9 |         35 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\WebRTCSendTextMessage.ts          | TypeScript |         26 |          2 |         11 |         39 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\WebRTCSendVideoMessage.ts         | TypeScript |         61 |          3 |         19 |         83 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\WebRTCVideoStreaming.ts           | TypeScript |         25 |          2 |          9 |         36 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\core\WebRTCCallService.ts         | TypeScript |        819 |         72 |        242 |      1,133 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\core\WebRTCCallServiceFacade.ts   | TypeScript |        275 |         27 |         86 |        388 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\core\WebRTCChannelsCollection.ts  | TypeScript |        133 |         20 |         42 |        195 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\models\Channel.ts                 | TypeScript |         11 |          1 |          1 |         13 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\models\ChannelMessage.ts          | TypeScript |         26 |          2 |          2 |         30 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\models\ChannelMessages.ts         | TypeScript |          5 |          1 |          2 |          8 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\models\DataChannelLabel.ts        | TypeScript |         86 |         13 |         23 |        122 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\models\SignalingMessage.ts        | TypeScript |          8 |          1 |          3 |         12 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\models\SystemCommand.ts           | TypeScript |         40 |          6 |         17 |         63 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\utils\colabLog.ts                 | TypeScript |         12 |          1 |          3 |         16 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\libs\webrtc\utils\turnServerList.ts           | TypeScript |         31 |          0 |          8 |         39 |
+| Total                                                                                                      |            |      2,443 |        221 |        715 |      3,379 |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

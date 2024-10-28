@@ -1,0 +1,17 @@
+User: Welcome to OpenAI chat!
+User: what is the capital of Germany?
+AI: The capital of Germany is Berlin.
+User: how much population does it have?
+AI: As of 2021, Berlin has an estimated population of around 3.8 million people.
+User: who are its neighbours
+AI: Germany shares borders with several countries. Its neighboring countries are:
+
+1. Denmark (to the north)
+2. Poland (to the east)
+3. Czech Republic (to the southeast)
+4. Austria (to the south)
+5. Switzerland (to the southwest)
+6. France (to the west)
+7. Luxembourg (to the southwest)
+8. Belgium (to the northwest)
+

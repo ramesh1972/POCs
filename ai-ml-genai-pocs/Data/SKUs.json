@@ -1,0 +1,227 @@
+[
+    {
+        "SKU": "HA1001",
+        "Product": "Refrigerator",
+        "Brand": "Samsung",
+        "Model": "RF28HMEDBSR",
+        "Type": "French Door",
+        "Price": 1299.99,
+        "Stock": 50
+    },
+    {
+        "SKU": "HA1002",
+        "Product": "Washing Machine",
+        "Brand": "LG",
+        "Model": "WT7100CW",
+        "Type": "Top Load",
+        "Price": 699.99,
+        "Stock": 40
+    },
+    {
+        "SKU": "HA1003",
+        "Product": "Microwave Oven",
+        "Brand": "Panasonic",
+        "Model": "NN-SN936",
+        "Type": "Countertop",
+        "Price": 119.99,
+        "Stock": 30
+    },
+    {
+        "SKU": "HA1004",
+        "Product": "Dishwasher",
+        "Brand": "Whirlpool",
+        "Model": "WDT730PAHZ",
+        "Type": "Built-In",
+        "Price": 749.99,
+        "Stock": 20
+    },
+    {
+        "SKU": "HA1005",
+        "Product": "Air Conditioner",
+        "Brand": "Frigidaire",
+        "Model": "FFRA051WAE",
+        "Type": "Window",
+        "Price": 229.99,
+        "Stock": 35
+    },
+    {
+        "SKU": "HA1006",
+        "Product": "Television",
+        "Brand": "Sony",
+        "Model": "XBR65X900F",
+        "Type": "LED",
+        "Price": 999.99,
+        "Stock": 15
+    },
+    {
+        "SKU": "HA1007",
+        "Product": "Coffee Maker",
+        "Brand": "Keurig",
+        "Model": "K-Elite",
+        "Type": "Single Serve",
+        "Price": 129.99,
+        "Stock": 25
+    },
+    {
+        "SKU": "HA1008",
+        "Product": "Toaster Oven",
+        "Brand": "Hamilton Beach",
+        "Model": "31127D",
+        "Type": "Convection",
+        "Price": 59.99,
+        "Stock": 45
+    },
+    {
+        "SKU": "HA1009",
+        "Product": "Vacuum Cleaner",
+        "Brand": "Dyson",
+        "Model": "V11 Animal",
+        "Type": "Cordless",
+        "Price": 499.99,
+        "Stock": 18
+    },
+    {
+        "SKU": "HA1010",
+        "Product": "Blender",
+        "Brand": "Ninja",
+        "Model": "BL610",
+        "Type": "Countertop",
+        "Price": 79.99,
+        "Stock": 22
+    },
+    {
+        "SKU": "HA1011",
+        "Product": "Iron",
+        "Brand": "Rowenta",
+        "Model": "DW5080",
+        "Type": "Steam",
+        "Price": 89.99,
+        "Stock": 28
+    },
+    {
+        "SKU": "HA1012",
+        "Product": "Mixer",
+        "Brand": "KitchenAid",
+        "Model": "KP26M1X",
+        "Type": "Stand",
+        "Price": 349.99,
+        "Stock": 12
+    },
+    {
+        "SKU": "HA1013",
+        "Product": "Fan",
+        "Brand": "Honeywell",
+        "Model": "HT-900",
+        "Type": "Tabletop",
+        "Price": 19.99,
+        "Stock": 38
+    },
+    {
+        "SKU": "HA1014",
+        "Product": "Rice Cooker",
+        "Brand": "Zojirushi",
+        "Model": "NS-ZCC10",
+        "Type": "Fuzzy Logic",
+        "Price": 159.99,
+        "Stock": 27
+    },
+    {
+        "SKU": "HA1015",
+        "Product": "Hair Dryer",
+        "Brand": "BaBylissPRO",
+        "Model": "Nano Titanium",
+        "Type": "Professional",
+        "Price": 69.99,
+        "Stock": 33
+    },
+    {
+        "SKU": "HA1016",
+        "Product": "Food Processor",
+        "Brand": "Cuisinart",
+        "Model": "DFP-14BCNY",
+        "Type": "14-Cup",
+        "Price": 199.99,
+        "Stock": 19
+    },
+    {
+        "SKU": "HA1017",
+        "Product": "Electric Kettle",
+        "Brand": "Breville",
+        "Model": "BKE820XL",
+        "Type": "Variable Temperature",
+        "Price": 129.99,
+        "Stock": 29
+    },
+    {
+        "SKU": "HA1018",
+        "Product": "Garment Steamer",
+        "Brand": "J-2000 Jiffy",
+        "Model": "Personal Series",
+        "Type": "Upright",
+        "Price": 199.99,
+        "Stock": 21
+    },
+    {
+        "SKU": "HA1019",
+        "Product": "Oven",
+        "Brand": "GE Appliances",
+        "Model": "JB645RKSS",
+        "Type": "Electric Range",
+        "Price": 599.99,
+        "Stock": 17
+    },
+    {
+        "SKU": "HA1020",
+        "Product": "Juicer",
+        "Brand": "Breville",
+        "Model": "JE98XL",
+        "Type": "Centrifugal",
+        "Price": 149.99,
+        "Stock": 24
+    },
+    {
+        "SKU": "HA1021",
+        "Product": "Air Purifier",
+        "Brand": "Blueair",
+        "Model": "Classic 480i",
+        "Type": "HEPA",
+        "Price": 449.99,
+        "Stock": 14
+    },
+    {
+        "SKU": "HA1022",
+        "Product": "Blender",
+        "Brand": "Vitamix",
+        "Model": "E310 Explorian",
+        "Type": "High-Performance",
+        "Price": 349.99,
+        "Stock": 23
+    },
+    {
+        "SKU": "HA1023",
+        "Product": "Hand Mixer",
+        "Brand": "Cuisinart",
+        "Model": "HM-90S",
+        "Type": "9-Speed",
+        "Price": 59.99,
+        "Stock": 36
+    },
+    {
+        "SKU": "HA1024",
+        "Product": "Water Heater",
+        "Brand": "Rheem",
+        "Model": "Performance Platinum",
+        "Type": "Electric",
+        "Price": 599.99,
+        "Stock": 16
+    },
+    {
+        "SKU": "HA1025",
+        "Product": "Food Dehydrator",
+        "Brand": "Excalibur",
+        "Model": "3926TB",
+        "Type": "9-Tray",
+        "Price": 249.99,
+        "Stock": 31
+    }
+]

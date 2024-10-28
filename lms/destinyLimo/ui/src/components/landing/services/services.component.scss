@@ -1,0 +1,34 @@
+.services-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    padding-top: 140px;
+    margin-top:50px;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-item {
+    background: #fff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+    margin: 0 0 10px;
+}
+
+.service-item p {
+    margin: 0;
+}

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{7FFBAFDD-FE51-4D8A-9BF5-3DDF97F5E973}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MinSpace</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_NDEBUG;WIN32;_CONSOLE;_X86_;XP_WIN;XP_WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>NS_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\MyMoz.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Release\MyMoz.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\MyMoz.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>C:\Mozilla\Mozilla\obj-i586-pc-msvc\dist\bin\MyMozR.exe</OutputFile>
+      <AdditionalDependencies>xpcom.lib;gkgfx.lib;plds4.lib;nspr4.lib;profdirserviceprovider_s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CONSOLE;_X86_;XP_WIN;XP_WIN32;NS_BUILD_REFCNT_LOGGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>NS_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\MyMoz.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Debug\MyMoz.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\MyMoz.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>C:\Mozilla\Mozilla\obj-i586-pc-msvc\dist\bin\MyMoz.exe</OutputFile>
+      <AdditionalDependencies>xpcom.lib;gkgfx.lib;plds4.lib;nspr4.lib;profdirserviceprovider_s.lib;cgipp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> /out:"/Mozilla/Mozilla/obj-i586-pc-msvc/dist/bin/MyMoz.exe"</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="nsWebBrowserChrome.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="rvDOMEventListener.cpp" />
+    <ClCompile Include="rvFormWindow.cpp" />
+    <ClCompile Include="rvMainWindow.cpp" />
+    <ClCompile Include="rvMyMozApp.cpp" />
+    <ClCompile Include="rvOpenURL.cpp" />
+    <ClCompile Include="rvParentWindow.cpp" />
+    <ClCompile Include="rvRuleBase.cpp" />
+    <ClCompile Include="rvRuleCreator.cpp" />
+    <ClCompile Include="rvRuleProcessor.cpp" />
+    <ClCompile Include="rvRuleRenderer.cpp" />
+    <ClCompile Include="rvRulesCollection.cpp" />
+    <ClCompile Include="rvRulesDefines.cpp" />
+    <ClCompile Include="rvRuleSetProcessor.cpp" />
+    <ClCompile Include="rvRulesProcessor.cpp" />
+    <ClCompile Include="rvWindowCreator.cpp" />
+    <ClCompile Include="rvWinMain.cpp" />
+    <ClCompile Include="rvXmlDocument.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="viewer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nsWebBrowserChrome.h" />
+    <ClInclude Include="nsWidgetSupport.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="rvDOMEventListener.h" />
+    <ClInclude Include="rvFileLogger.h" />
+    <ClInclude Include="rvFormWindow.h" />
+    <ClInclude Include="rvMainWindow.h" />
+    <ClInclude Include="rvMyMozApp.h" />
+    <ClInclude Include="rvOpenURL.h" />
+    <ClInclude Include="rvParentWindow.h" />
+    <ClInclude Include="rvRuleBase.h" />
+    <ClInclude Include="rvRuleCreator.h" />
+    <ClInclude Include="rvRuleProcessor.h" />
+    <ClInclude Include="rvRuleRenderer.h" />
+    <ClInclude Include="rvRuleResult.h" />
+    <ClInclude Include="rvRulesCollection.h" />
+    <ClInclude Include="rvRulesDefines.h" />
+    <ClInclude Include="rvRuleSetProcessor.h" />
+    <ClInclude Include="rvRulesProcessor.h" />
+    <ClInclude Include="rvWindowCreator.h" />
+    <ClInclude Include="rvXmlDocument.h" />
+    <ClInclude Include="rvXPCOMIDs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cursor1.cur" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,34 @@
+﻿<!-- Currently the file contains 2 sets of Custom Codes which point to 2 different websites. -->
+<!-- Each code set is lanuched on its own thread -->
+<!-- 3 kinds of resources are created in total -->
+<CustomCrawlerCodes>
+  <CustomCrawlerCode Url="http://sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001271886" Method="Get">
+      <Element Tag="HTML">
+        <Element Tag="BODY" Pos="1">
+          <Element Tag="TABLE" class="tableFile2" summary="Results">
+            <Instruction Type="Select" Cols="0,1,2,3">
+              <MetaData Type="String" Value="Company Filing"></MetaData>
+              <MetaData Type="String" Value="$document:title"></MetaData>
+            </Instruction>
+            <Instruction Type="Traverse" Method="Get" Cols="1">
+              <MetaData Type="String" Col="1" Value="$href"></MetaData>
+              <MetaData Type="String" Col="1" Value="$innerText"></MetaData>
+              <MetaData Type="Date" Col="3"></MetaData>
+            </Instruction>
+          </Element>
+        </Element>
+      </Element>
+  </CustomCrawlerCode>
+  <CustomCrawlerCode Url="http://www.bloomberg.com/markets/" Method="Get">
+    <Element Tag="HTML">
+      <Element Tag="BODY" Pos="1">
+        <Element Tag="DIV" id="content" class="clearfix">
+          <Instruction Type="Select">
+            <MetaData Type="String" Value="Bloomberg Major Markets"></MetaData>
+            <MetaData Type="String" Value="$document:title"></MetaData>
+          </Instruction>
+        </Element>
+      </Element>
+    </Element>
+  </CustomCrawlerCode>
+</CustomCrawlerCodes>

@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="grid-header-row">
+        <div class="grid-title">View Course Files & Mark Complete</div>
+
+        <div class="complete-checkboxes">
+            <form [formGroup]="formRadio1">
+                <c-button-group aria-label="Basic radio toggle button group" role="group">
+                    <input class="btn-check" formControlName="radio1" type="radio" value="All" />
+                    <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline"
+                        color="danger">All</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Completed" />
+                    <label (click)="setRadioValue('Completed')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Completed</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="YetToComplete" />
+                    <label (click)="setRadioValue('YetToComplete')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Yet To Complete</label>
+                </c-button-group>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let file of files">
+                <img [src]="fileTypeIcon(file.file_name)" alt="File Type Icon" width="48" height="48" class="mr-2"
+                    class="overlay-file-image">
+                <div
+                    style="display: flex;flex-direction: row;justify-content: flex-end;  align-self: end;width:100%;z-index: 101;padding-right:10px;">
+                    <h6 cCardSubtitle class="mb-2" class="overlay-text"
+                        style="background-color: lightcyan;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
+                        Category&nbsp;
+                    </h6>
+                    <h6 cCardSubtitle class="mb-2" class="overlay-text"
+                        style="border-bottom-left-radius: 0px;border-top-left-radius: 0px;">
+                        {{ file.category_name }}
+                    </h6>
+                </div>
+                <c-card class="mb-3"
+                    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);background-color:rgb(195 225 209 / 70%);">
+
+                    <img [cCardImg] src="/images/backgrounds/courses.jpg"
+                        style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
+
+                    <span cCardTitle class="overlay-text-title">{{file.title}}</span>
+
+                    <c-card-body class="card-body-container" style="background-color: white;">
+                        <p class="card-text">{{ file.description }}</p>
+                    </c-card-body>
+
+                    <c-card-footer style="background-color: rgba(236, 246, 67, 0.7);">
+
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <a [href]="file.file_name" target="_blank" class="btn btn-light">View File</a>
+                            </div>
+
+                            <button cButton color="light">Mark Complete</button>
+                        </div>
+
+                    </c-card-footer>
+                </c-card>
+            </div>
+        </div>
+    </div>
+</div>

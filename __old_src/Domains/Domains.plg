@@ -1,0 +1,50 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Domains - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\rameshv\LOCALS~1\Temp\RSP1DC.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Domains.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\rameshv\LOCALS~1\Temp\RSP1DC.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Domains.pdb" /debug /machine:I386 /out:"Debug/Domains.exe" /pdbtype:sept  ".\Debug\Domains.obj" ".\Debug\DomainsDlg.obj" ".\Debug\StdAfx.obj" ".\Debug\Domains.res" "
+<h3>Output Window</h3>
+Compiling...
+DomainsDlg.cpp
+d:\my files\projects\personal\domains\debug\activeds.tlh(362) : error C2011: '_SYSTEMTIME' : 'struct' type redefinition
+d:\my files\projects\personal\domains\debug\activeds.tlh(482) : error C2011: '_LARGE_INTEGER' : 'union' type redefinition
+d:\my files\projects\personal\domains\debug\activeds.tlh(531) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+d:\my files\projects\personal\domains\debug\activeds.tlh(1618) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+d:\my files\projects\personal\domains\debug\activeds.tlh(2128) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+d:\my files\projects\personal\domains\debug\activeds.tlh(3840) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(177) : error C2065: 'IDsBrowseDomainTreePtr' : undeclared identifier
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(177) : error C2065: 'pDSB' : undeclared identifier
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(177) : warning C4552: '*' : operator has no effect; expected operator with side-effect
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(180) : error C2065: 'CLSID_DsDomainTreeBrowser' : undeclared identifier
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(183) : error C2065: 'IID_IDsBrowseDomainTree' : undeclared identifier
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(187) : error C2227: left of '->SetComputer' must point to class/struct/union
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(190) : error C2146: syntax error : missing ';' before identifier 'hr'
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(190) : error C2227: left of '->BrowseTo' must point to class/struct/union
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(190) : error C2065: 'GetTopDeskWindow' : undeclared identifier
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(190) : error C2065: 'DBDTF_RETURNFQDN' : undeclared identifier
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(197) : error C2227: left of '->GetDomains' must point to class/struct/union
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(197) : error C2065: 'domains' : undeclared identifier
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(200) : error C2227: left of '->FlushCachedDomains' must point to class/struct/union
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(201) : error C2227: left of '->SetComputer' must point to class/struct/union
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(202) : error C2227: left of '->GetDomains' must point to class/struct/union
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(205) : error C2227: left of '->FreeDomains' must point to class/struct/union
+D:\My Files\Projects\Personal\Domains\DomainsDlg.cpp(207) : error C2227: left of '->Release' must point to class/struct/union
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+Domains.exe - 18 error(s), 5 warning(s)
+</pre>
+</body>
+</html>

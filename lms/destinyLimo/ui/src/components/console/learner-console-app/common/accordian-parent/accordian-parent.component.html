@@ -1,0 +1,36 @@
+<div class="content-root-container">
+    <div class="grid-header-row">
+        <div class="edit-text">
+            <strong>* Click on an Item to Expand/Collpase</strong>
+        </div>
+    </div>
+    <c-accordion style="z-index: 2;" [alwaysOpen]="true">
+        <ng-container *ngFor="let listItem of list; let i = index">
+            <c-accordion-item #item="cAccordionItem" style="z-index: 2;">
+                <ng-template cTemplateId="accordionHeaderTemplate">
+                    <button (click)="item.toggleItem()" [collapsed]="!item.visible" cAccordionButton>
+                        {{ listItem.title }}
+                    </button>
+                </ng-template>
+                <ng-template cTemplateId="accordionBodyTemplate">
+                    <div class="accordion-body" [ngStyle]="{'background-color': 'white'}">
+                        <div class="acc-body-container">
+                            <ng-container *ngIf="myAccordianBodyTemplate">
+                                <ng-container
+                                    *ngTemplateOutlet="myAccordianBodyTemplate; context: { listItem: listItem }">
+                                </ng-container>
+                            </ng-container>
+                        </div>
+                        <div class="acc-body-header-row">
+                            <div class="acc-body-buttons">
+                                <input cButton color="primary" value="Mark Complete" *ngIf="!listItem.completed"
+                                    (click)="this.onComplete(i)" />
+                            </div>
+                        </div>
+
+                    </div>
+                </ng-template>
+            </c-accordion-item>
+        </ng-container>
+    </c-accordion>
+</div>

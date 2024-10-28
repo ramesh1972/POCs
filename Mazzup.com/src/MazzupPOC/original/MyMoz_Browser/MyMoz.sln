@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyMoz", "MyMoz.vcxproj", "{7FFBAFDD-FE51-4D8A-9BF5-3DDF97F5E973}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FFBAFDD-FE51-4D8A-9BF5-3DDF97F5E973}.Debug|x86.ActiveCfg = Debug|Win32
+		{7FFBAFDD-FE51-4D8A-9BF5-3DDF97F5E973}.Debug|x86.Build.0 = Debug|Win32
+		{7FFBAFDD-FE51-4D8A-9BF5-3DDF97F5E973}.Release|x86.ActiveCfg = Release|Win32
+		{7FFBAFDD-FE51-4D8A-9BF5-3DDF97F5E973}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39327AB5-425E-490D-B710-E052B99B6D64}
+	EndGlobalSection
+EndGlobal

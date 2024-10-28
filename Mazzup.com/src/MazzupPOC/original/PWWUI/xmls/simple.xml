@@ -1,0 +1,18 @@
+﻿<sections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Sections.xsd">
+  <section type="section" id="left_section" position="dock" dock_position="left" left="0" top="0" width="400" height="500" border_thickness="5" bar="left" is_sizable="true" url="aspx/Explorer.aspx">
+
+  </section>
+  <section type="section" id="right_section" position="dock" dock_position="right" left="400" top="0" width="700" height="500" border_thickness="15" bar="top" is_sizable="true">
+    <html>
+      <table>
+        <tr>
+          <td>Ram</td>
+          <td>Vis</td>
+        </tr>
+        <tr>
+          <td colspan="2">CapitalIQ</td>
+        </tr>
+      </table>
+    </html>
+  </section>
+</sections>

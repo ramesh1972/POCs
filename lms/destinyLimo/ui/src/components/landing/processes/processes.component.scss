@@ -1,0 +1,66 @@
+.processes-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    padding-top: 140px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.processes-list {
+    list-style-type: none;
+    padding: 0;
+    counter-reset: step-counter;
+}
+
+.process-item {
+    display: flex;
+    align-items: center;
+    background: #d6eba3;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.process-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.step-number {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.step-content {
+    animation: fadeIn 1.5s ease-in-out;
+    width: 400%;
+}
+
+.step-content h3 {
+    margin: 0 0 10px;
+    align-items: start;
+    display: flex;
+}
+
+.step-content p {
+    margin: 0;
+    align-items: start;
+    display: flex;
+    text-align: left;
+
+}

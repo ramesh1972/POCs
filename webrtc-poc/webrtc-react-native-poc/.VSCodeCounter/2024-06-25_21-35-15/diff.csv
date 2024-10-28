@@ -1,0 +1,60 @@
+"filename", "language", "TypeScript", "JSON with Comments", "TypeScript JSX", "JSON", "JavaScript", "Gradle", "Batch", "Java Properties", "Markdown", "XML", "comment", "blank", "total"
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 0, -31, 0, 0, -20, -51
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\build.gradle", "Gradle", 0, 0, 0, 0, 0, -84, 0, 0, 0, 0, -67, -22, -173
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\debug\AndroidManifest.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -5, 0, -3, -8
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\main\AndroidManifest.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -34, 0, 0, -34
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\main\res\drawable\rn_edit_text_material.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -12, -23, -3, -38
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\main\res\drawable\splashscreen.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, 0, -3
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -5, 0, 0, -5
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -5, 0, 0, -5
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\main\res\values-night\colors.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\main\res\values\colors.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -6, 0, 0, -6
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\main\res\values\strings.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -6, 0, 0, -6
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\app\src\main\res\values\styles.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, -17, 0, 0, -17
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\build.gradle", "Gradle", 0, 0, 0, 0, 0, -33, 0, 0, 0, 0, -3, -6, -42
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\gradle.properties", "Java Properties", 0, 0, 0, 0, 0, 0, 0, -12, 0, 0, -33, -13, -58
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\gradle\wrapper\gradle-wrapper.properties", "Java Properties", 0, 0, 0, 0, 0, 0, 0, -7, 0, 0, 0, -1, -8
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\gradlew.bat", "Batch", 0, 0, 0, 0, 0, 0, -41, 0, 0, 0, -30, -22, -93
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\android\settings.gradle", "Gradle", 0, 0, 0, 0, 0, -14, 0, 0, 0, 0, 0, -5, -19
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\app.json", "JSON", 0, 0, 0, -37, 0, 0, 0, 0, 0, 0, 0, -1, -38
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\app\(tabs)\_layout.tsx", "TypeScript JSX", 0, 0, -51, 0, 0, 0, 0, 0, 0, 0, 0, -4, -55
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\app\(tabs)\activechatwindow.tsx", "TypeScript JSX", 0, 0, -99, 0, 0, 0, 0, 0, 0, 0, 0, -4, -103
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\app\(tabs)\index.tsx", "TypeScript JSX", 0, 0, -64, 0, 0, 0, 0, 0, 0, 0, -3, -14, -81
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\app\(tabs)\yourchannels.tsx", "TypeScript JSX", 0, 0, -99, 0, 0, 0, 0, 0, 0, 0, 0, -4, -103
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\app\+html.tsx", "TypeScript JSX", 0, 0, -25, 0, 0, 0, 0, 0, 0, 0, -10, -5, -40
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\app\+not-found.tsx", "TypeScript JSX", 0, 0, -29, 0, 0, 0, 0, 0, 0, 0, 0, -4, -33
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\app\_layout.tsx", "TypeScript JSX", 0, 0, -30, 0, 0, 0, 0, 0, 0, 0, -1, -7, -38
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\babel.config.js", "JavaScript", 0, 0, 0, 0, -6, 0, 0, 0, 0, 0, 0, -1, -7
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\Collapsible.tsx", "TypeScript JSX", 0, 0, -37, 0, 0, 0, 0, 0, 0, 0, 0, -5, -42
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\ExternalLink.tsx", "TypeScript JSX", 0, 0, -20, 0, 0, 0, 0, 0, 0, 0, -2, -3, -25
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\HelloWave.tsx", "TypeScript JSX", 0, 0, -31, 0, 0, 0, 0, 0, 0, 0, 0, -7, -38
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\ParallaxScrollView.tsx", "TypeScript JSX", 0, 0, -69, 0, 0, 0, 0, 0, 0, 0, 0, -8, -77
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\ThemedText.tsx", "TypeScript JSX", 0, 0, -55, 0, 0, 0, 0, 0, 0, 0, 0, -6, -61
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\ThemedView.tsx", "TypeScript JSX", 0, 0, -10, 0, 0, 0, 0, 0, 0, 0, 0, -5, -15
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\__tests__\ThemedText-test.tsx", "TypeScript JSX", 0, 0, -7, 0, 0, 0, 0, 0, 0, 0, 0, -4, -11
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-strip\call-events.js", "JavaScript", 0, 0, 0, 0, -77, 0, 0, 0, 0, 0, -2, -17, -96
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-strip\call-strip-chat.js", "JavaScript", 0, 0, 0, 0, -205, 0, 0, 0, 0, 0, 0, -22, -227
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-strip\call-strip-global.js", "JavaScript", 0, 0, 0, 0, -70, 0, 0, 0, 0, 0, -4, -5, -79
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-strip\index.js", "JavaScript", 0, 0, 0, 0, -3, 0, 0, 0, 0, 0, 0, -2, -5
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\call-window-audio.js", "JavaScript", 0, 0, 0, 0, -74, 0, 0, 0, 0, 0, -2, -11, -87
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\call-window-video.js", "JavaScript", 0, 0, 0, 0, -283, 0, 0, 0, 0, 0, -73, -75, -431
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\call-window.js", "JavaScript", 0, 0, 0, 0, -82, 0, 0, 0, 0, 0, -20, -23, -125
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\index.js", "JavaScript", 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, -2, -4
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\members.json", "JSON", 0, 0, 0, -32, 0, 0, 0, 0, 0, 0, 0, 0, -32
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\temp.json", "JSON", 0, 0, 0, -68, 0, 0, 0, 0, 0, 0, 0, 0, -68
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\channels-panel\ChannelList.tsx", "TypeScript JSX", 0, 0, -146, 0, 0, 0, 0, 0, 0, 0, -3, -15, -164
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\chat-window\ChatBox.tsx", "TypeScript JSX", 0, 0, -164, 0, 0, 0, 0, 0, 0, 0, -32, -46, -242
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\chat-window\ChatMessagesWindow.tsx", "TypeScript JSX", 0, 0, -64, 0, 0, 0, 0, 0, 0, 0, -3, -7, -74
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\navigation\TabBarIcon.tsx", "TypeScript JSX", 0, 0, -6, 0, 0, 0, 0, 0, 0, 0, -1, -3, -10
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\constants\Colors.ts", "TypeScript", -20, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4, -3, -27
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\hooks\useColorScheme.ts", "TypeScript", -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -2
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\hooks\useColorScheme.web.ts", "TypeScript", -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -5, -1, -9
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\hooks\useThemeColor.ts", "TypeScript", -14, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4, -5, -23
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\package-lock.json", "JSON", 0, 0, 0, -19693, 0, 0, 0, 0, 0, 0, 0, -1, -19694
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\package.json", "JSON", 0, 0, 0, -50, 0, 0, 0, 0, 0, 0, 0, -1, -51
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\scripts\reset-project.js", "JavaScript", 0, 0, 0, 0, -57, 0, 0, 0, 0, 0, -5, -12, -74
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\store\channelList.ts", "TypeScript", -40, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -5, -46
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\store\dummyMessages.ts", "TypeScript", -19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -22
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\tsconfig.json", "JSON with Comments", 0, -17, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -18
+"d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\views\ChatWindow.tsx", "TypeScript JSX", 0, 0, -289, 0, 0, 0, 0, 0, 0, 0, -24, -49, -362
+"Total", "-", -97, -17, -1295, -19880, -859, -131, -41, -19, -31, -94, -355, -487, -23306

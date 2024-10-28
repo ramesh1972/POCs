@@ -1,0 +1,124 @@
+<div class="answers-container-root">
+    <!-- display any new exams assigned -->
+
+    <div class="grid-header-new-exam" *ngIf="newExams!.length > 0">
+        <div class="grid-title-new-exam">You have {{newExams!.length}} Exams assigned. Please click on Start Exam below
+            to Start an Exam</div>
+            <ul class="new-exams-container">
+                <li *ngFor="let newExam of newExams; let i = index" class="new-exam-container">
+                    <div class="new-exam-text">{{i+1}}. Exam Assigned on {{newExam.dateCreatedString}}</div>
+                    <div> <button cButton color="warning" class="md-4" style="width:200px;height: 50px;"
+                            (click)="onStartAssignedExam(newExam.examId)">Start Exam</button>
+                    </div>
+                </li>
+            </ul>
+    </div>
+
+    <div class="grid-header-n ew-exam" *ngIf="!examStarted && newExams!.length === 0">
+        <div class="grid-title-new-exam">To Start an Exam Click on the Button Below</div>
+        <div class="grid-buttons">
+            <button cButton color="warning" class="md-4" style="width:250px;height: 120px;" (click)="onStart()">Start
+                Exam</button>
+        </div>
+    </div>
+
+    <div class="grid-header-new-exam" *ngIf="examStarted">
+        <div class="grid-title-new-exam">{{examQuestions.length}} Exam Questions to be Answered</div>
+        <div class=" grid-title-new-exam" style="font-size:16px">When the Exam is Completed Click on the Button below to
+            Submit Your Answers</div>
+        <div class="grid-buttons">
+            <button cButton color="primary" value="Submit Your Answers" (click)="this.onComplete()"
+                style="width:250px;height: 120px;align-self: center;">Submit Your Answers</button>
+        </div>
+    </div>
+
+    <div class="grid-header-row" *ngIf="examStarted">
+        <div class="complete-checkboxes">
+            <form [formGroup]="formRadio1">
+                <c-button-group aria-label="Basic radio toggle button group" role="group">
+                    <input class="btn-check" formControlName="radio1" type="radio" value="All" />
+                    <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline" color="danger">All
+                        {{this.examQuestions.length}}</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Attempted" />
+                    <label (click)="setRadioValue('Attempted')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Attempted {{attemptedCount}}</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="NotAttempted" />
+                    <label (click)="setRadioValue('NotAttempted')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Not Attempted Yet {{unAttemptedCount}}</label>
+                </c-button-group>
+            </form>
+        </div>
+    </div>
+
+    <div class="answers-container" *ngIf="this.examStarted">
+        <div *ngFor="let mcq of filteredMCQs; let i = index">
+            <c-card style="border: 2px solid blue">
+                <c-card-header class="title_header">
+                    <span class="card-title title-description">{{
+                        mcq.description }}</span>
+                    <span class="card-title title-category">Category:
+                        {{mcq.category_name}}</span><br />
+                </c-card-header>
+
+                <c-card-header>
+                    <span class="card-title"><b>{{ mcq.question_text }}</b></span>
+                </c-card-header>
+
+                <c-card-body style="background-color: rgba(200, 168, 243,.3);padding: 6px;padding-top: 16px;">
+                    <div class="form-check">
+                        <c-form-check [switch]="true"
+                            style="display: flex; flex-direction: row; vertical-align: middle; align-items: center;margin-bottom:6px">
+                            <input cFormCheckInput id="answer_1_{{i}}" type="checkbox" [checked]="false"
+                                [ngModel]="mcq.correct_1_answer"
+                                (ngModelChange)="this.onAttempted($event, mcq.question_id, 'choice1')">
+                            <label cFormCheckLabel for="answer_1_{{i}}"
+                                style="margin-left: -15px;margin-top: 2px;">{{mcq.answer_1}}</label>
+                        </c-form-check>
+                        <c-form-check [switch]="true"
+                            style="display: flex; flex-direction: row; vertical-align: middle; align-items: center;margin-bottom:6px">
+                            <input cFormCheckInput id="answer_2_{{i}}" type="checkbox" [checked]="false"
+                                [ngModel]="mcq.correct_2_answer"
+                                (ngModelChange)="this.onAttempted($event, mcq.question_id, 'choice2')">
+                            <label cFormCheckLabel for="answer_2_{{i}}"
+                                style="margin-left: -15px;margin-top: 2px;">{{mcq.answer_2}}</label>
+                        </c-form-check>
+                        <c-form-check [switch]="true"
+                            style="display: flex; flex-direction: row; vertical-align: middle; align-items: center;margin-bottom:6px">
+                            <input cFormCheckInput id="answer_3_{{i}}" type="checkbox" [checked]="false"
+                                [ngModel]="mcq.correct_3_answer"
+                                (ngModelChange)="this.onAttempted($event, mcq.question_id, 'choice3')">
+                            <label cFormCheckLabel for="answer_3_{{i}}"
+                                style="margin-left: -15px;margin-top: 2px;">{{mcq.answer_3}}</label>
+                        </c-form-check>
+                        <c-form-check [switch]="true"
+                            style="display: flex; flex-direction: row; vertical-align: middle; align-items: center;margin-bottom:6px">
+                            <input cFormCheckInput id="answer_4_{{i}}" type="checkbox" [checked]="false"
+                                [ngModel]="mcq.correct_4_answer"
+                                (ngModelChange)="this.onAttempted($event, mcq.question_id, 'choice4')">
+                            <label cFormCheckLabel for="answer_4_{{i}}"
+                                style="margin-left: -15px;margin-top: 2px;">{{mcq.answer_4}}</label>
+                        </c-form-check>
+                    </div>
+                    <div>
+                        <div style="padding-top:10px;padding-bottom: 10px;padding-left: 24px;">
+                            <span style="font-size: 16px;">* <strong
+                                    style="background-color: yellow;font-size: 12px;">Use
+                                    the switch control to mark correct answers </strong></span>
+                        </div>
+                    </div>
+                </c-card-body>
+            </c-card>
+        </div>
+    </div>
+
+    <div style="width: 100%;margin-top: 5px;display: flex;flex-direction: column;" *ngIf="examCompleted">
+        <hr>
+        <div class="grid-title-new-exam">Your Exam Results!</div>
+        <div>
+            <app-user-exam-answers [exam]="newExam" [userAnswers]="newExam.userExamAnswers" [mcqs]="examQuestions"
+                [categories]="categories"></app-user-exam-answers>
+        </div>
+    </div>
+</div>

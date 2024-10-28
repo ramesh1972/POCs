@@ -1,0 +1,41 @@
+<div class="grid-container">
+    <div class="grid-header-title-row">
+        <div class="grid-title">View All the Users in the System & Manage</div>
+        <div class="edit-text">
+            <strong>* Click on View Column to Load the User Profile & Manage the User</strong>
+        </div>
+    </div>
+
+    <div class="grid-header-row">
+        <div class="complete-checkboxes">
+            <form [formGroup]="formRadio1">
+                <c-button-group aria-label="Basic radio toggle button group" role="group">
+                    <input class="btn-check" formControlName="radio1" type="radio" value="All" checked />
+                    <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline"
+                        color="danger">All</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Approved" />
+                    <label (click)="setRadioValue('Approved')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Approved</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="NotApproved" />
+                    <label (click)="setRadioValue('NotApproved')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Not Approved Yet</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Locked" />
+                    <label (click)="setRadioValue('Locked')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Locked</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Rejected" />
+                    <label (click)="setRadioValue('Rejected')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Rejected</label>
+                </c-button-group>
+            </form>
+        </div>
+    </div>
+
+    <div id="tableContainer" style="margin-top:20px;height: 300px;min-width:840px"></div>
+    <div style="width: 100%;" *ngIf="selectedUser !== undefined">
+        <app-user-profile [user]="selectedUser" (userUpdated)="onUserUpdated($event)"></app-user-profile>
+    </div>
+</div>

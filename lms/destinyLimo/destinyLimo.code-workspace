@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../data/clients/uploads/destiny-uploads"
+		},
+		{
+			"path": "../builds"
+		},
+		{
+			"path": "../../../sample-templates/course-master"
+		}
+	],
+	"settings": {
+		"java.dependency.syncWithFolderExplorer": false,
+		"java.project.explorer.showNonJavaResources": false
+	}
+}

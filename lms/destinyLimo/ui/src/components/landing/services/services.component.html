@@ -1,0 +1,20 @@
+<div class="register"  style="margin-bottom: 120px;">
+
+    <div class="container-fluid">
+
+        <div class="row row-eq-height">
+            <div class="nopadding">
+
+                <div class="services-container">
+                    <h2>Our Amazing Services</h2>
+                    <ul class="services-list">
+                        <li class="service-item" *ngFor="let service of services; let i = index;">
+                            <h3>{{service.title}}</h3>
+                            <p>{{service.description}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

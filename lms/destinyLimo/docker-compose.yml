@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  webapi:
+    build:
+      context: ./appServer/DestinyLimoServer
+      dockerfile: Dockerfile
+    ports:
+      - "5293:5293"
+    network_mode: "host"
+    volumes:
+      - /var/clients/webforless/destiny-limo/prod/uploads:/uploads
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    deploy:
+      restart_policy:
+      condition: any
+
+  angular-app:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+      restart: unless-stopped
+    ports:
+      - "9080:9080"
+    deploy:
+      restart_policy:
+        condition: any

@@ -1,0 +1,38 @@
+Date : 2024-06-25 21:36:29
+Directory : d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-strip
+Total : 10 files,  -186 codes, -89 comments, -65 blanks, all -340 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |          8 |        -86 |        -89 |        -65 |       -240 |
+| JSON       |          2 |       -100 |          0 |          0 |       -100 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                     | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                        |         10 |       -186 |        -89 |        -65 |       -340 |
+| . (Files)                                                                                                |          4 |        355 |          6 |         46 |        407 |
+| ..                                                                                                       |          6 |       -541 |        -95 |       -111 |       -747 |
+| ..\call-window                                                                                           |          6 |       -541 |        -95 |       -111 |       -747 |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                 | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-strip\call-events.js        | JavaScript |         77 |          2 |         17 |         96 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-strip\call-strip-chat.js    | JavaScript |        205 |          0 |         22 |        227 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-strip\call-strip-global.js  | JavaScript |         70 |          4 |          5 |         79 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-strip\index.js              | JavaScript |          3 |          0 |          2 |          5 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\call-window-audio.js | JavaScript |        -74 |         -2 |        -11 |        -87 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\call-window-video.js | JavaScript |       -283 |        -73 |        -75 |       -431 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\call-window.js       | JavaScript |        -82 |        -20 |        -23 |       -125 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\index.js             | JavaScript |         -2 |          0 |         -2 |         -4 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\members.json         | JSON       |        -32 |          0 |          0 |        -32 |
+| d:\src\github-ramesh\POCs\webrtc-poc\webrtc-react-native-poc\components\call-window\temp.json            | JSON       |        -68 |          0 |          0 |        -68 |
+| Total                                                                                                    |            |       -186 |        -89 |        -65 |       -340 |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

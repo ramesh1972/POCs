@@ -1,0 +1,30 @@
+<div class="grid-container">
+    <app-grid-parent [dataGridHelper]="dataGridHelper" [resetButtonEnabled]="resetButtonEnabled"
+        [saveButtonEnabled]="saveButtonEnabled" addEntityString=""
+        title="View Questions Raised by the Learners, Answer them & do Bulk Save">
+        <div slot1>
+            <div class="grid-header-title-row">
+
+                <div class="complete-checkboxes">
+                    <form [formGroup]="formRadio1">
+                        <c-button-group aria-label="Basic radio toggle button group" role="group">
+                            <input class="btn-check" formControlName="radio1" type="radio" value="All" checked/>
+                            <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline"
+                                color="danger">All</label>
+
+                            <input class="btn-check" formControlName="radio1" type="radio" value="Answered" />
+                            <label (click)="setRadioValue('Answered')" cButton cFormCheckLabel variant="outline"
+                                color="danger">Answered</label>
+
+                            <input class="btn-check" formControlName="radio1" type="radio" value="Unanswered" />
+                            <label (click)="setRadioValue('Unanswered')" cButton cFormCheckLabel variant="outline"
+                                color="danger">Unanswered</label>
+                        </c-button-group>
+                    </form>
+                </div>
+            </div>
+            <div id="tableContainer" style="margin-top:20px;height:550px;min-width:800px"></div>
+        </div>
+    </app-grid-parent>
+
+</div>

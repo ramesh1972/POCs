@@ -1,0 +1,33 @@
+<div class="grid-container">
+    <div class="grid-header-title-row">
+        <div class="grid-title">View the Exams taken by All Users</div>
+    </div>
+
+    <div class="grid-header-row">
+        <div class="complete-checkboxes">
+            <form [formGroup]="formRadio1">
+                <c-button-group aria-label="Basic radio toggle button group" role="group">
+                    <input class="btn-check" formControlName="radio1" type="radio" value="All" checked />
+                    <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline"
+                        color="danger">All</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="HasExams" />
+                    <label (click)="setRadioValue('HasExams')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Learner's with Exams</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="HasNoExams" />
+                    <label (click)="setRadioValue('HasNoExams')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Learner's with No Exams'</label>
+                </c-button-group>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div id="tableContainer" style="margin-top:20px;height: 500px;min-width:800px"></div>
+    </div>
+
+    <div class="grid-header-title-row" *ngIf="newExamCreated">
+        <div class="grid-title">New Exam Created</div>
+    </div>
+</div>

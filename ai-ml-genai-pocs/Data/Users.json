@@ -1,0 +1,42 @@
+[
+    {
+        "User_ID": "1001",
+        "First_Name": "John",
+        "Last_Name": "Doe",
+        "Age": 30,
+        "Gender": "Male",
+        "City": "New York"
+    },
+    {
+        "User_ID": "1002",
+        "First_Name": "Alice",
+        "Last_Name": "Johnson",
+        "Age": 28,
+        "Gender": "Female",
+        "City": "Los Angeles"
+    },
+    {
+        "User_ID": "1003",
+        "First_Name": "Michael",
+        "Last_Name": "Smith",
+        "Age": 25,
+        "Gender": "Male",
+        "City": "Chicago"
+    },
+    {
+        "User_ID": "1004",
+        "First_Name": "Emily",
+        "Last_Name": "Brown",
+        "Age": 32,
+        "Gender": "Female",
+        "City": "San Francisco"
+    },
+    {
+        "User_ID": "1005",
+        "First_Name": "David",
+        "Last_Name": "Lee",
+        "Age": 35,
+        "Gender": "Male",
+        "City": "Houston"
+    }
+]

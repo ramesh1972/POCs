@@ -1,0 +1,24 @@
+<app-accordian-parent [list]="posts" [addEntityString]="newPostString" [onSlotAdd]="this.onAdd.bind(this)"
+    [onSlotDelete]="this.onDelete.bind(this)" [onSlotSave]="this.onSave.bind(this)"
+    [onSlotEdit]="this.onEdit.bind(this)" [onSlotCancel]="this.onCancel.bind(this)"
+    [softDeleteFlag]="true" [activeFlag]="true" [publicFlag]="true" title="View & Manage Posts">
+
+    <ng-template #myAccordianBodyTemplate; let-post="listItem">
+        <div *ngIf="!(post.editing || post.adding)" style="padding:10px;background-image:url('/images/backgrounds/background1.jpg');background-blend-mode: color-dodge;">
+            {{post.description}}
+        </div>
+        <div *ngIf="post.editing || post.adding">
+            <c-input-group class="mb-3" >
+                <span cInputGroupText>Title</span>
+                <input aria-label="Title" cFormControl placeholder="Title" [ngModel]="post.title"
+                    (ngModelChange)="post.title = $event" />
+            </c-input-group>
+            <c-input-group>
+                <span cInputGroupText>Post</span>
+                <textarea rows=10 aria-label="Post" cFormControl class="auto-resize"
+                    (input)="this.adjustTextareaHeight($event)" aria [ngModel]="post.description"
+                    (ngModelChange)="post.description = $event">{{post.description}}</textarea>
+            </c-input-group>
+        </div>
+    </ng-template>
+</app-accordian-parent>

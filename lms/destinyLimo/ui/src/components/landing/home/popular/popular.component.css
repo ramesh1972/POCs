@@ -1,0 +1,34 @@
+.page-section {
+    margin-top: 450px;
+}
+
+.popular_cats_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    text-wrap-style: pretty;
+    justify-content: center;
+    gap: 20px;
+    row-gap: normal;
+}
+
+.cat-card {
+    width: 30%;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(182, 239, 182, .7);
+    border: 6px white solid;
+    border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px 2px;
+}
+
+.spaced-item {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+@media screen and (max-width: 800px) {
+    .page-section {
+        margin-top: 700px;
+    }
+}

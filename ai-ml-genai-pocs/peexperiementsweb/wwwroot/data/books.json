@@ -1,0 +1,145 @@
+
+[
+      {
+        "review_id": 1,
+        "book_title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "rating": 5,
+        "review_text": "A timeless classic! The story of Jay Gatsby is both tragic and captivating. Fitzgerald's writing is brilliant."
+      },
+      {
+        "review_id": 2,
+        "book_title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "rating": 4,
+        "review_text": "This book addresses important social issues and has memorable characters. A must-read."
+      },
+      {
+        "review_id": 3,
+        "book_title": "1984",
+        "author": "George Orwell",
+        "rating": 5,
+        "review_text": "A dystopian masterpiece that remains relevant today. Orwell's vision of the future is chilling."
+      },
+      {
+        "review_id": 4,
+        "book_title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "rating": 4,
+        "review_text": "A delightful romantic novel with witty characters and social commentary."
+      },
+      {
+        "review_id": 5,
+        "book_title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "rating": 3,
+        "review_text": "Holden Caulfield's journey is a bit worse in my opinion, but it's not so good for a reason."
+      },
+      {
+        "review_id": 6,
+        "book_title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "rating": 5,
+        "review_text": "A magical adventure filled with unforgettable characters and a rich fantasy world."
+      },
+      {
+        "review_id": 7,
+        "book_title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "rating": 4,
+        "review_text": "A philosophical and inspirational tale of pursuing dreams and destiny."
+      },
+      {
+        "review_id": 8,
+        "book_title": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "rating": 5,
+        "review_text": "The start of an enchanting journey into the world of magic. A perfect book for all ages."
+      },
+      {
+        "review_id": 9,
+        "book_title": "Brave New World",
+        "author": "Aldous Huxley",
+        "rating": 4,
+        "review_text": "A thought-provoking exploration of a dystopian future society driven by pleasure and conformity."
+      },
+      {
+        "review_id": 10,
+        "book_title": "Moby-Dick",
+        "author": "Herman Melville",
+        "rating": 3,
+        "review_text": "A challenging but epic tale of obsession and the pursuit of the white whale."
+      },
+      {
+        "review_id": 11,
+        "book_title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "rating": 5,
+        "review_text": "An epic high-fantasy trilogy with a richly detailed world and a compelling story of good vs. evil."
+      },
+      {
+        "review_id": 12,
+        "book_title": "The Girl on the Train",
+        "author": "Paula Hawkins",
+        "rating": 4,
+        "review_text": "A gripping psychological thriller but its an average  and I liked only some parts."
+      },
+      {
+        "review_id": 13,
+        "book_title": "The Da Vinci Code",
+        "author": "Dan Brown",
+        "rating": 3,
+        "review_text": "An exciting but somewhat controversial thriller with a mix of art and religion."
+      },
+      {
+        "review_id": 14,
+        "book_title": "The Road",
+        "author": "Cormac McCarthy",
+        "rating": 4,
+        "review_text": "A harrowing and bleak post-apocalyptic journey that explores the bonds between a father and son."
+      },
+      {
+        "review_id": 15,
+        "book_title": "Gone Girl",
+        "author": "Gillian Flynn",
+        "rating": 5,
+        "review_text": "A brilliantly crafted, dark, and twisted story of a troubled marriage and a mysterious disappearance."
+      },
+      {
+        "review_id": 16,
+        "book_title": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "rating": 4,
+        "review_text": "A thrilling dystopian adventure featuring a strong and resourceful heroine."
+      },
+      {
+        "review_id": 17,
+        "book_title": "The Fault in Our Stars",
+        "author": "John Green",
+        "rating": 4,
+        "review_text": "A heartwarming and heartbreaking story of two young cancer patients who fall in love."
+      },
+      {
+        "review_id": 18,
+        "book_title": "The Shining",
+        "author": "Stephen King",
+        "rating": 5,
+        "review_text": "A terrifying and psychologically intense horror novel set in a haunted hotel."
+      },
+      {
+        "review_id": 19,
+        "book_title": "The Kite Runner",
+        "author": "Khaled Hosseini",
+        "rating": 5,
+        "review_text": "A beautifully written and emotionally powerful novel about friendship and redemption in Afghanistan."
+      },
+      {
+        "review_id": 20,
+        "book_title": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "rating": 4,
+        "review_text": "A gripping psychological thriller with an unexpected twist that will leave you stunned."
+      }
+    ]
+  
+  

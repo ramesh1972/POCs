@@ -1,0 +1,12 @@
+﻿<sections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Sections.xsd">
+  <section type="section" id="left_section" dock_position="left" left="0" top="0" width="400" height="500" border_thickness="5" bar="left" is_sizable="true"></section>
+  <section type="section" id="right_section" dock_position="right" left="400" top="0" width="700" height="500" border_thickness="15" position="dock" is_sizable="true">
+    <section type="section" id="tab1" dock_position="top" left="0" top="0" width="400" height="500" border_thickness="5" bar="left" position="tab" is_sizable="true"></section>
+    <section type="section" id="tab2" dock_position="bottom" left="400" top="0" width="700" height="500" border_thickness="5" bar="top" is_sizable="true">
+      <section type="section" id="stack" dock_position="bottom" left="400" top="0" width="100" height="100" border_thickness="5" bar="top" position="stack" is_sizable="true"></section>
+      <section type="section" id="float" dock_position="bottom" left="600" top="20" width="100" height="100" border_thickness="5" bar="top" position="float" is_sizable="true"></section>
+    </section>
+    <section type="section" id="stick" dock_position="bottom" left="400" top="0" width="100" height="100" border_thickness="5" bar="top" position="stick" is_sizable="true"></section>
+  </section>
+  <section type="section" id="popin" dock_position="left" left="600" top="300" width="200" height="300" border_thickness="5" bar="left" position="popin" is_sizable="true"></section>
+</sections>

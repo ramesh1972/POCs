@@ -1,0 +1,65 @@
+<div class="content-root-container">
+    <div class="grid-header-row">
+        <div class="grid-title">{{this.title}}</div>
+        <div class="edit-text">
+            <strong>* Click on an Item to Expand/Collpase</strong>
+        </div>
+    </div>
+    <button [disabled]="!this.addButtonEnabled" cButton color="primary" variant="outline" class="me-md-2"
+        (click)="onAdd()" style="width: fit-content;margin-bottom: 10px;">{{this.addEntityString}}</button>
+    <c-accordion style="z-index: 2;" [alwaysOpen]="true">
+        <ng-container *ngFor="let listItem of list; let i = index">
+            <c-accordion-item #item="cAccordionItem" [visible]="listItem.editing || listItem.adding" style="z-index: 2;">
+                <ng-template cTemplateId="accordionHeaderTemplate">
+                    <button (click)="item.toggleItem()" [collapsed]="!item.visible" cAccordionButton>
+                        {{ listItem.title }}
+                    </button>
+                </ng-template>
+                <ng-template cTemplateId="accordionBodyTemplate">
+                    <div class="accordion-body"
+                        [ngStyle]="{'background-color': listItem.adding ? '#F0C0A0' : listItem.editing ? 'lightgrey' : 'white'}">
+                        <div class="acc-body-container">
+                            <div class="acc-body-header-row">
+                                <div class="acc-body-checkboxes" *ngIf="(listItem.editing || listItem.adding)">
+                                    <c-form-check [inline]="true" *ngIf="publicFlag && (listItem.editing|| listItem.adding)">
+                                        <input cFormCheckInput id=" inline1" type="checkbox" value="listItem.is_public"
+                                            [ngModel]="listItem.is_public"
+                                            (ngModelChange)="listItem.is_public = $event" />
+                                        <label cFormCheckLabel for="inline1"
+                                            style="padding-left: 0px;margin-bottom: 6px;">Is Public</label>
+                                    </c-form-check>
+                                    <c-form-check inline *ngIf="activeFlag && (listItem.editing || listItem.adding)">
+                                        <input cFormCheckInput id=" inline2" type="checkbox" value="listItem.is_active"
+                                            [ngModel]="listItem.is_active"
+                                            (ngModelChange)="listItem.is_active = $event" />
+                                        <label cFormCheckLabel for="inline2"
+                                            style="padding-left: 0px;margin-bottom: 6px">Is
+                                            Active</label>
+                                    </c-form-check>
+                                </div>
+
+                                <div class="acc-body-buttons"
+                                    *ngIf="listItem.editing || this.editButtonEnabled || listItem.adding">
+                                    <input cButton color="primary" value="Edit" *ngIf="this.editButtonEnabled"
+                                        (click)="this.onEdit(i)" />
+                                    <input *ngIf="(listItem.editing || listItem.adding) && this.deleteButtonEnabled"
+                                        cButton color="danger" type="reset" value="Delete" (click)="this.onDelete(i)"
+                                        style="margin-right:10px" />
+                                    <input *ngIf="(listItem.editing || listItem.adding) && this.cancelButtonEnabled"
+                                        cButton color="primary" type="reset" value="Cancel" (click)="this.onCancel(i)"
+                                        style="margin-right:10px" />
+                                    <input *ngIf="(listItem.editing || listItem.adding) && this.saveButtonEnabled"
+                                        cButton color="primary" type="submit" value="Save" (click)="this.onSave(i)" />
+                                </div>
+                            </div>
+                            <ng-container *ngIf="myAccordianBodyTemplate">
+                                <ng-container *ngTemplateOutlet="myAccordianBodyTemplate; context: { listItem: listItem }">
+                                </ng-container>
+                            </ng-container>
+                        </div>
+                    </div>
+                </ng-template>
+            </c-accordion-item>
+        </ng-container>
+    </c-accordion>
+</div>

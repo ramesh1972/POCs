@@ -1,0 +1,24 @@
+.page_section {
+    margin-top: -50px;  
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .page_section {
+        margin-top: -50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .page_section {
+        margin-top: -50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+}

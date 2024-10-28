@@ -1,0 +1,25 @@
+
+.about-content-main {
+  padding: 20px;
+  padding-top: 140px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top:50px;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.about-content {
+  flex: 1;
+  margin-right: 20px;
+}

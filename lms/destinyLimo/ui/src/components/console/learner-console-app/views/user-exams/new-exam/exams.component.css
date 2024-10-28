@@ -1,0 +1,257 @@
+/* styles.css */
+.container {
+  max-width: 800px;
+}
+
+.form-check span[contenteditable="true"] {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 3px;
+  cursor: text;
+}
+
+
+.grid-header-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  vertical-align: middle;
+  vertical-align: middle;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 10px;
+}
+
+.grid-header-new-exam {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  vertical-align: middle;
+  vertical-align: middle;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 10px;
+}
+
+.grid-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  height: 120px;
+  max-width: 100%;
+  justify-content: center;
+  align-self: center;
+}
+
+
+.grid-header-title-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  vertical-align: middle;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  align-items: center;
+  justify-items: center;
+}
+
+.grid-title-new-exam {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 30px;
+  color: 'black';
+  font-variant: small-caps;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-top: -2px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grid-title {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 20px;
+  color: 'black';
+  font-variant: small-caps;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-top: -2px;
+  width: calc(100% - 220px);
+}
+
+.edit-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  vertical-align: middle;
+  width: 220px;
+  height: 24px;
+  padding: 2px;
+  padding-right: 7px;
+  border-radius: 6px;
+  background-color: yellow;
+  font-size: 14px;
+}
+
+
+.complete-checkboxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  vertical-align: middle;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.title_header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(208, 208, 49, .3);
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.scrollable-container {
+  width: 100%;
+  /* Adjust as needed */
+  max-height: 500px;
+  /* Set the desired height */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  border: 1px solid #ccc;
+  /* Optional: Add a border for better visibility */
+}
+
+.scrollable-list {
+  list-style-type: none;
+  /* Remove default list styling */
+  padding: 0;
+  /* Remove default padding */
+  margin: 0;
+  /* Remove default margin */
+}
+
+.edit-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  vertical-align: middle;
+  width: 320px;
+  height: 24px;
+  padding: 2px;
+  padding-right: 8px;
+  margin-top: 12px;
+  margin-left: 22px;
+  border-radius: 6px;
+  border-color: black;
+  background-color: transparent;
+  font-size: 12px;
+}
+
+.answers-container-root {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.answers-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.new-exams-container {
+  display: block;
+}
+
+.new-exam-container {
+  display: flex;
+  flex-direction: row;
+  list-style: disc;
+  width:100%;
+  justify-content: center;
+  padding: 20px;
+
+}
+
+.new-exam-text {
+  flex-wrap: wrap;
+  font-size: 18px;
+  color: "black";
+  width: 400px;
+  text-align: left;
+  align-content: center;
+  font-weight: 600;
+  background-color: aqua;
+  margin-right: 10px;
+  background-color:aqua;
+  padding-left: 20px;
+}
+
+
+.title-description {
+  width: calc(100% - 300px);
+  margin-bottom: 60px;
+  font-size: 16px
+}
+
+.title-category {
+  width: 300px;
+  margin-bottom: 60px;
+  text-align: right;
+  font-size: 16px
+}
+
+@media screen and (max-width: 768px) {
+  .grid-header-new-exam {
+    justify-content: left;
+    font-size: 15px;
+    align-items: start;
+    justify-content: left;
+  }
+
+  .new-exams-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+  .new-exam-container {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .grid-title {
+    width: 100%;
+  }
+
+  .edit-text {
+    width: 100%;
+  }
+
+  .title-description {
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .title-category {
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    display: none;
+  }
+
+  
+}

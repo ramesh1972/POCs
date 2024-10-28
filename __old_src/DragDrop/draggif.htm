@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<script language=vbscript>
+Dim lDragMode
+Dim lMouseDown 
+Dim lObjectCreated
+Dim lObject
+Dim lImgID
+
+lImgID = 0
+lMouseDown=false
+lObjectCreated=false
+function ImgOnMouseOver()
+end function
+
+function ImgOnMouseDown()
+	lMouseDown=true
+end function
+
+function BodyOnMouseUp()
+	lMouseDown=false
+	Set lObject = Nothing
+	lObjectCreated = false
+end function
+
+function BodyOnMouseMove()
+	If lMouseDown=true Then
+		if Not lObjectCreated Then
+			Set lObject = myimg.cloneNode(True)
+			document.body.appendChild(lObject)
+			lObject.id = "myImg" & lImgID
+			lImgID = lImgID + 1
+			lObjectCreated = true
+		end if
+		
+		lObject.style.position = "absolute"
+		lObject.style.posLeft = window.event.x
+		lObject.style.posTop = window.event.y 
+	end if
+end function
+
+</script>
+</HEAD>
+<BODY onmousemove="BodyOnMouseMove()" onmouseup="BodyOnMouseUp()">
+<Img id=myimg onmousedown="ImgOnMouseDown()" onmouseover="ImgOnMouseOver()" src="document.gif">
+
+
+
+</BODY>
+</HTML>

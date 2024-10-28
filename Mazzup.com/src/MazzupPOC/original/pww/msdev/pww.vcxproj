@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{04230798-234C-4149-B024-7261B2C319A2}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\.\</OutDir>
+    <IntDir>.\.\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\COMMON\PUBLIC;..\..\PL\PUBLIC;..\..\PWW\PUBLIC;C:\My3rdParty\CGIPP;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\string;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\nspr;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpcom;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\necko;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\uriloader;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\gfx;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\gfxwin;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\widget;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\windowwatcher;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\layout;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\docshell;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\dom;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webbrwsr;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webshell;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\content;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\htmlparser;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\profdirserviceProvider;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\pref;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xpconnect;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\xmlextras;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\webbrowserpersist;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\view;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\imglib2;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\locale;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\include\embed_base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CONSOLE;_X86_;XP_WIN;XP_WIN32;NODEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>NS_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\pww.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Debug\pww.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\pww.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>C:\MyReleases\intrainter\dev\pww.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\BUILD\DEBUG;C:\My3rdParty\Cgipp\CGIPP\Debug;C:\My3rdParty\mozilla\mozilla\obj-i586-pc-msvc\dist\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>xpcom.lib;gkgfx.lib;plds4.lib;nspr4.lib;cgipp.lib;common.lib;pl.lib;profdirserviceprovider_s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\.\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\.\pww.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\.\</ObjectFileName>
+      <ProgramDataBaseFileName>.\.\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\.\pww.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\.\pww.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>C:\MyFiles\Projects\dev\intrainter-bin\WWWRoot\main\pww\pww.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pl\src\rvDOMEventListener.cpp" />
+    <ClCompile Include="..\..\pl\src\rvRuleProcessor.cpp" />
+    <ClCompile Include="..\src\nsWebBrowserChrome.cpp" />
+    <ClCompile Include="..\src\rvFormWindow.cpp" />
+    <ClCompile Include="..\src\rvMainWindow.cpp" />
+    <ClCompile Include="..\src\rvMyMozApp.cpp" />
+    <ClCompile Include="..\src\rvParentWindow.cpp" />
+    <ClCompile Include="..\src\rvWindowCreator.cpp" />
+    <ClCompile Include="..\src\rvWinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\public\nsWebBrowserChrome.h" />
+    <ClInclude Include="..\public\resource.h" />
+    <ClInclude Include="..\public\rvFormWindow.h" />
+    <ClInclude Include="..\public\rvMainWindow.h" />
+    <ClInclude Include="..\public\rvMyMozApp.h" />
+    <ClInclude Include="..\public\rvParentWindow.h" />
+    <ClInclude Include="..\public\rvWindowCreator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\res\cursor1.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\pww.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\Users\RameshKV.SULEKHA\OneDrive - Sulekha\Ramesh\Mazzup\Projects\Mazzup\pww\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\Users\RameshKV.SULEKHA\OneDrive - Sulekha\Ramesh\Mazzup\Projects\Mazzup\pww\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

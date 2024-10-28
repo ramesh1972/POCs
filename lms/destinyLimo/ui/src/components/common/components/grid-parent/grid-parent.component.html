@@ -1,0 +1,29 @@
+<div class="grid-container">
+    <div class="grid-header-title-row">
+        <div class="grid-title">{{this.title}}</div>
+        <div class="edit-text">
+            <strong>* Double Click on a Cell to Edit</strong>
+        </div>
+    </div>
+    <div class="grid-header-row">
+        <div class="grid-buttons">
+            <button *ngIf="this.addEntityString !== undefined && this.addEntityString !== null && this.addEntityString != ''" cButton color="primary" variant="outline" class="me-md-2" style="width:180px"
+                (click)="onAdd()" style="width:180px">{{this.addEntityString}}</button>
+            <input cButton color="primary" type="submit" value="Bulk Save" [disabled]="!this.saveButtonEnabled"
+                (click)="onSave()" />
+            <input cButton color="primary" type="reset" value="Reset" [disabled]="!this.resetButtonEnabled"
+                (click)="onReset()" style="margin-left: 7px;" />
+        </div>
+        <div class="search-row">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                aria-describedby="basic-addon1" style="max-width: 200px;">
+            <button cButton color="info" class="ms-2">Search</button>
+        </div>
+    </div>
+
+
+    <div class="slot-1">
+        <ng-content select="[slot1]"></ng-content>
+    </div>
+
+</div>

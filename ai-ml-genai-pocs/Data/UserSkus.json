@@ -1,0 +1,60 @@
+[
+    {
+        "User_ID": "1001",
+        "First_Name": "John",
+        "Last_Name": "Doe",
+        "Age": 30,
+        "Gender": "Male",
+        "City": "New York",
+        "Purchases": [
+            {"SKU": "HA1001", "Product": "Refrigerator", "Quantity": 1},
+            {"SKU": "HA1002", "Product": "Washing Machine", "Quantity": 2}
+        ]
+    },
+    {
+        "User_ID": "1002",
+        "First_Name": "Alice",
+        "Last_Name": "Johnson",
+        "Age": 28,
+        "Gender": "Female",
+        "City": "Los Angeles",
+        "Purchases": [
+            {"SKU": "HA1004", "Product": "Dishwasher", "Quantity": 1}
+        ]
+    },
+    {
+        "User_ID": "1003",
+        "First_Name": "Michael",
+        "Last_Name": "Smith",
+        "Age": 25,
+        "Gender": "Male",
+        "City": "Chicago",
+        "Purchases": [
+            {"SKU": "HA1006", "Product": "Television", "Quantity": 1},
+            {"SKU": "HA1010", "Product": "Blender", "Quantity": 1}
+        ]
+    },
+    {
+        "User_ID": "1004",
+        "First_Name": "Emily",
+        "Last_Name": "Brown",
+        "Age": 32,
+        "Gender": "Female",
+        "City": "San Francisco",
+        "Purchases": [
+            {"SKU": "HA1008", "Product": "Toaster Oven", "Quantity": 1},
+            {"SKU": "HA1017", "Product": "Electric Kettle", "Quantity": 2}
+        ]
+    },
+    {
+        "User_ID": "1005",
+        "First_Name": "David",
+        "Last_Name": "Lee",
+        "Age": 35,
+        "Gender": "Male",
+        "City": "Houston",
+        "Purchases": [
+            {"SKU": "HA1013", "Product": "Fan", "Quantity": 1}
+        ]
+    }
+]

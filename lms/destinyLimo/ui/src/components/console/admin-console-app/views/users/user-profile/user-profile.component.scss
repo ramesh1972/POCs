@@ -1,0 +1,84 @@
+.grid-title-user-profile {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 30px;
+    color: 'black';
+    font-variant: small-caps;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.user-profile-container {
+    padding: 15px;
+    padding-bottom: 0px;
+    padding-top: 25px;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.user-profile-field {
+    padding: 6px;
+    vertical-align: middle;
+    width: 110px;
+    max-width: 140px;
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    height: 40px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-weight: 500;
+}
+
+.user-profile-status {
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    vertical-align: middle;
+    border: 1px solid black;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: lightgrey;
+    margin-bottom: 10px;
+
+}
+
+.user-profile-reject-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    height: 30px;
+    margin-bottom: 4px;
+}
+
+.user-profile-label {
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    vertical-align: middle;
+    border: 1px solid black;
+    height: 40px;
+    border-left: 0px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+}
+
+.user-profile-span {
+    padding: 6px;
+    vertical-align: middle;
+    border: 1px solid black;
+    width: 100%;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    text-wrap: wrap;
+}

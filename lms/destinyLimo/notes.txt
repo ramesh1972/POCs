@@ -1,0 +1,60 @@
+TO DO
+-----
+LATER
+        4) vimeo integration (NO)
+        13) certificate editor (1 hr)        
+        4) rich text editor control
+        4) terms & conditions
+        
+        4) Search (NO)
+        16) Overview dashboard
+        1) messages, badges
+        1) login page - use JWT
+        
+        
+
+COMPELTE IT
+        1) response messages on all actions ( YES 1 hr)
+        1) ondelete - pop up diaglog (YES 15 mins)
+        2) onleave without save - diaglog (YES 15 mins)              
+        12) MARK COMPELTE (15 mins)
+        1) assign new exam if perido more than 2 years (15 mins)
+        1) change password (need to update backend) (1 hr)
+
+        3) create category widget (20 mins)
+        6) check all pages and layout, theme (1 hr)
+        7) font, size, color, family, weight (1 hr)
+        
+
+ISSUES
+------
+IMPORTANT BUGS
+2) change the file & video cards - too big
+4) new user post registration is undefined
+3) edit profile on admin is not working
+4) the categories in grid of content & video sometimes are empty
+5) sometimes grid values with username and image is coming empty
+6) footer is off on few pages
+
+NOW
+6) [Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See 
+
+5) the video wifth & heihgt in admin console is not mobile responsive
+2) next/prev button not viswible in mobile
+1) something wrong on loading of images in landing page (15 mins) -- try to use coreui carousel
+3) responsive design for grids (follow categories) ----> YES
+2) responsive design for landing page (60 mins) ---> YES
+7) date format (15 mins)
+11) move to top when a new menu is clicked (15 mins)
+13) user exams - not responsive
+14) when going to home from console, the hamburger menu is not loading
+
+LATER
+2) after file & video bulk save gettin error for a.value
+1) try to isolate css/scss for course master and coreui
+2) responsive design for console pages  - when scrolling horizonatally
+6) theme has issues
+8) check the filter tables
+10) youtube/vimeo videos playback - need iframe (30 mins)
+12) dashboard menus are getting closed when clicked
+8) on select of checkboxes, the grid refrehses

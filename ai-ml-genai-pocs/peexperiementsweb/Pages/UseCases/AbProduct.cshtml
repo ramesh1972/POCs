@@ -1,0 +1,30 @@
+@page
+@model PEExperimentsWeb.Pages.AbProductModel
+@{
+    ViewData["Title"] = "About Product";
+}
+ 
+    <div class="text-center">
+<h2 text-align: center>All Together</h2>
+<form method="post">
+<div class="mb-3">
+<textarea id="ReviewTextArea" rows="6" class="form-control" asp-for="abProduct.Review"  placeholder="Enter Review"></textarea>
+</div>
+<br>
+<div class="button">
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+</div>
+ 
+       <!-- Display the response -->
+<div class="row">
+<div class="col">
+            @if (!string.IsNullOrEmpty(Model.Response))
+            {
+<h2>Output :</h2>
+<p>@Model.Response</p>
+            }
+</div>
+</div>
+</div>

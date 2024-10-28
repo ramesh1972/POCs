@@ -1,0 +1,44 @@
+<div class="grid-container">
+    <div class="grid-header-title-row">
+        <div class="grid-title">View the Exams taken by All Users</div>
+        <div class="edit-text">
+            <strong>* Click on View Column to Load the User's Exam Answers</strong>
+        </div>
+    </div>
+
+    <div class="grid-header-row">
+        <div class="complete-checkboxes">
+            <form [formGroup]="formRadio1">
+                <c-button-group aria-label="Basic radio toggle button group" role="group">
+                    <input class="btn-check" formControlName="radio1" type="radio" value="All" checked />
+                    <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline"
+                        color="danger">All</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Pass" />
+                    <label (click)="setRadioValue('Pass')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Pass</label>
+
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Fail" />
+                    <label (click)="setRadioValue('Fail')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Fail</label>
+                </c-button-group>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div id="tableContainer" style="margin-top:20px;height: 500px;min-width:800px"></div>
+    </div>
+
+    <div style="width: 100%;margin-top:10px" *ngIf="examAnswers.length>0">
+        <hr>
+        <div class="grid-title-new-exam">Exam Results for User {{currentExam.userId}}!</div>
+        <app-user-exam-answers [exam]="currentExam" [userAnswers]="examAnswers" [mcqs]="mcqs"
+            [categories]="categories"></app-user-exam-answers>
+    </div>
+
+    <div style="width: 100%;margin-top:10px;padding:20px" *ngIf="showingResults && examAnswers.length == 0">
+        <div class="grid-title-new-exam">No Exam Details found for Exam No. {{currentExam.examId}} by Learner
+            {{currentExam.userId}}</div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<app-accordian-parent [list]="text" [addEntityString]="newPostString" [onSlotAdd]="this.onAdd.bind(this)"
+    [onSlotDelete]="this.onDelete.bind(this)" [onSlotSave]="this.onSave.bind(this)"
+    [onSlotEdit]="this.onEdit.bind(this)" [onSlotCancel]="this.onCancel.bind(this)" [softDeleteFlag]="true"
+    [activeFlag]="true" [publicFlag]="true" title="View & Manage Course Content">
+
+    <ng-template #myAccordianBodyTemplate; let-text="listItem">
+        <div style="border: 2px solid blue">
+            <c-card *ngIf="!(text.editing || text.adding)">
+                <c-card-header class="title_header">
+                    <span class="card-title-header-text">{{ text.title }}</span>
+                    <span class="card-title" class="card-title-category">Category:
+                        {{text.category_name}}</span><br />
+                </c-card-header>
+
+                <c-card-body>
+                    <div class="form-check" style="padding:10px; color: blue;font-weight: 5s00;">
+                        {{ text.text }}
+                    </div>
+                </c-card-body>
+            </c-card>
+            <c-card *ngIf="(text.editing || text.adding)">
+                <c-card-header class="title_header">
+                    <c-input-group class="mb-3" style="width:calc(100% - 400px);margin-top:15px">
+                        <span cInputGroupText>Title</span>
+                        <input aria-label="Title" cFormControl placeholder="Title" [ngModel]="text.title"
+                            (ngModelChange)="text.title = $event" />
+                    </c-input-group>
+
+                    <div class="title-header" >
+                        <c-input-group style="width:400px;text-align:right;font-size:16px;padding:4px;justify-content: end;">
+                            <span cInputGroupText>Category</span>
+                            <c-dropdown
+                                style="font-size:16px;z-index: 999;max-height: 350px;">
+                                <button cButton cDropdownToggle
+                                    color="secondary">{{getCurrentCategoryName(text)}}</button>
+                                <ul cDropdownMenu dark style="max-height: 200px; overflow-y: scroll;">
+                                    <li *ngFor="let cat of categories; let i = index">
+                                        <button cDropdownItem [active]="cat.category_name === text.category_name"
+                                            (click)="selectCategory(cat.category_name, i)">{{cat.category_name}}</button>
+                                    </li>
+                                </ul>
+                            </c-dropdown>
+                        </c-input-group>
+                    </div>
+
+                </c-card-header>
+                <c-card-body>
+                    <c-input-group style="width:100%;text-align:right">
+                        <span cInputGroupText>Course Content</span>
+                        <textarea rows=10 aria-label="Post" cFormControl class="auto-resize"
+                            (input)="this.adjustTextareaHeight($event)" aria [ngModel]="text.text"
+                            (ngModelChange)="text.text = $event">{{text.text}}</textarea>
+                    </c-input-group>
+                </c-card-body>
+            </c-card>
+        </div>
+    </ng-template>
+</app-accordian-parent>

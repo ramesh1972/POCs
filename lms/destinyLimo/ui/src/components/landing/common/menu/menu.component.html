@@ -1,0 +1,46 @@
+<!-- Menu -->
+<div class="menu_container menu_mm" style="z-index: 103;">
+
+    <!-- Menu Close Button -->
+    <div class="menu_close_container">
+        <div class="menu_close"></div>
+    </div>
+
+    <!-- Menu Items -->
+    <div class="menu_inner menu_mm">
+        <div class="menu menu_mm">
+            <ul class="menu_list menu_mm">
+                <li class="menu_item menu_mm"><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
+                <li class="menu_item menu_mm"><a routerLink="/home/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a></li>
+                <li class="menu_item menu_mm"><a routerLink="/home/processes" routerLinkActive="active" ariaCurrentWhenActive="page">Processes</a></li>
+
+                <li class="menu_item menu_mm"><a routerLink="/home/courses" routerLinkActive="active" ariaCurrentWhenActive="page">Training Info</a></li>
+
+                <li class="menu_item menu_mm"><a routerLink="/home/faqs" routerLinkActive="active" ariaCurrentWhenActive="page">FAQ</a></li>
+
+                <li class="menu_item menu_mm"><a routerLink="/home/posts" routerLinkActive="active" ariaCurrentWhenActive="page">Blogs</a></li>
+                <li class="menu_item menu_mm"><a routerLink="/home/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></li>
+
+                <li class="menu_item menu_mm"><a *ngIf="this.loggedInUser === undefined" routerLink="/home/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a></li>
+                <li class="menu_item menu_mm"><a *ngIf="this.loggedInUser" routerLink="/home/console" routerLinkActive="active" ariaCurrentWhenActive="page">Console</a></li>
+                <li class="menu_item menu_mm"><a *ngIf="this.loggedInUser === undefined" routerLink="/home/register" routerLinkActive="active"
+                    ariaCurrentWhenActive="page" style="color: black;">Register</a></li>
+                <li class="menu_item menu_mm"><a *ngIf="this.loggedInUser" routerLinkActive="active"
+                    ariaCurrentWhenActive="page" (click)="onLogout()">Log Out</a></li>
+
+            </ul>
+
+            <!-- Menu Social -->
+
+            <div class="menu_social_container menu_mm">
+                <ul class="menu_social menu_mm">
+                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

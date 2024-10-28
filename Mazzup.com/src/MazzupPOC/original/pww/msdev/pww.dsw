@@ -1,0 +1,107 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "CGIPP"=..\..\..\..\..\..\My3rdParty\Cgipp\CGIPP\CGIPP.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "common"=..\..\common\msdev\common.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name CGIPP
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mysqlpp
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ii_load"=..\..\ii_load\msdev\ii_load.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name pl
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mysqlpp"=..\..\..\..\..\..\My3rdParty\mysqlpp\mysqlpp.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "pl"=..\..\pl\msdev\pl.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "pww"=.\pww.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name pl
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

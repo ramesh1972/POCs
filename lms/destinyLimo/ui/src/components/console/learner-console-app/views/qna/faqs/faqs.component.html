@@ -1,0 +1,53 @@
+<div class="grid-container">
+    <div class="grid-header-title-row">
+        <div class="grid-title">View the Answers to the Questions You have put forth to the Admin!</div>
+        <div class="complete-checkboxes">
+            <form [formGroup]="formRadio1">
+                <c-button-group aria-label="Basic radio toggle button group" role="group">
+                    <input class="btn-check" formControlName="radio1" type="radio" value="All" />
+                    <label (click)="setRadioValue('All')" cButton cFormCheckLabel variant="outline"
+                        color="danger">All</label>
+    
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Answered" />
+                    <label (click)="setRadioValue('Answered')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Answered</label>
+    
+                    <input class="btn-check" formControlName="radio1" type="radio" value="Unnnswered" />
+                    <label (click)="setRadioValue('Unanswered')" cButton cFormCheckLabel variant="outline"
+                        color="danger">Unanswered</label>
+                </c-button-group>
+            </form>
+        </div>
+    </div>
+    <div class="grid-header-row">
+        <div class="grid-buttons">
+            <button cButton color="primary" variant="outline" class="me-md-2" style="width:180px" (click)="onAdd()" [disabled]="this.newQuestion">Ask
+                a New Question</button>
+        </div>
+        <div class="search-row">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                aria-describedby="basic-addon1" style="max-width: 200px;">
+            <button cButton color="info" class="ms-2">Search</button>
+        </div>
+    </div>
+
+    <form cForm *ngIf="this.newQuestion" style="margin-left:5px;margin-right:5px;margin-top: 20px; padding:10px; background-color: lightgreen;border: 1px solid blue">
+        <c-input-group class="mb-3">
+            <span cInputGroupText>Question</span>
+            <textarea row="3" name="newQ" aria-label="Enter Your Question here..." cFormControl placeholder="Enter Your Question here..." [ngModel]="newQuestionText"
+                (ngModelChange)="newQuestionText = $event"></textarea>
+        </c-input-group>
+
+        <c-input-group class="mb-1">
+            <input cButton color="primary" type="submit" value="Submit Question" [disabled]="!this.saveButtonEnabled"
+                (click)="onSave()" />
+            <input cButton color="primary" type="reset" value="Cancel" [disabled]="!this.resetButtonEnabled"
+                (click)="onReset()" style="margin-left: 7px;" />
+        </c-input-group>
+    </form>
+
+    
+
+   <div id="tableContainer" style="margin-top:20px;height:550px;min-width:800px"></div>
+
+</div>

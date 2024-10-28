@@ -1,0 +1,21 @@
+.adjust-container {
+    display: grid;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .adjust-container {
+        margin-top: 0px;
+    }
+    
+    .header {
+        height: 120px;
+        width: 100%;
+    }
+}
+
+.child-menu {
+    background-color: yellow;
+    padding: 10px;
+}

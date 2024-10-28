@@ -1,0 +1,70 @@
+﻿@page
+@model PEExperimentsWeb.Pages.EmotionsIndexModel
+@{
+    Layout = "_Layout.cshtml";
+}
+
+<style>
+    textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    resize: none;
+}
+button {
+    background-color: #007bff;
+    color: #a14949;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#responseText {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+h2 {
+    color: #333;
+}
+</style>
+
+<html>
+<head>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Types Page</h1>
+        <form>
+        <textarea id="reviewInput" placeholder="Enter a review..."></textarea>
+        <button id="analyzeButton">Analyze</button>
+        </form>
+        <div class="response"></div>
+        <h2>Analysis Result</h2>
+        <div id="responseText">
+            <div class="row">
+                @if (!string.IsNullOrEmpty(Model.AnalysisResult))
+                {
+                <p>@Model.AnalysisResult</p>
+                }
+            </div>
+        </div>
+    </div>
+    @section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#analyzeButton").click(function () {
+                // Clear the text input field
+                $("#reviewInput").val("");
+            });
+        });
+    </script>
+    }
+</body>
+</html>

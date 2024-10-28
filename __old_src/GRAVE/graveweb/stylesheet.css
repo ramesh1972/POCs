@@ -1,0 +1,120 @@
+body, html
+{
+	background: white;
+	margin: 0;
+	padding: 0;
+	font: normal 12px Tahoma;
+	color: black;
+	text-align: center;
+}
+.style1 {
+	FONT-SIZE: 11px; COLOR: #666666; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma; 
+}
+.style3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Tahoma
+}
+.style3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Tahoma
+}
+.style8 {
+	COLOR: #ffffff
+}
+.style11 {
+	COLOR: #333333
+}
+.style12 {
+	COLOR: #ff6600
+}
+.style17 {
+	FONT-WEIGHT: bold; LINE-HEIGHT: 15px
+}
+A.menuwhitelink:link {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.menuwhitelink:active {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.menuwhitelink:visited {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.menuwhitelink:hover {
+	FONT-SIZE: 11px; COLOR: #ff3300; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.linktext {
+	FONT-SIZE: 11px; COLOR: #ffffff; LINE-HEIGHT: 17px; FONT-STYLE: normal; FONT-FAMILY: Tahoma; HEIGHT: 14px
+}
+.blacktext {
+	FONT-SIZE: 11px; COLOR: #000000; LINE-HEIGHT: 15px; FONT-STYLE: normal; FONT-FAMILY: Tahoma; HEIGHT: 14px
+}
+.whitetext {
+	FONT-SIZE: 11px; COLOR: #ffffff; LINE-HEIGHT: 15px; FONT-STYLE: normal; FONT-FAMILY: Tahoma; HEIGHT: 14px
+}
+.orangetext {
+	FONT-SIZE: 12px; COLOR: #ff6600; LINE-HEIGHT: 15px; FONT-STYLE: normal; FONT-FAMILY: Tahoma; HEIGHT: 14px
+}
+.browntext {
+	FONT-SIZE: 11px; COLOR: #ff6600; LINE-HEIGHT: 15px; FONT-STYLE: normal; FONT-FAMILY: Tahoma; HEIGHT: 14px
+}
+.contenttext {
+	FONT-SIZE: 11px; COLOR: #595959; LINE-HEIGHT: 17px; FONT-STYLE: normal; FONT-FAMILY: Tahoma
+}
+A.blacklink:link {
+	FONT-SIZE: 11px; COLOR: #595959; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.blacklink:active {
+	FONT-SIZE: 11px; COLOR: #595959; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.blacklink:visited {
+	FONT-SIZE: 11px; COLOR: #595959; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.blacklink:hover {
+	FONT-SIZE: 11px; COLOR: #ff6600; FONT-FAMILY: Tahoma; TEXT-DECORATION: underline
+}
+A.redlink:link {
+	FONT-SIZE: 11px; COLOR: #ff8400; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.redlink:active {
+	FONT-SIZE: 11px; COLOR: #ff8400; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.redlink:visited {
+	FONT-SIZE: 11px; COLOR: #ff8400; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.redlink:hover {
+	FONT-SIZE: 11px; COLOR: #ff6600; FONT-FAMILY: Tahoma; TEXT-DECORATION: underline
+}
+A.morelink:link {
+	FONT-SIZE: 11px; COLOR: #ff8400; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+A.morelink:hover {
+	FONT-SIZE: 11px; COLOR: #c2c2c2; FONT-FAMILY: Tahoma;  TEXT-DECORATION: underline
+}
+
+.timeButton img
+{
+	vertical-align: middle;
+	_vertical-align: top; /* IE fix */	
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: -1px; /* IE margins fix */
+	_margin-top: 0px; 
+	border-width: 0px;
+}
+
+.BottomArea { BACKGROUND: url(Img/footer.gif) #ece9d8 repeat-x }
+.RadSplitter_Default { BORDER-RIGHT: #d8d2bd 1px solid; BORDER-TOP: #d8d2bd 1px solid; BACKGROUND-IMAGE: url(Img/menuBg.jpg); BORDER-LEFT: #d8d2bd 1px solid; BORDER-BOTTOM: #d8d2bd 1px solid }
+.Caption { FONT-WEIGHT: bold; BACKGROUND-COLOR:orange;  padding-left:4px; COLOR: windowtext; FONT-FAMILY: Tahoma; font-size:8pt}
+.PaneFile { BACKGROUND-COLOR: white }
+.ListerHeader { COLOR: windowtext; FONT-FAMILY: Tahoma;}
+.PropNameToDo { BORDER-RIGHT: lightgreen 1px solid; BORDER-TOP: lightgreen 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: lightgreen 1px solid; COLOR: windowtext; BORDER-BOTTOM: lightgreen 1px solid; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: skyblue; TEXT-ALIGN: left; width:120px; padding-left:4px;vertical-align:top; }
+.PropName { BORDER-RIGHT: lightgreen 1px solid; BORDER-TOP: lightgreen 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: lightgreen 1px solid; COLOR: windowtext; BORDER-BOTTOM: lightgreen 1px solid; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: buttonface; TEXT-ALIGN: left; width:120px ;padding-left:4px;vertical-align:top; }
+.PropValue { FONT-SIZE: 11px; COLOR: windowtext; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: white; TEXT-ALIGN: left;padding-left:2px;vertical-align:top; }
+.CpClass { BORDER-COLLAPSE: collapse;}
+.ProgressBarText { FONT-SIZE: 8px; COLOR: windowtext; FONT-FAMILY: Tahoma; FONT-WEIGHT:bold; padding-left:2px }
+.TableProp {background-color:MistyRose}
+.TableContainer {background-color:white;border:0;border-collapse:collapse;vertical-align:top}
+.TableContainerRow {vertical-align:top;}
+.TablePropSet {border:1;border-collapse:collapse}
+.TableRowProp {text-align:left; vertical-align:top; }
+.TablePropValueLong { border-collapse:collapse; FONT-SIZE: 11px; COLOR: windowtext; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: white; TEXT-ALIGN: left;padding-left:2px;vertical-align:top;  width:450px; text-justify:auto;}
+.FormReturnMessage{ FONT-WEIGHT: bold; BACKGROUND-COLOR:orange;  padding-left:4px; COLOR: windowtext; FONT-FAMILY: Tahoma; font-size:8pt}
+.FormTitle { FONT-WEIGHT: bold; BACKGROUND-COLOR:orange;  padding-top:2px; padding-left:4px; COLOR: windowtext; FONT-FAMILY: Tahoma; font-size:8pt; height:16px; vertical-align:middle}

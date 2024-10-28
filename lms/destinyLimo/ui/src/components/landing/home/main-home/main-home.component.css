@@ -1,0 +1,91 @@
+
+.page-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.fixed-height {
+  height: 100vh; /* Set the desired fixed height */
+  object-fit: fill; /* Optional: Ensure the image covers the area */
+}
+
+.responsive-height {
+  height: 50vh; /* Set the height to 50% of the viewport height */
+  object-fit: cover; /* Optional: Ensure the image covers the area */
+}
+
+.bg-text {
+  animation: increaseSize 2s ease-in-out alternate;
+    color: blue;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 2;
+    width: 100%;
+    text-shadow: 0px 0px 2px #ffffff;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Zoom-in and out effect for the background */
+  @keyframes zoomIn {
+    0% {
+      background-size: 100%;
+    }
+  
+    50% {
+      background-size: 120%;
+      /* Zoom in by 10% */
+    }
+  
+    100% {
+      background-size: 100%;
+      /* Zoom back to original size */
+    }
+  }
+
+  @keyframes increaseSize {
+    0% {
+      font-size: 25px;
+      width: 100%;
+      text-shadow: 0px 0px 2px #ffffff;
+    }
+    100% {
+      font-size: 50px;
+      width: 100%;
+      text-shadow: 0px 0px 2px #ffffff;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .image-style {
+
+        max-width: 100%;
+        height: 550px;
+        opacity: 0.5;
+        border-radius: 0px;
+    }
+    
+    .bg-text {
+      animation: none;
+        color: blue;
+        font-weight: bold;
+        font-style: italic;
+        z-index: 2;
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .d-md-block {
+        display: block !important;
+    }
+}
+

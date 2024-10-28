@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mazzup", "Mazzup\Mazzup.csproj", "{897A6328-2A06-47DD-8587-980F24805B8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMvc", "SampleMvc\SampleMvc.csproj", "{9B47E5DC-C5F2-4DD7-A344-14FC285E6E22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestJSTransform", "TestJSTransform\TestJSTransform.csproj", "{A909C2B8-29CE-4A27-A3A5-96892FB234B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{897A6328-2A06-47DD-8587-980F24805B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897A6328-2A06-47DD-8587-980F24805B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897A6328-2A06-47DD-8587-980F24805B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897A6328-2A06-47DD-8587-980F24805B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B47E5DC-C5F2-4DD7-A344-14FC285E6E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B47E5DC-C5F2-4DD7-A344-14FC285E6E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B47E5DC-C5F2-4DD7-A344-14FC285E6E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B47E5DC-C5F2-4DD7-A344-14FC285E6E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A909C2B8-29CE-4A27-A3A5-96892FB234B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A909C2B8-29CE-4A27-A3A5-96892FB234B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A909C2B8-29CE-4A27-A3A5-96892FB234B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A909C2B8-29CE-4A27-A3A5-96892FB234B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DEEAE78-B892-4A83-82E4-BB699A9E7868}
+	EndGlobalSection
+EndGlobal

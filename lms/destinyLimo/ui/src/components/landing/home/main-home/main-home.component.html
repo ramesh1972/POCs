@@ -1,0 +1,58 @@
+<div class="home">
+    <c-carousel style="height: 100vh; width: 100vw;">
+        <c-carousel-indicators></c-carousel-indicators>
+        <c-carousel-inner>
+            <c-carousel-item *ngFor="let slide of slides">
+                <img alt="{{slide.title}}" class="d-block w-100 fixed-height" loading="lazy" src="{{slide.src}}" />
+                <c-carousel-caption class="d-none d-md-block">
+                    <span class="bg-text">{{slide.title}}</span>
+                </c-carousel-caption>
+            </c-carousel-item>
+        </c-carousel-inner>
+        <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+        <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+    </c-carousel>
+
+    <div class="page-section">
+        <div class="section_title text-center" style="margin-bottom: 20px;">
+            <h1>View Our Sample Courses</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 hero_box_col">
+                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                        <img src="/images/services/earth-globe.svg" class="svg" alt="">
+                        <div class="hero_box_content">
+                            <h2 class="hero_box_title">Online Courses</h2>
+                            <a routerLink="/home/courses" routerLinkActive="active" class="hero_box_link">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 hero_box_col">
+                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                        <img src="/images/services/videos.svg" class="svg" alt="">
+                        <div class="hero_box_content">
+                            <h2 class="hero_box_title">Video Library</h2>
+                            <a routerLink="/home/courses" routerLinkActive="active" class="hero_box_link"
+                                ariaCurrentWhenActive="page">View More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 hero_box_col">
+                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                        <img src="/images/services/exam-outline.svg" class="svg" alt="">
+                        <div class="hero_box_content">
+                            <h2 class="hero_box_title">Exams</h2>
+                            <a routerLink="/home/courses" routerLinkActive="active" class="hero_box_link"
+                                ariaCurrentWhenActive="page">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
