@@ -1,0 +1,187 @@
+{
+  "category": "QA Automation",
+  "topics": [
+    {
+      "topic": "QA Automation Basics",
+      "topic_no": 46,
+      "contents": [
+        {
+          "text": "QA Automation Framework is a set of guidelines, best practices, and tools that are used to automate the testing of software applications. It provides a structured way to create, execute, and maintain automated test scripts.",
+          "codeSnippet": "public class TestAutomationFramework {\n    public static void main(String[] args) {\n        // Code for setting up and running automated tests\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "QA Automation Strategy is a plan that outlines how automated testing will be implemented in a software development project. It includes determining which test cases to automate, selecting appropriate tools and frameworks, defining the scope of automation, establishing best practices, and setting up a continuous integration process.",
+          "codeSnippet": "public class AutomationStrategy {\n   public static void main(String[] args) {\n       // Define and implement your QA automation strategy here\n   }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Load testing is a type of performance testing conducted to evaluate the behavior of a system under specific load conditions. It helps in determining the system's ability to perform effectively under both normal and anticipated peak load conditions.",
+          "codeSnippet": "import locust\nfrom locust import HttpUser, task, between\n\nclass MyUser(HttpUser):\n    wait_time = between(5, 9)\n\n    @task\n    def my_task(self):\n        self.client.get('/my-page')",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Regression Testing triggered in CI/CD is a crucial aspect of QA Automation. It involves running a set of automated tests to ensure that new code changes have not adversely affected the existing functionality of the software application. By integrating regression testing into the Continuous Integration/Continuous Deployment (CI/CD) pipeline, teams can quickly identify and address any defects introduced during the development process.",
+          "codeSnippet": "pipeline {\n    agent any\n    stages {\n        stage('Checkout') {\n            steps {\n                git 'https://github.com/example/repo.git'\n            }\n        }\n        stage('Build') {\n            steps {\n                sh 'mvn clean install'\n            }\n        }\n        stage('Regression Test') {\n            steps {\n                sh 'mvn test'\n            }\n        }\n    }\n}"
+        },
+        {
+          "text": "Performance Testing is a type of software testing that focuses on determining the speed, responsiveness, and stability of an application under a particular workload. It helps in identifying performance bottlenecks and ensuring that the application meets performance requirements.",
+          "codeSnippet": "public class PerformanceTest {\n    @Test\n    public void testResponseTime() {\n        // Code to measure response time\n    }\n\n    @Test\n    public void testThroughput() {\n        // Code to measure throughput\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "What is QA Automation?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of QA Automation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common QA Automation Tools",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for QA Automation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Introduction to Test Automation Frameworks",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Framework – Evaluation/Homegrown",
+      "topic_no": 246,
+      "contents": [
+        {
+          "text": "- Detailed Test Results",
+          "codeSnippet": "public void displayTestResults() {\n    // Code to display detailed test results\n}"
+        },
+        {
+          "text": "- With screenshots of the pages",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Basic Use Cases. Should support",
+          "codeSnippet": "public void testLogin() {\n    // Test login functionality\n    }\n\npublic void testLogout() {\n    // Test logout functionality\n}"
+        },
+        {
+          "text": "- Can it handle Dynamically changing pages?",
+          "codeSnippet": "Yes, the framework should be able to handle dynamically changing pages by utilizing techniques such as dynamic locators or waiting strategies in the automation scripts.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "- Can we modify the test code?",
+          "codeSnippet": "Yes, in the Framework – Evaluation/Homegrown category of QA Automation, it is possible to modify the test code to suit the specific requirements of the project."
+        },
+        {
+          "text": "- Can we replay the Test recording?",
+          "codeSnippet": "Yes, you can replay the test recording by using the recorded script in the QA automation framework. This allows you to run the test scenario again to verify the functionality and behavior of the application.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "- Scheduling",
+          "codeSnippet": "Scheduling in QA automation refers to the process of setting up and managing the execution of test scripts at specific times or intervals. This ensures that tests are run automatically and consistently, helping to streamline the testing process and improve efficiency.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "- Performance Testing",
+          "codeSnippet": "Performance testing is a type of testing to ensure software applications will perform well under their expected workload. It involves testing the application under various load conditions to measure response time, throughput, and overall stability.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "- Email of Failed tests?",
+          "codeSnippet": "def send_failed_tests_email():\n    failed_tests = get_failed_tests()\n    if failed_tests:\n        email_content = create_email_content(failed_tests)\n        send_email(email_content, recipient='example@example.com')",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "- Regression Testing",
+          "codeSnippet": "Regression testing is a type of software testing that ensures that recent code changes have not adversely affected existing features. It involves re-running test cases that have been previously executed to verify that the existing functionalities still work as expected after the code changes.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "- Version Control",
+          "codeSnippet": "Version control systems like Git or SVN are essential for managing code changes, tracking revisions, and collaborating with team members. By using version control, QA automation engineers can keep track of changes made to test scripts, revert to previous versions if needed, and work concurrently on test automation projects.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "- Repository of Test Data that can be applied on the Test Cases",
+          "codeSnippet": "public class TestDataRepository {\n    private Map<String, String> testData = new HashMap<>();\n\n    public void addTestData(String key, String value) {\n        testData.put(key, value);\n    }\n\n    public String getTestData(String key) {\n        return testData.get(key);\n    }\n}"
+        },
+        {
+          "text": "- Can we integrate custom Scripts?",
+          "codeSnippet": "Yes, in the context of QA Automation, when evaluating or developing a homegrown framework, it is possible to integrate custom scripts to enhance the functionality and meet specific testing requirements. By incorporating custom scripts, QA teams can extend the capabilities of the framework and tailor it to their unique testing needs.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Advanced Use Cases in the topic of Framework – Evaluation/Homegrown in the category of QA Automation under the subject of QA involve complex scenarios and functionalities that require sophisticated automation techniques and strategies. These use cases typically go beyond basic test scenarios and involve intricate workflows, data handling, and integrations.",
+          "codeSnippet": "public void advancedUseCaseTest() {\n    // Implementing advanced test scenario here\n}"
+        },
+        {
+          "text": "When evaluating a framework for QA automation, it is important to determine if it comes with a built-in framework or if it requires a homegrown solution. A built-in framework typically provides pre-built functions and libraries that can help streamline the automation process, while a homegrown solution involves creating a custom framework tailored to specific project needs.",
+          "codeSnippet": "public class TestAutomationFramework {\n    // Code for the test automation framework\n}"
+        },
+        {
+          "text": "Where is the Framework Stored? Instancy cloud or 3rd Party vendor Cloud",
+          "codeSnippet": "The framework can be stored either on Instancy cloud or a 3rd party vendor cloud depending on the specific requirements and preferences of the organization. It is essential to evaluate the pros and cons of each option to determine the most suitable storage solution for the framework.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "- Repository of Test Cases",
+          "codeSnippet": "public class TestCasesRepository { \n\n    public List<TestCase> getAllTestCases() { \n        // logic to retrieve all test cases from the repository \n    } \n\n    public void addTestCase(TestCase testCase) { \n        // logic to add a new test case to the repository \n    } \n\n    public void updateTestCase(TestCase testCase) { \n        // logic to update an existing test case in the repository \n    } \n\n    public void deleteTestCase(TestCase testCase) { \n        // logic to delete a test case from the repository \n    } \n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "- Load Testing (Bulk requests)",
+          "codeSnippet": "When conducting load testing for bulk requests in a QA Automation framework evaluation or a homegrown framework, it is essential to simulate a high volume of concurrent requests to assess the system's performance under stress. This involves sending a large number of requests simultaneously to the application to measure its response time, throughput, and scalability. Tools like JMeter, Gatling, or Locust can be used to create scripts that generate bulk requests and analyze the system's behavior under heavy load.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "A Test Results Dashboard is a visual representation of test execution outcomes, providing insights into the overall quality of the software being tested. It typically includes metrics such as pass/fail rates, test execution times, error trends, and test coverage. The dashboard helps QA teams quickly identify issues, track progress, and make data-driven decisions to improve the testing process.",
+          "codeSnippet": "const testResults = { pass: 85, fail: 15, averageExecutionTime: '2s', errorTrends: ['NullPointerException', 'AssertionError'], testCoverage: '80%' };",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "- Workflow",
+          "codeSnippet": "def execute_workflow():\n    setup()\n    run_tests()\n    teardown()",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "When evaluating a framework for QA automation, consider factors such as scalability, maintainability, ease of use, community support, and integration capabilities."
+        },
+        {
+          "text": "For a homegrown framework, assess the resources required for development, maintenance, and support, as well as the flexibility to customize based on specific project needs."
+        },
+        {
+          "text": "Example for evaluating a framework: Conduct a proof of concept to test the framework's compatibility with your existing tools and technologies."
+        },
+        {
+          "text": "Code snippet for evaluating a framework in Java: \n\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.chrome.ChromeDriver;\n\npublic class SeleniumTest {\n    public static void main(String[] args) {\n        WebDriver driver = new ChromeDriver();\n        driver.get(\"https://www.example.com\");\n        driver.quit();\n    }\n}",
+          "codeSnippet": "import org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.chrome.ChromeDriver;\n\npublic class SeleniumTest {\n    public static void main(String[] args) {\n        WebDriver driver = new ChromeDriver();\n        driver.get(\"https://www.example.com\");\n        driver.quit();\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Code snippet for evaluating a framework in Python: \n\nfrom selenium import webdriver\n\ndriver = webdriver.Chrome()\ndriver.get('https://www.example.com')\ndriver.quit()",
+          "codeSnippet": "from selenium import webdriver\n\ndriver = webdriver.Chrome()\ndriver.get('https://www.example.com')\ndriver.quit()",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Example for a homegrown framework: Develop a custom reporting module to generate detailed test execution reports tailored to your project requirements."
+        },
+        {
+          "text": "Code snippet for a homegrown framework in JavaScript: \n\nfunction login(username, password) {\n    // Implementation for login functionality\n}\n\nfunction logout() {\n    // Implementation for logout functionality\n}",
+          "codeSnippet": "function login(username, password) {\n    // Implementation for login functionality\n}\n\nfunction logout() {\n    // Implementation for logout functionality\n}",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    }
+  ]
+}

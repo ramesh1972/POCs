@@ -1,0 +1,320 @@
+{
+  "category": "sh Scripting",
+  "topics": [
+    {
+      "topic": "Introduction to sh Scripting",
+      "topic_no": 137,
+      "contents": [
+        {
+          "text": "What is sh scripting?",
+          "codeSnippet": "Shell scripting is writing a series of commands for the shell to execute. It can automate tasks, manage files, and perform various system administration tasks.",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Why use sh scripting?",
+          "codeSnippet": "Shell scripting can save time by automating repetitive tasks, improve efficiency in managing system configurations, and enhance productivity for system administrators.",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "How to create a sh script file?",
+          "codeSnippet": "To create a sh script file, you can use a text editor like nano or vi. Save the file with a .sh extension, and make it executable using the chmod command.",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Basic syntax of a sh script?",
+          "codeSnippet": "A basic sh script starts with a shebang line (#!/bin/sh) to specify the shell interpreter. It then includes commands and comments to perform specific tasks.",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Variables in sh scripting?",
+          "codeSnippet": "Variables in sh scripting are used to store data. They are defined by assigning a value to a variable name. Variables can be accessed using the $ symbol.",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Conditional statements in sh scripting?",
+          "codeSnippet": "Conditional statements like if-else are used to make decisions in sh scripting. They allow the script to execute different commands based on specified conditions.",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Loops in sh scripting?",
+          "codeSnippet": "Loops like for and while are used to iterate over a set of data or execute commands repeatedly in sh scripting. They help automate repetitive tasks.",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Functions in sh scripting?",
+          "codeSnippet": "Functions in sh scripting allow you to group commands together for reuse. They improve code organization and readability by separating tasks into modular units.",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Command-line arguments in sh scripting?",
+          "codeSnippet": "Command-line arguments are parameters passed to a sh script when it is executed. They allow scripts to accept input from users or other programs.",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Error handling in sh scripting?",
+          "codeSnippet": "Error handling techniques like checking exit codes or using the 'set -e' option help scripts to handle errors gracefully and ensure proper execution.",
+          "codeLanguage": "sh"
+        }
+      ]
+    },
+    {
+      "topic": "sh Commands and Syntax",
+      "topic_no": 226,
+      "contents": [
+        {
+          "text": "Introduction to sh Commands and Syntax",
+          "codeSnippet": "Shell commands are used to interact with the operating system and perform various tasks. The syntax of a command typically includes the command itself followed by options and arguments.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Basic sh Commands",
+          "example": "ls -l",
+          "codeSnippet": "ls -l command is used to list files and directories in a detailed format.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "sh Command Options",
+          "example": "grep -i 'pattern' file.txt",
+          "codeSnippet": "The grep command with the -i option is used to search for a case-insensitive pattern in a file.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "sh Command Arguments",
+          "example": "chmod 755 script.sh",
+          "codeSnippet": "chmod command is used to change the permissions of a file. Here, 755 is the permission mode for the script.sh file.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Combining sh Commands",
+          "example": "ls | grep 'file'",
+          "codeSnippet": "The pipe symbol (|) is used to combine the output of one command as input to another command. Here, ls lists files and directories, and grep filters the output for 'file'.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Variables and Data Types in sh",
+      "topic_no": 258,
+      "contents": [
+        {
+          "text": "Variables in shell scripting are used to store data values.",
+          "codeSnippet": "variable_name=value",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "There are different data types in shell scripting such as strings, integers, and arrays.",
+          "codeSnippet": "str=\"Hello World\"\nnum=42\narr=(apple orange banana)",
+          "codeLanguage": "sh"
+        }
+      ]
+    },
+    {
+      "topic": "Conditional Statements in sh",
+      "topic_no": 346,
+      "contents": [
+        {
+          "text": "Conditional statements in shell scripting allow you to make decisions in your script based on certain conditions.",
+          "codeSnippet": "if [ condition ]; then\n    # code to be executed if the condition is true\nfi",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "The 'if' statement is used to check a condition and execute a block of code if the condition is true.",
+          "codeSnippet": "if [ $var -eq 10 ]; then\n    echo \"Variable is equal to 10\"\nfi",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "The 'if-else' statement allows you to execute a different block of code if the condition is false.",
+          "codeSnippet": "if [ $var -gt 10 ]; then\n    echo \"Variable is greater than 10\"\nelse\n    echo \"Variable is less than or equal to 10\"\nfi",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "The 'elif' statement is used to check multiple conditions in a sequence.",
+          "codeSnippet": "if [ $var -gt 10 ]; then\n    echo \"Variable is greater than 10\"\nelif [ $var -eq 10 ]; then\n    echo \"Variable is equal to 10\"\nelse\n    echo \"Variable is less than 10\"\nfi",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "The 'case' statement allows you to match a variable against multiple values.",
+          "codeSnippet": "case $var in\n    1)\n        echo \"Variable is 1\"\n        ;;\n    2)\n        echo \"Variable is 2\"\n        ;;\n    *)\n        echo \"Variable is neither 1 nor 2\"\n        ;;\nesac",
+          "codeLanguage": "sh"
+        }
+      ]
+    },
+    {
+      "topic": "Looping Structures in sh",
+      "topic_no": 399,
+      "contents": [
+        {
+          "text": "Looping structures in shell scripting allow you to repeat a block of code multiple times based on a condition.",
+          "codeSnippet": "for i in {1..5}\ndo\necho $i\ndone",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "The 'for' loop in shell scripting is used to iterate over a sequence of values.",
+          "codeSnippet": "for file in *.txt\ndo\necho $file\ndone",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "The 'while' loop in shell scripting executes a block of code as long as a specified condition is true.",
+          "codeSnippet": "count=0\nwhile [ $count -lt 5 ]\ndo\necho $count\n((count++))\ndone",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "The 'until' loop in shell scripting executes a block of code until a specified condition becomes true.",
+          "codeSnippet": "num=0\nuntil [ $num -eq 5 ]\ndo\necho $num\n((num++))\ndone",
+          "codeLanguage": "sh"
+        }
+      ]
+    },
+    {
+      "topic": "Functions and Subroutines in sh",
+      "topic_no": 440,
+      "contents": [
+        {
+          "text": "Functions in Shell Scripting",
+          "codeSnippet": "function hello() {\necho \"Hello, World!\"\n}\nhello",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Defining Functions",
+          "codeSnippet": "function greet() {\necho \"Welcome to Shell Scripting!\"\n}\ngreet",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Calling Functions",
+          "codeSnippet": "function printMessage() {\necho \"This is a custom message.\"\n}\nprintMessage",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Passing Arguments to Functions",
+          "codeSnippet": "function greetUser() {\necho \"Hello, $1! Welcome to Shell Scripting.\"\n}\ngreetUser John",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Returning Values from Functions",
+          "codeSnippet": "function addNumbers() {\nlocal sum=$(( $1 + $2 ))\necho $sum\n}\nresult=$(addNumbers 5 3)\necho \"The sum is: $result\"",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Subroutines in Shell Scripting",
+          "codeSnippet": "subroutine() {\necho \"This is a subroutine.\"\n}\nsubroutine",
+          "codeLanguage": "sh"
+        }
+      ]
+    },
+    {
+      "topic": "File Handling in sh",
+      "topic_no": 492,
+      "contents": [
+        {
+          "text": "File Handling in Shell Scripting allows you to read, write, and manipulate files in the shell environment.",
+          "codeSnippet": "cat file.txt\n# Displays the contents of file.txt\n\necho 'Hello, World!' > newfile.txt\n# Writes 'Hello, World!' to newfile.txt\n\nmkdir new_directory\n# Creates a new directory named new_directory\n\nmv file.txt new_directory/\n# Moves file.txt to the new_directory\n\nrm oldfile.txt\n# Removes the file oldfile.txt"
+        },
+        {
+          "text": "To read from a file in Shell Scripting, you can use commands like cat, while read, or input redirection.",
+          "codeSnippet": "cat file.txt\n# Displays the contents of file.txt\n\nwhile read line; do\n    echo $line\ndone < file.txt\n# Reads and prints each line from file.txt\n\nwhile IFS= read -r line; do\n    echo $line\ndone < file.txt\n# Reads and prints each line from file.txt with preserved whitespace"
+        },
+        {
+          "text": "To write to a file in Shell Scripting, you can use commands like echo, printf, or output redirection.",
+          "codeSnippet": "echo 'Hello, World!' > newfile.txt\n# Writes 'Hello, World!' to newfile.txt\n\nprintf 'Line 1\nLine 2' > file.txt\n# Writes multiple lines to file.txt\n\necho 'Appended line' >> file.txt\n# Appends 'Appended line' to file.txt"
+        },
+        {
+          "text": "File permissions can be managed in Shell Scripting using commands like chmod, chown, and chgrp.",
+          "codeSnippet": "chmod 755 script.sh\n# Sets script.sh permissions to rwxr-xr-x\n\nchown user:group file.txt\n# Changes the owner and group of file.txt\n\nchgrp newgroup file.txt\n# Changes the group of file.txt to newgroup"
+        }
+      ]
+    },
+    {
+      "topic": "Error Handling in sh",
+      "topic_no": 523,
+      "contents": [
+        {
+          "text": "Error handling in shell scripting is essential to ensure that scripts can gracefully handle unexpected situations and errors.",
+          "codeSnippet": "if [ $? -ne 0 ]; then\n    echo \"An error occurred\"\n    exit 1\nfi",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "One common way to handle errors in shell scripts is by checking the exit status of commands using the '$?' variable.",
+          "codeSnippet": "if [ $? -ne 0 ]; then\n    echo \"An error occurred\"\n    exit 1\nfi",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Using conditional statements like 'if' and 'else' can help in implementing error handling logic in shell scripts.",
+          "codeSnippet": "if [ $? -ne 0 ]; then\n    echo \"An error occurred\"\n    exit 1\nfi",
+          "codeLanguage": "sh"
+        },
+        {
+          "text": "Another approach to error handling is using 'trap' to catch signals and define actions to take when an error occurs.",
+          "codeSnippet": "trap 'echo \"An error occurred\"' ERR",
+          "codeLanguage": "sh"
+        }
+      ]
+    },
+    {
+      "topic": "Advanced sh Scripting Techniques",
+      "topic_no": 562,
+      "contents": [
+        {
+          "text": "Using functions in shell scripts to improve code reusability and modularity",
+          "codeSnippet": "function greet() {\n    echo \"Hello, $1!\"\n}\n\ngreet World",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Implementing error handling and logging in shell scripts for better debugging",
+          "codeSnippet": "function log_error() {\n    echo \"Error: $1\" >&2\n}\n\nif [ ! -f file.txt ]; then\n    log_error \"File not found\"\nfi",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using arrays in shell scripts to store and manipulate multiple values",
+          "codeSnippet": "colors=(\"red\" \"green\" \"blue\")\necho \"Colors: ${colors[@]}\"",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Implementing conditional logic and loops in shell scripts for decision-making and iteration",
+          "codeSnippet": "if [ $1 -gt 10 ]; then\n    echo \"$1 is greater than 10\"\nelse\n    echo \"$1 is less than or equal to 10\"\nfi",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using command substitution and pipelines in shell scripts to capture and process command output",
+          "codeSnippet": "files=$(ls *.txt)\necho \"Files: $files\"",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Best Practices for sh Scripting",
+      "topic_no": 593,
+      "contents": [
+        {
+          "text": "Use descriptive variable names to improve code readability."
+        },
+        {
+          "text": "Avoid using global variables in your shell scripts."
+        },
+        {
+          "text": "Always include error handling in your shell scripts to gracefully handle failures."
+        },
+        {
+          "text": "Use comments to explain complex logic or functionality in your shell scripts."
+        },
+        {
+          "text": "Regularly test and debug your shell scripts to ensure they work as intended."
+        },
+        {
+          "text": "Avoid using unnecessary or overly complex logic in your shell scripts."
+        },
+        {
+          "text": "Follow consistent indentation practices to make your code more readable."
+        },
+        {
+          "text": "Use functions to modularize your shell scripts and promote code reuse."
+        },
+        {
+          "text": "Consider using shebang (#!) at the beginning of your script to specify the interpreter."
+        },
+        {
+          "text": "Use double quotes around variables to prevent word splitting and pathname expansion."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1182 @@
+{
+  "category": "C",
+  "topics": [
+    {
+      "topic": "Introduction to C Programming",
+      "topic_no": 52,
+      "contents": [
+        {
+          "text": "C is a powerful and efficient programming language developed in the early 1970s.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C is widely used for system programming, embedded systems, and various applications where performance is crucial.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C is a procedural programming language, which means it follows a top-down approach in solving problems.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C programs consist of functions that contain instructions for the computer to execute.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C uses a compiler to convert the human-readable code into machine code that the computer can understand and execute.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C programs start execution from the main() function, which is the entry point of the program.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C supports a rich set of operators for arithmetic, logical, bitwise, and relational operations.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C allows the use of pointers, which are variables that store memory addresses.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C provides standard libraries like stdio.h for input and output operations, math.h for mathematical functions, and more.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C is case-sensitive, meaning uppercase and lowercase letters are treated differently.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "Basic Syntax and Structure of C",
+      "topic_no": 129,
+      "contents": [
+        {
+          "text": "C is a procedural programming language.",
+          "codeSnippet": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "C programs are made up of functions.",
+          "codeSnippet": "int add(int a, int b) {\n    return a + b;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "C programs are structured in blocks.",
+          "codeSnippet": "int main() {\n    int x = 5;\n    {\n        int y = 10;\n        printf(\"Sum: %d\\n\", x + y);\n    }\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "C programs start execution from the main function.",
+          "codeSnippet": "int main() {\n    // Program starts execution here\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "C programs use semicolons to terminate statements.",
+          "codeSnippet": "int main() {\n    int x = 5;\n    printf(\"Value of x: %d\\n\", x);\n    return 0;\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Variables and Data Types in C",
+      "topic_no": 190,
+      "contents": [
+        {
+          "content": "Variables are used to store data in a program. They have a data type and a name.",
+          "codeSnippet": "int age = 25;"
+        },
+        {
+          "content": "In C, data types include int, float, double, char, and more.",
+          "codeSnippet": "float price = 10.99;"
+        },
+        {
+          "content": "Variables must be declared before they can be used in C.",
+          "codeSnippet": "char grade = 'A';"
+        },
+        {
+          "content": "C supports both signed and unsigned data types.",
+          "codeSnippet": "unsigned int count = 100;"
+        },
+        {
+          "content": "Variables can be initialized at the time of declaration in C.",
+          "codeSnippet": "double pi = 3.14159;"
+        }
+      ]
+    },
+    {
+      "topic": "Operators in C",
+      "topic_no": 293,
+      "contents": [
+        {
+          "text": "Arithmetic Operators in C include addition, subtraction, multiplication, division, and modulus.",
+          "codeSnippet": "int a = 10;\nint b = 5;\nint sum = a + b;\nint difference = a - b;\nint product = a * b;\nint quotient = a / b;\nint remainder = a % b;",
+          "codeLanguage": "c"
+        },
+        {
+          "text": "Relational Operators in C are used to compare two values and include operators like equal to, not equal to, greater than, less than, etc.",
+          "codeSnippet": "int x = 10;\nint y = 5;\nif (x > y) {\n    printf(\"x is greater than y\");\n} else if (x < y) {\n    printf(\"x is less than y\");\n} else {\n    printf(\"x is equal to y\");\n}",
+          "codeLanguage": "c"
+        },
+        {
+          "text": "Logical Operators in C include AND, OR, and NOT operators used to perform logical operations.",
+          "codeSnippet": "int p = 1;\nint q = 0;\nif (p && q) {\n    printf(\"Both p and q are true\");\n} else if (p || q) {\n    printf(\"At least one of p or q is true\");\n} else {\n    printf(\"Neither p nor q is true\");\n}",
+          "codeLanguage": "c"
+        },
+        {
+          "text": "Assignment Operators in C are used to assign values to variables and include operators like =, +=, -=, *=, /=, etc.",
+          "codeSnippet": "int num = 10;\nnum += 5;\nnum -= 3;\nnum *= 2;\nnum /= 4;",
+          "codeLanguage": "c"
+        },
+        {
+          "text": "Bitwise Operators in C are used to perform bit-level operations on integers.",
+          "codeSnippet": "int a = 5; // 101 in binary\nint b = 3; // 011 in binary\nint result = a & b; // Bitwise AND\nresult = a | b; // Bitwise OR\nresult = a ^ b; // Bitwise XOR\nresult = ~a; // Bitwise NOT",
+          "codeLanguage": "c"
+        }
+      ]
+    },
+    {
+      "topic": "Control Structures: if, else, and switch",
+      "topic_no": 329,
+      "contents": [
+        {
+          "text": "if statement is used to execute a block of code only if a specified condition is true.",
+          "codeSnippet": "if (condition) {\n    // code to be executed if the condition is true\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "else statement is used to execute a block of code if the same condition is false.",
+          "codeSnippet": "if (condition) {\n    // code to be executed if the condition is true\n} else {\n    // code to be executed if the condition is false\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "switch statement is used to select one of many code blocks to be executed.",
+          "codeSnippet": "switch (expression) {\n    case constant1:\n        // code block 1\n        break;\n    case constant2:\n        // code block 2\n        break;\n    default:\n        // default code block\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Loops: for, while, and do-while",
+      "topic_no": 365,
+      "contents": [
+        {
+          "text": "For Loop",
+          "codeSnippet": "for (int i = 0; i < 5; i++) {\n    printf(\"%d\\n\", i);\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "While Loop",
+          "codeSnippet": "int i = 0;\nwhile (i < 5) {\n    printf(\"%d\\n\", i);\n    i++;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Do-While Loop",
+          "codeSnippet": "int i = 0;\ndo {\n    printf(\"%d\\n\", i);\n    i++;\n} while (i < 5);",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Arrays and Strings in C",
+      "topic_no": 418,
+      "contents": [
+        {
+          "text": "An array in C is a collection of elements of the same data type stored in contiguous memory locations.",
+          "codeSnippet": "int numbers[5];",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "To access elements in an array, you use the index of the element within square brackets.",
+          "codeSnippet": "int value = numbers[2];",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Arrays in C are zero-indexed, meaning the first element is accessed using index 0.",
+          "codeSnippet": "int firstElement = numbers[0];",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Strings in C are represented as arrays of characters terminated by a null character '\\0'.",
+          "codeSnippet": "char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\\0'};",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "You can also initialize strings in C using double quotes.",
+          "codeSnippet": "char greeting[] = \"Hello\";",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "To manipulate strings in C, you can use various library functions like strcpy, strcat, strlen, etc.",
+          "codeSnippet": "char str1[20], str2[20];\nstrcpy(str1, \"Hello\");\nstrcpy(str2, str1);",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Pointers and Dynamic Memory Allocation",
+      "topic_no": 452,
+      "contents": [
+        {
+          "text": "Pointers in C are variables that store memory addresses.",
+          "codeSnippet": "int *ptr; // declaring a pointer to an integer variable"
+        },
+        {
+          "text": "Pointers are used to store the address of other variables.",
+          "codeSnippet": "int num = 10;\nint *ptr = &num; // storing the address of 'num' in 'ptr'"
+        },
+        {
+          "text": "Dynamic memory allocation in C allows the program to request memory during runtime.",
+          "codeSnippet": "int *ptr = (int *)malloc(sizeof(int)); // allocating memory for an integer"
+        },
+        {
+          "text": "Dynamic memory allocation helps in managing memory efficiently.",
+          "codeSnippet": "int *arr = (int *)calloc(5, sizeof(int)); // allocating memory for an integer array of size 5"
+        },
+        {
+          "text": "Pointers can be used to access dynamically allocated memory.",
+          "codeSnippet": "int *ptr = (int *)malloc(sizeof(int));\n*ptr = 20; // accessing and assigning value to dynamically allocated memory"
+        }
+      ]
+    },
+    {
+      "topic": "Structures and Unions in C",
+      "topic_no": 471,
+      "contents": [
+        {
+          "text": "Structures in C are user-defined data types that allow you to group different variables under a single name.",
+          "codeSnippet": "struct Person {\n    char name[50];\n    int age;\n};",
+          "codeLanguage": "c"
+        },
+        {
+          "text": "Unions in C are similar to structures but they use the same memory location for all its members.",
+          "codeSnippet": "union Data {\n    int i;\n    float f;\n    char str[20];\n};",
+          "codeLanguage": "c"
+        }
+      ]
+    },
+    {
+      "topic": "File Handling in C",
+      "topic_no": 533,
+      "contents": [
+        {
+          "content": "File handling is a mechanism to store data in files and manipulate that data through input/output operations.",
+          "codeSnippet": "#include <stdio.h>\nint main() {\n    FILE *filePointer;\n    filePointer = fopen(\"example.txt\", \"w\");\n    fprintf(filePointer, \"Hello, World!\");\n    fclose(filePointer);\n    return 0;\n}"
+        },
+        {
+          "content": "In C, file handling is done using pointers to structures of type FILE.",
+          "codeSnippet": "#include <stdio.h>\nint main() {\n    FILE *filePointer;\n    filePointer = fopen(\"example.txt\", \"r\");\n    char data[100];\n    fgets(data, 100, filePointer);\n    printf(\"Data from file: %s\", data);\n    fclose(filePointer);\n    return 0;\n}"
+        },
+        {
+          "content": "Common file operations include opening, reading, writing, and closing files.",
+          "codeSnippet": "#include <stdio.h>\nint main() {\n    FILE *filePointer;\n    filePointer = fopen(\"example.txt\", \"a\");\n    fprintf(filePointer, \"\\nAppending new data.\");\n    fclose(filePointer);\n    return 0;\n}"
+        },
+        {
+          "content": "Files can be opened in different modes such as read (\"r\"), write (\"w\"), append (\"a\"), and binary (\"b\").",
+          "codeSnippet": "#include <stdio.h>\nint main() {\n    FILE *filePointer;\n    filePointer = fopen(\"example.bin\", \"wb\");\n    int data[] = {1, 2, 3, 4, 5};\n    fwrite(data, sizeof(int), 5, filePointer);\n    fclose(filePointer);\n    return 0;\n}"
+        },
+        {
+          "content": "Error handling is important when working with files to check for successful file operations.",
+          "codeSnippet": "#include <stdio.h>\nint main() {\n    FILE *filePointer;\n    filePointer = fopen(\"nonexistent.txt\", \"r\");\n    if (filePointer == NULL) {\n        printf(\"Error opening file.\");\n        return 1;\n    }\n    fclose(filePointer);\n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Preprocessor Directives in C",
+      "topic_no": 596,
+      "contents": [
+        {
+          "text": "Preprocessor directives are commands that are processed by the C preprocessor before the compilation of the program begins.",
+          "codeSnippet": "#include <stdio.h>\n#define MAX 100\n\nint main() {\n    printf(\"The maximum value is %d\", MAX);\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "The #include directive is used to include the contents of a file in the source code at the location of the directive.",
+          "codeSnippet": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\");\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "The #define directive is used to define constants or macros in C.",
+          "codeSnippet": "#include <stdio.h>\n#define PI 3.14159\n\nint main() {\n    float radius = 5;\n    float area = PI * radius * radius;\n    printf(\"The area of the circle is %f\", area);\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Conditional compilation can be achieved using preprocessor directives like #ifdef, #ifndef, #else, and #endif.",
+          "codeSnippet": "#include <stdio.h>\n#define DEBUG\n\nint main() {\n    #ifdef DEBUG\n        printf(\"Debug mode is enabled\");\n    #else\n        printf(\"Debug mode is disabled\");\n    #endif\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "The #undef directive is used to undefine a defined constant or macro in C.",
+          "codeSnippet": "#include <stdio.h>\n#define TEST 123\n\nint main() {\n    printf(\"The value of TEST is %d\", TEST);\n    #undef TEST\n    // printf(\"The value of TEST is %d\", TEST); // This will result in an error\n    return 0;\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Error Handling and Debugging Techniques",
+      "topic_no": 622,
+      "contents": [
+        {
+          "content": "Error Handling and Debugging Techniques in C",
+          "codeSnippet": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n    int dividend = 10;\n    int divisor = 0;\n    int result;\n\n    if (divisor == 0) {\n        printf(\"Error: Division by zero\\n\");\n        exit(1);\n    }\n\n    result = dividend / divisor;\n    printf(\"Result: %d\\n\", result);\n\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "content": "Use of assert() for Debugging",
+          "codeSnippet": "#include <assert.h>\n\nint main() {\n    int x = 5;\n    int y = 10;\n\n    assert(x == y);\n\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "content": "Handling Errors with perror()",
+          "codeSnippet": "#include <stdio.h>\n#include <errno.h>\n#include <string.h>\n\nint main() {\n    FILE *file = fopen(\"nonexistentfile.txt\", \"r\");\n\n    if (file == NULL) {\n        perror(\"Error\");\n        printf(\"Error opening file: %s\\n\", strerror(errno));\n    }\n\n    return 0;\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Memory Management and Optimization in C",
+      "topic_no": 660,
+      "contents": [
+        {
+          "text": "Memory Management in C involves allocating and deallocating memory dynamically during program execution.",
+          "codeSnippet": "int *ptr = (int *)malloc(sizeof(int));\nif(ptr == NULL) {\n    printf(\"Memory allocation failed\");\n} else {\n    *ptr = 10;\n    printf(\"Value stored at ptr: %d\", *ptr);\n    free(ptr);\n}"
+        },
+        {
+          "text": "Memory Optimization in C aims to reduce memory usage and improve program performance by efficiently managing memory resources.",
+          "codeSnippet": "int main() {\n    int *ptr = (int *)malloc(sizeof(int));\n    if(ptr == NULL) {\n        printf(\"Memory allocation failed\");\n        return 1;\n    }\n    *ptr = 10;\n    printf(\"Value stored at ptr: %d\", *ptr);\n    free(ptr);\n    return 0;\n}"
+        },
+        {
+          "text": "Memory Leaks in C occur when memory is allocated but not deallocated, leading to wasted memory resources and potential program instability.",
+          "codeSnippet": "int main() {\n    int *ptr = (int *)malloc(sizeof(int));\n    if(ptr == NULL) {\n        printf(\"Memory allocation failed\");\n        return 1;\n    }\n    *ptr = 10;\n    printf(\"Value stored at ptr: %d\", *ptr);\n    // free(ptr); // Uncomment this line to deallocate memory\n    return 0;\n}"
+        },
+        {
+          "text": "Fragmentation in memory management refers to the situation where memory is divided into small blocks over time, leading to inefficient memory usage.",
+          "codeSnippet": "int main() {\n    int *ptr1 = (int *)malloc(100 * sizeof(int));\n    int *ptr2 = (int *)malloc(100 * sizeof(int));\n    // Perform operations\n    free(ptr1);\n    free(ptr2);\n    return 0;\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Bitwise Operations in C",
+      "topic_no": 715,
+      "contents": [
+        {
+          "text": "Bitwise operators in C are used to perform operations on individual bits of integer operands.",
+          "codeSnippet": "#include <stdio.h>\n\nint main() {\n    unsigned int a = 5; // 0000 0101\n    unsigned int b = 9; // 0000 1001\n    unsigned int result;\n\n    // Bitwise AND\n    result = a & b; // 0000 0001\n    printf(\"AND result: %u\\n\", result);\n\n    // Bitwise OR\n    result = a | b; // 0000 1101\n    printf(\"OR result: %u\\n\", result);\n\n    // Bitwise XOR\n    result = a ^ b; // 0000 1100\n    printf(\"XOR result: %u\\n\", result);\n\n    // Bitwise NOT\n    result = ~a; // 1111 1010\n    printf(\"NOT result: %u\\n\", result);\n\n    // Left Shift\n    result = a << 1; // 0000 1010\n    printf(\"Left Shift result: %u\\n\", result);\n\n    // Right Shift\n    result = b >> 1; // 0000 0100\n    printf(\"Right Shift result: %u\\n\", result);\n\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Bitwise AND operator in C performs a bitwise AND operation between corresponding bits of two operands.",
+          "codeSnippet": "result = a & b;",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Bitwise OR operator in C performs a bitwise OR operation between corresponding bits of two operands.",
+          "codeSnippet": "result = a | b;",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Bitwise XOR operator in C performs a bitwise XOR operation between corresponding bits of two operands.",
+          "codeSnippet": "result = a ^ b;",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Bitwise NOT operator in C performs a bitwise NOT operation on each bit of the operand.",
+          "codeSnippet": "result = ~a;",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Left Shift operator in C shifts the bits of the left operand to the left by a number of positions specified by the right operand.",
+          "codeSnippet": "result = a << 1;",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Right Shift operator in C shifts the bits of the left operand to the right by a number of positions specified by the right operand.",
+          "codeSnippet": "result = b >> 1;",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Advanced Data Structures: Linked Lists, Stacks, and Queues",
+      "topic_no": 731,
+      "contents": [
+        {
+          "text": "Linked Lists are a linear data structure where each element is a separate object, called a node, that contains a reference to the next node in the sequence.",
+          "codeSnippet": "struct Node {\n    int data;\n    struct Node* next;\n};",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Stacks are a Last In First Out (LIFO) data structure where elements are added and removed from the same end, known as the top of the stack.",
+          "codeSnippet": "struct Stack {\n    int top;\n    unsigned capacity;\n    int* array;\n};",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Queues are a First In First Out (FIFO) data structure where elements are added at the rear and removed from the front.",
+          "codeSnippet": "struct Queue {\n    int front, rear, size;\n    unsigned capacity;\n    int* array;\n};",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Recursion and Recursive Algorithms",
+      "topic_no": 740,
+      "contents": [
+        {
+          "text": "Recursion is a programming technique where a function calls itself in its definition.",
+          "codeSnippet": "void recursiveFunction() {\n    recursiveFunction();\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "A recursive algorithm is an algorithm that solves a problem by calling itself as a subroutine.",
+          "codeSnippet": "int factorial(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    else {\n        return n * factorial(n - 1);\n    }\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Dynamic Data Structures: Trees and Graphs",
+      "topic_no": 757,
+      "contents": [
+        {
+          "text": "Trees are hierarchical data structures that consist of nodes connected by edges.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "There are various types of trees such as binary trees, binary search trees, AVL trees, and red-black trees.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Graphs are non-linear data structures that consist of vertices/nodes connected by edges/links.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "There are different types of graphs including directed graphs, undirected graphs, weighted graphs, and cyclic graphs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In C, trees can be implemented using structures and pointers.",
+          "codeSnippet": "struct Node {\n    int data;\n    struct Node* left;\n    struct Node* right;\n};",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Graphs in C can be represented using adjacency lists or adjacency matrices.",
+          "codeSnippet": "struct Graph {\n    int V;\n    int** adjMatrix;\n};",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Multi-file Programming and Modularization",
+      "topic_no": 783,
+      "contents": [
+        {
+          "text": "Modularization in C allows breaking down a large program into smaller, manageable modules or files.",
+          "codeSnippet": "#include <stdio.h>\n#include \"module1.h\"\n#include \"module2.h\"\n\nint main() {\n    function1();\n    function2();\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Multi-file programming in C involves creating multiple source files that can be compiled separately and linked together to form the final executable.",
+          "codeSnippet": "// module1.h\n#ifndef MODULE1_H\n#define MODULE1_H\n\nvoid function1();\n\n#endif",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "To use functions defined in different files, you can declare them in header files and include those headers in your main program file.",
+          "codeSnippet": "// module1.c\n#include <stdio.h>\n#include \"module1.h\"\n\nvoid function1() {\n    printf(\"Function 1 called\");\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Each source file in a multi-file C program can have its own functions and variables, providing better organization and reusability.",
+          "codeSnippet": "// module2.h\n#ifndef MODULE2_H\n#define MODULE2_H\n\nvoid function2();\n\n#endif",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Separating code into modules can improve code readability, maintenance, and collaboration among team members.",
+          "codeSnippet": "// module2.c\n#include <stdio.h>\n#include \"module2.h\"\n\nvoid function2() {\n    printf(\"Function 2 called\");\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to C Standard Library Functions",
+      "topic_no": 812,
+      "contents": [
+        {
+          "text": "The C Standard Library provides a set of functions that can be used in C programming to perform various tasks such as input/output operations, string manipulation, memory management, and more.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Some commonly used functions in the C Standard Library include printf() for output, scanf() for input, strcpy() for string copying, malloc() for dynamic memory allocation, and more.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The <stdio.h> header file contains functions for input and output operations. For example, printf() is used to display output on the screen.",
+          "codeSnippet": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "The <string.h> header file provides functions for string manipulation. For instance, strcpy() is used to copy one string to another.",
+          "codeSnippet": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char source[] = \"Hello\";\n    char destination[20];\n    strcpy(destination, source);\n    printf(\"Copied string: %s\\n\", destination);\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "The <stdlib.h> header file includes functions for memory allocation and deallocation. For example, malloc() is used to allocate memory dynamically.",
+          "codeSnippet": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n    int *ptr;\n    ptr = (int*)malloc(5 * sizeof(int));\n    if (ptr == NULL) {\n        printf(\"Memory allocation failed.\\n\");\n    } else {\n        printf(\"Memory allocated successfully.\\n\");\n        free(ptr);\n    }\n    return 0;\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Command-line Arguments and Environment Variables",
+      "topic_no": 824,
+      "contents": [
+        {
+          "text": "Command-line arguments are values provided to a program when it is executed in the command line.",
+          "codeSnippet": "int main(int argc, char *argv[]) {\n    for(int i = 0; i < argc; i++) {\n        printf(\"Argument %d: %s\\n\", i, argv[i]);\n    }\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Environment variables are global variables that are accessible to all processes running on a system.",
+          "codeSnippet": "int main() {\n    char *env_var = getenv(\"PATH\");\n    printf(\"Value of PATH environment variable: %s\\n\", env_var);\n    return 0;\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Interacting with the Operating System: System Calls",
+      "topic_no": 836,
+      "contents": [
+        {
+          "text": "System Calls are functions provided by the operating system that can be called by user programs to request services from the operating system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In C programming, system calls are typically accessed through the standard C library functions, such as 'open', 'read', 'write', 'close', etc.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "System calls allow user programs to interact with the operating system to perform tasks like file operations, process management, memory management, and more.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To make a system call in C, you use the 'syscall' function, passing in the appropriate system call number and any required arguments.",
+          "codeSnippet": "syscall(SYS_write, 1, message, strlen(message));",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "System calls are a crucial part of the C programming language as they provide a way for programs to access low-level operating system functionalities.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to Low-Level Programming in C",
+      "topic_no": 856,
+      "contents": [
+        {
+          "text": "Low-level programming involves working directly with a computer's hardware and memory, allowing for precise control and optimization.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "C is a popular programming language for low-level programming due to its ability to directly manipulate memory and hardware.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Low-level programming in C requires a deep understanding of computer architecture and memory management.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "In low-level programming, programmers have fine-grained control over memory allocation and deallocation.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Pointers are a fundamental concept in low-level programming in C, allowing direct memory access and manipulation.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Low-level programming in C often involves bitwise operations for efficient manipulation of individual bits in memory.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Understanding memory layout and data representation is crucial in low-level programming to optimize performance and minimize memory usage.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Low-level programming in C is commonly used in embedded systems, device drivers, and operating systems development.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "Concurrency and Parallelism in C",
+      "topic_no": 885,
+      "contents": [
+        {
+          "text": "Concurrency and Parallelism in C",
+          "codeSnippet": "#include <stdio.h>\n#include <omp.h>\n\nint main() {\n    #pragma omp parallel\n    {\n        printf(\"Hello, world!\\n\");\n    }\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Creating Threads in C",
+          "codeSnippet": "#include <stdio.h>\n#include <pthread.h>\n\nvoid *printMessage(void *arg) {\n    char *message = (char *)arg;\n    printf(\"%s\\n\", message);\n    pthread_exit(NULL);\n}\n\nint main() {\n    pthread_t thread_id;\n    char *message = \"Hello, world!\";\n    pthread_create(&thread_id, NULL, printMessage, (void *)message);\n    pthread_join(thread_id, NULL);\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Mutex in C for Synchronization",
+          "codeSnippet": "#include <stdio.h>\n#include <pthread.h>\n\npthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;\nint sharedData = 0;\n\nvoid *incrementData(void *arg) {\n    pthread_mutex_lock(&mutex);\n    sharedData++;\n    printf(\"Data incremented: %d\\n\", sharedData);\n    pthread_mutex_unlock(&mutex);\n    pthread_exit(NULL);\n}\n\nint main() {\n    pthread_t thread1, thread2;\n    pthread_create(&thread1, NULL, incrementData, NULL);\n    pthread_create(&thread2, NULL, incrementData, NULL);\n    pthread_join(thread1, NULL);\n    pthread_join(thread2, NULL);\n    return 0;\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to C99 and C11 Standards",
+      "topic_no": 892,
+      "contents": [
+        {
+          "text": "C99 and C11 are standards for the C programming language, introduced in 1999 and 2011 respectively.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "C99 introduced several new features and improvements to the C language, such as inline functions, variable-length arrays, and new data types like long long int.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "C11 further enhanced the C language with features like _Generic keyword for generic programming, _Static_assert for compile-time assertions, and _Alignas for specifying alignment requirements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Both C99 and C11 standards aimed to improve the expressiveness, flexibility, and safety of the C language.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To use C99 or C11 features, compilers need to support these standards, and developers need to specify the appropriate standard during compilation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Memory-Mapped I/O and Hardware Interaction",
+      "topic_no": 910,
+      "contents": [
+        {
+          "text": "Memory-mapped I/O is a technique in which hardware devices are mapped to specific memory addresses, allowing the CPU to interact with them as if they were memory locations.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In C programming, memory-mapped I/O involves accessing hardware registers by reading from or writing to specific memory addresses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "When interacting with hardware using memory-mapped I/O, it is essential to understand the memory layout and the specific addresses associated with different hardware components.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Hardware interaction in C programming often involves setting or clearing specific bits in hardware registers to control device behavior or retrieve status information.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To demonstrate memory-mapped I/O in C, consider accessing the GPIO (General Purpose Input/Output) registers on a microcontroller to toggle an LED connected to a specific pin.",
+          "codeSnippet": "void toggleLED() {\n    volatile unsigned int *gpio = (unsigned int *)0x20200000; // GPIO base address\n    *gpio |= (1 << 10); // Set pin 10\n    delay();\n    *gpio &= ~(1 << 10); // Clear pin 10\n}\n",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Interfacing with Hardware: GPIO, UART, SPI, and I2C",
+      "topic_no": 919,
+      "contents": [
+        {
+          "text": "General Purpose Input/Output (GPIO) allows a microcontroller to interact with external devices by reading input signals or sending output signals.",
+          "codeSnippet": "void setup() {\n  pinMode(13, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(13, HIGH);\n  delay(1000);\n  digitalWrite(13, LOW);\n  delay(1000);\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Universal Asynchronous Receiver-Transmitter (UART) is a communication protocol used for serial communication between devices.",
+          "codeSnippet": "void setup() {\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  if (Serial.available() > 0) {\n    char data = Serial.read();\n    Serial.println(data);\n  }\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Serial Peripheral Interface (SPI) is a synchronous serial communication interface used for short-distance communication between devices.",
+          "codeSnippet": "void setup() {\n  SPI.begin();\n}\n\nvoid loop() {\n  SPI.transfer(0x55);\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Inter-Integrated Circuit (I2C) is a multi-master, multi-slave serial communication protocol commonly used to connect low-speed peripherals.",
+          "codeSnippet": "void setup() {\n  Wire.begin();\n}\n\nvoid loop() {\n  Wire.beginTransmission(0x40);\n  Wire.write(0x00);\n  Wire.endTransmission();\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to Embedded C Programming",
+      "topic_no": 927,
+      "contents": [
+        {
+          "text": "Embedded C programming is a specialized skill set that involves writing code for embedded systems, which are small computing devices designed to perform specific tasks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Embedded C programming requires a good understanding of low-level hardware interactions and memory management.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In Embedded C programming, developers often work with microcontrollers and microprocessors to control hardware components.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One of the key features of Embedded C programming is its ability to directly access hardware registers and manipulate them to control the behavior of the embedded system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Embedded C programs are typically written to be highly efficient and optimized for memory usage and speed due to the resource-constrained nature of embedded systems.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the specific requirements and constraints of the target embedded system is crucial in Embedded C programming to ensure the code operates correctly within the system's limitations.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Real-time Systems and Programming in C",
+      "topic_no": 934,
+      "contents": [
+        {
+          "text": "Introduction to Real-time Systems",
+          "codeSnippet": "#include <stdio.h>\n\nint main() {\n    printf(\"Real-time systems are designed to provide timely responses to events in the physical world.\");\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Characteristics of Real-time Systems",
+          "codeSnippet": "#include <stdio.h>\n\nint main() {\n    printf(\"Real-time systems are characterized by deadlines, predictability, and reliability.\");\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Types of Real-time Systems",
+          "codeSnippet": "#include <stdio.h>\n\nint main() {\n    printf(\"Real-time systems can be classified as hard real-time, soft real-time, and firm real-time.\");\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Real-time Programming in C",
+          "codeSnippet": "#include <stdio.h>\n#include <time.h>\n\nint main() {\n    time_t currentTime;\n    time(&currentTime);\n    printf(\"Current time is: %s\", ctime(&currentTime));\n    return 0;\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Secure Coding Practices in C",
+      "topic_no": 943,
+      "contents": [
+        {
+          "text": "Use input validation to prevent buffer overflows and other vulnerabilities.",
+          "codeSnippet": "if (fgets(buffer, sizeof(buffer), stdin) == NULL) {\n    // handle error\n}"
+        },
+        {
+          "text": "Avoid using unsafe functions like gets() and strcpy().",
+          "codeSnippet": "char dest[10];\nchar source[20];\n// Unsafe strcpy\nstrcpy(dest, source);"
+        },
+        {
+          "text": "Always check the return values of functions that can fail.",
+          "codeSnippet": "if (openFile(filename) == -1) {\n    // handle error\n}"
+        },
+        {
+          "text": "Use secure functions like strncpy() instead of strcpy() to prevent buffer overflows.",
+          "codeSnippet": "char dest[10];\nchar source[20];\n// Safe strncpy\nstrncpy(dest, source, sizeof(dest));"
+        },
+        {
+          "text": "Avoid hardcoding sensitive information like passwords or API keys in the code.",
+          "codeSnippet": "char* password = getPasswordFromUser();\n// Do not hardcode passwords like:\n// char* password = \"mysecretpassword\";"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to C Debugging Tools: gdb and Valgrind",
+      "topic_no": 954,
+      "contents": [
+        {
+          "text": "Introduction to C Debugging Tools: gdb and Valgrind"
+        },
+        {
+          "text": "gdb (GNU Debugger) is a powerful command-line debugger for C and other programming languages. It allows developers to inspect and manipulate the execution of their programs, helping to identify and fix bugs efficiently.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Valgrind is a dynamic analysis tool that helps in detecting memory management issues in C programs. It can detect memory leaks, buffer overflows, and other memory-related errors, providing valuable insights for debugging.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using gdb, developers can set breakpoints in their C code to pause execution at specific points, inspect variables, and step through the program line by line to understand its behavior.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of setting a breakpoint in gdb:",
+          "codeSnippet": "break main",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Valgrind can be used to run C programs and detect memory errors such as uninitialized variables or accessing memory out of bounds, helping developers improve the reliability of their code.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of running a C program with Valgrind:",
+          "codeSnippet": "valgrind ./my_program",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Code Optimization Techniques in C",
+      "topic_no": 973,
+      "contents": [
+        {
+          "text": "Use of Efficient Data Structures",
+          "codeSnippet": "struct Node {\n    int data;\n    struct Node* next;\n};\n\nstruct Node* createNode(int data) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    newNode->data = data;\n    newNode->next = NULL;\n    return newNode;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Minimize the Use of Global Variables",
+          "codeSnippet": "#include <stdio.h>\n\nint main() {\n    int sum = 0;\n    for (int i = 1; i <= 100; i++) {\n        sum += i;\n    }\n    printf(\"Sum of numbers from 1 to 100 is: %d\\n\", sum);\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Avoid Unnecessary Recursion",
+          "codeSnippet": "#include <stdio.h>\n\nint fibonacci(int n) {\n    int a = 0, b = 1, c, i;\n    if (n == 0)\n        return a;\n    for (i = 2; i <= n; i++) {\n        c = a + b;\n        a = b;\n        b = c;\n    }\n    return b;\n}\n\nint main() {\n    int n = 10;\n    printf(\"Fibonacci series up to %d terms: \\n\", n);\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", fibonacci(i));\n    }\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Optimize Loops and Conditions",
+          "codeSnippet": "#include <stdio.h>\n\nint main() {\n    int sum = 0;\n    for (int i = 1; i <= 100; i++) {\n        if (i % 2 == 0) {\n            sum += i;\n        }\n    }\n    printf(\"Sum of even numbers from 1 to 100 is: %d\\n\", sum);\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Use Inline Functions for Small Tasks",
+          "codeSnippet": "inline int square(int x) {\n    return x * x;\n}\n\nint main() {\n    int num = 5;\n    printf(\"Square of %d is: %d\\n\", num, square(num));\n    return 0;\n}",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to Network Programming in C",
+      "topic_no": 985,
+      "contents": [
+        {
+          "text": "What is Network Programming in C?",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Why is Network Programming important in C?",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "How to create a socket in C for network communication?",
+          "codeSnippet": "int sockfd = socket(AF_INET, SOCK_STREAM, 0);",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "How to establish a connection to a server in C using sockets?",
+          "codeSnippet": "connect(sockfd, (struct sockaddr *)&server_address, sizeof(server_address));",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "How to send data over a network in C using sockets?",
+          "codeSnippet": "send(sockfd, data_buffer, strlen(data_buffer), 0);",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "How to receive data over a network in C using sockets?",
+          "codeSnippet": "recv(sockfd, recv_buffer, sizeof(recv_buffer), 0);",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Event-Driven Programming with Callbacks in C",
+      "topic_no": 995,
+      "contents": [
+        {
+          "text": "Event-driven programming is a programming paradigm where the flow of the program is determined by events such as user actions, sensor outputs, or messages from other programs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Callbacks are functions that are passed as arguments to other functions and are executed when a certain event occurs or when the parent function completes its task.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In C, event-driven programming with callbacks is commonly used in scenarios like handling user input, asynchronous I/O operations, and signal handling.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Callbacks in C are typically implemented using function pointers, allowing functions to be passed as arguments to other functions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of event-driven programming with callbacks in C is implementing a simple event handler for a button click event.",
+          "codeSnippet": "void buttonClickHandler() {\n    // Handle button click event\n}\n\nvoid registerButtonClickCallback(void (*callback)()) {\n    // Register the callback function for button click event\n    callback();\n}",
+          "codeLanguage": "c"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to GUI Programming in C: Using GTK+",
+      "topic_no": 1007,
+      "contents": [
+        {
+          "text": "GTK+ is a popular open-source GUI toolkit for creating graphical user interfaces in C.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "GTK+ stands for GIMP Toolkit, as it was originally developed for the GNU Image Manipulation Program (GIMP).",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "GTK+ provides a comprehensive set of widgets and tools for building interactive graphical applications.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "To start GUI programming with GTK+ in C, you need to include the appropriate GTK+ header files in your code.",
+          "codeSnippet": "#include <gtk/gtk.h>",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "The main function in a GTK+ program is typically used to initialize the GTK+ library and create the main application window.",
+          "codeSnippet": "int main(int argc, char *argv[]) {\n    GtkWidget *window;\n    gtk_init(&argc, &argv);\n    window = gtk_window_new(GTK_WINDOW_TOPLEVEL);\n    gtk_widget_show(window);\n    gtk_main();\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "GTK+ uses signals and callbacks to handle user interactions with the GUI elements.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Signals are emitted by widgets in response to user actions, and callbacks are functions that are executed in response to these signals.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "You can connect signals to callbacks using the gtk_signal_connect function in GTK+.",
+          "codeSnippet": "g_signal_connect(G_OBJECT(button), \"clicked\", G_CALLBACK(callback_function), data);",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "GTK+ allows you to create various types of widgets such as buttons, labels, text entries, and more to design your GUI applications.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "GTK+ also supports theming and styling to customize the appearance of your GUI applications.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "Creating Libraries and Static/Dynamic Linking in C",
+      "topic_no": 1013,
+      "contents": [
+        {
+          "text": "Libraries in C are collections of precompiled functions and declarations that can be used in a program.",
+          "codeSnippet": "#include <stdio.h>\n#include <math.h>\n\nint main() {\n    double num = 16.0;\n    double squareRoot = sqrt(num);\n    printf(\"Square root of %f is %f\\n\", num, squareRoot);\n    return 0;\n}"
+        },
+        {
+          "text": "Static linking in C involves combining object code from libraries into the executable at compile time.",
+          "codeSnippet": "gcc -o myprogram myprogram.c -lm"
+        },
+        {
+          "text": "Dynamic linking in C allows libraries to be loaded at runtime when the program is executed.",
+          "codeSnippet": "gcc -o myprogram myprogram.c -lm"
+        }
+      ]
+    },
+    {
+      "topic": "Using Makefiles for Building C Projects",
+      "topic_no": 1022,
+      "contents": [
+        {
+          "text": "Introduction to Makefiles in C projects"
+        },
+        {
+          "text": "A Makefile is a script that specifies how to compile and link a C project"
+        },
+        {
+          "text": "Creating a basic Makefile for a C project"
+        },
+        {
+          "text": "TARGET = myprogram\n\nall: $(TARGET)\n\n$(TARGET): main.c functions.c\n\tgcc -o $@ $^"
+        },
+        {
+          "text": "Compiling the C project using the Makefile"
+        },
+        {
+          "text": "To compile the project, run the command 'make' in the terminal"
+        },
+        {
+          "text": "Defining dependencies in a Makefile"
+        },
+        {
+          "text": "TARGET = myprogram\n\nall: $(TARGET)\n\n$(TARGET): main.c functions.c\n\tgcc -o $@ $^"
+        },
+        {
+          "text": "Using variables in a Makefile"
+        },
+        {
+          "text": "CC = gcc\nCFLAGS = -Wall\n\n$(TARGET): main.c functions.c\n\t$(CC) $(CFLAGS) -o $@ $^"
+        },
+        {
+          "text": "Using phony targets in a Makefile"
+        },
+        {
+          "text": ".PHONY: clean\n\nclean:\n\trm -f $(TARGET)"
+        },
+        {
+          "text": "Including other Makefiles in a Makefile"
+        },
+        {
+          "text": "include common.mk"
+        },
+        {
+          "text": "Using conditional statements in a Makefile"
+        },
+        {
+          "text": "DEBUG = 1\n\nifeq ($(DEBUG), 1)\nCFLAGS += -g\nendif"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to CMake for Cross-Platform Build Automation",
+      "topic_no": 1033,
+      "contents": [
+        {
+          "text": "What is CMake and its importance in cross-platform build automation?",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Key features of CMake for cross-platform build automation",
+          "codeSnippet": ""
+        },
+        {
+          "text": "How to create a basic CMakeLists.txt file?",
+          "codeSnippet": "cmake_minimum_required(VERSION 3.10)\nproject(MyProject)\nadd_executable(MyExecutable main.cpp)"
+        },
+        {
+          "text": "How to specify build configurations using CMake?",
+          "codeSnippet": "cmake -DCMAKE_BUILD_TYPE=Release .."
+        },
+        {
+          "text": "How to specify compiler options and flags in CMake?",
+          "codeSnippet": "set(CMAKE_CXX_FLAGS \"-std=c++11 -Wall\")"
+        },
+        {
+          "text": "How to include external libraries using CMake?",
+          "codeSnippet": "find_package(Boost REQUIRED)\ntarget_link_libraries(MyExecutable Boost::boost)"
+        },
+        {
+          "text": "How to handle dependencies between targets in CMake?",
+          "codeSnippet": "add_dependencies(MyExecutable MyLibrary)"
+        },
+        {
+          "text": "How to generate build files for different platforms using CMake?",
+          "codeSnippet": "cmake -G \"Unix Makefiles\" .."
+        },
+        {
+          "text": "How to use CMake to build a project on Windows?",
+          "codeSnippet": "cmake -G \"Visual Studio 16 2019\" .."
+        },
+        {
+          "text": "How to build a project using CMake?",
+          "codeSnippet": "cmake --build ."
+        }
+      ]
+    },
+    {
+      "topic": "Debugging Memory Leaks and Buffer Overflows in C",
+      "topic_no": 1046,
+      "contents": [
+        {
+          "text": "Understanding Memory Leaks in C",
+          "codeSnippet": "Memory leaks occur when a program allocates memory but fails to release it, leading to a gradual depletion of available memory. This can result in performance issues and system crashes. To identify memory leaks, tools like Valgrind can be used to analyze memory usage and detect any unreleased memory blocks.",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Identifying Memory Leaks in C Programs",
+          "codeSnippet": "One common way to identify memory leaks is to use tools like Valgrind or AddressSanitizer. These tools can provide detailed reports on memory allocations and deallocations, helping developers pinpoint the source of memory leaks in their C programs.",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Preventing Memory Leaks in C",
+          "codeSnippet": "To prevent memory leaks in C programs, it is essential to always free memory that has been dynamically allocated using functions like malloc, calloc, or realloc. Additionally, thorough testing and code reviews can help catch potential memory leaks early in the development process.",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Understanding Buffer Overflows in C",
+          "codeSnippet": "Buffer overflows occur when a program writes more data to a buffer than it can hold, leading to memory corruption and potential security vulnerabilities. This can be exploited by attackers to execute malicious code or crash the program. Buffer overflows are a common source of security vulnerabilities in C programs.",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Detecting Buffer Overflows in C Programs",
+          "codeSnippet": "Tools like AddressSanitizer and static code analyzers can help detect buffer overflows in C programs by analyzing memory access patterns and identifying potential buffer overrun issues. By using these tools, developers can proactively identify and fix buffer overflow vulnerabilities in their code.",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Preventing Buffer Overflows in C",
+          "codeSnippet": "To prevent buffer overflows in C programs, developers should use safe string functions like strncpy and strlcpy instead of vulnerable functions like strcpy. Additionally, bounds checking and input validation can help ensure that data is properly handled within the bounds of allocated buffers.",
+          "codeLanguage": "C"
+        }
+      ]
+    }
+  ]
+}

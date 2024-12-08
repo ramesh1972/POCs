@@ -1,0 +1,61 @@
+{
+  "category": "Secure Coding",
+  "topics": [
+    {
+      "topic": "OWASP Top 10",
+      "topic_no": 203,
+      "contents": [
+        {
+          "text": "Injection",
+          "codeSnippet": "PreparedStatement pstmt = connection.prepareStatement(\"SELECT * FROM users WHERE username = ? AND password = ?\");\npstmt.setString(1, username);\npstmt.setString(2, password);\nResultSet rs = pstmt.executeQuery();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Broken Authentication",
+          "codeSnippet": "public void login(String username, String password) {\n    // Validate user credentials\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Sensitive Data Exposure",
+          "codeSnippet": "public void encryptData(String data) {\n    // Encryption logic\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "XML External Entities (XXE)",
+          "codeSnippet": "DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();\ndbf.setFeature(\"http://apache.org/xml/features/disallow-doctype-decl\", true);\nDocumentBuilder db = dbf.newDocumentBuilder();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Broken Access Control",
+          "codeSnippet": "if (user.role == 'admin') {\n    // Grant admin access\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Security Misconfiguration",
+          "codeSnippet": "// Disable directory listing\nOptions -Indexes",
+          "codeLanguage": "Apache Configuration"
+        },
+        {
+          "text": "Cross-Site Scripting (XSS)",
+          "codeSnippet": "const userInput = document.getElementById('input').value;\ndocument.getElementById('output').innerHTML = userInput;",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Insecure Deserialization",
+          "codeSnippet": "ObjectInputStream ois = new ObjectInputStream(inputStream);\nObject obj = ois.readObject();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Using Components with Known Vulnerabilities",
+          "codeSnippet": "// Update libraries to latest versions\nnpm update",
+          "codeLanguage": "Node.js"
+        },
+        {
+          "text": "Insufficient Logging & Monitoring",
+          "codeSnippet": "logger.info(\"User logged in successfully\");",
+          "codeLanguage": "Java"
+        }
+      ]
+    }
+  ]
+}

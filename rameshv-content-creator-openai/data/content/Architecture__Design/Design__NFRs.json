@@ -1,0 +1,523 @@
+{
+  "category": "Design - NFRs",
+  "topics": [
+    {
+      "topic": "Performance",
+      "topic_no": 13,
+      "contents": [
+        {
+          "text": "Performance in software design refers to the efficiency and speed of a system in responding to user interactions and processing tasks."
+        },
+        {
+          "text": "One example of considering performance in design is optimizing database queries to reduce response times."
+        },
+        {
+          "text": "Code snippet for optimizing database queries in a web application using indexing:",
+          "codeSnippet": "db.collection('users').createIndex({ 'email': 1 })",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Another aspect of performance design is minimizing network latency by using content delivery networks (CDNs)."
+        },
+        {
+          "text": "Code snippet for integrating a CDN in a web application for faster content delivery:",
+          "codeSnippet": " <script src='https://cdn.example.com/script.js'></script>",
+          "codeLanguage": "html"
+        }
+      ]
+    },
+    {
+      "topic": "Scalability",
+      "topic_no": 84,
+      "contents": [
+        {
+          "text": "Scalability is the ability of a system to handle a growing amount of work or its potential to accommodate growth.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Vertical scalability involves increasing the capacity of a single server by adding more resources such as CPU, RAM, or storage.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Horizontal scalability involves adding more servers to distribute the load across multiple machines.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Load balancing is a technique used to distribute incoming network traffic across multiple servers to improve scalability and reliability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Caching is a common strategy to improve scalability by storing frequently accessed data in memory to reduce the load on the database.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Configurability",
+      "topic_no": 118,
+      "contents": [
+        {
+          "text": "Configurability is the ability of a system or component to be easily customized or adjusted to meet specific requirements without requiring changes to the core codebase.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Examples of configurable elements in software design include user interface themes, database connection settings, logging levels, and feature toggles.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "In software architecture, configurability is often achieved through the use of configuration files, environment variables, or dependency injection.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Data Integrity",
+      "topic_no": 200,
+      "contents": [
+        {
+          "text": "Data Integrity ensures that data is accurate, consistent, and reliable throughout its lifecycle."
+        },
+        {
+          "text": "Maintaining data integrity involves implementing mechanisms such as constraints, validations, and error handling."
+        },
+        {
+          "text": "Examples of ensuring data integrity include enforcing unique constraints on primary keys and foreign keys in a database schema."
+        },
+        {
+          "text": "Implementing data validation rules in an application helps to prevent incorrect or incomplete data from being stored."
+        },
+        {
+          "text": "Data Integrity is crucial for ensuring the quality and reliability of data-driven applications."
+        },
+        {
+          "text": "Using checksums or hash functions can help verify the integrity of data during transmission or storage."
+        },
+        {
+          "text": "In a distributed system, maintaining data consistency across multiple nodes is essential for preserving data integrity."
+        },
+        {
+          "text": "Applying encryption techniques can enhance data integrity by protecting data from unauthorized access or tampering."
+        },
+        {
+          "text": "Ensuring data integrity requires a combination of technical controls, processes, and monitoring mechanisms."
+        },
+        {
+          "text": "Regular data backups are essential for maintaining data integrity and recovering from potential data corruption or loss."
+        }
+      ]
+    },
+    {
+      "topic": "Maintainability",
+      "topic_no": 275,
+      "contents": [
+        {
+          "text": "Maintainability is the ease with which a software system can be maintained or updated over time.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Maintainability is a non-functional requirement (NFR) that is crucial in software design to ensure the longevity and cost-effectiveness of a system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Maintainability can be achieved through modular design, clear documentation, and adherence to coding standards.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Modular design involves breaking down a system into smaller, manageable components that can be easily updated or replaced without affecting the entire system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Clear documentation, including comments within the code and external documentation, helps developers understand the system's architecture and functionality, making maintenance tasks easier.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Adherence to coding standards ensures consistency in the codebase, making it easier for developers to navigate and modify the code when necessary.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Fault tolerant & Auto recovery",
+      "topic_no": 317,
+      "contents": [
+        {
+          "text": "Fault tolerance is the ability of a system to remain operational and continue functioning properly in the event of a failure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Auto recovery is the process by which a system automatically detects and resolves failures without human intervention.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing fault tolerance involves redundancy in critical components to ensure continuous operation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Auto recovery mechanisms can include features like automatic restart of failed components or services.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of fault tolerance techniques include using load balancers to distribute traffic across multiple servers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In auto recovery, a common approach is to set up monitoring systems that can detect failures and trigger recovery processes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Availability",
+      "topic_no": 347,
+      "contents": [
+        {
+          "text": "Definition of Availability in the context of software architecture refers to the ability of a system to remain operational and accessible for use, typically measured as a percentage of uptime over a given period.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "High availability is achieved through redundancy and fault tolerance mechanisms, ensuring that the system can continue to function even if certain components fail.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of strategies to improve availability include load balancing, clustering, replication, and disaster recovery planning.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Usability",
+      "topic_no": 455,
+      "contents": [
+        {
+          "text": "Definition of Usability in Design - NFRs"
+        },
+        {
+          "text": "Importance of Usability in Architecture & Design"
+        },
+        {
+          "text": "Key Principles of Usability in Design - NFRs"
+        },
+        {
+          "text": "1. Learnability - Users should be able to quickly learn how to use the system."
+        },
+        {
+          "text": "2. Efficiency - The system should allow users to accomplish tasks efficiently."
+        },
+        {
+          "text": "3. Memorability - Users should be able to easily remember how to use the system."
+        },
+        {
+          "text": "4. Error Prevention - The system should prevent errors or help users recover from them."
+        },
+        {
+          "text": "5. User Satisfaction - Users should find the system pleasant and satisfying to use."
+        },
+        {
+          "text": "Methods for Evaluating Usability in Architecture & Design"
+        },
+        {
+          "text": "1. Usability Testing - Observing real users as they interact with the system."
+        },
+        {
+          "text": "2. Heuristic Evaluation - Experts evaluate the system based on established usability principles."
+        },
+        {
+          "text": "3. Surveys and Questionnaires - Gathering feedback from users about their experience."
+        },
+        {
+          "text": "Tools for Improving Usability in Design - NFRs"
+        },
+        {
+          "text": "1. Prototyping Tools - Creating interactive prototypes to test usability."
+        },
+        {
+          "text": "2. User Feedback Tools - Collecting feedback from users to improve the design."
+        },
+        {
+          "text": "3. Analytics Tools - Analyzing user behavior to identify usability issues."
+        }
+      ]
+    },
+    {
+      "topic": "Interoperability",
+      "topic_no": 481,
+      "contents": [
+        {
+          "text": "Interoperability is the ability of different systems, applications, or components to seamlessly work together and exchange information.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Interoperability ensures that systems can communicate and share data effectively without requiring extensive modifications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Interoperability is a key non-functional requirement in system design, especially in distributed architectures.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of interoperability is when a web application can interact with various databases regardless of their underlying technology.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Another example is the ability of different programming languages to communicate through standardized protocols like REST or SOAP.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Accessibility",
+      "topic_no": 530,
+      "contents": [
+        {
+          "text": "Accessibility is the practice of ensuring that websites, applications, and digital content are usable by people with disabilities.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common examples of accessibility features include alternative text for images, keyboard navigation, and screen reader compatibility.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Designing with accessibility in mind benefits all users, not just those with disabilities, by creating a more inclusive and user-friendly experience.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing ARIA roles and landmarks in HTML can improve the accessibility of web content for assistive technologies.",
+          "codeSnippet": "<div role=\"navigation\"></div>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Color contrast ratios should be considered to ensure text is readable for users with visual impairments.",
+          "codeSnippet": "color: #333; background-color: #fff;",
+          "codeLanguage": "CSS"
+        },
+        {
+          "text": "Using semantic HTML elements like <button> instead of <div> improves accessibility and helps assistive technologies interpret content correctly.",
+          "codeSnippet": "<button>Click me</button>",
+          "codeLanguage": "HTML"
+        }
+      ]
+    },
+    {
+      "topic": "Auditability",
+      "topic_no": 554,
+      "contents": [
+        {
+          "text": "Auditability is the capability of a system to track and log all activities and changes made within the system for the purpose of monitoring and analysis.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Auditability ensures that all actions taken within a system can be traced back to specific users or processes, providing transparency and accountability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing audit logs and trails is a common practice to achieve auditability in software systems.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Auditability is crucial for compliance with regulatory requirements and standards in various industries.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Regulatory Compliance",
+      "topic_no": 570,
+      "contents": [
+        {
+          "text": "Understanding Regulatory Compliance in Design - NFRs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Importance of Regulatory Compliance in Architecture & Design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Regulatory Compliance Standards in Design - NFRs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Regulatory Compliance Measures in Architecture & Design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Resource Utilization",
+      "topic_no": 592,
+      "contents": [
+        {
+          "text": "Resource utilization refers to the efficient use of available resources such as CPU, memory, storage, and network bandwidth to ensure optimal performance and cost-effectiveness.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Monitoring and analyzing resource utilization metrics can help identify bottlenecks, optimize performance, and plan for scalability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of resource utilization metrics include CPU utilization percentage, memory usage, disk I/O rates, and network throughput.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Resource utilization can be optimized through techniques such as load balancing, caching, parallel processing, and efficient algorithms.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Adaptability",
+      "topic_no": 611,
+      "contents": [
+        {
+          "text": "Adaptability is the ability of a system to change its behavior or structure easily in response to external stimuli or requirements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In software design, adaptability is crucial for ensuring that a system can evolve and scale to meet changing business needs and technological advancements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of adaptability in design is using microservices architecture to allow individual components of a system to be easily modified or replaced without affecting the entire system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Another example of adaptability is designing a responsive user interface that can adjust its layout and functionality based on the device screen size or orientation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cost-effectiveness",
+      "topic_no": 631,
+      "contents": [
+        {
+          "text": "Cost-effectiveness is the ability to achieve the desired outcome at the lowest possible cost.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In software design, cost-effectiveness can be achieved by optimizing non-functional requirements (NFRs) such as performance, scalability, and maintainability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "For example, designing a system with efficient algorithms and data structures can improve performance and reduce operational costs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Another example is utilizing cloud services to scale resources based on demand, thus reducing infrastructure costs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Cost-effectiveness in design can also involve considering long-term maintenance and support costs to ensure the overall lifecycle cost is minimized.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Environmental Sustainability",
+      "topic_no": 646,
+      "contents": [
+        {
+          "text": "Environmental sustainability in design refers to the practice of creating buildings and structures that have minimal negative impact on the environment throughout their lifecycle.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One example of incorporating environmental sustainability in design is by using renewable energy sources such as solar panels or wind turbines to power buildings.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Designing buildings with energy-efficient materials and technologies can help reduce energy consumption and minimize carbon emissions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing green roofs or vertical gardens in architectural designs can improve air quality, reduce urban heat island effect, and provide habitats for wildlife.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using sustainable materials like bamboo, reclaimed wood, or recycled steel in construction can help reduce resource depletion and waste generation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Legal Compliance",
+      "topic_no": 662,
+      "contents": [
+        {
+          "text": "Legal Compliance in software design refers to ensuring that the design and implementation of the system adhere to relevant laws, regulations, and standards."
+        },
+        {
+          "text": "For example, in the design of a healthcare application, ensuring compliance with HIPAA regulations regarding patient data privacy and security is crucial."
+        },
+        {
+          "text": "Code snippet: Implementing encryption for sensitive data in the healthcare application to comply with HIPAA regulations.",
+          "codeSnippet": "encryptData(data);",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Ensuring legal compliance may involve regular audits, documentation, and validation processes to demonstrate adherence to regulations."
+        },
+        {
+          "text": "For instance, conducting periodic security audits to ensure compliance with data protection laws."
+        },
+        {
+          "text": "Code snippet: Performing automated security scans using tools like OWASP ZAP to identify and address vulnerabilities.",
+          "codeSnippet": "runSecurityScan();",
+          "codeLanguage": "Python"
+        }
+      ]
+    }
+  ]
+}

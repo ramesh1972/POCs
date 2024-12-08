@@ -1,0 +1,2050 @@
+{
+  "category": "UI Layer",
+  "topics": [
+    {
+      "topic": "Web Development",
+      "topic_no": 40,
+      "contents": [
+        {
+          "text": "HTML is the standard markup language for creating web pages.",
+          "codeSnippet": "<!DOCTYPE html>\n<html>\n<head>\n<title>Page Title</title>\n</head>\n<body>\n\n<h1>This is a Heading</h1>\n<p>This is a paragraph.</p>\n\n</body>\n</html>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "CSS is used for styling the HTML elements on a web page.",
+          "codeSnippet": "body {\n  background-color: lightblue;\n}\nh1 {\n  color: navy;\n  margin-left: 20px;\n}",
+          "codeLanguage": "CSS"
+        },
+        {
+          "text": "JavaScript is a programming language that enables interactive elements on a web page.",
+          "codeSnippet": "document.getElementById(\"demo\").innerHTML = \"Hello, World!\";",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Bootstrap is a popular CSS framework for developing responsive and mobile-first websites.",
+          "codeSnippet": "<!DOCTYPE html>\n<html>\n<head>\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">\n</head>\n<body>\n\n<div class=\"container\">\n  <h1>Hello, World!</h1>\n</div>\n\n</body>\n</html>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Sass is a preprocessor scripting language that is interpreted or compiled into CSS.",
+          "codeSnippet": "$primary-color: #333;\n\nbody {\n  background-color: $primary-color;\n}",
+          "codeLanguage": "Sass"
+        }
+      ]
+    },
+    {
+      "topic": "HTML",
+      "topic_no": 147,
+      "contents": [
+        {
+          "text": "HTML stands for HyperText Markup Language.",
+          "codeSnippet": "<!DOCTYPE html>\n<html>\n<head>\n<title>Page Title</title>\n</head>\n<body>\n\n<h1>This is a Heading</h1>\n<p>This is a paragraph.</p>\n\n</body>\n</html>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "HTML is the standard markup language for creating web pages.",
+          "codeSnippet": "<h2>This is a Subheading</h2>\n<p>This is another paragraph.</p>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "HTML elements are the building blocks of HTML pages.",
+          "codeSnippet": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "HTML elements are represented by tags.",
+          "codeSnippet": "<a href=\"https://www.example.com\">This is a link</a>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "HTML tags label pieces of content such as \"heading\", \"paragraph\", \"table\", and so on.",
+          "codeSnippet": "<table>\n  <tr>\n    <td>Row 1, Cell 1</td>\n    <td>Row 1, Cell 2</td>\n  </tr>\n</table>",
+          "codeLanguage": "html"
+        }
+      ]
+    },
+    {
+      "topic": "CSS",
+      "topic_no": 222,
+      "contents": [
+        {
+          "text": "CSS stands for Cascading Style Sheets",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS is used to style the layout and appearance of web pages",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS allows for separation of content from presentation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS can be applied inline, internally, or externally in web pages",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS selectors are used to target specific HTML elements for styling",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS properties control various aspects of an element's appearance",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS can be used to create responsive web designs that adapt to different screen sizes",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS preprocessors like SASS and LESS offer additional features and functionality to CSS",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS frameworks like Bootstrap provide pre-designed CSS components for faster development",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS Grid and Flexbox are layout systems in CSS for creating complex and responsive layouts",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "ASP.NET MVC",
+      "topic_no": 294,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET MVC",
+          "codeSnippet": "public class HomeController : Controller { public IActionResult Index() { return View(); } }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Creating a View in ASP.NET MVC",
+          "codeSnippet": "@model IEnumerable<Product> <h2>Products</h2> <ul> @foreach (var product in Model) { <li>@product.Name - @product.Price</li> } </ul>",
+          "codeLanguage": "HTML/Razor"
+        },
+        {
+          "text": "Using Layouts in ASP.NET MVC",
+          "codeSnippet": "<!DOCTYPE html> <html> <head> <title>@ViewBag.Title</title> </head> <body> @RenderBody() </body> </html>",
+          "codeLanguage": "HTML/Razor"
+        },
+        {
+          "text": "Implementing Partial Views in ASP.NET MVC",
+          "codeSnippet": "@Html.Partial(\"_PartialViewName\")",
+          "codeLanguage": "HTML/Razor"
+        },
+        {
+          "text": "Working with Forms in ASP.NET MVC",
+          "codeSnippet": "<form asp-controller=\"Home\" asp-action=\"SubmitForm\" method=\"post\"> <input type=\"text\" name=\"username\" /> <input type=\"submit\" value=\"Submit\" /> </form>",
+          "codeLanguage": "HTML/Razor"
+        }
+      ]
+    },
+    {
+      "topic": "Razor Pages",
+      "topic_no": 375,
+      "contents": [
+        {
+          "text": "Razor Pages is a feature of ASP.NET Core that allows developers to build web applications using a page-based model.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Razor Pages provide a more lightweight way to create web applications compared to the MVC pattern.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Razor Pages use the .cshtml file extension to define the UI and logic for a page.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Razor Pages follow the convention of placing the UI and code for a page in a single file, making it easier to manage and understand.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Razor Pages support code-behind files to separate the UI markup from the page logic.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Razor Pages use the @page directive to specify the URL that the page will respond to.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Razor Pages support the use of tag helpers to simplify working with HTML elements and attributes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Razor Pages allow developers to easily integrate with ASP.NET Core services and middleware.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Razor Pages provide a quick and efficient way to create CRUD (Create, Read, Update, Delete) interfaces for data operations.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Razor Pages can be used alongside MVC controllers and views in an ASP.NET Core application for more complex scenarios.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Angular",
+      "topic_no": 437,
+      "contents": [
+        {
+          "text": "Introduction to Angular",
+          "codeSnippet": "Angular is a popular open-source front-end framework developed by Google for building dynamic web applications. It uses TypeScript for building applications and provides a structured way to build client-side applications.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Components in Angular",
+          "codeSnippet": "Components are the basic building blocks of an Angular application. They are responsible for the UI and logic of a specific part of the application. Each component consists of a TypeScript class, an HTML template, and a CSS file.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Templates and Data Binding",
+          "codeSnippet": "Templates in Angular are written in HTML with additional Angular-specific syntax. Data binding is a powerful feature in Angular that allows you to synchronize the data between the component and the view.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Directives in Angular",
+          "codeSnippet": "Directives are markers on a DOM element that tell Angular to do something with that element. Angular provides built-in directives like ngIf, ngFor, and ngStyle, and you can also create custom directives.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Services and Dependency Injection",
+          "codeSnippet": "Services in Angular are used to encapsulate reusable logic and data that can be shared across components. Dependency Injection is a design pattern in which a class receives its dependencies from an external source rather than creating them itself.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Routing in Angular",
+          "codeSnippet": "Routing in Angular allows you to navigate between different components and views in a single-page application. It helps in managing the application state and providing a better user experience.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "React",
+      "topic_no": 470,
+      "contents": [
+        {
+          "text": "React is a JavaScript library for building user interfaces.",
+          "codeSnippet": "import React from 'react';",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "React allows developers to create reusable UI components.",
+          "codeSnippet": "const Button = () => <button>Click me</button>;",
+          "codeLanguage": "JSX"
+        },
+        {
+          "text": "React uses a virtual DOM to improve performance by minimizing actual DOM manipulations.",
+          "codeSnippet": "ReactDOM.render(<App />, document.getElementById('root'));",
+          "codeLanguage": "JSX"
+        },
+        {
+          "text": "React components can have state and props to manage data and interactions.",
+          "codeSnippet": "class Counter extends React.Component { state = { count: 0 }; render() { return <div>{this.state.count}</div>; } }",
+          "codeLanguage": "JSX"
+        },
+        {
+          "text": "React allows for declarative and component-based UI development.",
+          "codeSnippet": "function App() { return <div>Hello, React!</div>; }",
+          "codeLanguage": "JSX"
+        }
+      ]
+    },
+    {
+      "topic": "Vue",
+      "topic_no": 506,
+      "contents": [
+        {
+          "text": "Vue is a progressive JavaScript framework for building user interfaces.",
+          "codeSnippet": "import Vue from 'vue';",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Vue allows developers to create reusable components with a clear separation of concerns.",
+          "codeSnippet": "Vue.component('my-component', { /* component definition */ });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Vue uses a virtual DOM to efficiently update the actual DOM.",
+          "codeSnippet": "new Vue({ /* options */ });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Vue provides directives to add dynamic behavior to HTML elements.",
+          "codeSnippet": "<div v-if=\"condition\">Content</div>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "Vue supports two-way data binding between the data model and the view.",
+          "codeSnippet": "<input v-model=\"message\">",
+          "codeLanguage": "html"
+        }
+      ]
+    },
+    {
+      "topic": "PWA",
+      "topic_no": 550,
+      "contents": [
+        {
+          "text": "Progressive Web Apps (PWAs) are web applications that provide a native app-like experience to users by leveraging modern web capabilities.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "PWAs use service workers to enable offline functionality, push notifications, and background sync.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Service workers are scripts that run in the background and intercept network requests, allowing PWAs to work offline or on low-quality networks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "PWAs can be installed on a user's device and appear on the home screen, providing a more app-like experience.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To make a PWA, you need a web app manifest file (manifest.json) that defines the app's name, icons, and other properties.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing a responsive design is crucial for PWAs to ensure they work well on various devices and screen sizes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using a service worker to cache assets like HTML, CSS, and JavaScript can improve the performance of a PWA.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Flutter",
+      "topic_no": 601,
+      "contents": [
+        {
+          "text": "Introduction to Flutter UI Layer",
+          "codeSnippet": "Flutter provides a rich set of widgets to build the UI layer of your application. Widgets are the building blocks of Flutter UI, and they can be combined to create complex user interfaces.",
+          "codeLanguage": "text"
+        },
+        {
+          "text": "Stateless Widgets",
+          "codeSnippet": "class MyWidget extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      child: Text('Hello, Flutter!'),\n    );\n  }\n}",
+          "codeLanguage": "dart"
+        },
+        {
+          "text": "Stateful Widgets",
+          "codeSnippet": "class MyWidget extends StatefulWidget {\n  @override\n  _MyWidgetState createState() => _MyWidgetState();\n}\nclass _MyWidgetState extends State<MyWidget> {\n  int counter = 0;\n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      children: [\n        Text('Counter: $counter'),\n        RaisedButton(\n          onPressed: () {\n            setState(() {\n              counter++;\n            });\n          },\n          child: Text('Increment'),\n        ),\n      ],\n    );\n  }\n}",
+          "codeLanguage": "dart"
+        },
+        {
+          "text": "Layout Widgets",
+          "codeSnippet": "Row(\n  children: [\n    Icon(Icons.person),\n    Text('Username'),\n  ],\n)",
+          "codeLanguage": "dart"
+        },
+        {
+          "text": "Container Widget",
+          "codeSnippet": "Container(\n  color: Colors.blue,\n  child: Text('Hello Flutter!'),\n)",
+          "codeLanguage": "dart"
+        },
+        {
+          "text": "Column Widget",
+          "codeSnippet": "Column(\n  children: [\n    Text('First item'),\n    Text('Second item'),\n  ],\n)",
+          "codeLanguage": "dart"
+        }
+      ]
+    },
+    {
+      "topic": "Xamarin",
+      "topic_no": 633,
+      "contents": [
+        {
+          "text": "Xamarin.Forms allows developers to create a single, shared UI layer for their mobile applications, targeting multiple platforms such as iOS, Android, and Windows.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Xamarin.Forms provides a set of built-in controls and layouts that can be used to design the user interface of the application.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "XAML (eXtensible Application Markup Language) is used in Xamarin.Forms to define the UI elements and layout of the application's screens.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Xamarin.Forms supports data binding, allowing developers to connect UI elements to data sources and update the UI automatically when the data changes.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Custom renderers in Xamarin.Forms enable developers to customize the appearance and behavior of UI controls for each platform.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "React Native",
+      "topic_no": 677,
+      "contents": [
+        {
+          "text": "Understanding the UI Layer in React Native",
+          "codeSnippet": "The UI layer in React Native is responsible for rendering the user interface components on the screen. It consists of various components such as Views, Text, Image, ScrollView, etc., which are used to create the visual elements of the app."
+        },
+        {
+          "text": "Creating a View in React Native",
+          "codeSnippet": "import React from 'react';\nimport { View, Text } from 'react-native';\n\nconst App = () => {\n  return (\n    <View>\n      <Text>Hello, React Native!</Text>\n    </View>\n  );\n};\n\nexport default App;",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Styling in React Native",
+          "codeSnippet": "Styling in React Native can be done using inline styles or external stylesheets. Inline styles are defined using the style prop, where you can specify properties like color, font size, padding, etc. External stylesheets can be created using StyleSheet.create() method."
+        },
+        {
+          "text": "Handling User Input in React Native",
+          "codeSnippet": "import React, { useState } from 'react';\nimport { TextInput, Button, View } from 'react-native';\n\nconst App = () => {\n  const [text, setText] = useState('');\n\n  return (\n    <View>\n      <TextInput\n        value={text}\n        onChangeText={setText}\n        placeholder='Enter text'\n      />\n      <Button title='Submit' onPress={() => alert(text)} />\n    </View>\n  );\n};\n\nexport default App;",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "MAUI – Microsoft application UI",
+      "topic_no": 701,
+      "contents": [
+        {
+          "text": "Introduction to MAUI – Microsoft application UI",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of using MAUI in UI development",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a new MAUI project in Visual Studio",
+          "codeSnippet": "dotnet new maui",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Designing the UI layout using MAUI controls",
+          "codeSnippet": "var button = new Button { Text = \"Click Me\" };",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Implementing data binding in MAUI applications",
+          "codeSnippet": "this.BindingContext = viewModel;",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Customizing the appearance of MAUI controls",
+          "codeSnippet": "button.BackgroundColor = Color.Blue;",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Handling user interactions in MAUI applications",
+          "codeSnippet": "button.Clicked += Button_Clicked;",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Testing and debugging MAUI applications",
+          "codeSnippet": "dotnet maui check",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Performance Measurement",
+      "topic_no": 728,
+      "contents": [
+        {
+          "text": "Introduction to UI Performance Measurement",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Importance of Measuring UI Performance",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Metrics for UI Performance Measurement",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Load Time",
+          "codeSnippet": "const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "2. Time to First Byte (TTFB)",
+          "codeSnippet": "const ttfb = performance.timing.responseStart - performance.timing.requestStart;",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "3. First Contentful Paint (FCP)",
+          "codeSnippet": "const fcp = performance.getEntriesByType('paint')[0].startTime;",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "4. Time to Interactive (TTI)",
+          "codeSnippet": "const tti = performance.timing.domInteractive - performance.timing.navigationStart;",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "5. Total Blocking Time (TBT)",
+          "codeSnippet": "const tbt = performance.getEntriesByType('longtask')[0].duration;",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Accessibility",
+      "topic_no": 747,
+      "contents": [
+        {
+          "text": "Understand the importance of UI accessibility in web development",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implement semantic HTML elements for better accessibility",
+          "codeSnippet": "<nav></nav>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Use ARIA attributes to enhance accessibility for screen readers",
+          "codeSnippet": "<button aria-label='Close'></button>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Ensure proper color contrast for users with visual impairments",
+          "codeSnippet": "color: #333; background-color: #fff;",
+          "codeLanguage": "CSS"
+        },
+        {
+          "text": "Provide keyboard navigation for users who cannot use a mouse",
+          "codeSnippet": "element.focus();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Test your UI for accessibility using tools like Axe or Lighthouse",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "UI - Internationalization",
+      "topic_no": 762,
+      "contents": [
+        {
+          "text": "Internationalization (i18n) is the process of designing and developing a software application so that it can be adapted to various languages and regions without engineering changes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "UI internationalization involves making the user interface of an application capable of displaying content in multiple languages based on user preferences or location.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common techniques for UI internationalization include using resource files for storing language-specific text, supporting dynamic content loading based on locale, and implementing language switch functionality.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In web development, frameworks like React and Angular provide built-in support for internationalization through libraries like react-i18next and ngx-translate.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "For example, in React with react-i18next, you can define language-specific translations in JSON files and use hooks or higher-order components to access and display the translated content in the UI.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "UI - Theming",
+      "topic_no": 781,
+      "contents": [
+        {
+          "text": "Introduction to UI Theming",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of UI Theming",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common UI Theming Techniques",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using CSS Variables for Theming",
+          "codeSnippet": "body { --primary-color: blue; } .button { background-color: var(--primary-color); }",
+          "codeLanguage": "CSS"
+        },
+        {
+          "text": "Creating Themeable Components",
+          "codeSnippet": "const Button = styled.button` color: ${props => props.theme.textColor}; background-color: ${props => props.theme.primaryColor}; `;",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Implementing Dark Mode",
+          "codeSnippet": "body.dark { --primary-color: black; --text-color: white; }",
+          "codeLanguage": "CSS"
+        },
+        {
+          "text": "Dynamic Theming with JavaScript",
+          "codeSnippet": "const theme = { primaryColor: 'blue', textColor: 'white' }; const applyTheme = (theme) => { document.documentElement.style.setProperty('--primary-color', theme.primaryColor); document.documentElement.style.setProperty('--text-color', theme.textColor); };",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Responsive Design",
+      "topic_no": 807,
+      "contents": [
+        {
+          "text": "Responsive design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One common technique in responsive design is the use of media queries in CSS to apply different styles based on the device's screen size or orientation.",
+          "codeSnippet": "@media only screen and (max-width: 600px) {\n  /* Styles for screens up to 600px wide */\n}",
+          "codeLanguage": "CSS"
+        },
+        {
+          "text": "Fluid grids are another key component of responsive design, allowing elements on a web page to resize proportionally based on the screen size.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Flexible images are used in responsive design to ensure that images scale properly and maintain their aspect ratio across different devices.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Viewport meta tag is often included in the head section of a web page to control the layout on mobile browsers and prevent the page from zooming in.",
+          "codeSnippet": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+          "codeLanguage": "HTML"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Cross Browser Compatibility",
+      "topic_no": 825,
+      "contents": [
+        {
+          "text": "Understanding Cross Browser Compatibility in UI design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common challenges faced in achieving Cross Browser Compatibility",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Testing strategies for Cross Browser Compatibility",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using CSS vendor prefixes to ensure compatibility",
+          "codeSnippet": "div {\n    -webkit-border-radius: 5px;\n    -moz-border-radius: 5px;\n    border-radius: 5px;\n}",
+          "codeLanguage": "css"
+        },
+        {
+          "text": "Implementing feature detection instead of browser detection",
+          "codeSnippet": "if ('flex' in document.body.style) {\n    // Flexbox is supported\n} else {\n    // Fallback for no support\n}",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Utilizing polyfills for missing functionalities in older browsers",
+          "codeSnippet": "<script src='https://cdn.polyfill.io/v3/polyfill.min.js'></script>",
+          "codeLanguage": "html"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Cross Device Compatibility",
+      "topic_no": 842,
+      "contents": [
+        {
+          "text": "Understand the importance of cross-device compatibility in UI design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Consider responsive design principles to ensure UI elements adapt to different screen sizes and resolutions",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Test UI layouts on various devices and browsers to identify and resolve compatibility issues",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Utilize CSS media queries to create responsive designs that adjust based on the device's screen size",
+          "codeSnippet": "/* CSS Media Query Example */\n@media screen and (max-width: 600px) {\n  /* CSS styles for screens up to 600px wide */\n}",
+          "codeLanguage": "css"
+        },
+        {
+          "text": "Implement flexible layouts using percentage-based widths and max-width properties to ensure content displays correctly on different devices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Optimize images for faster loading times on mobile devices without compromising quality",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "UI - Cross Platform Compatibility",
+      "topic_no": 851,
+      "contents": [
+        {
+          "text": "Understanding Cross Platform Compatibility in UI design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key considerations for ensuring cross-platform compatibility",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using responsive design principles to create UI elements that adapt to different screen sizes",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Leveraging CSS media queries to adjust styling based on the device's screen resolution",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Testing UI components across various devices and browsers to ensure consistent user experience",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "UI - Progressive Web Apps",
+      "topic_no": 866,
+      "contents": [
+        {
+          "text": "Introduction to Progressive Web Apps (PWAs)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Advantages of using Progressive Web Apps",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of Progressive Web Apps",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing service workers for offline functionality",
+          "codeSnippet": "if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/sw.js').then(function(registration) { console.log('Service Worker registered with scope:', registration.scope); }).catch(function(err) { console.error('Service Worker registration failed:', err); }); }",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Adding a web app manifest for a native app-like experience",
+          "codeSnippet": "<link rel='manifest' href='/manifest.json'>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "Implementing responsive design for various screen sizes",
+          "codeSnippet": "@media screen and (max-width: 600px) { /* CSS styles for smaller screens */ }",
+          "codeLanguage": "css"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Single Page Applications",
+      "topic_no": 880,
+      "contents": [
+        {
+          "text": "Introduction to Single Page Applications (SPAs)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Features of Single Page Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Advantages of Single Page Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Challenges of Single Page Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular Frameworks for Building Single Page Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Routing in Single Page Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "State Management in Single Page Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Optimizing Performance in Single Page Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Components",
+      "topic_no": 894,
+      "contents": [
+        {
+          "text": "Introduction to Web Components",
+          "codeSnippet": "Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Benefits of Web Components",
+          "codeSnippet": "1. Reusability: Web components can be reused across different projects.\n2. Encapsulation: Styles and functionality are encapsulated within the component.\n3. Maintainability: Easier to maintain and update components independently.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Types of Web Components",
+          "codeSnippet": "1. Custom Elements: Define your own custom HTML elements.\n2. Shadow DOM: Encapsulate styles and markup within a component.\n3. HTML Templates: Define reusable chunks of markup that can be cloned and inserted into the DOM.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Custom Element",
+          "codeSnippet": "class MyComponent extends HTMLElement {\n  constructor() {\n    super();\n  }\n}\ncustomElements.define('my-component', MyComponent);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Using Shadow DOM",
+          "codeSnippet": "const shadowRoot = this.attachShadow({ mode: 'open' });\nshadowRoot.innerHTML = `<style>h1 { color: red; }</style><h1>Hello, Shadow DOM!</h1>`;",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Using HTML Templates",
+          "codeSnippet": "const template = document.createElement('template');\ntemplate.innerHTML = `<h1>Hello, Template!</h1>`;\nconst clone = document.importNode(template.content, true);\ndocument.body.appendChild(clone);",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Micro Frontends",
+      "topic_no": 906,
+      "contents": [
+        {
+          "text": "Introduction to Micro Frontends in UI Layer",
+          "codeSnippet": "Micro frontends is an architectural style where a front-end application is decomposed into smaller, loosely-coupled applications that can be developed, tested, and deployed independently. Each micro frontend is responsible for a specific feature or functionality of the overall user interface.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Benefits of Using Micro Frontends",
+          "codeSnippet": "1. Independent Development: Teams can work on different parts of the UI independently.\n2. Scalability: Easier to scale and maintain large applications.\n3. Technology Flexibility: Allows using different technologies for different parts of the UI.\n4. Reusability: Components can be reused across different micro frontends.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Implementing Micro Frontends with Web Components",
+          "codeSnippet": "Web Components provide a way to create reusable custom elements in web pages and applications. Each micro frontend can be built as a web component, encapsulating its HTML, CSS, and JavaScript.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Using Module Federation for Micro Frontends",
+          "codeSnippet": "Module Federation is a feature of Webpack that allows multiple applications to work together and share code dynamically at runtime. It enables building micro frontends that can be composed together to form a unified user interface.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Assembly",
+      "topic_no": 915,
+      "contents": [
+        {
+          "text": "Web Assembly (Wasm) is a binary instruction format for a stack-based virtual machine.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Wasm allows high-performance execution of code written in languages like C, C++, and Rust in web browsers.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Wasm can be used in the UI layer to enhance performance and enable complex computations in web applications.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Wasm modules can be loaded and executed in the browser alongside JavaScript.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "To integrate Wasm with the UI layer, developers can use JavaScript APIs to interact with Wasm modules.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Workers",
+      "topic_no": 922,
+      "contents": [
+        {
+          "text": "Web Workers allow you to run JavaScript code in the background, separate from the main UI thread.",
+          "codeSnippet": "var worker = new Worker('worker.js');\nworker.postMessage('Hello, Web Worker!');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Web Workers are useful for performing tasks that are computationally intensive or time-consuming without blocking the UI.",
+          "codeSnippet": "worker.onmessage = function(event) {\n  console.log('Message from Web Worker:', event.data);\n};",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Web Workers communicate with the main UI thread using the postMessage method.",
+          "codeSnippet": "self.onmessage = function(event) {\n  console.log('Message from main thread:', event.data);\n  self.postMessage('Hello, Main Thread!');\n};",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Service Workers",
+      "topic_no": 931,
+      "contents": [
+        {
+          "text": "Service Workers are scripts that run in the background of a web application and can intercept and handle network requests.",
+          "codeSnippet": "if ('serviceWorker' in navigator) {\n  navigator.serviceWorker.register('/sw.js')\n    .then(registration => {\n      console.log('Service Worker registered');\n    })\n    .catch(error => {\n      console.error('Service Worker registration failed:', error);\n    });\n}",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Service Workers can cache resources to enable offline functionality and improve performance.",
+          "codeSnippet": "self.addEventListener('install', event => {\n  event.waitUntil(\n    caches.open('my-cache').then(cache => {\n      return cache.addAll([\n        '/',\n        '/styles/main.css',\n        '/scripts/main.js'\n      ]);\n    })\n  );\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Service Workers can receive push notifications even when the web app is not open in the browser.",
+          "codeSnippet": "self.addEventListener('push', event => {\n  const data = event.data.json();\n  self.registration.showNotification(data.title, {\n    body: data.body\n  });\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Sockets",
+      "topic_no": 938,
+      "contents": [
+        {
+          "text": "Web Sockets allow for full-duplex communication between a client and a server over a single, long-lived connection.",
+          "codeSnippet": "var socket = new WebSocket('ws://example.com/socketserver');"
+        },
+        {
+          "text": "Web Sockets provide a more efficient and real-time alternative to traditional HTTP polling for client-server communication.",
+          "codeSnippet": "socket.onopen = function() { console.log('Connection established'); };"
+        },
+        {
+          "text": "Web Sockets use the ws:// or wss:// protocol to establish a connection between the client and server.",
+          "codeSnippet": "socket.onmessage = function(event) { console.log('Received message: ' + event.data); };"
+        },
+        {
+          "text": "Web Sockets support bi-directional data flow, allowing both the client and server to send messages to each other asynchronously.",
+          "codeSnippet": "socket.send('Hello, server!');"
+        },
+        {
+          "text": "Web Sockets can be used to implement features like real-time chat applications, live updates, and online gaming.",
+          "codeSnippet": "socket.onclose = function() { console.log('Connection closed'); };"
+        }
+      ]
+    },
+    {
+      "topic": "UI - WebRTC",
+      "topic_no": 946,
+      "contents": [
+        {
+          "text": "Introduction to WebRTC in UI Layer",
+          "codeSnippet": "WebRTC is a free, open-source project that provides web browsers and mobile applications with real-time communication via simple application programming interfaces (APIs). It allows audio and video communication to work inside web pages by allowing direct peer-to-peer communication, eliminating the need for plugins or additional software.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up WebRTC in the UI Layer",
+          "codeSnippet": "To set up WebRTC in the UI Layer, you need to include the necessary JavaScript libraries and APIs in your web application. This involves creating a connection between peers, handling media streams, and managing the communication process.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a WebRTC Peer Connection",
+          "codeSnippet": "var configuration = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] }; \nvar peerConnection = new RTCPeerConnection(configuration);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Handling Media Streams in WebRTC",
+          "codeSnippet": "navigator.mediaDevices.getUserMedia({ video: true, audio: true }) \n.then(function(stream) { \n  localVideo.srcObject = stream; \n  peerConnection.addStream(stream); \n}) \n.catch(function(error) { \n  console.log('Error accessing media devices: ' + error); \n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Establishing a Data Channel in WebRTC",
+          "codeSnippet": "var dataChannel = peerConnection.createDataChannel('myDataChannel'); \ndataChannel.onopen = function(event) { \n  console.log('Data channel opened'); \n};",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Storage",
+      "topic_no": 958,
+      "contents": [
+        {
+          "text": "Web Storage is a way to store data in the browser, allowing for persistent data storage even after the browser is closed.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "There are two types of Web Storage: Local Storage and Session Storage.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Local Storage stores data with no expiration date, while Session Storage stores data for one session only.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Web Storage uses key-value pairs to store and retrieve data.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To store data in Web Storage, you can use the setItem() method.",
+          "codeSnippet": "localStorage.setItem('key', 'value');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "To retrieve data from Web Storage, you can use the getItem() method.",
+          "codeSnippet": "var data = localStorage.getItem('key');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "To remove data from Web Storage, you can use the removeItem() method.",
+          "codeSnippet": "localStorage.removeItem('key');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "To clear all data from Web Storage, you can use the clear() method.",
+          "codeSnippet": "localStorage.clear();",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Notifications",
+      "topic_no": 970,
+      "contents": [
+        {
+          "text": "Web notifications are a way for websites to send users alerts or messages even when the website is not open in the browser.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Web notifications can be used to inform users about new messages, updates, events, or any other important information.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "To display web notifications, websites use the Notification API, which is supported by most modern browsers.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "The Notification API allows websites to request permission from users to show notifications and then display them as needed.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Here is an example of requesting permission to show notifications using the Notification API:",
+          "codeSnippet": "Notification.requestPermission().then(function(result) { console.log('Permission granted: ' + result); });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Once permission is granted, websites can create and display notifications using the new Notification() constructor.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Here is an example of creating and displaying a notification using the Notification constructor:",
+          "codeSnippet": "var notification = new Notification('New Message', { body: 'You have a new message!', icon: 'message.png' });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Web notifications can also be customized with options like body text, icons, and actions for users to interact with.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Users can interact with notifications by clicking on them, dismissing them, or taking action on any provided buttons.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Web notifications are a powerful tool for engaging users and keeping them informed about important updates or events.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Speech",
+      "topic_no": 984,
+      "contents": [
+        {
+          "text": "Web Speech API allows developers to integrate speech recognition and synthesis capabilities into web applications.",
+          "codeSnippet": "const recognition = new webkitSpeechRecognition();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "The SpeechRecognition interface of the Web Speech API is used to recognize voice context from an audio input.",
+          "codeSnippet": "recognition.start();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "The onresult event handler is used to capture the result of the speech recognition.",
+          "codeSnippet": "recognition.onresult = function(event) { console.log(event.results[0][0].transcript); };",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "The SpeechSynthesis interface of the Web Speech API is used to convert text into spoken language.",
+          "codeSnippet": "const synth = window.speechSynthesis;",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "The speak() method is used to initiate the speech synthesis process.",
+          "codeSnippet": "const utterance = new SpeechSynthesisUtterance('Hello, World!'); synth.speak(utterance);",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Audio",
+      "topic_no": 992,
+      "contents": [
+        {
+          "text": "Introduction to Web Audio API",
+          "codeSnippet": "const audioContext = new AudioContext();",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Creating and playing audio using Web Audio API",
+          "codeSnippet": "const oscillator = audioContext.createOscillator();\noscillator.frequency.setValueAtTime(440, audioContext.currentTime);\noscillator.connect(audioContext.destination);\noscillator.start();",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Adding effects to audio using Web Audio API",
+          "codeSnippet": "const gainNode = audioContext.createGain();\ngainNode.gain.setValueAtTime(0.5, audioContext.currentTime);\noscillator.connect(gainNode);\ngainNode.connect(audioContext.destination);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Analyzing audio data with Web Audio API",
+          "codeSnippet": "const analyser = audioContext.createAnalyser();\noscillator.connect(analyser);\nconst dataArray = new Uint8Array(analyser.frequencyBinCount);\nanalyser.getByteTimeDomainData(dataArray);",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Animation",
+      "topic_no": 1004,
+      "contents": [
+        {
+          "text": "Introduction to Web Animation in UI",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Using Web Animation in UI Design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Types of Web Animations in UI",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CSS Animations",
+          "codeSnippet": "/* CSS Animation Example */\n@keyframes slidein {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(100%);\n  }\n}\n\n.element {\n  animation: slidein 3s ease infinite;\n}",
+          "codeLanguage": "css"
+        },
+        {
+          "text": "JavaScript Animations",
+          "codeSnippet": "// JavaScript Animation Example\nconst element = document.getElementById('animatedElement');\n\nfunction animateElement() {\n  element.style.transform = 'translateX(100px)';\n}\n\nelement.addEventListener('click', animateElement);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "SVG Animations",
+          "codeSnippet": "<svg>\n  <circle cx='50' cy='50' r='40' fill='red'>\n    <animate attributeName='cx' from='50' to='250' dur='1s' repeatCount='indefinite' />\n  </circle>\n</svg>",
+          "codeLanguage": "svg"
+        },
+        {
+          "text": "Tools and Libraries for Web Animation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web Graphics",
+      "topic_no": 1012,
+      "contents": [
+        {
+          "text": "Understanding the importance of web graphics in UI design"
+        },
+        {
+          "text": "Common types of web graphics used in UI design"
+        },
+        {
+          "text": "Raster graphics vs. vector graphics in web design"
+        },
+        {
+          "text": "Best practices for optimizing web graphics for UI performance"
+        },
+        {
+          "text": "Using CSS for styling web graphics in UI design"
+        },
+        {
+          "text": "Implementing responsive web graphics for different screen sizes"
+        },
+        {
+          "text": "Utilizing web fonts and icon fonts for UI design"
+        },
+        {
+          "text": "Integrating SVG graphics for scalable and lightweight UI elements"
+        },
+        {
+          "text": "Exploring CSS frameworks for creating visually appealing UI graphics"
+        },
+        {
+          "text": "Leveraging JavaScript libraries for interactive web graphics in UI design"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web VR",
+      "topic_no": 1017,
+      "contents": [
+        {
+          "text": "Introduction to Web VR in UI Layer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the basics of Web VR for UI development",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Web VR in UI design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating interactive UI elements using Web VR",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Optimizing UI performance in Web VR applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web AR",
+      "topic_no": 1025,
+      "contents": [
+        {
+          "text": "Introduction to Web AR in UI Layer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of using Web AR in UI design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Web AR in UI design using HTML and JavaScript",
+          "codeSnippet": "const scene = document.querySelector('a-scene');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Creating interactive AR elements in the UI",
+          "codeSnippet": "const box = document.createElement('a-box');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Handling user interactions in Web AR UI",
+          "codeSnippet": "box.addEventListener('click', function() { console.log('Box clicked!'); });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Optimizing performance in Web AR UI",
+          "codeSnippet": "Use efficient 3D models and textures to reduce load times.",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web GL",
+      "topic_no": 1043,
+      "contents": [
+        {
+          "text": "WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 2D and 3D graphics within any compatible web browser.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It is based on OpenGL ES and provides a way to create high-performance graphics in the browser without the need for plugins.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "WebGL is typically used for creating games, visualizations, and other interactive content on the web.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To use WebGL, you need to create a canvas element in your HTML and then initialize the WebGL context to start rendering graphics.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Here is a simple example of initializing WebGL context:",
+          "codeSnippet": "const canvas = document.getElementById('myCanvas');\nconst gl = canvas.getContext('webgl');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Once you have the WebGL context, you can start writing shaders and rendering graphics using WebGL API calls.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "WebGL shaders are written in GLSL (OpenGL Shading Language) and are used to control the rendering pipeline.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Here is an example of a simple vertex shader written in GLSL:",
+          "codeSnippet": "attribute vec3 a_position;\nvoid main() {\n  gl_Position = vec4(a_position, 1.0);\n}",
+          "codeLanguage": "glsl"
+        },
+        {
+          "text": "And here is an example of a simple fragment shader written in GLSL:",
+          "codeSnippet": "precision mediump float;\nvoid main() {\n  gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);\n}",
+          "codeLanguage": "glsl"
+        }
+      ]
+    },
+    {
+      "topic": "UI - Web 3D",
+      "topic_no": 1048,
+      "contents": [
+        {
+          "text": "Introduction to UI - Web 3D",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Overview of 3D graphics in web development",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of incorporating 3D elements in UI design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common libraries and frameworks for implementing 3D UI in web development",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best practices for designing and integrating 3D elements in web interfaces",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Bootstrap",
+      "topic_no": 1055,
+      "contents": [
+        {
+          "text": "Bootstrap is a popular front-end framework for developing responsive and mobile-first websites.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Bootstrap provides a grid system that allows developers to create responsive layouts easily.",
+          "codeSnippet": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-6\">Column 1</div>\n    <div class=\"col-sm-6\">Column 2</div>\n  </div>\n</div>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Bootstrap includes a variety of pre-built components such as buttons, forms, and navigation bars.",
+          "codeSnippet": "<button class=\"btn btn-primary\">Click me</button>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Bootstrap's responsive utilities help in hiding, showing, or reordering content based on screen size.",
+          "codeSnippet": "<div class=\"d-none d-md-block\">Hidden on mobile, visible on desktop</div>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Bootstrap can be customized using its SASS variables to match the design requirements of a project.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Materialize CSS",
+      "topic_no": 1065,
+      "contents": [
+        {
+          "text": "Introduction to Materialize CSS",
+          "codeSnippet": "Materialize is a modern responsive front-end framework based on Material Design. It allows developers to create beautiful websites quickly and easily.",
+          "codeLanguage": "text"
+        },
+        {
+          "text": "Setting up Materialize CSS",
+          "codeSnippet": "To use Materialize CSS in your project, you can include the Materialize CSS and JavaScript files in your HTML file. You can also use npm or yarn to install Materialize CSS.",
+          "codeLanguage": "text"
+        },
+        {
+          "text": "Creating a Navbar with Materialize CSS",
+          "codeSnippet": "<nav>\n  <div class=\"nav-wrapper\">\n    <a href=\"#\" class=\"brand-logo\">Logo</a>\n    <ul id=\"nav-mobile\" class=\"right hide-on-med-and-down\">\n      <li><a href=\"#\">Home</a></li>\n      <li><a href=\"#\">About</a></li>\n      <li><a href=\"#\">Contact</a></li>\n    </ul>\n  </div>\n</nav>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "Using Materialize CSS Grid System",
+          "codeSnippet": "<div class=\"row\">\n  <div class=\"col s6\">6 columns</div>\n  <div class=\"col s6\">6 columns</div>\n</div>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "Adding Materialize CSS Components",
+          "codeSnippet": "Materialize CSS provides a wide range of components such as buttons, cards, modals, and more. You can easily add these components to your website by following the documentation.",
+          "codeLanguage": "text"
+        }
+      ]
+    },
+    {
+      "topic": "Semantic UI",
+      "topic_no": 1071,
+      "contents": [
+        {
+          "text": "Semantic UI is a front-end development framework that helps create beautiful, responsive layouts for web applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Semantic UI provides a wide range of pre-designed components such as buttons, forms, menus, and cards to enhance the user interface.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Semantic UI uses human-friendly HTML to create a clean and intuitive structure for web pages.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Semantic UI offers a variety of themes and customization options to style the UI according to the project requirements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Semantic UI utilizes a responsive grid system that allows developers to build layouts that adapt to different screen sizes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Semantic UI includes a set of JavaScript components for interactive elements like modals, dropdowns, and accordions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Foundation",
+      "topic_no": 1081,
+      "contents": [
+        {
+          "text": "Introduction to Foundation in UI Layer Technologies",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Foundation is a front-end framework that provides a responsive grid system and pre-styled components for building websites and web applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Foundation includes a set of CSS and JavaScript files that can be easily integrated into a project to create a consistent and visually appealing user interface.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Foundation offers a mobile-first approach, ensuring that websites and applications are optimized for smaller screens and devices.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Foundation provides a variety of components such as buttons, navigation bars, forms, and typography styles that can be customized and used to enhance the user experience.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To get started with Foundation, developers can include the necessary CSS and JavaScript files in their HTML documents and utilize the grid system and components to design responsive layouts.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Bulma",
+      "topic_no": 1089,
+      "contents": [
+        {
+          "text": "Introduction to Bulma",
+          "codeSnippet": "Bulma is a modern CSS framework based on Flexbox. It is a free and open-source framework that allows developers to quickly build responsive web interfaces.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Features of Bulma",
+          "codeSnippet": "Bulma provides a grid system, responsive design, customizable components, and a modular structure. It also offers a wide range of utility classes for quick styling.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Installing Bulma",
+          "codeSnippet": "To use Bulma in your project, you can include the Bulma CSS file in your HTML or import it into your CSS file using npm or yarn.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Navbar with Bulma",
+          "codeSnippet": "<nav class=\"navbar\" role=\"navigation\" aria-label=\"main navigation\">\n  <div class=\"navbar-brand\">\n    <a class=\"navbar-item\" href=\"#\">\n      <img src=\"logo.png\" alt=\"Logo\">\n    </a>\n  </div>\n  <div class=\"navbar-menu\">\n    <div class=\"navbar-start\">\n      <a class=\"navbar-item\" href=\"#\">Home</a>\n      <a class=\"navbar-item\" href=\"#\">About</a>\n    </div>\n  </div>\n</nav>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "Styling Buttons with Bulma",
+          "codeSnippet": "<button class=\"button is-primary\">Primary Button</button>\n<button class=\"button is-danger\">Danger Button</button>",
+          "codeLanguage": "html"
+        }
+      ]
+    },
+    {
+      "topic": "Tailwind CSS",
+      "topic_no": 1095,
+      "contents": [
+        {
+          "text": "Introduction to Tailwind CSS",
+          "codeSnippet": "Tailwind CSS is a utility-first CSS framework that allows you to quickly build custom user interfaces. It provides a set of pre-built utility classes that can be used to style your HTML elements without writing any custom CSS.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Installation of Tailwind CSS",
+          "codeSnippet": "To install Tailwind CSS in your project, you can use npm or yarn. First, install Tailwind CSS and its dependencies using the following command: npm install tailwindcss postcss autoprefixer",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Setting up Tailwind CSS in a project",
+          "codeSnippet": "After installing Tailwind CSS, you need to create a configuration file for Tailwind. You can generate a default configuration file by running npx tailwindcss init. This will create a tailwind.config.js file in your project.",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using Tailwind CSS utility classes",
+          "codeSnippet": "Tailwind CSS provides a wide range of utility classes that you can apply directly to your HTML elements. For example, you can use classes like bg-blue-500 to set the background color of an element to blue.",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "Customizing Tailwind CSS styles",
+          "codeSnippet": "You can customize the default styles provided by Tailwind CSS by editing the tailwind.config.js file. This file allows you to add new colors, fonts, breakpoints, and more to tailor Tailwind to your specific design needs.",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "UIKit",
+      "topic_no": 1097,
+      "contents": [
+        {
+          "text": "UIKit is a framework provided by Apple for building user interfaces in iOS and tvOS applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It provides a set of pre-built components like buttons, labels, text fields, and more, to create interactive and visually appealing interfaces.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "UIKit follows the Model-View-Controller (MVC) design pattern, separating the data (Model), presentation (View), and logic (Controller) of an application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Some key classes in UIKit include UIViewController, UIView, UIButton, UILabel, UITextField, and more.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "UIKit provides support for handling touch events, animations, gestures, and user interactions in iOS and tvOS applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Developers can customize the appearance and behavior of UIKit components using properties, delegates, and protocols.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "UIKit also offers support for auto layout, allowing developers to create adaptive and responsive user interfaces that work across different screen sizes and orientations.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Ant Design",
+      "topic_no": 1101,
+      "contents": [
+        {
+          "text": "Introduction to Ant Design",
+          "codeSnippet": "Ant Design is a design system for enterprise-level products. It provides a set of high-quality React components out of the box, which can be easily customized to fit the design needs of a project.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Key Features of Ant Design",
+          "codeSnippet": "1. A wide range of customizable components\n2. Consistent design language and style\n3. Built-in support for internationalization\n4. Accessibility features\n5. Responsive design\n6. Theming capabilities",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Installing Ant Design in a React Project",
+          "codeSnippet": "npm install antd",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using Ant Design Components in React",
+          "codeSnippet": "import { Button } from 'antd';\n\nconst App = () => (\n  <Button type=\"primary\">Primary Button</Button>\n);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Customizing Ant Design Themes",
+          "codeSnippet": "const theme = {\n  '@primary-color': '#1890ff',\n};\n\n// In your App.js or index.js file\n<ConfigProvider theme={theme}>\n  <App />\n</ConfigProvider>",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Chakra UI",
+      "topic_no": 1104,
+      "contents": [
+        {
+          "text": "Introduction to Chakra UI",
+          "codeSnippet": "import { Button } from '@chakra-ui/react';"
+        },
+        {
+          "text": "Key Features of Chakra UI",
+          "codeSnippet": "import { Flex, Box, Text } from '@chakra-ui/react';"
+        },
+        {
+          "text": "Creating a Button using Chakra UI",
+          "codeSnippet": "<Button colorScheme='blue'>Click me</Button>"
+        },
+        {
+          "text": "Styling Components with Chakra UI",
+          "codeSnippet": "<Box bg='blue.200' p={4}>Styled Box</Box>"
+        },
+        {
+          "text": "Using Chakra UI Theme",
+          "codeSnippet": "const theme = extendTheme({ colors: { brand: { 900: '#1a365d', 800: '#153e75', 700: '#2a69ac', }, }, });"
+        }
+      ]
+    },
+    {
+      "topic": "Material-UI",
+      "topic_no": 1107,
+      "contents": [
+        {
+          "text": "Introduction to Material-UI",
+          "codeSnippet": "Material-UI is a popular React component library that implements Google's Material Design principles. It provides a set of pre-built components for creating modern and responsive user interfaces.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Installation of Material-UI",
+          "codeSnippet": "To install Material-UI in a React project, you can use npm or yarn. Run the following command to install Material-UI and its dependencies: npm install @mui/material @emotion/react @emotion/styled",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Usage of Material-UI components",
+          "codeSnippet": "You can use Material-UI components by importing them from the library and including them in your React components. For example, to use a Button component: import Button from '@mui/material/Button';",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Theming in Material-UI",
+          "codeSnippet": "Material-UI allows you to customize the theme of your application using the ThemeProvider component. You can define custom themes with colors, typography, and other styles.",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Responsive design with Material-UI",
+          "codeSnippet": "Material-UI provides responsive design features out of the box. You can use Grid components to create responsive layouts that adapt to different screen sizes.",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Vuetify",
+      "topic_no": 1111,
+      "contents": [
+        {
+          "text": "Introduction to Vuetify",
+          "codeSnippet": "Vuetify is a popular Vue.js framework that provides a set of reusable components for building modern, responsive web applications. It follows Google's Material Design guidelines and offers a wide range of UI components and utilities.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Installation and Setup",
+          "codeSnippet": "To use Vuetify in your Vue.js project, you can install it via npm or yarn. After installation, you need to import Vuetify and configure it in your main Vue instance.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Basic Usage of Vuetify Components",
+          "codeSnippet": "Vuetify provides a variety of components such as buttons, cards, dialogs, forms, and more. You can easily incorporate these components in your Vue templates by using Vuetify's syntax.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Customizing Vuetify Themes",
+          "codeSnippet": "You can customize the theme of your Vuetify application by modifying the theme variables in the Vuetify configuration. This allows you to change colors, typography, and other design aspects to match your brand or design requirements.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Responsive Design with Vuetify Grid System",
+          "codeSnippet": "Vuetify's grid system allows you to create responsive layouts for your web applications. By using Vuetify's grid components like v-row and v-col, you can easily design flexible and adaptive layouts that work well on different screen sizes.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Quasar Framework",
+      "topic_no": 1117,
+      "contents": [
+        {
+          "text": "What is Quasar Framework?",
+          "codeSnippet": "Quasar Framework is a Vue.js framework that allows you to build responsive websites, PWAs, SSR applications, mobile apps, and Electron apps using a single codebase.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "How to install Quasar CLI?",
+          "codeSnippet": "npm install -g @quasar/cli",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "How to create a new Quasar project?",
+          "codeSnippet": "quasar create my-project",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "How to run a Quasar project in development mode?",
+          "codeSnippet": "cd my-project\nquasar dev",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "How to build a Quasar project for production?",
+          "codeSnippet": "quasar build",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "How to add a new Quasar component to your project?",
+          "codeSnippet": "quasar new MyComponent",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "How to use Quasar's responsive utilities?",
+          "codeSnippet": "<q-col cols=\"12\" sm=\"6\" md=\"4\" lg=\"3\">Responsive Content</q-col>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "How to customize Quasar theme variables?",
+          "codeSnippet": "// quasar.conf.js\nmodule.exports = function (ctx) {\n  return {\n    framework: {\n      config: {\n        brand: {\n          primary: '#41B883',\n          secondary: '#34495E',\n          accent: '#41B883',\n          dark: '#1E1E1E',\n          positive: '#2ECC71',\n          negative: '#E74C3C',\n          info: '#3498DB',\n          warning: '#F39C12'\n        }\n      }\n    }\n  }\n}",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "PrimeVue",
+      "topic_no": 1121,
+      "contents": [
+        {
+          "text": "PrimeVue is a popular open-source UI component library for Vue.js.",
+          "codeSnippet": "import PrimeVue from 'primevue';\nimport 'primevue/resources/themes/saga-blue/theme.css';\nimport 'primevue/resources/primevue.min.css';\nimport 'primeicons/primeicons.css';\nVue.use(PrimeVue);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "PrimeVue provides a wide range of customizable and responsive UI components such as buttons, input fields, tables, and dialogs.",
+          "codeSnippet": "<Button label=\"Click\" @click=\"handleClick\" />",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "PrimeVue components are easy to integrate into Vue.js projects and offer a consistent look and feel.",
+          "codeSnippet": "<InputText v-model=\"inputValue\" />",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "PrimeVue supports various themes and customization options to match the design requirements of different projects.",
+          "codeSnippet": "import 'primevue/resources/themes/nova-light/theme.css';",
+          "codeLanguage": "css"
+        }
+      ]
+    },
+    {
+      "topic": "React Bootstrap",
+      "topic_no": 1123,
+      "contents": [
+        {
+          "text": "React Bootstrap is a popular front-end framework that combines the React library with Bootstrap components to create responsive and visually appealing user interfaces.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "React Bootstrap provides a set of pre-built components such as buttons, forms, modals, and navigation bars that can be easily integrated into React applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To use React Bootstrap in a project, you need to install the react-bootstrap package from npm and import the required components in your React components.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "React Bootstrap follows a component-based architecture, allowing developers to create reusable UI elements that can be easily customized and styled.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One of the key advantages of using React Bootstrap is the seamless integration of Bootstrap's CSS framework with React's component-based approach.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Semantic UI React",
+      "topic_no": 1125,
+      "contents": [
+        {
+          "text": "Semantic UI React is a popular front-end framework that provides a set of pre-designed components for building user interfaces.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It is built on top of React, allowing developers to easily create responsive and accessible web applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Semantic UI React offers a wide range of components such as buttons, forms, modals, and menus that can be customized to fit the design needs of a project.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Developers can use Semantic UI React to quickly prototype and build visually appealing user interfaces without having to write CSS from scratch.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One of the key features of Semantic UI React is its theming capabilities, allowing developers to easily customize the look and feel of their applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Grommet",
+      "topic_no": 1129,
+      "contents": [
+        {
+          "text": "Grommet is a React-based framework that provides a library of reusable components for building responsive and accessible user interfaces.",
+          "codeSnippet": "import { Button } from 'grommet';",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Grommet components follow best practices for accessibility and responsive design, making it easier to create inclusive user interfaces.",
+          "codeSnippet": "<Button label='Click me' primary />",
+          "codeLanguage": "JSX"
+        },
+        {
+          "text": "Grommet offers a wide range of components such as buttons, forms, layouts, and data visualization elements to streamline UI development.",
+          "codeSnippet": "<Box direction='row' gap='medium'><Button label='Submit' /><Button label='Cancel' /></Box>",
+          "codeLanguage": "JSX"
+        }
+      ]
+    },
+    {
+      "topic": "Evergreen",
+      "topic_no": 1131,
+      "contents": [
+        {
+          "text": "Definition of Evergreen in the context of UI Layer technologies",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Characteristics of Evergreen technologies in the UI Layer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Advantages of using Evergreen technologies in the UI Layer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of popular Evergreen technologies in the UI Layer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best practices for implementing Evergreen technologies in the UI Layer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Carbon Design System",
+      "topic_no": 1135,
+      "contents": [
+        {
+          "text": "Introduction to Carbon Design System",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key components of Carbon Design System",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Carbon Design System in a UI Layer",
+          "codeSnippet": "import { Button } from 'carbon-components-react';",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Customizing styles in Carbon Design System",
+          "codeSnippet": "import './custom-styles.scss';",
+          "codeLanguage": "CSS"
+        },
+        {
+          "text": "Using Carbon Design System grid system",
+          "codeSnippet": "<div class='bx--grid'><div class='bx--row'><div class='bx--col'><p>Content here</p></div></div></div>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Accessibility features in Carbon Design System",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Shards",
+      "topic_no": 1137,
+      "contents": [
+        {
+          "text": "Shards are a way to divide a large dataset into smaller, more manageable parts.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Sharding is commonly used in distributed databases to improve performance and scalability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In UI Layer, shards can refer to splitting a user interface into separate components for better organization and maintenance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Shards can help in parallel processing of data and can enhance fault tolerance in systems.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "UIKit for Web",
+      "topic_no": 1139,
+      "contents": [
+        {
+          "text": "Introduction to UIKit for Web",
+          "codeSnippet": "import UIKit from 'uikit';",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Creating a Button using UIKit for Web",
+          "codeSnippet": "const button = document.createElement('button');\nbutton.classList.add('uk-button', 'uk-button-default');",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Styling Elements with UIKit for Web",
+          "codeSnippet": "const element = document.getElementById('myElement');\nUIKit.util.on(element, 'click', function() {\n    UIKit.toggleClass(element, 'uk-text-danger');\n});",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Implementing Modal Windows with UIKit for Web",
+          "codeSnippet": "const modal = UIKit.modal('#my-modal');\nmodal.show();",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    }
+  ]
+}

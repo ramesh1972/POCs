@@ -10,7 +10,7 @@ import { ContentService } from '../apis/content.service';
 import { invokeContentFetchAPI, contentFetchAPI_Success, invokeContentCreateAPI, invokeUpdateContentAPI, invokeDeleteContentAPI, contentFetchAPI_Failure, updateContentAPI_Success, updateContentAPI_Failure, contentCreateAPI_Success, contentCreateAPI_Failure, deleteContentAPI_Success, deleteContentAPI_Failure } from '../actions/content.action';
 import { ApiResponse } from '../models/ApiResponse';
 import { data } from '@visactor/vtable';
-import { create } from 'domain';
+
 
 @Injectable()
 export class ContentEffect {

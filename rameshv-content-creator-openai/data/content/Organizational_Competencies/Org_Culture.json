@@ -1,0 +1,119 @@
+{
+  "category": "Org. Culture",
+  "topics": [
+    {
+      "topic": "Techno-Functional Culture",
+      "topic_no": 95,
+      "contents": [
+        {
+          "text": "More of coding vs process/meetings/documents – make coding as a interesting/fun activity",
+          "codeSnippet": "const funCoding = () => { console.log('Coding can be fun and interesting!'); }; funCoding();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Next 2/3 steps – encourage to upskill while on the job",
+          "codeSnippet": "const employee = { name: 'John Doe', position: 'Software Engineer' }; function upskill(employee) { console.log(`${employee.name} is encouraged to upskill while on the job.`); } upskill(employee);",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Culture Triumphs Strategy is a concept in the field of Techno-Functional Culture within the category of Organizational Culture, focusing on the idea that the culture of an organization plays a more significant role in determining success than the strategies implemented. It emphasizes the importance of aligning the values, beliefs, and behaviors of employees with the overall goals and objectives of the organization.",
+          "codeSnippet": "console.log('Culture Triumphs Strategy');",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Encourage ownership and accountability by delegating work to team members. This helps in fostering a culture of responsibility and empowerment within the organization.",
+          "codeSnippet": "const tasks = ['Task A', 'Task B', 'Task C'];\n\nfunction delegateWork(task) {\n    console.log('Delegating ' + task + ' to team member.');\n}\n\ntasks.forEach(task => {\n    delegateWork(task);\n});",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Assigning work based on employees' strengths is a key aspect of creating a Techno-Functional Culture within an organization. This approach involves identifying the unique skills and abilities of each team member and delegating tasks that align with their strengths. By leveraging individual strengths, teams can work more efficiently, produce higher quality work, and foster a positive work environment.",
+          "codeSnippet": "function assignWorkBasedOnStrengths(employee) {\n    if (employee.skillset.includes('technical') && employee.skillset.includes('functional')) {\n        return 'Assign techno-functional tasks';\n    } else {\n        return 'Provide training to develop required skills';\n    }\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Identifying individual strengths is a crucial aspect of building a strong Techno-Functional culture within an organization. By recognizing and leveraging the unique skills and capabilities of each team member, companies can maximize productivity and innovation. This involves conducting assessments, feedback sessions, and skill mapping to understand where each individual excels and how they can contribute effectively to the team.",
+          "codeSnippet": "const teamMembers = [{ name: 'Alice', strengths: ['problem-solving', 'data analysis'] }, { name: 'Bob', strengths: ['programming', 'project management'] }];"
+        },
+        {
+          "text": "Techno-Functional Culture refers to a work environment that combines technical expertise with functional knowledge to drive organizational success."
+        },
+        {
+          "text": "In a Techno-Functional Culture, employees possess both technical skills, such as coding or data analysis, and functional skills related to their specific roles, such as marketing or finance."
+        },
+        {
+          "text": "This culture encourages cross-functional collaboration and innovation by bridging the gap between technical and functional teams."
+        },
+        {
+          "text": "An example of Techno-Functional Culture in action is a software development team where developers work closely with business analysts to create solutions that meet both technical requirements and business objectives."
+        },
+        {
+          "text": "Code Snippet: \n function calculateRevenue(salesData) {\n // Function to calculate revenue based on sales data\n }",
+          "codeSnippet": "function calculateRevenue(salesData) {\n // Function to calculate revenue based on sales data\n }",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Another example of Techno-Functional Culture is seen in a marketing team where data analysts collaborate with marketers to analyze campaign performance and optimize strategies based on data insights."
+        },
+        {
+          "text": "Code Snippet: \n public void generateReport(List<MarketingData> data) {\n // Method to generate a report based on marketing data\n }",
+          "codeSnippet": "public void generateReport(List<MarketingData> data) {\n // Method to generate a report based on marketing data\n }",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Personal Development",
+      "topic_no": 197,
+      "contents": [
+        {
+          "text": "Professionalism is a key aspect of personal development in the category of organizational culture under organizational competencies. It involves displaying a high level of integrity, respect, and responsibility in one's work and interactions with others.",
+          "codeSnippet": "console.log('Demonstrating professionalism in the workplace');",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Competencies – Upskilling is a vital aspect of personal development within an organizational culture. It involves continuously enhancing and acquiring new skills and knowledge to stay relevant and competitive in the ever-evolving business landscape.",
+          "codeSnippet": "const upskillingCompetencies = ['Adaptability', 'Critical Thinking', 'Digital Literacy', 'Leadership', 'Problem-Solving'];",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Time adherence in personal development within organizational culture is the practice of consistently managing and utilizing time effectively to enhance productivity and achieve personal and professional goals. It involves prioritizing tasks, setting realistic deadlines, and maintaining a disciplined approach to time management.",
+          "codeSnippet": "const currentTime = new Date();\nconst deadline = new Date('2023-12-31');\nif (currentTime < deadline) {\n  console.log('Time adherence is crucial for meeting goals.');\n}"
+        },
+        {
+          "text": "Communication & Collaboration is essential for personal development within an organization's culture. It involves the ability to effectively convey ideas, actively listen to others, provide constructive feedback, and work together towards common goals. Strong communication and collaboration skills can lead to improved teamwork, increased productivity, and a positive work environment.",
+          "codeSnippet": "const teamCommunication = (message) => { console.log(`Message received: ${message}`); };"
+        },
+        {
+          "text": "Personal development is the continuous process of self-improvement and acquiring new skills and knowledge."
+        },
+        {
+          "text": "Setting clear goals and creating a plan to achieve them is essential for personal development."
+        },
+        {
+          "text": "Regularly seeking feedback from peers and mentors can help individuals identify areas for improvement."
+        },
+        {
+          "text": "Engaging in activities such as reading, attending workshops, and networking events can contribute to personal development."
+        },
+        {
+          "text": "Practicing self-reflection and mindfulness can aid in personal growth and development."
+        },
+        {
+          "text": "Developing emotional intelligence is a key aspect of personal development in organizational culture."
+        },
+        {
+          "text": "Improving communication skills, both verbal and written, is crucial for personal development within an organization."
+        },
+        {
+          "text": "Learning to adapt to change and being open to new ideas are important competencies for personal development."
+        },
+        {
+          "text": "Taking on new challenges and stepping out of one's comfort zone can foster personal development."
+        },
+        {
+          "text": "Building resilience and the ability to bounce back from setbacks is a valuable skill in personal development."
+        }
+      ]
+    }
+  ]
+}

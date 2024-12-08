@@ -1,0 +1,673 @@
+{
+  "category": "Hetzner Cloud",
+  "topics": [
+    {
+      "topic": "Introduction to Hetzner Cloud",
+      "topic_no": 11,
+      "contents": [
+        {
+          "text": "Hetzner Cloud is a cloud service provider that offers scalable and flexible cloud infrastructure solutions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Users can deploy virtual servers, storage, and networking resources on Hetzner Cloud's platform.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Hetzner Cloud provides a user-friendly web interface and a comprehensive API for managing cloud resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Developers can automate infrastructure provisioning and management using tools like Terraform or Ansible with Hetzner Cloud.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Hetzner Cloud offers competitive pricing models and transparent billing for its services.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Creating an Account on Hetzner Cloud",
+      "topic_no": 83,
+      "contents": [
+        {
+          "text": "Navigate to the Hetzner Cloud website at https://console.hetzner.cloud/",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Click on the 'Sign Up' button located at the top right corner of the page.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Fill in your email address, password, and agree to the terms and conditions to create a new account.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Verify your email address by clicking on the verification link sent to your email.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Once verified, log in to your new Hetzner Cloud account using your email and password.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Navigating the Hetzner Cloud Console",
+      "topic_no": 206,
+      "contents": [
+        {
+          "text": "Accessing the Hetzner Cloud Console",
+          "codeSnippet": "To access the Hetzner Cloud Console, log in to your Hetzner Cloud account and navigate to the 'Projects' section. Click on the desired project to access the console for that specific project."
+        },
+        {
+          "text": "Navigating the Hetzner Cloud Console Dashboard",
+          "codeSnippet": "Once you are in the Hetzner Cloud Console, you will see the dashboard displaying an overview of your project's resources such as servers, volumes, networks, and floating IPs. You can easily navigate between different sections using the sidebar menu."
+        },
+        {
+          "text": "Creating a New Server Instance",
+          "codeSnippet": "To create a new server instance in the Hetzner Cloud Console, click on the 'Servers' tab in the sidebar menu. Then, click on the 'Create Server' button and follow the prompts to configure your new server instance, including selecting the server type, location, and SSH key."
+        },
+        {
+          "text": "Managing Server Instances",
+          "codeSnippet": "In the Hetzner Cloud Console, you can manage your server instances by starting, stopping, rebooting, or deleting them. Simply navigate to the 'Servers' section, select the desired server, and choose the action you want to perform from the available options."
+        },
+        {
+          "text": "Working with Volumes and Snapshots",
+          "codeSnippet": "To manage volumes and snapshots in the Hetzner Cloud Console, go to the 'Volumes' section in the sidebar menu. From there, you can create new volumes, attach them to server instances, take snapshots, and perform other volume-related tasks."
+        }
+      ]
+    },
+    {
+      "topic": "Creating and Managing Virtual Servers (VPS)",
+      "topic_no": 297,
+      "contents": [
+        {
+          "text": "Introduction to Hetzner Cloud VPS",
+          "codeSnippet": "Hetzner Cloud provides virtual private servers (VPS) that allow users to deploy and manage their own cloud infrastructure. VPS instances are scalable, flexible, and can be easily customized to meet specific requirements.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Virtual Server on Hetzner Cloud",
+          "codeSnippet": "hcloud server create --name my-vps --type cx11 --image ubuntu-20.04",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Managing Virtual Servers on Hetzner Cloud",
+          "codeSnippet": "hcloud server list\nhcloud server start <server-id>\nhcloud server stop <server-id>\nhcloud server delete <server-id>",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Scaling Resources on Hetzner Cloud VPS",
+          "codeSnippet": "hcloud server resize --type cx21 <server-id>",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating Backups for Virtual Servers on Hetzner Cloud",
+          "codeSnippet": "hcloud server create-image <server-id> --description 'Backup-1'",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Setting up Firewall Rules for Hetzner Cloud VPS",
+          "codeSnippet": "hcloud firewall create --name my-firewall --rules 'protocol:tcp,ports:80,remote_ips:0.0.0.0/0'",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Understanding and Managing Storage Volumes",
+      "topic_no": 334,
+      "contents": [
+        {
+          "text": "Understanding Storage Volumes in Hetzner Cloud",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a New Storage Volume in Hetzner Cloud",
+          "codeSnippet": "hcloud volume create --name my-new-volume --size 50 --location fsn1",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Attaching a Storage Volume to a Hetzner Cloud Server",
+          "codeSnippet": "hcloud server attach-volume my-server-id my-volume-id",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Detaching a Storage Volume from a Hetzner Cloud Server",
+          "codeSnippet": "hcloud server detach-volume my-server-id my-volume-id",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Resizing a Storage Volume in Hetzner Cloud",
+          "codeSnippet": "hcloud volume resize my-volume-id --size 100",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Deleting a Storage Volume in Hetzner Cloud",
+          "codeSnippet": "hcloud volume delete my-volume-id",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Setting up SSH Key Authentication",
+      "topic_no": 381,
+      "contents": [
+        {
+          "text": "SSH key authentication provides a more secure way to log into your Hetzner Cloud server compared to password authentication."
+        },
+        {
+          "text": "Generate a new SSH key pair using the following command in your terminal: ssh-keygen -t rsa -b 4096 -C 'your_email@example.com'"
+        },
+        {
+          "text": "Copy the public key to your clipboard using the command: pbcopy < ~/.ssh/id_rsa.pub"
+        },
+        {
+          "text": "Log in to your Hetzner Cloud account and navigate to the 'SSH Keys' section in the 'Security' tab."
+        },
+        {
+          "text": "Click on 'Add SSH Key' and paste your public key into the designated field."
+        },
+        {
+          "text": "Give your SSH key a recognizable name and save it."
+        },
+        {
+          "text": "To connect to your Hetzner Cloud server using SSH key authentication, use the following command: ssh -i ~/.ssh/id_rsa username@server_ip"
+        },
+        {
+          "text": "Ensure that the private key file (~/.ssh/id_rsa) has the correct permissions set to 600 to maintain security."
+        },
+        {
+          "text": "You can now securely log in to your Hetzner Cloud server using SSH key authentication."
+        }
+      ]
+    },
+    {
+      "topic": "Working with Snapshots and Backups",
+      "topic_no": 416,
+      "contents": [
+        {
+          "text": "Snapshots and backups are essential features provided by Hetzner Cloud for data protection and disaster recovery."
+        },
+        {
+          "text": "Snapshots allow you to capture the current state of a virtual server or volume at a specific point in time, creating a backup that can be restored later if needed."
+        },
+        {
+          "text": "To create a snapshot in Hetzner Cloud, you can use the API or the Hetzner Cloud Console."
+        },
+        {
+          "text": "Snapshots are stored separately from the original server or volume, providing an additional layer of data security."
+        },
+        {
+          "text": "Backups are copies of your data that can be used to restore your system to a previous state in case of data loss or corruption."
+        },
+        {
+          "text": "Hetzner Cloud offers automated backup options for servers and volumes, allowing you to schedule regular backups for your data."
+        },
+        {
+          "text": "It is important to regularly create snapshots and backups of your data to ensure data integrity and minimize the risk of data loss."
+        },
+        {
+          "text": "You can easily restore a server or volume from a snapshot or backup in Hetzner Cloud using the provided tools and interfaces."
+        },
+        {
+          "text": "Having a well-defined snapshot and backup strategy is crucial for maintaining the availability and reliability of your data in the cloud."
+        }
+      ]
+    },
+    {
+      "topic": "Configuring Firewall Rules",
+      "topic_no": 461,
+      "contents": [
+        {
+          "text": "Introduction to Firewall Rules in Hetzner Cloud",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the Importance of Firewall Rules in Hetzner Cloud",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Accessing the Firewall Configuration Panel in Hetzner Cloud",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a New Firewall Rule in Hetzner Cloud",
+          "codeSnippet": "firewall-cmd --zone=public --add-port=80/tcp",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Allowing Specific IP Addresses in Firewall Rules in Hetzner Cloud",
+          "codeSnippet": "firewall-cmd --zone=public --add-rich-rule='rule family=\"ipv4\" source address=\"192.168.1.1\" port protocol=\"tcp\" port=\"80\" accept'",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Blocking Incoming Traffic from Specific IP Addresses in Hetzner Cloud",
+          "codeSnippet": "firewall-cmd --zone=public --add-rich-rule='rule family=\"ipv4\" source address=\"192.168.1.2\" reject'",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Listing Existing Firewall Rules in Hetzner Cloud",
+          "codeSnippet": "firewall-cmd --list-all",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Removing a Firewall Rule in Hetzner Cloud",
+          "codeSnippet": "firewall-cmd --zone=public --remove-port=80/tcp",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Load Balancing and High Availability",
+      "topic_no": 495,
+      "contents": [
+        {
+          "text": "Load Balancing distributes incoming network traffic across multiple servers to ensure no single server is overwhelmed, optimizing resource utilization and preventing downtime.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "High Availability refers to a system's ability to remain operational and accessible for a high percentage of time, typically achieved through redundancy and failover mechanisms.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Hetzner Cloud offers Load Balancers as a service to help distribute traffic across multiple instances, improving performance and reliability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In Hetzner Cloud, Load Balancers can be easily configured through the web interface or API, allowing users to set up rules for traffic distribution.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To achieve High Availability in Hetzner Cloud, users can set up redundant servers in different data centers and configure failover mechanisms to ensure continuous service availability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Using Hetzner Cloud APIs for Automation",
+      "topic_no": 540,
+      "contents": [
+        {
+          "text": "Introduction to Hetzner Cloud APIs",
+          "codeSnippet": "Hetzner Cloud provides a set of APIs that allow users to automate various tasks such as provisioning servers, managing networks, and accessing storage resources.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Authentication and Access Control",
+          "codeSnippet": "To use Hetzner Cloud APIs, you need to generate an API token from the Hetzner Cloud Console. This token will be used to authenticate your requests and access resources.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Making API Requests",
+          "codeSnippet": "You can make API requests to Hetzner Cloud using tools like cURL or HTTP libraries in programming languages such as Python or Node.js. Ensure to include the API token in the request headers for authentication.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a New Server Instance",
+          "codeSnippet": "POST /servers\n{\n  \"name\": \"my-server\",\n  \"server_type\": \"cx11\",\n  \"location\": \"nbg1\",\n  \"start_after_create\": true\n}",
+          "codeLanguage": "json"
+        },
+        {
+          "text": "Retrieving Server Information",
+          "codeSnippet": "GET /servers/{server_id}",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Updating Server Configuration",
+          "codeSnippet": "PUT /servers/{server_id}\n{\n  \"name\": \"new-server-name\"\n}",
+          "codeLanguage": "json"
+        },
+        {
+          "text": "Deleting a Server Instance",
+          "codeSnippet": "DELETE /servers/{server_id}",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Deploying Containers with Hetzner Kubernetes",
+      "topic_no": 566,
+      "contents": [
+        {
+          "text": "Introduction to Hetzner Kubernetes",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a Hetzner Cloud Account",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a Kubernetes Cluster on Hetzner Cloud",
+          "codeSnippet": "hcloud k8s cluster create --name my-cluster",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Accessing the Kubernetes Cluster",
+          "codeSnippet": "hcloud k8s cluster kubeconfig --name my-cluster",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Deploying a Container on Hetzner Kubernetes",
+          "codeSnippet": "kubectl apply -f deployment.yaml",
+          "codeLanguage": "yaml"
+        },
+        {
+          "text": "Scaling Containers on Hetzner Kubernetes",
+          "codeSnippet": "kubectl scale deployment my-deployment --replicas=3",
+          "codeLanguage": "yaml"
+        },
+        {
+          "text": "Monitoring and Managing Containers on Hetzner Kubernetes",
+          "codeSnippet": "kubectl get pods\nkubectl logs <pod-name>",
+          "codeLanguage": "yaml"
+        }
+      ]
+    },
+    {
+      "topic": "Monitoring and Alerting with Hetzner Cloud Metrics",
+      "topic_no": 586,
+      "contents": [
+        {
+          "text": "Introduction to Hetzner Cloud Metrics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up Monitoring and Alerting with Hetzner Cloud Metrics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Configuring Metrics Collection in Hetzner Cloud",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating Custom Alerts in Hetzner Cloud Metrics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Integrating Hetzner Cloud Metrics with External Monitoring Tools",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Implementing Infrastructure as Code (IaC) with Hetzner",
+      "topic_no": 613,
+      "contents": [
+        {
+          "text": "Introduction to Hetzner Cloud and Infrastructure as Code (IaC)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a Hetzner Cloud account and accessing the API key",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Installing and configuring the Hetzner Cloud CLI tool for IaC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating and managing Hetzner Cloud resources using Terraform",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Defining infrastructure components in Terraform configuration files",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Provisioning Hetzner Cloud servers and networking resources with Terraform",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Applying changes and updating Hetzner Cloud infrastructure using Terraform",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Infrastructure as Code best practices with Hetzner Cloud",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Advanced Networking Concepts in Hetzner",
+      "topic_no": 645,
+      "contents": [
+        {
+          "text": "Understanding Virtual Private Cloud (VPC) in Hetzner Cloud",
+          "codeSnippet": "Hetzner Cloud provides Virtual Private Cloud (VPC) functionality to create isolated networks within the cloud environment. This allows users to securely connect their resources and control network traffic flow.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Implementing Subnets and Security Groups in Hetzner Cloud",
+          "codeSnippet": "Subnets and Security Groups in Hetzner Cloud enable users to segment their VPC into smaller networks and define security rules to control inbound and outbound traffic. Subnets help in organizing resources, while Security Groups act as virtual firewalls.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Utilizing Load Balancers for High Availability in Hetzner Cloud",
+          "codeSnippet": "Load Balancers distribute incoming traffic across multiple servers to ensure high availability and reliability of applications. Hetzner Cloud offers Load Balancers as a service to optimize resource utilization and enhance application performance.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Configuring Virtual Private Network (VPN) Connections in Hetzner Cloud",
+          "codeSnippet": "Hetzner Cloud supports VPN connections to establish secure communication between on-premises networks and cloud resources. Users can configure VPN tunnels to encrypt data transmission and maintain network privacy.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Exploring Advanced Networking Features like Floating IPs in Hetzner Cloud",
+          "codeSnippet": "Floating IPs in Hetzner Cloud allow users to quickly reassign IP addresses between servers, enabling seamless failover and load balancing. This feature enhances flexibility and resilience in managing network resources.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Optimizing Performance and Cost Management",
+      "topic_no": 669,
+      "contents": [
+        {
+          "text": "Introduction to Hetzner Cloud",
+          "codeSnippet": "Hetzner Cloud is a cloud service provider that offers scalable and flexible cloud infrastructure solutions.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Benefits of Using Hetzner Cloud",
+          "codeSnippet": "1. Cost-effective pricing\n2. High-performance infrastructure\n3. Scalability and flexibility\n4. Data security and compliance\n5. Easy to use control panel",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Optimizing Performance in Hetzner Cloud",
+          "codeSnippet": "1. Choose the right instance type based on your workload\n2. Utilize load balancers for distributing traffic\n3. Implement caching mechanisms for faster data retrieval\n4. Monitor and optimize resource utilization regularly",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Cost Management Strategies in Hetzner Cloud",
+          "codeSnippet": "1. Use reserved instances for predictable workloads\n2. Implement auto-scaling to adjust resources based on demand\n3. Monitor and optimize resource usage to eliminate waste\n4. Utilize cost tracking and budgeting tools provided by Hetzner Cloud",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Securing Hetzner Cloud Deployments",
+      "topic_no": 691,
+      "contents": [
+        {
+          "text": "Use strong and unique passwords for all accounts and services on Hetzner Cloud.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Enable two-factor authentication (2FA) for added security.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Regularly update and patch your operating system and software to protect against vulnerabilities.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implement firewall rules to restrict access to your Hetzner Cloud instances.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Encrypt data at rest and in transit to safeguard sensitive information.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Set up monitoring and logging to detect and respond to security incidents in a timely manner.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Follow security best practices recommended by Hetzner Cloud and industry standards.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Managing Databases on Hetzner Cloud",
+      "topic_no": 709,
+      "contents": [
+        {
+          "text": "Introduction to Hetzner Cloud",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a Database on Hetzner Cloud",
+          "codeSnippet": "hcloud database create --name mydatabase --type postgresql",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Connecting to a Database on Hetzner Cloud",
+          "codeSnippet": "psql -h <database_ip> -U <username> -d <database_name>",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Backing up a Database on Hetzner Cloud",
+          "codeSnippet": "hcloud database snapshot create --database mydatabase",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Scaling a Database on Hetzner Cloud",
+          "codeSnippet": "hcloud database resize --database mydatabase --type professional-2-ssd",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Monitoring and Managing Database Performance on Hetzner Cloud",
+          "codeSnippet": "hcloud database list",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Implementing Continuous Integration/Continuous Deployment (CI/CD)",
+      "topic_no": 734,
+      "contents": [
+        {
+          "text": "Introduction to Hetzner Cloud",
+          "codeSnippet": "Hetzner Cloud is a cloud service provider that offers scalable and flexible cloud infrastructure solutions.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up a Hetzner Cloud Account",
+          "codeSnippet": "To get started with Hetzner Cloud, sign up for an account on their website and verify your email address.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Project in Hetzner Cloud",
+          "codeSnippet": "After logging in to your Hetzner Cloud account, create a new project to organize your resources.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Generating API Key in Hetzner Cloud",
+          "codeSnippet": "Generate an API key in Hetzner Cloud to authenticate your CI/CD pipeline with the Hetzner Cloud API.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up CI/CD Pipeline with Hetzner Cloud",
+          "codeSnippet": "Use tools like Jenkins or GitLab CI to set up a CI/CD pipeline that deploys your applications to Hetzner Cloud.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Automating Deployment with Hetzner Cloud",
+          "codeSnippet": "Automate the deployment process by integrating your CI/CD pipeline with Hetzner Cloud's infrastructure.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Exploring Hetzner Cloud Marketplace for Additional Services",
+      "topic_no": 753,
+      "contents": [
+        {
+          "text": "Introduction to Hetzner Cloud Marketplace",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exploring the range of additional services offered in Hetzner Cloud Marketplace",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to access Hetzner Cloud Marketplace from the Hetzner Cloud Console",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Browsing through categories such as databases, monitoring tools, and security solutions in Hetzner Cloud Marketplace",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Selecting and deploying a service from Hetzner Cloud Marketplace to enhance your cloud infrastructure",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Managing and configuring the added services within your Hetzner Cloud environment",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

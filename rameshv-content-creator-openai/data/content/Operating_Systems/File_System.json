@@ -1,0 +1,194 @@
+{
+  "category": "File System",
+  "topics": [
+    {
+      "topic": "File System Structure",
+      "topic_no": 57,
+      "contents": [
+        {
+          "text": "File System Structure refers to the way in which files are organized and stored on a storage device.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The File System Structure typically consists of directories (folders) and files organized in a hierarchical manner.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Directories can contain files and other directories, forming a tree-like structure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of file systems structures include FAT (File Allocation Table), NTFS (New Technology File System), and ext4 (Fourth Extended File System).",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a Unix-like operating system, the root directory is denoted by '/'.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Code snippet for navigating to a directory in Unix-like systems: cd /path/to/directory",
+          "codeSnippet": "cd /path/to/directory",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Code snippet for listing files in a directory in Unix-like systems: ls",
+          "codeSnippet": "ls",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "In Windows operating systems, the root directory of a drive is denoted by a drive letter followed by ':\\', for example, 'C:\\'.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Code snippet for navigating to a directory in Windows systems: cd C:\\path\\to\\directory",
+          "codeSnippet": "cd C:\\path\\to\\directory",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Code snippet for listing files in a directory in Windows systems: dir",
+          "codeSnippet": "dir",
+          "codeLanguage": "cmd"
+        }
+      ]
+    },
+    {
+      "topic": "File Operations",
+      "topic_no": 148,
+      "contents": [
+        {
+          "text": "Introduction to File Operations",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common File Operations include: creating, opening, reading, writing, closing, deleting files",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File Operations are essential for managing data stored on a computer's file system",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File operations are performed using system calls provided by the operating system",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of file operations include creating a new file, opening an existing file, reading data from a file, writing data to a file, closing a file, and deleting a file",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File operations can be performed sequentially or randomly on a file",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Sequential file operations involve reading or writing data in a linear manner from the beginning to the end of a file",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Random file operations allow reading or writing data at any position within a file",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File operations are typically managed by file descriptors or file handles in operating systems",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File descriptors are unique identifiers associated with open files in a process",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "File System Implementation",
+      "topic_no": 225,
+      "contents": [
+        {
+          "text": "File System Implementation involves the creation and management of files and directories on a storage device.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The file system organizes data into files, which are logical units of storage that can contain text, images, programs, or other types of data.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Directories are used to organize files into a hierarchical structure, making it easier to locate and manage them.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File systems typically include data structures such as inodes, file allocation tables, and directory structures to manage file metadata and storage allocation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common file system implementations include FAT32, NTFS, ext4, and HFS+.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File systems may use different strategies for file allocation, such as contiguous allocation, linked allocation, or indexed allocation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File System Implementation also involves handling file operations like create, read, write, delete, open, and close.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File systems may implement features like permissions, encryption, compression, and journaling to enhance data security and reliability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "File System Security",
+      "topic_no": 304,
+      "contents": [
+        {
+          "text": "File System Security refers to the measures and protocols in place to protect files and data stored on a computer's file system from unauthorized access, modification, or deletion.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Access Control Lists (ACLs) are used to define permissions on files and directories, specifying which users or groups can perform specific actions such as read, write, or execute.",
+          "codeSnippet": "setfacl -m u:user:permissions file",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "File Permissions in Unix-like systems are represented by a combination of read, write, and execute permissions for the owner, group, and others.",
+          "codeSnippet": "chmod 755 file",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Encryption can be used to protect sensitive files by converting the data into a secure format that can only be accessed with the correct decryption key.",
+          "codeSnippet": "openssl enc -aes-256-cbc -in file.txt -out file.enc",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Auditing and logging file system activities can help track access attempts, changes, and potential security breaches.",
+          "codeSnippet": "auditctl -w /path/to/file -p wa -k file-access",
+          "codeLanguage": "bash"
+        }
+      ]
+    }
+  ]
+}

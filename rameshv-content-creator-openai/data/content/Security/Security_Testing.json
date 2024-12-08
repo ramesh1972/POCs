@@ -1,0 +1,152 @@
+{
+  "category": "Security Testing",
+  "topics": [
+    {
+      "topic": "Security Testing",
+      "topic_no": 47,
+      "contents": [
+        {
+          "text": "Introduction to Security Testing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Security Testing Techniques",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Vulnerability Assessment",
+          "codeSnippet": "nmap -sV target_ip",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "2. Penetration Testing",
+          "codeSnippet": "python3 sqlmap.py -u 'http://target_url'",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "3. Security Auditing",
+          "codeSnippet": "lynis audit system",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "4. Security Scanning",
+          "codeSnippet": "nikto -h target_url",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Best Practices for Security Testing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Use of Automated Tools",
+          "codeSnippet": "w3af_console -s xss",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "2. Regular Security Updates",
+          "codeSnippet": "sudo apt-get update && sudo apt-get upgrade",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "3. Secure Coding Practices",
+          "codeSnippet": "public class SecureCodeExample { private String password; }",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "4. Security Training for Development Teams",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Penetration Testing",
+      "topic_no": 185,
+      "contents": [
+        {
+          "text": "Introduction to Penetration Testing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of Penetration Testing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Network Penetration Testing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Web Application Penetration Testing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Wireless Network Penetration Testing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Penetration Testing Methodologies",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Reconnaissance",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Scanning",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Gaining Access",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Maintaining Access",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "5. Covering Tracks",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Penetration Testing Tools",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Nmap",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Metasploit",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Burp Suite",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Penetration Testing Reporting",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

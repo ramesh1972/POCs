@@ -1,0 +1,144 @@
+{
+  "category": "Process Management",
+  "topics": [
+    {
+      "topic": "Process States",
+      "topic_no": 20,
+      "contents": [
+        {
+          "text": "Process States in Operating Systems",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. New State",
+          "example": "When a process is first created, it is in the new state.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Ready State",
+          "example": "When a process is waiting to be assigned to a processor, it is in the ready state.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Running State",
+          "example": "When a process is being executed on a processor, it is in the running state.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Blocked State",
+          "example": "When a process is waiting for an event or resource, it is in the blocked state.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "5. Terminated State",
+          "example": "When a process has finished its execution, it is in the terminated state.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Process Scheduling",
+      "topic_no": 96,
+      "contents": [
+        {
+          "text": "Process Scheduling is a key component of process management in operating systems, where the system decides which process to run next based on certain criteria.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "There are various scheduling algorithms used in process scheduling, such as First-Come, First-Served (FCFS), Shortest Job Next (SJN), Round Robin, Priority Scheduling, etc.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Each scheduling algorithm has its own advantages and disadvantages, and the choice of algorithm depends on the specific requirements of the system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "For example, in Round Robin scheduling, each process is assigned a fixed time slice, and the scheduler switches between processes once the time slice expires.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Schedulers play a crucial role in managing the execution of processes efficiently, ensuring fair resource allocation and optimal system performance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Inter-Process Communication",
+      "topic_no": 167,
+      "contents": [
+        {
+          "text": "Inter-Process Communication (IPC) allows processes to communicate and synchronize with each other in an operating system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common mechanisms for IPC include pipes, message queues, shared memory, and sockets.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Pipes are a form of one-way communication between processes, where the output of one process becomes the input of another.",
+          "codeSnippet": "pipe(fd);",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Message queues allow processes to exchange data through messages stored in a queue.",
+          "codeSnippet": "msgget(key, msgflg);",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Shared memory enables processes to share a region of memory for communication.",
+          "codeSnippet": "shmget(key, size, shmflg);",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Sockets provide communication between processes over a network or between processes on the same machine.",
+          "codeSnippet": "socket(domain, type, protocol);",
+          "codeLanguage": "C"
+        }
+      ]
+    },
+    {
+      "topic": "Process Synchronization",
+      "topic_no": 234,
+      "contents": [
+        {
+          "text": "Process Synchronization is a concept in Operating Systems that refers to the coordination of multiple processes to ensure data consistency and avoid conflicts.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One common example of Process Synchronization is the use of mutex locks to protect critical sections of code from being accessed by multiple processes simultaneously.",
+          "codeSnippet": "pthread_mutex_lock(&mutex); \n// Critical Section \npthread_mutex_unlock(&mutex);",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Another example is the use of semaphores to control access to shared resources among processes.",
+          "codeSnippet": "sem_wait(&semaphore); \n// Critical Section \nsem_post(&semaphore);",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Deadlock is a common issue in Process Synchronization where two or more processes are waiting for each other to release resources, resulting in a standstill.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To prevent deadlock, techniques like resource allocation graphs and deadlock detection algorithms are used in Operating Systems.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

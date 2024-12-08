@@ -1,0 +1,2158 @@
+{
+  "category": "DOTNET",
+  "topics": [
+    {
+      "topic": ".NET Basics",
+      "topic_no": 45,
+      "contents": [
+        {
+          "text": ".NET Basics Overview",
+          "codeSnippet": "The .NET framework is a software development platform developed by Microsoft. It includes a large library and supports several programming languages such as C#, VB.NET, and F#.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Common Language Runtime (CLR)",
+          "codeSnippet": "The CLR is the virtual machine component of the .NET framework that manages the execution of .NET programs. It provides services such as memory management, exception handling, and security.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Common Type System (CTS)",
+          "codeSnippet": "The CTS defines how types are declared, used, and managed in the .NET framework. It ensures that objects written in different .NET languages can interact with each other.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Base Class Library (BCL)",
+          "codeSnippet": "The BCL is a library of classes, interfaces, and value types that provide the core functionality of the .NET framework. It includes collections, I/O, networking, and more.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Common Intermediate Language (CIL)",
+          "codeSnippet": "CIL is the intermediate language used by the .NET framework. When a .NET program is compiled, it is translated into CIL, which is then executed by the CLR.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": ".NET Core",
+      "topic_no": 169,
+      "contents": [
+        {
+          "text": ".NET Core is an open-source, cross-platform framework for building modern, cloud-based, and internet-connected applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It allows developers to build applications using C#, F#, and Visual Basic.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One of the key features of .NET Core is its ability to run on Windows, macOS, and Linux.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "With .NET Core, developers can create web applications, microservices, libraries, and console applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The .NET Core SDK includes tools for developing, building, testing, and publishing applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create a new .NET Core application, you can use the 'dotnet new' command.",
+          "codeSnippet": "dotnet new console -n MyConsoleApp",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "You can run a .NET Core application using the 'dotnet run' command.",
+          "codeSnippet": "dotnet run",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "To publish a .NET Core application, you can use the 'dotnet publish' command.",
+          "codeSnippet": "dotnet publish -c Release -o ./publish",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": ".NET 5",
+      "topic_no": 247,
+      "contents": [
+        {
+          "text": ".NET 5 is the latest version of the .NET framework, released in November 2020.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It is an open-source, cross-platform framework for building modern, cloud-based applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One of the key features of .NET 5 is the unification of the .NET platform, combining .NET Core and .NET Framework.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "With .NET 5, developers can create applications that run on Windows, macOS, and Linux.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Performance improvements in .NET 5 result in faster execution and lower memory consumption.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "New C# 9 language features are supported in .NET 5, enhancing developer productivity and code readability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Migrating from previous versions of .NET to .NET 5 is made easier with migration tools provided by Microsoft.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": ".NET 6",
+      "topic_no": 314,
+      "contents": [
+        {
+          "text": ".NET 6 is the latest version of the .NET framework, released in November 2021.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It includes performance improvements, new features, and better support for cross-platform development.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One of the key features of .NET 6 is the introduction of Hot Reload, allowing developers to make changes to their code and see the results instantly without restarting the application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Another important feature is the inclusion of MAUI (Multi-platform App UI), which enables developers to create cross-platform applications with a single codebase.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "With .NET 6, developers can leverage the latest C# features and language improvements to write more efficient and readable code.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The release of .NET 6 also brings enhancements to ASP.NET Core, Entity Framework Core, and other components of the framework.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to .NET Framework",
+      "topic_no": 358,
+      "contents": [
+        {
+          "text": "What is .NET Framework?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Components of .NET Framework",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Language Runtime (CLR)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Base Class Library (BCL)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Type System (CTS)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Intermediate Language (IL)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Just-In-Time (JIT) Compilation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Managed Code vs. Unmanaged Code",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Using .NET Framework",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "File I/O and Streams in .NET",
+      "topic_no": 426,
+      "contents": [
+        {
+          "text": "File I/O in .NET allows reading from and writing to files on the disk.",
+          "codeSnippet": "using System.IO;\n\n// Reading from a file\nstring text = File.ReadAllText(\"file.txt\");\n\n// Writing to a file\nFile.WriteAllText(\"output.txt\", text);",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Streams in .NET provide a generic view of sequence of bytes.",
+          "codeSnippet": "using System;\nusing System.IO;\n\n// Reading from a stream\nusing (FileStream stream = File.OpenRead(\"file.txt\"))\n{\n    byte[] buffer = new byte[1024];\n    int bytesRead = stream.Read(buffer, 0, buffer.Length);\n}\n\n// Writing to a stream\nusing (FileStream stream = File.OpenWrite(\"output.txt\"))\n{\n    byte[] data = new byte[] { 0x48, 0x65, 0x6C, 0x6C, 0x6F };\n    stream.Write(data, 0, data.Length);\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "BinaryReader and BinaryWriter classes in .NET provide functionality for reading and writing binary data.",
+          "codeSnippet": "using System;\nusing System.IO;\n\n// Reading binary data\nusing (BinaryReader reader = new BinaryReader(File.OpenRead(\"file.bin\")))\n{\n    int intValue = reader.ReadInt32();\n    double doubleValue = reader.ReadDouble();\n}\n\n// Writing binary data\nusing (BinaryWriter writer = new BinaryWriter(File.OpenWrite(\"output.bin\")))\n{\n    writer.Write(42);\n    writer.Write(3.14);\n}",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to LINQ",
+      "topic_no": 493,
+      "contents": [
+        {
+          "text": "What is LINQ?",
+          "codeSnippet": "Language-Integrated Query (LINQ) is a set of features in C# and .NET that allows for querying data from different data sources using a uniform syntax.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Benefits of LINQ",
+          "codeSnippet": "1. Simplifies querying data from different sources.\n2. Provides compile-time syntax checking.\n3. Increases code readability and maintainability.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Types of LINQ",
+          "codeSnippet": "1. LINQ to Objects\n2. LINQ to SQL\n3. LINQ to XML\n4. LINQ to Entities",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "LINQ Query Syntax",
+          "codeSnippet": "var query = from item in collection\n            where condition\n            select item;",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "LINQ Method Syntax",
+          "codeSnippet": "var query = collection.Where(item => condition).Select(item => item);",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "LINQ Query Operators",
+          "codeSnippet": "1. Where()\n2. Select()\n3. OrderBy()\n4. GroupBy()\n5. Join()\n6. Any()\n7. All()",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "LINQ Deferred Execution",
+          "codeSnippet": "LINQ queries are executed when the result is iterated over, allowing for deferred execution.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "LINQ Immediate Execution",
+          "codeSnippet": "To force immediate execution of a LINQ query, methods like ToList(), ToArray(), or First() can be used.",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Asynchronous Programming in .NET",
+      "topic_no": 529,
+      "contents": [
+        {
+          "text": "Asynchronous programming in .NET allows you to perform tasks concurrently without blocking the main thread.",
+          "codeSnippet": "async Task MyMethod() \n{ \n    await Task.Delay(1000); \n    Console.WriteLine(\"Task completed asynchronously\"); \n}"
+        },
+        {
+          "text": "The 'async' keyword is used to define a method as asynchronous in C#.",
+          "codeSnippet": "public async Task<int> GetDataAsync() \n{ \n    await Task.Delay(2000); \n    return 1; \n}"
+        },
+        {
+          "text": "The 'await' keyword is used to asynchronously wait for a task to complete without blocking the main thread.",
+          "codeSnippet": "public async Task<string> DownloadDataAsync() \n{ \n    HttpClient client = new HttpClient(); \n    return await client.GetStringAsync(\"https://api.example.com/data\"); \n}"
+        },
+        {
+          "text": "Asynchronous programming in .NET is commonly used in scenarios like web requests, file I/O operations, and database queries.",
+          "codeSnippet": "public async Task ProcessDataAsync() \n{ \n    var data = await GetDataAsync(); \n    Console.WriteLine(data); \n}"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to Windows Forms Applications",
+      "topic_no": 595,
+      "contents": [
+        {
+          "text": "Windows Forms is a graphical application programming interface provided by Microsoft for creating desktop applications for the Windows operating system."
+        },
+        {
+          "text": "Windows Forms applications are created using the .NET Framework and can be developed using programming languages such as C# or VB.NET."
+        },
+        {
+          "text": "Windows Forms applications consist of forms or windows that act as the main building blocks of the user interface."
+        },
+        {
+          "text": "Controls such as buttons, textboxes, labels, and more can be added to Windows Forms to create interactive user interfaces."
+        },
+        {
+          "text": "Event-driven programming is commonly used in Windows Forms applications, where actions such as button clicks trigger specific events."
+        },
+        {
+          "text": "Data binding is a powerful feature in Windows Forms that allows controls to be connected to data sources for automatic synchronization."
+        },
+        {
+          "text": "Visual Studio is a popular integrated development environment (IDE) for creating Windows Forms applications."
+        },
+        {
+          "text": "To create a simple Windows Forms application in C#, you can use the following code snippet:"
+        },
+        {
+          "codeSnippet": "using System;\nusing System.Windows.Forms;\nclass Program\n{\n    static void Main()\n    {\n        Application.Run(new Form());\n    }\n}",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "In this code snippet, a basic Windows Forms application is created with a single form that is displayed using the Application.Run method."
+        },
+        {
+          "text": "Windows Forms applications provide a rich set of controls and components that can be customized to create versatile desktop applications."
+        },
+        {
+          "text": "Windows Forms applications offer a familiar and intuitive user interface design for Windows users."
+        },
+        {
+          "text": "Windows Forms applications can be deployed as standalone executables or as part of larger software installations."
+        },
+        {
+          "text": "Windows Forms applications can interact with other .NET technologies and libraries to enhance functionality and capabilities."
+        },
+        {
+          "text": "Windows Forms applications can be designed with responsive layouts to adapt to different screen sizes and resolutions."
+        },
+        {
+          "text": "Windows Forms applications support localization and globalization features for creating applications in multiple languages."
+        },
+        {
+          "text": "Windows Forms applications can leverage third-party controls and extensions to extend functionality and improve user experience."
+        },
+        {
+          "text": "Windows Forms applications can be integrated with databases and web services to access and manipulate data."
+        },
+        {
+          "text": "Windows Forms applications can be tested using automated testing frameworks to ensure quality and reliability."
+        },
+        {
+          "text": "Windows Forms applications can be updated and maintained easily through version control systems and continuous integration practices."
+        }
+      ]
+    },
+    {
+      "topic": "Building User Interfaces with WPF",
+      "topic_no": 644,
+      "contents": [
+        {
+          "text": "Introduction to WPF (Windows Presentation Foundation) and its benefits in building user interfaces",
+          "codeSnippet": "WPF provides a unified framework for building desktop applications on Windows, offering rich UI capabilities and seamless integration with other .NET technologies.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Creating a WPF project in Visual Studio",
+          "codeSnippet": "To create a new WPF project in Visual Studio, go to File -> New -> Project, select WPF App (.NET Core or .NET Framework) template, and follow the wizard to set up your project.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Understanding XAML (eXtensible Application Markup Language) for designing WPF UI",
+          "codeSnippet": "XAML is a declarative markup language used to define the UI elements and layout in WPF applications, providing a clear separation of design and logic.",
+          "codeLanguage": "XAML"
+        },
+        {
+          "text": "Creating UI elements in WPF using XAML",
+          "codeSnippet": "<Button Content=\"Click Me\" Click=\"Button_Click\"/>",
+          "codeLanguage": "XAML"
+        },
+        {
+          "text": "Data binding in WPF to connect UI elements with data sources",
+          "codeSnippet": "WPF supports various data binding techniques like Element-to-Element, Data Context, and RelativeSource bindings to bind UI elements with data from different sources.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Styling and templating in WPF for customizing the appearance of UI elements",
+          "codeSnippet": "<Style TargetType=\"Button\"><Setter Property=\"Background\" Value=\"LightBlue\"/></Style>",
+          "codeLanguage": "XAML"
+        },
+        {
+          "text": "Handling user input and events in WPF applications",
+          "codeSnippet": "Subscribe to events like Button.Click or MouseEnter to handle user interactions in WPF applications.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Layout management in WPF using panels like Grid, StackPanel, and WrapPanel",
+          "codeSnippet": "<Grid><Button Grid.Row=\"0\" Grid.Column=\"0\" Content=\"Button 1\"/><Button Grid.Row=\"0\" Grid.Column=\"1\" Content=\"Button 2\"/></Grid>",
+          "codeLanguage": "XAML"
+        },
+        {
+          "text": "Working with controls and resources in WPF for reusability and consistency",
+          "codeSnippet": "<Window.Resources><SolidColorBrush x:Key=\"CustomBrush\" Color=\"Red\"/></Window.Resources>",
+          "codeLanguage": "XAML"
+        },
+        {
+          "text": "Deploying and distributing WPF applications for end-users",
+          "codeSnippet": "Use ClickOnce deployment or create an installer package to distribute WPF applications to end-users.",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Data Access with ADO.NET",
+      "topic_no": 675,
+      "contents": [
+        {
+          "text": "Introduction to ADO.NET",
+          "codeSnippet": "ADO.NET is a data access technology in the .NET framework that provides a set of classes for accessing and manipulating data from various data sources.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Connecting to a Database using ADO.NET",
+          "codeSnippet": "SqlConnection connection = new SqlConnection(connectionString);\nconnection.Open();",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Executing a Query with ADO.NET",
+          "codeSnippet": "SqlCommand command = new SqlCommand(\"SELECT * FROM Table\", connection);\nSqlDataReader reader = command.ExecuteReader();",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Working with Data Readers in ADO.NET",
+          "codeSnippet": "while (reader.Read())\n{\n    // Access data using reader\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Working with Data Adapters in ADO.NET",
+          "codeSnippet": "SqlDataAdapter adapter = new SqlDataAdapter(\"SELECT * FROM Table\", connection);\nDataSet dataSet = new DataSet();\nadapter.Fill(dataSet);",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Executing Stored Procedures with ADO.NET",
+          "codeSnippet": "SqlCommand command = new SqlCommand(\"StoredProcedureName\", connection);\ncommand.CommandType = CommandType.StoredProcedure;\ncommand.ExecuteNonQuery();",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to Entity Framework",
+      "topic_no": 700,
+      "contents": [
+        {
+          "text": "Entity Framework is an Object-Relational Mapping (ORM) framework that enables developers to work with relational data using domain-specific objects.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Entity Framework simplifies the data access layer by eliminating the need for most of the data-access code that developers usually need to write.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Entity Framework supports various database providers such as SQL Server, MySQL, SQLite, and more, allowing developers to work with different databases seamlessly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Entity Framework provides LINQ (Language Integrated Query) support, enabling developers to write queries using C# or VB.NET syntax instead of SQL queries.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Entity Framework Code First approach allows developers to define the domain model first and then create the database based on the model, simplifying the database design process.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Entity Framework Database First approach enables developers to generate the entity classes and context from an existing database schema, making it easy to work with legacy databases.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Entity Framework Core is a lightweight, extensible, and cross-platform version of Entity Framework that supports .NET Core and .NET 5+ applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Working with Data in Entity Framework",
+      "topic_no": 725,
+      "contents": [
+        {
+          "text": "Introduction to Entity Framework",
+          "codeSnippet": "Entity Framework is an Object-Relational Mapping (ORM) framework that enables developers to work with data using domain-specific objects without having to write SQL queries. It simplifies data access and manipulation in .NET applications by providing a high-level abstraction over the database.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Entity Framework in a .NET project",
+          "codeSnippet": "To work with Entity Framework in a .NET project, you need to install the Entity Framework package using NuGet Package Manager. You also need to define a DbContext class that represents your database context and configure the connection string in the project's configuration file.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating Models in Entity Framework",
+          "codeSnippet": "In Entity Framework, models are represented as classes that map to database tables. You can define entity classes that correspond to your database schema and establish relationships between them using navigation properties.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Querying Data with Entity Framework",
+          "codeSnippet": "Entity Framework provides LINQ (Language Integrated Query) for querying data from the database. You can write LINQ queries against your entity classes to retrieve, filter, and manipulate data stored in the database.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Updating Data with Entity Framework",
+          "codeSnippet": "To update data using Entity Framework, you can modify the properties of entity objects retrieved from the database and then save the changes by calling the SaveChanges method on the DbContext instance. Entity Framework tracks changes and generates the necessary SQL statements to update the database.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Deleting Data with Entity Framework",
+          "codeSnippet": "Deleting data in Entity Framework involves fetching the entity to be deleted, marking it for deletion using the DbContext's Remove method, and then calling SaveChanges to apply the deletion to the database. Entity Framework handles the generation of the appropriate SQL DELETE statements.",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to ASP.NET Core",
+      "topic_no": 750,
+      "contents": [
+        {
+          "text": "ASP.NET Core is a cross-platform, high-performance framework for building modern, cloud-based, internet-connected applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It is an open-source framework developed by Microsoft and is a redesign of the original ASP.NET framework.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ASP.NET Core supports building web applications, APIs, and microservices.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It provides a modular framework that allows developers to pick and choose the components they need for their applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ASP.NET Core is built on top of the .NET Core runtime, which is a cross-platform runtime for .NET applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One of the key features of ASP.NET Core is its support for dependency injection, which helps manage the dependencies of application components.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ASP.NET Core applications can be developed and run on Windows, macOS, and Linux.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The framework provides built-in support for logging, configuration, and monitoring, making it easier to develop and maintain applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Building Web APIs with ASP.NET Core",
+      "topic_no": 786,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core Web APIs",
+          "codeSnippet": "ASP.NET Core is a cross-platform, high-performance framework for building modern, cloud-based, internet-connected applications. Web APIs in ASP.NET Core allow you to build RESTful services that can be consumed by various clients.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a New ASP.NET Core Web API Project",
+          "codeSnippet": "To create a new ASP.NET Core Web API project, you can use the dotnet CLI or Visual Studio. Using the dotnet CLI, you can run 'dotnet new webapi -n MyWebApi' to create a new project named MyWebApi.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Defining API Endpoints and Routes",
+          "codeSnippet": "In ASP.NET Core Web APIs, you define API endpoints using controller classes. Each controller contains action methods that represent different API routes. Routes are defined using attributes like [HttpGet], [HttpPost], [HttpPut], [HttpDelete], etc.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Handling HTTP Requests and Responses",
+          "codeSnippet": "ASP.NET Core provides built-in support for handling HTTP requests and responses. You can use IActionResult to return different types of responses such as OkObjectResult, BadRequestResult, NotFoundResult, etc.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Model Binding and Validation",
+          "codeSnippet": "Model binding in ASP.NET Core Web APIs maps data from HTTP requests to action method parameters or model properties. You can also apply validation attributes like [Required], [MaxLength], [Range], etc., for input validation.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Dependency Injection in Web APIs",
+          "codeSnippet": "ASP.NET Core supports dependency injection, allowing you to inject services into your controllers or other components. You can register services in the ConfigureServices method of the Startup class.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Securing Web APIs with Authentication and Authorization",
+          "codeSnippet": "You can secure your ASP.NET Core Web APIs using authentication and authorization mechanisms like JWT tokens, OAuth, IdentityServer, etc. Configure authentication middleware and authorize attributes to control access to API endpoints.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Developing Single-Page Applications with ASP.NET Core and Angular",
+      "topic_no": 817,
+      "contents": [
+        {
+          "text": "Introduction to Single-Page Applications (SPAs)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Overview of ASP.NET Core and Angular frameworks",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a new ASP.NET Core project with Angular",
+          "codeSnippet": "dotnet new angular -o MySPA",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a Single-Page Application using Angular CLI",
+          "codeSnippet": "ng new my-spa",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Integrating Angular with ASP.NET Core backend",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing routing in an Angular SPA",
+          "codeSnippet": "const routes: Routes = [\n  { path: 'home', component: HomeComponent },\n  { path: 'about', component: AboutComponent },\n  { path: '', redirectTo: '/home', pathMatch: 'full' }\n];",
+          "codeLanguage": "typescript"
+        },
+        {
+          "text": "Calling ASP.NET Core Web APIs from Angular",
+          "codeSnippet": "this.http.get('/api/products').subscribe((data) => {\n  console.log(data);\n});",
+          "codeLanguage": "typescript"
+        },
+        {
+          "text": "Implementing authentication and authorization in an Angular SPA",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Deploying an ASP.NET Core and Angular SPA",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Authentication and Authorization in ASP.NET Core",
+      "topic_no": 843,
+      "contents": [
+        {
+          "text": "Authentication and Authorization are essential components of web applications to control access to resources based on user identity and permissions."
+        },
+        {
+          "text": "Authentication verifies the identity of a user, while Authorization determines what actions a user is allowed to perform."
+        },
+        {
+          "text": "In ASP.NET Core, authentication is the process of validating the identity of a user, typically by verifying credentials like username and password."
+        },
+        {
+          "text": "Authorization in ASP.NET Core involves defining policies that specify who can access specific resources or perform certain actions."
+        },
+        {
+          "text": "ASP.NET Core provides built-in support for various authentication mechanisms such as cookies, JWT tokens, and OAuth."
+        },
+        {
+          "text": "To configure authentication in ASP.NET Core, you can use the AddAuthentication method in the ConfigureServices method of the Startup class."
+        },
+        {
+          "text": "An example of configuring cookie authentication in ASP.NET Core:"
+        },
+        {
+          "codeSnippet": "services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)\n    .AddCookie(options =>\n    {\n        options.LoginPath = \"/Account/Login\";\n        options.AccessDeniedPath = \"/Account/AccessDenied\";\n    });",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Authorization in ASP.NET Core is typically done using policies, which are defined in the ConfigureServices method of the Startup class."
+        },
+        {
+          "text": "Policies can be based on roles, claims, or custom requirements to control access to specific resources."
+        },
+        {
+          "text": "An example of defining a policy in ASP.NET Core:"
+        },
+        {
+          "codeSnippet": "services.AddAuthorization(options =>\n    {\n        options.AddPolicy(\"RequireAdminRole\", policy => policy.RequireRole(\"Admin\"));\n    });",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "To protect a controller or action method in ASP.NET Core, you can use the Authorize attribute with the desired policy name."
+        },
+        {
+          "text": "An example of applying authorization to a controller in ASP.NET Core:"
+        },
+        {
+          "codeSnippet": "[Authorize(Policy = \"RequireAdminRole\")]\npublic IActionResult AdminDashboard()\n{\n    // Code for admin dashboard\n}",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to Blazor",
+      "topic_no": 852,
+      "contents": [
+        {
+          "text": "Blazor is a web framework that allows you to build interactive web UIs using C# and .NET.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Blazor can run on both client-side (WebAssembly) and server-side (ASP.NET Core) environments.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Blazor components are reusable building blocks for creating web applications.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Blazor uses Razor syntax for creating components and rendering UI elements.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Blazor supports two hosting models: Blazor Server and Blazor WebAssembly.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Building Desktop Applications with WPF",
+      "topic_no": 871,
+      "contents": [
+        {
+          "text": "Introduction to WPF (Windows Presentation Foundation)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a WPF Application",
+          "codeSnippet": "using System; \nusing System.Windows; \n\nnamespace WpfApp \n{ \n    public partial class MainWindow : Window \n    { \n        public MainWindow() \n        { \n            InitializeComponent(); \n        } \n    } \n}",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Understanding XAML (eXtensible Application Markup Language)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Designing User Interfaces with WPF Controls",
+          "codeSnippet": "<Button Content=\"Click Me\" Click=\"Button_Click\"/>",
+          "codeLanguage": "XAML"
+        },
+        {
+          "text": "Data Binding in WPF",
+          "codeSnippet": "<TextBox Text=\"{Binding Name}\"/>",
+          "codeLanguage": "XAML"
+        },
+        {
+          "text": "Styling and Templating in WPF",
+          "codeSnippet": "<Style TargetType=\"Button\"> \n    <Setter Property=\"Background\" Value=\"LightBlue\"/> \n</Style>",
+          "codeLanguage": "XAML"
+        },
+        {
+          "text": "Handling Events in WPF",
+          "codeSnippet": "private void Button_Click(object sender, RoutedEventArgs e) \n{ \n    // Handle button click event \n}",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Working with MVVM (Model-View-ViewModel) Pattern in WPF",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Windows Communication Foundation (WCF)",
+      "topic_no": 881,
+      "contents": [
+        {
+          "text": "Windows Communication Foundation (WCF) is a framework for building service-oriented applications in .NET.",
+          "codeSnippet": "using System.ServiceModel;"
+        },
+        {
+          "text": "WCF allows you to create secure, reliable, and transacted services that can be accessed over various protocols like HTTP, TCP, and Named Pipes.",
+          "codeSnippet": "ServiceContract"
+        },
+        {
+          "text": "WCF supports various communication patterns such as one-way, request-reply, duplex, and callback.",
+          "codeSnippet": "[ServiceContract]"
+        },
+        {
+          "text": "WCF provides features like message security, reliable messaging, transactions, and interoperability with other services.",
+          "codeSnippet": "[OperationContract]"
+        },
+        {
+          "text": "WCF services are defined using service contracts, data contracts, and message contracts.",
+          "codeSnippet": "[OperationContract]"
+        }
+      ]
+    },
+    {
+      "topic": "Unit Testing in .NET",
+      "topic_no": 891,
+      "contents": [
+        {
+          "text": "What is Unit Testing in .NET?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Why is Unit Testing important in .NET development?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to write Unit Tests in .NET using NUnit?",
+          "codeSnippet": "public void TestMethod()\n{\n    // Arrange\n    var calculator = new Calculator();\n    // Act\n    var result = calculator.Add(2, 3);\n    // Assert\n    Assert.AreEqual(5, result);\n}",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "What are the benefits of Unit Testing in .NET?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to run Unit Tests in Visual Studio for .NET projects?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "What are some common Unit Testing frameworks used in .NET?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Integration Testing with NUnit and Moq",
+      "topic_no": 896,
+      "contents": [
+        {
+          "text": "Introduction to Integration Testing with NUnit and Moq"
+        },
+        {
+          "text": "Setting up NUnit and Moq in a .NET project"
+        },
+        {
+          "text": "Writing an integration test using NUnit and Moq"
+        },
+        {
+          "text": "Mocking dependencies with Moq in integration tests"
+        },
+        {
+          "text": "Asserting expectations in integration tests with NUnit"
+        },
+        {
+          "text": "Running integration tests in Visual Studio using NUnit"
+        }
+      ]
+    },
+    {
+      "topic": "Performance Tuning and Optimization in .NET",
+      "topic_no": 911,
+      "contents": [
+        {
+          "text": "Introduction to Performance Tuning and Optimization in .NET",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Identifying Performance Bottlenecks",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Profiling Tools to Analyze Performance",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Optimizing Database Queries",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Utilizing Caching Mechanisms",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Asynchronous Programming for Performance Improvement",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Utilizing Performance Counters for Monitoring",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Continuous Integration and Deployment (CI/CD) in .NET",
+      "topic_no": 928,
+      "contents": [
+        {
+          "text": "Introduction to Continuous Integration and Deployment (CI/CD) in .NET",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a CI/CD pipeline using Azure DevOps for a .NET application",
+          "codeSnippet": "trigger:\n- master\n\npool:\n  vmImage: 'windows-latest'\n\nsteps:\n- task: UseDotNet@2\n  inputs:\n    packageType: 'sdk'\n    version: '3.x'\n- script: dotnet build --configuration Release\n  displayName: 'Build'\n- script: dotnet test --configuration Release\n  displayName: 'Test'\n- script: dotnet publish -c Release -o $(Build.ArtifactStagingDirectory)\n  displayName: 'Publish'\n- task: PublishBuildArtifacts@1\n  inputs:\n    pathtoPublish: '$(Build.ArtifactStagingDirectory)'\n    artifactName: 'drop'\n  displayName: 'Publish Artifact'",
+          "codeLanguage": "yaml"
+        },
+        {
+          "text": "Automating deployment of a .NET application using Jenkins",
+          "codeSnippet": "pipeline {\n    agent any\n    stages {\n        stage('Build') {\n            steps {\n                script {\n                    bat 'dotnet build'\n                }\n            }\n        }\n        stage('Test') {\n            steps {\n                script {\n                    bat 'dotnet test'\n                }\n            }\n        }\n        stage('Deploy') {\n            steps {\n                script {\n                    bat 'dotnet publish -c Release -o C:\\inetpub\\wwwroot'\n                }\n            }\n        }\n    }\n}",
+          "codeLanguage": "groovy"
+        },
+        {
+          "text": "Implementing automated testing in a .NET CI/CD pipeline",
+          "codeSnippet": "dotnet test MyProject.Tests.csproj --configuration Release",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to Microservices Architecture",
+      "topic_no": 933,
+      "contents": [
+        {
+          "text": "What is Microservices Architecture?",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Key Principles of Microservices Architecture",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Advantages of Microservices Architecture",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Challenges of Microservices Architecture",
+          "codeSnippet": ""
+        },
+        {
+          "text": "How Microservices Architecture Differs from Monolithic Architecture",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Implementing Microservices in .NET",
+          "codeSnippet": "using System; \n\nnamespace MicroservicesApp \n{ \n    public class Program \n    { \n        public static void Main() \n        { \n            Console.WriteLine(\"Implementing Microservices in .NET\"); \n        } \n    } \n}"
+        }
+      ]
+    },
+    {
+      "topic": "Building Microservices with .NET Core",
+      "topic_no": 940,
+      "contents": [
+        {
+          "text": "Introduction to Microservices architecture and its benefits"
+        },
+        {
+          "text": "Creating a new .NET Core Web API project for a microservice"
+        },
+        {
+          "text": "Implementing a simple microservice endpoint in .NET Core"
+        },
+        {
+          "text": "Using Docker to containerize a .NET Core microservice"
+        },
+        {
+          "text": "Implementing communication between microservices using HTTP or gRPC"
+        },
+        {
+          "text": "Implementing service discovery and load balancing in a microservices architecture"
+        },
+        {
+          "text": "Implementing centralized logging and monitoring for microservices"
+        },
+        {
+          "text": "Implementing security and authentication in a microservices architecture"
+        },
+        {
+          "text": "Deploying and scaling microservices in a cloud environment"
+        }
+      ]
+    },
+    {
+      "topic": "Containerization with Docker for .NET Applications",
+      "topic_no": 948,
+      "contents": [
+        {
+          "text": "Introduction to Docker and containerization",
+          "codeSnippet": "Docker is a platform that enables developers to develop, ship, and run applications in containers. Containers are lightweight, standalone, and executable packages that include everything needed to run an application, such as code, runtime, system tools, libraries, and settings."
+        },
+        {
+          "text": "Benefits of containerization for .NET applications",
+          "codeSnippet": "Containerization offers benefits such as consistency in development and production environments, improved scalability, easier deployment, resource efficiency, and isolation of applications."
+        },
+        {
+          "text": "Setting up Docker for .NET applications",
+          "codeSnippet": "To containerize a .NET application with Docker, you need to create a Dockerfile in the root of your project. The Dockerfile specifies the environment and dependencies required for running the application in a container."
+        },
+        {
+          "text": "Building a Docker image for a .NET application",
+          "codeSnippet": "To build a Docker image for a .NET application, you use the 'docker build' command in the directory containing the Dockerfile. This command creates a Docker image based on the instructions in the Dockerfile."
+        },
+        {
+          "text": "Running a .NET application in a Docker container",
+          "codeSnippet": "Once you have built a Docker image for your .NET application, you can run it in a Docker container using the 'docker run' command. This command starts a container based on the specified image."
+        },
+        {
+          "text": "Publishing a .NET application to a Docker registry",
+          "codeSnippet": "To share your Docker image with others or deploy it to production, you can publish it to a Docker registry like Docker Hub. Use the 'docker push' command to upload your image to the registry."
+        }
+      ]
+    },
+    {
+      "topic": "Serverless Computing with Azure Functions",
+      "topic_no": 959,
+      "contents": [
+        {
+          "text": "Introduction to Serverless Computing",
+          "codeSnippet": "Serverless computing is a cloud computing model where the cloud provider manages the infrastructure, allowing developers to focus on writing code without worrying about server management.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Benefits of Serverless Computing",
+          "codeSnippet": "Scalability, reduced operational costs, automatic scaling, and pay-per-use pricing model are some of the key benefits of serverless computing.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Azure Functions Overview",
+          "codeSnippet": "Azure Functions is a serverless compute service that enables you to run event-triggered code without having to explicitly provision or manage infrastructure.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating an Azure Function in C#",
+          "codeSnippet": "using System;\nusing Microsoft.Azure.WebJobs;\nusing Microsoft.Azure.WebJobs.Host;\n\npublic static void Run([TimerTrigger(\"0 */5 * * * *\")]TimerInfo myTimer, TraceWriter log)\n{\n    log.Info($\"C# Timer trigger function executed at: {DateTime.Now}\");\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Triggers and Bindings in Azure Functions",
+          "codeSnippet": "Triggers initiate the execution of a function, while bindings provide a declarative way to connect input and output data to the function.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Serverless Architecture with Azure Functions",
+          "codeSnippet": "Azure Functions can be used to implement various serverless architecture patterns such as event-driven, microservices, and real-time processing.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Implementing Real-Time Communication with SignalR",
+      "topic_no": 968,
+      "contents": [
+        {
+          "text": "Introduction to SignalR",
+          "codeSnippet": "SignalR is a real-time communication library for ASP.NET developers. It enables bi-directional communication between the server and clients in real-time.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Setting up SignalR in a .NET application",
+          "codeSnippet": "To set up SignalR in a .NET application, first install the SignalR NuGet package. Then, create a SignalR hub by inheriting from the Hub class and defining methods that clients can call.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Establishing a connection with SignalR",
+          "codeSnippet": "Clients can establish a connection with the SignalR server by creating a connection object and starting the connection. The server can then send messages to connected clients in real-time.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Sending real-time messages with SignalR",
+          "codeSnippet": "To send real-time messages to clients, use the Clients property of the Hub class to access connected clients and invoke client-side methods. Messages can be sent from both the server to clients and vice versa.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Handling connection events in SignalR",
+          "codeSnippet": "SignalR provides built-in events for handling connection lifecycle events such as connecting, disconnecting, and reconnecting. You can override these events in the SignalR hub to perform custom logic based on the connection state.",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Developing Cross-Platform Mobile Apps with Xamarin",
+      "topic_no": 976,
+      "contents": [
+        {
+          "text": "Introduction to Xamarin for Cross-Platform Mobile App Development",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up Xamarin Development Environment",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a New Xamarin Project",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Building User Interfaces with Xamarin.Forms",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Business Logic in Xamarin",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Accessing Native APIs in Xamarin",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Testing and Debugging Xamarin Apps",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Deploying Xamarin Apps to Different Platforms",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to .NET Core CLI",
+      "topic_no": 987,
+      "contents": [
+        {
+          "text": "Introduction to .NET Core CLI"
+        },
+        {
+          "text": "The .NET Core Command-Line Interface (CLI) is a cross-platform toolchain for developing, building, running, and publishing .NET applications."
+        },
+        {
+          "text": "It provides a set of commands for managing .NET projects and solutions, including creating new projects, adding dependencies, building projects, and running applications."
+        },
+        {
+          "text": "The .NET Core CLI is built on top of the .NET Core runtime and can be used on Windows, macOS, and Linux."
+        },
+        {
+          "text": "To use the .NET Core CLI, you need to have the .NET Core SDK installed on your machine."
+        },
+        {
+          "text": "You can check if the .NET Core CLI is installed by running 'dotnet --version' in your command-line interface."
+        },
+        {
+          "text": "Some common commands in the .NET Core CLI include 'dotnet new' for creating new projects, 'dotnet build' for building projects, and 'dotnet run' for running applications."
+        },
+        {
+          "text": "The .NET Core CLI also supports managing NuGet packages, publishing applications, and more."
+        },
+        {
+          "text": "By mastering the .NET Core CLI, developers can efficiently work with .NET Core projects and streamline their development workflow."
+        }
+      ]
+    },
+    {
+      "topic": "Creating .NET Core Console Applications",
+      "topic_no": 1000,
+      "contents": [
+        {
+          "text": "Introduction to .NET Core Console Applications",
+          "codeSnippet": "Console.WriteLine(\"Hello, World!\");",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Creating a new .NET Core Console Application",
+          "codeSnippet": "dotnet new console -n MyConsoleApp",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Running a .NET Core Console Application",
+          "codeSnippet": "dotnet run",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Accepting User Input in a .NET Core Console Application",
+          "codeSnippet": "string userInput = Console.ReadLine();",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Using Command-Line Arguments in a .NET Core Console Application",
+          "codeSnippet": "string[] args = Environment.GetCommandLineArgs();",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Handling Exceptions in a .NET Core Console Application",
+          "codeSnippet": "try\n{\n    // code that may throw an exception\n}\ncatch(Exception ex)\n{\n    Console.WriteLine($\"An error occurred: {ex.Message}\");\n}",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Working with NuGet Packages in .NET Core",
+      "topic_no": 1010,
+      "contents": [
+        {
+          "text": "Introduction to NuGet Packages in .NET Core"
+        },
+        {
+          "text": "NuGet is a package manager for .NET that enables you to easily add, remove, and update dependencies in your .NET Core projects."
+        },
+        {
+          "text": "To work with NuGet packages in .NET Core, you can use the NuGet Package Manager in Visual Studio or the .NET Core CLI commands."
+        },
+        {
+          "text": "Installing NuGet Packages in .NET Core"
+        },
+        {
+          "text": "To install a NuGet package in a .NET Core project using the .NET Core CLI, you can use the 'dotnet add package' command followed by the package name and version."
+        },
+        {
+          "text": "dotnet add package Newtonsoft.Json"
+        },
+        {
+          "text": "Managing NuGet Packages in Visual Studio"
+        },
+        {
+          "text": "In Visual Studio, you can manage NuGet packages for your .NET Core project by right-clicking on the project in Solution Explorer and selecting 'Manage NuGet Packages'."
+        },
+        {
+          "text": "Updating NuGet Packages in .NET Core"
+        },
+        {
+          "text": "To update NuGet packages in a .NET Core project using the .NET Core CLI, you can use the 'dotnet add package' command with the package name and new version."
+        },
+        {
+          "text": "dotnet add package Newtonsoft.Json --version 12.0.3"
+        },
+        {
+          "text": "Removing NuGet Packages in .NET Core"
+        },
+        {
+          "text": "To remove a NuGet package from a .NET Core project using the .NET Core CLI, you can use the 'dotnet remove package' command followed by the package name."
+        },
+        {
+          "text": "dotnet remove package Newtonsoft.Json"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to .NET Core MVC",
+      "topic_no": 1021,
+      "contents": [
+        {
+          "text": "What is .NET Core MVC?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a new .NET Core MVC project",
+          "codeSnippet": "dotnet new mvc -n MyMvcApp",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Understanding the MVC pattern in .NET Core",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Controllers in .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Views in .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Models in .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Routing in .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Working with Razor syntax in .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Entity Framework Core in .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Adding Middleware in .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Dependency Injection in .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Unit Testing in .NET Core MVC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Publishing and deploying a .NET Core MVC application",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Building RESTful APIs with .NET Core",
+      "topic_no": 1040,
+      "contents": [
+        {
+          "text": "Introduction to RESTful APIs",
+          "codeSnippet": "RESTful APIs are a way of building web services that adhere to the principles of REST (Representational State Transfer). They use standard HTTP methods like GET, POST, PUT, DELETE to perform CRUD operations on resources.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up a .NET Core project for building RESTful APIs",
+          "codeSnippet": "To create a new .NET Core project for building RESTful APIs, you can use the dotnet CLI or Visual Studio. Use the command 'dotnet new webapi' to create a new web API project.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Controller in .NET Core for handling API requests",
+          "codeSnippet": "In .NET Core, controllers are used to handle incoming HTTP requests. You can create a new controller by adding a new class that inherits from ControllerBase and adding methods for handling different HTTP methods like GET, POST, PUT, DELETE.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Defining routes and actions in a .NET Core API Controller",
+          "codeSnippet": "You can define routes for your API endpoints using attributes like [Route] and specify the HTTP method using attributes like [HttpGet], [HttpPost], [HttpPut], [HttpDelete]. These attributes help map incoming requests to the appropriate controller actions.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Implementing CRUD operations in a .NET Core API Controller",
+          "codeSnippet": "To implement CRUD operations in a .NET Core API Controller, you can use Entity Framework Core to interact with a database. You can create methods in your controller to handle GET, POST, PUT, DELETE requests and perform corresponding operations on the database.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Handling errors and returning appropriate HTTP status codes in a .NET Core API",
+          "codeSnippet": "In a .NET Core API, you can handle errors by returning appropriate HTTP status codes like 404 (Not Found), 400 (Bad Request), 500 (Internal Server Error) along with error messages in the response body. Use try-catch blocks to catch exceptions and return the appropriate status code.",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Authentication and Authorization in .NET Core",
+      "topic_no": 1052,
+      "contents": [
+        {
+          "text": "Authentication and Authorization are essential components in building secure applications in .NET Core.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Authentication verifies the identity of a user, while Authorization determines what actions the user is allowed to perform.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In .NET Core, authentication is handled by middleware components that validate user credentials and issue authentication tokens.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Authorization in .NET Core is typically implemented using policies that define access control rules based on roles or claims.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of authentication in .NET Core is using JWT (JSON Web Tokens) for token-based authentication.",
+          "codeSnippet": "services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n    .AddJwtBearer(options =>\n    {\n        options.TokenValidationParameters = new TokenValidationParameters\n        {\n            ValidateIssuer = true,\n            ValidateAudience = true,\n            ValidateLifetime = true,\n            ValidateIssuerSigningKey = true,\n            ValidIssuer = Configuration[\"Jwt:Issuer\"],\n            ValidAudience = Configuration[\"Jwt:Audience\"],\n            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration[\"Jwt:Key\"]))\n        };\n    });",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "An example of authorization in .NET Core is restricting access to a controller action based on roles.",
+          "codeSnippet": "[Authorize(Roles = \"Admin\")]\npublic IActionResult AdminPanel()\n{\n    return View();\n}",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Deploying .NET Core Applications with Docker",
+      "topic_no": 1060,
+      "contents": [
+        {
+          "text": "Introduction to Docker and .NET Core",
+          "codeSnippet": "Docker is a platform for developing, shipping, and running applications using containerization. .NET Core is a cross-platform, open-source framework for building modern applications. Combining Docker with .NET Core allows for easy deployment and scalability of applications."
+        },
+        {
+          "text": "Setting up Docker for .NET Core Development",
+          "codeSnippet": "To set up Docker for .NET Core development, install Docker Desktop on your machine. You can then create a Dockerfile in your .NET Core project to define the environment and dependencies needed to run your application in a container."
+        },
+        {
+          "text": "Creating a Dockerfile for a .NET Core Application",
+          "codeSnippet": "A Dockerfile for a .NET Core application typically includes instructions to build the application, set up the runtime environment, and expose the necessary ports. Here is an example Dockerfile for a simple .NET Core application:\n\nFROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build\nWORKDIR /app\nCOPY *.csproj ./\nRUN dotnet restore\nCOPY . ./\nRUN dotnet publish -c Release -o out\n\nFROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime\nWORKDIR /app\nCOPY --from=build /app/out .\nENTRYPOINT [\"dotnet\", \"<YourAppName>.dll\"]"
+        },
+        {
+          "text": "Building and Running a .NET Core Application with Docker",
+          "codeSnippet": "To build and run a .NET Core application with Docker, use the docker build and docker run commands. After building the Docker image, you can run the container and access your application through the exposed ports. This allows for easy testing and deployment of .NET Core applications."
+        },
+        {
+          "text": "Deploying a .NET Core Application to a Docker Container",
+          "codeSnippet": "Deploying a .NET Core application to a Docker container involves pushing the built Docker image to a container registry like Docker Hub or Azure Container Registry. Once the image is available in the registry, it can be pulled and run on any Docker host, enabling seamless deployment of .NET Core applications."
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to Entity Framework Core",
+      "topic_no": 1066,
+      "contents": [
+        {
+          "text": "Entity Framework Core is an open-source, lightweight, and extensible ORM framework for .NET applications."
+        },
+        {
+          "text": "It allows developers to work with data using objects of domain-specific classes without focusing on the underlying database tables and columns."
+        },
+        {
+          "text": "Entity Framework Core supports various database providers such as SQL Server, SQLite, MySQL, PostgreSQL, and more."
+        },
+        {
+          "text": "It enables developers to perform CRUD operations on the database using LINQ queries and lambda expressions."
+        },
+        {
+          "text": "Entity Framework Core simplifies the process of database migrations and schema changes through code-first migrations."
+        },
+        {
+          "text": "It provides features like change tracking, lazy loading, and eager loading to optimize database interactions."
+        },
+        {
+          "text": "Entity Framework Core can be integrated with ASP.NET Core applications for seamless data access and manipulation."
+        },
+        {
+          "text": "It supports asynchronous operations for improved performance and scalability in data-intensive applications."
+        }
+      ]
+    },
+    {
+      "topic": "Working with Databases in Entity Framework Core",
+      "topic_no": 1078,
+      "contents": [
+        {
+          "text": "Introduction to Entity Framework Core",
+          "codeSnippet": "Entity Framework Core is an Object-Relational Mapping (ORM) framework that allows developers to work with databases using .NET applications."
+        },
+        {
+          "text": "Setting up Entity Framework Core in a .NET project",
+          "codeSnippet": "To use Entity Framework Core in a .NET project, you need to install the Microsoft.EntityFrameworkCore package using NuGet Package Manager."
+        },
+        {
+          "text": "Creating a DbContext class",
+          "codeSnippet": "In Entity Framework Core, a DbContext class represents a session with the database and is used to query and save data. Here is an example of a DbContext class:"
+        },
+        {
+          "text": "Defining entities and relationships",
+          "codeSnippet": "Entities in Entity Framework Core represent database tables, and relationships define how these entities are related to each other. Here is an example of defining entities and relationships:"
+        },
+        {
+          "text": "Querying data using Entity Framework Core",
+          "codeSnippet": "Entity Framework Core provides LINQ (Language Integrated Query) to query data from the database. Here is an example of querying data using LINQ:"
+        },
+        {
+          "text": "Inserting data into the database",
+          "codeSnippet": "To insert data into the database using Entity Framework Core, you can create an instance of an entity class and add it to the DbContext. Here is an example of inserting data:"
+        },
+        {
+          "text": "Updating data in the database",
+          "codeSnippet": "To update data in the database using Entity Framework Core, you can retrieve an entity, modify its properties, and save the changes to the database. Here is an example of updating data:"
+        },
+        {
+          "text": "Deleting data from the database",
+          "codeSnippet": "To delete data from the database using Entity Framework Core, you can retrieve an entity and remove it from the DbContext. Here is an example of deleting data:"
+        },
+        {
+          "text": "Migrations in Entity Framework Core",
+          "codeSnippet": "Migrations in Entity Framework Core allow you to evolve the database schema over time. You can create migrations to apply changes to the database schema. Here is an example of creating and applying migrations:"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to ASP.NET Core Razor Pages",
+      "topic_no": 1085,
+      "contents": [
+        {
+          "text": "ASP.NET Core Razor Pages is a lightweight framework for building web applications using the Model-View-Controller (MVC) architectural pattern."
+        },
+        {
+          "text": "Razor Pages in ASP.NET Core provide a simpler way to create dynamic web pages compared to traditional MVC pattern."
+        },
+        {
+          "text": "Razor Pages use a page-based model where each page has its own model, view, and code-behind file."
+        },
+        {
+          "text": "Razor Pages allow developers to define page-specific routes and handle requests directly in the page model."
+        },
+        {
+          "text": "Razor Pages support the use of tag helpers to simplify working with HTML elements and server-side code."
+        },
+        {
+          "text": "Razor Pages are based on the Razor view engine, which allows developers to write HTML and C# code in the same file."
+        },
+        {
+          "text": "Razor Pages provide a more streamlined development experience for building web applications with ASP.NET Core."
+        },
+        {
+          "text": "Razor Pages are well-suited for small to medium-sized web applications with simpler page-based workflows."
+        }
+      ]
+    },
+    {
+      "topic": "Building CRUD Applications with ASP.NET Core Razor Pages",
+      "topic_no": 1092,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core Razor Pages",
+          "codeSnippet": "Razor Pages is a new feature of ASP.NET Core that makes coding page-focused scenarios easier and more productive. It allows developers to build web applications using a page-based model, where each page consists of a Razor view and a corresponding page model class."
+        },
+        {
+          "text": "Creating a new ASP.NET Core Razor Pages project",
+          "codeSnippet": "dotnet new webapp -o MyRazorPagesApp"
+        },
+        {
+          "text": "Adding a new Razor Page to the project",
+          "codeSnippet": "Create a new .cshtml file in the Pages folder and a corresponding PageModel class. For example, create Index.cshtml and Index.cshtml.cs for the home page."
+        },
+        {
+          "text": "Implementing CRUD operations in Razor Pages",
+          "codeSnippet": "Use the OnGet, OnPost, OnPut, and OnDelete methods in the PageModel class to handle GET, POST, PUT, and DELETE requests, respectively. These methods can interact with a database or other data source to perform CRUD operations."
+        },
+        {
+          "text": "Displaying data in Razor Pages",
+          "codeSnippet": "Use Razor syntax to display data in the .cshtml file. For example, @Model.PropertyName can be used to display a property from the PageModel class."
+        },
+        {
+          "text": "Handling form submissions in Razor Pages",
+          "codeSnippet": "Use the <form> tag in the .cshtml file to create a form for user input. Handle form submissions in the OnPost method of the PageModel class."
+        },
+        {
+          "text": "Validating user input in Razor Pages",
+          "codeSnippet": "Use data annotations or custom validation logic in the PageModel class to validate user input before processing it."
+        },
+        {
+          "text": "Routing in Razor Pages",
+          "codeSnippet": "Razor Pages use a convention-based routing system where the URL path maps to the folder structure under the Pages folder. For example, /Products maps to Pages/Products/Index.cshtml."
+        },
+        {
+          "text": "Adding a new Razor Page with scaffolding",
+          "codeSnippet": "Use the dotnet aspnet-codegenerator razorpage command to scaffold a new Razor Page with a corresponding PageModel class based on a data model."
+        },
+        {
+          "text": "Testing Razor Pages applications",
+          "codeSnippet": "Write unit tests for the PageModel classes using testing frameworks like xUnit or NUnit. Use tools like Selenium for end-to-end testing of the Razor Pages application."
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to ASP.NET Core Web API",
+      "topic_no": 1100,
+      "contents": [
+        {
+          "text": "ASP.NET Core Web API is a framework for building HTTP services that can be accessed by a broad range of clients, including browsers and mobile devices."
+        },
+        {
+          "text": "It is a lightweight, high-performance, and cross-platform framework for building APIs using the .NET platform."
+        },
+        {
+          "text": "ASP.NET Core Web API allows you to build RESTful services that can handle HTTP requests and responses."
+        },
+        {
+          "text": "It supports various formats for data exchange, such as JSON and XML."
+        },
+        {
+          "text": "ASP.NET Core Web API provides built-in support for dependency injection, routing, model binding, and content negotiation."
+        },
+        {
+          "text": "You can secure your Web API using authentication and authorization mechanisms provided by ASP.NET Core."
+        },
+        {
+          "text": "ASP.NET Core Web API can be hosted on various platforms, including IIS, Docker, and Azure."
+        },
+        {
+          "text": "It integrates seamlessly with other ASP.NET Core components, such as MVC and SignalR."
+        },
+        {
+          "text": "You can create controllers in ASP.NET Core Web API to handle incoming HTTP requests and generate responses."
+        },
+        {
+          "text": "Routing in ASP.NET Core Web API allows you to define URL patterns and map them to specific controller actions."
+        },
+        {
+          "text": "Model binding in ASP.NET Core Web API automatically maps incoming HTTP request data to action method parameters."
+        },
+        {
+          "text": "Content negotiation in ASP.NET Core Web API enables clients to request data in different formats based on their preferences."
+        },
+        {
+          "text": "Dependency injection in ASP.NET Core Web API helps manage the dependencies of your application and promotes testability."
+        },
+        {
+          "text": "Authentication in ASP.NET Core Web API allows you to authenticate users using various schemes, such as JWT tokens."
+        },
+        {
+          "text": "Authorization in ASP.NET Core Web API enables you to control access to resources based on user roles and policies."
+        },
+        {
+          "text": "Hosting ASP.NET Core Web API on Azure provides scalability, reliability, and easy deployment options."
+        },
+        {
+          "text": "Integrating ASP.NET Core Web API with MVC allows you to build web applications that consume your API services."
+        },
+        {
+          "text": "SignalR integration in ASP.NET Core Web API enables real-time communication between clients and the server."
+        },
+        {
+          "text": "Creating a controller in ASP.NET Core Web API involves defining actions that respond to different HTTP methods and routes."
+        },
+        {
+          "text": "Defining routes in ASP.NET Core Web API involves using attributes to specify the URL pattern for each action method."
+        },
+        {
+          "text": "Model binding in ASP.NET Core Web API simplifies the process of extracting data from HTTP requests and binding it to parameters."
+        },
+        {
+          "text": "Content negotiation in ASP.NET Core Web API allows clients to specify the format of the response data they want to receive."
+        },
+        {
+          "text": "Dependency injection in ASP.NET Core Web API promotes loose coupling and makes it easier to manage and test dependencies."
+        },
+        {
+          "text": "Securing your ASP.NET Core Web API with authentication ensures that only authorized users can access your API endpoints."
+        },
+        {
+          "text": "Authorization in ASP.NET Core Web API involves defining policies that determine which users have access to specific resources."
+        },
+        {
+          "text": "Hosting ASP.NET Core Web API on Azure provides a scalable and reliable platform for running your API in the cloud."
+        },
+        {
+          "text": "Integrating ASP.NET Core Web API with MVC allows you to build web applications that consume your API services."
+        },
+        {
+          "text": "SignalR integration in ASP.NET Core Web API enables real-time communication between clients and the server."
+        }
+      ]
+    },
+    {
+      "topic": "Creating RESTful Services with ASP.NET Core Web API",
+      "topic_no": 1103,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core Web API",
+          "codeSnippet": "ASP.NET Core Web API is a framework for building HTTP services that can be consumed by a variety of clients, including web browsers, mobile devices, and IoT devices."
+        },
+        {
+          "text": "Creating a New ASP.NET Core Web API Project",
+          "codeSnippet": "dotnet new webapi -n MyWebApi"
+        },
+        {
+          "text": "Defining a Controller in ASP.NET Core Web API",
+          "codeSnippet": "public class ValuesController : ControllerBase {}"
+        },
+        {
+          "text": "Implementing GET Endpoint in ASP.NET Core Web API",
+          "codeSnippet": "[HttpGet]\npublic ActionResult<IEnumerable<string>> Get() {}"
+        },
+        {
+          "text": "Implementing POST Endpoint in ASP.NET Core Web API",
+          "codeSnippet": "[HttpPost]\npublic ActionResult<string> Post([FromBody] string value) {}"
+        },
+        {
+          "text": "Handling HTTP Status Codes in ASP.NET Core Web API",
+          "codeSnippet": "return NotFound();\nreturn Ok();"
+        },
+        {
+          "text": "Routing in ASP.NET Core Web API",
+          "codeSnippet": "app.UseRouting();\napp.UseEndpoints(endpoints => { endpoints.MapControllers(); });"
+        },
+        {
+          "text": "Model Validation in ASP.NET Core Web API",
+          "codeSnippet": "if (!ModelState.IsValid) { return BadRequest(ModelState); }"
+        },
+        {
+          "text": "Content Negotiation in ASP.NET Core Web API",
+          "codeSnippet": "services.AddControllers().AddNewtonsoftJson();"
+        },
+        {
+          "text": "Testing ASP.NET Core Web API with Postman",
+          "codeSnippet": "Use Postman to send HTTP requests to your Web API endpoints and verify the responses."
+        }
+      ]
+    },
+    {
+      "topic": "Securing ASP.NET Core Web APIs",
+      "topic_no": 1108,
+      "contents": [
+        {
+          "text": "Introduction to Securing ASP.NET Core Web APIs",
+          "codeSnippet": "ASP.NET Core Web APIs are commonly used to build backend services for web applications. It is essential to secure these APIs to protect sensitive data and prevent unauthorized access.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Using HTTPS for Secure Communication",
+          "codeSnippet": "One of the fundamental ways to secure ASP.NET Core Web APIs is by using HTTPS to encrypt data transmitted between clients and the server.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Implementing Authentication in ASP.NET Core Web APIs",
+          "codeSnippet": "Authentication mechanisms like JWT tokens or OAuth can be implemented in ASP.NET Core Web APIs to verify the identity of clients accessing the API.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Authorization and Role-Based Access Control",
+          "codeSnippet": "Role-based access control can be used to restrict access to certain API endpoints based on the roles assigned to users.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Protecting Against Cross-Site Request Forgery (CSRF) Attacks",
+          "codeSnippet": "Implementing anti-forgery tokens in ASP.NET Core Web APIs can help protect against CSRF attacks by validating requests.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Securing Sensitive Data in ASP.NET Core Web APIs",
+          "codeSnippet": "Sensitive data should be encrypted before storing it in databases or transmitting it over the network to enhance security.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to .NET Core Dependency Injection",
+      "topic_no": 1110,
+      "contents": [
+        {
+          "text": "What is Dependency Injection in .NET Core?",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Advantages of using Dependency Injection in .NET Core",
+          "codeSnippet": ""
+        },
+        {
+          "text": "How to register services in .NET Core Dependency Injection container?",
+          "codeSnippet": ""
+        },
+        {
+          "text": "How to resolve services from the Dependency Injection container in .NET Core?",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Lifetime options for services in .NET Core Dependency Injection",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Using Dependency Injection in ASP.NET Core Controllers",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Using Dependency Injection in Console Applications in .NET Core",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Implementing Dependency Injection in .NET Core Applications",
+      "topic_no": 1114,
+      "contents": [
+        {
+          "text": "Introduction to Dependency Injection in .NET Core",
+          "codeSnippet": "Dependency injection is a design pattern that allows the removal of hard-coded dependencies and makes it possible to change them at runtime. In .NET Core, dependency injection is a built-in feature that helps manage the dependencies of classes.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Registering Services in the Dependency Injection Container",
+          "codeSnippet": "Services are registered in the dependency injection container during application startup. This is typically done in the ConfigureServices method of the Startup class in the ConfigureServices method.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Injecting Dependencies into Classes",
+          "codeSnippet": "Dependencies are injected into classes through constructor injection, property injection, or method injection. Constructor injection is the most common approach in .NET Core applications.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Using Dependency Injection in Controllers",
+          "codeSnippet": "In ASP.NET Core, controllers can also benefit from dependency injection. Services can be injected into controllers using constructor injection, allowing for better testability and maintainability.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Implementing Dependency Injection in a .NET Core Application",
+          "codeSnippet": "public interface IMyService { void DoSomething(); } \n\npublic class MyService : IMyService { public void DoSomething() { // Implementation details } } \n\npublic class MyController : Controller { private readonly IMyService _myService; \n\npublic MyController(IMyService myService) { _myService = myService; } \n\npublic IActionResult Index() { _myService.DoSomething(); return View(); } }",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to .NET Core Configuration",
+      "topic_no": 1119,
+      "contents": [
+        {
+          "text": "Introduction to .NET Core Configuration",
+          "codeSnippet": "Configuration in .NET Core allows developers to manage application settings, such as connection strings, API keys, and other parameters, in a centralized and flexible way.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Configuration Providers",
+          "codeSnippet": "In .NET Core, configuration providers are used to load configuration data from various sources like appsettings.json, environment variables, command-line arguments, Azure Key Vault, etc.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Accessing Configuration Data",
+          "codeSnippet": "Developers can access configuration data in .NET Core using the IConfiguration interface, which provides methods to retrieve values based on keys or bind configuration sections to strongly typed objects.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "ConfigurationBuilder in .NET Core",
+          "codeSnippet": "ConfigurationBuilder is a key component in .NET Core configuration that allows developers to build and customize the configuration settings by adding configuration sources and applying configuration options.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Setting Up Configuration in ASP.NET Core",
+          "codeSnippet": "In ASP.NET Core, developers typically configure the application settings during startup by using the ConfigurationBuilder to load configuration data from various sources and register the IConfiguration service in the dependency injection container.",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Working with Configuration Files in .NET Core",
+      "topic_no": 1122,
+      "contents": [
+        {
+          "text": "Introduction to Configuration Files in .NET Core",
+          "codeSnippet": "Configuration in .NET Core is typically stored in JSON files, which are used to define settings and options for an application. These files are commonly named 'appsettings.json' and are located in the project root or a specific configuration folder."
+        },
+        {
+          "text": "Accessing Configuration Settings in .NET Core",
+          "codeSnippet": "To access configuration settings in .NET Core, you can use the IConfiguration interface provided by the Microsoft.Extensions.Configuration namespace. This interface allows you to read values from configuration files and other sources."
+        },
+        {
+          "text": "Reading Configuration Values from appsettings.json",
+          "codeSnippet": "var configuration = new ConfigurationBuilder()\n    .SetBasePath(Directory.GetCurrentDirectory())\n    .AddJsonFile(\"appsettings.json\")\n    .Build();\n\nvar settingValue = configuration[\"SettingKey\"];"
+        },
+        {
+          "text": "Working with Environment-specific Configuration Files",
+          "codeSnippet": "In .NET Core, you can create environment-specific configuration files such as 'appsettings.Development.json' or 'appsettings.Production.json'. These files can override settings from the base 'appsettings.json' file based on the current environment."
+        },
+        {
+          "text": "Using Configuration Providers in .NET Core",
+          "codeSnippet": "Configuration providers in .NET Core allow you to retrieve configuration settings from various sources like environment variables, command-line arguments, and Azure Key Vault. You can add multiple providers to build a composite configuration."
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to .NET Core Logging",
+      "topic_no": 1127,
+      "contents": [
+        {
+          "text": "Logging is a crucial aspect of application development as it helps in tracking and troubleshooting issues in the application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In .NET Core, logging is achieved through the built-in logging framework provided by the Microsoft.Extensions.Logging namespace.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The logging framework in .NET Core supports various log levels such as Trace, Debug, Information, Warning, Error, and Critical, allowing developers to categorize log messages based on their severity.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To configure logging in a .NET Core application, developers can use logging providers like Console, Debug, EventSource, EventLog, and more, based on the target destination for log messages.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Developers can customize logging behavior in .NET Core by configuring logging filters, enrichers, and sinks to control which log messages are captured, add additional context to log messages, and define where log messages are sent, respectively.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of configuring logging in a .NET Core application using the built-in logging framework:",
+          "codeSnippet": "public class Startup { \n    public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) { \n        loggerFactory.AddConsole(); \n        loggerFactory.AddDebug(); \n        loggerFactory.AddEventSourceLogger(); \n    } \n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "By using logging in .NET Core, developers can easily monitor the application's behavior, diagnose issues, and improve overall application reliability and performance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Logging in .NET Core Applications",
+      "topic_no": 1130,
+      "contents": [
+        {
+          "text": "Logging in .NET Core Applications is essential for tracking and monitoring application behavior.",
+          "codeSnippet": "using Microsoft.Extensions.Logging;\n\npublic class MyClass\n{\n    private readonly ILogger<MyClass> _logger;\n\n    public MyClass(ILogger<MyClass> logger)\n    {\n        _logger = logger;\n    }\n\n    public void DoSomething()\n    {\n        _logger.LogInformation(\"Doing something...\");\n    }\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "In .NET Core, logging can be configured through various providers such as Console, Debug, EventSource, and more.",
+          "codeSnippet": "public static IHostBuilder CreateHostBuilder(string[] args) =>\n    Host.CreateDefaultBuilder(args)\n        .ConfigureLogging(logging =>\n        {\n            logging.AddConsole();\n            logging.AddDebug();\n        })\n        .ConfigureWebHostDefaults(webBuilder =>\n        {\n            webBuilder.UseStartup<Startup>();\n        });",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Serilog is a popular logging library in .NET Core that provides structured logging capabilities.",
+          "codeSnippet": "using Serilog;\n\npublic class Program\n{\n    public static void Main(string[] args)\n    {\n        Log.Logger = new LoggerConfiguration()\n            .WriteTo.Console()\n            .CreateLogger();\n\n        Log.Information(\"Hello, Serilog!\");\n    }\n}",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to .NET Core Middleware",
+      "topic_no": 1134,
+      "contents": [
+        {
+          "text": "What is .NET Core Middleware?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Middleware in .NET Core is software components that are assembled into the application pipeline to handle requests and responses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Middleware components can be used for logging, authentication, authorization, error handling, and more in a .NET Core application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Middleware components are executed in the order they are added to the pipeline.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Middleware components can be added to the application pipeline in the Startup.cs file using the Configure method of the Startup class.",
+          "codeSnippet": "",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Example of adding a custom middleware component in the Configure method:",
+          "codeSnippet": "app.UseCustomMiddleware();",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Middleware components can inspect, modify, or short-circuit the request pipeline.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Middleware components can be synchronous or asynchronous in .NET Core.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Middleware components can be used to perform cross-cutting concerns in an application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Creating Custom Middleware in .NET Core",
+      "topic_no": 1138,
+      "contents": [
+        {
+          "text": "Middleware in .NET Core is a component that can handle an HTTP request or response. It sits between the client and the server and can perform tasks like logging, authentication, and more.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Custom middleware allows developers to create their own middleware components to add specific functionality to the request pipeline in .NET Core applications.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "To create custom middleware in .NET Core, you need to create a class that includes a method with the signature 'InvokeAsync' or 'Invoke'. This method should accept a 'RequestDelegate' parameter.",
+          "codeSnippet": "public class CustomMiddleware\n{\n    private readonly RequestDelegate _next;\n\n    public CustomMiddleware(RequestDelegate next)\n    {\n        _next = next;\n    }\n\n    public async Task InvokeAsync(HttpContext context)\n    {\n        // Custom middleware logic\n        await _next(context);\n    }\n}"
+        },
+        {
+          "text": "You can register custom middleware in the application's request pipeline using the 'UseMiddleware' extension method in the 'Configure' method of the 'Startup' class.",
+          "codeSnippet": "app.UseMiddleware<CustomMiddleware>();"
+        },
+        {
+          "text": "Custom middleware can be used to perform tasks such as logging, authentication, authorization, error handling, and more in .NET Core applications.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to .NET Core Health Checks",
+      "topic_no": 1140,
+      "contents": [
+        {
+          "text": "Introduction to .NET Core Health Checks"
+        },
+        {
+          "text": "Health checks in .NET Core are a way to monitor the health of an application by periodically checking its components and dependencies."
+        },
+        {
+          "text": "Health checks can be used to verify the availability and responsiveness of critical services like databases, external APIs, or other dependencies."
+        },
+        {
+          "text": "Health checks can be implemented as endpoints that return a status indicating the health of the application."
+        },
+        {
+          "text": "Health checks can be configured to run at regular intervals and provide notifications or alerts when a component is unhealthy."
+        },
+        {
+          "text": "Health checks can help in identifying and resolving issues proactively before they impact the application's performance or availability."
+        },
+        {
+          "text": "Health checks can be integrated with monitoring tools to provide real-time insights into the application's health and performance."
+        },
+        {
+          "text": "Health checks are an essential part of building resilient and reliable applications in .NET Core."
+        }
+      ]
+    },
+    {
+      "topic": "Implementing Health Checks in .NET Core Applications",
+      "topic_no": 1142,
+      "contents": [
+        {
+          "text": "Health checks are used to monitor the health of an application and its dependencies.",
+          "codeSnippet": "public void ConfigureServices(IServiceCollection services) { services.AddHealthChecks(); }",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Health checks can be configured to check various components like databases, external services, or custom checks.",
+          "codeSnippet": "services.AddHealthChecks().AddSqlServer(Configuration[\"ConnectionStrings:DefaultConnection\"]);",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Health checks can be accessed via a designated endpoint in the application.",
+          "codeSnippet": "app.UseEndpoints(endpoints => { endpoints.MapHealthChecks(\"/health\"); });",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Health checks can be extended with custom checks to monitor specific aspects of the application.",
+          "codeSnippet": "services.AddHealthChecks().AddCheck<CustomHealthCheck>(\"custom_health_check\");",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Introduction to ASP.NET Core Identity",
+      "topic_no": 1143,
+      "contents": [
+        {
+          "text": "ASP.NET Core Identity is a membership system that adds login functionality to ASP.NET Core apps.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It provides functionality for user authentication, authorization, and user management.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ASP.NET Core Identity can be easily integrated into ASP.NET Core applications to handle user authentication and authorization.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It supports features like user registration, login, password recovery, role-based authorization, and more.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ASP.NET Core Identity uses Entity Framework Core to store user information in a database.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Developers can customize the default behavior of ASP.NET Core Identity to suit the requirements of their applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "User Authentication and Authorization with ASP.NET Core Identity",
+      "topic_no": 1145,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core Identity for user authentication and authorization"
+        },
+        {
+          "text": "Setting up ASP.NET Core Identity in a new project"
+        },
+        {
+          "text": "Configuring Identity options such as password requirements and lockout settings"
+        },
+        {
+          "text": "Creating custom user roles and policies for authorization"
+        },
+        {
+          "text": "Implementing user registration and login functionality"
+        },
+        {
+          "text": "Securing routes and controllers with Authorize attribute"
+        },
+        {
+          "text": "Customizing Identity UI using Razor Views"
+        },
+        {
+          "text": "Working with Claims and Policies for fine-grained authorization"
+        },
+        {
+          "text": "Implementing Two-Factor Authentication for added security"
+        },
+        {
+          "text": "Handling user authentication and authorization in ASP.NET Core APIs"
+        }
+      ]
+    }
+  ]
+}

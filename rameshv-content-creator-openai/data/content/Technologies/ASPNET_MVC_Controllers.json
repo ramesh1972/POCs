@@ -1,0 +1,404 @@
+{
+  "category": "ASP.NET MVC Controllers",
+  "topics": [
+    {
+      "topic": "MVC Pattern",
+      "topic_no": 7,
+      "contents": [
+        {
+          "text": "ASP.NET MVC Controllers are responsible for handling user requests, interacting with models, and returning appropriate views or data to the user.",
+          "codeSnippet": "public class HomeController : Controller { public IActionResult Index() { return View(); } }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Controllers in ASP.NET MVC follow the MVC (Model-View-Controller) pattern, where the controller acts as an intermediary between the model and the view.",
+          "codeSnippet": "public class ProductController : Controller { private readonly IProductRepository _productRepository; public ProductController(IProductRepository productRepository) { _productRepository = productRepository; } public IActionResult Details(int id) { var product = _productRepository.GetProductById(id); return View(product); } }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Controllers in ASP.NET MVC are typically classes that inherit from the Controller base class provided by the framework.",
+          "codeSnippet": "public class AccountController : Controller { public IActionResult Login() { return View(); } public IActionResult Logout() { // Perform logout logic return RedirectToAction(\"Index\", \"Home\"); } }",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Model Binding",
+      "topic_no": 71,
+      "contents": [
+        {
+          "text": "Model Binding in ASP.NET MVC Controllers allows you to map HTTP request data to action method parameters or model properties.",
+          "codeSnippet": "public ActionResult SaveProduct(Product product) { }",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Model Binding can bind data from various sources such as form values, query string parameters, route values, and more.",
+          "codeSnippet": "public ActionResult SearchProducts(string keyword) { }",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Model Binding simplifies the process of extracting data from the request and populating the model properties automatically.",
+          "codeSnippet": "public ActionResult UpdateUserDetails(User user) { }",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Model Binding supports complex types, arrays, lists, and nested objects for mapping incoming data to corresponding model properties.",
+          "codeSnippet": "public ActionResult AddOrder(Order order) { }",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Action Filters",
+      "topic_no": 150,
+      "contents": [
+        {
+          "text": "Action Filters in ASP.NET MVC Controllers are attributes that can be applied to controller actions to perform logic before or after the action method is executed.",
+          "codeSnippet": "[Authorize]\npublic ActionResult Index()\n{\n    // Action logic here\n    return View();\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "There are several types of Action Filters in ASP.NET MVC Controllers such as Authorization Filters, Action Filters, Result Filters, and Exception Filters.",
+          "codeSnippet": "[HttpPost]\n[ValidateAntiForgeryToken]\npublic ActionResult Create(FormCollection form)\n{\n    // Action logic here\n    return RedirectToAction(\"Index\");\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Action Filters can be used to perform tasks like authentication, logging, caching, exception handling, and more in ASP.NET MVC Controllers.",
+          "codeSnippet": "[OutputCache(Duration = 3600)]\npublic ActionResult Details(int id)\n{\n    // Action logic here\n    return View();\n}",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Razor View Engine",
+      "topic_no": 204,
+      "contents": [
+        {
+          "text": "Razor View Engine is a view engine used in ASP.NET MVC to create the user interface of web applications.",
+          "codeSnippet": "<html>\n    <body>\n        <h1>Welcome to our website!</h1>\n    </body>\n</html>",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "Razor syntax allows you to embed C# code within HTML markup to dynamically generate content.",
+          "codeSnippet": "@{\n    var greeting = \"Hello, World!\";\n}\n\n<html>\n    <body>\n        <h1>@greeting</h1>\n    </body>\n</html>",
+          "codeLanguage": "csharp-html"
+        },
+        {
+          "text": "Razor View Engine uses the .cshtml file extension for views in ASP.NET MVC applications.",
+          "codeSnippet": "Index.cshtml",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Partial Views",
+      "topic_no": 248,
+      "contents": [
+        {
+          "text": "Partial Views in ASP.NET MVC Controllers allow you to break down large views into smaller, reusable components.",
+          "codeSnippet": "<% Html.RenderPartial(\"_PartialViewName\"); %>",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Partial Views can be used to render specific parts of a view, such as a sidebar, header, or footer.",
+          "codeSnippet": "@Html.Partial(\"_Header\")",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Partial Views can improve code reusability and maintainability by separating concerns and promoting modular design.",
+          "codeSnippet": "return PartialView(\"_PartialViewName\");",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Routing in MVC",
+      "topic_no": 313,
+      "contents": [
+        {
+          "text": "Routing in MVC refers to the process of mapping incoming browser requests to specific controller actions and methods within an ASP.NET MVC application."
+        },
+        {
+          "text": "In ASP.NET MVC, routing is typically defined in the RouteConfig.cs file located in the App_Start folder of the project."
+        },
+        {
+          "text": "Routes in MVC are defined using the MapRoute method, which specifies the URL pattern, default values, and constraints for the route."
+        },
+        {
+          "text": "Routes in MVC follow a hierarchical order, with the first matching route being used to handle the request."
+        },
+        {
+          "text": "Route constraints in MVC allow you to restrict the values that can be passed in the URL parameters."
+        },
+        {
+          "text": "Route parameters in MVC are placeholders in the URL pattern that capture values from the incoming request."
+        },
+        {
+          "text": "Route attributes in MVC provide an alternative way to define routes directly on the controller actions using attributes like [Route] and [HttpGet]."
+        },
+        {
+          "text": "Custom route constraints in MVC allow you to define custom logic for validating route parameters."
+        },
+        {
+          "text": "Route prefixes in MVC enable you to define a common prefix for a group of routes, simplifying route configuration."
+        },
+        {
+          "text": "Global.asax file in an ASP.NET MVC application can also be used to define custom routes using the RouteTable.Routes collection."
+        }
+      ]
+    },
+    {
+      "topic": "Action Results",
+      "topic_no": 373,
+      "contents": [
+        {
+          "text": "Action Results in ASP.NET MVC Controllers represent the result of an action method and determine the response sent back to the client."
+        },
+        {
+          "text": "Common types of Action Results include ViewResult, PartialViewResult, JsonResult, RedirectResult, and ContentResult."
+        },
+        {
+          "text": "ViewResult is used to render a view as an HTML page and return it to the client."
+        },
+        {
+          "text": "PartialViewResult is used to render a partial view and return it to the client."
+        },
+        {
+          "text": "JsonResult is used to return JSON-formatted data to the client."
+        },
+        {
+          "text": "RedirectResult is used to redirect the client to a different URL."
+        },
+        {
+          "text": "ContentResult is used to return a user-defined content type to the client."
+        },
+        {
+          "text": "FileResult is used to return a file to the client."
+        },
+        {
+          "text": "StatusCodeResult is used to return a specific HTTP status code to the client."
+        },
+        {
+          "text": "EmptyResult is used to return no content to the client."
+        },
+        {
+          "text": "Example of returning a ViewResult in an action method:"
+        },
+        {
+          "codeSnippet": "public ViewResult Index()\n{\n    return View();\n}",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Example of returning a JsonResult in an action method:"
+        },
+        {
+          "codeSnippet": "public JsonResult GetData()\n{\n    var data = new { Name = \"John\", Age = 30 };\n    return Json(data, JsonRequestBehavior.AllowGet);\n}",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Filters in MVC",
+      "topic_no": 445,
+      "contents": [
+        {
+          "text": "Filters in MVC are used to add pre-processing or post-processing logic to controller actions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "There are several types of filters in ASP.NET MVC including Authorization filters, Action filters, Result filters, and Exception filters.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Authorization filters are used to implement authentication and authorization logic before executing an action method.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Action filters are used to add logic before and after an action method is executed.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Result filters are used to add logic before and after the result of an action method is executed.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exception filters are used to handle exceptions that occur during the execution of an action method.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Filters can be applied at the controller level or at the action method level using attributes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example of applying an Authorization filter at the controller level:",
+          "codeSnippet": "[Authorize]\npublic class MyController : Controller\n{\n    // Controller actions\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Example of applying an Action filter at the action method level:",
+          "codeSnippet": "[CustomActionFilter]\npublic ActionResult MyAction()\n{\n    // Action method logic\n}",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Areas in MVC",
+      "topic_no": 475,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET MVC Controllers",
+          "codeSnippet": "Controllers in ASP.NET MVC are responsible for handling user requests and returning appropriate responses. They act as an intermediary between the user and the application's business logic.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Creating a Controller in ASP.NET MVC",
+          "codeSnippet": "public class HomeController : Controller { public IActionResult Index() { return View(); } }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Action Methods in Controllers",
+          "codeSnippet": "public IActionResult Index() { return View(); }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Passing Data from Controller to View",
+          "codeSnippet": "public IActionResult Index() { ViewBag.Message = \"Hello, World!\"; return View(); }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Handling HTTP Requests in Controllers",
+          "codeSnippet": "[HttpGet] public IActionResult Index() { return View(); }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Using Attributes in Controllers",
+          "codeSnippet": "[Authorize] public IActionResult SecurePage() { return View(); }",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Attribute Routing in MVC",
+      "topic_no": 500,
+      "contents": [
+        {
+          "text": "Attribute Routing in MVC allows developers to define routes directly on the controller actions or at the controller level, providing more control over the URL patterns.",
+          "codeSnippet": "[Route(\"api/products/{id}\")]"
+        },
+        {
+          "text": "To enable attribute routing in an MVC application, developers need to add the MapMvcAttributeRoutes method in the RouteConfig.cs file within the App_Start folder.",
+          "codeSnippet": "routes.MapMvcAttributeRoutes();"
+        },
+        {
+          "text": "Attribute Routing can be applied to controller actions using the Route attribute, specifying the route template directly above the action method.",
+          "codeSnippet": "[Route(\"api/products/{id}\")]"
+        },
+        {
+          "text": "Attribute Routing allows for more readable and SEO-friendly URLs by defining custom routes that match specific controller actions.",
+          "codeSnippet": "[Route(\"products/{category}/{id}\")]"
+        }
+      ]
+    },
+    {
+      "topic": "Model Validation",
+      "topic_no": 532,
+      "contents": [
+        {
+          "text": "Model validation in ASP.NET MVC Controllers ensures that the data submitted by users meets the specified criteria before it is processed further.",
+          "codeSnippet": "public class UserController : Controller { public IActionResult Create(UserModel user) { if (ModelState.IsValid) { // Process the valid user data } return View(user); } }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "To perform model validation in ASP.NET MVC Controllers, attributes such as [Required], [StringLength], [Range], and [RegularExpression] can be applied to model properties to define validation rules.",
+          "codeSnippet": "[Required] public string Name { get; set; } [Range(18, 100)] public int Age { get; set; }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Custom validation logic can be implemented in ASP.NET MVC Controllers by creating custom validation attributes or by using IValidatableObject interface to perform complex validation checks.",
+          "codeSnippet": "public class CustomValidationAttribute : ValidationAttribute { protected override ValidationResult IsValid(object value, ValidationContext validationContext) { // Custom validation logic return ValidationResult.Success; } }",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Custom Model Binders",
+      "topic_no": 561,
+      "contents": [
+        {
+          "text": "Custom Model Binders in ASP.NET MVC Controllers allow you to customize how data from HTTP requests is bound to action method parameters.",
+          "codeSnippet": "public class CustomModelBinder : IModelBinder { public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext) { // Custom model binding logic here } }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "You can create a custom model binder by implementing the IModelBinder interface and defining the BindModel method to handle the binding process.",
+          "codeSnippet": "public class CustomModelBinder : IModelBinder { public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext) { // Custom model binding logic here } }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "To use a custom model binder, you can apply the [ModelBinder] attribute to a parameter in your action method and specify the custom model binder type.",
+          "codeSnippet": "[HttpPost] public ActionResult UpdateItem([ModelBinder(typeof(CustomModelBinder))] Item item) { // Action method logic here }",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Custom Action Results",
+      "topic_no": 581,
+      "contents": [
+        {
+          "text": "Custom Action Results in ASP.NET MVC Controllers allow developers to return custom responses to client requests.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of Custom Action Results include returning a PDF file, generating a CSV file, or returning a custom JSON response.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create a Custom Action Result, developers can create a class that inherits from the ActionResult base class and override the ExecuteResult method.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "public class PdfResult : ActionResult { public override void ExecuteResult(ControllerContext context) { // Generate and return a PDF file } }",
+          "codeSnippet": "public class PdfResult : ActionResult { public override void ExecuteResult(ControllerContext context) { // Generate and return a PDF file } }",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Custom Action Results provide flexibility in handling different types of responses and can be useful in scenarios where standard ActionResult types are not sufficient.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Global Exception Handling",
+      "topic_no": 609,
+      "contents": [
+        {
+          "text": "Global Exception Handling in ASP.NET MVC Controllers allows you to handle exceptions that occur during the execution of your application at a global level.",
+          "codeSnippet": "public class GlobalExceptionFilter : IExceptionFilter\n{\n    public void OnException(ExceptionContext filterContext)\n    {\n        if (filterContext.Exception != null)\n        {\n            // Log the exception\n            // Redirect or return a specific error view\n        }\n    }\n}",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "To implement Global Exception Handling in ASP.NET MVC Controllers, you can create a custom exception filter by implementing the IExceptionFilter interface.",
+          "codeSnippet": "[HandleError]\npublic class HomeController : Controller\n{\n    // Controller actions\n}",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "You can register the Global Exception Filter in the Global.asax file or by using the FilterConfig class in the App_Start folder.",
+          "codeSnippet": "public static void RegisterGlobalFilters(GlobalFilterCollection filters)\n{\n    filters.Add(new GlobalExceptionFilter());\n}",
+          "codeLanguage": "C#"
+        }
+      ]
+    }
+  ]
+}

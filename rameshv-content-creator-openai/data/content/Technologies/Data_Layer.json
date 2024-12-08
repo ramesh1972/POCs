@@ -1,0 +1,260 @@
+{
+  "category": "Data Layer",
+  "topics": [
+    {
+      "topic": "RDBMS",
+      "topic_no": 85,
+      "contents": [
+        {
+          "text": "Query optimization in RDBMS focuses on improving the efficiency and performance of database queries by selecting the most efficient execution plan.",
+          "codeSnippet": "SELECT column1, column2 FROM table_name WHERE condition;",
+          "codeLanguage": "SQL"
+        },
+        {
+          "text": "Database Optimization involves improving the performance and efficiency of a database system by reducing unnecessary data redundancy, optimizing queries, indexing tables, and tuning database configurations. This process helps enhance the overall speed, scalability, and reliability of the database system.",
+          "codeSnippet": "SELECT * FROM table_name WHERE condition;",
+          "codeLanguage": "SQL"
+        },
+        {
+          "text": "Stored Procedure Concepts in RDBMS under the Data Layer category in the Technologies subject involves the use of precompiled SQL queries stored on the database server for efficient data retrieval, manipulation, and processing. Stored procedures offer advantages such as improved performance, security, and reusability in database operations.",
+          "codeSnippet": "CREATE PROCEDURE GetEmployeeDetails\nAS\nBEGIN\nSELECT * FROM Employees\nEND"
+        },
+        {
+          "text": "Relational Schema Design is the process of organizing and structuring the tables, columns, and relationships in a relational database management system (RDBMS) to minimize redundancy and ensure data integrity.",
+          "codeSnippet": "CREATE TABLE customers ( \n    customer_id INT PRIMARY KEY, \n    first_name VARCHAR(50), \n    last_name VARCHAR(50), \n    email VARCHAR(100) UNIQUE \n);",
+          "codeLanguage": "SQL"
+        },
+        {
+          "text": "BCNF Normalization Techniques is a process in Relational Database Management Systems (RDBMS) that involves decomposing a table into smaller tables to reduce redundancy and improve data integrity. It is based on the Boyce-Codd Normal Form (BCNF), which is a stricter version of the Third Normal Form (3NF). BCNF normalization ensures that every determinant in a table is a candidate key, leading to more efficient database design.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Views, Functions, Triggers are important database objects in RDBMS that help enhance the functionality and performance of the database system. Views are virtual tables generated from one or more base tables, providing a way to present data in a structured format. Functions are reusable blocks of code that can accept parameters, perform actions, and return results. Triggers are special types of stored procedures that are automatically executed in response to specific events on a particular table.",
+          "codeSnippet": "CREATE VIEW employee_view AS SELECT id, name, department FROM employees WHERE department = 'IT';\n\nCREATE FUNCTION calculate_salary (salary INT, bonus INT) RETURNS INT\nBEGIN\n    DECLARE total_salary INT;\n    SET total_salary = salary + bonus;\n    RETURN total_salary;\nEND;\n\nCREATE TRIGGER audit_trigger\nAFTER INSERT ON employees\nFOR EACH ROW\nBEGIN\n    INSERT INTO audit_table (action, timestamp) VALUES ('INSERT', NOW());\nEND;"
+        },
+        {
+          "text": "RDBMS stands for Relational Database Management System.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "RDBMS organizes data into tables with rows and columns.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Tables in RDBMS have a unique key called a primary key.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "RDBMS uses SQL (Structured Query Language) for querying and managing the database.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Normalization is a process in RDBMS to reduce redundancy and improve data integrity.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ACID properties (Atomicity, Consistency, Isolation, Durability) ensure data integrity in RDBMS.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "NoSQL",
+      "topic_no": 145,
+      "contents": [
+        {
+          "text": "NoSQL databases are non-relational databases that provide flexible schema design and horizontal scalability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "NoSQL databases are commonly used for big data and real-time web applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of NoSQL databases include document stores, key-value stores, column-family stores, and graph databases.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular NoSQL databases include MongoDB, Cassandra, Redis, and Neo4j.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "NoSQL databases offer high availability and partition tolerance, making them suitable for distributed systems.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Big Data",
+      "topic_no": 218,
+      "contents": [
+        {
+          "text": "Big Data refers to large volumes of structured and unstructured data that cannot be easily processed using traditional database management tools.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Big Data technologies enable organizations to store, manage, and analyze massive amounts of data to gain valuable insights and make data-driven decisions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Big Data technologies include Hadoop, Apache Spark, Apache Kafka, and NoSQL databases like MongoDB and Cassandra.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Hadoop is a popular open-source framework for distributed storage and processing of large datasets across clusters of computers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Apache Spark is a fast and general-purpose cluster computing system that provides in-memory data processing capabilities.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Apache Kafka is a distributed streaming platform that is commonly used for building real-time data pipelines and streaming applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "NoSQL databases like MongoDB and Cassandra are designed to handle large volumes of unstructured data and provide scalability and high availability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Data Warehouse",
+      "topic_no": 269,
+      "contents": [
+        {
+          "text": "Data Warehouse is a central repository of integrated data from one or more disparate sources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It stores current and historical data and is used for creating analytical reports for decision-making purposes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Warehouses are optimized for read-heavy operations and complex queries.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Warehouses often use a dimensional model such as star or snowflake schema for organizing data.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular Data Warehouse technologies include Amazon Redshift, Snowflake, Google BigQuery, and Microsoft Azure SQL Data Warehouse.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Data Lake",
+      "topic_no": 299,
+      "contents": [
+        {
+          "text": "Definition of Data Lake",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Characteristics of a Data Lake",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Implementing a Data Lake",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Components of a Data Lake Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Designing and Implementing a Data Lake",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Redis",
+      "topic_no": 379,
+      "contents": [
+        {
+          "text": "Introduction to Redis",
+          "codeSnippet": "Redis is an open-source, in-memory data structure store that can be used as a database, cache, and message broker. It supports various data structures such as strings, hashes, lists, sets, and more.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Key-Value Store",
+          "codeSnippet": "Redis is a key-value store where data is stored in key-value pairs. Keys are always strings, and values can be strings, hashes, lists, sets, sorted sets, bitmaps, hyperloglogs, and geospatial indexes.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Data Persistence",
+          "codeSnippet": "Redis can be configured to persist data to disk, allowing data to be stored even after a restart. Persistence options include RDB snapshots and AOF logs.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Pub/Sub Messaging",
+          "codeSnippet": "Redis supports Publish/Subscribe messaging, allowing clients to subscribe to channels and receive messages published to those channels.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Replication and High Availability",
+          "codeSnippet": "Redis supports replication, allowing data to be replicated to multiple Redis instances. This provides high availability and fault tolerance.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Cluster Mode",
+          "codeSnippet": "Redis Cluster mode allows for horizontal scaling by distributing data across multiple Redis nodes. It provides automatic sharding and high availability.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "InMemory",
+      "topic_no": 393,
+      "contents": [
+        {
+          "text": "InMemory databases store data in the computer's random-access memory (RAM) instead of on a physical disk.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "InMemory databases provide faster data access and retrieval compared to traditional disk-based databases.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "InMemory databases are commonly used in applications that require high-speed data processing and real-time analytics.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

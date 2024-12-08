@@ -1,0 +1,736 @@
+{
+  "category": "GCP",
+  "topics": [
+    {
+      "topic": "Introduction to GCP Cloud Services",
+      "topic_no": 18,
+      "contents": [
+        {
+          "text": "Google Cloud Platform (GCP) offers a wide range of cloud services to help businesses build, deploy, and scale applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Some of the core GCP services include Compute Engine for virtual machines, Cloud Storage for object storage, and BigQuery for data analytics.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "GCP provides services for compute, storage, databases, machine learning, networking, and more, allowing users to leverage the power of the cloud for various use cases.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Google Cloud Platform offers a managed Kubernetes service called Google Kubernetes Engine (GKE) for containerized applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "GCP services are designed to be highly scalable, secure, and reliable, making them suitable for enterprises of all sizes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Creating a GCP Account",
+      "topic_no": 69,
+      "contents": [
+        {
+          "text": "Navigate to the Google Cloud Platform (GCP) website.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Click on the 'Get Started for Free' button.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Sign in with your Google account or create a new one.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Enter your personal and billing information.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Agree to the terms and conditions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Provide a valid credit card for verification purposes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "GCP Console Overview",
+      "topic_no": 163,
+      "contents": [
+        {
+          "text": "GCP Console Overview",
+          "codeSnippet": "The Google Cloud Platform (GCP) Console is a web-based interface that allows users to manage their GCP resources and services. It provides a centralized location for accessing and managing various GCP tools and services.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Navigating the GCP Console",
+          "codeSnippet": "To navigate the GCP Console, users can use the left-hand navigation menu to access different GCP services such as Compute Engine, Cloud Storage, BigQuery, and more. Users can also use the search bar to quickly find specific resources or services.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Viewing GCP Resources",
+          "codeSnippet": "Users can view and manage their GCP resources such as virtual machines, databases, storage buckets, and more through the GCP Console. Each resource is organized based on the service it belongs to, making it easy for users to locate and manage their resources.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Interacting with GCP Services",
+          "codeSnippet": "The GCP Console allows users to interact with various GCP services by creating, configuring, and monitoring resources. Users can deploy applications, set up networking configurations, and access logs and monitoring data directly from the console.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Managing GCP Projects",
+          "codeSnippet": "Users can create and manage GCP projects through the GCP Console. Projects help organize resources, control access permissions, and track usage and billing information. Users can switch between projects to work on different environments within the console.",
+          "codeLanguage": "N/A"
+        }
+      ]
+    },
+    {
+      "topic": "GCP IAM (Identity and Access Management)",
+      "topic_no": 223,
+      "contents": [
+        {
+          "text": "Introduction to GCP IAM",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding IAM Roles in GCP",
+          "example": "Owner, Editor, Viewer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating Custom IAM Roles in GCP",
+          "codeSnippet": "gcloud iam roles create CustomRole --project=PROJECT_ID --title=\"Custom Role\" --description=\"Custom Role Description\" --permissions=RESOURCE.PERMISSION",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Assigning IAM Roles to Users in GCP",
+          "codeSnippet": "gcloud projects add-iam-policy-binding PROJECT_ID --member=user:USER_EMAIL --role=roles/ROLE",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Managing IAM Policies in GCP",
+          "codeSnippet": "gcloud projects add-iam-policy-binding PROJECT_ID --member=user:USER_EMAIL --role=roles/ROLE",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Best Practices for GCP IAM",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "GCP Compute Engine",
+      "topic_no": 292,
+      "contents": [
+        {
+          "text": "Introduction to GCP Compute Engine",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a Virtual Machine Instance on GCP Compute Engine",
+          "codeSnippet": "gcloud compute instances create example-instance --machine-type=n1-standard-1 --zone=us-central1-a",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Connecting to a Virtual Machine Instance on GCP Compute Engine",
+          "codeSnippet": "gcloud compute ssh example-instance --zone=us-central1-a",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Resizing a Virtual Machine Instance on GCP Compute Engine",
+          "codeSnippet": "gcloud compute instances set-machine-type example-instance --machine-type=n1-standard-2 --zone=us-central1-a",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a Custom Image on GCP Compute Engine",
+          "codeSnippet": "gcloud compute images create example-image --source-disk=example-disk --source-disk-zone=us-central1-a",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a Managed Instance Group on GCP Compute Engine",
+          "codeSnippet": "gcloud compute instance-groups managed create example-group --base-instance-name=example-instance --size=3 --zone=us-central1-a",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud SQL",
+      "topic_no": 392,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud SQL",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a Cloud SQL instance in GCP",
+          "example": "",
+          "codeSnippet": "gcloud sql instances create [INSTANCE_NAME] --database=[DATABASE_NAME] --tier=[MACHINE_TYPE]",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Connecting to Cloud SQL from a Compute Engine instance",
+          "example": "",
+          "codeSnippet": "gcloud compute ssh [INSTANCE_NAME] --zone=[ZONE] --command='mysql -u [USERNAME] -p[DB_PASSWORD] -h [CLOUD_SQL_INSTANCE_IP] -D [DATABASE_NAME]'",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Scaling Cloud SQL instance in GCP",
+          "example": "",
+          "codeSnippet": "gcloud sql instances patch [INSTANCE_NAME] --storage-size=[NEW_STORAGE_SIZE]",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Enabling automatic backups in GCP Cloud SQL",
+          "example": "",
+          "codeSnippet": "gcloud sql instances patch [INSTANCE_NAME] --backup-start-time=[HH:MM]",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP App Engine",
+      "topic_no": 431,
+      "contents": [
+        {
+          "text": "Introduction to GCP App Engine",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a new App Engine application",
+          "codeSnippet": "gcloud app create",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Deploying an application to App Engine",
+          "codeSnippet": "gcloud app deploy",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Scaling an App Engine application",
+          "codeSnippet": "gcloud app versions list",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Configuring custom domains in App Engine",
+          "codeSnippet": "gcloud app domain-mappings create",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Setting up automatic scaling in App Engine",
+          "codeSnippet": "automatic_scaling:\n  min_num_instances: 1\n  max_num_instances: 10",
+          "codeLanguage": "yaml"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Deployment Manager",
+      "topic_no": 473,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Deployment Manager",
+          "codeSnippet": "gcloud deployment-manager deployments create example-deployment --config example-config.yaml",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Benefits of using GCP Cloud Deployment Manager",
+          "codeSnippet": "gcloud deployment-manager deployments delete example-deployment",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a Deployment using Deployment Manager",
+          "codeSnippet": "resources:\n- name: example-instance\n  type: compute.v1.instance\n  properties:\n    zone: us-central1-a\n    machineType: zones/us-central1-a/machineTypes/n1-standard-1\n    disks:\n    - deviceName: boot\n      type: PERSISTENT\n      boot: true\n      autoDelete: true\n      initializeParams:\n        sourceImage: projects/debian-cloud/global/images/family/debian-9\n    networkInterfaces:\n    - network: global/networks/default",
+          "codeLanguage": "yaml"
+        },
+        {
+          "text": "Updating a Deployment using Deployment Manager",
+          "codeSnippet": "gcloud deployment-manager deployments update example-deployment --config updated-config.yaml",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Deleting a Deployment using Deployment Manager",
+          "codeSnippet": "gcloud deployment-manager deployments delete example-deployment",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Monitoring",
+      "topic_no": 503,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Monitoring",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Features of GCP Cloud Monitoring",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up Monitoring Dashboards in GCP",
+          "codeSnippet": "gcloud monitoring dashboards create",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Alerting and Notification in GCP Cloud Monitoring",
+          "codeSnippet": "gcloud alpha monitoring policies create",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using Metrics Explorer in GCP Cloud Monitoring",
+          "codeSnippet": "gcloud alpha monitoring metrics list",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating Uptime Checks in GCP Cloud Monitoring",
+          "codeSnippet": "gcloud alpha monitoring uptime-checks create",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Logging",
+      "topic_no": 531,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Logging",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up Cloud Logging in GCP",
+          "codeSnippet": "gcloud logging read 'resource.type=\"gce_instance\"'",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating Logs-based Metrics in GCP",
+          "codeSnippet": "gcloud logging metrics create error_count --description=\"Count of error logs\" --log-filter=\"severity>=ERROR\"",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using Logs Viewer in GCP",
+          "codeSnippet": "resource.type=\"gce_instance\" AND severity=\"ERROR\"",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exporting Logs from GCP Cloud Logging",
+          "codeSnippet": "gcloud logging sinks create my-sink storage.googleapis.com/[BUCKET_ID]",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP BigQuery",
+      "topic_no": 565,
+      "contents": [
+        {
+          "text": "Introduction to GCP BigQuery",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features and benefits of GCP BigQuery",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a dataset in GCP BigQuery",
+          "codeSnippet": "bq mk my_dataset",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Loading data into GCP BigQuery",
+          "codeSnippet": "bq load --source_format=CSV my_dataset.my_table gs://my_bucket/my_file.csv",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Running queries in GCP BigQuery",
+          "codeSnippet": "SELECT * FROM my_dataset.my_table LIMIT 10",
+          "codeLanguage": "sql"
+        },
+        {
+          "text": "Optimizing performance in GCP BigQuery",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Managing and monitoring GCP BigQuery resources",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Datastore",
+      "topic_no": 590,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Datastore",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of GCP Cloud Datastore",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a new entity in GCP Cloud Datastore",
+          "codeSnippet": "datastoreClient.put(entity);",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Querying data in GCP Cloud Datastore",
+          "codeSnippet": "Query query = Query.newEntityQueryBuilder().setKind(\"Task\").build();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Updating an entity in GCP Cloud Datastore",
+          "codeSnippet": "datastoreClient.update(entity);",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Deleting an entity in GCP Cloud Datastore",
+          "codeSnippet": "datastoreClient.delete(key);",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Spanner",
+      "topic_no": 619,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Spanner",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Features of GCP Cloud Spanner",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a GCP Cloud Spanner Instance",
+          "codeSnippet": "gcloud spanner instances create INSTANCE_ID --config=CONFIG --nodes=NUM_NODES",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a Database in GCP Cloud Spanner",
+          "codeSnippet": "gcloud spanner databases create DATABASE_ID --instance=INSTANCE_ID",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Querying Data in GCP Cloud Spanner",
+          "codeSnippet": "SELECT * FROM TABLE_NAME",
+          "codeLanguage": "sql"
+        },
+        {
+          "text": "Scaling GCP Cloud Spanner",
+          "codeSnippet": "gcloud spanner instances update INSTANCE_ID --nodes=NEW_NUM_NODES",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Backup and Restore in GCP Cloud Spanner",
+          "codeSnippet": "gcloud spanner backups create BACKUP_ID --instance=INSTANCE_ID",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Bigtable",
+      "topic_no": 652,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Bigtable",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of GCP Cloud Bigtable",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a GCP Cloud Bigtable instance",
+          "codeSnippet": "gcloud bigtable instances create [INSTANCE_ID] --cluster=[CLUSTER_ID] --cluster-zone=[ZONE]",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Writing data to GCP Cloud Bigtable",
+          "codeSnippet": "Table table = bigtable.getTable(\"my-table\");\nPut put = new Put(Bytes.toBytes(\"row-key\"));\nput.addColumn(Bytes.toBytes(\"cf\"), Bytes.toBytes(\"qualifier\"), Bytes.toBytes(\"value\"));\ntable.put(put);",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Reading data from GCP Cloud Bigtable",
+          "codeSnippet": "Table table = bigtable.getTable(\"my-table\");\nGet get = new Get(Bytes.toBytes(\"row-key\"));\nResult result = table.get(get);\nfor (Cell cell : result.rawCells()) {\n  System.out.println(\"Cell: \" + cell + \", Value: \" + Bytes.toString(CellUtil.cloneValue(cell)));\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Deleting a GCP Cloud Bigtable instance",
+          "codeSnippet": "gcloud bigtable instances delete [INSTANCE_ID] --quiet",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud CDN",
+      "topic_no": 680,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud CDN",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up GCP Cloud CDN for a website",
+          "codeSnippet": "gcloud compute backend-buckets create my-bucket --gcs-bucket-name=my_bucket_name",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Configuring cache settings in GCP Cloud CDN",
+          "codeSnippet": "gcloud compute url-maps create my-url-map --default-backend-bucket=my-bucket",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Enabling HTTPS on GCP Cloud CDN",
+          "codeSnippet": "gcloud compute target-https-proxies create my-https-proxy --url-map=my-url-map --ssl-certificates=my-ssl-cert",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Monitoring and troubleshooting GCP Cloud CDN performance",
+          "codeSnippet": "gcloud logging read 'resource.type=http_load_balancer' --limit=10",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Identity-Aware Proxy",
+      "topic_no": 696,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Identity-Aware Proxy",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Features of GCP Cloud Identity-Aware Proxy",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up GCP Cloud Identity-Aware Proxy",
+          "codeSnippet": "gcloud compute backend-services create iap-backend-service --global --enable-cdn",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Configuring Access Control with GCP Cloud Identity-Aware Proxy",
+          "codeSnippet": "gcloud compute backend-services add-backend iap-backend-service --global --instance-group=INSTANCE_GROUP --instance-group-zone=ZONE",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using GCP Cloud Identity-Aware Proxy for Secure Access",
+          "codeSnippet": "gcloud compute url-maps create iap-url-map --default-service iap-backend-service",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Armor",
+      "topic_no": 714,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Armor",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of GCP Cloud Armor",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to configure security policies in GCP Cloud Armor",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing DDoS protection with GCP Cloud Armor",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Integrating GCP Cloud Armor with other GCP services",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Security Scanner",
+      "topic_no": 730,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Security Scanner",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Features of GCP Cloud Security Scanner",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to Set Up GCP Cloud Security Scanner",
+          "codeSnippet": "gcloud services enable websecurityscanner.googleapis.com",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Running a Security Scan with GCP Cloud Security Scanner",
+          "codeSnippet": "gcloud beta web-security-scanner scan create [SCAN_NAME] --project=[PROJECT_ID] --urls=[URL]",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Interpreting Scan Results from GCP Cloud Security Scanner",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Using GCP Cloud Security Scanner",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Key Management Service",
+      "topic_no": 752,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Key Management Service",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of using GCP Cloud Key Management Service",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating and managing cryptographic keys in GCP Cloud KMS",
+          "codeSnippet": "gcloud kms keyrings create my-keyring --location global",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Encrypting and decrypting data using GCP Cloud KMS",
+          "codeSnippet": "gcloud kms encrypt --location global --keyring my-keyring --key my-key --plaintext-file mydata.txt --ciphertext-file mydata.txt.encrypted",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Integrating GCP Cloud KMS with other GCP services",
+          "codeSnippet": "gcloud kms keys add-iam-policy-binding my-key --location global --keyring my-keyring --member serviceAccount:my-service-account@my-project.iam.gserviceaccount.com --role roles/cloudkms.cryptoKeyEncrypterDecrypter",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Best practices for using GCP Cloud Key Management Service",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Data Loss Prevention",
+      "topic_no": 774,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Data Loss Prevention",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Features of GCP Cloud Data Loss Prevention",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing GCP Cloud Data Loss Prevention in a Project",
+          "codeSnippet": "gcloud dlp inspect content \"Hello, my name is John\" --info-types=US_SOCIAL_SECURITY_NUMBER",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating Custom InfoTypes for Data Loss Prevention",
+          "codeSnippet": "gcloud dlp infoTypes create custom \"Custom InfoType\"",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Setting up Data Loss Prevention Jobs in GCP",
+          "codeSnippet": "gcloud dlp jobs create inspect \"Job Name\" --storage-config=\"{...}\" --inspect-config=\"{...}\"",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Monitoring and Managing Data Loss Prevention in GCP",
+          "codeSnippet": "gcloud dlp jobs list",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GCP Cloud Security Command Center",
+      "topic_no": 784,
+      "contents": [
+        {
+          "text": "Introduction to GCP Cloud Security Command Center",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features and benefits of GCP Cloud Security Command Center",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to set up GCP Cloud Security Command Center",
+          "codeSnippet": "gcloud services enable securitycenter.googleapis.com",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Understanding security findings and recommendations in GCP Cloud Security Command Center",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Security Health Analytics in GCP Cloud Security Command Center",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Integrating GCP Cloud Security Command Center with other GCP services",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

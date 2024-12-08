@@ -1,0 +1,1380 @@
+{
+  "category": "NodeJs",
+  "topics": [
+    {
+      "topic": "Introduction to Node.js",
+      "topic_no": 98,
+      "contents": [
+        {
+          "text": "What is Node.js?",
+          "codeSnippet": "Node.js is an open-source, server-side runtime environment built on Chrome's V8 JavaScript engine. It allows you to run JavaScript code on the server-side.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Features of Node.js",
+          "codeSnippet": "1. Asynchronous and Event-Driven\n2. Fast Execution\n3. Single-threaded but Highly Scalable\n4. No Buffering\n5. Cross-platform\n6. Large Ecosystem of Libraries",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "How to install Node.js?",
+          "codeSnippet": "You can download and install Node.js from the official Node.js website (https://nodejs.org/). Follow the installation instructions for your operating system.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a simple Node.js server",
+          "codeSnippet": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.statusCode = 200;\n  res.setHeader('Content-Type', 'text/plain');\n  res.end('Hello, World!');\n});\n\nserver.listen(3000, 'localhost', () => {\n  console.log('Server running at http://localhost:3000/');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Using npm (Node Package Manager)",
+          "codeSnippet": "npm is the default package manager for Node.js. You can use it to install, manage, and publish packages/modules for your Node.js projects.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Setting Up Node.js Environment",
+      "topic_no": 159,
+      "contents": [
+        {
+          "text": "Download and Install Node.js",
+          "codeSnippet": "curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -\nsudo apt-get install -y nodejs",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Verify Node.js Installation",
+          "codeSnippet": "node -v\nnpm -v",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Create a Node.js Project",
+          "codeSnippet": "mkdir my-node-project\ncd my-node-project\nnpm init -y",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Install Node.js Packages",
+          "codeSnippet": "npm install package-name",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Run a Node.js Script",
+          "codeSnippet": "node app.js",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Use Node.js Frameworks like Express",
+          "codeSnippet": "npm install express",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js Modules and npm",
+      "topic_no": 183,
+      "contents": [
+        {
+          "text": "Node.js Modules are reusable pieces of code that can be used in different parts of a Node.js application.",
+          "codeSnippet": "const myModule = require('./myModule');"
+        },
+        {
+          "text": "npm (Node Package Manager) is a package manager for Node.js packages/modules.",
+          "codeSnippet": "npm install express"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js Basics: Event Loop and Asynchronous Programming",
+      "topic_no": 273,
+      "contents": [
+        {
+          "text": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Event Loop is the core concept in Node.js that allows it to perform non-blocking operations asynchronously.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Asynchronous programming in Node.js allows multiple operations to be executed concurrently without blocking the main thread.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Callbacks are a common way to handle asynchronous operations in Node.js.",
+          "codeSnippet": "fs.readFile('file.txt', (err, data) => { if (err) throw err; console.log(data); });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Promises provide a cleaner alternative to callbacks for handling asynchronous operations.",
+          "codeSnippet": "const readFile = util.promisify(fs.readFile); readFile('file.txt').then(data => console.log(data)).catch(err => console.error(err));",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Async/Await is a modern approach to asynchronous programming in Node.js that simplifies working with Promises.",
+          "codeSnippet": "async function readAndLog() { try { const data = await readFile('file.txt'); console.log(data); } catch (err) { console.error(err); } } readAndLog();",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Working with Files and Streams in Node.js",
+      "topic_no": 332,
+      "contents": [
+        {
+          "text": "Introduction to Files and Streams in Node.js",
+          "codeSnippet": "const fs = require('fs');\nconst readableStream = fs.createReadStream('input.txt');\nconst writableStream = fs.createWriteStream('output.txt');"
+        },
+        {
+          "text": "Reading from a File in Node.js",
+          "codeSnippet": "const fs = require('fs');\nconst readableStream = fs.createReadStream('input.txt');\nreadableStream.on('data', function(chunk) {\n    console.log(chunk);\n});"
+        },
+        {
+          "text": "Writing to a File in Node.js",
+          "codeSnippet": "const fs = require('fs');\nconst writableStream = fs.createWriteStream('output.txt');\nwritableStream.write('Hello, World!');"
+        },
+        {
+          "text": "Piping Streams in Node.js",
+          "codeSnippet": "const fs = require('fs');\nconst readableStream = fs.createReadStream('input.txt');\nconst writableStream = fs.createWriteStream('output.txt');\nreadableStream.pipe(writableStream);"
+        },
+        {
+          "text": "Working with File System Module in Node.js",
+          "codeSnippet": "const fs = require('fs');\nfs.readFile('input.txt', 'utf8', function(err, data) {\n    if (err) throw err;\n    console.log(data);\n});"
+        }
+      ]
+    },
+    {
+      "topic": "HTTP Module in Node.js",
+      "topic_no": 435,
+      "contents": [
+        {
+          "content": "HTTP Module in Node.js allows you to create a web server that can listen for incoming requests and send responses.",
+          "codeSnippet": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.statusCode = 200;\n  res.setHeader('Content-Type', 'text/plain');\n  res.end('Hello World!');\n});\n\nserver.listen(3000, 'localhost', () => {\n  console.log('Server running at http://localhost:3000/');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "content": "You can handle different types of HTTP requests (GET, POST, PUT, DELETE) using the HTTP module in Node.js.",
+          "codeSnippet": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  if (req.method === 'GET') {\n    // Handle GET request\n  } else if (req.method === 'POST') {\n    // Handle POST request\n  }\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "content": "The HTTP module provides functions to work with HTTP headers, status codes, and request/response bodies.",
+          "codeSnippet": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.statusCode = 200;\n  res.setHeader('Content-Type', 'text/html');\n  res.write('<h1>Hello World!</h1>');\n  res.end();\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "content": "You can use the HTTP module to make outgoing HTTP requests from your Node.js application.",
+          "codeSnippet": "const http = require('http');\n\nconst options = {\n  hostname: 'www.example.com',\n  port: 80,\n  path: '/api/data',\n  method: 'GET'\n};\n\nconst req = http.request(options, (res) => {\n  let data = '';\n  res.on('data', (chunk) => {\n    data += chunk;\n  });\n  res.on('end', () => {\n    console.log(data);\n  });\n});\n\nreq.end();",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Express.js Framework",
+      "topic_no": 479,
+      "contents": [
+        {
+          "text": "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Express.js simplifies the process of building web applications in Node.js by providing a simple and intuitive API for handling HTTP requests and responses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Express.js allows developers to create powerful APIs and web applications quickly and efficiently.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Express.js middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application's request-response cycle.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Express.js routing allows developers to define multiple routes for handling different HTTP methods and URL paths.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Express.js supports template engines like EJS and Pug for generating dynamic HTML content.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Express.js provides a built-in error handling mechanism to handle errors that occur during the execution of middleware functions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Express.js can be extended with various middleware packages available through npm to add additional functionality to applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Express.js applications can be deployed on various platforms like Heroku, AWS, and DigitalOcean.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Routing in Express.js",
+      "topic_no": 537,
+      "contents": [
+        {
+          "text": "Routing in Express.js allows you to define different routes for handling incoming HTTP requests.",
+          "codeSnippet": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.post('/users', (req, res) => {\n  res.send('User created!');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "You can use different HTTP methods like GET, POST, PUT, DELETE, etc., to define routes in Express.js.",
+          "codeSnippet": "app.get('/', (req, res) => {\n  // Handle GET request\n});\n\napp.post('/', (req, res) => {\n  // Handle POST request\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Express.js allows you to define route parameters to capture dynamic values from the URL.",
+          "codeSnippet": "app.get('/users/:id', (req, res) => {\n  const userId = req.params.id;\n  res.send(`User ID: ${userId}`);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "You can create route handlers to process requests and send responses in Express.js.",
+          "codeSnippet": "app.get('/about', (req, res) => {\n  res.send('About Us Page');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Express.js middleware functions can be used to perform tasks before or after the route handler is executed.",
+          "codeSnippet": "app.use((req, res, next) => {\n  console.log('Middleware function executed');\n  next();\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Middleware in Express.js",
+      "topic_no": 572,
+      "contents": [
+        {
+          "text": "Middleware in Express.js is a function that has access to the request and response objects. It can modify the request and response objects, end the request-response cycle, call the next middleware function in the stack, or skip the remaining middleware functions.",
+          "codeSnippet": "app.use(function(req, res, next) {\n  console.log('This is a middleware function');\n  next();\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Middleware functions can be used to perform tasks like logging, authentication, error handling, parsing request data, etc. They are added to the Express application using the 'app.use()' method.",
+          "codeSnippet": "app.use('/api', function(req, res, next) {\n  console.log('This middleware function runs for requests to /api');\n  next();\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Middleware functions can be added globally to the application or locally to specific routes. Global middleware functions are executed for every request, while route-specific middleware functions are only executed for requests to those specific routes.",
+          "codeSnippet": "app.use(function(req, res, next) {\n  console.log('This is a global middleware function');\n  next();\n});\n\napp.get('/users', function(req, res) {\n  console.log('This is a route-specific middleware function for /users');\n  res.send('Users route');\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Working with Databases in Node.js",
+      "topic_no": 638,
+      "contents": [
+        {
+          "text": "Introduction to working with databases in Node.js",
+          "codeSnippet": "const mysql = require('mysql');\nconst connection = mysql.createConnection({\n  host: 'localhost',\n  user: 'root',\n  password: 'password',\n  database: 'mydatabase'\n});\nconnection.connect();"
+        },
+        {
+          "text": "Connecting to a MySQL database in Node.js",
+          "codeSnippet": "const mysql = require('mysql');\nconst connection = mysql.createConnection({\n  host: 'localhost',\n  user: 'root',\n  password: 'password',\n  database: 'mydatabase'\n});\nconnection.connect();"
+        },
+        {
+          "text": "Executing a query in Node.js to fetch data from a MySQL database",
+          "codeSnippet": "connection.query('SELECT * FROM users', (error, results) => {\n  if (error) throw error;\n  console.log(results);\n});"
+        },
+        {
+          "text": "Inserting data into a MySQL database using Node.js",
+          "codeSnippet": "const user = { name: 'John', email: 'john@example.com' };\nconnection.query('INSERT INTO users SET ?', user, (error, result) => {\n  if (error) throw error;\n  console.log('User added to database with ID:', result.insertId);\n});"
+        },
+        {
+          "text": "Updating data in a MySQL database using Node.js",
+          "codeSnippet": "const userId = 1;\nconst newName = 'Jane';\nconnection.query('UPDATE users SET name = ? WHERE id = ?', [newName, userId], (error, result) => {\n  if (error) throw error;\n  console.log('User updated successfully');\n});"
+        },
+        {
+          "text": "Deleting data from a MySQL database using Node.js",
+          "codeSnippet": "const userId = 1;\nconnection.query('DELETE FROM users WHERE id = ?', userId, (error, result) => {\n  if (error) throw error;\n  console.log('User deleted successfully');\n});"
+        }
+      ]
+    },
+    {
+      "topic": "Authentication and Authorization in Node.js",
+      "topic_no": 667,
+      "contents": [
+        {
+          "text": "Authentication is the process of verifying the identity of a user attempting to access a system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Authorization is the process of determining if a user has the necessary permissions to access specific resources or perform certain actions within a system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In Node.js, popular libraries like Passport.js can be used for implementing authentication and authorization.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Authentication strategies in Node.js can include local authentication, OAuth, JWT, and more.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Authorization in Node.js often involves defining roles and permissions for users and checking these roles before allowing access to resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Middleware functions in Node.js can be used to protect routes by checking if a user is authenticated and authorized before allowing access.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing authentication and authorization in Node.js helps secure applications and protect sensitive data from unauthorized access.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Error Handling in Node.js",
+      "topic_no": 695,
+      "contents": [
+        {
+          "text": "What is error handling in Node.js?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Why is error handling important in Node.js applications?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How can errors be handled in Node.js?",
+          "codeSnippet": "try {\n    // Code that may throw an error\n} catch (error) {\n    // Handle the error\n}",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "What is the purpose of try...catch in error handling?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How can asynchronous errors be handled in Node.js?",
+          "codeSnippet": "someAsyncFunction().catch((error) => {\n    // Handle the error\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "What is the role of error-first callbacks in Node.js?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How can promises be used for error handling in Node.js?",
+          "codeSnippet": "somePromiseFunction()\n    .then((result) => {\n        // Handle success\n    })\n    .catch((error) => {\n        // Handle error\n    });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "What are the benefits of using error objects in Node.js?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Debugging Node.js Applications",
+      "topic_no": 724,
+      "contents": [
+        {
+          "text": "Introduction to Debugging Node.js Applications",
+          "codeSnippet": "Debugging is the process of identifying and fixing errors or bugs in a program. In Node.js applications, debugging is essential to ensure the application runs smoothly and efficiently. There are various tools and techniques available for debugging Node.js applications, such as using the built-in debugger, logging, and third-party debugging tools like Visual Studio Code debugger.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Using console.log() for Basic Debugging",
+          "codeSnippet": "console.log('Debugging message: ', variable);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Using Node.js Debugger for Advanced Debugging",
+          "codeSnippet": "node inspect app.js",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Setting Breakpoints in Node.js Applications",
+          "codeSnippet": "debugger;",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Using Nodemon for Automatic Restart and Debugging",
+          "codeSnippet": "nodemon --inspect app.js",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Debugging Asynchronous Code in Node.js",
+          "codeSnippet": "const fs = require('fs');\n\nfs.readFile('example.txt', 'utf8', (err, data) => {\n    if (err) throw err;\n    console.log(data);\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Unit Testing in Node.js",
+      "topic_no": 744,
+      "contents": [
+        {
+          "text": "What is Unit Testing in Node.js?",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Why is Unit Testing important in Node.js development?",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Setting up a Unit Testing framework in Node.js",
+          "codeSnippet": "const assert = require('assert');\nconst { add } = require('./math');\n\nassert.strictEqual(add(1, 2), 3);"
+        },
+        {
+          "text": "Writing Unit Tests for Node.js modules",
+          "codeSnippet": "const assert = require('assert');\nconst { multiply } = require('./math');\n\nassert.strictEqual(multiply(3, 4), 12);"
+        },
+        {
+          "text": "Running Unit Tests in Node.js",
+          "codeSnippet": "npm test"
+        },
+        {
+          "text": "Best practices for Unit Testing in Node.js",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "RESTful APIs with Node.js",
+      "topic_no": 768,
+      "contents": [
+        {
+          "text": "Introduction to RESTful APIs",
+          "codeSnippet": "RESTful APIs are a way of designing web services that adhere to the principles of REST (Representational State Transfer). They use standard HTTP methods like GET, POST, PUT, DELETE to perform CRUD operations on resources.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up a Node.js project for RESTful APIs",
+          "codeSnippet": "To create a Node.js project for building RESTful APIs, you can use npm to initialize a new project and install necessary dependencies like Express, body-parser, and mongoose.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a basic RESTful API endpoint in Node.js",
+          "codeSnippet": "const express = require('express');\nconst app = express();\n\napp.get('/api/resource', (req, res) => {\n  res.json({ message: 'This is a GET request' });\n});\n\napp.post('/api/resource', (req, res) => {\n  res.json({ message: 'This is a POST request' });\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Handling HTTP methods in RESTful APIs",
+          "codeSnippet": "In a RESTful API built with Node.js, you can handle different HTTP methods like GET, POST, PUT, DELETE using Express routes. Each route corresponds to a specific CRUD operation on a resource.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Implementing CRUD operations in a Node.js RESTful API",
+          "codeSnippet": "app.put('/api/resource/:id', (req, res) => {\n  res.json({ message: `Updating resource with id ${req.params.id}` });\n});\n\napp.delete('/api/resource/:id', (req, res) => {\n  res.json({ message: `Deleting resource with id ${req.params.id}` });\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Using middleware in Node.js for RESTful APIs",
+          "codeSnippet": "Middleware functions in Node.js can be used to perform tasks like authentication, logging, error handling, etc., before or after processing a request in a RESTful API.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "WebSocket Programming in Node.js",
+      "topic_no": 798,
+      "contents": [
+        {
+          "text": "WebSocket is a communication protocol that provides full-duplex communication channels over a single TCP connection.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "WebSocket allows for real-time data transfer between the client and the server without the need for continuous polling.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To use WebSocket in Node.js, you can utilize the 'ws' library, a simple to use WebSocket implementation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create a WebSocket server in Node.js using the 'ws' library, you can follow these steps:",
+          "codeSnippet": "const WebSocket = require('ws');\n\nconst wss = new WebSocket.Server({ port: 8080 });\nwss.on('connection', function connection(ws) {\n    ws.on('message', function incoming(message) {\n        console.log('received: %s', message);\n    });\n    ws.send('connected');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "To create a WebSocket client in Node.js using the 'ws' library, you can follow these steps:",
+          "codeSnippet": "const WebSocket = require('ws');\n\nconst ws = new WebSocket('ws://localhost:8080');\n\nws.on('open', function open() {\n    console.log('connected');\n    ws.send('hello server');\n});\n\nws.on('message', function incoming(data) {\n    console.log(data);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "WebSocket connections can handle various events like 'open', 'close', and 'message' for communication between the client and the server.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "WebSocket connections can also handle errors and other events for robust communication handling.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Building Real-Time Applications with Socket.IO",
+      "topic_no": 811,
+      "contents": [
+        {
+          "text": "Introduction to Socket.IO",
+          "codeSnippet": "const io = require('socket.io')(httpServer);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Setting up a Socket.IO server in Node.js",
+          "codeSnippet": "const io = require('socket.io')(httpServer);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Creating a Socket.IO client in a web application",
+          "codeSnippet": "const socket = io();",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Handling real-time events with Socket.IO",
+          "codeSnippet": "socket.on('eventName', (data) => { console.log(data); });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Broadcasting messages to all connected clients",
+          "codeSnippet": "io.emit('eventName', data);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Room-based communication with Socket.IO",
+          "codeSnippet": "socket.join('roomName');",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Security Best Practices in Node.js",
+      "topic_no": 823,
+      "contents": [
+        {
+          "text": "Use the latest version of Node.js to ensure security patches and updates are applied.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implement input validation to prevent common security vulnerabilities like injection attacks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Utilize packages from npm that have been vetted for security vulnerabilities.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Enable CORS (Cross-Origin Resource Sharing) to restrict which domains can access your Node.js server.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implement authentication and authorization mechanisms to control access to sensitive data and endpoints.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Encrypt sensitive data at rest and in transit to protect it from unauthorized access.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Regularly audit and monitor your Node.js application for security vulnerabilities and unusual activities.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Performance Optimization in Node.js",
+      "topic_no": 844,
+      "contents": [
+        {
+          "text": "Use asynchronous operations to prevent blocking the event loop",
+          "codeSnippet": "const fs = require('fs');\n\nfs.readFile('file.txt', (err, data) => {\n  if (err) throw err;\n  console.log(data);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Implement caching to store frequently accessed data in memory",
+          "codeSnippet": "const cache = {};\n\nfunction fetchData(key) {\n  if (cache[key]) {\n    return cache[key];\n  } else {\n    const data = // fetch data from database or API;\n    cache[key] = data;\n    return data;\n  }\n}",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Optimize code by using streaming for large data processing",
+          "codeSnippet": "const fs = require('fs');\nconst readStream = fs.createReadStream('largeFile.txt');\n\nreadStream.on('data', (chunk) => {\n  // process each chunk of data\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Utilize clustering to take advantage of multi-core systems for improved performance",
+          "codeSnippet": "const cluster = require('cluster');\nconst numCPUs = require('os').cpus().length;\n\nif (cluster.isMaster) {\n  for (let i = 0; i < numCPUs; i++) {\n    cluster.fork();\n  }\n} else {\n  // worker process code\n}",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Profile your Node.js application to identify performance bottlenecks",
+          "codeSnippet": "const { performance, PerformanceObserver } = require('perf_hooks');\n\nconst obs = new PerformanceObserver((items) => {\n  console.log(items.getEntries());\n  performance.clearMarks();\n});\nobs.observe({ entryTypes: ['measure'] });\n\nperformance.mark('start');\n// code to measure performance\nperformance.mark('end');\nperformance.measure('Operation', 'start', 'end');",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Scalability in Node.js Applications",
+      "topic_no": 864,
+      "contents": [
+        {
+          "text": "Scalability in Node.js applications refers to the ability of the application to handle increased workload and traffic without compromising performance or reliability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One common approach to improving scalability in Node.js applications is by implementing asynchronous programming techniques such as callbacks, promises, or async/await to handle multiple concurrent operations efficiently.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using a cluster module in Node.js allows applications to take advantage of multi-core systems by creating child processes to handle incoming requests, thus improving scalability by utilizing all available CPU cores.",
+          "codeSnippet": "const cluster = require('cluster');\nconst http = require('http');\nconst numCPUs = require('os').cpus().length;\n\nif (cluster.isMaster) {\n  for (let i = 0; i < numCPUs; i++) {\n    cluster.fork();\n  }\n} else {\n  http.createServer((req, res) => {\n    res.writeHead(200);\n    res.end('Hello World');\n  }).listen(8000);\n}",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Implementing a caching layer using tools like Redis or Memcached can help improve the scalability of Node.js applications by reducing the load on the database and serving frequently accessed data more quickly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Horizontal scaling, also known as scaling out, involves adding more machines or instances to distribute the workload across multiple servers, thereby increasing the scalability of Node.js applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Load balancing techniques such as round-robin, least connections, or IP hash can be employed to evenly distribute incoming requests among multiple servers, improving the scalability and reliability of Node.js applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Microservices Architecture with Node.js",
+      "topic_no": 876,
+      "contents": [
+        {
+          "text": "Introduction to Microservices Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Advantages of Microservices Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Node.js for Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a Node.js Microservice",
+          "codeSnippet": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello from Microservice!');\n});\n\napp.listen(3000, () => {\n  console.log('Microservice running on port 3000');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Communication between Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Scaling Microservices with Node.js",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Dockerizing Node.js Applications",
+      "topic_no": 895,
+      "contents": [
+        {
+          "text": "Introduction to Dockerizing Node.js Applications",
+          "codeSnippet": "Docker is a popular containerization platform that allows you to package your applications and their dependencies into a standardized unit called a container. Dockerizing Node.js applications involves creating a Docker image that contains your Node.js application and its dependencies, making it easy to deploy and run your application in any environment.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Dockerfile for a Node.js Application",
+          "codeSnippet": "FROM node:latest\n\nWORKDIR /app\n\nCOPY package.json package-lock.json ./\n\nRUN npm install\n\nCOPY . .\n\nCMD [\"node\", \"app.js\"]",
+          "codeLanguage": "Dockerfile"
+        },
+        {
+          "text": "Building a Docker Image for a Node.js Application",
+          "codeSnippet": "docker build -t my-node-app .",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Running a Docker Container for a Node.js Application",
+          "codeSnippet": "docker run -d -p 3000:3000 my-node-app",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using Docker Compose for Node.js Applications",
+          "codeSnippet": "version: '3'\nservices:\n  my-node-app:\n    build: .\n    ports:\n      - '3000:3000'",
+          "codeLanguage": "yaml"
+        },
+        {
+          "text": "Handling Environment Variables in Dockerized Node.js Applications",
+          "codeSnippet": "docker run -d -p 3000:3000 -e NODE_ENV=production my-node-app",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Serverless Computing with Node.js",
+      "topic_no": 909,
+      "contents": [
+        {
+          "text": "Introduction to Serverless Computing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Serverless Computing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a Serverless Node.js Environment",
+          "codeSnippet": "npm install -g serverless",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a Serverless Function with Node.js",
+          "codeSnippet": "serverless create --template aws-nodejs --path my-service",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Deploying a Serverless Function to AWS Lambda",
+          "codeSnippet": "serverless deploy",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Handling HTTP Requests in a Serverless Function",
+          "codeSnippet": "module.exports.hello = async (event) => ({ statusCode: 200, body: JSON.stringify({ message: 'Hello World' }) });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Working with Serverless Framework Plugins",
+          "codeSnippet": "serverless plugin install --name <plugin-name>",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "GraphQL and Apollo Server with Node.js",
+      "topic_no": 920,
+      "contents": [
+        {
+          "text": "What is GraphQL?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Advantages of using GraphQL over REST APIs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up Apollo Server with Node.js",
+          "codeSnippet": "const { ApolloServer, gql } = require('apollo-server');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Defining a GraphQL schema using Apollo Server",
+          "codeSnippet": "const typeDefs = gql` type Query { hello: String } `;",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Creating resolvers for GraphQL queries",
+          "codeSnippet": "const resolvers = { Query: { hello: () => 'Hello world!' } };",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Starting Apollo Server and listening on a port",
+          "codeSnippet": "server.listen().then(({ url }) => { console.log(`Server ready at ${url}`); });",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Making a GraphQL query using Apollo Client",
+          "codeSnippet": "const { ApolloClient, InMemoryCache, HttpLink } = require('@apollo/client');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Connecting Apollo Client to the Apollo Server endpoint",
+          "codeSnippet": "const client = new ApolloClient({ cache: new InMemoryCache(), link: new HttpLink({ uri: 'http://localhost:4000/graphql' }) });",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Real-Time Data Processing with Node.js and Kafka",
+      "topic_no": 937,
+      "contents": [
+        {
+          "text": "Introduction to Real-Time Data Processing",
+          "codeSnippet": "Real-time data processing involves continuously inputting and analyzing data to provide immediate insights and responses.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "What is Node.js?",
+          "codeSnippet": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine that allows developers to run JavaScript on the server-side.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "What is Kafka?",
+          "codeSnippet": "Kafka is a distributed event streaming platform capable of handling high volumes of data in real-time.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting Up Node.js for Real-Time Data Processing",
+          "codeSnippet": "Ensure Node.js is installed on your machine and set up a project directory for your real-time data processing application.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting Up Kafka for Real-Time Data Processing",
+          "codeSnippet": "Install Kafka and set up a Kafka cluster to handle the real-time data streams.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Node.js Producer to Send Data to Kafka",
+          "codeSnippet": "const { Kafka } = require('kafkajs');\nconst kafka = new Kafka({ brokers: ['localhost:9092'] });\nconst producer = kafka.producer();\n\nconst sendMessage = async () => {\n  await producer.connect();\n  await producer.send({\n    topic: 'my-topic',\n    messages: [\n      { value: 'Hello Kafka!' }\n    ]\n  });\n  await producer.disconnect();\n};\n\nsendMessage();",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Creating a Node.js Consumer to Receive Data from Kafka",
+          "codeSnippet": "const { Kafka } = require('kafkajs');\nconst kafka = new Kafka({ brokers: ['localhost:9092'] });\nconst consumer = kafka.consumer({ groupId: 'test-group' });\n\nconst consumeMessages = async () => {\n  await consumer.connect();\n  await consumer.subscribe({ topic: 'my-topic' });\n\n  await consumer.run({\n    eachMessage: async ({ topic, partition, message }) => {\n      console.log({\n        value: message.value.toString(),\n      });\n    },\n  });\n};\n\nconsumeMessages();",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Scaling Real-Time Data Processing with Node.js and Kafka",
+          "codeSnippet": "To scale real-time data processing, you can deploy multiple instances of Node.js producers and consumers to handle increased data volume and processing requirements.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Building REST APIs with Nest.js",
+      "topic_no": 953,
+      "contents": [
+        {
+          "text": "Introduction to Nest.js",
+          "codeSnippet": "Nest.js is a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. It uses TypeScript and is built with and fully compatible with Express.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up a Nest.js project",
+          "codeSnippet": "To create a new Nest.js project, you can use the Nest CLI by running the command 'nest new project-name'. This will generate the basic project structure for you to start building your REST APIs.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Controller in Nest.js",
+          "codeSnippet": "Controllers in Nest.js are responsible for handling incoming requests and returning responses. You can create a new controller using the command 'nest generate controller controller-name'.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Defining Routes in Nest.js",
+          "codeSnippet": "Routes in Nest.js are defined using decorators. For example, to define a GET route that returns 'Hello World', you can use the @Get() decorator with the route path.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Service in Nest.js",
+          "codeSnippet": "Services in Nest.js contain the business logic of your application. You can generate a new service using the command 'nest generate service service-name'.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Dependency Injection in Nest.js",
+          "codeSnippet": "Nest.js uses dependency injection to manage the creation and sharing of instances across different parts of your application. You can inject services into controllers or other services by specifying them in the constructor.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Handling Requests and Responses in Nest.js",
+          "codeSnippet": "To handle incoming requests and return responses in Nest.js, you can use the methods provided by the @Controller decorator. For example, you can use @Get() to handle GET requests.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Middleware in Nest.js",
+          "codeSnippet": "Middleware functions in Nest.js can be used to intercept incoming requests and responses. You can create middleware using the @Middleware() decorator and apply it to specific routes or controllers.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Error Handling in Nest.js",
+          "codeSnippet": "Nest.js provides built-in mechanisms for handling errors in your application. You can use exception filters to catch and handle exceptions thrown during the request processing.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Testing Nest.js Applications",
+          "codeSnippet": "Nest.js provides utilities for testing your applications, including unit testing and end-to-end testing. You can use tools like Jest to write and run tests for your Nest.js APIs.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Building GraphQL APIs with Prisma and Nexus",
+      "topic_no": 964,
+      "contents": [
+        {
+          "text": "Introduction to GraphQL APIs",
+          "codeSnippet": "GraphQL is a query language for APIs that allows clients to request only the data they need. Prisma and Nexus are tools that can be used to build GraphQL APIs efficiently in Node.js.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Prisma for Database Management",
+          "codeSnippet": "Prisma is an ORM that simplifies database access in Node.js applications. It can be used to define the data model and manage database operations.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Defining GraphQL Schema with Nexus",
+          "codeSnippet": "Nexus is a declarative, code-first GraphQL schema construction library. It allows developers to define the GraphQL schema using TypeScript and provides type safety.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating GraphQL Resolvers with Prisma Client",
+          "codeSnippet": "Prisma Client is an auto-generated query builder that simplifies database operations in GraphQL resolvers. It provides type-safe database access.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Implementing CRUD Operations in GraphQL APIs",
+          "codeSnippet": "Using Prisma and Nexus, developers can easily implement CRUD operations (Create, Read, Update, Delete) in GraphQL APIs by defining resolvers and schema types.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Handling Authentication and Authorization in GraphQL APIs",
+          "codeSnippet": "Authentication and authorization can be implemented in GraphQL APIs using middleware functions, JWT tokens, and role-based access control with Prisma and Nexus.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Building Desktop Applications with Electron.js",
+      "topic_no": 983,
+      "contents": [
+        {
+          "text": "Introduction to Electron.js",
+          "codeSnippet": "Electron is an open-source framework developed by GitHub for building cross-platform desktop applications using web technologies such as HTML, CSS, and JavaScript.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting Up an Electron.js Project",
+          "codeSnippet": "const { app, BrowserWindow } = require('electron');\n\nfunction createWindow() {\n  const win = new BrowserWindow({ width: 800, height: 600 });\n  win.loadFile('index.html');\n}\n\napp.whenReady().then(createWindow);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Creating the Main Process",
+          "codeSnippet": "const { app, BrowserWindow } = require('electron');\n\nfunction createWindow() {\n  const win = new BrowserWindow({ width: 800, height: 600 });\n  win.loadFile('index.html');\n}\n\napp.whenReady().then(createWindow);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Creating the Renderer Process",
+          "codeSnippet": "const { ipcRenderer } = require('electron');\n\nipcRenderer.on('message', (event, data) => {\n  console.log(data);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Packaging and Distributing Electron Applications",
+          "codeSnippet": "electron-builder --win --x64",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Unit Testing APIs with Jest",
+      "topic_no": 999,
+      "contents": [
+        {
+          "text": "Introduction to Unit Testing APIs with Jest in Node.js",
+          "codeSnippet": "const request = require('supertest');\nconst app = require('../app');\n\ndescribe('GET /api/users', () => {\n  it('should return all users', async () => {\n    const res = await request(app).get('/api/users');\n    expect(res.statusCode).toEqual(200);\n    expect(res.body.length).toBeGreaterThan(0);\n  });\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Setting up Jest for Unit Testing APIs in Node.js",
+          "codeSnippet": "npm install --save-dev jest supertest\n\n// package.json\n\"scripts\": {\n  \"test\": \"jest\"\n}",
+          "codeLanguage": "json"
+        },
+        {
+          "text": "Writing Test Cases for API Endpoints in Node.js using Jest",
+          "codeSnippet": "describe('POST /api/users', () => {\n  it('should create a new user', async () => {\n    const res = await request(app)\n      .post('/api/users')\n      .send({ name: 'John Doe', email: 'john@example.com' });\n    expect(res.statusCode).toEqual(201);\n    expect(res.body).toHaveProperty('id');\n  });\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Mocking Dependencies in API Unit Tests with Jest in Node.js",
+          "codeSnippet": "jest.mock('../services/userService', () => ({\n  getUsers: jest.fn().mockResolvedValue([{ id: 1, name: 'Alice' }]),\n  createUser: jest.fn().mockResolvedValue({ id: 2, name: 'Bob' })\n}));",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "End-to-End Testing with Cypress",
+      "topic_no": 1011,
+      "contents": [
+        {
+          "text": "Introduction to Cypress for End-to-End Testing",
+          "codeSnippet": "Cypress is a modern JavaScript-based end-to-end testing framework that enables developers to write automated tests for web applications. It provides a clean and simple API for writing tests and comes with built-in features like time-traveling, automatic waiting, and real-time reloading.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Cypress in a Node.js Project",
+          "codeSnippet": "To set up Cypress in a Node.js project, you can install it as a dev dependency using npm or yarn. You can then initialize Cypress using the command 'npx cypress open' which will create the necessary folder structure and files for your tests.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Writing Your First Cypress Test",
+          "codeSnippet": "describe('My First Test', () => { it('Visits the homepage', () => { cy.visit('https://example.com') }) })",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Interacting with Elements in Cypress Tests",
+          "codeSnippet": "cy.get('input[name=username]').type('myusername')",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Assertions in Cypress Tests",
+          "codeSnippet": "cy.get('button').should('be.visible').click()",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Running Cypress Tests",
+          "codeSnippet": "You can run Cypress tests either through the Cypress Test Runner GUI by using the command 'npx cypress open' or headlessly using the command 'npx cypress run'.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Best Practices for Writing Cypress Tests",
+          "codeSnippet": "1. Keep tests independent and isolated. 2. Use custom commands for repetitive actions. 3. Use data attributes for selecting elements. 4. Avoid using hardcoded timeouts.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Continuous Integration and Deployment (CI/CD) for Node.js Applications",
+      "topic_no": 1024,
+      "contents": [
+        {
+          "text": "Introduction to Continuous Integration and Deployment (CI/CD)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of CI/CD for Node.js Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a CI/CD Pipeline for Node.js Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Jenkins for CI/CD with Node.js",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Automating Tests in CI/CD Pipelines for Node.js",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Deploying Node.js Applications with Docker and Kubernetes",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Monitoring and Logging in Node.js Applications",
+      "topic_no": 1032,
+      "contents": [
+        {
+          "text": "Introduction to Monitoring and Logging in Node.js Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Importance of Monitoring and Logging in Node.js Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular Monitoring Tools for Node.js Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting Up Logging in Node.js Applications",
+          "codeSnippet": "const winston = require('winston');\n\nconst logger = winston.createLogger({\n  level: 'info',\n  format: winston.format.json(),\n  transports: [\n    new winston.transports.Console(),\n    new winston.transports.File({ filename: 'error.log', level: 'error' })\n  ]\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Implementing Health Checks in Node.js Applications for Monitoring",
+          "codeSnippet": "const express = require('express');\nconst app = express();\n\napp.get('/health', (req, res) => {\n  res.status(200).send('OK');\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on port 3000');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Using Prometheus and Grafana for Monitoring Node.js Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Working with Micro Frontends in Node.js Applications",
+      "topic_no": 1042,
+      "contents": [
+        {
+          "text": "Introduction to Micro Frontends",
+          "codeSnippet": "Micro frontends is an architectural style where frontend applications are composed of multiple, smaller frontend applications that are independently developed, deployed, and maintained. Each micro frontend is responsible for a specific feature or functionality of the overall application.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Benefits of Using Micro Frontends",
+          "codeSnippet": "1. Independent Development: Teams can work on different micro frontends simultaneously without interfering with each other's code.\n2. Scalability: Micro frontends allow for scaling individual features or components independently.\n3. Technology Flexibility: Different micro frontends can be built using different technologies.\n4. Reusability: Components can be reused across different micro frontends.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Implementing Micro Frontends in Node.js Applications",
+          "codeSnippet": "1. Create separate Node.js applications for each micro frontend.\n2. Use a module federation plugin like Webpack Module Federation to dynamically load micro frontends into the main application.\n3. Communicate between micro frontends using custom events or a shared state management system.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Example of Using Webpack Module Federation",
+          "codeSnippet": "const { ModuleFederationPlugin } = require('webpack').container;\n\nmodule.exports = {\n  plugins: [\n    new ModuleFederationPlugin({\n      name: 'app',\n      remotes: {\n        'microfrontend1': 'microfrontend1@http://localhost:3001/remoteEntry.js',\n        'microfrontend2': 'microfrontend2@http://localhost:3002/remoteEntry.js'\n      }\n    })\n  ]\n};",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Server-Side Rendering (SSR) with Next.js",
+      "topic_no": 1050,
+      "contents": [
+        {
+          "text": "What is Server-Side Rendering (SSR) and why is it important?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of using Server-Side Rendering (SSR) in web applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How Next.js simplifies Server-Side Rendering (SSR) in Node.js applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up Server-Side Rendering (SSR) with Next.js in a Node.js project",
+          "codeSnippet": "import React from 'react';\nimport { renderToString } from 'react-dom/server';\nimport App from './App';\n\nconst html = renderToString(<App />);",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Utilizing getServerSideProps in Next.js for fetching data during Server-Side Rendering (SSR)",
+          "codeSnippet": "export async function getServerSideProps(context) {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n\n  return {\n    props: { data }\n  };\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Handling dynamic routes with Server-Side Rendering (SSR) using Next.js in Node.js applications",
+          "codeSnippet": "import { useRouter } from 'next/router';\n\nfunction DynamicPage() {\n  const router = useRouter();\n  const { id } = router.query;\n\n  return <div>Dynamic Page {id}</div>;\n}",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    },
+    {
+      "topic": "Authentication with OAuth 2.0 in Node.js Applications",
+      "topic_no": 1061,
+      "contents": [
+        {
+          "text": "Introduction to OAuth 2.0",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up OAuth 2.0 in a Node.js application using Passport.js",
+          "codeSnippet": "const passport = require('passport');\nconst GoogleStrategy = require('passport-google-oauth20').Strategy;\n\npassport.use(new GoogleStrategy({\n    clientID: GOOGLE_CLIENT_ID,\n    clientSecret: GOOGLE_CLIENT_SECRET,\n    callbackURL: '/auth/google/callback'\n},\nfunction(accessToken, refreshToken, profile, done) {\n    User.findOrCreate({ googleId: profile.id }, function (err, user) {\n        return done(err, user);\n    });\n}));",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Implementing OAuth 2.0 authorization flow in a Node.js application",
+          "codeSnippet": "app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));\napp.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }),\nfunction(req, res) {\n    res.redirect('/profile');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Handling OAuth 2.0 access tokens and user information in Node.js",
+          "codeSnippet": "app.get('/profile', (req, res) => {\n    res.send(req.user);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Securing API endpoints using OAuth 2.0 in a Node.js application",
+          "codeSnippet": "const jwt = require('jsonwebtoken');\nconst expressJwt = require('express-jwt');\n\napp.use(expressJwt({\n    secret: JWT_SECRET,\n    algorithms: ['HS256']\n}));\n\napp.get('/api/data', (req, res) => {\n    res.json({ message: 'Protected data' });\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Building APIs with LoopBack 4 Framework",
+      "topic_no": 1073,
+      "contents": [
+        {
+          "text": "Introduction to LoopBack 4 Framework",
+          "codeSnippet": "LoopBack is a highly extensible Node.js and TypeScript framework based on Express that enables you to quickly build APIs and microservices. It provides a set of tools and conventions for building robust and scalable applications.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up a LoopBack 4 Project",
+          "codeSnippet": "To create a new LoopBack 4 project, you can use the LoopBack CLI tool. Simply run 'lb4 app' in your terminal and follow the prompts to set up your project structure.",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Defining Models and Data Sources",
+          "codeSnippet": "In LoopBack 4, you can define models to represent your data and data sources to connect to external databases or services. Models are defined using TypeScript classes, and data sources are configured in the application.",
+          "codeLanguage": "typescript"
+        },
+        {
+          "text": "Creating REST APIs with LoopBack 4",
+          "codeSnippet": "LoopBack 4 makes it easy to create REST APIs by defining controllers that handle incoming HTTP requests. You can map routes to controller methods and use decorators to define endpoints and request/response formats.",
+          "codeLanguage": "typescript"
+        },
+        {
+          "text": "Authentication and Authorization in LoopBack 4",
+          "codeSnippet": "LoopBack 4 provides built-in support for authentication and authorization. You can use decorators to secure endpoints, define authentication strategies, and implement access control rules to protect your API.",
+          "codeLanguage": "typescript"
+        },
+        {
+          "text": "Testing APIs in LoopBack 4",
+          "codeSnippet": "LoopBack 4 includes testing utilities that allow you to write unit tests for your controllers, models, and services. You can use tools like Mocha and Chai to create test suites and ensure the reliability of your API.",
+          "codeLanguage": "typescript"
+        }
+      ]
+    },
+    {
+      "topic": "Real-Time Collaboration with WebRTC in Node.js Applications",
+      "topic_no": 1082,
+      "contents": [
+        {
+          "text": "Introduction to WebRTC in Node.js",
+          "codeSnippet": "const { RTCPeerConnection, RTCSessionDescription } = require('wrtc');"
+        },
+        {
+          "text": "Setting up a WebRTC Server in Node.js",
+          "codeSnippet": "const http = require('http');\nconst server = http.createServer();\nconst io = require('socket.io')(server);"
+        },
+        {
+          "text": "Creating a WebRTC Connection",
+          "codeSnippet": "const peerConnection = new RTCPeerConnection();"
+        },
+        {
+          "text": "Handling WebRTC Signaling",
+          "codeSnippet": "socket.on('offer', async (offer) => {\n  await peerConnection.setRemoteDescription(new RTCSessionDescription(offer));\n  const answer = await peerConnection.createAnswer();\n  await peerConnection.setLocalDescription(answer);\n  socket.emit('answer', answer);\n});"
+        },
+        {
+          "text": "Establishing Real-Time Communication",
+          "codeSnippet": "socket.on('candidate', async (candidate) => {\n  await peerConnection.addIceCandidate(candidate);\n});"
+        }
+      ]
+    },
+    {
+      "topic": "Deploying Node.js Applications on Kubernetes",
+      "topic_no": 1094,
+      "contents": [
+        {
+          "text": "Introduction to Kubernetes and Node.js",
+          "codeSnippet": "Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. Node.js is a popular JavaScript runtime that is commonly used for building server-side applications.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up a Kubernetes Cluster",
+          "codeSnippet": "To deploy Node.js applications on Kubernetes, you first need to set up a Kubernetes cluster. This involves installing Kubernetes on your servers or using a cloud-based Kubernetes service like Google Kubernetes Engine (GKE) or Amazon Elastic Kubernetes Service (EKS).",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Kubernetes Deployment for a Node.js Application",
+          "codeSnippet": "A Kubernetes Deployment is a resource object in Kubernetes that provides declarative updates to applications. To deploy a Node.js application, you need to create a Deployment manifest file that specifies the container image, ports, and other configurations.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Defining Kubernetes Services for Node.js Applications",
+          "codeSnippet": "Kubernetes Services allow you to expose your Node.js application to other services within the cluster or to external users. You can create a Service manifest file that defines how the application can be accessed, such as through a NodePort or LoadBalancer type.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Using ConfigMaps and Secrets in Kubernetes for Node.js Applications",
+          "codeSnippet": "ConfigMaps and Secrets in Kubernetes are used to store configuration data and sensitive information securely. You can create ConfigMaps for environment variables and Secrets for sensitive data like API keys or database passwords, and then mount them into your Node.js application containers.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Scaling and Updating Node.js Applications on Kubernetes",
+          "codeSnippet": "Kubernetes allows you to easily scale your Node.js applications by adjusting the number of replicas in your Deployment. You can also perform rolling updates to your application by changing the container image version in the Deployment manifest.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Caching Strategies in Node.js Applications",
+      "topic_no": 1106,
+      "contents": [
+        {
+          "text": "Introduction to Caching in Node.js Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Caching Strategies",
+          "codeSnippet": "1. In-Memory Caching\n2. Redis Caching\n3. Memcached Caching",
+          "codeLanguage": "Node.js"
+        },
+        {
+          "text": "Implementing In-Memory Caching in Node.js",
+          "codeSnippet": "const cache = {};\nfunction getDataFromCache(key) {\n    return cache[key];\n}\nfunction storeDataInCache(key, data) {\n    cache[key] = data;\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Implementing Redis Caching in Node.js",
+          "codeSnippet": "const redis = require('redis');\nconst client = redis.createClient();\nclient.set('key', 'value', redis.print);\nclient.get('key', function(err, reply) {\n    console.log(reply);\n});",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Implementing Memcached Caching in Node.js",
+          "codeSnippet": "const memcached = require('memcached');\nconst client = new memcached('localhost:11211');\nclient.set('key', 'value', 10, function(err) {\n    if (err) console.error(err);\n});\nclient.get('key', function(err, data) {\n    console.log(data);\n});",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Cache Invalidation Strategies",
+          "codeSnippet": "1. Time-based Expiration\n2. Event-based Invalidation\n3. Manual Invalidation",
+          "codeLanguage": "Node.js"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "category": "Asset Management",
+  "topics": [
+    {
+      "topic": "Asset Inventory",
+      "topic_no": 12,
+      "contents": [
+        {
+          "text": "Asset Inventory is a detailed record of an organization's assets, including hardware, software, and other resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Maintaining an accurate Asset Inventory is crucial for effective asset management in DevOps.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Asset Inventory helps in tracking the lifecycle of assets, managing costs, and ensuring compliance with licensing agreements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Automating the process of updating Asset Inventory can streamline asset management workflows in DevOps.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Tools like Ansible, Puppet, or Chef can be used to automate the collection and updating of Asset Inventory data.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Regular audits of Asset Inventory are essential to identify discrepancies, optimize resource allocation, and enhance security measures.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cost Control",
+      "topic_no": 73,
+      "contents": [
+        {
+          "text": "Understanding the importance of cost control in asset management within DevOps",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing automated cost monitoring and alerting tools to track expenses",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Leveraging cloud provider cost management tools to optimize spending",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting budget limits and utilizing cost allocation tags for better cost tracking",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Regularly reviewing and optimizing infrastructure to eliminate unnecessary expenses",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Utilizing infrastructure as code (IaC) to provision resources efficiently and reduce costs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing serverless architecture to scale resources based on demand and reduce costs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Analyzing cost trends and patterns to make informed decisions on resource allocation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "category": "Change Management",
+  "topics": [
+    {
+      "topic": "Change Request Management",
+      "topic_no": 77,
+      "contents": [
+        {
+          "text": "Handling requests for changes in the project after the initial requirements have been set is a crucial aspect of Change Request Management in the field of Product Engineering. This process involves evaluating the impact of the requested changes on the project timeline, budget, and resources. It also requires effective communication with stakeholders to ensure that the changes align with the project's goals and objectives.",
+          "codeSnippet": "def handle_change_request(project, change_request):\n    impact = evaluate_impact(change_request)\n    if impact == 'low':\n        implement_change(project, change_request)\n    elif impact == 'medium':\n        escalate_change(project, change_request)\n    else:\n        reject_change(change_request)\n"
+        },
+        {
+          "text": "Change Request Management is the process of documenting, analyzing, approving, and implementing changes to a product or system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Change Request Management helps ensure that changes are properly evaluated, approved, and implemented to minimize risks and disruptions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "A change request typically includes details such as the reason for the change, the impact analysis, proposed solution, and risks associated with the change.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Change Request Management involves a formalized process for submitting, reviewing, and approving changes to a product or system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Automating Change Request Management can help streamline the process, improve efficiency, and reduce errors in handling change requests.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Impact Analysis",
+      "topic_no": 154,
+      "contents": [
+        {
+          "text": "Assessing the potential effects of proposed changes on the project is a crucial step in impact analysis within the realm of change management in product engineering. This process involves evaluating how modifications to the project scope, requirements, or timeline may impact various aspects such as budget, resources, timeline, and overall project goals. By conducting a thorough impact analysis, project teams can anticipate and mitigate potential risks and ensure successful project delivery.",
+          "codeSnippet": "function assessImpact(changes) { // code implementation for impact analysis }",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Impact analysis is a critical process in change management that involves assessing the potential effects of a proposed change on various aspects of a product or system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It helps in identifying the scope of the change, understanding the risks involved, and planning for mitigation strategies.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of impact analysis in product engineering is evaluating the impact of introducing a new feature on the existing functionality and performance of a software product.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It is essential to conduct impact analysis before implementing any changes to minimize disruptions and ensure smooth transitions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1298 @@
+{
+  "category": "Python",
+  "topics": [
+    {
+      "topic": "Introduction to Python",
+      "topic_no": 70,
+      "contents": [
+        {
+          "text": "Python is a high-level, interpreted programming language known for its simplicity and readability.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Python uses indentation to define code blocks, making it easy to read and understand.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Python has a large standard library that provides ready-to-use modules and packages for various tasks.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Python is dynamically typed, meaning you don't need to declare variable types explicitly.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Python is widely used in web development, data science, artificial intelligence, and automation.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Python code is executed line by line, making it easy to debug and test.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Python uses the '#' symbol for single-line comments and triple quotes for multi-line comments.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Python variables are dynamically typed, allowing them to change types during execution.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Python supports both procedural and object-oriented programming paradigms.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "Variables and Data Types in Python",
+      "topic_no": 149,
+      "contents": [
+        {
+          "text": "Variables in Python are used to store data values.",
+          "codeSnippet": "x = 5\ny = 'Hello'\nz = True",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Python is a dynamically typed language, meaning you do not need to declare the type of a variable when you create one.",
+          "codeSnippet": "x = 5\ny = 'Hello'\nz = True",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Python has several built-in data types, including int, float, str, bool, list, tuple, set, and dict.",
+          "codeSnippet": "",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "You can check the type of a variable using the type() function.",
+          "codeSnippet": "x = 5\nprint(type(x))",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Variables can be reassigned to different data types.",
+          "codeSnippet": "x = 5\nx = 'Hello'",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Operators and Expressions in Python",
+      "topic_no": 272,
+      "contents": [
+        {
+          "text": "Operators in Python are symbols that perform operations on variables and values.",
+          "codeSnippet": "x = 10\ny = 5\nsum = x + y\nprint(sum)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Arithmetic operators in Python include addition (+), subtraction (-), multiplication (*), division (/), modulus (%), exponentiation (**), and floor division (//).",
+          "codeSnippet": "x = 10\ny = 3\nresult = x // y\nprint(result)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Comparison operators in Python are used to compare two values. They include equal to (==), not equal to (!=), greater than (>), less than (<), greater than or equal to (>=), and less than or equal to (<=).",
+          "codeSnippet": "x = 5\ny = 10\nprint(x > y)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Logical operators in Python include 'and', 'or', and 'not'. They are used to combine conditional statements.",
+          "codeSnippet": "x = 5\ny = 10\nz = 15\nprint(x < y and y < z)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Bitwise operators in Python are used to perform bitwise operations on integers. They include AND (&), OR (|), XOR (^), NOT (~), left shift (<<), and right shift (>>).",
+          "codeSnippet": "x = 5\ny = 3\nresult = x << y\nprint(result)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Assignment operators in Python are used to assign values to variables. They include =, +=, -=, *=, /=, %=, //=, **=, &=, |=, ^=, <<=, and >>=.",
+          "codeSnippet": "x = 10\nx += 5\nprint(x)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Identity operators in Python are used to compare the memory locations of two objects. They include 'is' and 'is not'.",
+          "codeSnippet": "x = ['apple', 'banana']\ny = ['apple', 'banana']\nprint(x is y)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Membership operators in Python are used to test if a sequence is present in an object. They include 'in' and 'not in'.",
+          "codeSnippet": "fruits = ['apple', 'banana', 'cherry']\nprint('banana' in fruits)",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Control Flow Statements in Python",
+      "topic_no": 370,
+      "contents": [
+        {
+          "text": "Control Flow Statements in Python allow you to control the flow of your program's execution based on certain conditions.",
+          "codeSnippet": "if condition:\n    # code block to be executed if condition is true\nelif another_condition:\n    # code block to be executed if another_condition is true\nelse:\n    # code block to be executed if none of the above conditions are true",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "The 'if' statement is used to execute a block of code only if a specified condition is true.",
+          "codeSnippet": "x = 10\nif x > 5:\n    print('x is greater than 5')",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "The 'elif' statement allows you to check multiple expressions for true and execute a block of code as soon as one of the conditions is true.",
+          "codeSnippet": "x = 5\nif x > 10:\n    print('x is greater than 10')\nelif x < 5:\n    print('x is less than 5')",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "The 'else' statement catches anything which isn't caught by the preceding conditions.",
+          "codeSnippet": "x = 5\nif x > 10:\n    print('x is greater than 10')\nelif x < 5:\n    print('x is less than 5')\nelse:\n    print('x is equal to 5')",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "The 'for' loop is used for iterating over a sequence (list, tuple, dictionary, set, or string).",
+          "codeSnippet": "fruits = ['apple', 'banana', 'cherry']\nfor fruit in fruits:\n    print(fruit)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "The 'while' loop executes a block of code as long as a specified condition is true.",
+          "codeSnippet": "x = 0\nwhile x < 5:\n    print(x)\n    x += 1",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Functions in Python",
+      "topic_no": 427,
+      "contents": [
+        {
+          "text": "A function in Python is a block of code that only runs when it is called.",
+          "codeSnippet": "def greet():\n    print('Hello, World!')\n\ngreet()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Functions in Python are defined using the 'def' keyword followed by the function name and parentheses.",
+          "codeSnippet": "def add_numbers(a, b):\n    return a + b",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Python functions can take parameters which are values passed to the function when it is called.",
+          "codeSnippet": "def multiply(a, b):\n    return a * b",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Functions in Python can return a value using the 'return' keyword.",
+          "codeSnippet": "def square(x):\n    return x * x",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Python functions can have default parameters which are used when no argument is provided for that parameter.",
+          "codeSnippet": "def greet(name='Guest'):\n    print(f'Hello, {name}!')\n\ngreet()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Functions in Python can have keyword arguments which are passed by specifying the parameter name.",
+          "codeSnippet": "def greet(name):\n    print(f'Hello, {name}!')\n\ngreet(name='Alice')",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Python functions can return multiple values using tuples.",
+          "codeSnippet": "def get_coordinates():\n    return 10, 20\n\nx, y = get_coordinates()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Functions in Python can be recursive, meaning a function can call itself.",
+          "codeSnippet": "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Data Structures in Python (Lists, Tuples, Sets, Dictionaries)",
+      "topic_no": 463,
+      "contents": [
+        {
+          "text": "Lists in Python are ordered, mutable collections of items. They are defined using square brackets [] and can contain elements of different data types.",
+          "codeSnippet": "my_list = [1, 'apple', True, 3.14]",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Tuples in Python are ordered, immutable collections of items. They are defined using parentheses () and can contain elements of different data types.",
+          "codeSnippet": "my_tuple = (1, 'banana', False, 2.71)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Sets in Python are unordered, mutable collections of unique items. They are defined using curly braces {} and do not allow duplicate elements.",
+          "codeSnippet": "my_set = {1, 2, 3, 4, 5}",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Dictionaries in Python are unordered, mutable collections of key-value pairs. They are defined using curly braces {} and each key is associated with a value.",
+          "codeSnippet": "my_dict = {'name': 'Alice', 'age': 30, 'city': 'New York'}",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "File Handling in Python",
+      "topic_no": 514,
+      "contents": [
+        {
+          "text": "Introduction to File Handling in Python",
+          "codeSnippet": "File handling is an important aspect of programming in Python. It allows us to read from and write to files on the system. Python provides built-in functions and methods for file operations."
+        },
+        {
+          "text": "Opening a File in Python",
+          "codeSnippet": "To open a file in Python, we use the 'open()' function. We specify the file path and the mode in which we want to open the file (read, write, append, etc.)."
+        },
+        {
+          "text": "Example of Opening a File in Python",
+          "codeSnippet": "file = open('example.txt', 'r')"
+        },
+        {
+          "text": "Reading from a File in Python",
+          "codeSnippet": "To read from a file in Python, we can use methods like 'read()', 'readline()', or 'readlines()'. These methods allow us to access the content of the file."
+        },
+        {
+          "text": "Writing to a File in Python",
+          "codeSnippet": "To write to a file in Python, we use the 'write()' or 'writelines()' methods. We can write strings or data to the file."
+        },
+        {
+          "text": "Example of Writing to a File in Python",
+          "codeSnippet": "file.write('Hello, World!')"
+        },
+        {
+          "text": "Closing a File in Python",
+          "codeSnippet": "It is important to close a file after performing operations on it. We use the 'close()' method to close the file and release system resources."
+        }
+      ]
+    },
+    {
+      "topic": "Modules and Packages in Python",
+      "topic_no": 527,
+      "contents": [
+        {
+          "text": "Modules in Python are files containing Python code. They can define functions, classes, and variables that can be used in other Python files or scripts.",
+          "codeSnippet": "import mymodule\nmymodule.my_function()"
+        },
+        {
+          "text": "Packages in Python are a way of organizing related modules. A package is a directory that contains multiple Python modules.",
+          "codeSnippet": "import mypackage.mymodule\nmypackage.mymodule.my_function()"
+        }
+      ]
+    },
+    {
+      "topic": "Object-Oriented Programming (OOP) in Python",
+      "topic_no": 557,
+      "contents": [
+        {
+          "text": "Introduction to Object-Oriented Programming (OOP) in Python"
+        },
+        {
+          "text": "Classes and Objects in Python"
+        },
+        {
+          "text": "Creating a Class in Python",
+          "codeSnippet": "class MyClass:\n    def __init__(self, attribute):\n        self.attribute = attribute",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Creating Objects in Python",
+          "codeSnippet": "obj1 = MyClass('value1')\nobj2 = MyClass('value2')",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Attributes and Methods in Python Classes"
+        },
+        {
+          "text": "Inheritance in Python",
+          "codeSnippet": "class ChildClass(ParentClass):\n    def __init__(self, attribute):\n        super().__init__(attribute)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Polymorphism in Python"
+        },
+        {
+          "text": "Encapsulation in Python"
+        },
+        {
+          "text": "Abstraction in Python"
+        }
+      ]
+    },
+    {
+      "topic": "Exception Handling in Python",
+      "topic_no": 602,
+      "contents": [
+        {
+          "content": "Exception handling in Python allows you to handle errors that occur during program execution. By using try, except, and finally blocks, you can gracefully manage exceptions and prevent your program from crashing.",
+          "codeSnippet": "try:\n    # code that may raise an exception\n    result = 10 / 0\nexcept ZeroDivisionError as e:\n    print('Error:', e)",
+          "codeLanguage": "python"
+        },
+        {
+          "content": "The try block is used to enclose the code that might raise an exception. If an exception occurs, the control moves to the except block where you can handle the exception.",
+          "codeSnippet": "try:\n    result = int(input('Enter a number: '))\nexcept ValueError:\n    print('Invalid input. Please enter a valid number.')",
+          "codeLanguage": "python"
+        },
+        {
+          "content": "You can have multiple except blocks to handle different types of exceptions. Python will check each except block in order and execute the block that matches the raised exception.",
+          "codeSnippet": "try:\n    result = int(input('Enter a number: '))\nexcept ValueError:\n    print('Invalid input. Please enter a valid number.')\nexcept ZeroDivisionError:\n    print('Cannot divide by zero.')",
+          "codeLanguage": "python"
+        },
+        {
+          "content": "The finally block is optional and is used to execute code that should always run, whether an exception occurs or not. It is commonly used for cleanup tasks like closing files or database connections.",
+          "codeSnippet": "try:\n    file = open('example.txt', 'r')\n    # perform operations on the file\nexcept FileNotFoundError:\n    print('File not found')\nfinally:\n    file.close()",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Regular Expressions in Python",
+      "topic_no": 642,
+      "contents": [
+        {
+          "text": "Regular expressions are sequences of characters that define a search pattern.",
+          "codeSnippet": "import re\npattern = r'apple'\nresult = re.match(pattern, 'apple pie')\nif result:\n    print('Match found!')",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Regular expressions in Python are implemented using the 're' module.",
+          "codeSnippet": "import re\npattern = r'[0-9]+'\nresult = re.findall(pattern, 'There are 123 apples and 456 oranges')\nprint(result)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Common functions in the 're' module include match(), search(), findall(), and sub().",
+          "codeSnippet": "import re\npattern = r'apple'\nresult = re.search(pattern, 'I like apples and oranges')\nif result:\n    print('Match found at index', result.start())",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Regular expressions use special characters like '^' for start of string, '$' for end of string, '.' for any character, and '*' for zero or more occurrences.",
+          "codeSnippet": "import re\npattern = r'^apple'\nresult = re.match(pattern, 'apple pie')\nif result:\n    print('Match found at the beginning of the string')",
+          "codeLanguage": "Python"
+        }
+      ]
+    },
+    {
+      "topic": "Working with Dates and Times in Python",
+      "topic_no": 674,
+      "contents": [
+        {
+          "text": "Understanding Date and Time in Python",
+          "codeSnippet": "import datetime\n\ncurrent_date = datetime.date.today()\nprint(current_date)\n\ncurrent_time = datetime.datetime.now()\nprint(current_time)"
+        },
+        {
+          "text": "Formatting Dates and Times in Python",
+          "codeSnippet": "import datetime\n\ncurrent_date = datetime.date.today()\nformatted_date = current_date.strftime('%Y-%m-%d')\nprint(formatted_date)\n\ncurrent_time = datetime.datetime.now()\nformatted_time = current_time.strftime('%H:%M:%S')\nprint(formatted_time)"
+        },
+        {
+          "text": "Manipulating Dates and Times in Python",
+          "codeSnippet": "import datetime\n\ncurrent_date = datetime.date.today()\nnew_date = current_date.replace(year=2023)\nprint(new_date)\n\ncurrent_time = datetime.datetime.now()\nnew_time = current_time.replace(hour=10, minute=30, second=0)\nprint(new_time)"
+        },
+        {
+          "text": "Calculating Time Differences in Python",
+          "codeSnippet": "import datetime\n\ndate1 = datetime.date(2022, 5, 15)\ndate2 = datetime.date(2022, 5, 10)\ndiff = date1 - date2\nprint(diff.days)\n\ntime1 = datetime.datetime(2022, 5, 15, 12, 0, 0)\ntime2 = datetime.datetime(2022, 5, 15, 10, 30, 0)\ndiff = time1 - time2\nprint(diff)"
+        }
+      ]
+    },
+    {
+      "topic": "Generators and Iterators in Python",
+      "topic_no": 698,
+      "contents": [
+        {
+          "content": "Generators in Python are functions that enable you to iterate over a sequence of items without the need to create the entire sequence in memory at once. They allow you to generate values one at a time, which can be more memory-efficient and faster than creating a list of all values upfront.",
+          "codeSnippet": "def my_generator():\n    yield 1\n    yield 2\n    yield 3\n\n# Using the generator\nfor value in my_generator():\n    print(value)"
+        },
+        {
+          "content": "Iterators in Python are objects that implement the iterator protocol, which consists of the methods __iter__() and __next__(). Iterators are used to iterate over containers like lists, tuples, dictionaries, and more.",
+          "codeSnippet": "my_list = [1, 2, 3]\nmy_iter = iter(my_list)\n\nprint(next(my_iter))\nprint(next(my_iter))\nprint(next(my_iter))"
+        }
+      ]
+    },
+    {
+      "topic": "Decorators and Context Managers in Python",
+      "topic_no": 706,
+      "contents": [
+        {
+          "text": "Decorators in Python are functions that modify the behavior of other functions or methods. They allow you to add functionality to an existing function without modifying its source code.",
+          "codeSnippet": "@decorator\ndef function():\n    pass\nfunction = decorator(function)"
+        },
+        {
+          "text": "Context Managers in Python are objects that define the runtime context to be established when executing a with statement. They are commonly used for resource management, such as opening and closing files.",
+          "codeSnippet": "with open('file.txt', 'r') as file:\n    data = file.read()"
+        }
+      ]
+    },
+    {
+      "topic": "Lambda Functions and Higher-Order Functions in Python",
+      "topic_no": 727,
+      "contents": [
+        {
+          "text": "Lambda Functions in Python are small, anonymous functions that can have any number of arguments but can only have one expression.",
+          "codeSnippet": "lambda x: x * 2",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Lambda functions are commonly used with higher-order functions like map(), filter(), and reduce() in Python.",
+          "codeSnippet": "list(map(lambda x: x * 2, [1, 2, 3, 4]))",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Higher-order functions in Python are functions that can take other functions as arguments or return functions as results.",
+          "codeSnippet": "def apply_operation(func, x, y):\n    return func(x, y)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Higher-order functions enable functional programming paradigms in Python, allowing for concise and expressive code.",
+          "codeSnippet": "result = apply_operation(lambda a, b: a + b, 5, 3)",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Debugging and Testing in Python",
+      "topic_no": 756,
+      "contents": [
+        {
+          "text": "Debugging in Python involves identifying and fixing errors in your code to ensure it runs correctly.",
+          "codeSnippet": "import pdb\n\n# Set a breakpoint\npdb.set_trace()\n\n# Use 'n' to step through the code\n# Use 'c' to continue running the code\n# Use 'q' to quit the debugger"
+        },
+        {
+          "text": "Common debugging techniques in Python include using print statements, logging, and using a debugger like pdb or an IDE's debugger.",
+          "codeSnippet": "def divide(a, b):\n    print(f'Dividing {a} by {b}')\n    result = a / b\n    print(f'The result is: {result}')\n    return result"
+        },
+        {
+          "text": "Unit testing in Python involves testing individual units or components of your code to ensure they work as expected.",
+          "codeSnippet": "import unittest\n\nclass TestMathFunctions(unittest.TestCase):\n    def test_addition(self):\n        self.assertEqual(2 + 2, 4)\n\nif __name__ == '__main__':\n    unittest.main()"
+        },
+        {
+          "text": "Pytest is a popular testing framework in Python that allows for more concise and readable test code compared to the built-in unittest module.",
+          "codeSnippet": "import pytest\n\ndef test_addition():\n    assert 2 + 2 == 4"
+        }
+      ]
+    },
+    {
+      "topic": "Concurrency and Parallelism in Python",
+      "topic_no": 769,
+      "contents": [
+        {
+          "text": "Concurrency in Python refers to the ability of a program to execute multiple tasks simultaneously. It allows different parts of a program to run independently and concurrently.",
+          "codeSnippet": "import threading\n\ndef print_numbers():\n    for i in range(1, 6):\n        print('Number:', i)\n\nthread1 = threading.Thread(target=print_numbers)\nthread2 = threading.Thread(target=print_numbers)\n\nthread1.start()\nthread2.start()\n\nthread1.join()\nthread2.join()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Parallelism in Python involves breaking down a task into smaller subtasks that can be processed simultaneously on multiple CPUs or cores.",
+          "codeSnippet": "from concurrent.futures import ThreadPoolExecutor\n\ndef square_number(n):\n    return n * n\n\nnumbers = [1, 2, 3, 4, 5]\n\nwith ThreadPoolExecutor() as executor:\n    results = executor.map(square_number, numbers)\n\nprint(list(results))",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Web Development with Python (Flask, Django)",
+      "topic_no": 804,
+      "contents": [
+        {
+          "text": "Introduction to Web Development with Python",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Overview of Flask and Django frameworks",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a basic Flask application",
+          "codeSnippet": "from flask import Flask\napp = Flask(__name)\n\n@app.route('/')\ndef hello_world():\n    return 'Hello, World!'\n\nif __name__ == '__main__':\n    app.run()",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Creating a basic Django project",
+          "codeSnippet": "django-admin startproject myproject",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Defining routes in Flask",
+          "codeSnippet": "@app.route('/about')\ndef about():\n    return 'About Us'",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Defining routes in Django",
+          "codeSnippet": "from django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('about/', views.about, name='about'),\n]",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Creating templates in Flask",
+          "codeSnippet": "from flask import render_template\n\n@app.route('/home')\ndef home():\n    return render_template('home.html')",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Creating templates in Django",
+          "codeSnippet": "{% extends 'base.html' %}\n{% block content %}\n<h1>Welcome to our website</h1>\n{% endblock %}",
+          "codeLanguage": "HTML"
+        },
+        {
+          "text": "Working with databases in Flask",
+          "codeSnippet": "from flask_sqlalchemy import SQLAlchemy\n\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'\ndb = SQLAlchemy(app)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Working with databases in Django",
+          "codeSnippet": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}",
+          "codeLanguage": "Python"
+        }
+      ]
+    },
+    {
+      "topic": "Database Access with Python (SQLAlchemy, SQLite)",
+      "topic_no": 830,
+      "contents": [
+        {
+          "text": "Introduction to SQLAlchemy and SQLite",
+          "codeSnippet": "import sqlalchemy\nfrom sqlalchemy import create_engine\nengine = create_engine('sqlite:///example.db')",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Creating a Table using SQLAlchemy",
+          "codeSnippet": "from sqlalchemy import Table, Column, Integer, String, MetaData\nmetadata = MetaData()\nusers = Table('users', metadata,\nColumn('id', Integer, primary_key=True),\nColumn('name', String),\nColumn('age', Integer))",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Connecting to a SQLite Database",
+          "codeSnippet": "from sqlalchemy import create_engine\nengine = create_engine('sqlite:///example.db')\nconnection = engine.connect()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Inserting Data into a Table",
+          "codeSnippet": "insert_query = users.insert().values(name='Alice', age=30)\nconnection.execute(insert_query)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Querying Data from a Table",
+          "codeSnippet": "select_query = users.select()\nresult = connection.execute(select_query)\nfor row in result:\n    print(row)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Updating Data in a Table",
+          "codeSnippet": "update_query = users.update().where(users.c.name == 'Alice').values(age=31)\nconnection.execute(update_query)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Deleting Data from a Table",
+          "codeSnippet": "delete_query = users.delete().where(users.c.name == 'Alice')\nconnection.execute(delete_query)",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Data Science Libraries in Python (NumPy, Pandas, Matplotlib)",
+      "topic_no": 837,
+      "contents": [
+        {
+          "text": "NumPy is a fundamental package for scientific computing in Python.",
+          "codeSnippet": "import numpy as np",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Pandas is a powerful data manipulation library for Python.",
+          "codeSnippet": "import pandas as pd",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Matplotlib is a plotting library for creating visualizations in Python.",
+          "codeSnippet": "import matplotlib.pyplot as plt",
+          "codeLanguage": "Python"
+        }
+      ]
+    },
+    {
+      "topic": "Machine Learning with Python (Scikit-learn, TensorFlow, Keras)",
+      "topic_no": 849,
+      "contents": [
+        {
+          "text": "Introduction to Machine Learning",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Overview of Scikit-learn library",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: Loading a dataset using Scikit-learn",
+          "codeSnippet": "from sklearn import datasets\niris = datasets.load_iris()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Overview of TensorFlow library",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: Creating a simple neural network using TensorFlow",
+          "codeSnippet": "import tensorflow as tf\nmodel = tf.keras.models.Sequential()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Overview of Keras library",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: Building a convolutional neural network using Keras",
+          "codeSnippet": "from keras.models import Sequential\nfrom keras.layers import Conv2D, MaxPooling2D",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Natural Language Processing (NLP) with Python (NLTK, SpaCy)",
+      "topic_no": 869,
+      "contents": [
+        {
+          "text": "Introduction to Natural Language Processing (NLP)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Installing NLTK and SpaCy libraries in Python",
+          "codeSnippet": "pip install nltk spacy",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Tokenization and Lemmatization using NLTK",
+          "codeSnippet": "import nltk\nfrom nltk.tokenize import word_tokenize\nfrom nltk.stem import WordNetLemmatizer\n\nnltk.download('punkt')\nnltk.download('wordnet')\n\nsentence = 'The quick brown foxes are jumping over the lazy dogs'\nwords = word_tokenize(sentence)\nlemmatizer = WordNetLemmatizer()\nlemmatized_words = [lemmatizer.lemmatize(word) for word in words]\nprint(lemmatized_words)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Part-of-Speech (POS) Tagging with SpaCy",
+          "codeSnippet": "import spacy\n\nnlp = spacy.load('en_core_web_sm')\ndoc = nlp('Apple is a fruit')\nfor token in doc:\n    print(token.text, token.pos_)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Named Entity Recognition (NER) with SpaCy",
+          "codeSnippet": "import spacy\n\nnlp = spacy.load('en_core_web_sm')\ndoc = nlp('Apple is a company headquartered in Cupertino')\nfor ent in doc.ents:\n    print(ent.text, ent.label_)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Sentiment Analysis using NLTK",
+          "codeSnippet": "from nltk.sentiment.vader import SentimentIntensityAnalyzer\n\nsia = SentimentIntensityAnalyzer()\ntext = 'I love this product!'\nsentiment_score = sia.polarity_scores(text)\nprint(sentiment_score)",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Web Scraping with Python (Beautiful Soup, Scrapy)",
+      "topic_no": 883,
+      "contents": [
+        {
+          "text": "Introduction to Web Scraping",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "What is Web Scraping?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Web Scraping",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular Python Libraries for Web Scraping",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Beautiful Soup",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Scrapy",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Installing Beautiful Soup and Scrapy",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Basic Web Scraping with Beautiful Soup",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Basic Web Scraping with Scrapy",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Handling Dynamic Content",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Web Scraping",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "GUI Development with Python (Tkinter, PyQt)",
+      "topic_no": 902,
+      "contents": [
+        {
+          "text": "Introduction to GUI Development with Python",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Overview of Tkinter and PyQt for GUI Development",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a Simple Window with Tkinter",
+          "codeSnippet": "import tkinter as tk\n\nroot = tk.Tk()\nroot.title('My GUI')\nroot.mainloop()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Creating a Simple Window with PyQt",
+          "codeSnippet": "from PyQt5.QtWidgets import QApplication, QWidget\nimport sys\n\napp = QApplication(sys.argv)\nwindow = QWidget()\nwindow.setWindowTitle('My GUI')\nwindow.show()\nsys.exit(app.exec_())",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Adding Widgets to the GUI with Tkinter",
+          "codeSnippet": "import tkinter as tk\n\nroot = tk.Tk()\nlabel = tk.Label(root, text='Hello, GUI!')\nlabel.pack()\nroot.mainloop()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Adding Widgets to the GUI with PyQt",
+          "codeSnippet": "from PyQt5.QtWidgets import QApplication, QLabel, QWidget\nimport sys\n\napp = QApplication(sys.argv)\nwindow = QWidget()\nlabel = QLabel('Hello, GUI!', window)\nlabel.move(50, 50)\nwindow.setWindowTitle('My GUI')\nwindow.show()\nsys.exit(app.exec_())",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Handling Events in Tkinter",
+          "codeSnippet": "import tkinter as tk\n\ndef on_button_click():\n    print('Button clicked!')\n\nroot = tk.Tk()\nbutton = tk.Button(root, text='Click Me', command=on_button_click)\nbutton.pack()\nroot.mainloop()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Handling Events in PyQt",
+          "codeSnippet": "from PyQt5.QtWidgets import QApplication, QPushButton, QWidget\nfrom PyQt5.QtCore import pyqtSlot\nimport sys\n\n@pyqtSlot()\ndef on_button_click():\n    print('Button clicked!')\n\napp = QApplication(sys.argv)\nwindow = QWidget()\nbutton = QPushButton('Click Me', window)\nbutton.clicked.connect(on_button_click)\nbutton.move(50, 50)\nwindow.setWindowTitle('My GUI')\nwindow.show()\nsys.exit(app.exec_())",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Asynchronous Programming in Python (asyncio)",
+      "topic_no": 950,
+      "contents": [
+        {
+          "text": "Introduction to Asynchronous Programming in Python using asyncio",
+          "codeSnippet": "import asyncio\n\nasync def main():\n    print('Hello')\n    await asyncio.sleep(1)\n    print('World')\n\nasyncio.run(main())",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Creating an Asynchronous Function in Python using async def",
+          "codeSnippet": "async def greet():\n    print('Hello')\n    await asyncio.sleep(1)\n    print('World')",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Running an Asynchronous Function in Python using asyncio.run()",
+          "codeSnippet": "asyncio.run(greet())",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Awaiting Multiple Asynchronous Calls in Python using asyncio.gather()",
+          "codeSnippet": "async def foo():\n    await asyncio.sleep(1)\n    return 'foo'\n\nasync def bar():\n    await asyncio.sleep(2)\n    return 'bar'\n\nresults = await asyncio.gather(foo(), bar())\nprint(results)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Handling Exceptions in Asynchronous Code in Python using try-except blocks",
+          "codeSnippet": "async def divide(x, y):\n    try:\n        result = x / y\n    except ZeroDivisionError as e:\n        print(f'Error: {e}')\n    else:\n        return result",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Network Programming with Python (socket, requests)",
+      "topic_no": 960,
+      "contents": [
+        {
+          "text": "Introduction to Network Programming with Python",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Sockets in Python for Network Communication",
+          "codeSnippet": "import socket\n\n# Create a socket object\ns = socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Creating a TCP Server with Python's socket module",
+          "codeSnippet": "import socket\n\n# Create a socket object\ns = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n# Bind the socket to a specific address and port\ns.bind(('localhost', 12345))\n\n# Listen for incoming connections\ns.listen(5)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Creating a TCP Client with Python's socket module",
+          "codeSnippet": "import socket\n\n# Create a socket object\ns = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n# Connect to the server\ns.connect(('localhost', 12345))",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Making HTTP Requests with Python's requests module",
+          "codeSnippet": "import requests\n\n# Make a GET request\nresponse = requests.get('https://www.example.com')\n\n# Print the response content\nprint(response.text)",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Distributed Computing with Python (Celery, Dask)",
+      "topic_no": 969,
+      "contents": [
+        {
+          "text": "Introduction to Distributed Computing",
+          "codeSnippet": "Distributed computing is a field of computer science that studies distributed systems. It involves dividing a task among multiple computers to achieve better performance, fault tolerance, and scalability.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "What is Celery?",
+          "codeSnippet": "Celery is an asynchronous task queue/job queue based on distributed message passing. It is used for real-time processing, task scheduling, and distributed computing in Python applications.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Setting up Celery in Python",
+          "codeSnippet": "from celery import Celery\n\napp = Celery('tasks', broker='redis://localhost:6379/0')\n\n@app.task\ndef add(x, y):\n    return x + y",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "What is Dask?",
+          "codeSnippet": "Dask is a flexible parallel computing library for analytic computing. It enables parallel computing in Python for tasks such as data processing, machine learning, and scientific computing.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Using Dask for Parallel Computing",
+          "codeSnippet": "import dask\nimport dask.array as da\n\nx = da.random.random((10000, 10000), chunks=(1000, 1000))\nresult = x.mean().compute()",
+          "codeLanguage": "Python"
+        }
+      ]
+    },
+    {
+      "topic": "Cryptography in Python (cryptography)",
+      "topic_no": 993,
+      "contents": [
+        {
+          "text": "Introduction to Cryptography in Python",
+          "codeSnippet": "from cryptography.fernet import Fernet\n\n# Generate a key\nkey = Fernet.generate_key()\n\n# Create a Fernet symmetric key\ncipher_suite = Fernet(key)\n\n# Encrypt a message\nmessage = b'Hello, World!'\nencrypted_message = cipher_suite.encrypt(message)\n\n# Decrypt the message\ndecrypted_message = cipher_suite.decrypt(encrypted_message)\nprint(decrypted_message)"
+        },
+        {
+          "text": "Symmetric Encryption using Fernet in Python",
+          "codeSnippet": "from cryptography.fernet import Fernet\n\n# Generate a key\nkey = Fernet.generate_key()\n\n# Create a Fernet symmetric key\ncipher_suite = Fernet(key)\n\n# Encrypt a message\nmessage = b'Secret message'\nencrypted_message = cipher_suite.encrypt(message)\n\n# Decrypt the message\ndecrypted_message = cipher_suite.decrypt(encrypted_message)\nprint(decrypted_message)"
+        },
+        {
+          "text": "Asymmetric Encryption using RSA in Python",
+          "codeSnippet": "from cryptography.hazmat.primitives import serialization\nfrom cryptography.hazmat.primitives.asymmetric import rsa\nfrom cryptography.hazmat.primitives.asymmetric import padding\nfrom cryptography.hazmat.primitives import hashes\n\n# Generate RSA key pair\nprivate_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)\npublic_key = private_key.public_key()\n\n# Encrypt a message using RSA\nmessage = b'Sensitive data'\nciphertext = public_key.encrypt(message, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))\n\n# Decrypt the message using RSA\ndecrypted_message = private_key.decrypt(ciphertext, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))\nprint(decrypted_message)"
+        },
+        {
+          "text": "Hashing using SHA-256 in Python",
+          "codeSnippet": "from cryptography.hazmat.primitives import hashes\nfrom cryptography.hazmat.primitives.asymmetric import padding\n\n# Hash a message using SHA-256\nmessage = b'This is a message to hash'\nhash_algorithm = hashes.SHA256()\nhasher = hashes.Hash(hash_algorithm)\nhasher.update(message)\nhash_value = hasher.finalize()\nprint(hash_value)"
+        }
+      ]
+    },
+    {
+      "topic": "Web APIs with Python (Flask-Restful, FastAPI)",
+      "topic_no": 1005,
+      "contents": [
+        {
+          "text": "Introduction to Web APIs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "What are Web APIs and their importance in web development?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Overview of Flask-Restful and FastAPI frameworks for building Web APIs in Python",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a basic Web API using Flask-Restful",
+          "codeSnippet": "from flask import Flask\nfrom flask_restful import Api, Resource\n\napp = Flask(__name__)\napi = Api(app)\n\nclass HelloWorld(Resource):\n    def get(self):\n        return {'hello': 'world'}\n\napi.add_resource(HelloWorld, '/')\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Creating endpoints and handling requests in Flask-Restful",
+          "codeSnippet": "class HelloWorld(Resource):\n    def get(self):\n        return {'hello': 'world'}\n\napi.add_resource(HelloWorld, '/')",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Implementing authentication and authorization in Flask-Restful Web APIs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up a basic Web API using FastAPI",
+          "codeSnippet": "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get('/')\nasync def read_root():\n    return {'hello': 'world'}",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Defining routes and handling requests in FastAPI",
+          "codeSnippet": "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get('/')\nasync def read_root():\n    return {'hello': 'world'}",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Leveraging asynchronous capabilities in FastAPI for improved performance",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Deployment and DevOps with Python (Docker, Kubernetes)",
+      "topic_no": 1018,
+      "contents": [
+        {
+          "text": "Introduction to Docker",
+          "codeSnippet": "docker --version",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a Dockerfile for a Python application",
+          "codeSnippet": "FROM python:3.8\nWORKDIR /app\nCOPY . /app\nRUN pip install -r requirements.txt\nCMD [\"python\", \"app.py\"]",
+          "codeLanguage": "dockerfile"
+        },
+        {
+          "text": "Building a Docker image",
+          "codeSnippet": "docker build -t my-python-app .",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Running a Docker container",
+          "codeSnippet": "docker run my-python-app",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Introduction to Kubernetes",
+          "codeSnippet": "kubectl version",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a Kubernetes Deployment YAML file",
+          "codeSnippet": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: my-python-app\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: my-python-app\n  template:\n    metadata:\n      labels:\n        app: my-python-app\n    spec:\n      containers:\n      - name: my-python-app\n        image: my-python-app:latest\n        ports:\n        - containerPort: 5000",
+          "codeLanguage": "yaml"
+        },
+        {
+          "text": "Applying the Kubernetes Deployment YAML file",
+          "codeSnippet": "kubectl apply -f deployment.yaml",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Scaling a Kubernetes Deployment",
+          "codeSnippet": "kubectl scale deployment my-python-app --replicas=5",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Testing in Python (unittest, pytest)",
+      "topic_no": 1030,
+      "contents": [
+        {
+          "text": "Testing in Python is commonly done using the built-in 'unittest' module or the third-party 'pytest' library.",
+          "codeSnippet": "import unittest\n\nclass TestStringMethods(unittest.TestCase):\n\n    def test_upper(self):\n        self.assertEqual('hello'.upper(), 'HELLO')\n\n    def test_isupper(self):\n        self.assertTrue('HELLO'.isupper())\n\nif __name__ == '__main__':\n    unittest.main()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "unittest is Python's built-in testing framework that allows you to write test cases and test suites.",
+          "codeSnippet": "import unittest\n\nclass TestStringMethods(unittest.TestCase):\n\n    def test_upper(self):\n        self.assertEqual('hello'.upper(), 'HELLO')\n\n    def test_isupper(self):\n        self.assertTrue('HELLO'.isupper())\n\nif __name__ == '__main__':\n    unittest.main()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "pytest is a popular third-party testing framework for Python that provides more features and flexibility compared to unittest.",
+          "codeSnippet": "import pytest\n\ndef test_upper():\n    assert 'hello'.upper() == 'HELLO'\n\ndef test_isupper():\n    assert 'HELLO'.isupper()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "pytest allows you to write simpler and more readable test functions using assert statements.",
+          "codeSnippet": "import pytest\n\ndef test_upper():\n    assert 'hello'.upper() == 'HELLO'\n\ndef test_isupper():\n    assert 'HELLO'.isupper()",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Code Quality and Best Practices in Python",
+      "topic_no": 1039,
+      "contents": [
+        {
+          "text": "Use meaningful variable and function names to improve code readability and maintainability.",
+          "codeSnippet": "def calculate_area(length, width):\n    area = length * width\n    return area",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Follow the PEP 8 style guide to maintain consistency in your codebase.",
+          "codeSnippet": "def calculate_area(length, width):\n    area = length * width\n    return area",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Document your code using clear and concise comments to explain complex logic or algorithms.",
+          "codeSnippet": "def calculate_area(length, width):\n    # Calculate the area by multiplying length and width\n    area = length * width\n    return area",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Avoid using magic numbers in your code; assign them to named constants for better code maintenance.",
+          "codeSnippet": "PI = 3.14159\n\ndef calculate_circle_area(radius):\n    area = PI * (radius ** 2)\n    return area",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Use list comprehensions and generator expressions to write more concise and readable code.",
+          "codeSnippet": "numbers = [1, 2, 3, 4, 5]\nsquared_numbers = [num ** 2 for num in numbers]",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Perform code reviews to catch potential issues early and ensure adherence to coding standards.",
+          "codeSnippet": "def calculate_area(length, width):\n    area = length * width\n    return area",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Python for Automation (Selenium, PyAutoGUI)",
+      "topic_no": 1044,
+      "contents": [
+        {
+          "text": "Introduction to Python for Automation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Selenium for Web Automation",
+          "codeSnippet": "from selenium import webdriver\n\n# Create a new instance of the Firefox driver\ndriver = webdriver.Firefox()\n\n# Open the website\ndriver.get('https://www.example.com')",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Automating GUI Interactions with PyAutoGUI",
+          "codeSnippet": "import pyautogui\n\n# Move the mouse to coordinates (100, 100) on the screen\npyautogui.moveTo(100, 100)\n\n# Click the left mouse button\npyautogui.click()",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Game Development with Python (Pygame)",
+      "topic_no": 1059,
+      "contents": [
+        {
+          "text": "Introduction to Pygame",
+          "codeSnippet": "import pygame\npygame.init()\n"
+        },
+        {
+          "text": "Creating a Pygame window",
+          "codeSnippet": "import pygame\npygame.init()\n\nscreen = pygame.display.set_mode((800, 600))\n"
+        },
+        {
+          "text": "Loading and displaying images in Pygame",
+          "codeSnippet": "import pygame\npygame.init()\n\nscreen = pygame.display.set_mode((800, 600))\n\nimage = pygame.image.load('image.png')\nscreen.blit(image, (0, 0))\n"
+        },
+        {
+          "text": "Handling user input in Pygame",
+          "codeSnippet": "import pygame\npygame.init()\n\nscreen = pygame.display.set_mode((800, 600))\n\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n"
+        },
+        {
+          "text": "Creating game loops in Pygame",
+          "codeSnippet": "import pygame\npygame.init()\n\nscreen = pygame.display.set_mode((800, 600))\n\nrunning = True\nwhile running:\n    # Game logic\n    # Event handling\n    # Drawing\n"
+        },
+        {
+          "text": "Adding sound effects in Pygame",
+          "codeSnippet": "import pygame\npygame.init()\n\npygame.mixer.init()\nsound = pygame.mixer.Sound('sound.wav')\nsound.play()\n"
+        },
+        {
+          "text": "Implementing collision detection in Pygame",
+          "codeSnippet": "import pygame\npygame.init()\n\nrect1 = pygame.Rect(100, 100, 50, 50)\nrect2 = pygame.Rect(200, 200, 50, 50)\n\ncollision = rect1.colliderect(rect2)\n"
+        },
+        {
+          "text": "Creating game sprites in Pygame",
+          "codeSnippet": "import pygame\npygame.init()\n\nclass Player(pygame.sprite.Sprite):\n    def __init__(self):\n        super().__init__()\n        self.image = pygame.Surface((50, 50))\n        self.image.fill((255, 0, 0))\n        self.rect = self.image.get_rect()\n"
+        },
+        {
+          "text": "Implementing game scoring in Pygame",
+          "codeSnippet": "import pygame\npygame.init()\n\nscore = 0\nfont = pygame.font.Font(None, 36)\n\ndef update_score(new_score):\n    global score\n    score = new_score\n\ndef draw_score(screen):\n    text = font.render('Score: ' + str(score), True, (255, 255, 255))\n    screen.blit(text, (10, 10))\n"
+        },
+        {
+          "text": "Optimizing Pygame performance",
+          "codeSnippet": "import pygame\npygame.init()\n\n# Implement performance optimizations here\n"
+        }
+      ]
+    },
+    {
+      "topic": "Websockets and Real-Time Applications in Python",
+      "topic_no": 1068,
+      "contents": [
+        {
+          "text": "Websockets allow for full-duplex communication between a client and a server, enabling real-time data transfer.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To implement Websockets in Python, you can use the 'websockets' library, which provides a simple and efficient way to work with Websockets.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create a Websocket server in Python, you can use the 'websockets' library to handle incoming connections and messages.",
+          "codeSnippet": "import asyncio\nimport websockets\n\nasync def server(websocket, path):\n    while True:\n        message = await websocket.recv()\n        await websocket.send(message)\n\nstart_server = websockets.serve(server, 'localhost', 8765)\n\nasyncio.get_event_loop().run_until_complete(start_server)\nasyncio.get_event_loop().run_forever()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "To create a Websocket client in Python, you can use the 'websockets' library to establish a connection and send/receive messages.",
+          "codeSnippet": "import asyncio\nimport websockets\n\nasync def client():\n    async with websockets.connect('ws://localhost:8765') as websocket:\n        await websocket.send('Hello, Server!')\n        response = await websocket.recv()\n        print(response)\n\nasyncio.get_event_loop().run_until_complete(client())",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Websockets are commonly used in real-time applications such as chat applications, online gaming, live data feeds, and collaborative editing tools.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Web Assembly (WASM) with Python",
+      "topic_no": 1072,
+      "contents": [
+        {
+          "text": "Introduction to Web Assembly (WASM) and its benefits",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to compile Python code to Web Assembly using Emscripten",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Interacting with Web Assembly modules in Python",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Performance considerations when using Web Assembly with Python",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Python for Scientific Computing (SciPy, SymPy)",
+      "topic_no": 1080,
+      "contents": [
+        {
+          "text": "Introduction to SciPy and SymPy libraries in Python",
+          "codeSnippet": "import scipy\nimport sympy",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "SciPy for scientific computing in Python",
+          "codeSnippet": "import numpy as np\nfrom scipy import optimize",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "SymPy for symbolic mathematics in Python",
+          "codeSnippet": "import sympy\nx = sympy.Symbol('x')\nequation = x**2 + 2*x + 1",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Using SciPy for numerical integration",
+          "codeSnippet": "from scipy import integrate\nresult = integrate.quad(lambda x: x**2, 0, 1)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Solving equations symbolically with SymPy",
+          "codeSnippet": "solution = sympy.solve(equation, x)",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Data Visualization with Python (Seaborn, Plotly)",
+      "topic_no": 1084,
+      "contents": [
+        {
+          "text": "Introduction to Data Visualization with Python using Seaborn and Plotly"
+        },
+        {
+          "text": "Installing Seaborn and Plotly libraries in Python"
+        },
+        {
+          "text": "Creating a basic plot using Seaborn"
+        },
+        {
+          "text": "Creating interactive visualizations using Plotly"
+        },
+        {
+          "text": "Customizing plots with Seaborn and Plotly"
+        },
+        {
+          "text": "Combining Seaborn and Plotly for advanced visualizations"
+        },
+        {
+          "text": "Exporting and sharing visualizations created with Seaborn and Plotly"
+        }
+      ]
+    },
+    {
+      "topic": "Interfacing with Hardware (Raspberry Pi, Arduino) using Python",
+      "topic_no": 1091,
+      "contents": [
+        {
+          "text": "Introduction to Interfacing with Hardware using Python",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up Raspberry Pi or Arduino for Python Development",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Installing Required Python Libraries for Hardware Interfacing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Basic GPIO Control with Python on Raspberry Pi or Arduino",
+          "codeSnippet": "import RPi.GPIO as GPIO\nimport time\n\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(18, GPIO.OUT)\n\ntry:\n    while True:\n        GPIO.output(18, GPIO.HIGH)\n        time.sleep(1)\n        GPIO.output(18, GPIO.LOW)\n        time.sleep(1)\nexcept KeyboardInterrupt:\n    GPIO.cleanup()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Analog Input Reading with Python on Raspberry Pi or Arduino",
+          "codeSnippet": "import RPi.GPIO as GPIO\nimport time\n\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(17, GPIO.IN)\n\ntry:\n    while True:\n        if GPIO.input(17):\n            print('Analog input detected')\n        else:\n            print('No analog input')\n        time.sleep(1)\nexcept KeyboardInterrupt:\n    GPIO.cleanup()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Interfacing with Sensors (e.g., DHT11) using Python",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Controlling Servo Motors with Python on Raspberry Pi or Arduino",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

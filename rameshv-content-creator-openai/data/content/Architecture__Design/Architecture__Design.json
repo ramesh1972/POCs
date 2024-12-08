@@ -1,0 +1,1224 @@
+{
+  "category": "Architecture & Design",
+  "topics": [
+    {
+      "topic": "Evolution of Architectures & Systems",
+      "topic_no": 27,
+      "contents": [
+        {
+          "text": "Introduction to Evolution of Architectures & Systems"
+        },
+        {
+          "text": "Main types of architectural styles: Monolithic, Microservices, Serverless"
+        },
+        {
+          "text": "Comparison of Monolithic, Microservices, and Serverless architectures"
+        },
+        {
+          "text": "Key factors influencing the choice of architecture: Scalability, Flexibility, Maintenance"
+        },
+        {
+          "text": "Evolution from traditional monolithic architectures to modern microservices architectures"
+        },
+        {
+          "text": "Benefits and challenges of transitioning to microservices architecture"
+        },
+        {
+          "text": "Role of containerization technologies like Docker in modern system architectures"
+        },
+        {
+          "text": "Introduction to container orchestration tools like Kubernetes for managing complex systems"
+        },
+        {
+          "text": "Evolution of cloud computing and its impact on system architectures"
+        },
+        {
+          "text": "Use of serverless computing for event-driven architectures"
+        },
+        {
+          "text": "Importance of security in evolving architectures and systems"
+        },
+        {
+          "text": "Trends in architecture evolution: Edge computing, IoT integration, AI-driven systems"
+        }
+      ]
+    },
+    {
+      "topic": "Architecture - An Introduction",
+      "topic_no": 79,
+      "contents": [
+        {
+          "text": "Introduction to Architecture"
+        },
+        {
+          "text": "Architecture is the art and science of designing and constructing buildings and other physical structures."
+        },
+        {
+          "text": "It involves creating spaces that are functional, aesthetically pleasing, and sustainable."
+        },
+        {
+          "text": "Architects are professionals who are trained in the field of architecture and are responsible for designing buildings."
+        },
+        {
+          "text": "Architecture encompasses various styles and influences, ranging from classical to modern designs."
+        },
+        {
+          "text": "Architectural design involves considering factors such as space, light, materials, and functionality."
+        },
+        {
+          "text": "Architectural drawings and blueprints are essential tools used in the planning and construction of buildings."
+        },
+        {
+          "text": "Architectural styles can vary based on cultural, historical, and environmental factors."
+        },
+        {
+          "text": "Famous architectural landmarks include the Eiffel Tower, the Sydney Opera House, and the Taj Mahal."
+        },
+        {
+          "text": "Architecture plays a crucial role in shaping the built environment and impacting the way people interact with spaces."
+        }
+      ]
+    },
+    {
+      "topic": "Apps Architecture",
+      "topic_no": 170,
+      "contents": [
+        {
+          "text": "Introduction to Apps Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Components of Apps Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Presentation Layer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Business Logic Layer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Data Access Layer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Design Patterns in Apps Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Model-View-Controller (MVC)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Model-View-ViewModel (MVVM)",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Repository Pattern",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Apps Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Information Architecture",
+      "topic_no": 212,
+      "contents": [
+        {
+          "text": "What is Information Architecture?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Principles of Information Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Organizing Information for Effective Navigation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating Hierarchical Structures in Information Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Metadata in Information Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "User-Centered Design in Information Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "System Components",
+      "topic_no": 285,
+      "contents": [
+        {
+          "text": "Central Processing Unit (CPU)",
+          "example": "Intel Core i7 processor",
+          "codeSnippet": "var cpu = new CPU();",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Random Access Memory (RAM)",
+          "codeSnippet": "int ramSize = 8;",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Hard Disk Drive (HDD)",
+          "example": "Seagate Barracuda 2TB HDD",
+          "codeSnippet": "var hdd = new HDD();",
+          "codeLanguage": "c#"
+        },
+        {
+          "text": "Solid State Drive (SSD)",
+          "codeSnippet": "ssdCapacity = 512;",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Motherboard",
+          "example": "ASUS ROG Strix Z390-E",
+          "codeSnippet": "var motherboard = new Motherboard();",
+          "codeLanguage": "c++"
+        },
+        {
+          "text": "Graphics Processing Unit (GPU)",
+          "example": "NVIDIA GeForce RTX 2080",
+          "codeSnippet": "var gpu = new GPU();",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "System Packages",
+      "topic_no": 325,
+      "contents": [
+        {
+          "text": "System packages are pre-built software components that can be installed on a computer system to provide specific functionality.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of system packages include libraries, utilities, and tools that help in managing and running applications on a system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "System packages are typically distributed in package manager repositories and can be easily installed using package management tools like apt, yum, or npm.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "When installing system packages, it is important to ensure compatibility with the operating system and other installed packages to avoid conflicts and maintain system stability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "System packages often come with dependencies, which are other packages or libraries required for the package to function properly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Data Architecture",
+      "topic_no": 377,
+      "contents": [
+        {
+          "text": "Introduction to Data Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Components of Data Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Modeling in Data Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Storage and Management in Data Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Integration and ETL Processes in Data Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Governance and Security in Data Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Architecture Best Practices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "System Multi-Instance Architecture",
+      "topic_no": 411,
+      "contents": [
+        {
+          "text": "System Multi-Instance Architecture is a design pattern where multiple instances of a system run concurrently to handle a larger workload or provide fault tolerance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This architecture allows for horizontal scaling by distributing the workload across multiple instances of the system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a System Multi-Instance Architecture, each instance operates independently and can communicate with other instances to share data or coordinate tasks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common examples of System Multi-Instance Architecture include distributed databases like Cassandra or MongoDB, where data is replicated across multiple nodes for scalability and fault tolerance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Another example is a load balancer that distributes incoming requests across multiple instances of a web application to ensure high availability and performance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "System Infrastructure Architecture",
+      "topic_no": 434,
+      "contents": [
+        {
+          "text": "Introduction to System Infrastructure Architecture"
+        },
+        {
+          "text": "Key Components of System Infrastructure Architecture"
+        },
+        {
+          "text": "Design Principles for System Infrastructure Architecture"
+        },
+        {
+          "text": "Scalability in System Infrastructure Architecture"
+        },
+        {
+          "text": "Reliability and Fault Tolerance in System Infrastructure Architecture"
+        },
+        {
+          "text": "Security Considerations in System Infrastructure Architecture"
+        },
+        {
+          "text": "Performance Optimization in System Infrastructure Architecture"
+        },
+        {
+          "text": "Cloud Computing in System Infrastructure Architecture"
+        },
+        {
+          "text": "Containerization and Orchestration in System Infrastructure Architecture"
+        },
+        {
+          "text": "Networking in System Infrastructure Architecture"
+        }
+      ]
+    },
+    {
+      "topic": "Cloud native architecture",
+      "topic_no": 460,
+      "contents": [
+        {
+          "text": "Introduction to Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Principles of Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Microservices and Containers in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Orchestration and Automation in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Scalability and Resilience in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Security Best Practices in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AI Architecture",
+      "topic_no": 489,
+      "contents": [
+        {
+          "text": "Introduction to AI Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Components of AI Architecture",
+          "example": "Machine Learning Models",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of AI Architectures",
+          "example": "Recurrent Neural Networks",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Design Principles for AI Architectures",
+          "example": "Convolutional Neural Networks",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Scalability in AI Architectures",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Performance Optimization in AI Architectures",
+          "example": "Deep Reinforcement Learning",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Microservices Architecture",
+      "topic_no": 510,
+      "contents": [
+        {
+          "text": "Introduction to Microservices Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Principles of Microservices Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Advantages of Microservices Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Challenges of Microservices Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Design Patterns in Microservices Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Communication between Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Scaling Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Monitoring and Logging in Microservices Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Monolithic Architecture",
+      "topic_no": 542,
+      "contents": [
+        {
+          "text": "Monolithic Architecture is a traditional architectural style where all components of an application are combined into a single program.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This architecture is characterized by its simplicity and ease of development, deployment, and scaling.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a monolithic architecture, the entire application is built as a single unit, making it easier to manage and deploy.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One common example of a monolithic architecture is a simple web application where the frontend, backend, and database are all contained within the same codebase.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "While monolithic architectures are straightforward to develop and deploy, they can become complex and difficult to scale as the application grows.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To illustrate, consider a scenario where a monolithic application experiences increased traffic, leading to performance issues due to the inability to scale specific components independently.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Service-Oriented Architecture (SOA)",
+      "topic_no": 560,
+      "contents": [
+        {
+          "text": "Service-Oriented Architecture (SOA) is an architectural design pattern in which software components are designed to be independent and loosely coupled services that communicate with each other over a network.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "SOA allows for the creation of modular and reusable services that can be easily integrated into various applications, promoting flexibility and scalability.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "SOA promotes the concept of service reusability, where services can be used across different applications and platforms.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "SOA emphasizes the use of standardized communication protocols such as HTTP, SOAP, and REST for service interaction.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "SOA enables organizations to align IT infrastructure with business processes by breaking down complex applications into smaller, manageable services.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "Event-Driven Architecture (EDA)",
+      "topic_no": 598,
+      "contents": [
+        {
+          "text": "Event-Driven Architecture (EDA) is a software design pattern that promotes the production, detection, consumption of, and reaction to events.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Events are defined as significant occurrences or changes in a system or application that need to be processed or reacted to.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In EDA, components communicate primarily through events, enabling loose coupling and scalability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Event producers publish events to a central event bus or broker, which then distributes them to interested consumers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common technologies used in EDA include Apache Kafka, RabbitMQ, and Amazon SNS.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of EDA in action is a system where a user registration event triggers notifications to various services for user onboarding.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Layered Architecture",
+      "topic_no": 618,
+      "contents": [
+        {
+          "text": "Layered architecture is a design pattern where software is divided into separate layers, each responsible for a specific aspect of functionality.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common layers in a layered architecture include presentation, business logic, and data access layers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Each layer in a layered architecture communicates only with the layers directly above and below it, promoting separation of concerns and modularity.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Layered architecture helps in maintaining code reusability, scalability, and flexibility in software development.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a web application, the presentation layer handles user interface interactions, the business logic layer processes data, and the data access layer interacts with the database.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Component-Based Architecture",
+      "topic_no": 641,
+      "contents": [
+        {
+          "text": "Component-Based Architecture is a design approach that emphasizes breaking down a system into individual, reusable, and interchangeable components.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Components in Component-Based Architecture are independent units with well-defined interfaces, allowing for easy integration and maintenance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Component-Based Architecture promotes reusability, scalability, and flexibility in software development.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of Component-Based Architectures include web development frameworks like React.js and Angular, where components are building blocks of the user interface.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In Component-Based Architecture, components can be developed, tested, and deployed independently, enhancing modularity and reducing dependencies.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Component-Based Architecture facilitates parallel development by enabling teams to work on different components simultaneously.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Serverless Architecture",
+      "topic_no": 655,
+      "contents": [
+        {
+          "text": "What is Serverless Architecture?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Serverless Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Scalability in Serverless Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Event-Driven Architecture in Serverless",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Serverless Providers",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Serverless vs. Traditional Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "N-Tier Architecture",
+      "topic_no": 676,
+      "contents": [
+        {
+          "text": "N-Tier Architecture is a software design pattern that divides an application into separate layers, each responsible for a specific aspect of the application's functionality.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The layers in N-Tier Architecture typically include presentation, business logic, and data access layers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The presentation layer is responsible for handling user interface interactions and displaying data to the user.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The business logic layer contains the core functionality and rules of the application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The data access layer is responsible for interacting with the database or other data sources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Event Sourcing Architecture",
+      "topic_no": 687,
+      "contents": [
+        {
+          "text": "Event Sourcing is a design pattern where the state of a system is determined by a sequence of events.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Events are stored as a log of changes, allowing the system to be reconstructed at any point in time by replaying the events.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Event Sourcing can be used to implement audit logs, undo functionality, and temporal queries.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "In Event Sourcing, the current state of an entity is derived by applying events to its initial state.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Event Sourcing can be combined with CQRS (Command Query Responsibility Segregation) for a more scalable and flexible architecture.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "CQRS (Command Query Responsibility Segregation) Architecture",
+      "topic_no": 711,
+      "contents": [
+        {
+          "text": "CQRS (Command Query Responsibility Segregation) is an architectural pattern that separates the read and write operations of a system into separate models.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Command side handles operations that modify data, while the Query side handles operations that retrieve data.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CQRS can help in scaling and optimizing systems by allowing different models to be tailored for specific tasks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a CQRS architecture, commands are typically handled by a Command Handler that updates the write model.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Queries are executed against a separate read model optimized for querying and reporting purposes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Event sourcing is often used in conjunction with CQRS to capture all changes to the application state as a sequence of events.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Hexagonal Architecture",
+      "topic_no": 738,
+      "contents": [
+        {
+          "text": "Hexagonal Architecture, also known as Ports and Adapters architecture, is a software design pattern that enforces a clear separation between the domain logic and external components such as databases, user interfaces, and third-party services.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "The core principle of Hexagonal Architecture is to define the core business logic at the center of the architecture, surrounded by layers of ports and adapters that facilitate communication with external systems.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Ports in Hexagonal Architecture are interfaces that define how the application interacts with the external world. Adapters are implementations of these interfaces that connect the application to specific technologies or frameworks.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "An example of a port in Hexagonal Architecture is a UserRepository interface that defines methods for interacting with user data. Adapters for this port could include implementations for a MySQL database or a REST API.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Hexagonal Architecture promotes testability and maintainability by allowing developers to easily swap out external dependencies for mock implementations during testing.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "In a Hexagonal Architecture, the domain logic remains agnostic of the external systems it interacts with, making it easier to evolve and scale the application over time.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Space-Based Architecture",
+      "topic_no": 749,
+      "contents": [
+        {
+          "text": "Introduction to Space-Based Architecture"
+        },
+        {
+          "text": "Key Principles of Space-Based Architecture"
+        },
+        {
+          "text": "Advantages of Space-Based Architecture"
+        },
+        {
+          "text": "Challenges of Implementing Space-Based Architecture"
+        },
+        {
+          "text": "Common Technologies Used in Space-Based Architecture"
+        },
+        {
+          "text": "Design Patterns in Space-Based Architecture"
+        },
+        {
+          "text": "Best Practices for Developing Space-Based Architectures"
+        },
+        {
+          "text": "Real-world Applications of Space-Based Architecture"
+        }
+      ]
+    },
+    {
+      "topic": "Data-Centric Architecture",
+      "topic_no": 760,
+      "contents": [
+        {
+          "text": "What is Data-Centric Architecture?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Principles of Data-Centric Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Advantages of Implementing Data-Centric Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Challenges in Implementing Data-Centric Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Designing Data-Centric Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Pipeline Architecture",
+      "topic_no": 780,
+      "contents": [
+        {
+          "text": "What is Pipeline Architecture?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Components of Pipeline Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Source",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Processor",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Sink",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Advantages of Pipeline Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Scalability",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Modularity",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Reusability",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Fault Tolerance",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Pipeline Architecture in a Data Processing System",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Define the Source",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Implement the Processor",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Configure the Sink",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example Use Case of Pipeline Architecture in a Streaming Data Processing System",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Repository Architecture",
+      "topic_no": 795,
+      "contents": [
+        {
+          "text": "Repository architecture refers to the design and structure of a repository system that manages and stores data.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "There are various types of repository architectures such as centralized, distributed, and federated.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a centralized repository architecture, all data is stored in a single location, making it easier to manage but potentially creating a single point of failure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Distributed repository architecture involves storing data across multiple locations, providing redundancy and scalability but requiring more complex management.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Federated repository architecture combines multiple repositories into a single virtual repository, allowing for unified access to data stored in different locations.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "When designing a repository architecture, factors such as data access patterns, scalability, security, and performance need to be considered.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Clean Architecture",
+      "topic_no": 810,
+      "contents": [
+        {
+          "text": "Clean Architecture is a software design philosophy that separates the concerns of a software application into distinct layers, allowing for better maintainability, testability, and scalability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The key components of Clean Architecture include Entities, Use Cases, Interface Adapters, and Frameworks. Entities represent the core business logic, Use Cases contain the application-specific business rules, Interface Adapters handle communication with external systems, and Frameworks provide tools and libraries.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Clean Architecture promotes the Dependency Rule, which states that dependencies should point inwards towards the core of the application. This helps in keeping the core business logic independent of external frameworks and libraries.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of implementing Clean Architecture in a web application would involve structuring the codebase with separate directories for entities, use cases, controllers, and data access layers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In Clean Architecture, each layer should only depend on the layers closer to the core. This ensures that changes in one layer do not have a cascading effect on other parts of the application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Onion Architecture",
+      "topic_no": 822,
+      "contents": [
+        {
+          "text": "What is Onion Architecture?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Why is Onion Architecture used?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "What are the layers in Onion Architecture?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How does Onion Architecture differ from traditional layered architectures?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to implement Onion Architecture in a software project?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Event-Driven Microservices Architecture",
+      "topic_no": 835,
+      "contents": [
+        {
+          "text": "Event-Driven Microservices Architecture is an architectural style where microservices communicate with each other by producing and consuming events.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Events are used as the primary means of communication between microservices in an Event-Driven Microservices Architecture.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Event-Driven Microservices Architecture promotes loose coupling between microservices, allowing them to be developed, deployed, and scaled independently.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Event-Driven Microservices Architecture can be implemented using messaging systems like Apache Kafka, RabbitMQ, or Amazon SNS/SQS.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "In an Event-Driven Microservices Architecture, microservices can react to events in real-time, enabling faster and more responsive systems.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Resource-Oriented Architecture (ROA)",
+      "topic_no": 850,
+      "contents": [
+        {
+          "text": "Resource-Oriented Architecture (ROA) is an architectural style that structures the application as a collection of resources that can be uniquely identified and manipulated over a network.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ROA emphasizes the use of standard HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Resources in ROA are represented as URIs (Uniform Resource Identifiers) and can be accessed using these URIs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ROA promotes stateless communication where each request from the client to the server must contain all the information necessary to understand and process the request.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ROA encourages the use of hypermedia controls to navigate between resources, making the system more discoverable and self-descriptive.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Distributed Architecture",
+      "topic_no": 863,
+      "contents": [
+        {
+          "text": "Distributed architecture is a design where multiple components are deployed across multiple servers to improve scalability, reliability, and performance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of a distributed architecture is a microservices-based system where different services communicate over a network to perform various functions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Distributed architectures often use technologies like RESTful APIs, message queues, and service discovery to enable communication between components.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a distributed architecture, components can be deployed on different servers or cloud instances to distribute the load and improve fault tolerance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing a distributed architecture requires careful consideration of factors like network latency, data consistency, and security.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Streaming Architecture",
+      "topic_no": 886,
+      "contents": [
+        {
+          "text": "Introduction to Streaming Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Components of Streaming Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Streaming Sources",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Streaming Processors",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Streaming Storage",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Streaming Analytics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "5. Streaming Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Streaming Architectures",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Lambda Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Kappa Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Microservices Architecture with Streaming",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Considerations for Designing Streaming Architectures",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Scalability",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Fault Tolerance",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Data Processing Guarantees",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Latency",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "5. Data Consistency",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

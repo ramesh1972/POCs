@@ -1,0 +1,261 @@
+{
+  "category": "Tech Design - Guidelines",
+  "topics": [
+    {
+      "topic": "Design Considerations",
+      "topic_no": 4,
+      "contents": [
+        {
+          "text": "Consider the scalability requirements of the system to ensure it can handle increased loads in the future.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Evaluate the performance implications of different design choices to optimize system efficiency.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Prioritize security measures to protect sensitive data and prevent unauthorized access.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Incorporate fault tolerance mechanisms to ensure system reliability and availability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Adhere to industry standards and best practices to facilitate interoperability and maintainability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Architecture Patterns",
+      "topic_no": 64,
+      "contents": [
+        {
+          "text": "1. What is an Architecture Pattern?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Common Architecture Patterns:",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Layered Architecture Pattern:",
+          "codeSnippet": "Layered architecture separates the concerns of an application into distinct layers, such as presentation, business logic, and data access.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "4. MVC (Model-View-Controller) Pattern:",
+          "codeSnippet": "Model-View-Controller separates an application into three main components: the model (data), the view (UI), and the controller (logic).",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "5. Microservices Architecture Pattern:",
+          "codeSnippet": "Microservices architecture breaks down an application into smaller, independently deployable services that communicate over well-defined APIs.",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "6. Event-Driven Architecture Pattern:",
+          "codeSnippet": "Event-driven architecture enables components to communicate through events, promoting loose coupling and scalability.",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Object Oriented Analysis, Design and Programming",
+      "topic_no": 164,
+      "contents": [
+        {
+          "text": "Object-Oriented Analysis (OOA) is the process of examining a problem domain to identify objects and their interactions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Object-Oriented Design (OOD) involves creating a design model based on the analysis, defining classes, methods, and relationships.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Object-Oriented Programming (OOP) is the implementation phase where classes and objects are used to create software solutions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Encapsulation is the bundling of data and methods that operate on the data into a single unit or class.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Inheritance allows a class to inherit properties and behavior from another class, promoting code reusability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Polymorphism enables objects to be treated as instances of their parent class, allowing for flexibility and extensibility.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Abstraction focuses on hiding the implementation details and exposing only the necessary features of an object.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Class diagrams are used in OOAD to visualize the structure of classes, their attributes, methods, and relationships.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Design patterns provide proven solutions to common design problems, promoting best practices in OOP.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "UML (Unified Modeling Language) is a standardized modeling language used in OOAD to visually represent software systems.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "IOC & Dependency Injection",
+      "topic_no": 245,
+      "contents": [
+        {
+          "text": "IOC (Inversion of Control) is a design principle in which the flow of control is inverted compared to traditional programming. In IOC, the control over the flow of a program is shifted from the program itself to a container or framework.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Dependency Injection is a design pattern that implements IOC. It is a technique where one object supplies the dependencies of another object. This helps in decoupling the code and makes it more maintainable and testable.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "IOC containers are used to manage the dependencies of objects in an application. They provide a way to create objects and inject their dependencies automatically.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common IOC containers in various programming languages include Spring Framework for Java, Unity for .NET, and Dagger for Android.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "When using Dependency Injection, the dependencies of a class are typically injected through constructor injection, setter injection, or interface injection.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Constructor injection is a type of dependency injection where the dependencies are provided through a class constructor.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setter injection is a type of dependency injection where the dependencies are set through setter methods.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Interface injection is a type of dependency injection where the dependencies are injected through an interface that the class implements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "APIs Design",
+      "topic_no": 311,
+      "contents": [
+        {
+          "text": "Understand the purpose and functionality of the API before designing it.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Follow RESTful principles for designing APIs, such as using HTTP methods and status codes appropriately.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Use clear and consistent naming conventions for endpoints, parameters, and responses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Design endpoints to be resource-oriented and intuitive for developers to understand and use.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Version your APIs to allow for future changes without breaking existing integrations.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Provide comprehensive documentation for the API, including endpoints, request/response formats, and error handling.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implement proper authentication and authorization mechanisms to secure the API.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Consider performance and scalability factors during API design to ensure efficient operation under varying loads.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Use consistent error handling approaches and provide informative error messages to aid developers in troubleshooting.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Relational Database Design",
+      "topic_no": 355,
+      "contents": [
+        {
+          "text": "Understand the requirements of the system and define the entities and relationships that need to be represented in the database."
+        },
+        {
+          "text": "Identify the primary keys for each entity to ensure uniqueness and establish relationships between entities."
+        },
+        {
+          "text": "Normalize the database by organizing data into separate tables to reduce redundancy and improve data integrity."
+        },
+        {
+          "text": "Denormalize the database when necessary to optimize query performance and simplify data retrieval."
+        },
+        {
+          "text": "Establish foreign key constraints to maintain referential integrity between related tables."
+        },
+        {
+          "text": "Use appropriate data types for each column to ensure data accuracy and efficiency."
+        },
+        {
+          "text": "Create indexes on columns frequently used in queries to speed up data retrieval."
+        },
+        {
+          "text": "Implement constraints such as unique constraints, check constraints, and default values to enforce data integrity rules."
+        },
+        {
+          "text": "Consider the scalability and performance requirements of the system when designing the database."
+        },
+        {
+          "text": "Document the database design including entity-relationship diagrams, data dictionaries, and normalization rules for future reference."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "category": "PowerShell Scripting",
+  "topics": [
+    {
+      "topic": "Introduction to PowerShell Scripting",
+      "topic_no": 22,
+      "contents": [
+        {
+          "text": "PowerShell is a task automation and configuration management framework from Microsoft.",
+          "codeSnippet": "Get-Process"
+        },
+        {
+          "text": "PowerShell scripts are written in the .ps1 file format.",
+          "codeSnippet": "Write-Host 'Hello, World!'"
+        },
+        {
+          "text": "PowerShell uses cmdlets, which are specialized .NET classes implementing a particular operation.",
+          "codeSnippet": "Get-Service"
+        },
+        {
+          "text": "Variables in PowerShell start with a $ symbol.",
+          "codeSnippet": "$name = 'John Doe'"
+        },
+        {
+          "text": "PowerShell supports piping output from one cmdlet to another using the | symbol.",
+          "codeSnippet": "Get-Process | Where-Object {$_.Name -eq 'chrome'}"
+        }
+      ]
+    },
+    {
+      "topic": "PowerShell Commands and Syntax",
+      "topic_no": 91,
+      "contents": [
+        {
+          "text": "PowerShell is a task automation and configuration management framework from Microsoft.",
+          "codeSnippet": "Get-Command"
+        },
+        {
+          "text": "PowerShell commands follow a Verb-Noun structure.",
+          "codeSnippet": "Get-Process"
+        },
+        {
+          "text": "PowerShell cmdlets are lightweight commands used in the PowerShell environment.",
+          "codeSnippet": "Get-Help"
+        },
+        {
+          "text": "PowerShell uses aliases to provide shorter names for cmdlets.",
+          "codeSnippet": "dir"
+        },
+        {
+          "text": "PowerShell scripts are saved in .ps1 files.",
+          "codeSnippet": "Write-Output 'Hello, World!'"
+        },
+        {
+          "text": "PowerShell supports piping to pass the output of one command as input to another command.",
+          "codeSnippet": "Get-Process | Where-Object {$_.Name -eq 'chrome'}"
+        }
+      ]
+    },
+    {
+      "topic": "Variables and Data Types in PowerShell",
+      "topic_no": 146,
+      "contents": [
+        {
+          "text": "Variables in PowerShell are used to store and manipulate data. They are created by assigning a value to a variable name.",
+          "codeSnippet": "$variableName = 'Hello, World!'",
+          "codeLanguage": "PowerShell"
+        },
+        {
+          "text": "PowerShell supports various data types for variables, including strings, integers, arrays, and hash tables.",
+          "codeSnippet": "$integerVariable = 42",
+          "codeLanguage": "PowerShell"
+        },
+        {
+          "text": "Strings are sequences of characters enclosed in single or double quotes.",
+          "codeSnippet": "$stringVariable = 'This is a string'",
+          "codeLanguage": "PowerShell"
+        },
+        {
+          "text": "Integers are whole numbers without decimal points.",
+          "codeSnippet": "$integerVariable = 42",
+          "codeLanguage": "PowerShell"
+        },
+        {
+          "text": "Arrays in PowerShell allow you to store multiple values in a single variable.",
+          "codeSnippet": "$arrayVariable = @('apple', 'banana', 'orange')",
+          "codeLanguage": "PowerShell"
+        }
+      ]
+    },
+    {
+      "topic": "Looping Structures in PowerShell",
+      "topic_no": 309,
+      "contents": [
+        {
+          "text": "Introduction to Looping Structures in PowerShell",
+          "codeSnippet": "Looping structures in PowerShell allow you to repeat a block of code multiple times based on a condition. There are different types of loops in PowerShell, such as 'for', 'foreach', 'while', and 'do-while' loops.",
+          "codeLanguage": "PowerShell"
+        },
+        {
+          "text": "Using 'for' Loop in PowerShell",
+          "codeSnippet": "for ($i = 1; $i -le 5; $i++) { Write-Output $i }",
+          "codeLanguage": "PowerShell"
+        },
+        {
+          "text": "Using 'foreach' Loop in PowerShell",
+          "codeSnippet": "foreach ($item in $collection) { Write-Output $item }",
+          "codeLanguage": "PowerShell"
+        },
+        {
+          "text": "Using 'while' Loop in PowerShell",
+          "codeSnippet": "while ($condition) { Write-Output 'Looping' }",
+          "codeLanguage": "PowerShell"
+        },
+        {
+          "text": "Using 'do-while' Loop in PowerShell",
+          "codeSnippet": "$i = 0\n do { $i++ } while ($i -lt 5)",
+          "codeLanguage": "PowerShell"
+        }
+      ]
+    },
+    {
+      "topic": "Functions and Subroutines in PowerShell",
+      "topic_no": 367,
+      "contents": [
+        {
+          "text": "Functions in PowerShell allow you to encapsulate a set of instructions that can be reused throughout your script. They help in organizing and modularizing your code.",
+          "codeSnippet": "function SayHello { Write-Host 'Hello, World!' }"
+        },
+        {
+          "text": "To define a function in PowerShell, you use the 'function' keyword followed by the function name and a set of curly braces containing the code to be executed when the function is called.",
+          "codeSnippet": "function Get-Sum { param($num1, $num2) $sum = $num1 + $num2 return $sum }"
+        },
+        {
+          "text": "To call a function in PowerShell, you simply use the function name followed by parentheses. You can pass arguments to the function if it expects any.",
+          "codeSnippet": "SayHello"
+        },
+        {
+          "text": "Subroutines in PowerShell are similar to functions but do not return a value. They are used for their side effects, such as modifying variables or outputting information.",
+          "codeSnippet": "function ShowMessage { Write-Host 'This is a subroutine' }"
+        },
+        {
+          "text": "You can define a subroutine in PowerShell using the same 'function' keyword as functions, but the subroutine does not have a return statement.",
+          "codeSnippet": "function Update-Log { param($message) Add-Content -Path 'log.txt' -Value $message }"
+        },
+        {
+          "text": "To call a subroutine in PowerShell, you use the subroutine name followed by parentheses. Subroutines are typically called for their side effects rather than their return value.",
+          "codeSnippet": "ShowMessage"
+        }
+      ]
+    },
+    {
+      "topic": "Best Practices for PowerShell Scripting",
+      "topic_no": 436,
+      "contents": [
+        {
+          "text": "Use meaningful variable names to improve script readability and maintainability.",
+          "codeSnippet": "```powershell\n$fileName = 'example.txt'\n$content = Get-Content $fileName\n```",
+          "codeLanguage": "powershell"
+        },
+        {
+          "text": "Comment your code to explain complex logic or functionality.",
+          "codeSnippet": "```powershell\n# Get all files in the current directory\nGet-ChildItem\n```",
+          "codeLanguage": "powershell"
+        },
+        {
+          "text": "Use error handling to gracefully manage exceptions and errors in your scripts.",
+          "codeSnippet": "```powershell\ntry {\n    Get-Content 'nonexistentfile.txt'\n} catch {\n    Write-Host 'File not found'\n}\n```",
+          "codeLanguage": "powershell"
+        },
+        {
+          "text": "Avoid hardcoding values in your scripts; use variables or parameters instead.",
+          "codeSnippet": "```powershell\n$serverName = 'Server01'\nRestart-Service -Name 'MyService' -ComputerName $serverName\n```",
+          "codeLanguage": "powershell"
+        },
+        {
+          "text": "Use functions to modularize your scripts and promote code reuse.",
+          "codeSnippet": "```powershell\nfunction Get-FreeDiskSpace {\n    Get-WmiObject Win32_LogicalDisk | Select-Object DeviceID, FreeSpace\n}\nGet-FreeDiskSpace\n```",
+          "codeLanguage": "powershell"
+        },
+        {
+          "text": "Format your output for better readability using formatting cmdlets like Format-Table or Format-List.",
+          "codeSnippet": "```powershell\nGet-Process | Format-Table -Property Name, CPU, WorkingSet -AutoSize\n```",
+          "codeLanguage": "powershell"
+        }
+      ]
+    }
+  ]
+}

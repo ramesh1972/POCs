@@ -1,0 +1,211 @@
+{
+  "category": "Testing Methodologies",
+  "topics": [
+    {
+      "topic": "Blackbox Testing",
+      "topic_no": 60,
+      "contents": [
+        {
+          "text": "Blackbox testing is a software testing method where the internal structure, design, or implementation of the software being tested is not known to the tester.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Blackbox testing focuses on the functionality of the software and ensures that it behaves as expected without considering the internal code or logic.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Blackbox testing is also known as specification-based testing or behavioral testing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common techniques used in blackbox testing include equivalence partitioning, boundary value analysis, decision table testing, and state transition testing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In equivalence partitioning, test cases are designed to cover different equivalence classes of input data to ensure thorough testing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Boundary value analysis involves testing the boundaries of input ranges to uncover errors that may occur at the edges of valid and invalid ranges.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Decision table testing is used to test combinations of inputs and their corresponding outputs based on defined rules or conditions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "State transition testing is applied to systems that can be in different states, and test cases are designed to validate transitions between these states.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "White Box Testing",
+      "topic_no": 143,
+      "contents": [
+        {
+          "text": "White Box Testing is a testing technique that involves the testing of the internal logic and structure of the code.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "White Box Testing is also known as Clear Box Testing, Open Box Testing, Transparent Box Testing, or Structural Testing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "White Box Testing is typically performed by developers or specialized testers who have access to the source code.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "White Box Testing focuses on verifying the flow of inputs and outputs through the application's internal code paths.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "White Box Testing techniques include Statement Coverage, Decision Coverage, Condition Coverage, and Path Coverage.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "White Box Testing helps in identifying hidden errors, security vulnerabilities, and performance issues within the code.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "System, Integration Testing",
+      "topic_no": 175,
+      "contents": [
+        {
+          "text": "System Testing is a level of software testing where a complete and integrated software is tested to verify if it meets the specified requirements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Integration Testing is a level of software testing where individual units or components are combined and tested as a group to ensure they work together correctly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Regression Testing",
+      "topic_no": 255,
+      "contents": [
+        {
+          "text": "Regression testing is a type of software testing that ensures that recent code changes have not adversely affected existing features.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It involves re-running previously executed test cases to verify that the existing functionalities still work as expected after a code change.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Regression testing helps in identifying any defects introduced due to code modifications and ensures the stability of the software product.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Regression testing can be performed manually or using automated testing tools.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Automated regression testing is often preferred for its efficiency and repeatability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common tools used for automated regression testing include Selenium, JUnit, TestNG, and Cucumber.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Smoke Tests",
+      "topic_no": 310,
+      "contents": [
+        {
+          "text": "Smoke tests are a subset of test cases that focus on quickly checking the basic functionality of an application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Smoke tests are usually executed after a new build is deployed to ensure that critical functionalities work as expected.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Smoke tests help in identifying major issues early in the development cycle.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Smoke tests are typically automated to save time and effort in running them repeatedly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "A common smoke test scenario is to verify if the login functionality of a web application is working correctly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Another example of a smoke test is to check if essential features like adding items to a shopping cart are functioning properly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a code snippet, a basic smoke test for a web application might involve checking the response status code of the homepage.",
+          "codeSnippet": "if(response.statusCode === 200) {\n    console.log('Smoke test passed');\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Smoke tests are not exhaustive and do not cover all functionalities of an application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Sanity Test",
+      "topic_no": 349,
+      "contents": [
+        {
+          "text": "Sanity testing is a type of software testing that quickly verifies that the most crucial functions of a program work correctly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Sanity testing is often performed after a software build to ensure that the basic functionalities are working as expected.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Sanity testing is a subset of regression testing and focuses on narrow functionality to ensure that the critical components of the application are still working after changes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Sanity testing is not exhaustive and is usually performed quickly to provide immediate feedback on the software's stability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

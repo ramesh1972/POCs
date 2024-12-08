@@ -1,0 +1,433 @@
+{
+  "category": "ASP.NET Web API",
+  "topics": [
+    {
+      "topic": "ASP.NET Web API Basics",
+      "topic_no": 53,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Web API",
+          "codeSnippet": "ASP.NET Web API is a framework for building HTTP services that can be accessed from any client, including browsers and mobile devices. It is built on top of the ASP.NET framework and allows you to build RESTful services using HTTP protocols.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Creating a Web API Controller",
+          "codeSnippet": "To create a Web API controller in ASP.NET, you need to inherit from the ApiController class and define methods that correspond to HTTP verbs (GET, POST, PUT, DELETE) to handle different types of requests.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Routing in Web API",
+          "codeSnippet": "Routing in Web API is used to map HTTP requests to actions in the controller. You can define custom routes using attributes like [Route] to specify the URL pattern for your API endpoints.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Returning Data from Web API",
+          "codeSnippet": "You can return data from a Web API controller using IHttpActionResult or specific return types like HttpResponseMessage, IHttpActionResult<T>, or IHttpActionResult<IEnumerable<T>> depending on the response type.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Handling HTTP Requests and Responses",
+          "codeSnippet": "Web API provides built-in support for handling HTTP requests and responses. You can access request data using HttpRequestMessage and send responses using HttpResponseMessage.",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "RESTful API Design",
+      "topic_no": 162,
+      "contents": [
+        {
+          "text": "What is RESTful API Design?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key principles of RESTful API Design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Use of HTTP methods for CRUD operations",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Stateless communication between client and server",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Resource-based URLs for endpoints",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Use of standard HTTP status codes",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "5. Support for content negotiation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best practices for designing RESTful APIs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Use nouns for resource URIs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Version your APIs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Implement proper error handling",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Provide documentation for API endpoints",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Routing in Web API",
+      "topic_no": 233,
+      "contents": [
+        {
+          "text": "Routing in Web API allows you to define how incoming HTTP requests should be mapped to the appropriate controller actions based on the request URL and HTTP method."
+        },
+        {
+          "text": "Routes in Web API are defined using route attributes, which specify the route template that the request URL should match."
+        },
+        {
+          "text": "Route attributes can be applied at the controller level or at the individual action method level to define specific routes for different actions."
+        },
+        {
+          "text": "Route templates can include placeholders for parameters that will be extracted from the request URL and passed to the controller action method as parameters."
+        },
+        {
+          "text": "Route constraints can be used to further restrict which requests will match a particular route template based on parameter values."
+        },
+        {
+          "text": "Route prefixes can be used to define common route prefixes for a group of related controllers or actions."
+        },
+        {
+          "text": "Route attributes support various route template patterns, including literals, placeholders, optional segments, and constraints."
+        },
+        {
+          "text": "Route attributes can also be combined with HTTP method attributes to define routes that are specific to certain HTTP methods like GET, POST, PUT, DELETE, etc."
+        },
+        {
+          "text": "Route attributes support defining default values for route parameters, which will be used if the parameter is not provided in the request URL."
+        },
+        {
+          "text": "Route attributes can be used to define route names, which can be used to generate URLs based on the route template and parameter values."
+        }
+      ]
+    },
+    {
+      "topic": "Model Binding in Web API",
+      "topic_no": 291,
+      "contents": [
+        {
+          "text": "Model Binding in Web API allows parameters to be bound to complex types in controller actions."
+        },
+        {
+          "text": "Model Binding simplifies the process of extracting data from various sources such as query string, form data, and route data and mapping it to parameters in a Web API controller action."
+        },
+        {
+          "text": "Model Binding in Web API can bind data from the request body, route data, query string parameters, and form data to parameters in controller actions."
+        },
+        {
+          "text": "Model Binding in Web API supports binding to complex types, primitive types, and collections."
+        },
+        {
+          "text": "Model Binding in Web API can be customized using attributes like [FromBody], [FromUri], [FromRoute], [FromQuery], and [ModelBinder]."
+        },
+        {
+          "text": "Model Binding in Web API can handle binding to nested objects and arrays."
+        },
+        {
+          "text": "Model Binding in Web API can handle binding to optional parameters and default values."
+        },
+        {
+          "text": "Model Binding in Web API can handle binding to parameters with validation attributes like [Required], [Range], [RegularExpression], etc."
+        },
+        {
+          "text": "Model Binding in Web API can handle binding to parameters with custom model binders for more complex scenarios."
+        }
+      ]
+    },
+    {
+      "topic": "Input Validation in Web API",
+      "topic_no": 376,
+      "contents": [
+        {
+          "text": "Input validation is a crucial aspect of building secure and reliable Web APIs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common input validation techniques include checking for required fields, data types, lengths, and formats.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In ASP.NET Web API, input validation can be performed using data annotations in model classes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "For example, you can use attributes like [Required], [StringLength], [Range], and [RegularExpression] to validate input data.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Here is an example of a model class with data annotations for input validation:",
+          "codeSnippet": "public class User { [Required] public string Username { get; set; } [StringLength(50)] public string Email { get; set; } [Range(18, 99)] public int Age { get; set; } [RegularExpression(@\"^[0-9]{3}-[0-9]{2}-[0-9]{4}$\")] public string SSN { get; set; } }",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "You can also perform custom input validation by implementing the IValidatableObject interface in your model classes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In the Web API controller actions, you can check the ModelState.IsValid property to ensure that input data is valid before processing it.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "If input validation fails, you can return a BadRequest response with error messages indicating the validation errors.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It is important to validate input data to prevent security vulnerabilities such as injection attacks and data corruption.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Error Handling in Web API",
+      "topic_no": 422,
+      "contents": [
+        {
+          "text": "Introduction to Error Handling in Web API",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of Errors in Web API",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Handling Errors Globally in Web API",
+          "codeSnippet": "public class GlobalExceptionHandler : ExceptionHandler",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Returning Custom Error Responses in Web API",
+          "codeSnippet": "return Request.CreateResponse(HttpStatusCode.InternalServerError, new { error = \"An error occurred\" });",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Logging Errors in Web API",
+          "codeSnippet": "logger.LogError(exception, \"An error occurred\");",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Handling Specific Errors in Web API",
+          "codeSnippet": "if (exception is CustomException)",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Integration Testing Web API",
+      "topic_no": 456,
+      "contents": [
+        {
+          "text": "What is Integration Testing for Web API?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Why is Integration Testing important for Web API?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to perform Integration Testing for ASP.NET Web API?",
+          "codeSnippet": "public void TestGetProductById()",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "What are the common tools used for Integration Testing Web API?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to mock external dependencies in Integration Testing for Web API?",
+          "codeSnippet": "public void TestPostProduct()",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Documenting Web APIs with Swagger",
+      "topic_no": 512,
+      "contents": [
+        {
+          "text": "Introduction to Swagger for documenting Web APIs",
+          "codeSnippet": "Swagger is a tool that helps design, build, document, and consume RESTful web services. It provides a way to describe the structure of APIs so that machines can generate interactive documentation.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Swagger in ASP.NET Web API project",
+          "codeSnippet": "To set up Swagger in an ASP.NET Web API project, you need to install the Swashbuckle NuGet package. This package automatically generates Swagger documentation for your Web API.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Configuring Swagger in ASP.NET Web API project",
+          "codeSnippet": "After installing the Swashbuckle NuGet package, you can configure Swagger in the WebApiConfig.cs file by enabling Swagger and setting up the Swagger UI route.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Adding XML comments for Swagger documentation",
+          "codeSnippet": "To provide detailed descriptions for your API endpoints in Swagger, you can add XML comments to your Web API controllers and models. These comments will be used by Swagger to generate documentation.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Customizing Swagger UI appearance",
+          "codeSnippet": "You can customize the appearance of the Swagger UI by modifying the SwaggerConfig.cs file. This allows you to change the theme, colors, and layout of the Swagger documentation page.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Testing APIs using Swagger UI",
+          "codeSnippet": "Swagger UI provides an interactive interface for testing your APIs directly from the documentation page. You can send requests, view responses, and explore different endpoints without leaving the Swagger UI interface.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "CORS (Cross-Origin Resource Sharing)",
+      "topic_no": 548,
+      "contents": [
+        {
+          "text": "What is CORS in ASP.NET Web API?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Why is CORS important in ASP.NET Web API?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to enable CORS in ASP.NET Web API?",
+          "codeSnippet": "config.EnableCors();",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "How to configure CORS policies in ASP.NET Web API?",
+          "codeSnippet": "var cors = new EnableCorsAttribute(\"http://example.com\", \"*\"); config.EnableCors(cors);",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "How to handle preflight requests in ASP.NET Web API?",
+          "codeSnippet": "[HttpOptions] public HttpResponseMessage Options() { return new HttpResponseMessage(HttpStatusCode.OK); }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "What are the potential security risks of CORS in ASP.NET Web API?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "ASP.NET Web API Filters",
+      "topic_no": 1178,
+      "contents": [
+        {
+          "text": "ASP.NET Web API Filters are used to implement cross-cutting concerns such as logging, exception handling, and authorization in ASP.NET Web API applications.",
+          "codeSnippet": "public class CustomActionFilterAttribute : ActionFilterAttribute { public override void OnActionExecuting(HttpActionContext actionContext) { // Add custom logic here } }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "There are several types of filters in ASP.NET Web API, including Authorization filters, Action filters, Response filters, and Exception filters.",
+          "codeSnippet": "public class CustomAuthorizationFilterAttribute : AuthorizationFilterAttribute { public override void OnAuthorization(HttpActionContext actionContext) { // Add custom authorization logic here } }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Filters in ASP.NET Web API can be applied globally to all controllers or selectively to specific controllers or actions using attributes.",
+          "codeSnippet": "public static void Register(HttpConfiguration config) { config.Filters.Add(new CustomActionFilterAttribute()); }",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "ASP.NET Web API provides built-in filters such as AuthorizeAttribute for implementing authentication and authorization in Web API controllers.",
+          "codeSnippet": "public class ValuesController : ApiController { [Authorize] public IEnumerable<string> Get() { return new string[] { \"value1\", \"value2\" }; } }",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "Implementing HATEOAS in Web API",
+      "topic_no": 1180,
+      "contents": [
+        {
+          "text": "HATEOAS stands for Hypermedia as the Engine of Application State.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "HATEOAS allows clients to interact with a server through hypermedia links received within the responses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In ASP.NET Web API, implementing HATEOAS involves including hypermedia links in the responses to guide clients on possible actions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To implement HATEOAS in Web API, you can use libraries like WebApi.Hal or create custom solutions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "When implementing HATEOAS, each resource representation should include links to related resources or actions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of including HATEOAS links in a Web API response is adding links to navigate to related resources like 'self', 'next', 'prev', etc.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To add HATEOAS links in ASP.NET Web API, you can create custom action filters or response formatters.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "HATEOAS helps in decoupling client and server interactions by providing dynamic navigation through hypermedia links.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

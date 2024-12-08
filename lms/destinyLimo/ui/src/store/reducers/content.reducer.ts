@@ -8,6 +8,8 @@ import { ApiResponseState } from '../states/api.response.state';
 
 //create a dummy initial state
 export const initialApiResposeState: ApiResponseState = {
+  success: false,
+  HttpCode: 0,
   msg: '',
   error: '',
   data: null

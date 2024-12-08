@@ -1,0 +1,197 @@
+{
+  "category": "cmd Scripting",
+  "topics": [
+    {
+      "topic": "Introduction to cmd Scripting",
+      "topic_no": 120,
+      "contents": [
+        {
+          "text": "Introduction to cmd Scripting",
+          "codeSnippet": "Cmd scripting, also known as batch scripting, is a way to automate tasks in Windows operating systems using command prompt commands.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Basic Commands in cmd Scripting",
+          "codeSnippet": "Some basic commands in cmd scripting include 'echo' for displaying messages, 'cd' for changing directories, 'dir' for listing files, and 'cls' for clearing the screen.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Variables in cmd Scripting",
+          "codeSnippet": "Variables in cmd scripting are defined using the set command. For example, 'set myVar=Hello' sets the variable myVar to the value Hello.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Conditional Statements in cmd Scripting",
+          "codeSnippet": "Conditional statements like 'if' and 'else' can be used in cmd scripting to make decisions based on conditions. For example, 'if %var%==1 echo Variable is 1' will display a message if the variable var is equal to 1.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Loops in cmd Scripting",
+          "codeSnippet": "Loops like 'for' and 'while' can be used in cmd scripting to repeat a set of commands multiple times. For example, 'for /L %i in (1,1,10) do echo %i' will display numbers from 1 to 10.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Functions in cmd Scripting",
+          "codeSnippet": "Functions can be created in cmd scripting using labels and the 'call' command. For example, ':myFunction' and 'call :myFunction' will call the function named myFunction.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "cmd Commands and Syntax",
+      "topic_no": 174,
+      "contents": [
+        {
+          "text": "CMD Commands and Syntax",
+          "codeSnippet": "dir /s",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Basic CMD Commands",
+          "codeSnippet": "cd C:\\Users",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Using Wildcards in CMD",
+          "codeSnippet": "dir *.txt",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Piping Output in CMD",
+          "codeSnippet": "dir /s | find \"example.txt\"",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Redirecting Output in CMD",
+          "codeSnippet": "dir > output.txt",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "CMD Scripting Basics",
+          "codeSnippet": "@echo off\nset /p name=Enter your name: \necho Hello, %name%!",
+          "codeLanguage": "cmd"
+        }
+      ]
+    },
+    {
+      "topic": "Variables and Data Types in cmd",
+      "topic_no": 207,
+      "contents": [
+        {
+          "text": "Variables in cmd are used to store data values that can be referenced and manipulated within a script.",
+          "codeSnippet": "set myVar=HelloWorld",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "There are different data types in cmd such as strings, integers, and booleans.",
+          "codeSnippet": "set /a num=10",
+          "codeLanguage": "cmd"
+        }
+      ]
+    },
+    {
+      "topic": "Conditional Statements in cmd",
+      "topic_no": 267,
+      "contents": [
+        {
+          "text": "Conditional statements in cmd are used to make decisions based on certain conditions.",
+          "codeSnippet": "@echo off\nset var=10\nif %var%==10 (\necho Variable is 10\n) else (\necho Variable is not 10\n)",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "The 'if' statement in cmd checks a condition and executes a block of code if the condition is true.",
+          "codeSnippet": "@echo off\nset var=5\nif %var%==5 (\necho Variable is 5\n)",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "The 'if else' statement in cmd allows for an alternative block of code to be executed if the condition is false.",
+          "codeSnippet": "@echo off\nset var=7\nif %var%==5 (\necho Variable is 5\n) else (\necho Variable is not 5\n)",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "The 'if else if' statement in cmd allows for multiple conditions to be checked sequentially.",
+          "codeSnippet": "@echo off\nset var=3\nif %var%==5 (\necho Variable is 5\n) else if %var%==3 (\necho Variable is 3\n)",
+          "codeLanguage": "cmd"
+        }
+      ]
+    },
+    {
+      "topic": "Looping Structures in cmd",
+      "topic_no": 330,
+      "contents": [
+        {
+          "text": "A loop is a programming structure that repeats a sequence of instructions until a specific condition is met.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In cmd scripting, the 'for' loop is commonly used to iterate over a range of values or a list of items.",
+          "codeSnippet": "for %%variable in (set) do command",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "The 'for' loop can be used to iterate over files in a directory.",
+          "codeSnippet": "for %%f in (directory_path\\*) do command",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "The 'for' loop can also be used to iterate over a range of numbers.",
+          "codeSnippet": "for /l %%variable in (start,step,end) do command",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Another looping structure in cmd scripting is the 'while' loop, which repeats a block of code as long as a specified condition is true.",
+          "codeSnippet": "set var=1\n:loop\nif %var% leq 5 (\n    echo %var%\n    set /a var+=1\n    goto loop\n)",
+          "codeLanguage": "cmd"
+        }
+      ]
+    },
+    {
+      "topic": "Functions and Subroutines in cmd",
+      "topic_no": 368,
+      "contents": [
+        {
+          "text": "Functions in cmd are used to group a set of commands together to perform a specific task.",
+          "codeSnippet": "@echo off\n\nREM Define a function\n:myFunction\n    echo Hello, this is a function\n    exit /b\n\nREM Call the function\ncall :myFunction\n",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Subroutines in cmd are similar to functions but do not have a return value.",
+          "codeSnippet": "@echo off\n\nREM Define a subroutine\n:mySubroutine\n    echo Hello, this is a subroutine\n    exit /b\n\nREM Call the subroutine\ncall :mySubroutine\n",
+          "codeLanguage": "cmd"
+        }
+      ]
+    },
+    {
+      "topic": "Advanced cmd Scripting Techniques",
+      "topic_no": 432,
+      "contents": [
+        {
+          "text": "Using variables in cmd scripting to store and manipulate data",
+          "codeSnippet": "set var=Hello World\necho %var%",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Creating and using functions in cmd scripting for code reusability",
+          "codeSnippet": ":myFunction\n    echo Function executed\nexit /b\n\ncall :myFunction",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Implementing conditional statements (if-else) in cmd scripting for decision making",
+          "codeSnippet": "set var=5\nif %var% equ 5 (\n    echo Variable is 5\n) else (\n    echo Variable is not 5\n)",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Using loops (for, while) in cmd scripting for repetitive tasks",
+          "codeSnippet": "for /l %i in (1,1,5) do (\n    echo %i\n)",
+          "codeLanguage": "cmd"
+        },
+        {
+          "text": "Working with arrays in cmd scripting to store multiple values",
+          "codeSnippet": "set fruits=apple orange banana\nfor %%f in (%fruits%) do (\n    echo %%f\n)",
+          "codeLanguage": "cmd"
+        }
+      ]
+    }
+  ]
+}

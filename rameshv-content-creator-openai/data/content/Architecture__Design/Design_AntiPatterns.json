@@ -1,0 +1,117 @@
+{
+  "category": "Design Anti-Patterns",
+  "topics": [
+    {
+      "topic": "Design Anti-Patterns",
+      "topic_no": 141,
+      "contents": [
+        {
+          "text": "Memory Leaks are a common issue in software development where a program fails to release memory that is no longer needed, leading to a gradual loss of available memory over time.",
+          "codeSnippet": "void createMemoryLeak() {\n    int* ptr = new int;\n    // Memory allocated but not released\n}"
+        },
+        {
+          "text": "Magic Strings are hardcoded string values used in the code without being defined as constants or variables. This can lead to code duplication, inconsistency, and makes it harder to maintain and update the codebase.",
+          "codeSnippet": "public class DatabaseConfig { private String url = \"jdbc:mysql://localhost:3306/mydatabase\"; private String username = \"root\"; private String password = \"password123\"; }",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Magic Numbers are hardcoded numerical values used in the code without explanation or context, making the code less maintainable and harder to understand. They are considered a design anti-pattern in software development.",
+          "codeSnippet": "const MAX_ATTEMPTS = 3; // Instead of using '3' directly in the code, a magic number is defined with a meaningful name",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Hard Coding is a design anti-pattern where values that are expected to change are directly written into the code instead of being configurable or parameterized.",
+          "codeSnippet": "public class DatabaseConnection {\n    private String username = \"admin\";\n    private String password = \"password123\";\n\n    public void connect() {\n        // code to establish database connection using username and password\n    }\n}"
+        },
+        {
+          "text": "Resource Leaks are a common issue in software development where system resources such as memory, file handles, or network connections are not properly released after they are no longer needed. This can lead to performance degradation, instability, and potential system crashes.",
+          "codeSnippet": "void resourceLeakExample() {\n    File file = new File(\"example.txt\");\n    FileInputStream fis = new FileInputStream(file);\n    // Process file\n    fis.close();\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Thread Leaks are a common issue in software development where threads are not properly managed, leading to memory leaks or performance degradation. This can happen when threads are not terminated correctly or when they are created unnecessarily.",
+          "codeSnippet": "public class ThreadLeakExample {\n    public static void main(String[] args) {\n        for (int i = 0; i < 1000; i++) {\n            new Thread(() -> {\n                while (true) {\n                    // Thread work\n                }\n            }).start();\n        }\n    }\n}"
+        },
+        {
+          "text": "Dead code refers to sections of a program's source code that are no longer used or executed. This can happen due to changes in requirements, updates, or refactoring, leaving behind redundant or obsolete code.",
+          "codeSnippet": "function calculateArea(length, width) { \n   let area = length * width; \n   return area; \n }"
+        },
+        {
+          "text": "Code smells are certain patterns in code that may indicate a deeper problem and can negatively impact the quality and maintainability of the software. They are often considered as warning signs that the code may need refactoring or restructuring.",
+          "codeSnippet": "public void calculateTotalPrice(List<Item> items) {\n    double totalPrice = 0;\n    for (Item item : items) {\n        totalPrice += item.getPrice();\n    }\n    System.out.println(\"Total Price: \" + totalPrice);\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Resource Starvation is a design anti-pattern where a system lacks sufficient resources to perform its tasks efficiently, leading to performance degradation or failure. This can occur due to poor resource allocation, inefficient resource utilization, or inadequate capacity planning.",
+          "codeSnippet": "public class ResourceStarvationExample {\n    public static void main(String[] args) {\n        while (true) {\n            // Code logic that consumes excessive resources\n        }\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Circular Dependency is a design anti-pattern in software development where two or more modules depend on each other directly or indirectly, creating a loop that makes it difficult to understand and maintain the codebase.",
+          "codeSnippet": "class A {\n    private B b;\n    public A() {\n        b = new B();\n    }\n}\nclass B {\n    private A a;\n    public B() {\n        a = new A();\n    }\n}"
+        },
+        {
+          "text": "File Leaks are a design anti-pattern in software development where sensitive or confidential information is unintentionally exposed or leaked through files or logs. This can happen when developers inadvertently include sensitive data such as passwords, API keys, or personal information in plain text files or logs, making it accessible to unauthorized users or attackers.",
+          "codeSnippet": "To prevent file leaks, developers should avoid hardcoding sensitive information in files or logs. Instead, they should use secure methods such as environment variables, configuration files with restricted access, or encryption to store and access sensitive data securely.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Resource Contention is a design anti-pattern where multiple components or processes compete for the same limited resources, leading to performance degradation or system failures.",
+          "codeSnippet": "In a multi-threaded application, if multiple threads are contending for access to a shared resource without proper synchronization mechanisms, it can lead to resource contention issues.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "God Object is a design anti-pattern in software development where a single class or module in a system performs all or most of the tasks, violating the principle of separation of concerns.",
+          "codeSnippet": "class GodObject {\n    private $data;\n\n    public function processData($input) {\n        // perform all data processing tasks here\n    }\n\n    public function generateReport() {\n        // generate report using processed data\n    }\n\n    public function sendNotification() {\n        // send notifications based on processed data\n    }\n}"
+        },
+        {
+          "text": "Code duplication is a design anti-pattern where the same code or logic is repeated in multiple places within a software system. This can lead to maintenance issues, as any changes or updates to the duplicated code must be made in multiple locations, increasing the chances of introducing bugs and inconsistencies.",
+          "codeSnippet": "function calculateArea(radius) { \n  return Math.PI * radius * radius; \n} \n\nfunction calculateVolume(radius, height) { \n  return Math.PI * radius * radius * height; \n}"
+        },
+        {
+          "text": "Resource Exhaustion is a design anti-pattern where a system consumes all available resources, such as memory, CPU, or network bandwidth, leading to performance degradation or system failure. This can occur due to inefficient resource management, lack of scalability planning, or excessive resource utilization.",
+          "codeSnippet": "def allocate_memory(size):\n    memory = []\n    for i in range(size):\n        memory.append(i)\n    return memory\n\nallocated_memory = allocate_memory(1000000)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Spaghetti Code is a term used to describe source code that has a complex and tangled structure, making it difficult to understand and maintain. It often occurs when code is written without proper organization or planning, resulting in a convoluted mess of interdependent and hard-to-follow logic.",
+          "codeSnippet": "function spaghettiCode() {\n    if (condition1) {\n        // code block\n    } else {\n        if (condition2) {\n            // code block\n        } else {\n            if (condition3) {\n                // code block\n            } else {\n                // code block\n            }\n        }\n    }\n}"
+        },
+        {
+          "text": "Connection Leaks are a common design anti-pattern in software development where connections to external resources such as databases, APIs, or network sockets are not properly closed or released after use. This can lead to resource exhaustion, performance issues, and potential security vulnerabilities.",
+          "codeSnippet": "try (Connection connection = DriverManager.getConnection(url, username, password)) {\n    // execute SQL queries\n} catch (SQLException e) {\n    // handle exception\n} finally {\n    if (connection != null) {\n        try {\n            connection.close();\n        } catch (SQLException e) {\n            // handle exception\n        }\n    }\n}"
+        },
+        {
+          "text": "Resource Deadlocks occur when two or more processes are waiting for a resource that is held by another process, resulting in a deadlock situation where none of the processes can proceed.",
+          "codeSnippet": "public class DeadlockExample {\n    private static final Object resource1 = new Object();\n    private static final Object resource2 = new Object();\n\n    public static void main(String[] args) {\n        Thread thread1 = new Thread(() -> {\n            synchronized (resource1) {\n                System.out.println(\"Thread 1: Locked resource 1\");\n                try {\n                    Thread.sleep(100);\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n                synchronized (resource2) {\n                    System.out.println(\"Thread 1: Locked resource 2\");\n                }\n            }\n        });\n\n        Thread thread2 = new Thread(() -> {\n            synchronized (resource2) {\n                System.out.println(\"Thread 2: Locked resource 2\");\n                try {\n                    Thread.sleep(100);\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n                synchronized (resource1) {\n                    System.out.println(\"Thread 2: Locked resource 1\");\n                }\n            }\n        });\n\n        thread1.start();\n        thread2.start();\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Singleton Pattern",
+          "codeSnippet": "public class Singleton {\n    private static Singleton instance;\n\n    private Singleton() {}\n\n    public static Singleton getInstance() {\n        if (instance == null) {\n            instance = new Singleton();\n        }\n        return instance;\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "God Object",
+          "codeSnippet": "public class GodObject {\n    private int data1;\n    private String data2;\n    private boolean data3;\n    // getters and setters\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Spaghetti Code",
+          "codeSnippet": "public void doSomething() {\n    // many lines of code here\n    if (condition1) {\n        // more code\n        if (condition2) {\n            // more code\n        }\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Circular Dependency",
+          "codeSnippet": "public class A {\n    private B b;\n    // constructor, methods\n}\n\npublic class B {\n    private A a;\n    // constructor, methods\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Magic Numbers",
+          "codeSnippet": "public class Calculator {\n    public double calculateArea(int shape, double dimension) {\n        if (shape == 1) {\n            return Math.PI * dimension * dimension;\n        } else if (shape == 2) {\n            return dimension * dimension;\n        }\n        return 0;\n    }\n}",
+          "codeLanguage": "Java"
+        }
+      ]
+    }
+  ]
+}

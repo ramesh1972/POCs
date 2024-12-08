@@ -1,0 +1,87 @@
+{
+  "category": "Compliance",
+  "topics": [
+    {
+      "topic": "GDPR",
+      "topic_no": 21,
+      "contents": [
+        {
+          "text": "Introduction to GDPR",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key principles of GDPR including data minimization, purpose limitation, and accountability",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data subject rights under GDPR such as the right to access, rectification, and erasure",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data protection impact assessments (DPIAs) and when they are required under GDPR",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "GDPR compliance requirements for data controllers and processors",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "GDPR penalties for non-compliance, including fines of up to 4% of annual global turnover or €20 million",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data breach notification requirements under GDPR, including the 72-hour notification rule",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "GDPR's extraterritorial scope and how it applies to organizations outside the EU",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Role of Data Protection Officers (DPOs) under GDPR and when their appointment is mandatory",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "HIPAA",
+      "topic_no": 74,
+      "contents": [
+        {
+          "text": "What is HIPAA?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Why is HIPAA important for healthcare organizations?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "What are the key components of HIPAA compliance?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How can healthcare organizations ensure HIPAA compliance?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "What are the consequences of non-compliance with HIPAA?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

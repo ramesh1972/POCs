@@ -1,0 +1,212 @@
+{
+  "category": "Data Science",
+  "topics": [
+    {
+      "topic": "Data Planning and Strategy",
+      "topic_no": 9,
+      "contents": [
+        {
+          "text": "Understanding the importance of data planning and strategy in AI/ML projects"
+        },
+        {
+          "text": "Identifying business goals and objectives to align data planning and strategy"
+        },
+        {
+          "text": "Creating a data roadmap to outline the steps for data collection, processing, and analysis"
+        },
+        {
+          "text": "Implementing data governance policies to ensure data quality and security"
+        },
+        {
+          "text": "Selecting appropriate data sources and data collection methods for AI/ML models"
+        },
+        {
+          "text": "Utilizing data visualization techniques to communicate insights and findings effectively"
+        },
+        {
+          "text": "Evaluating and selecting the right AI/ML algorithms based on the project requirements"
+        },
+        {
+          "text": "Measuring the success of AI/ML projects through key performance indicators (KPIs)"
+        },
+        {
+          "text": "Iterating and refining data planning and strategy based on feedback and results"
+        }
+      ]
+    },
+    {
+      "topic": "Data Mining",
+      "topic_no": 103,
+      "contents": [
+        {
+          "text": "Introduction to Data Mining",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Preprocessing in Data Mining",
+          "codeSnippet": "from sklearn.preprocessing import StandardScaler\nscaler = StandardScaler()\nX_train = scaler.fit_transform(X_train)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Association Rule Mining",
+          "codeSnippet": "from mlxtend.frequent_patterns import apriori\nfrequent_itemsets = apriori(df, min_support=0.5, use_colnames=True)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Classification in Data Mining",
+          "codeSnippet": "from sklearn.ensemble import RandomForestClassifier\nclf = RandomForestClassifier()\nclf.fit(X_train, y_train)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Clustering in Data Mining",
+          "codeSnippet": "from sklearn.cluster import KMeans\nkmeans = KMeans(n_clusters=3)\nkmeans.fit(X)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Regression in Data Mining",
+          "codeSnippet": "from sklearn.linear_model import LinearRegression\nreg = LinearRegression()\nreg.fit(X_train, y_train)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Evaluation Metrics in Data Mining",
+          "codeSnippet": "from sklearn.metrics import accuracy_score\ny_pred = clf.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)",
+          "codeLanguage": "Python"
+        }
+      ]
+    },
+    {
+      "topic": "Data Engineering",
+      "topic_no": 177,
+      "contents": [
+        {
+          "text": "Introduction to Data Engineering",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Responsibilities of a Data Engineer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Engineering Tools and Technologies",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Modeling and Database Design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ETL (Extract, Transform, Load) Processes",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Warehousing and Data Lakes",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Big Data Technologies in Data Engineering",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Quality and Data Governance",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data Pipelines and Workflow Management",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Scalability and Performance Optimization in Data Engineering",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Data Analysis & Models",
+      "topic_no": 289,
+      "contents": [
+        {
+          "text": "Introduction to Data Analysis & Models",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exploratory Data Analysis (EDA) techniques",
+          "codeSnippet": "import pandas as pd\nimport matplotlib.pyplot as plt\n\n# Load the data\ndata = pd.read_csv('data.csv')\n\n# Summary statistics\nprint(data.describe())\n\n# Data visualization\nplt.scatter(data['feature1'], data['feature2'])\nplt.xlabel('Feature 1')\nplt.ylabel('Feature 2')\nplt.show()",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Building predictive models using Machine Learning algorithms",
+          "codeSnippet": "from sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score\n\n# Split data into training and testing sets\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\n# Initialize the model\nmodel = RandomForestClassifier()\n\n# Train the model\nmodel.fit(X_train, y_train)\n\n# Make predictions\npredictions = model.predict(X_test)\n\n# Evaluate the model\naccuracy = accuracy_score(y_test, predictions)\nprint('Accuracy:', accuracy)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Model evaluation and validation techniques",
+          "codeSnippet": "from sklearn.metrics import confusion_matrix, classification_report\n\n# Confusion matrix\nprint(confusion_matrix(y_test, predictions))\n\n# Classification report\nprint(classification_report(y_test, predictions))",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Hyperparameter tuning for optimizing model performance",
+          "codeSnippet": "from sklearn.model_selection import GridSearchCV\n\n# Define hyperparameters grid\nparam_grid = {'n_estimators': [50, 100, 200], 'max_depth': [None, 5, 10]}\n\n# Initialize GridSearchCV\ngrid_search = GridSearchCV(RandomForestClassifier(), param_grid, cv=5)\n\n# Fit the model\ngrid_search.fit(X_train, y_train)\n\n# Get the best parameters\nbest_params = grid_search.best_params_\nprint('Best Parameters:', best_params)",
+          "codeLanguage": "Python"
+        }
+      ]
+    },
+    {
+      "topic": "Data Visualization & Operationalization",
+      "topic_no": 351,
+      "contents": [
+        {
+          "text": "Introduction to Data Visualization",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of Data Visualization",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Data Visualization Tools",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Data Visualization",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Operationalization in Data Science",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Data Visualization in Python using Matplotlib",
+          "codeSnippet": "import matplotlib.pyplot as plt\n\nx = [1, 2, 3, 4, 5]\ny = [10, 20, 15, 25, 30]\n\nplt.plot(x, y)\nplt.xlabel('X-axis')\nplt.ylabel('Y-axis')\nplt.title('Simple Line Plot')\nplt.show()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Creating Interactive Data Visualizations with Plotly",
+          "codeSnippet": "import plotly.express as px\n\ndf = px.data.iris()\nfig = px.scatter(df, x='sepal_width', y='sepal_length', color='species')\nfig.show()",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Operationalizing Machine Learning Models in Production",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

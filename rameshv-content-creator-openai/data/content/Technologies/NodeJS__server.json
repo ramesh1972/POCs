@@ -1,0 +1,382 @@
+{
+  "category": "NodeJS - server",
+  "topics": [
+    {
+      "topic": "Node.js Basics",
+      "topic_no": 111,
+      "contents": [
+        {
+          "text": "What is Node.js?",
+          "codeSnippet": "Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to run JavaScript code outside of a web browser. It is built on Chrome's V8 JavaScript engine and provides a rich library of modules to simplify web development.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "How to install Node.js?",
+          "codeSnippet": "To install Node.js, you can download the installer from the official Node.js website and follow the installation instructions for your operating system. Alternatively, you can use a package manager like npm or yarn to install Node.js.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a simple Node.js server",
+          "codeSnippet": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.statusCode = 200;\n  res.setHeader('Content-Type', 'text/plain');\n  res.end('Hello, World!');\n});\n\nserver.listen(3000, 'localhost', () => {\n  console.log('Server running at http://localhost:3000/');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Handling HTTP requests in Node.js",
+          "codeSnippet": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  if (req.url === '/') {\n    res.statusCode = 200;\n    res.setHeader('Content-Type', 'text/plain');\n    res.end('Hello, World!');\n  } else {\n    res.statusCode = 404;\n    res.end('Page not found');\n  }\n});\n\nserver.listen(3000, 'localhost', () => {\n  console.log('Server running at http://localhost:3000/');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Using npm packages in Node.js",
+          "codeSnippet": "To use npm packages in Node.js, you can install them using the npm command-line tool. For example, to install the 'express' package, you can run 'npm install express'. Once installed, you can require the package in your Node.js code using 'require('express')'.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "NPM (Node Package Manager)",
+      "topic_no": 153,
+      "contents": [
+        {
+          "text": "NPM (Node Package Manager) is a package manager for Node.js applications that allows developers to easily manage and install dependencies.",
+          "codeSnippet": "npm install package-name"
+        },
+        {
+          "text": "NPM is used to install, update, and manage packages and dependencies for Node.js projects.",
+          "codeSnippet": "npm update package-name"
+        },
+        {
+          "text": "NPM provides a command-line interface for interacting with packages and managing project dependencies.",
+          "codeSnippet": "npm init"
+        },
+        {
+          "text": "NPM allows developers to publish and share their own packages with the community.",
+          "codeSnippet": "npm publish"
+        }
+      ]
+    },
+    {
+      "topic": "Express.js Basics",
+      "topic_no": 263,
+      "contents": [
+        {
+          "text": "What is Express.js?",
+          "codeSnippet": "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "How to install Express.js?",
+          "codeSnippet": "npm install express",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a basic Express.js server",
+          "codeSnippet": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello, World!');\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on http://localhost:3000');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Handling different HTTP methods in Express.js",
+          "codeSnippet": "app.get('/', (req, res) => {\n  res.send('GET request received');\n});\n\napp.post('/', (req, res) => {\n  res.send('POST request received');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Middleware in Express.js",
+          "codeSnippet": "app.use(express.json());\napp.use(express.urlencoded({ extended: true }));\napp.use(logger);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Routing in Express.js",
+          "codeSnippet": "app.get('/about', (req, res) => {\n  res.send('About Us page');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Error handling in Express.js",
+          "codeSnippet": "app.use((err, req, res, next) => {\n  console.error(err.stack);\n  res.status(500).send('Something broke!');\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Express Middleware",
+      "topic_no": 328,
+      "contents": [
+        {
+          "text": "Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.",
+          "codeSnippet": "const middlewareFunction = (req, res, next) => { // middleware logic here };"
+        },
+        {
+          "text": "Middleware functions can perform tasks such as executing any code, making changes to the request and the response objects, ending the request-response cycle, and calling the next middleware function in the stack.",
+          "codeSnippet": "const middlewareFunction = (req, res, next) => { // middleware logic here };"
+        },
+        {
+          "text": "Middleware functions can be used to modify the request or response objects, end the request-response cycle, call the next middleware function in the stack, or skip the remaining middleware functions in the stack.",
+          "codeSnippet": "const middlewareFunction = (req, res, next) => { // middleware logic here };"
+        },
+        {
+          "text": "Middleware functions are added to the Express application using the 'use' method, and they can be added globally or locally to specific routes.",
+          "codeSnippet": "app.use(middlewareFunction);"
+        },
+        {
+          "text": "Middleware functions can be chained together by calling 'next()' within each middleware function to pass control to the next middleware function in the stack.",
+          "codeSnippet": "const middlewareFunction1 = (req, res, next) => { // middleware logic here; next(); }; const middlewareFunction2 = (req, res, next) => { // middleware logic here; next(); };"
+        }
+      ]
+    },
+    {
+      "topic": "Express Routing",
+      "topic_no": 397,
+      "contents": [
+        {
+          "text": "What is Express Routing in Node.js?",
+          "codeSnippet": "Express routing refers to the mechanism by which incoming requests are handled and routed to the appropriate endpoint in an Express application. It involves defining routes that map specific HTTP methods and URL patterns to corresponding handler functions."
+        },
+        {
+          "text": "How to define routes in Express?",
+          "codeSnippet": "app.get('/users', function(req, res) {\n  res.send('GET request to the homepage')\n});\napp.post('/users', function(req, res) {\n  res.send('POST request to the homepage')\n});\napp.put('/users/:id', function(req, res) {\n  res.send('PUT request to the homepage')\n});\napp.delete('/users/:id', function(req, res) {\n  res.send('DELETE request to the homepage')\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "How to handle dynamic routes in Express?",
+          "codeSnippet": "app.get('/users/:id', function(req, res) {\n  res.send('User ID: ' + req.params.id);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "How to use middleware in Express routing?",
+          "codeSnippet": "app.use(function(req, res, next) {\n  console.log('Time:', Date.now());\n  next();\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "How to handle route parameters in Express?",
+          "codeSnippet": "app.get('/users/:id', function(req, res) {\n  res.send('User ID: ' + req.params.id);\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js Streams",
+      "topic_no": 450,
+      "contents": [
+        {
+          "text": "Introduction to Node.js Streams",
+          "codeSnippet": "const fs = require('fs');\nconst readStream = fs.createReadStream('example.txt');\nreadStream.on('data', (chunk) => {\n    console.log(chunk);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Types of Streams in Node.js",
+          "codeSnippet": "const fs = require('fs');\nconst readStream = fs.createReadStream('example.txt');\nconst writeStream = fs.createWriteStream('output.txt');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Piping Streams in Node.js",
+          "codeSnippet": "const fs = require('fs');\nconst readStream = fs.createReadStream('example.txt');\nconst writeStream = fs.createWriteStream('output.txt');\nreadStream.pipe(writeStream);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Chaining Streams in Node.js",
+          "codeSnippet": "const fs = require('fs');\nconst zlib = require('zlib');\nconst readStream = fs.createReadStream('example.txt');\nconst writeStream = fs.createWriteStream('output.txt');\nconst gzip = zlib.createGzip();\nreadStream.pipe(gzip).pipe(writeStream);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Handling Errors in Node.js Streams",
+          "codeSnippet": "const fs = require('fs');\nconst readStream = fs.createReadStream('example.txt');\nreadStream.on('error', (err) => {\n    console.error(err);\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js Buffers",
+      "topic_no": 497,
+      "contents": [
+        {
+          "content": "Buffers in Node.js are used to represent binary data in the form of a sequence of bytes. They are similar to arrays of integers but allow you to work with raw binary data directly.",
+          "codeSnippet": "const buf = Buffer.from('hello', 'utf8');"
+        },
+        {
+          "content": "Buffers can be created using various methods in Node.js, such as Buffer.from(), Buffer.alloc(), and Buffer.allocUnsafe().",
+          "codeSnippet": "const buf1 = Buffer.from([0x62, 0x75, 0x66, 0x66, 0x65, 0x72]);"
+        },
+        {
+          "content": "Buffers can be manipulated using methods like buf.write(), buf.toString(), buf.slice(), buf.copy(), etc.",
+          "codeSnippet": "const buf2 = Buffer.alloc(5);"
+        },
+        {
+          "content": "Buffers can be compared using buf.compare() method to check for equality or order.",
+          "codeSnippet": "const buf3 = Buffer.allocUnsafe(10);"
+        },
+        {
+          "content": "Buffers can be converted to JSON format using buf.toJSON() method.",
+          "codeSnippet": "const buf4 = Buffer.alloc(8, 'aGVsbG8gd29ybGQ=', 'base64');"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js Modules",
+      "topic_no": 522,
+      "contents": [
+        {
+          "text": "Node.js modules are reusable pieces of code that encapsulate related functionality.",
+          "codeSnippet": "const myModule = require('./myModule');"
+        },
+        {
+          "text": "Node.js provides built-in modules such as 'http', 'fs', 'path', 'util', etc., which can be used to perform various tasks.",
+          "codeSnippet": "const http = require('http');"
+        },
+        {
+          "text": "Modules in Node.js can be created using the 'module.exports' object to expose functions, objects, or primitive values.",
+          "codeSnippet": "module.exports = { myFunction: () => { return 'Hello World'; } };"
+        },
+        {
+          "text": "Node.js modules can be imported using the 'require' function, which loads the module and returns its 'exports' object.",
+          "codeSnippet": "const myModule = require('./myModule');"
+        },
+        {
+          "text": "Node.js allows you to create your own modules and reuse them across different parts of your application.",
+          "codeSnippet": "const myModule = require('./myModule');"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js Debugging",
+      "topic_no": 577,
+      "contents": [
+        {
+          "text": "Introduction to Node.js Debugging",
+          "codeSnippet": "Node.js debugging is the process of identifying and fixing errors or bugs in Node.js applications. It involves using various tools and techniques to trace, inspect, and troubleshoot code to ensure its proper functionality.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Common Debugging Techniques in Node.js",
+          "codeSnippet": "1. Logging: Adding console.log statements to track the flow of the program.\n2. Using the Node.js debugger: Utilizing the built-in debugger by running the application with the inspect flag.\n3. Using third-party debuggers: Tools like Visual Studio Code, Chrome DevTools, or Node Inspector can be used for debugging.\n4. Inspecting variables: Checking the values of variables at different points in the code to identify issues.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Debugging with console.log",
+          "codeSnippet": "function add(a, b) {\n    console.log('Adding numbers:', a, b);\n    return a + b;\n}\n\nconst result = add(5, 10);\nconsole.log('Result:', result);",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Debugging with Node.js Debugger",
+          "codeSnippet": "To debug a Node.js application using the built-in debugger:\n1. Add 'debugger;' statements in the code where you want to pause execution.\n2. Run the application with the inspect flag: node inspect app.js\n3. Use commands like 'c' to continue, 'n' for next, 'repl' to inspect variables, etc.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Debugging with Visual Studio Code",
+          "codeSnippet": "1. Install the 'Debugger for Chrome' extension in VS Code.\n2. Set breakpoints in the code by clicking on the line number.\n3. Start debugging by pressing F5 or using the debug panel.\n4. Use the debug console to inspect variables and step through the code.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js Error Handling",
+      "topic_no": 612,
+      "contents": [
+        {
+          "text": "Introduction to Node.js Error Handling",
+          "codeSnippet": "Node.js applications may encounter errors during execution, such as network issues, file system errors, or programming bugs. Proper error handling is crucial to ensure the application's stability and reliability. Node.js provides mechanisms to catch and handle errors effectively."
+        },
+        {
+          "text": "Using try-catch for Synchronous Code",
+          "codeSnippet": "try {\n    // Synchronous code that may throw an error\n} catch (error) {\n    // Handle the error here\n}"
+        },
+        {
+          "text": "Using Promises for Asynchronous Code",
+          "codeSnippet": "someAsyncFunction()\n    .then(data => {\n        // Handle success\n    })\n    .catch(error => {\n        // Handle error\n    });"
+        },
+        {
+          "text": "Using async/await for Asynchronous Code",
+          "codeSnippet": "try {\n    const data = await someAsyncFunction();\n    // Handle success\n} catch (error) {\n    // Handle error\n}"
+        },
+        {
+          "text": "Error Object in Node.js",
+          "codeSnippet": "const error = new Error('An error occurred');\nconsole.error(error.message);\nconsole.error(error.stack);"
+        },
+        {
+          "text": "Custom Error Handling Middleware in Express",
+          "codeSnippet": "app.use((err, req, res, next) => {\n    // Custom error handling logic\n    res.status(500).send('Internal Server Error');\n});"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js RESTful APIs",
+      "topic_no": 668,
+      "contents": [
+        {
+          "text": "Introduction to Node.js RESTful APIs",
+          "codeSnippet": "Node.js is a popular runtime environment that allows you to run JavaScript on the server-side. RESTful APIs are a way of building web services that adhere to the principles of REST (Representational State Transfer). Combining Node.js with RESTful APIs allows developers to create scalable and flexible server-side applications.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up a Node.js project for RESTful APIs",
+          "codeSnippet": "To create a Node.js project for building RESTful APIs, you can start by initializing a new project using npm. You will need to install dependencies such as Express, a popular Node.js framework for building web applications. Additionally, you may want to use tools like body-parser for handling incoming request data.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a basic RESTful API endpoint in Node.js",
+          "codeSnippet": "const express = require('express');\nconst app = express();\n\napp.get('/api/users', (req, res) => {\n  res.json({\n    message: 'Get all users',\n    data: []\n  });\n});\n\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Handling HTTP methods in Node.js RESTful APIs",
+          "codeSnippet": "In a Node.js RESTful API, you can handle different HTTP methods like GET, POST, PUT, and DELETE to perform various operations on resources. For example, you can use app.post() to handle POST requests for creating new resources or app.put() to handle PUT requests for updating existing resources.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Implementing CRUD operations in Node.js RESTful APIs",
+          "codeSnippet": "const express = require('express');\nconst app = express();\n\n// Create\napp.post('/api/users', (req, res) => {\n  // Logic to create a new user\n});\n\n// Read\napp.get('/api/users/:id', (req, res) => {\n  // Logic to get a user by ID\n});\n\n// Update\napp.put('/api/users/:id', (req, res) => {\n  // Logic to update a user by ID\n});\n\n// Delete\napp.delete('/api/users/:id', (req, res) => {\n  // Logic to delete a user by ID\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Error handling in Node.js RESTful APIs",
+          "codeSnippet": "When building Node.js RESTful APIs, it's essential to implement error handling to gracefully handle errors that may occur during API operations. You can use middleware functions in Express to catch and process errors, ensuring a robust and reliable API.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js Websockets",
+      "topic_no": 697,
+      "contents": [
+        {
+          "text": "Introduction to Node.js Websockets",
+          "codeSnippet": "const WebSocket = require('ws');\nconst wss = new WebSocket.Server({ port: 8080 });\nwss.on('connection', function connection(ws) {\n  ws.on('message', function incoming(message) {\n    console.log('received: %s', message);\n  });\n  ws.send('Hello, Client!');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Setting up a WebSocket Server in Node.js",
+          "codeSnippet": "const WebSocket = require('ws');\nconst wss = new WebSocket.Server({ port: 8080 });\nwss.on('connection', function connection(ws) {\n  ws.on('message', function incoming(message) {\n    console.log('received: %s', message);\n  });\n  ws.send('Hello, Client!');\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Sending and Receiving Messages with Websockets in Node.js",
+          "codeSnippet": "const WebSocket = require('ws');\nconst wss = new WebSocket.Server({ port: 8080 });\nwss.on('connection', function connection(ws) {\n  ws.on('message', function incoming(message) {\n    console.log('received: %s', message);\n  });\n  ws.send('Hello, Client!');\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "Node.js Security Best Practices",
+      "topic_no": 723,
+      "contents": [
+        {
+          "text": "Enable CORS (Cross-Origin Resource Sharing) to restrict access to your Node.js server from unauthorized domains.",
+          "codeSnippet": "const express = require('express');\nconst cors = require('cors');\nconst app = express();\napp.use(cors());"
+        },
+        {
+          "text": "Implement input validation to prevent common security vulnerabilities like SQL injection and XSS attacks.",
+          "codeSnippet": "const { body, validationResult } = require('express-validator');\napp.post('/user', [\n  body('username').isLength({ min: 5 }),\n  body('email').isEmail()\n], (req, res) => {\n  const errors = validationResult(req);\n  if (!errors.isEmpty()) {\n    return res.status(400).json({ errors: errors.array() });\n  }\n  // Process the request\n});"
+        },
+        {
+          "text": "Use Helmet to set HTTP headers that can help protect your app from well-known web vulnerabilities.",
+          "codeSnippet": "const helmet = require('helmet');\napp.use(helmet());"
+        },
+        {
+          "text": "Avoid using deprecated or vulnerable dependencies by regularly updating your Node.js packages.",
+          "codeSnippet": "npm audit\nnpm update"
+        },
+        {
+          "text": "Implement rate limiting to prevent abuse and protect your server from DDoS attacks.",
+          "codeSnippet": "const rateLimit = require('express-rate-limit');\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 100 // limit each IP to 100 requests per windowMs\n});\napp.use(limiter);"
+        }
+      ]
+    }
+  ]
+}

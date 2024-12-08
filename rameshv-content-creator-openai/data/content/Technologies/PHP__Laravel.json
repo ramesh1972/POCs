@@ -1,0 +1,481 @@
+{
+  "category": "PHP – Laravel",
+  "topics": [
+    {
+      "topic": "Laravel Basics",
+      "topic_no": 26,
+      "contents": [
+        {
+          "text": "Introduction to Laravel",
+          "codeSnippet": "<?php echo 'Hello, Laravel!'; ?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Setting up a Laravel Project",
+          "codeSnippet": "composer create-project --prefer-dist laravel/laravel myproject",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating Routes in Laravel",
+          "codeSnippet": "Route::get('/hello', function () { return 'Hello, World!'; });",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Creating Controllers in Laravel",
+          "codeSnippet": "php artisan make:controller HelloController",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating Views in Laravel",
+          "codeSnippet": "return view('hello');",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Database Migrations in Laravel",
+          "codeSnippet": "php artisan make:migration create_users_table",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Eloquent ORM in Laravel",
+          "codeSnippet": "$users = User::all();",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Form Validation in Laravel",
+          "codeSnippet": "$validatedData = $request->validate(['name' => 'required']);",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "CRUD Operations in Laravel",
+          "codeSnippet": "php artisan make:model Post -mcr",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Authentication in Laravel",
+          "codeSnippet": "php artisan make:auth",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Routing",
+      "topic_no": 134,
+      "contents": [
+        {
+          "text": "Routing in Laravel allows you to define the routes for your application, specifying which HTTP methods and URIs should trigger specific actions.",
+          "codeSnippet": "Route::get('/example', function () { return 'This is an example route'; });"
+        },
+        {
+          "text": "Routes in Laravel are typically defined in the routes/web.php file for web routes and routes/api.php for API routes.",
+          "codeSnippet": "Route::post('/submit-form', 'FormController@submit');"
+        },
+        {
+          "text": "Laravel provides a variety of route methods such as get, post, put, delete, patch, options, and match to handle different HTTP verbs.",
+          "codeSnippet": "Route::match(['get', 'post'], '/profile', function () { return 'This route accepts both GET and POST requests'; });"
+        },
+        {
+          "text": "Route parameters in Laravel allow you to capture segments of the URI within your route and pass them as arguments to your controller or closure.",
+          "codeSnippet": "Route::get('/user/{id}', function ($id) { return 'User ID: ' . $id; });"
+        },
+        {
+          "text": "Named routes in Laravel provide a convenient way to generate URLs or redirects for specific routes using their assigned names.",
+          "codeSnippet": "Route::get('/dashboard', 'DashboardController@index')->name('dashboard');"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Controllers",
+      "topic_no": 287,
+      "contents": [
+        {
+          "text": "Introduction to Laravel Controllers",
+          "codeSnippet": "<?php\nnamespace App\\Http\\Controllers;\nuse App\\Models\\User;\nclass UserController extends Controller\n{\n    public function index()\n    {\n        $users = User::all();\n        return view('users.index', ['users' => $users]);\n    }\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Creating a New Controller in Laravel",
+          "codeSnippet": "<?php\nphp artisan make:controller UserController",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Defining Controller Actions in Laravel",
+          "codeSnippet": "<?php\npublic function show($id)\n{\n    $user = User::find($id);\n    return view('users.show', ['user' => $user]);\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Passing Data to Views from Controllers in Laravel",
+          "codeSnippet": "<?php\npublic function index()\n{\n    $users = User::all();\n    return view('users.index', ['users' => $users]);\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Middleware in Laravel Controllers",
+          "codeSnippet": "<?php\npublic function __construct()\n{\n    $this->middleware('auth');\n}",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Blade Templating",
+      "topic_no": 336,
+      "contents": [
+        {
+          "text": "Introduction to Laravel Blade Templating",
+          "codeSnippet": "<?php echo $variable; ?>",
+          "codeLanguage": "PHP"
+        },
+        {
+          "text": "Creating a Blade Template",
+          "codeSnippet": "@extends('layouts.app')",
+          "codeLanguage": "Blade"
+        },
+        {
+          "text": "Including Sub-Views in Blade Templates",
+          "codeSnippet": "@include('partials.header')",
+          "codeLanguage": "Blade"
+        },
+        {
+          "text": "Blade Template Conditionals",
+          "codeSnippet": "@if($condition) ... @endif",
+          "codeLanguage": "Blade"
+        },
+        {
+          "text": "Looping in Blade Templates",
+          "codeSnippet": "@foreach($items as $item) ... @endforeach",
+          "codeLanguage": "Blade"
+        },
+        {
+          "text": "Blade Template Layouts and Sections",
+          "codeSnippet": "@yield('content')",
+          "codeLanguage": "Blade"
+        },
+        {
+          "text": "Blade Template Comments",
+          "codeSnippet": "{!! /* This is a comment */ !!}",
+          "codeLanguage": "Blade"
+        },
+        {
+          "text": "Using Blade Directives",
+          "codeSnippet": "@php ... @endphp",
+          "codeLanguage": "Blade"
+        },
+        {
+          "text": "Blade Template Inheritance",
+          "codeSnippet": "@section('content') ... @endsection",
+          "codeLanguage": "Blade"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Eloquent ORM Basics",
+      "topic_no": 402,
+      "contents": [
+        {
+          "text": "Introduction to Laravel Eloquent ORM",
+          "codeSnippet": "<?php\nnamespace App;\nuse Illuminate\\Database\\Eloquent\\Model;\nclass User extends Model\n{\n    // User model definition\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Defining Eloquent Models",
+          "codeSnippet": "<?php\nnamespace App;\nuse Illuminate\\Database\\Eloquent\\Model;\nclass Post extends Model\n{\n    // Post model definition\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Retrieving Data using Eloquent",
+          "codeSnippet": "<?php\n$users = User::all();\nforeach ($users as $user) {\n    echo $user->name;\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Querying with Eloquent",
+          "codeSnippet": "<?php\n$users = User::where('age', '>', 18)->get();\nforeach ($users as $user) {\n    echo $user->name;\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Creating Records with Eloquent",
+          "codeSnippet": "<?php\n$user = new User();\n$user->name = 'John Doe';\n$user->email = 'john@example.com';\n$user->save();",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Updating Records with Eloquent",
+          "codeSnippet": "<?php\n$user = User::find(1);\n$user->name = 'Jane Doe';\n$user->save();",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Deleting Records with Eloquent",
+          "codeSnippet": "<?php\n$user = User::find(1);\n$user->delete();",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Authentication",
+      "topic_no": 444,
+      "contents": [
+        {
+          "text": "Introduction to Laravel Authentication"
+        },
+        {
+          "text": "Laravel provides a simple and easy-to-use authentication system out of the box."
+        },
+        {
+          "text": "To enable authentication in a Laravel application, you can use the 'make:auth' Artisan command."
+        },
+        {
+          "text": "This command will scaffold the necessary views and routes for user authentication."
+        },
+        {
+          "text": "Laravel authentication uses guards to define how users are authenticated for each request."
+        },
+        {
+          "text": "The default guard for web authentication is typically set to 'web' in the 'config/auth.php' file."
+        },
+        {
+          "text": "You can also create custom guards for different types of authentication, such as API authentication."
+        },
+        {
+          "text": "Laravel provides middleware for authentication and authorization, such as the 'auth' and 'guest' middleware."
+        },
+        {
+          "text": "You can protect routes using middleware to ensure that only authenticated users can access certain parts of your application."
+        },
+        {
+          "text": "Laravel's authentication system also includes features like password reset and email verification."
+        },
+        {
+          "text": "You can customize the authentication views by modifying the blade templates in the 'resources/views/auth' directory."
+        },
+        {
+          "text": "Laravel authentication makes it easy to implement secure user authentication in your web applications."
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Validation",
+      "topic_no": 1175,
+      "contents": [
+        {
+          "text": "Introduction to Laravel Validation",
+          "codeSnippet": "Laravel provides a convenient way to validate incoming data using validation rules. These rules are defined in the controller and can be applied to the incoming request data to ensure its validity before processing.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Defining Validation Rules",
+          "codeSnippet": "Validation rules in Laravel are defined in the controller's validate method. Rules can be specified for each input field, such as required, numeric, email, etc.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Example of Defining Validation Rules",
+          "codeSnippet": "public function store(Request $request) {\n    $validatedData = $request->validate([\n        'name' => 'required|string',\n        'email' => 'required|email',\n        'age' => 'required|numeric',\n    ]);\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Displaying Validation Errors",
+          "codeSnippet": "When validation fails, Laravel automatically redirects back with the errors. These errors can be displayed in the view using the errors helper function.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Example of Displaying Validation Errors",
+          "codeSnippet": "@if ($errors->any())\n    <div class=\"alert alert-danger\">\n        <ul>\n            @foreach ($errors->all() as $error)\n                <li>{{ $error }}</li>\n            @endforeach\n        </ul>\n    </div>\n@endif",
+          "codeLanguage": "html"
+        },
+        {
+          "text": "Custom Validation Messages",
+          "codeSnippet": "Laravel allows customizing validation error messages for each field. This can be done by specifying custom messages in the controller.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Example of Custom Validation Messages",
+          "codeSnippet": "$validatedData = $request->validate([\n    'name' => 'required|string',\n    'email' => 'required|email',\n], [\n    'name.required' => 'The name field is required.',\n    'email.required' => 'The email field is required.',\n]);",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Queues",
+      "topic_no": 1176,
+      "contents": [
+        {
+          "text": "Introduction to Laravel Queues",
+          "codeSnippet": "php\nphp artisan queue:table\nphp artisan migrate\n\n// Define a job class\nphp artisan make:job ProcessPodcast\n\n// Dispatch the job\nProcessPodcast::dispatch($podcast);"
+        },
+        {
+          "text": "Configuring Queue Drivers in Laravel",
+          "codeSnippet": "php\n// .env file\nQUEUE_CONNECTION=database\n\n// config/queue.php\n'database' => [\n    'driver' => 'database',\n    'table' => 'jobs',\n    'queue' => 'default',\n    'retry_after' => 90,\n]"
+        },
+        {
+          "text": "Creating and Dispatching Jobs in Laravel",
+          "codeSnippet": "php\n// Create a job\nphp artisan make:job ProcessPodcast\n\n// Dispatch the job\nProcessPodcast::dispatch($podcast);"
+        },
+        {
+          "text": "Processing Jobs with Workers in Laravel",
+          "codeSnippet": "php\nphp artisan queue:work\n\n// Start a worker with a specific queue\nphp artisan queue:work --queue=emails"
+        },
+        {
+          "text": "Monitoring Queued Jobs in Laravel",
+          "codeSnippet": "php\n// Check the queue status\nphp artisan queue:status\n\n// Retry failed jobs\nphp artisan queue:retry all\n\n// Clear all failed jobs\nphp artisan queue:flush"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Events and Listeners",
+      "topic_no": 1177,
+      "contents": [
+        {
+          "text": "Events in Laravel allow you to trigger actions based on certain occurrences in your application.",
+          "codeSnippet": "event(new OrderShipped($order));"
+        },
+        {
+          "text": "Listeners in Laravel are responsible for handling events and executing the necessary logic when an event is fired.",
+          "codeSnippet": "public function handle(OrderShipped $event) { \n    // Handle the event logic here\n}"
+        },
+        {
+          "text": "To create a new event in Laravel, you can use the artisan command make:event.",
+          "codeSnippet": "php artisan make:event OrderShipped"
+        },
+        {
+          "text": "To create a new listener in Laravel, you can use the artisan command make:listener.",
+          "codeSnippet": "php artisan make:listener SendShipmentNotification --event=OrderShipped"
+        },
+        {
+          "text": "Registering events and listeners in Laravel involves mapping events to their respective listeners in the EventServiceProvider.",
+          "codeSnippet": "protected $listen = [\n    OrderShipped::class => [\n        SendShipmentNotification::class,\n    ],\n];"
+        },
+        {
+          "text": "You can also define event listeners as closures directly in your routes or controllers.",
+          "codeSnippet": "Event::listen('order.shipped', function ($event) { \n    // Handle the event logic here\n});"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Policies and Gates",
+      "topic_no": 1179,
+      "contents": [
+        {
+          "text": "Laravel Policies and Gates provide a way to authorize actions in your application based on user abilities.",
+          "codeSnippet": "Gate::define('update-post', function ($user, $post) {\n    return $user->id === $post->user_id;\n});"
+        },
+        {
+          "text": "Policies are classes that organize authorization logic for a particular model or resource.",
+          "codeSnippet": "php\nnamespace App\\Policies;\n\nclass PostPolicy\n{\n    public function update(User $user, Post $post)\n    {\n        return $user->id === $post->user_id;\n    }\n}"
+        },
+        {
+          "text": "Gates are more granular authorization checks that can be used anywhere in your application.",
+          "codeSnippet": "if (Gate::allows('update-post', $post)) {\n    // User is authorized to update the post\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Localization",
+      "topic_no": 1181,
+      "contents": [
+        {
+          "text": "Introduction to Laravel Localization"
+        },
+        {
+          "text": "Laravel Localization allows you to support multiple languages in your application."
+        },
+        {
+          "text": "To get started with localization in Laravel, you need to create language files for each language you want to support."
+        },
+        {
+          "text": "Language files in Laravel are stored in the resources/lang directory."
+        },
+        {
+          "text": "Each language file contains an array of key-value pairs, where the key is the translation key and the value is the translated text."
+        },
+        {
+          "text": "To retrieve a translation in your Laravel application, you can use the trans() helper function."
+        },
+        {
+          "text": "You can also use the @lang directive in Blade templates to display translated text."
+        },
+        {
+          "text": "Laravel provides a convenient way to generate language files using the php artisan make:lang command."
+        },
+        {
+          "text": "You can set the default language for your application in the config/app.php file."
+        },
+        {
+          "text": "Laravel also supports language fallbacks, so if a translation is not found in the specified language file, it will fall back to the default language."
+        },
+        {
+          "text": "You can change the current language dynamically using the setLocale() method on the App facade."
+        },
+        {
+          "text": "Laravel Localization makes it easy to create multilingual applications that cater to a global audience."
+        }
+      ]
+    },
+    {
+      "topic": "Laravel Notifications",
+      "topic_no": 1182,
+      "contents": [
+        {
+          "text": "Introduction to Laravel Notifications",
+          "codeSnippet": "Laravel notifications allow you to send notifications to users through various channels such as email, SMS, and Slack. Notifications can be sent for events like user registration, password reset, or any custom event in your application.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting Up Notification Channels",
+          "codeSnippet": "To set up notification channels in Laravel, you need to configure the desired channels in the via() method of the notification class. Channels can include mail, database, SMS, Slack, and more.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Notification Class",
+          "codeSnippet": "To create a notification class in Laravel, you can use the artisan command php artisan make:notification NotificationName. This command generates a new notification class in the app/Notifications directory.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Sending Notifications",
+          "codeSnippet": "You can send notifications in Laravel using the notify() method on a notifiable entity. For example, to send an email notification, you can call the notify() method on a User model instance.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Customizing Notifications",
+          "codeSnippet": "Laravel allows you to customize notifications by defining the toMail() method in your notification class. This method specifies how the notification should be delivered via email.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Dispatching Notifications",
+          "codeSnippet": "To dispatch notifications in Laravel, you can use the Notification facade or call the notify() method directly on a notifiable entity. Notifications can be dispatched synchronously or queued for background processing.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Laravel File Storage",
+      "topic_no": 1183,
+      "contents": [
+        {
+          "text": "Introduction to Laravel File Storage",
+          "codeSnippet": "Laravel provides a powerful file storage system that allows you to easily store and retrieve files from various storage locations such as local disk, Amazon S3, and more.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Configuring File Storage in Laravel",
+          "codeSnippet": "To configure file storage in Laravel, you need to update the 'config/filesystems.php' configuration file. You can define multiple disks with different configurations for each storage location.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Using Local Disk for File Storage",
+          "codeSnippet": "To store files on the local disk in Laravel, you can use the 'Storage' facade. You can easily store files by specifying the disk and file path.",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Storing Files on Amazon S3 in Laravel",
+          "codeSnippet": "Laravel provides support for storing files on Amazon S3. You can configure the S3 disk in the filesystems.php file and use the 'Storage' facade to interact with the S3 storage.",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Retrieving Files from Storage in Laravel",
+          "codeSnippet": "You can retrieve files from storage in Laravel using the 'Storage' facade. Simply specify the disk and file path to access the file.",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Deleting Files from Storage in Laravel",
+          "codeSnippet": "To delete files from storage in Laravel, you can use the 'Storage' facade with the 'delete' method. Specify the disk and file path to delete the file.",
+          "codeLanguage": "php"
+        }
+      ]
+    }
+  ]
+}

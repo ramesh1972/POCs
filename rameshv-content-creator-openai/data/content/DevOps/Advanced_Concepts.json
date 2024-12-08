@@ -1,0 +1,67 @@
+  {
+  "category": "Advanced Concepts",
+  "topics": [
+    {
+      "topic": "Ansible",
+      "topic_no": 23,
+      "contents": [
+        {
+          "text": "Dynamic Inventory",
+          "codeSnippet": "ansible-playbook -i inventory.py playbook.yml",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Ansible Vault",
+          "codeSnippet": "ansible-vault encrypt file.yml",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Ansible Galaxy",
+          "codeSnippet": "ansible-galaxy init my_role",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Ansible Tower",
+          "codeSnippet": "ansible-tower-cli job launch --job-template=1",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Ansible Collections",
+          "codeSnippet": "ansible-galaxy collection install community.general",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Terraform",
+      "topic_no": 100,
+      "contents": [
+        {
+          "text": "Terraform Modules",
+          "codeSnippet": "module \"example\" { \n  source = \"./example-module\" \n}",
+          "codeLanguage": "hcl"
+        },
+        {
+          "text": "Terraform Providers",
+          "codeSnippet": "provider \"aws\" { \n  region = \"us-west-2\" \n}",
+          "codeLanguage": "hcl"
+        },
+        {
+          "text": "Terraform State Management",
+          "codeSnippet": "terraform { \n  backend \"s3\" { \n    bucket = \"terraform-state-bucket\" \n  } \n}",
+          "codeLanguage": "hcl"
+        },
+        {
+          "text": "Terraform Workspaces",
+          "codeSnippet": "terraform workspace new dev",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Terraform Data Sources",
+          "codeSnippet": "data \"aws_ami\" \"example\" { \n  most_recent = true \n}",
+          "codeLanguage": "hcl"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "category": "ASP.NET Core 6",
+  "topics": [
+    {
+      "topic": "ASP.NET Core Basics",
+      "topic_no": 92,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core",
+          "codeSnippet": "ASP.NET Core is an open-source, cross-platform framework for building modern, cloud-based, internet-connected applications. It is a redesign of the original ASP.NET framework, with architectural changes that result in a leaner and more modular framework.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a New ASP.NET Core Project",
+          "codeSnippet": "To create a new ASP.NET Core project, you can use the dotnet CLI by running the command 'dotnet new web -n MyWebApp'. This command creates a new web application project named 'MyWebApp' using the default web template.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Understanding Middleware in ASP.NET Core",
+          "codeSnippet": "Middleware in ASP.NET Core is software components that are added to the request pipeline to handle requests and responses. Middleware can perform tasks like authentication, logging, routing, and more. Each middleware component in the pipeline can inspect, modify, or pass the request to the next component.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Routing in ASP.NET Core",
+          "codeSnippet": "Routing in ASP.NET Core is responsible for mapping incoming HTTP requests to route handlers. Routes are defined using the 'MapGet', 'MapPost', 'MapPut', 'MapDelete', etc., methods in the 'Startup.cs' file. Routes can include parameters and constraints to define flexible routing patterns.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Dependency Injection in ASP.NET Core",
+          "codeSnippet": "Dependency Injection (DI) is a built-in feature of ASP.NET Core that allows you to register and resolve dependencies in your application. Services are registered in the 'Startup.cs' file and can be injected into controllers, services, or other components. DI promotes loose coupling and improves testability.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Razor Pages in ASP.NET Core",
+      "topic_no": 254,
+      "contents": [
+        {
+          "text": "Introduction to Razor Pages in ASP.NET Core",
+          "codeSnippet": "Razor Pages is a new feature introduced in ASP.NET Core that makes coding page-focused scenarios easier and more productive. It allows developers to build web applications using a page-based model, where each page is represented by a Razor file (.cshtml) that contains both HTML markup and C# code.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Razor Page in ASP.NET Core",
+          "codeSnippet": "To create a Razor Page in ASP.NET Core, you need to add a new Razor Page file (.cshtml) to the Pages folder within your project. Each Razor Page consists of a .cshtml file that defines the UI and a corresponding .cshtml.cs file that contains the page's backend logic.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Razor Page Routing in ASP.NET Core",
+          "codeSnippet": "Razor Pages in ASP.NET Core use a convention-based routing system where the URL path corresponds to the folder structure within the Pages directory. For example, a Razor Page located at /Pages/Products/Index.cshtml would be accessible via the URL /Products.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Handling Form Submissions in Razor Pages",
+          "codeSnippet": "To handle form submissions in Razor Pages, you can use the [BindProperty] attribute to bind form data to properties in the page model. Additionally, you can use the OnPost method in the page model to handle POST requests and process form data.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Using Partial Views in Razor Pages",
+          "codeSnippet": "Partial views in Razor Pages allow you to reuse UI components across multiple pages. You can create a partial view by adding a .cshtml file to the Pages/Shared folder and then include it in your Razor Page using the @Html.Partial() or @Html.RenderPartial() helper methods.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Entity Framework Core Basics",
+      "topic_no": 318,
+      "contents": [
+        {
+          "text": "Introduction to Entity Framework Core",
+          "codeSnippet": "Entity Framework Core is an Object-Relational Mapping (ORM) framework that allows developers to work with databases using .NET objects. It provides a way to interact with databases using C# code without having to write SQL queries directly.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Setting up Entity Framework Core in ASP.NET Core 6",
+          "codeSnippet": "To use Entity Framework Core in an ASP.NET Core 6 application, you need to install the Microsoft.EntityFrameworkCore package using NuGet. You also need to create a DbContext class that represents your database and configure it in the ConfigureServices method of the Startup class.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Defining Entities and Relationships in Entity Framework Core",
+          "codeSnippet": "Entities in Entity Framework Core are represented as classes, where each property corresponds to a column in the database table. Relationships between entities can be defined using navigation properties such as foreign keys and reference properties.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Querying Data with Entity Framework Core",
+          "codeSnippet": "Entity Framework Core allows you to query data using LINQ (Language Integrated Query) syntax. You can write LINQ queries against your DbContext to retrieve data from the database.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Updating Data with Entity Framework Core",
+          "codeSnippet": "To update data using Entity Framework Core, you can modify the properties of an entity and then call the SaveChanges method on the DbContext to persist the changes to the database.",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Handling Transactions in Entity Framework Core",
+          "codeSnippet": "Entity Framework Core supports transactions, which allow you to group multiple database operations into a single unit of work. You can use the DbContext's Database.BeginTransaction method to start a new transaction and commit or rollback changes as needed.",
+          "codeLanguage": "C#"
+        }
+      ]
+    },
+    {
+      "topic": "ASP.NET Core Web API",
+      "topic_no": 401,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core Web API",
+          "codeSnippet": "ASP.NET Core Web API is a framework for building HTTP services that can be consumed by a broad range of clients including browsers, mobile devices, and IoT devices. It is a lightweight, high-performance framework for building APIs using the .NET platform.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a New ASP.NET Core Web API Project",
+          "codeSnippet": "dotnet new webapi -n MyWebApi",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Defining API Endpoints",
+          "codeSnippet": "public class ValuesController : ControllerBase\n{\n    [HttpGet]\n    public ActionResult<IEnumerable<string>> Get()\n    {\n        return new string[] { \"value1\", \"value2\" };\n    }\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Routing in ASP.NET Core Web API",
+          "codeSnippet": "app.UseRouting();\napp.UseEndpoints(endpoints =>\n{\n    endpoints.MapControllers();\n});",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Model Binding in ASP.NET Core Web API",
+          "codeSnippet": "[HttpGet]\npublic ActionResult<string> Get([FromQuery] string name)\n{\n    return \"Hello, \" + name;\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Handling HTTP Requests and Responses",
+          "codeSnippet": "[HttpPost]\npublic ActionResult Post([FromBody] string value)\n{\n    // Process the incoming value\n    return Ok();\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Dependency Injection in ASP.NET Core Web API",
+          "codeSnippet": "services.AddScoped<IMyService, MyService>();",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Middleware in ASP.NET Core",
+      "topic_no": 415,
+      "contents": [
+        {
+          "text": "Middleware in ASP.NET Core is a software component that is used to handle requests and responses in the application's request processing pipeline.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Middleware components in ASP.NET Core are added to the application's request pipeline in the Startup class.",
+          "codeSnippet": "app.UseMiddleware<CustomMiddleware>();"
+        },
+        {
+          "text": "Middleware components in ASP.NET Core can be used for tasks such as authentication, logging, error handling, and more.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Middleware components are executed in the order they are added to the pipeline.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Dependency Injection in ASP.NET Core",
+      "topic_no": 491,
+      "contents": [
+        {
+          "text": "Introduction to Dependency Injection in ASP.NET Core",
+          "codeSnippet": "Dependency injection is a design pattern that allows the inversion of control in a software application by providing objects with their dependencies rather than creating them internally. In ASP.NET Core, dependency injection is built into the framework and is used to manage the dependencies of application components.",
+          "codeLanguage": "text"
+        },
+        {
+          "text": "Registering Services in ASP.NET Core",
+          "codeSnippet": "Services are registered in the ConfigureServices method of the Startup class using the built-in IServiceCollection interface. This method is called during application startup and is used to configure the application's services.",
+          "codeLanguage": "text"
+        },
+        {
+          "text": "Injecting Services into Components",
+          "codeSnippet": "Services can be injected into components such as controllers, views, and other classes by adding them as parameters in the component's constructor. ASP.NET Core's built-in dependency injection container resolves these dependencies and provides the necessary services to the components.",
+          "codeLanguage": "text"
+        },
+        {
+          "text": "Constructor Injection",
+          "codeSnippet": "public class MyService\n{\n    private readonly IMyDependency _myDependency;\n\n    public MyService(IMyDependency myDependency)\n    {\n        _myDependency = myDependency;\n    }\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Property Injection",
+          "codeSnippet": "public class MyController : Controller\n{\n    [FromServices]\n    public IMyService MyService { get; set; }\n}",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Method Injection",
+          "codeSnippet": "public class MyController : Controller\n{\n    private readonly IMyService _myService;\n\n    public MyController(IMyService myService)\n    {\n        _myService = myService;\n    }\n\n    public IActionResult Index([FromServices] IMyOtherService myOtherService)\n    {\n        // Method logic\n    }\n}",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "ASP.NET Core Authentication",
+      "topic_no": 574,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core Authentication",
+          "codeSnippet": "ASP.NET Core provides a flexible and customizable authentication system that allows developers to implement various authentication mechanisms in their applications.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Authentication Options in ASP.NET Core",
+          "codeSnippet": "ASP.NET Core supports various authentication options such as cookies, JWT tokens, OAuth, and OpenID Connect.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Configuring Cookie Authentication in ASP.NET Core",
+          "codeSnippet": "services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => { options.Cookie.Name = \"YourAppCookieName\"; options.LoginPath = \"/Account/Login\"; });",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Implementing JWT Token Authentication in ASP.NET Core",
+          "codeSnippet": "services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => { options.TokenValidationParameters = new TokenValidationParameters { ValidateIssuer = true, ValidateAudience = true, ValidateLifetime = true, ValidateIssuerSigningKey = true, ValidIssuer = Configuration[\"Jwt:Issuer\"], ValidAudience = Configuration[\"Jwt:Audience\"], IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration[\"Jwt:Key\"])) }; });",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Using OAuth Authentication in ASP.NET Core",
+          "codeSnippet": "services.AddAuthentication(options => { options.DefaultAuthenticateScheme = OAuthDefaults.AuthenticationScheme; options.DefaultChallengeScheme = OAuthDefaults.AuthenticationScheme; }).AddOAuth(OAuthDefaults.AuthenticationScheme, options => { options.ClientId = Configuration[\"OAuth:ClientId\"]; options.ClientSecret = Configuration[\"OAuth:ClientSecret\"]; options.CallbackPath = new PathString(\"/signin-oauth\"); options.AuthorizationEndpoint = Configuration[\"OAuth:AuthorizationEndpoint\"]; options.TokenEndpoint = Configuration[\"OAuth:TokenEndpoint\"]; options.Scope.Add(\"email\"); options.Scope.Add(\"profile\"); options.SaveTokens = true; }, options => { options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme; });",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Implementing OpenID Connect Authentication in ASP.NET Core",
+          "codeSnippet": "services.AddAuthentication(options => { options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme; options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme; }).AddCookie().AddOpenIdConnect(options => { options.Authority = Configuration[\"OpenId:Authority\"]; options.ClientId = Configuration[\"OpenId:ClientId\"]; options.ClientSecret = Configuration[\"OpenId:ClientSecret\"]; options.ResponseType = OpenIdConnectResponseType.Code; options.Scope.Add(\"openid\"); options.Scope.Add(\"profile\"); options.SaveTokens = true; options.GetClaimsFromUserInfoEndpoint = true; options.TokenValidationParameters = new TokenValidationParameters { NameClaimType = \"name\", RoleClaimType = \"role\" }; });",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "ASP.NET Core Authorization",
+      "topic_no": 620,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core Authorization",
+          "codeSnippet": "ASP.NET Core Authorization is a security mechanism that controls access to resources in an ASP.NET Core application based on user identity and roles. It allows developers to define policies to restrict or allow access to specific parts of the application based on the user's permissions.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Types of Authorization in ASP.NET Core",
+          "codeSnippet": "There are two main types of authorization in ASP.NET Core: Role-based Authorization and Policy-based Authorization. Role-based Authorization restricts access based on the user's role, while Policy-based Authorization allows for more granular control by defining custom policies.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Role-based Authorization",
+          "codeSnippet": "In ASP.NET Core, Role-based Authorization restricts access to resources based on the roles assigned to the user. Developers can use attributes like [Authorize(Roles = \"Admin\")] to limit access to specific roles.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Policy-based Authorization",
+          "codeSnippet": "Policy-based Authorization in ASP.NET Core allows developers to define custom policies to control access to resources. Policies can be based on various factors such as roles, claims, or custom requirements.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Implementing Authorization in ASP.NET Core",
+          "codeSnippet": "To implement authorization in ASP.NET Core, developers need to configure services in the ConfigureServices method of the Startup class and apply authorization policies using the [Authorize] attribute in controllers or Razor Pages.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Authorization Filters",
+          "codeSnippet": "Authorization Filters in ASP.NET Core allow developers to apply authorization logic globally or at the controller or action level. They can be used to enforce authorization requirements before executing a controller action.",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "ASP.NET Core Identity",
+      "topic_no": 651,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core Identity",
+          "codeSnippet": "ASP.NET Core Identity is a membership system that adds login functionality to ASP.NET Core apps. It provides a way to manage user accounts, including registration, login, and password reset.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Key Features of ASP.NET Core Identity",
+          "codeSnippet": "1. User registration and login\n2. Password hashing and storage\n3. Two-factor authentication\n4. Role-based authorization\n5. Integration with external login providers",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up ASP.NET Core Identity in an ASP.NET Core 6 application",
+          "codeSnippet": "To set up ASP.NET Core Identity in an ASP.NET Core 6 application, you need to configure the services in the ConfigureServices method of the Startup class and add the necessary middleware in the Configure method.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Customizing ASP.NET Core Identity",
+          "codeSnippet": "You can customize ASP.NET Core Identity by extending the IdentityUser class, adding custom properties, or modifying the default behavior of identity components like UserManager and SignInManager.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Working with Roles in ASP.NET Core Identity",
+          "codeSnippet": "Roles in ASP.NET Core Identity allow you to group users based on common permissions or access levels. You can create roles, assign users to roles, and check role-based authorization in your application.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "ASP.NET Core SignalR",
+      "topic_no": 684,
+      "contents": [
+        {
+          "text": "Introduction to ASP.NET Core SignalR",
+          "codeSnippet": "SignalR is a real-time communication library for ASP.NET Core that enables server-side code to push content to connected clients instantly.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Key Features of ASP.NET Core SignalR",
+          "codeSnippet": "1. Real-time bi-directional communication\n2. Support for WebSockets, Server-Sent Events (SSE), and Long Polling\n3. Scalability and reliability\n4. Built-in support for handling connection management and messaging\n5. Cross-platform compatibility",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up ASP.NET Core SignalR in a Project",
+          "codeSnippet": "To use SignalR in an ASP.NET Core 6 project, add the Microsoft.AspNetCore.SignalR NuGet package and configure the SignalR middleware in the Startup.cs file.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Creating a SignalR Hub",
+          "codeSnippet": "Create a SignalR Hub by inheriting from the Hub class. Define methods that can be called by clients and manage connections within the hub.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Establishing a Connection from a Client",
+          "codeSnippet": "Clients can connect to a SignalR hub using JavaScript client libraries. Establish a connection and define methods to send and receive messages.",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Broadcasting Messages to Clients",
+          "codeSnippet": "Use the HubContext to broadcast messages to all connected clients or specific groups. Implement logic to send real-time updates to clients.",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Blazor Basics",
+      "topic_no": 716,
+      "contents": [
+        {
+          "text": "Introduction to Blazor",
+          "codeSnippet": "Blazor is a web framework that enables developers to build interactive web applications using C# and .NET instead of JavaScript. It allows developers to create web UIs using C# and HTML, with the option to run client-side code directly in the browser using WebAssembly or server-side code in ASP.NET Core.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Blazor Hosting Models",
+          "codeSnippet": "Blazor supports two hosting models: client-side and server-side. In the client-side model, the application runs directly in the browser using WebAssembly. In the server-side model, the application runs on the server and communicates with the client using SignalR.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Blazor Project",
+          "codeSnippet": "To create a new Blazor project, you can use the dotnet CLI by running the command: dotnet new blazor -o MyBlazorApp. This will create a new Blazor project in the MyBlazorApp directory.",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Blazor Components",
+          "codeSnippet": "Blazor applications are composed of reusable components. Components can be simple like buttons or complex like data grids. Components can have parameters, render UI using Razor syntax, and handle user interactions.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Data Binding in Blazor",
+          "codeSnippet": "Blazor supports two-way data binding, allowing you to bind data from C# code to the UI and vice versa. You can use @bind directive to bind properties and events in Blazor components.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Routing in Blazor",
+          "codeSnippet": "Blazor provides a built-in router that allows you to define routes and navigate between different pages in a Blazor application. You can use the @page directive to specify the route for a component.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Server-Side Blazor",
+      "topic_no": 746,
+      "contents": [
+        {
+          "text": "Introduction to Server-Side Blazor",
+          "codeSnippet": "Server-Side Blazor is a web framework for building interactive web applications using C# and .NET. It allows developers to create rich, interactive user interfaces using C# instead of JavaScript.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Server-Side Blazor in ASP.NET Core 6",
+          "codeSnippet": "To set up Server-Side Blazor in ASP.NET Core 6, you need to create a new ASP.NET Core project and add the necessary packages and configurations to enable Server-Side Blazor functionality.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating Components in Server-Side Blazor",
+          "codeSnippet": "Components in Server-Side Blazor are reusable building blocks that encapsulate UI elements and logic. You can create components using Razor syntax and C# code.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Handling Events in Server-Side Blazor",
+          "codeSnippet": "In Server-Side Blazor, you can handle user interactions and events by defining event handlers in your components. These event handlers can be written in C# and integrated with the component's UI elements.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Data Binding in Server-Side Blazor",
+          "codeSnippet": "Data binding in Server-Side Blazor allows you to establish a connection between the UI elements and the underlying data. You can bind data properties to UI elements to automatically update the UI when the data changes.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Working with Services in Server-Side Blazor",
+          "codeSnippet": "Services in Server-Side Blazor are used to encapsulate business logic and data access operations. You can register services with the dependency injection container and inject them into your components to access their functionality.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Client-Side Blazor",
+      "topic_no": 766,
+      "contents": [
+        {
+          "text": "Introduction to Client-Side Blazor",
+          "codeSnippet": "Blazor WebAssembly is a client-side web framework that enables developers to build interactive web applications using C# and .NET instead of JavaScript.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Setting up a Client-Side Blazor Project",
+          "codeSnippet": "To create a new Client-Side Blazor project, you can use the 'dotnet new blazorwasm' command in the terminal.",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating Components in Client-Side Blazor",
+          "codeSnippet": "Components in Client-Side Blazor are similar to components in other Blazor applications. You can create components using Razor syntax and C#.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Data Binding in Client-Side Blazor",
+          "codeSnippet": "Data binding in Client-Side Blazor allows you to bind data from the component to the UI elements, enabling two-way data binding.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Handling User Interactions in Client-Side Blazor",
+          "codeSnippet": "You can handle user interactions in Client-Side Blazor by using event handlers in the components.",
+          "codeLanguage": "csharp"
+        },
+        {
+          "text": "Calling APIs in Client-Side Blazor",
+          "codeSnippet": "To call APIs in Client-Side Blazor, you can use the HttpClient service provided by .NET Core to make HTTP requests.",
+          "codeLanguage": "csharp"
+        }
+      ]
+    },
+    {
+      "topic": "Health Checks in ASP.NET Core",
+      "topic_no": 789,
+      "contents": [
+        {
+          "text": "Health checks in ASP.NET Core are used to monitor the health of an application by periodically checking its components and dependencies.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Health checks can be added to an ASP.NET Core application by configuring the built-in Health Checks middleware in the Startup class.",
+          "codeSnippet": "app.UseHealthChecks(\"/health\");",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Health checks can be customized to check specific components or dependencies by implementing custom health check classes that inherit from the HealthCheck class.",
+          "codeSnippet": "public class CustomHealthCheck : HealthCheck\n{\n    protected override Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken)\n    {\n        // Custom health check logic\n        return Task.FromResult(HealthCheckResult.Healthy());\n    }\n}",
+          "codeLanguage": "C#"
+        },
+        {
+          "text": "Health checks can be configured to return different statuses such as Healthy, Degraded, or Unhealthy based on the results of the health checks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Health checks can be accessed by sending HTTP requests to the configured health check endpoint, typically '/health'.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "category": "Configuration Management",
+  "topics": [
+    {
+      "topic": "Unified Configuration",
+      "topic_no": 24,
+      "contents": [
+        {
+          "text": "Unified Configuration refers to the practice of managing configuration settings for all components of an application or system in a centralized and consistent manner.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This approach ensures that all configuration settings are stored in a single location, making it easier to manage and update settings across different environments.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Unified Configuration helps in maintaining consistency and reducing errors that can occur due to misconfigured settings.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One common way to implement Unified Configuration is by using configuration management tools like Ansible, Puppet, or Chef.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "These tools allow you to define configuration settings in code and apply them consistently across all servers in your infrastructure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

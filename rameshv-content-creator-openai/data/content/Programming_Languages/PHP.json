@@ -1,0 +1,560 @@
+{
+  "category": "PHP",
+  "topics": [
+    {
+      "topic": "Introduction to PHP",
+      "topic_no": 39,
+      "contents": [
+        {
+          "text": "PHP is a server-side scripting language used for web development.",
+          "codeSnippet": "<?php echo 'Hello, World!'; ?>"
+        },
+        {
+          "text": "PHP stands for Hypertext Preprocessor.",
+          "codeSnippet": "<?php $variable = 'PHP'; ?>"
+        },
+        {
+          "text": "PHP code is embedded within HTML documents.",
+          "codeSnippet": "<h1><?php echo 'Welcome to PHP!'; ?></h1>"
+        },
+        {
+          "text": "PHP files typically have a .php extension.",
+          "codeSnippet": "index.php"
+        },
+        {
+          "text": "PHP can interact with databases like MySQL to create dynamic web applications.",
+          "codeSnippet": "<?php\n$servername = 'localhost';\n$username = 'username';\n$password = 'password';\n$dbname = 'database';\n\n// Create connection\n$conn = new mysqli($servername, $username, $password, $dbname);\n\n// Check connection\nif ($conn->connect_error) {\n    die('Connection failed: ' . $conn->connect_error);\n}\necho 'Connected successfully';\n$conn->close();\n?>"
+        }
+      ]
+    },
+    {
+      "topic": "Variables and Data Types in PHP",
+      "topic_no": 152,
+      "contents": [
+        {
+          "text": "Variables in PHP are used to store data values.",
+          "codeSnippet": "<?php $name = 'John'; ?>"
+        },
+        {
+          "text": "PHP is a loosely typed language, meaning you do not have to declare the data type of a variable when you create one.",
+          "codeSnippet": "<?php $age = 25; ?>"
+        },
+        {
+          "text": "PHP supports different data types such as strings, integers, floats, booleans, arrays, and objects.",
+          "codeSnippet": "<?php $price = 19.99; ?>"
+        },
+        {
+          "text": "Strings are sequences of characters, enclosed within single quotes ('') or double quotes (\"\").",
+          "codeSnippet": "<?php $message = 'Hello, World!'; ?>"
+        },
+        {
+          "text": "Integers are whole numbers without any decimal points.",
+          "codeSnippet": "<?php $quantity = 10; ?>"
+        },
+        {
+          "text": "Floats are numbers with decimal points.",
+          "codeSnippet": "<?php $pi = 3.14; ?>"
+        },
+        {
+          "text": "Booleans can have two values: true or false.",
+          "codeSnippet": "<?php $is_active = true; ?>"
+        },
+        {
+          "text": "Arrays in PHP can store multiple values in a single variable.",
+          "codeSnippet": "<?php $colors = ['red', 'green', 'blue']; ?>"
+        },
+        {
+          "text": "Objects are instances of classes and can hold both data and functions.",
+          "codeSnippet": "<?php class Person { public $name = 'Alice'; } ?>"
+        }
+      ]
+    },
+    {
+      "topic": "Operators and Expressions in PHP",
+      "topic_no": 264,
+      "contents": [
+        {
+          "text": "Operators in PHP are used to perform operations on variables and values.",
+          "codeSnippet": "<?php\n$x = 10;\n$y = 5;\n$sum = $x + $y;\necho $sum;\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Arithmetic operators in PHP include addition (+), subtraction (-), multiplication (*), division (/), and modulus (%).",
+          "codeSnippet": "<?php\n$x = 10;\n$y = 3;\n$remainder = $x % $y;\necho $remainder;\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Assignment operators in PHP are used to assign values to variables.",
+          "codeSnippet": "<?php\n$x = 5;\n$x += 3;\necho $x;\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Comparison operators in PHP are used to compare two values.",
+          "codeSnippet": "<?php\n$x = 10;\n$y = 5;\nif ($x > $y) {\n    echo 'x is greater than y';\n}\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Logical operators in PHP are used to combine conditional statements.",
+          "codeSnippet": "<?php\n$x = 10;\n$y = 5;\nif ($x > 5 && $y < 10) {\n    echo 'Both conditions are true';\n}\n?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Control Structures in PHP (if, else, elseif, switch)",
+      "topic_no": 342,
+      "contents": [
+        {
+          "text": "if statement is used to execute a block of code if a specified condition is true.",
+          "codeSnippet": "if ($condition) {\n    // code to be executed if the condition is true\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "else statement is used to execute a block of code if the same condition is false.",
+          "codeSnippet": "if ($condition) {\n    // code to be executed if the condition is true\n} else {\n    // code to be executed if the condition is false\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "elseif statement is used to execute a block of code if the first condition is false and the specified condition is true.",
+          "codeSnippet": "if ($condition1) {\n    // code to be executed if condition1 is true\n} elseif ($condition2) {\n    // code to be executed if condition2 is true\n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "switch statement is used to perform different actions based on different conditions.",
+          "codeSnippet": "switch ($variable) {\n    case 'value1':\n        // code to be executed if variable equals value1\n        break;\n    case 'value2':\n        // code to be executed if variable equals value2\n        break;\n    default:\n        // code to be executed if variable doesn't match any case\n}",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Loops in PHP (for, while, do-while)",
+      "topic_no": 388,
+      "contents": [
+        {
+          "text": "The 'for' loop in PHP is used to execute a block of code a specified number of times.",
+          "codeSnippet": "for ($i = 0; $i < 5; $i++) { \n    echo $i; \n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "The 'while' loop in PHP is used to execute a block of code as long as the specified condition is true.",
+          "codeSnippet": "$i = 0; \nwhile ($i < 5) { \n    echo $i; \n    $i++; \n}",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "The 'do-while' loop in PHP is similar to the 'while' loop, but the block of code is executed at least once before the condition is checked.",
+          "codeSnippet": "$i = 0; \ndo { \n    echo $i; \n    $i++; \n} while ($i < 5);",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Arrays in PHP",
+      "topic_no": 458,
+      "contents": [
+        {
+          "text": "An array in PHP is a data structure that can store multiple values under a single variable name.",
+          "codeSnippet": "<?php\n$fruits = array('apple', 'banana', 'orange');\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "To access elements in an array, you can use the index of the element within square brackets.",
+          "codeSnippet": "<?php\n$fruits = array('apple', 'banana', 'orange');\necho $fruits[1];\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "You can also use the array() function to create an array in PHP.",
+          "codeSnippet": "<?php\n$numbers = array(1, 2, 3, 4, 5);\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Arrays in PHP can store different types of data, such as strings, numbers, and even other arrays.",
+          "codeSnippet": "<?php\n$mixedArray = array('apple', 5, array('red', 'green'));\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "You can add elements to an array using the array_push() function.",
+          "codeSnippet": "<?php\n$fruits = array('apple', 'banana');\narray_push($fruits, 'orange');\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "To remove elements from an array, you can use the unset() function.",
+          "codeSnippet": "<?php\n$fruits = array('apple', 'banana', 'orange');\nunset($fruits[1]);\n?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Strings in PHP",
+      "topic_no": 499,
+      "contents": [
+        {
+          "text": "Strings in PHP are sequences of characters, like 'Hello, World!' or '12345'.",
+          "codeSnippet": "<?php $str = 'Hello, World!'; ?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "In PHP, you can concatenate strings using the '.' operator.",
+          "codeSnippet": "<?php $str1 = 'Hello'; $str2 = 'World'; $combined = $str1 . ', ' . $str2; ?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "PHP provides various functions for manipulating strings, such as strlen() to get the length of a string.",
+          "codeSnippet": "<?php $str = 'Hello, World!'; $length = strlen($str); ?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "You can access individual characters in a string using square brackets and the character's position (index).",
+          "codeSnippet": "<?php $str = 'Hello'; $firstChar = $str[0]; $lastChar = $str[strlen($str) - 1]; ?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "PHP supports escape sequences in strings, like '\\n' for a new line or '\\t' for a tab.",
+          "codeSnippet": "<?php $str = 'This is a new line\\nAnd this is a tab\\t'; ?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Working with Forms in PHP",
+      "topic_no": 515,
+      "contents": [
+        {
+          "text": "Introduction to Forms in PHP"
+        },
+        {
+          "text": "Creating a Form in PHP"
+        },
+        {
+          "text": "Processing Form Data in PHP"
+        },
+        {
+          "text": "Validating Form Data in PHP"
+        },
+        {
+          "text": "Handling File Uploads in PHP"
+        },
+        {
+          "text": "Securing Forms in PHP"
+        }
+      ]
+    },
+    {
+      "topic": "File Handling in PHP",
+      "topic_no": 567,
+      "contents": [
+        {
+          "text": "File handling in PHP allows you to read, write, create, and delete files on the server.",
+          "codeSnippet": "<?php\n$myfile = fopen(\"file.txt\", \"r\");\n$content = fread($myfile, filesize(\"file.txt\"));\necho $content;\nfclose($myfile);\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "To open a file in PHP, you can use the fopen() function with the file path and mode as parameters.",
+          "codeSnippet": "<?php\n$myfile = fopen(\"newfile.txt\", \"w\");\n$txt = \"Hello World!\";\nfwrite($myfile, $txt);\nfclose($myfile);\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "You can check if a file exists in PHP using the file_exists() function.",
+          "codeSnippet": "<?php\n$filename = 'file.txt';\nif (file_exists($filename)) {\necho 'File exists';\n} else {\necho 'File does not exist';\n}\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "PHP provides functions like fread(), fwrite(), and fclose() for reading, writing, and closing files respectively.",
+          "codeSnippet": "<?php\n$myfile = fopen(\"file.txt\", \"r\");\n$content = fread($myfile, filesize(\"file.txt\"));\necho $content;\nfclose($myfile);\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "You can create a new file in PHP using the fopen() function with the 'w' mode.",
+          "codeSnippet": "<?php\n$myfile = fopen(\"newfile.txt\", \"w\");\n$txt = \"Hello World!\";\nfwrite($myfile, $txt);\nfclose($myfile);\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Deleting a file in PHP can be done using the unlink() function.",
+          "codeSnippet": "<?php\n$filename = 'file.txt';\nif (file_exists($filename)) {\nunlink($filename);\necho 'File deleted';\n} else {\necho 'File does not exist';\n}\n?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Error Handling in PHP",
+      "topic_no": 617,
+      "contents": [
+        {
+          "text": "Error Handling in PHP allows you to deal with errors and exceptions that occur during the execution of a PHP script."
+        },
+        {
+          "text": "There are two main types of errors in PHP: syntax errors and runtime errors."
+        },
+        {
+          "text": "Syntax errors occur during the parsing of a PHP script, while runtime errors occur during the execution of the script."
+        },
+        {
+          "text": "To handle errors in PHP, you can use the try, catch, and finally blocks."
+        },
+        {
+          "text": "The try block contains the code that may throw an exception, while the catch block is used to catch and handle the exception."
+        },
+        {
+          "text": "The finally block is optional and is used to execute code regardless of whether an exception was thrown or not."
+        },
+        {
+          "text": "You can create custom exception classes in PHP by extending the built-in Exception class."
+        },
+        {
+          "text": "Custom exception classes allow you to define specific types of exceptions and handle them accordingly."
+        },
+        {
+          "text": "To throw an exception in PHP, you can use the throw keyword followed by an instance of an Exception class."
+        },
+        {
+          "text": "Here is an example of error handling in PHP using try, catch, and finally blocks:"
+        },
+        {
+          "codeSnippet": "<?php\ntry {\n    // Code that may throw an exception\n    throw new Exception('An error occurred');\n} catch (Exception $e) {\n    // Handle the exception\n    echo 'Caught exception: ' . $e->getMessage();\n} finally {\n    // Code to be executed regardless of an exception\n    echo 'Finally block executed';\n}\n?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Object-Oriented Programming in PHP (Classes and Objects)",
+      "topic_no": 659,
+      "contents": [
+        {
+          "text": "Introduction to Object-Oriented Programming (OOP) in PHP",
+          "codeSnippet": "<?php\nclass Car {\n    public $brand;\n    public $model;\n    \n    public function __construct($brand, $model) {\n        $this->brand = $brand;\n        $this->model = $model;\n    }\n}\n$myCar = new Car('Toyota', 'Corolla');\necho $myCar->brand;\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Creating Classes and Objects in PHP",
+          "codeSnippet": "<?php\nclass Book {\n    public $title;\n    public $author;\n    \n    public function __construct($title, $author) {\n        $this->title = $title;\n        $this->author = $author;\n    }\n}\n$myBook = new Book('The Great Gatsby', 'F. Scott Fitzgerald');\necho $myBook->author;\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Defining Properties and Methods in a PHP Class",
+          "codeSnippet": "<?php\nclass Rectangle {\n    public $width;\n    public $height;\n    \n    public function __construct($width, $height) {\n        $this->width = $width;\n        $this->height = $height;\n    }\n    \n    public function calculateArea() {\n        return $this->width * $this->height;\n    }\n}\n$myRectangle = new Rectangle(5, 10);\necho $myRectangle->calculateArea();\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Inheritance and Polymorphism in PHP Classes",
+          "codeSnippet": "<?php\nclass Animal {\n    public $name;\n    \n    public function __construct($name) {\n        $this->name = $name;\n    }\n    \n    public function speak() {\n        echo 'Animal speaks';\n    }\n}\nclass Dog extends Animal {\n    public function speak() {\n        echo 'Dog barks';\n    }\n}\n$myDog = new Dog('Buddy');\n$myDog->speak();\n?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Inheritance and Polymorphism in PHP",
+      "topic_no": 692,
+      "contents": [
+        {
+          "text": "Inheritance allows a class to inherit properties and methods from another class. The child class can access all public and protected properties and methods of the parent class.",
+          "codeSnippet": "class ParentClass {\n    public $name;\n    public function __construct($name) {\n        $this->name = $name;\n    }\n}\nclass ChildClass extends ParentClass {\n    public function displayName() {\n        echo $this->name;\n    }\n}\n$child = new ChildClass('John');\n$child->displayName(); // Output: John"
+        },
+        {
+          "text": "Polymorphism allows objects of different classes to be treated as objects of a common parent class. This enables flexibility and reusability in code.",
+          "codeSnippet": "interface Shape {\n    public function calculateArea();\n}\nclass Circle implements Shape {\n    private $radius;\n    public function __construct($radius) {\n        $this->radius = $radius;\n    }\n    public function calculateArea() {\n        return 3.14 * $this->radius * $this->radius;\n    }\n}\nclass Square implements Shape {\n    private $sideLength;\n    public function __construct($sideLength) {\n        $this->sideLength = $sideLength;\n    }\n    public function calculateArea() {\n        return $this->sideLength * $this->sideLength;\n    }\n}\nfunction printArea(Shape $shape) {\n    echo $shape->calculateArea();\n}\n$circle = new Circle(5);\n$square = new Square(4);\nprintArea($circle); // Output: 78.5\nprintArea($square); // Output: 16"
+        }
+      ]
+    },
+    {
+      "topic": "Exception Handling in PHP",
+      "topic_no": 735,
+      "contents": [
+        {
+          "text": "What is Exception Handling in PHP?",
+          "codeSnippet": "<?php\ntry {\n    // Code that may throw an exception\n    throw new Exception('An error occurred');\n} catch (Exception $e) {\n    echo 'Caught exception: ' . $e->getMessage();\n}\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Why is Exception Handling important in PHP?",
+          "codeSnippet": "<?php\ntry {\n    // Code that may throw an exception\n    throw new Exception('An error occurred');\n} catch (Exception $e) {\n    echo 'Caught exception: ' . $e->getMessage();\n}\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "How to use try, catch, and finally blocks in PHP?",
+          "codeSnippet": "<?php\ntry {\n    // Code that may throw an exception\n    throw new Exception('An error occurred');\n} catch (Exception $e) {\n    echo 'Caught exception: ' . $e->getMessage();\n} finally {\n    // Code that will always run, regardless of an exception\n    echo 'Finally block executed';\n}\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "How to create custom exceptions in PHP?",
+          "codeSnippet": "<?php\nclass CustomException extends Exception {\n    public function errorMessage() {\n        // Custom error message\n        return 'Error on line ' . $this->getLine() . ' in ' . $this->getFile() . ': ' . $this->getMessage();\n    }\n}\n\ntry {\n    // Code that may throw a custom exception\n    throw new CustomException('An error occurred');\n} catch (CustomException $e) {\n    echo $e->errorMessage();\n}\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "How to handle multiple exceptions in PHP?",
+          "codeSnippet": "<?php\ntry {\n    // Code that may throw an exception\n    throw new Exception('An error occurred');\n} catch (Exception $e) {\n    echo 'Caught exception: ' . $e->getMessage();\n} catch (AnotherException $e) {\n    echo 'Caught another exception: ' . $e->getMessage();\n}\n?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Working with Databases in PHP (MySQL, PostgreSQL, etc.)",
+      "topic_no": 770,
+      "contents": [
+        {
+          "text": "Introduction to Databases in PHP",
+          "codeSnippet": "<?php\n// Connect to MySQL database\n$servername = 'localhost';\n$username = 'username';\n$password = 'password';\n$dbname = 'database';\n\n$conn = new mysqli($servername, $username, $password, $dbname);\nif ($conn->connect_error) {\n    die('Connection failed: ' . $conn->connect_error);\n}\necho 'Connected successfully';\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Executing SQL Queries in PHP",
+          "codeSnippet": "<?php\n// Execute a simple SELECT query\n$sql = 'SELECT * FROM users';\n$result = $conn->query($sql);\nif ($result->num_rows > 0) {\n    while($row = $result->fetch_assoc()) {\n        echo 'Name: ' . $row['name'] . '<br>';\n    }\n} else {\n    echo '0 results';\n}\n$conn->close();\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Inserting Data into a Database using PHP",
+          "codeSnippet": "<?php\n// Insert data into a table\n$sql = 'INSERT INTO users (name, email) VALUES ('John Doe', 'john@example.com')';\nif ($conn->query($sql) === TRUE) {\n    echo 'New record created successfully';\n} else {\n    echo 'Error: ' . $sql . '<br>' . $conn->error;\n}\n$conn->close();\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Updating Data in a Database using PHP",
+          "codeSnippet": "<?php\n// Update data in a table\n$sql = 'UPDATE users SET email='newemail@example.com' WHERE name='John Doe'';\nif ($conn->query($sql) === TRUE) {\n    echo 'Record updated successfully';\n} else {\n    echo 'Error updating record: ' . $conn->error;\n}\n$conn->close();\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Deleting Data from a Database using PHP",
+          "codeSnippet": "<?php\n// Delete data from a table\n$sql = 'DELETE FROM users WHERE name='John Doe'';\nif ($conn->query($sql) === TRUE) {\n    echo 'Record deleted successfully';\n} else {\n    echo 'Error deleting record: ' . $conn->error;\n}\n$conn->close();\n?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Sessions and Cookies in PHP",
+      "topic_no": 785,
+      "contents": [
+        {
+          "text": "Sessions in PHP are used to store and retrieve data for a particular user across multiple pages.",
+          "codeSnippet": "<?php\n// Start a session\nsession_start();\n\n// Set session variables\n$_SESSION['username'] = 'JohnDoe';\n$_SESSION['email'] = 'johndoe@example.com';\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Cookies in PHP are used to store small pieces of data on the client's computer.",
+          "codeSnippet": "<?php\n// Set a cookie that expires in 1 hour\nsetcookie('user', 'JohnDoe', time() + 3600);\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Sessions are more secure than cookies as the data is stored on the server.",
+          "codeSnippet": "<?php\n// Retrieve session variables\necho 'Username: ' . $_SESSION['username'];\necho 'Email: ' . $_SESSION['email'];\n?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "Working with XML and JSON in PHP",
+      "topic_no": 848,
+      "contents": [
+        {
+          "text": "Introduction to XML and JSON in PHP",
+          "codeSnippet": "<?php\n// Example of creating an XML document\n$xml = new DOMDocument();\n$xml->formatOutput = true;\n$root = $xml->createElement('books');\n$xml->appendChild($root);\n$book = $xml->createElement('book');\n$root->appendChild($book);\n$title = $xml->createElement('title', 'PHP Programming');\n$book->appendChild($title);\necho $xml->saveXML();\n\n// Example of decoding JSON data\n$jsonData = '{\"name\":\"John\", \"age\":30}';\n$decodedData = json_decode($jsonData, true);\necho $decodedData['name'];\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Parsing XML and JSON in PHP",
+          "codeSnippet": "<?php\n// Example of parsing an XML file\n$xmlString = file_get_contents('data.xml');\n$xml = simplexml_load_string($xmlString);\necho $xml->book[0]->title;\n\n// Example of encoding data to JSON\n$data = ['name' => 'Alice', 'age' => 25];\n$jsonData = json_encode($data);\necho $jsonData;\n?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Manipulating XML and JSON in PHP",
+          "codeSnippet": "<?php\n// Example of updating an XML element\n$xml = simplexml_load_file('data.xml');\n$xml->book[0]->title = 'New Title';\n$xml->asXML('updated_data.xml');\n\n// Example of manipulating JSON data\n$jsonData = '{\"name\":\"Alice\", \"age\":25}';\n$decodedData = json_decode($jsonData, true);\n$decodedData['age'] = 26;\n$newJsonData = json_encode($decodedData);\necho $newJsonData;\n?>",
+          "codeLanguage": "php"
+        }
+      ]
+    },
+    {
+      "topic": "PHP Security Best Practices",
+      "topic_no": 860,
+      "contents": [
+        {
+          "text": "Use parameterized queries to prevent SQL injection attacks."
+        },
+        {
+          "text": "Avoid using the 'eval' function as it can execute arbitrary code."
+        },
+        {
+          "text": "Validate and sanitize user input to prevent cross-site scripting (XSS) attacks."
+        },
+        {
+          "text": "Implement proper authentication and authorization mechanisms to control access to sensitive data."
+        },
+        {
+          "text": "Keep PHP and all libraries up to date to patch security vulnerabilities."
+        },
+        {
+          "text": "Avoid storing sensitive information such as passwords in plain text."
+        },
+        {
+          "text": "Enable PHP error reporting to monitor and fix potential security issues."
+        },
+        {
+          "text": "Use secure communication protocols like HTTPS to protect data transmission."
+        },
+        {
+          "text": "Implement CSRF tokens to prevent cross-site request forgery attacks."
+        },
+        {
+          "text": "Regularly audit and monitor your PHP application for security vulnerabilities."
+        }
+      ]
+    },
+    {
+      "topic": "Web Services and APIs in PHP",
+      "topic_no": 873,
+      "contents": [
+        {
+          "text": "Web Services and APIs in PHP allow communication between different software applications over the internet.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Web services can be implemented using SOAP (Simple Object Access Protocol) or REST (Representational State Transfer) APIs in PHP.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "To create a SOAP client in PHP, you can use the SoapClient class.",
+          "codeSnippet": "new SoapClient('http://example.com/soap.wsdl');",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "To create a RESTful API in PHP, you can use frameworks like Laravel or Slim.",
+          "codeSnippet": "Route::get('/api/users', 'UserController@index');",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Web services and APIs in PHP often use JSON (JavaScript Object Notation) or XML (eXtensible Markup Language) for data exchange.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "PHP Frameworks (e.g., Laravel, Symfony, CodeIgniter)",
+      "topic_no": 888,
+      "contents": [
+        {
+          "text": "Introduction to PHP Frameworks",
+          "codeSnippet": "<?php echo 'PHP frameworks provide a structured way to build web applications.'; ?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Popular PHP Frameworks include Laravel, Symfony, and CodeIgniter",
+          "codeSnippet": "<?php echo 'Laravel, Symfony, and CodeIgniter are widely used PHP frameworks.'; ?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Laravel is a powerful PHP framework known for its elegant syntax and features",
+          "codeSnippet": "<?php echo 'Laravel makes web development enjoyable with its expressive syntax.'; ?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "Symfony is a flexible PHP framework that follows the MVC pattern",
+          "codeSnippet": "<?php echo 'Symfony provides reusable components and a robust ecosystem.'; ?>",
+          "codeLanguage": "php"
+        },
+        {
+          "text": "CodeIgniter is a lightweight PHP framework that is easy to set up and use",
+          "codeSnippet": "<?php echo 'CodeIgniter offers a small footprint and straightforward configuration.'; ?>",
+          "codeLanguage": "php"
+        }
+      ]
+    }
+  ]
+}

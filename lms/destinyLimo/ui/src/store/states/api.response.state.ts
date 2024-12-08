@@ -1,6 +1,7 @@
 export interface ApiResponseState {
     HttpCode: number;
     success: boolean;
-    message: string;
+    msg: string;
+    error: string;
     data: any;
 }

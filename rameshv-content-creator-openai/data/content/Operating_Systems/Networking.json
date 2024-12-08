@@ -1,0 +1,373 @@
+{
+  "category": "Networking",
+  "topics": [
+    {
+      "topic": "OSI Model",
+      "topic_no": 55,
+      "contents": [
+        {
+          "text": "The OSI Model stands for Open Systems Interconnection Model.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven abstraction layers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Each layer serves a specific purpose and interacts with the adjacent layers to facilitate communication between devices.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The seven layers of the OSI Model are: Physical, Data Link, Network, Transport, Session, Presentation, and Application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Physical layer deals with the physical connection between devices and the transmission of raw data bits over a physical medium.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Data Link layer provides error detection and correction, as well as framing and flow control.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Network layer is responsible for routing packets between different networks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Transport layer ensures end-to-end communication, segmenting and reassembling data as needed.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Session layer establishes, maintains, and terminates connections between applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Presentation layer is responsible for data translation, encryption, and compression.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Application layer provides interfaces for user applications to access network services.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "TCP/IP Protocol Suite",
+      "topic_no": 168,
+      "contents": [
+        {
+          "text": "TCP/IP Protocol Suite is a set of communication protocols used for connecting network devices on the internet.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The TCP/IP Protocol Suite consists of four layers: Application, Transport, Internet, and Link.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Application layer is responsible for providing high-level data exchange between applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Transport layer ensures reliable data delivery and manages end-to-end communication.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Internet layer handles addressing and routing of data packets across different networks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The Link layer deals with physical connections and data transfer within the local network.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "TCP (Transmission Control Protocol) is a connection-oriented protocol that provides reliable data delivery.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "IP (Internet Protocol) is a connectionless protocol responsible for addressing and routing packets.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of an application layer protocol is HTTP (Hypertext Transfer Protocol) used for web browsing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of a transport layer protocol is TCP, ensuring reliable data transmission.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of an internet layer protocol is IPv4 (Internet Protocol version 4) for addressing and routing packets.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of a link layer protocol is Ethernet for wired local area network connections.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "IPv4 and IPv6 Addressing",
+      "topic_no": 253,
+      "contents": [
+        {
+          "text": "IPv4 addresses are 32-bit numerical addresses expressed in decimal format, divided into four octets separated by periods.",
+          "codeSnippet": "192.168.1.1",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "IPv6 addresses are 128-bit hexadecimal addresses, separated by colons and can include letters from A to F.",
+          "codeSnippet": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "IPv4 addresses are limited in number due to the 32-bit address space, resulting in approximately 4.3 billion unique addresses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "IPv6 addresses provide a significantly larger address space compared to IPv4, allowing for an almost unlimited number of unique addresses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "IPv4 addresses use subnet masks to divide the address into network and host portions.",
+          "codeSnippet": "255.255.255.0",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "IPv6 addresses use CIDR notation to specify the network prefix length.",
+          "codeSnippet": "/64",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Routing Protocols",
+      "topic_no": 303,
+      "contents": [
+        {
+          "text": "Routing protocols determine how data packets are forwarded from one network to another.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "There are two main types of routing protocols: distance vector and link-state.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of distance vector routing protocols include RIP (Routing Information Protocol) and EIGRP (Enhanced Interior Gateway Routing Protocol).",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Examples of link-state routing protocols include OSPF (Open Shortest Path First) and IS-IS (Intermediate System to Intermediate System).",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Routing protocols use algorithms to determine the best path for data packets to reach their destination.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Code snippet for configuring OSPF routing protocol on a Cisco router:",
+          "codeSnippet": "router ospf 1\nnetwork 192.168.1.0 0.0.0.255 area 0\n",
+          "codeLanguage": "Cisco IOS"
+        }
+      ]
+    },
+    {
+      "topic": "Network Devices",
+      "topic_no": 369,
+      "contents": [
+        {
+          "text": "Router: A network device that forwards data packets between computer networks. Routers operate at Layer 3 (Network layer) of the OSI model.",
+          "codeSnippet": "router.configure({\n  interface: 'eth0',\n  ip: '192.168.1.1'\n});",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Switch: A network device that connects devices within a network by using packet switching to forward data to the intended recipient. Switches operate at Layer 2 (Data Link layer) of the OSI model.",
+          "codeSnippet": "switch.configure({\n  ports: 24,\n  speed: '1Gbps'\n});",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Firewall: A network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules. Firewalls can be hardware or software-based.",
+          "codeSnippet": "firewall.configure({\n  allowInbound: false,\n  allowOutbound: true\n});",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Hub: A basic networking device that connects multiple devices in a network. Hubs operate at Layer 1 (Physical layer) of the OSI model and simply broadcast data to all connected devices.",
+          "codeSnippet": "hub.configure({\n  ports: 8,\n  type: 'Ethernet'\n});",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    },
+    {
+      "topic": "LANs, WANs, and MANs",
+      "topic_no": 404,
+      "contents": [
+        {
+          "text": "LAN (Local Area Network) is a network that is confined to a small geographic area, such as a single building or a campus.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Example: A company's internal network connecting all computers and devices within the office building is an example of a LAN.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "WAN (Wide Area Network) spans a large geographical area, connecting multiple LANs and other networks together across cities, countries, or even continents.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Example: The internet is the largest example of a WAN, connecting networks globally.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "MAN (Metropolitan Area Network) covers a larger geographic area than a LAN but smaller than a WAN, typically serving a city or a region.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Example: A network connecting various university campuses within a city is an example of a MAN.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "Wireless Networks",
+      "topic_no": 425,
+      "contents": [
+        {
+          "text": "Wireless Networks are networks that use radio waves to transmit data between devices without the need for physical connections.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of wireless networks include Wi-Fi, Bluetooth, cellular networks (3G, 4G, 5G), and satellite networks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Wireless networks can be secured using encryption protocols such as WPA2, WPA3, and VPNs to protect data transmission from unauthorized access.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Wireless networks can be set up using routers, access points, and wireless adapters to enable devices to connect to the network wirelessly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common issues in wireless networks include interference from other devices, signal range limitations, and security vulnerabilities that can be mitigated through proper network configuration and monitoring.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Network Administration",
+      "topic_no": 449,
+      "contents": [
+        {
+          "text": "Introduction to Network Administration in Operating Systems"
+        },
+        {
+          "text": "Roles and Responsibilities of a Network Administrator"
+        },
+        {
+          "text": "Understanding Network Topologies and Protocols"
+        },
+        {
+          "text": "Configuring and Managing Network Devices"
+        },
+        {
+          "text": "Implementing Network Security Measures"
+        },
+        {
+          "text": "Troubleshooting Network Issues"
+        },
+        {
+          "text": "Monitoring Network Performance"
+        },
+        {
+          "text": "Implementing Backup and Recovery Strategies for Networks"
+        }
+      ]
+    },
+    {
+      "topic": "Virtual Private Networks (VPNs)",
+      "topic_no": 482,
+      "contents": [
+        {
+          "text": "What is a Virtual Private Network (VPN)?",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Benefits of using a VPN",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Types of VPNs (Remote Access, Site-to-Site, and Client-to-Site)",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "How does a VPN work?",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Common VPN protocols (OpenVPN, L2TP/IPsec, IKEv2, and SSTP)",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Setting up a VPN on Windows OS",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Setting up a VPN on macOS",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "VPN security best practices",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import tensorflow as tf
 import tensorflow_hub as hub
 import cv2
@@ -8,7 +9,7 @@ model_url = "https://tfhub.dev/google/tf2-preview/mobilenet_v2/classification/4"
 model = hub.load(model_url)
 
 # Load an example image containing a flower
-image_path = "tulip.jpg"
+image_path = "rose.jpg"
 image = cv2.imread(image_path)
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
@@ -31,8 +32,14 @@ top_prediction = tf.argmax(predictions, axis=-1)[0].numpy()
 # Get the class label
 class_label = "flower" if top_prediction > .5 else "not a flower"
 
-# Display the result
-cv2.putText(image, class_label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-cv2.imshow("Flower Classification", cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# # Display the result
+# cv2.putText(image, class_label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+# cv2.imshow("Flower Classification", cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+
+# Display the result using matplotlib
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+plt.title(class_label)
+plt.axis('off')
+plt.show()

@@ -1,0 +1,1228 @@
+{
+  "category": "CPlusPlus",
+  "topics": [
+    {
+      "topic": "Introduction to C++ Programming",
+      "topic_no": 34,
+      "contents": [
+        {
+          "text": "What is C++ programming language?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "History of C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Features of C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Basic syntax of a C++ program",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, World!\";\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Data types in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Variables and Constants in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Operators in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Control structures in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Functions in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Classes and Objects in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Inheritance in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Polymorphism in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Templates in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Standard Template Library (STL) in C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Basic Syntax and Data Types in C++",
+      "topic_no": 117,
+      "contents": [
+        {
+          "text": "C++ is a statically typed language, meaning that the data type of a variable must be explicitly declared before it is used.",
+          "codeSnippet": "int age = 25;"
+        },
+        {
+          "text": "C++ supports various data types such as integers, floating-point numbers, characters, and booleans.",
+          "codeSnippet": "float pi = 3.14;"
+        },
+        {
+          "text": "Variables in C++ must be declared before they are used in the program.",
+          "codeSnippet": "char grade = 'A';"
+        },
+        {
+          "text": "C++ allows the use of constants, which are variables whose value cannot be changed once it is initialized.",
+          "codeSnippet": "const double gravity = 9.81;"
+        },
+        {
+          "text": "C++ supports arithmetic operators such as addition (+), subtraction (-), multiplication (*), division (/), and modulus (%).",
+          "codeSnippet": "int result = 10 + 5;"
+        },
+        {
+          "text": "C++ also provides relational operators like equal to (==), not equal to (!=), greater than (>), less than (<), etc.",
+          "codeSnippet": "bool isGreater = (10 > 5);"
+        },
+        {
+          "text": "Logical operators in C++ include AND (&&), OR (||), and NOT (!), used for combining multiple conditions.",
+          "codeSnippet": "bool isValid = (age >= 18) && (age <= 60);"
+        }
+      ]
+    },
+    {
+      "topic": "Variables and Constants in C++",
+      "topic_no": 140,
+      "contents": [
+        {
+          "content": "Variables in C++ are used to store data values. They have a specific data type and a name.",
+          "codeSnippet": "int age = 25;"
+        },
+        {
+          "content": "Constants in C++ are values that do not change during the program's execution.",
+          "codeSnippet": "const float PI = 3.14;"
+        }
+      ]
+    },
+    {
+      "topic": "Operators in C++",
+      "topic_no": 266,
+      "contents": [
+        {
+          "text": "Arithmetic Operators: Used to perform mathematical operations like addition, subtraction, multiplication, division, and modulus.",
+          "codeSnippet": "int a = 10;\nint b = 5;\nint sum = a + b;\nint difference = a - b;\nint product = a * b;\nint quotient = a / b;\nint remainder = a % b;",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Relational Operators: Used to compare two values and return a boolean result (true or false).",
+          "codeSnippet": "int x = 10;\nint y = 5;\nbool isEqual = (x == y);\nbool isNotEqual = (x != y);\nbool isGreater = (x > y);\nbool isLess = (x < y);\nbool isGreaterOrEqual = (x >= y);\nbool isLessOrEqual = (x <= y);",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Logical Operators: Used to perform logical operations like AND, OR, and NOT.",
+          "codeSnippet": "bool p = true;\nbool q = false;\nbool resultAnd = p && q;\nbool resultOr = p || q;\nbool resultNotP = !p;\nbool resultNotQ = !q;",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Assignment Operators: Used to assign values to variables.",
+          "codeSnippet": "int num = 10;\nnum += 5;\nnum -= 3;\nnum *= 2;\nnum /= 4;\nnum %= 3;",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Bitwise Operators: Used to perform operations on individual bits of integer operands.",
+          "codeSnippet": "int m = 5; // 101 in binary\nint n = 3; // 011 in binary\nint bitwiseAnd = m & n; // 001\nint bitwiseOr = m | n; // 111\nint bitwiseXor = m ^ n; // 110\nint bitwiseNot = ~m; // 11111111111111111111111111111010",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Conditional Operator (Ternary Operator): Used for decision making based on a condition.",
+          "codeSnippet": "int age = 20;\nstring result = (age >= 18) ? \"Adult\" : \"Minor\";",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Control Structures: Selection Statements",
+      "topic_no": 354,
+      "contents": [
+        {
+          "text": "Selection statements in C++ allow the program to make decisions based on certain conditions.",
+          "codeSnippet": "if (condition) {\n    // code to be executed if the condition is true\n} else {\n    // code to be executed if the condition is false\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "The 'if' statement is a fundamental selection statement in C++ that executes a block of code if a specified condition is true.",
+          "codeSnippet": "int num = 10;\nif (num > 5) {\n    cout << \"Number is greater than 5\";\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "The 'else if' statement in C++ allows for multiple conditions to be checked sequentially.",
+          "codeSnippet": "int num = 10;\nif (num > 10) {\n    cout << \"Number is greater than 10\";\n} else if (num == 10) {\n    cout << \"Number is equal to 10\";\n} else {\n    cout << \"Number is less than 10\";\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "The 'switch' statement in C++ is used to select one choice from a list of options based on the value of an expression.",
+          "codeSnippet": "int choice = 2;\nswitch (choice) {\n    case 1:\n        cout << \"Choice is 1\";\n        break;\n    case 2:\n        cout << \"Choice is 2\";\n        break;\n    default:\n        cout << \"Invalid choice\";\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Control Structures: Iteration Statements",
+      "topic_no": 390,
+      "contents": [
+        {
+          "text": "The 'for' loop is a control structure that allows you to execute a block of code a specific number of times.",
+          "codeSnippet": "for(int i = 0; i < 5; i++) {\n    // Code to be executed\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "The 'while' loop is a control structure that repeats a block of code as long as a specified condition is true.",
+          "codeSnippet": "int i = 0;\nwhile(i < 5) {\n    // Code to be executed\n    i++;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "The 'do-while' loop is a control structure that is similar to the 'while' loop, but the block of code is executed at least once before the condition is tested.",
+          "codeSnippet": "int i = 0;\ndo {\n    // Code to be executed\n    i++;\n} while(i < 5);",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Functions and Procedures in C++",
+      "topic_no": 409,
+      "contents": [
+        {
+          "text": "Functions in C++ are blocks of code that perform a specific task. They are defined using a return type, function name, parameters, and a function body.",
+          "codeSnippet": "int add(int a, int b) {\n    return a + b;\n}"
+        },
+        {
+          "text": "Procedures in C++ are similar to functions but do not return a value. They are used to perform a sequence of steps or actions.",
+          "codeSnippet": "void greet() {\n    cout << \"Hello, World!\";\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Constructors and Destructors in C++",
+      "topic_no": 465,
+      "contents": [
+        {
+          "text": "Constructors in C++ are special member functions that are automatically called when an object is created. They are used to initialize the object's data members.",
+          "codeSnippet": "class MyClass {\npublic:\n    MyClass() {\n        // Constructor code here\n    }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Destructors in C++ are special member functions that are automatically called when an object is destroyed. They are used to release resources and perform cleanup operations.",
+          "codeSnippet": "class MyClass {\npublic:\n    ~MyClass() {\n        // Destructor code here\n    }\n};",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Inheritance and Polymorphism in C++",
+      "topic_no": 508,
+      "contents": [
+        {
+          "text": "Inheritance in C++ allows a class to inherit properties and behaviors from another class. The class that is being inherited from is called the base class, while the class that inherits from the base class is called the derived class.",
+          "codeSnippet": "class BaseClass {\npublic:\n    void display() {\n        cout << \"This is the base class\" << endl;\n    }\n};\nclass DerivedClass : public BaseClass {\npublic:\n    void show() {\n        cout << \"This is the derived class\" << endl;\n    }\n};"
+        },
+        {
+          "text": "Polymorphism in C++ allows objects of different classes to be treated as objects of a common parent class. This enables functions to be called on objects of different classes without knowing their specific type.",
+          "codeSnippet": "class Shape {\npublic:\n    virtual void draw() {\n        cout << \"Drawing a shape\" << endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        cout << \"Drawing a circle\" << endl;\n    }\n};\nclass Square : public Shape {\npublic:\n    void draw() override {\n        cout << \"Drawing a square\" << endl;\n    }\n};"
+        }
+      ]
+    },
+    {
+      "topic": "Operator Overloading in C++",
+      "topic_no": 543,
+      "contents": [
+        {
+          "text": "Operator overloading in C++ allows you to redefine the behavior of operators for user-defined data types.",
+          "codeSnippet": "class Complex {\n    public:\n        int real, imag;\n        Complex operator + (Complex const &obj) {\n            Complex res;\n            res.real = real + obj.real;\n            res.imag = imag + obj.imag;\n            return res;\n        }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "You can overload various operators such as arithmetic, comparison, assignment, and more in C++.",
+          "codeSnippet": "class Vector {\n    public:\n        int x, y;\n        Vector operator * (int scalar) {\n            Vector result;\n            result.x = x * scalar;\n            result.y = y * scalar;\n            return result;\n        }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Operator overloading is achieved by defining a function that specifies the new behavior for the operator.",
+          "codeSnippet": "class Matrix {\n    public:\n        int data[2][2];\n        Matrix operator + (Matrix const &obj) {\n            Matrix result;\n            // Add corresponding elements of matrices\n            return result;\n        }\n};",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Templates and Generic Programming in C++",
+      "topic_no": 575,
+      "contents": [
+        {
+          "text": "Templates in C++ allow for generic programming by enabling the creation of functions and classes that can operate on different data types without having to rewrite the code for each type.",
+          "codeSnippet": "template <class T>\nT add(T a, T b) {\n    return a + b;\n}"
+        },
+        {
+          "text": "Template functions in C++ are defined using the 'template' keyword followed by the template parameter list enclosed in angle brackets.",
+          "codeSnippet": "template <class T>\nT multiply(T a, T b) {\n    return a * b;\n}"
+        },
+        {
+          "text": "Template classes in C++ can be created to work with different data types by using template parameters.",
+          "codeSnippet": "template <class T>\nclass Pair {\npublic:\n    T first;\n    T second;\n};"
+        },
+        {
+          "text": "Generic programming in C++ involves writing code in a way that is independent of the data types being used, allowing for code reusability and flexibility.",
+          "codeSnippet": "template <class T>\nT maximum(T a, T b) {\n    return (a > b) ? a : b;\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Exception Handling in C++",
+      "topic_no": 626,
+      "contents": [
+        {
+          "content": "Exception handling in C++ allows a program to handle runtime errors or exceptional situations gracefully, preventing the program from crashing. It involves catching and handling exceptions that occur during program execution.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "In C++, exceptions are thrown using the 'throw' keyword and caught using 'try' and 'catch' blocks. When an exception is thrown, the program looks for a matching catch block to handle the exception.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "A 'try' block is used to enclose the code that might throw an exception. If an exception is thrown within the 'try' block, the program looks for a corresponding 'catch' block to handle the exception.",
+          "codeSnippet": "try {\n    // code that may throw an exception\n} catch (ExceptionType e) {\n    // handle the exception\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "content": "A 'catch' block is used to handle exceptions thrown within the corresponding 'try' block. It specifies the type of exception it can handle and contains the code to handle the exception.",
+          "codeSnippet": "catch (ExceptionType e) {\n    // handle the exception\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "content": "In C++, you can define custom exception classes by deriving from the standard exception class 'std::exception'. This allows you to create specific exception types for different error scenarios.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "When an exception is thrown, the program searches for a matching 'catch' block. If no suitable 'catch' block is found, the program terminates and displays an error message.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "File Handling in C++",
+      "topic_no": 681,
+      "contents": [
+        {
+          "text": "File Handling in C++ involves working with files to read and write data.",
+          "codeSnippet": "#include <iostream>\n#include <fstream>\n\nint main() {\n    std::ofstream file(\"example.txt\");\n    file << \"Hello, World!\";\n    file.close();\n\n    std::ifstream readFile(\"example.txt\");\n    std::string data;\n    if (readFile.is_open()) {\n        while (getline(readFile, data)) {\n            std::cout << data << std::endl;\n        }\n        readFile.close();\n    }\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "To open a file in C++, you can use the std::ofstream for writing to a file and std::ifstream for reading from a file.",
+          "codeSnippet": "#include <iostream>\n#include <fstream>\n\nint main() {\n    std::ofstream file(\"example.txt\");\n    // Write to the file\n    file << \"This is some text.\";\n    file.close();\n\n    std::ifstream readFile(\"example.txt\");\n    std::string data;\n    if (readFile.is_open()) {\n        // Read from the file\n        while (getline(readFile, data)) {\n            std::cout << data << std::endl;\n        }\n        readFile.close();\n    }\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "In C++, you can check if a file is open using the is_open() function.",
+          "codeSnippet": "#include <iostream>\n#include <fstream>\n\nint main() {\n    std::ifstream file(\"example.txt\");\n    if (file.is_open()) {\n        std::cout << \"File is open.\" << std::endl;\n    } else {\n        std::cout << \"File is not open.\" << std::endl;\n    }\n    file.close();\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "To write to a file in C++, you can use the insertion operator (<<) with the ofstream object.",
+          "codeSnippet": "#include <iostream>\n#include <fstream>\n\nint main() {\n    std::ofstream file(\"example.txt\");\n    file << \"This is some text.\";\n    file.close();\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "To read from a file in C++, you can use the getline() function with the ifstream object.",
+          "codeSnippet": "#include <iostream>\n#include <fstream>\n\nint main() {\n    std::ifstream file(\"example.txt\");\n    std::string data;\n    if (file.is_open()) {\n        while (getline(file, data)) {\n            std::cout << data << std::endl;\n        }\n        file.close();\n    }\n    return 0;\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "STL (Standard Template Library) in C++",
+      "topic_no": 733,
+      "contents": [
+        {
+          "text": "STL (Standard Template Library) is a powerful set of C++ template classes to provide general-purpose classes and functions with templates that implement many popular and commonly used algorithms and data structures.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "STL components include containers, algorithms, and iterators. Containers store data, algorithms act on the data, and iterators provide a way to access the data stored in containers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Some commonly used containers in STL are vectors, lists, queues, stacks, sets, and maps.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Vectors are dynamic arrays that can resize themselves automatically when an element is inserted or deleted. They provide random access to elements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: Creating a vector of integers in C++",
+          "codeSnippet": "std::vector<int> numbers = {1, 2, 3, 4, 5};",
+          "codeLanguage": "cpp"
+        },
+        {
+          "text": "Lists are doubly linked lists that allow fast insertions and deletions at any position. They do not provide random access like vectors.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Queues are FIFO (First In First Out) data structures where elements are inserted at the back and removed from the front.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: Creating a queue of strings in C++",
+          "codeSnippet": "std::queue<std::string> names;",
+          "codeLanguage": "cpp"
+        },
+        {
+          "text": "Stacks are LIFO (Last In First Out) data structures where elements are inserted and removed from the same end.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Sets are containers that store unique elements in a sorted order. They do not allow duplicate elements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Maps are associative containers that store key-value pairs. They allow fast lookup of values based on keys.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: Creating a map of string keys and int values in C++",
+          "codeSnippet": "std::map<std::string, int> ages;",
+          "codeLanguage": "cpp"
+        },
+        {
+          "text": "Algorithms in STL include sorting, searching, and modifying functions that can be applied to containers. These algorithms provide efficient implementations of common operations.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Iterators in STL provide a way to access elements in containers. They act as pointers to elements in the container and can be used to traverse the container.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Smart Pointers in C++",
+      "topic_no": 758,
+      "contents": [
+        {
+          "text": "Smart Pointers in C++ provide automatic memory management by ensuring that memory is deallocated when it is no longer needed.",
+          "codeSnippet": "#include <memory>\n\nint main() {\n    std::unique_ptr<int> ptr(new int(5));\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "There are three main types of smart pointers in C++: unique_ptr, shared_ptr, and weak_ptr.",
+          "codeSnippet": "#include <memory>\n\nint main() {\n    std::shared_ptr<int> ptr = std::make_shared<int>(10);\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "unique_ptr is used when a single owner is responsible for managing the memory.",
+          "codeSnippet": "#include <memory>\n\nint main() {\n    std::unique_ptr<int> ptr(new int(5));\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "shared_ptr can have multiple owners and uses reference counting to manage memory.",
+          "codeSnippet": "#include <memory>\n\nint main() {\n    std::shared_ptr<int> ptr1 = std::make_shared<int>(10);\n    std::shared_ptr<int> ptr2 = ptr1;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "weak_ptr is used to break circular references between shared_ptrs to avoid memory leaks.",
+          "codeSnippet": "#include <memory>\n\nint main() {\n    std::shared_ptr<int> ptr1 = std::make_shared<int>(10);\n    std::weak_ptr<int> ptr2 = ptr1;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Concurrency in C++ (Threading and Multithreading)",
+      "topic_no": 793,
+      "contents": [
+        {
+          "text": "Concurrency in C++ involves the ability to execute multiple tasks simultaneously within a program.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Threading in C++ allows for the creation of multiple threads within a program to achieve concurrency.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Multithreading in C++ refers to the ability of a program to execute multiple threads concurrently.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In C++, threads are managed using the <thread> header file from the C++ Standard Library.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create a thread in C++, you can use the std::thread class and pass a function to be executed by the thread.",
+          "codeSnippet": "std::thread myThread(myFunction);",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "C++ provides various synchronization mechanisms like mutexes, condition variables, and atomic operations to manage access to shared resources in multithreaded programs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Mutexes in C++ are used to protect shared data by allowing only one thread to access the data at a time.",
+          "codeSnippet": "std::mutex myMutex;",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Condition variables in C++ are synchronization primitives that allow threads to wait until a certain condition is met.",
+          "codeSnippet": "std::condition_variable myCondVar;",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Atomic operations in C++ ensure that operations on shared variables are performed atomically without interference from other threads.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Lambda Expressions in C++",
+      "topic_no": 805,
+      "contents": [
+        {
+          "text": "Lambda Expressions in C++ are anonymous functions that can be used to create function objects inline.",
+          "codeSnippet": "auto add = [](int a, int b) { return a + b; };",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Lambda expressions can capture variables from their enclosing scope by value or by reference.",
+          "codeSnippet": "[&]() { return x + y; }",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Lambda expressions can be used as arguments in functions like std::sort or std::for_each.",
+          "codeSnippet": "std::sort(vec.begin(), vec.end(), [](int a, int b) { return a < b; });",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "C++11 Features",
+      "topic_no": 827,
+      "contents": [
+        {
+          "text": "C++11 introduced the auto keyword, which allows the compiler to automatically deduce the data type of a variable at compile time.",
+          "codeSnippet": "auto x = 10;"
+        },
+        {
+          "text": "C++11 introduced nullptr, a keyword that represents a null pointer constant. It provides a type-safe alternative to using NULL.",
+          "codeSnippet": "int* ptr = nullptr;"
+        },
+        {
+          "text": "C++11 introduced range-based for loops, which simplify iterating over elements in a container.",
+          "codeSnippet": "std::vector<int> numbers = {1, 2, 3, 4, 5};\nfor (int num : numbers) {\n    std::cout << num << std::endl;\n}"
+        },
+        {
+          "text": "C++11 introduced lambda expressions, which allow for inline function definitions. They are particularly useful for writing concise and readable code.",
+          "codeSnippet": "auto sum = [](int a, int b) { return a + b; };"
+        },
+        {
+          "text": "C++11 introduced the override and final specifiers, which provide compile-time checks for overriding virtual functions and preventing further derivation, respectively.",
+          "codeSnippet": "class Base {\npublic:\n    virtual void print() const;\n};\nclass Derived : public Base {\npublic:\n    void print() const override;\n};"
+        },
+        {
+          "text": "C++11 introduced the unique_ptr smart pointer, which provides exclusive ownership of a dynamically allocated object.",
+          "codeSnippet": "std::unique_ptr<int> ptr(new int(5));"
+        }
+      ]
+    },
+    {
+      "topic": "C++14 Features",
+      "topic_no": 847,
+      "contents": [
+        {
+          "text": "1. Auto Keyword for Type Inference",
+          "codeSnippet": "auto x = 10;"
+        },
+        {
+          "text": "2. Lambda Expressions",
+          "codeSnippet": "auto sum = [](int a, int b) { return a + b; };"
+        },
+        {
+          "text": "3. Range-based For Loop",
+          "codeSnippet": "std::vector<int> numbers = {1, 2, 3, 4, 5};\nfor (int num : numbers) {\n    std::cout << num << std::endl;\n}"
+        },
+        {
+          "text": "4. Smart Pointers (std::unique_ptr, std::shared_ptr)",
+          "codeSnippet": "std::unique_ptr<int> ptr = std::make_unique<int>(5);"
+        },
+        {
+          "text": "5. Generalized Lambda Capture",
+          "codeSnippet": "int a = 5, b = 10;\nauto multiply = [a, b](int x) { return a * b * x; };"
+        },
+        {
+          "text": "6. Variable Templates",
+          "codeSnippet": "template<typename T>\nconstexpr T pi = T(3.1415926535897932385);"
+        },
+        {
+          "text": "7. Binary Literals",
+          "codeSnippet": "int binaryNum = 0b1010;"
+        },
+        {
+          "text": "8. Digit Separators",
+          "codeSnippet": "int million = 1'000'000;"
+        },
+        {
+          "text": "9. std::make_unique and std::make_shared",
+          "codeSnippet": "auto ptr = std::make_unique<int>(42);"
+        },
+        {
+          "text": "10. constexpr if",
+          "codeSnippet": "template <typename T>\nvoid print(T value) {\n    if constexpr (std::is_integral<T>::value) {\n        std::cout << value << std::endl;\n    } else {\n        std::cout << \"Not an integer\" << std::endl;\n    }\n}"
+        }
+      ]
+    },
+    {
+      "topic": "C++17 Features",
+      "topic_no": 862,
+      "contents": [
+        {
+          "text": "1. Inline Variables",
+          "codeSnippet": "int main() {\n    const int x = 5;\n    inline int y = 10;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "2. Structured Bindings",
+          "codeSnippet": "int main() {\n    std::pair<int, double> values = {10, 3.14};\n    auto [a, b] = values;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "3. if Initializer",
+          "codeSnippet": "int main() {\n    if (int x = 5; x > 0) {\n        std::cout << x << std::endl;\n    }\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "4. Fold Expressions",
+          "codeSnippet": "template<typename... Args>\nauto sum(Args... args) {\n    return (args + ...);\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "5. constexpr if",
+          "codeSnippet": "template<typename T>\nvoid process(T value) {\n    if constexpr (std::is_integral_v<T>) {\n        std::cout << \"Integral Value\" << std::endl;\n    } else {\n        std::cout << \"Non-Integral Value\" << std::endl;\n    }\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "C++20 Features",
+      "topic_no": 889,
+      "contents": [
+        {
+          "text": "Concepts",
+          "codeSnippet": "template <typename T> concept Integral = std::is_integral_v<T>;\n\nIntegral auto add(Integral a, Integral b) {\n    return a + b;\n}"
+        },
+        {
+          "text": "Ranges Library",
+          "codeSnippet": "#include <iostream>\n#include <ranges>\n\nint main() {\n    std::vector<int> numbers = {1, 2, 3, 4, 5};\n    auto evenNumbers = numbers | std::views::filter([](int x) { return x % 2 == 0; });\n    for (int num : evenNumbers) {\n        std::cout << num << ' ';\n    }\n    return 0;\n}"
+        },
+        {
+          "text": "Modules",
+          "codeSnippet": "module; // Module declaration\n\nexport module mymodule;\n\nexport int add(int a, int b) {\n    return a + b;\n}"
+        },
+        {
+          "text": "Coroutines",
+          "codeSnippet": "#include <iostream>\n#include <coroutine>\n\ngenerator<int> generateNumbers() {\n    for (int i = 0; i < 5; ++i) {\n        co_yield i;\n    }\n}\n\nint main() {\n    auto gen = generateNumbers();\n    while (gen.next()) {\n        std::cout << gen.value() << ' ';\n    }\n    return 0;\n}"
+        },
+        {
+          "text": "Three-Way Comparison Operator",
+          "codeSnippet": "struct Point {\n    int x, y;\n    auto operator<=>(const Point& other) const = default;\n};"
+        }
+      ]
+    },
+    {
+      "topic": "Debugging Techniques in C++",
+      "topic_no": 903,
+      "contents": [
+        {
+          "text": "1. Understanding the Problem",
+          "codeSnippet": "When encountering a bug, it's crucial to understand the problem thoroughly before attempting to fix it. This involves analyzing the code, identifying the root cause, and determining the expected behavior.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "2. Using Print Statements",
+          "codeSnippet": "One common debugging technique in C++ is using print statements to output the values of variables at different points in the code. This can help track the flow of the program and identify where the bug occurs.",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "3. Utilizing Breakpoints",
+          "codeSnippet": "Breakpoints are markers placed in the code that pause the program's execution at a specific line. This allows you to inspect the state of variables and step through the code to pinpoint the bug.",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "4. Debugging Tools",
+          "codeSnippet": "C++ offers various debugging tools like GDB, Visual Studio Debugger, and Xcode Debugger. These tools provide features such as stepping through code, inspecting variables, and analyzing memory usage.",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "5. Rubber Duck Debugging",
+          "codeSnippet": "Rubber duck debugging involves explaining your code line by line to an inanimate object, like a rubber duck. This process can help you uncover logical errors and understand the code better.",
+          "codeLanguage": "N/A"
+        }
+      ]
+    },
+    {
+      "topic": "Optimization Techniques in C++",
+      "topic_no": 926,
+      "contents": [
+        {
+          "text": "Introduction to Optimization Techniques in C++",
+          "codeSnippet": "#include <iostream>\n#include <algorithm>\n\nint main() {\n    int a = 5, b = 10;\n    std::cout << \"Before swap: a = \" << a << \", b = \" << b << std::endl;\n    std::swap(a, b);\n    std::cout << \"After swap: a = \" << a << \", b = \" << b << std::endl;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Using Standard Library Functions for Optimization",
+          "codeSnippet": "#include <iostream>\n#include <vector>\n#include <algorithm>\n\nint main() {\n    std::vector<int> vec = {5, 2, 8, 1, 9};\n    std::sort(vec.begin(), vec.end());\n    for (int num : vec) {\n        std::cout << num << \" \";\n    }\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Optimizing Loops in C++",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    for (int i = 0; i < 10; ++i) {\n        std::cout << i << \" \";\n    }\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Avoiding Unnecessary Copying in C++",
+          "codeSnippet": "#include <iostream>\n#include <vector>\n\nint main() {\n    std::vector<int> original = {1, 2, 3, 4, 5};\n    std::vector<int> &ref = original;\n    for (int num : ref) {\n        std::cout << num << \" \";\n    }\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Using Inline Functions for Optimization",
+          "codeSnippet": "#include <iostream>\n\ninline int square(int x) {\n    return x * x;\n}\n\nint main() {\n    int num = 5;\n    std::cout << \"Square of \" << num << \" is: \" << square(num) << std::endl;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Best Practices in C++ Programming",
+      "topic_no": 942,
+      "contents": [
+        {
+          "text": "Use meaningful variable and function names to improve code readability and maintainability.",
+          "codeSnippet": "int numberOfStudents = 10;\nvoid calculateAverageScore() { }",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Avoid using magic numbers in your code; instead, define constants for them.",
+          "codeSnippet": "#define MAX_STUDENTS 50\nint studentScores[MAX_STUDENTS];",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Always initialize variables when declaring them to prevent using uninitialized values.",
+          "codeSnippet": "int count = 0;\ndouble average = 0.0;",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Use comments to explain complex logic or algorithms in your code for better understanding.",
+          "codeSnippet": "// This function calculates the factorial of a number\nint factorial(int n) { }",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Follow the DRY (Don't Repeat Yourself) principle by reusing code through functions or classes.",
+          "codeSnippet": "int add(int a, int b) { return a + b; }\nint result = add(5, 3);",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Avoid using raw pointers and prefer smart pointers like std::unique_ptr or std::shared_ptr for memory management.",
+          "codeSnippet": "std::unique_ptr<int> ptr(new int);\n*ptr = 10;",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Use const keyword for variables that should not be modified to prevent accidental changes.",
+          "codeSnippet": "const int MAX_SCORE = 100;\nMAX_SCORE = 90; // Error: Cannot modify a const variable",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Handle errors and exceptions gracefully to prevent crashes and improve the reliability of your code.",
+          "codeSnippet": "try {\n    // Code that may throw exceptions\n} catch (std::exception& e) {\n    // Handle the exception\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Software Design Principles in C++",
+      "topic_no": 957,
+      "contents": [
+        {
+          "text": "Encapsulation",
+          "codeSnippet": "class Car {\nprivate:\n    int speed;\npublic:\n    void setSpeed(int s) {\n        speed = s;\n    }\n    int getSpeed() {\n        return speed;\n    }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Abstraction",
+          "codeSnippet": "class Shape {\npublic:\n    virtual void draw() = 0;\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        // Draw circle\n    }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Inheritance",
+          "codeSnippet": "class Animal {\npublic:\n    void eat() {\n        // Animal eating\n    }\n};\nclass Dog : public Animal {\npublic:\n    void bark() {\n        // Dog barking\n    }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Polymorphism",
+          "codeSnippet": "class Shape {\npublic:\n    virtual void draw() {\n        // Draw shape\n    }\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        // Draw circle\n    }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Single Responsibility Principle",
+          "codeSnippet": "class Logger {\npublic:\n    void logError(string message) {\n        // Log error\n    }\n    void logInfo(string message) {\n        // Log info\n    }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Open/Closed Principle",
+          "codeSnippet": "class Shape {\npublic:\n    virtual double area() = 0;\n};\nclass Circle : public Shape {\npublic:\n    double area() override {\n        // Calculate circle area\n    }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Liskov Substitution Principle",
+          "codeSnippet": "class Bird {\npublic:\n    virtual void fly() {\n        // Bird flying\n    }\n};\nclass Ostrich : public Bird {\npublic:\n    void fly() override {\n        // Ostrich cannot fly\n    }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Interface Segregation Principle",
+          "codeSnippet": "class Machine {\npublic:\n    virtual void print() = 0;\n    virtual void scan() = 0;\n};\nclass Printer : public Machine {\npublic:\n    void print() override {\n        // Print document\n    }\n};",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Dependency Inversion Principle",
+          "codeSnippet": "class Database {\npublic:\n    virtual void saveData(string data) = 0;\n};\nclass MySQLDatabase : public Database {\npublic:\n    void saveData(string data) override {\n        // Save data to MySQL\n    }\n};",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Design Patterns in C++",
+      "topic_no": 972,
+      "contents": [
+        {
+          "text": "Introduction to Design Patterns in C++",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    std::cout << \"Design Patterns in C++\" << std::endl;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Types of Design Patterns",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    std::cout << \"Creational, Structural, and Behavioral\" << std::endl;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Creational Design Patterns",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    std::cout << \"Factory, Builder, Prototype\" << std::endl;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Structural Design Patterns",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    std::cout << \"Adapter, Decorator, Facade\" << std::endl;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Behavioral Design Patterns",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    std::cout << \"Observer, Strategy, Template\" << std::endl;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Singleton Design Pattern",
+          "codeSnippet": "#include <iostream>\n\nclass Singleton {\nprivate:\n    static Singleton* instance;\n    Singleton() {}\npublic:\n    static Singleton* getInstance() {\n        if (!instance) {\n            instance = new Singleton();\n        }\n        return instance;\n    }\n};\n\nint main() {\n    Singleton* s = Singleton::getInstance();\n    return 0;\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Unit Testing in C++",
+      "topic_no": 978,
+      "contents": [
+        {
+          "text": "What is Unit Testing in C++?",
+          "codeSnippet": "",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Why is Unit Testing important in C++ development?",
+          "codeSnippet": "",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "How to write Unit Tests in C++?",
+          "codeSnippet": "",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "What are some popular C++ Unit Testing frameworks?",
+          "codeSnippet": "",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "How to run Unit Tests in C++?",
+          "codeSnippet": "",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Memory Leak Detection and Prevention in C++",
+      "topic_no": 990,
+      "contents": [
+        {
+          "text": "Memory leaks occur when a program allocates memory but fails to release it, leading to a gradual depletion of available memory.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One common method to detect memory leaks in C++ is to use tools like Valgrind or AddressSanitizer, which can analyze memory usage and identify potential leaks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Preventing memory leaks in C++ involves proper memory management practices such as using smart pointers like std::unique_ptr and std::shared_ptr instead of raw pointers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Another prevention technique is to follow the RAII (Resource Acquisition Is Initialization) principle, where resources are acquired in constructors and released in destructors.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using containers like std::vector and std::string can help manage memory automatically as they handle memory allocation and deallocation internally.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "C++ Style Guides and Coding Standards",
+      "topic_no": 1001,
+      "contents": [
+        {
+          "text": "C++ Style Guides and Coding Standards help maintain consistency and readability in codebases.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Consistent naming conventions for variables, functions, classes, and other entities are crucial in C++ coding standards.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Use of meaningful names for variables and functions improves code readability and maintainability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Avoid using magic numbers in C++ code; instead, define constants with descriptive names.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Proper indentation and formatting enhance code readability and make it easier to understand.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Comment your code effectively to explain complex logic or algorithms for better understanding by other developers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Follow the C++ Core Guidelines and the Google C++ Style Guide for best practices in C++ programming.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Use static code analysis tools like Clang-Tidy or cppcheck to enforce coding standards and catch potential issues.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Regular code reviews help ensure adherence to coding standards and identify areas for improvement.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cross-Platform Development with C++",
+      "topic_no": 1006,
+      "contents": [
+        {
+          "text": "Introduction to Cross-Platform Development with C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Cross-Platform Development with C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Tools and Libraries for Cross-Platform Development with C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a Cross-Platform Application with C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Handling Platform-Specific Features in Cross-Platform Development with C++",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Game Development with C++",
+      "topic_no": 1020,
+      "contents": [
+        {
+          "text": "Introduction to Game Development with C++",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    std::cout << \"Welcome to Game Development with C++!\";\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Setting Up a Game Development Environment in C++",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    // Initialize game development environment\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Creating a Game Loop in C++",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    while (true) {\n        // Game loop logic\n    }\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Implementing Game Mechanics in C++",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    // Implement game mechanics\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Handling User Input in a C++ Game",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    // Handle user input\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Rendering Graphics in a C++ Game",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    // Render graphics\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Implementing Collision Detection in C++ Game Development",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    // Implement collision detection\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Adding Sound Effects to a C++ Game",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    // Add sound effects\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Optimizing Game Performance in C++",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    // Optimize game performance\n    return 0;\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Graphics Programming with C++",
+      "topic_no": 1037,
+      "contents": [
+        {
+          "text": "Introduction to Graphics Programming with C++",
+          "codeSnippet": "#include <iostream>\n#include <graphics.h>\n\nint main() {\n    int gd = DETECT, gm;\n    initgraph(&gd, &gm, \"\");\n    circle(250, 200, 50);\n    delay(5000);\n    closegraph();\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Setting Up a Graphics Window",
+          "codeSnippet": "#include <graphics.h>\n\nint main() {\n    int gd = DETECT, gm;\n    initgraph(&gd, &gm, \"\");\n    delay(5000);\n    closegraph();\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Drawing Basic Shapes",
+          "codeSnippet": "#include <graphics.h>\n\nint main() {\n    int gd = DETECT, gm;\n    initgraph(&gd, &gm, \"\");\n    circle(250, 200, 50);\n    rectangle(100, 100, 200, 200);\n    line(300, 100, 400, 200);\n    delay(5000);\n    closegraph();\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Coloring and Filling Shapes",
+          "codeSnippet": "#include <graphics.h>\n\nint main() {\n    int gd = DETECT, gm;\n    initgraph(&gd, &gm, \"\");\n    setcolor(RED);\n    circle(250, 200, 50);\n    setfillstyle(SOLID_FILL, BLUE);\n    floodfill(250, 200, RED);\n    delay(5000);\n    closegraph();\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Handling User Input",
+          "codeSnippet": "#include <graphics.h>\n\nint main() {\n    int gd = DETECT, gm;\n    initgraph(&gd, &gm, \"\");\n    char ch;\n    while (1) {\n        ch = getch();\n        if (ch == 27) // ESC key\n            break;\n    }\n    closegraph();\n    return 0;\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Embedded Systems Programming with C++",
+      "topic_no": 1045,
+      "contents": [
+        {
+          "text": "Introduction to Embedded Systems Programming with C++",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, Embedded Systems Programming with C++!\";\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Basics of Embedded Systems",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    int sensorValue = 0;\n    // Read sensor value\n    // Perform some processing\n    // Output the result\n    std::cout << \"Sensor Value: \" << sensorValue;\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Working with GPIO in Embedded Systems",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    // Initialize GPIO pins\n    // Set pin direction\n    // Read or write to pins\n    // Cleanup GPIO\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Interrupt Handling in Embedded Systems",
+          "codeSnippet": "#include <iostream>\n\nvoid interruptHandler() {\n    // Handle the interrupt\n}\n\nint main() {\n    // Setup interrupt\n    // Register interrupt handler\n    // Main program loop\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Real-time Operating Systems (RTOS) in Embedded Systems",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    // Create tasks\n    // Set task priorities\n    // Start the RTOS scheduler\n    return 0;\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Networking and Socket Programming in C++",
+      "topic_no": 1063,
+      "contents": [
+        {
+          "text": "Introduction to Networking in C++",
+          "codeSnippet": "#include <iostream>\n#include <sys/socket.h>\n#include <netinet/in.h>\n\nint main() {\n    // Create a socket\n    int serverSocket = socket(AF_INET, SOCK_STREAM, 0);\n    if (serverSocket < 0) {\n        std::cerr << \"Error creating socket\" << std::endl;\n        return 1;\n    }\n\n    // Define the server address\n    struct sockaddr_in serverAddress;\n    serverAddress.sin_family = AF_INET;\n    serverAddress.sin_addr.s_addr = INADDR_ANY;\n    serverAddress.sin_port = htons(8080);\n\n    // Bind the socket to the address\n    if (bind(serverSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) < 0) {\n        std::cerr << \"Error binding socket\" << std::endl;\n        return 1;\n    }\n\n    // Listen for incoming connections\n    listen(serverSocket, 5);\n\n    std::cout << \"Server listening on port 8080...\" << std::endl;\n\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Creating a TCP Client in C++",
+          "codeSnippet": "#include <iostream>\n#include <sys/socket.h>\n#include <netinet/in.h>\n#include <arpa/inet.h>\n\nint main() {\n    // Create a socket\n    int clientSocket = socket(AF_INET, SOCK_STREAM, 0);\n    if (clientSocket < 0) {\n        std::cerr << \"Error creating socket\" << std::endl;\n        return 1;\n    }\n\n    // Define the server address\n    struct sockaddr_in serverAddress;\n    serverAddress.sin_family = AF_INET;\n    serverAddress.sin_port = htons(8080);\n    inet_pton(AF_INET, \"127.0.0.1\", &serverAddress.sin_addr);\n\n    // Connect to the server\n    if (connect(clientSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) < 0) {\n        std::cerr << \"Connection failed\" << std::endl;\n        return 1;\n    }\n\n    std::cout << \"Connected to server\" << std::endl;\n\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Sending and Receiving Data in C++ Sockets",
+          "codeSnippet": "#include <iostream>\n#include <sys/socket.h>\n#include <netinet/in.h>\n#include <unistd.h>\n\nint main() {\n    // Assuming socket creation and connection\n    char buffer[1024];\n    int valread;\n\n    // Send data\n    send(clientSocket, \"Hello from client\", 16, 0);\n\n    // Receive data\n    valread = read(clientSocket, buffer, 1024);\n    std::cout << \"Server response: \" << buffer << std::endl;\n\n    return 0;\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "GUI Development with C++ (e.g., Qt, wxWidgets)",
+      "topic_no": 1079,
+      "contents": [
+        {
+          "text": "Introduction to GUI Development with C++",
+          "codeSnippet": "",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Overview of Qt and wxWidgets libraries for GUI development in C++",
+          "codeSnippet": "",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Creating a basic GUI application using Qt",
+          "codeSnippet": "QWidget window; window.resize(250, 150); window.setWindowTitle('Hello, World!'); window.show();",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Creating a basic GUI application using wxWidgets",
+          "codeSnippet": "wxFrame *frame = new wxFrame(NULL, wxID_ANY, 'Hello, World!'); frame->Show(true);",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Adding buttons, labels, and other widgets to the GUI using Qt",
+          "codeSnippet": "QPushButton *button = new QPushButton('Click me', this); QLabel *label = new QLabel('Hello, World!', this);",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Adding buttons, labels, and other widgets to the GUI using wxWidgets",
+          "codeSnippet": "wxButton *button = new wxButton(frame, wxID_ANY, 'Click me'); wxStaticText *label = new wxStaticText(frame, wxID_ANY, 'Hello, World!');",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Handling user interactions and events in Qt",
+          "codeSnippet": "connect(button, SIGNAL(clicked()), this, SLOT(handleButtonClick());",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Handling user interactions and events in wxWidgets",
+          "codeSnippet": "Bind(wxEVT_BUTTON, &MyFrame::OnButtonClick, this, button->GetId());",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Layout management in Qt for arranging widgets",
+          "codeSnippet": "QVBoxLayout *layout = new QVBoxLayout; layout->addWidget(button); layout->addWidget(label); setLayout(layout);",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Layout management in wxWidgets for arranging widgets",
+          "codeSnippet": "wxBoxSizer *sizer = new wxBoxSizer(wxVERTICAL); sizer->Add(button, 0, wxEXPAND); sizer->Add(label, 0, wxEXPAND); SetSizer(sizer);",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Web Development with C++ (e.g., CGI, Wt)",
+      "topic_no": 1088,
+      "contents": [
+        {
+          "text": "Introduction to Web Development with C++",
+          "codeSnippet": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, World!\";\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Using CGI (Common Gateway Interface) in C++ for Web Development",
+          "codeSnippet": "#include <iostream>\n#include <cstdlib>\n\nint main() {\n    std::cout << \"Content-type: text/html\\n\\n\";\n    std::cout << \"<html><head><title>CGI Example</title></head><body><h1>Hello, CGI World!</h1></body></html>\";\n    return 0;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Implementing Web Applications with Wt (C++ Web Toolkit)",
+          "codeSnippet": "#include <Wt/WApplication>\n#include <Wt/WContainerWidget>\n#include <Wt/WText>\n\nclass MyApplication : public Wt::WApplication {\npublic:\n    MyApplication(const Wt::WEnvironment& env) : Wt::WApplication(env) {\n        root()->addWidget(new Wt::WText(\"Hello, Wt World!\"));\n    }\n};\n\nint main(int argc, char **argv) {\n    return Wt::WRun(argc, argv, [](const Wt::WEnvironment& env) {\n        return std::make_unique<MyApplication>(env);\n    });\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    }
+  ]
+}

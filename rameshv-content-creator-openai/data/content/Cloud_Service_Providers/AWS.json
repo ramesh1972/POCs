@@ -1,0 +1,1061 @@
+{
+  "category": "AWS",
+  "topics": [
+    {
+      "topic": "Introduction to AWS Cloud Services",
+      "topic_no": 16,
+      "contents": [
+        {
+          "text": "AWS (Amazon Web Services) is a comprehensive, evolving cloud computing platform provided by Amazon.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS offers a wide range of cloud services, including computing power, storage options, networking, databases, machine learning, and more.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS provides services in various categories such as compute, storage, databases, analytics, machine learning, networking, security, and more.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Some popular AWS services include Amazon EC2 (Elastic Compute Cloud), Amazon S3 (Simple Storage Service), Amazon RDS (Relational Database Service), and Amazon Lambda.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS allows users to scale resources up or down based on demand, providing flexibility and cost-effectiveness.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS offers a pay-as-you-go pricing model, where users only pay for the resources they consume.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Creating an AWS Account",
+      "topic_no": 65,
+      "contents": [
+        {
+          "text": "Creating an AWS Account is the first step to start using AWS services.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create an AWS Account, go to the AWS website and click on 'Create an AWS Account'.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Fill in the required information such as email address, password, and payment information to set up your AWS Account.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Once you have completed the account creation process, you will receive a verification email to confirm your email address.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "After verifying your email, you can sign in to your AWS Account using the credentials you provided during the account creation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS Management Console",
+      "topic_no": 109,
+      "contents": [
+        {
+          "text": "The AWS Management Console is a web-based interface that allows users to access and manage their AWS services and resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Users can perform various tasks such as launching instances, creating S3 buckets, configuring security groups, and more through the AWS Management Console.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The AWS Management Console provides a user-friendly way to interact with AWS services without the need to use the command line interface.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS Identity and Access Management (IAM)",
+      "topic_no": 157,
+      "contents": [
+        {
+          "text": "AWS Identity and Access Management (IAM) allows you to manage access to AWS services and resources securely.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "IAM enables you to create and manage AWS users, groups, and roles to control who can access your AWS resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can define fine-grained access permissions by creating IAM policies that specify the actions allowed or denied on AWS resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "IAM provides security features such as multi-factor authentication (MFA) and identity federation to enhance the security of your AWS environment.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "IAM integrates with many AWS services, allowing you to control access to resources across your AWS infrastructure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS EC2 (Elastic Compute Cloud)",
+      "topic_no": 250,
+      "contents": [
+        {
+          "text": "AWS EC2 (Elastic Compute Cloud) is a web service that provides resizable compute capacity in the cloud.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "EC2 instances can be easily launched, scaled, and terminated based on your computing requirements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can choose from various instance types such as General Purpose, Compute Optimized, Memory Optimized, and Storage Optimized.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "EC2 instances can run various operating systems like Amazon Linux, Ubuntu, Windows Server, and more.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can create custom Amazon Machine Images (AMIs) to launch instances with pre-configured software and settings.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "EC2 instances can be placed in different Availability Zones to ensure high availability and fault tolerance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can use Auto Scaling to automatically adjust the number of EC2 instances based on demand.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "EC2 instances can be accessed securely using key pairs for SSH or RDP authentication.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can attach Elastic Block Store (EBS) volumes to EC2 instances for persistent storage.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "EC2 instances can be part of a Virtual Private Cloud (VPC) to isolate and secure your resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS S3 (Simple Storage Service)",
+      "topic_no": 340,
+      "contents": [
+        {
+          "text": "AWS S3 is a scalable object storage service that allows you to store and retrieve data from anywhere on the web.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can use AWS S3 to store and retrieve any amount of data at any time, from anywhere on the web.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS S3 provides high availability and durability for your data, ensuring that your data is always accessible.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can use AWS S3 to host static websites, store backups, and archive data.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS S3 allows you to control access to your data using bucket policies and access control lists (ACLs).",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can use AWS S3 lifecycle policies to automatically transition objects to different storage classes or expire them after a set period of time.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS S3 offers features such as versioning, encryption, and multi-factor authentication to help secure your data.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can interact with AWS S3 using the AWS Management Console, SDKs, or the AWS Command Line Interface (CLI).",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create a bucket in AWS S3 using the AWS CLI, you can use the following command: aws s3 mb s3://bucket-name",
+          "codeSnippet": "aws s3 mb s3://bucket-name",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "To upload a file to an AWS S3 bucket using the AWS CLI, you can use the following command: aws s3 cp file.txt s3://bucket-name",
+          "codeSnippet": "aws s3 cp file.txt s3://bucket-name",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "To make a file in an AWS S3 bucket publicly accessible using the AWS CLI, you can use the following command: aws s3api put-object-acl --bucket bucket-name --key file.txt --acl public-read",
+          "codeSnippet": "aws s3api put-object-acl --bucket bucket-name --key file.txt --acl public-read",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "AWS RDS (Relational Database Service)",
+      "topic_no": 407,
+      "contents": [
+        {
+          "text": "AWS RDS (Relational Database Service) is a managed database service that makes it easy to set up, operate, and scale a relational database in the cloud.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS RDS supports various database engines such as MySQL, PostgreSQL, Oracle, SQL Server, and MariaDB.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "With AWS RDS, you can easily launch a database instance, scale compute and storage resources, and automate backups and maintenance tasks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create an RDS instance using the AWS Management Console, navigate to the RDS service, click 'Create database,' select the engine type, configure settings, and launch the instance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can also create an RDS instance using the AWS CLI by running a command like 'aws rds create-db-instance ...'.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS RDS provides features like automated backups, Multi-AZ deployments for high availability, read replicas for read scaling, and security features like encryption at rest and in transit.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To connect to an RDS instance, you need the endpoint address, port number, username, and password. You can use tools like MySQL Workbench or pgAdmin to connect.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can monitor and manage your RDS instances using the AWS Management Console, AWS CLI, or SDKs. You can view performance metrics, set up alarms, and perform maintenance tasks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS VPC (Virtual Private Cloud)",
+      "topic_no": 478,
+      "contents": [
+        {
+          "text": "Introduction to AWS VPC",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a VPC in AWS",
+          "codeSnippet": "aws ec2 create-vpc --cidr-block 10.0.0.0/16",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Subnet Creation in VPC",
+          "codeSnippet": "aws ec2 create-subnet --vpc-id vpc-123456 --cidr-block 10.0.1.0/24",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Security Groups in VPC",
+          "codeSnippet": "aws ec2 create-security-group --group-name MySecurityGroup --description 'My security group' --vpc-id vpc-123456",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Route Tables in VPC",
+          "codeSnippet": "aws ec2 create-route-table --vpc-id vpc-123456",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Internet Gateway in VPC",
+          "codeSnippet": "aws ec2 create-internet-gateway",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Associating Subnets with Route Tables",
+          "codeSnippet": "aws ec2 associate-route-table --subnet-id subnet-123456 --route-table-id rtb-123456",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "NAT Gateway in VPC",
+          "codeSnippet": "aws ec2 create-nat-gateway --subnet-id subnet-123456 --allocation-id eip-123456",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "VPC Peering",
+          "codeSnippet": "aws ec2 create-vpc-peering-connection --vpc-id vpc-123456 --peer-vpc-id vpc-654321",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "AWS Lambda",
+      "topic_no": 517,
+      "contents": [
+        {
+          "text": "What is AWS Lambda?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How does AWS Lambda work?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a Lambda Function in AWS",
+          "codeSnippet": "const handler = async (event) => { return 'Hello from Lambda!'; };",
+          "codeLanguage": "Node.js"
+        },
+        {
+          "text": "Triggering a Lambda Function",
+          "codeSnippet": "aws lambda invoke --function-name MyFunction --payload '{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}' output.txt",
+          "codeLanguage": "AWS CLI"
+        },
+        {
+          "text": "Setting up Triggers for Lambda Functions",
+          "codeSnippet": "const AWS = require('aws-sdk');\nconst lambda = new AWS.Lambda();\n\nconst params = {\n  FunctionName: 'MyFunction',\n  InvocationType: 'Event',\n  Payload: '{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}'\n};\n\nlambda.invoke(params, function(err, data) {\n  if (err) console.log(err, err.stack);\n  else console.log(data);\n});",
+          "codeLanguage": "Node.js"
+        },
+        {
+          "text": "Monitoring and Logging Lambda Functions",
+          "codeSnippet": "aws cloudwatch logs filter-log-events --log-group-name /aws/lambda/MyFunction --filter-pattern 'ERROR'",
+          "codeLanguage": "AWS CLI"
+        }
+      ]
+    },
+    {
+      "topic": "AWS CloudFormation",
+      "topic_no": 558,
+      "contents": [
+        {
+          "text": "Introduction to AWS CloudFormation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of using AWS CloudFormation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a CloudFormation template",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Defining resources in a CloudFormation template",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using parameters in a CloudFormation template",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating stacks using CloudFormation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Updating stacks in CloudFormation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Deleting stacks in CloudFormation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Working with nested stacks in CloudFormation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using CloudFormation with AWS CLI",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS CloudWatch",
+      "topic_no": 587,
+      "contents": [
+        {
+          "text": "Introduction to AWS CloudWatch",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up CloudWatch Alarms for monitoring",
+          "codeSnippet": "aws cloudwatch put-metric-alarm --alarm-name my-alarm-name --alarm-description \"Description of the alarm\" --metric-name my-metric-name --namespace AWS/EC2 --statistic Average --period 300 --threshold 90 --comparison-operator GreaterThanThreshold --dimensions Name=InstanceId,Value=i-1234567890abcdef0 --evaluation-periods 1 --alarm-actions arn:aws:sns:us-east-1:123456789012:my-sns-topic --unit Percent",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating CloudWatch Dashboards for visualization",
+          "codeSnippet": "aws cloudwatch put-dashboard --dashboard-name my-dashboard --dashboard-body file://dashboard.json",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using CloudWatch Logs for log monitoring",
+          "codeSnippet": "aws logs create-log-group --log-group-name my-log-group",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Integration of CloudWatch with other AWS services",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS CloudTrail",
+      "topic_no": 614,
+      "contents": [
+        {
+          "text": "AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CloudTrail records all API calls for your account and delivers log files to an Amazon S3 bucket.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can use CloudTrail to detect unusual activity in your AWS account, troubleshoot operational issues, and analyze security threats.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CloudTrail provides event history of your AWS account activity, including actions taken through the AWS Management Console, AWS SDKs, command-line tools, and other AWS services.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can create CloudTrail trails to specify the management and data event logging settings for your account.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Trails can be configured to log all AWS API calls, log data events for supported services, and integrate with CloudWatch Logs for real-time monitoring.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS Route 53",
+      "topic_no": 650,
+      "contents": [
+        {
+          "text": "AWS Route 53 is a scalable and highly available Domain Name System (DNS) web service provided by AWS.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Route 53 can be used to route users to internet applications by translating domain names into IP addresses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Route 53 supports various routing policies such as simple routing, weighted routing, latency-based routing, failover routing, and geolocation routing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create a new hosted zone in Route 53 using the AWS CLI, you can use the following command:",
+          "codeSnippet": "aws route53 create-hosted-zone --name example.com --caller-reference 1",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Route 53 health checks can be set up to monitor the health of resources and endpoints, allowing for automated failover.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Route 53 can be integrated with other AWS services like CloudFront, S3, and EC2 for seamless DNS management.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS SNS (Simple Notification Service)",
+      "topic_no": 688,
+      "contents": [
+        {
+          "text": "AWS SNS (Simple Notification Service) is a fully managed messaging service that allows you to send notifications to individuals or groups of recipients.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "You can use AWS SNS to send SMS messages, emails, and push notifications to mobile devices.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "To create a topic in AWS SNS, you can use the AWS Management Console, AWS CLI, or AWS SDKs.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Once a topic is created, you can subscribe endpoints to the topic to receive notifications.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Subscriptions can be in the form of email, SMS, HTTP/S, or Lambda functions.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "When a message is published to a topic, AWS SNS delivers the message to all subscribed endpoints.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "You can use AWS SNS to fan-out messages to multiple subscribers, enabling pub/sub messaging patterns.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "AWS SNS supports message filtering based on message attributes, allowing you to send targeted notifications.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "You can monitor the delivery status of messages sent through AWS SNS using CloudWatch metrics and alarms.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "AWS SNS integrates with other AWS services like Amazon S3, Amazon SQS, and AWS Lambda for seamless message processing.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "AWS SQS (Simple Queue Service)",
+      "topic_no": 732,
+      "contents": [
+        {
+          "text": "AWS SQS (Simple Queue Service) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can use AWS SQS to send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS SQS offers two types of message queues: Standard Queues and FIFO (First-In-First-Out) Queues.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Standard Queues provide best-effort ordering, meaning that messages might be delivered out of order.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "FIFO Queues guarantee that messages are processed exactly once and in the order they are sent.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To send a message to an SQS queue, you need to create a queue, then send a message to the queue using the AWS SDK or the AWS Management Console.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To receive messages from an SQS queue, you can use long polling or short polling methods to retrieve messages from the queue.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Here is an example of sending a message to an SQS queue using the AWS SDK in Python:",
+          "codeSnippet": "import boto3\n\n# Create SQS client\nsqs = boto3.client('sqs')\n\nqueue_url = 'YOUR_QUEUE_URL'\n\n# Send message to SQS queue\nresponse = sqs.send_message(\n    QueueUrl=queue_url,\n    MessageBody='Hello, world!'\n)\n\nprint(response)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "Here is an example of receiving messages from an SQS queue using the AWS SDK in Java:",
+          "codeSnippet": "import software.amazon.awssdk.services.sqs.SqsClient;\nimport software.amazon.awssdk.services.sqs.model.ReceiveMessageRequest;\nimport software.amazon.awssdk.services.sqs.model.ReceiveMessageResponse;\n\n// Create SQS client\nSqsClient sqsClient = SqsClient.builder().build();\n\nString queueUrl = \"YOUR_QUEUE_URL\";\n\n// Receive messages from SQS queue\nReceiveMessageRequest receiveRequest = ReceiveMessageRequest.builder()\n    .queueUrl(queueUrl)\n    .maxNumberOfMessages(5)\n    .build();\n\nReceiveMessageResponse receiveMessageResponse = sqsClient.receiveMessage(receiveRequest);\n\nreceiveMessageResponse.messages().forEach(message -> System.out.println(message.body()));",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "AWS DynamoDB",
+      "topic_no": 773,
+      "contents": [
+        {
+          "text": "Introduction to AWS DynamoDB",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a DynamoDB Table",
+          "codeSnippet": "aws dynamodb create-table --table-name MyTable --attribute-definitions AttributeName=ID,AttributeType=S --key-schema AttributeName=ID,KeyType=HASH --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Inserting Data into DynamoDB Table",
+          "codeSnippet": "var params = {\n    TableName: 'MyTable',\n    Item: {\n        'ID': {S: '123'},\n        'Name': {S: 'John Doe'}\n    }\n};\n\nvar documentClient = new AWS.DynamoDB.DocumentClient();\ndocumentClient.put(params, function(err, data) {\n    if (err) console.log(err);\n    else console.log(data);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Querying Data from DynamoDB Table",
+          "codeSnippet": "var params = {\n    TableName: 'MyTable',\n    KeyConditionExpression: 'ID = :id',\n    ExpressionAttributeValues: {\n        ':id': '123'\n    }\n};\n\nvar documentClient = new AWS.DynamoDB.DocumentClient();\ndocumentClient.query(params, function(err, data) {\n    if (err) console.log(err);\n    else console.log(data);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Updating Data in DynamoDB Table",
+          "codeSnippet": "var params = {\n    TableName: 'MyTable',\n    Key: {\n        'ID': '123'\n    },\n    UpdateExpression: 'SET #name = :name',\n    ExpressionAttributeNames: {\n        '#name': 'Name'\n    },\n    ExpressionAttributeValues: {\n        ':name': 'Jane Doe'\n    }\n};\n\nvar documentClient = new AWS.DynamoDB.DocumentClient();\ndocumentClient.update(params, function(err, data) {\n    if (err) console.log(err);\n    else console.log(data);\n});",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Deleting Data from DynamoDB Table",
+          "codeSnippet": "var params = {\n    TableName: 'MyTable',\n    Key: {\n        'ID': '123'\n    }\n};\n\nvar documentClient = new AWS.DynamoDB.DocumentClient();\ndocumentClient.delete(params, function(err, data) {\n    if (err) console.log(err);\n    else console.log(data);\n});",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "AWS Kinesis",
+      "topic_no": 803,
+      "contents": [
+        {
+          "text": "AWS Kinesis is a fully managed service provided by Amazon Web Services for real-time processing of streaming data at a large scale.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kinesis Data Streams allows you to collect and process large streams of data records in real-time.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kinesis Data Firehose is used to reliably load streaming data into data lakes, data stores, and analytics services.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kinesis Data Analytics enables you to process and analyze streaming data using SQL or Java.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kinesis Data Streams can be integrated with other AWS services like Lambda, S3, DynamoDB, and Redshift for real-time data processing and analytics.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create a Kinesis Data Stream using the AWS SDK for Python (Boto3), you can use the following code snippet:",
+          "codeSnippet": "import boto3\n\nclient = boto3.client('kinesis')\nresponse = client.create_stream(\n    StreamName='my-stream',\n    ShardCount=1\n)",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "To put a record into a Kinesis Data Stream using the AWS SDK for Java, you can use the following code snippet:",
+          "codeSnippet": "import com.amazonaws.services.kinesis.AmazonKinesis;\nimport com.amazonaws.services.kinesis.AmazonKinesisClientBuilder;\nimport com.amazonaws.services.kinesis.model.PutRecordRequest;\nimport com.amazonaws.services.kinesis.model.PutRecordResult;\n\nAmazonKinesis client = AmazonKinesisClientBuilder.standard().build();\nPutRecordRequest putRecordRequest = new PutRecordRequest();\nputRecordRequest.setStreamName(\"my-stream\");\nputRecordRequest.setData(ByteBuffer.wrap(\"Hello Kinesis\".getBytes()));\nputRecordRequest.setPartitionKey(\"partitionKey\");\nPutRecordResult putRecordResult = client.putRecord(putRecordRequest);",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "AWS Redshift",
+      "topic_no": 819,
+      "contents": [
+        {
+          "text": "Introduction to AWS Redshift",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of AWS Redshift",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a Redshift cluster in AWS",
+          "codeSnippet": "aws redshift create-cluster --cluster-identifier myredshiftcluster --node-type dc2.large --number-of-nodes 4 --master-username mymasteruser --master-user-password mymasterpassword",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Loading data into Redshift from Amazon S3",
+          "codeSnippet": "COPY mytable FROM 's3://mybucket/data.csv' CREDENTIALS 'aws_access_key_id=myaccesskey;aws_secret_access_key=mysecretkey' CSV;",
+          "codeLanguage": "sql"
+        },
+        {
+          "text": "Querying data in AWS Redshift",
+          "codeSnippet": "SELECT column1, column2 FROM mytable WHERE condition;",
+          "codeLanguage": "sql"
+        },
+        {
+          "text": "Optimizing performance in AWS Redshift",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS Elastic Beanstalk",
+      "topic_no": 831,
+      "contents": [
+        {
+          "text": "Introduction to AWS Elastic Beanstalk",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of AWS Elastic Beanstalk",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating an Elastic Beanstalk environment",
+          "codeSnippet": "eb create",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Deploying an application to Elastic Beanstalk",
+          "codeSnippet": "eb deploy",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Configuring Elastic Beanstalk environments",
+          "codeSnippet": "eb config",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Monitoring and managing Elastic Beanstalk applications",
+          "codeSnippet": "eb logs",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Scaling options in Elastic Beanstalk",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS API Gateway",
+      "topic_no": 854,
+      "contents": [
+        {
+          "text": "Introduction to AWS API Gateway",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of AWS API Gateway",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a REST API with AWS API Gateway",
+          "codeSnippet": "aws apigateway create-rest-api --name MyAPI",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Setting up API Gateway methods and integrations",
+          "codeSnippet": "aws apigateway put-method --rest-api-id {rest-api-id} --resource-id {resource-id} --http-method GET --authorization-type NONE",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Configuring API Gateway stages and deployments",
+          "codeSnippet": "aws apigateway create-deployment --rest-api-id {rest-api-id} --stage-name prod",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Securing APIs with AWS API Gateway",
+          "codeSnippet": "aws apigateway update-authorizer --rest-api-id {rest-api-id} --authorizer-id {authorizer-id} --patch-operations op=replace,path=/authorizerUri,value=arn:aws:cognito-idp:{region}:{account-id}:user-pool/{user-pool-id}",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Monitoring and logging with AWS API Gateway",
+          "codeSnippet": "aws apigateway get-usage --rest-api-id {rest-api-id} --start-date 2022-01-01 --end-date 2022-01-31",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "AWS Cognito",
+      "topic_no": 870,
+      "contents": [
+        {
+          "text": "AWS Cognito is a managed service provided by AWS that enables you to add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "With AWS Cognito, you can create unique identities for your users and authenticate them through multiple identity providers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS Cognito provides features like user pools for managing user identities, identity pools for granting access to AWS resources, and integration with social identity providers like Google, Facebook, and Amazon.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can use AWS Cognito to handle user registration, authentication, authorization, and account recovery in your applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS Cognito supports multi-factor authentication, allowing you to add an extra layer of security to your applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can integrate AWS Cognito with other AWS services like AWS Lambda, Amazon API Gateway, and Amazon S3 to build secure and scalable applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS CloudFront",
+      "topic_no": 882,
+      "contents": [
+        {
+          "text": "Introduction to AWS CloudFront",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of AWS CloudFront",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a CloudFront distribution",
+          "codeSnippet": "aws cloudfront create-distribution --distribution-config file://distribution-config.json",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Configuring caching behavior in CloudFront",
+          "codeSnippet": "DefaultCacheBehavior: \n  TargetOriginId: myS3Origin\n  ViewerProtocolPolicy: allow-all",
+          "codeLanguage": "yaml"
+        },
+        {
+          "text": "Setting up custom SSL certificates in CloudFront",
+          "codeSnippet": "aws acm request-certificate --domain-name example.com",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Using CloudFront with AWS Lambda@Edge",
+          "codeSnippet": "exports.handler = async (event) => {\n  // Lambda@Edge code here\n};",
+          "codeLanguage": "javascript"
+        }
+      ]
+    },
+    {
+      "topic": "AWS Glacier",
+      "topic_no": 898,
+      "contents": [
+        {
+          "text": "AWS Glacier is a low-cost storage service that provides secure and durable storage for data archiving and backup.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Glacier is designed for data that is infrequently accessed and for which retrieval times of several hours are acceptable.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data stored in Glacier is divided into archives, which are units of data that can be up to 40 terabytes in size.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To store data in Glacier, you first create a vault, which is a container for archives.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can manage Glacier using the AWS Management Console, AWS CLI, or AWS SDKs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Retrieving data from Glacier can take several hours, so it is suitable for data that is rarely accessed.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Glacier provides three retrieval options: Expedited, Standard, and Bulk, with varying retrieval times and costs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can set lifecycle policies to automatically transition data from S3 to Glacier based on your specified rules.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS Snowball",
+      "topic_no": 905,
+      "contents": [
+        {
+          "text": "Introduction to AWS Snowball",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of using AWS Snowball for data transfer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to request an AWS Snowball device",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Preparing data for transfer using AWS Snowball",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using the AWS Snowball client to manage data transfer jobs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Tracking the status of data transfer jobs with AWS Snowball",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "AWS Snowmobile",
+      "topic_no": 916,
+      "contents": [
+        {
+          "text": "AWS Snowmobile is an exabyte-scale data transfer service that can move extremely large amounts of data to AWS securely.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Snowmobile is a ruggedized shipping container pulled by a semi-trailer truck that can transfer up to 100 PB of data per Snowmobile.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Snowmobile is designed to securely transfer exabytes of data to AWS, reducing the time it takes to transfer large datasets to the cloud.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Snowmobile uses multiple layers of security, including encryption, dedicated security personnel, GPS tracking, and alarm monitoring.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "To use Snowmobile, customers can request a Snowmobile to be delivered to their location, load their data onto the Snowmobile, and then have it transported to AWS.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "AWS Storage Gateway",
+      "topic_no": 923,
+      "contents": [
+        {
+          "text": "AWS Storage Gateway is a hybrid cloud storage service that enables on-premises applications to seamlessly use AWS cloud storage.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "There are three types of AWS Storage Gateway: File Gateway, Volume Gateway, and Tape Gateway.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "File Gateway provides a file interface to seamlessly store files as objects in Amazon S3.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Volume Gateway presents cloud-backed volumes that can be mounted as iSCSI devices from on-premises applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Tape Gateway provides a virtual tape library interface to archive data in Amazon S3 Glacier and Glacier Deep Archive.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To set up AWS Storage Gateway, you need to deploy a gateway appliance on-premises or in an EC2 instance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "You can manage AWS Storage Gateway using the AWS Management Console, AWS Command Line Interface (CLI), or AWS SDKs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

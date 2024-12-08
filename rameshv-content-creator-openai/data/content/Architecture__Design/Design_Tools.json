@@ -1,0 +1,264 @@
+{
+  "category": "Design Tools",
+  "topics": [
+    {
+      "topic": "Design Tools",
+      "topic_no": 86,
+      "contents": [
+        {
+          "text": "V-Ray is a popular rendering software used in the field of architecture and design. It is known for its high-quality photorealistic renders and advanced lighting and material capabilities.",
+          "codeSnippet": "const vray = require('vray');"
+        },
+        {
+          "text": "Sketch is a popular design tool used by architects and designers to create digital illustrations, wireframes, and prototypes for architectural projects.",
+          "codeSnippet": "import sketch from 'sketch';",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "InVision is a popular design tool used by designers and teams to create interactive prototypes and collaborate on design projects.",
+          "codeSnippet": "npm install -g invision-cli",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Justinmind is a popular prototyping tool used for designing interactive prototypes for web and mobile applications. It allows designers to create wireframes, mockups, and interactive prototypes with its drag-and-drop interface and extensive library of UI components.",
+          "codeSnippet": "const element = document.getElementById('elementId');"
+        },
+        {
+          "text": "Lucidchart is a web-based diagramming tool that allows users to create various types of diagrams such as flowcharts, wireframes, and org charts. It offers a user-friendly interface with drag-and-drop functionality, collaboration features, and integration with other tools like Google Drive and Microsoft Office.",
+          "codeSnippet": "const diagram = new LucidchartDiagram();\ndiagram.createFlowchart();",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Maya is a powerful 3D modeling and animation software commonly used in the field of architecture and design.",
+          "codeSnippet": "import maya.cmds as cmds\n\ncmds.polyCube()"
+        },
+        {
+          "text": "Cacoo is a web-based diagramming tool that allows users to create wireframes, flowcharts, mind maps, and other visual representations for design projects.",
+          "codeSnippet": "import Cacoo from 'cacoo';\nconst diagram = new Cacoo();\ndiagram.createWireframe();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Balsamiq is a wireframing tool that allows designers to quickly sketch out user interfaces and collaborate with team members.",
+          "codeSnippet": "import balsamiq",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Blender is a popular open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, and computer games.",
+          "codeSnippet": "import bpy\n\n# Create a new cube\nbpy.ops.mesh.primitive_cube_add(size=2)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Figma is a popular cloud-based design tool used for creating user interfaces, websites, and app designs. It allows for real-time collaboration among team members and offers features such as prototyping, vector editing, and design systems.",
+          "codeSnippet": "const figma = require('figma-api');"
+        },
+        {
+          "text": "Origami Studio is a design tool used for creating interactive prototypes, particularly for user interface and user experience design.",
+          "codeSnippet": "Origami Studio allows designers to create prototypes by connecting visual elements and adding interactive components using a node-based visual programming interface.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Arnold is a high-quality rendering engine developed by Solid Angle for creating realistic images in architecture and design projects.",
+          "codeSnippet": "import arnold\n\nscene = arnold.Scene()\nrenderer = arnold.Renderer()\nrenderer.render(scene)"
+        },
+        {
+          "text": "UML is a standardized modeling language used in software engineering for visualizing, specifying, constructing, and documenting the artifacts of a software system.",
+          "codeSnippet": "class Car {\n  String make;\n  int year;\n  void start() {\n    // code to start the car\n  }\n}"
+        },
+        {
+          "text": "Proto.io is a popular design tool used in the field of Architecture & Design. It is a prototyping tool that allows users to create interactive prototypes for web and mobile applications without needing to write any code. With Proto.io, designers can easily design, prototype, and collaborate on their projects, helping them bring their ideas to life.",
+          "codeSnippet": "const element = document.getElementById('myElement');"
+        },
+        {
+          "text": "Edraw Max is a versatile diagramming software that offers a wide range of tools for creating diagrams, flowcharts, mind maps, floor plans, and other visual representations.",
+          "codeSnippet": "Edraw Max is widely used in various fields such as architecture, engineering, business, and education for its user-friendly interface and extensive library of templates and symbols.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Flinto is a prototyping tool that allows designers to create interactive and animated prototypes for mobile, web, and desktop applications. It offers a user-friendly interface and features such as transitions, gestures, and animations to bring designs to life.",
+          "codeSnippet": "Flinto.prototype.create = function() {\n  // Add code here to create interactive prototypes\n};",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Entity-Relationship Diagram (ERD) is a visual representation of the relationships between entities in a database. It helps in designing and understanding the structure of a database by illustrating how data is related to each other.",
+          "codeSnippet": "CREATE TABLE customers (customer_id INT PRIMARY KEY, customer_name VARCHAR(50), address VARCHAR(100));"
+        },
+        {
+          "text": "Final Cut Pro is a professional video editing software developed by Apple Inc. It offers advanced video editing tools and features for creating high-quality videos.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Marmoset Toolbag is a powerful real-time rendering and texture baking tool that is commonly used by designers and artists in the architecture and design industry. It allows users to create high-quality 3D renders and animations with advanced lighting, shading, and material editing features.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Redshift is a powerful GPU-accelerated rendering engine developed by Amazon Web Services for creating high-quality, photorealistic 3D renderings and visualizations.",
+          "codeSnippet": "SELECT column1, column2 FROM table_name WHERE condition;"
+        },
+        {
+          "text": "Canva is a popular graphic design platform that allows users to create a wide range of visual content such as social media graphics, presentations, posters, documents, and other marketing materials. It offers a user-friendly interface with drag-and-drop functionality, a vast library of templates, images, fonts, and design elements to choose from. Canva is suitable for both beginners and professionals in the field of design.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "3ds Max is a professional 3D computer graphics program used in architecture and design for creating detailed models, animations, and visualizations.",
+          "codeSnippet": "import bpy\n\n# Select all objects in the scene\nbpy.ops.object.select_all(action='SELECT')\n\n# Delete all selected objects\nbpy.ops.object.delete()",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Adobe XD is a powerful design tool created by Adobe Inc. It is used by designers to create user interfaces, web designs, and prototypes for various digital products. Adobe XD offers features such as artboards, responsive resizing, plugins, and collaboration tools, making it a popular choice among designers and design teams.",
+          "codeSnippet": "const designTool = 'Adobe XD';"
+        },
+        {
+          "text": "Maxwell Render is a high-quality rendering software used in the field of architecture and design. It is known for its physically accurate lighting and materials simulation, making it a popular choice for creating realistic visualizations of architectural projects. Maxwell Render offers a user-friendly interface and powerful tools for achieving photorealistic results.",
+          "codeSnippet": "import maxwellRender\n\nscene = maxwellRender.Scene()\nscene.addGeometry(model)\nscene.setCamera(camera)\nscene.setLighting(sunlight)\nscene.render()",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "ZBrush is a digital sculpting software used in the field of architecture and design. It offers powerful tools for creating detailed and intricate 3D models, making it a popular choice among designers and artists.",
+          "codeSnippet": "ZBrush is commonly used for creating high-resolution models, texturing, and rendering in architectural visualization projects.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Marvel is a popular design tool used by designers to create interactive prototypes for web and mobile applications.",
+          "codeSnippet": "const designTool = 'Marvel';",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Octane Render is a GPU-accelerated renderer known for its high-quality rendering capabilities and speed. It is commonly used in the field of architecture and design to create photorealistic images and animations.",
+          "codeSnippet": "OctaneRender octane = new OctaneRender();\noctane.setRenderSettings(settings);\noctane.renderScene(scene);",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Substance Designer is a node-based texturing tool that allows architects and designers to create realistic materials for 3D models. It offers a wide range of features such as procedural texture creation, material layering, and real-time visualization.",
+          "codeSnippet": "const substanceDesigner = new NodeBasedTexturingTool();"
+        },
+        {
+          "text": "Visme is a versatile design tool that allows users to create visually appealing presentations, infographics, reports, and other visual content without the need for graphic design skills. It offers a wide range of templates, graphics, and customization options to help users bring their ideas to life.",
+          "codeSnippet": "Visme.createPresentation('My Presentation');\nVisme.addSlide('Title Slide');\nVisme.addText('Hello, World!');\nVisme.addImage('image.jpg');\nVisme.addChart('Bar Chart', data);"
+        },
+        {
+          "text": "Principle is a fundamental concept in design that guides the decision-making process and helps achieve a cohesive and harmonious outcome. In the context of design tools, principles serve as the foundation for creating visually appealing and functional designs. Understanding design principles such as balance, contrast, hierarchy, and alignment is essential for creating effective designs.",
+          "codeSnippet": "const designPrinciples = ['balance', 'contrast', 'hierarchy', 'alignment'];",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Creately is a web-based diagramming tool that is used for creating flowcharts, mind maps, wireframes, org charts, and other visual representations.",
+          "codeSnippet": "const diagram = new CreatelyDiagram();\ndiagram.addShape('rectangle', { x: 100, y: 100, width: 200, height: 100 });\ndiagram.connectShapes(shape1, shape2, 'straight');",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Axure RP is a powerful design tool used for creating interactive prototypes and wireframes for websites and applications. It allows designers to quickly create and share interactive prototypes without needing to write code.",
+          "codeSnippet": "Axure RP is known for its robust features such as dynamic content, adaptive views, and conditional logic, making it a popular choice among UX/UI designers and product managers.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Cinema 4D is a professional 3D modeling, animation, and rendering software widely used in the field of architecture and design. It offers a wide range of tools and features for creating stunning visual effects, motion graphics, and architectural visualizations.",
+          "codeSnippet": "import c4d from 'cinema4d';\n\nconst model = new c4d.Model();\nmodel.createScene();\nmodel.render();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Visio is a diagramming and vector graphics application that is part of the Microsoft Office suite. It is commonly used for creating flowcharts, network diagrams, org charts, floor plans, and other visual representations of information.",
+          "codeSnippet": "import visio from 'visio';\n\nconst diagram = new visio.Diagram();\ndiagram.addShape('rectangle', { x: 100, y: 100 });\ndiagram.addShape('circle', { x: 200, y: 200 });\ndiagram.connectShapes(0, 1);"
+        },
+        {
+          "text": "SmartDraw is a versatile design tool that is commonly used in the field of Architecture & Design. It offers a wide range of features and templates to create professional architectural drawings, floor plans, and other design projects. SmartDraw is known for its user-friendly interface and ability to generate visually appealing designs quickly and efficiently.",
+          "codeSnippet": "import smartdraw\n\ndesign = smartdraw.create_design()\ndesign.add_shape('rectangle', x=100, y=100, width=200, height=150)\ndesign.add_text('Hello, SmartDraw!', x=150, y=120, font='Arial', size=12)\ndesign.export('my_design.png')",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Framer X is a powerful interactive design tool that allows designers to create interactive prototypes and design interfaces using a combination of design and code.",
+          "codeSnippet": "import { Frame, useAnimation } from 'framer';\n\nexport function App() {\n  const controls = useAnimation();\n\n  return (\n    <Frame\n      animate={controls}\n      onTap={() => controls.start({ scale: 1.2 })}\n    >\n      Click me!\n    </Frame>\n  );\n}"
+        },
+        {
+          "text": "Corona Renderer is a high-performance photorealistic renderer for 3D visualization in architecture and design. It is known for its ease of use, fast rendering speeds, and ability to produce realistic lighting effects.",
+          "codeSnippet": "Corona Renderer is compatible with popular 3D modeling software such as 3ds Max, Cinema 4D, and SketchUp, making it a versatile tool for architects and designers.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Gliffy is a popular online diagramming tool that allows users to create various types of diagrams such as flowcharts, wireframes, and org charts. It offers a user-friendly interface with drag-and-drop functionality, making it easy to design and collaborate on projects.",
+          "codeSnippet": "import gliffy from 'gliffy';\n\nconst diagram = gliffy.createDiagram('flowchart');\ndiagram.addNode('start', 100, 100);\ndiagram.addNode('process', 200, 100);\ndiagram.addNode('end', 300, 100);\ndiagram.connectNodes('start', 'process');\ndiagram.connectNodes('process', 'end');\ndiagram.render();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "MockFlow is a comprehensive design tool that allows users to create wireframes, mockups, and prototypes for websites and mobile apps. It offers a range of features such as drag-and-drop interface, collaboration tools, and pre-built components to streamline the design process.",
+          "codeSnippet": "const mockflow = new DesignTool('MockFlow');\nmockflow.createWireframes();\nmockflow.createMockups();\nmockflow.createPrototypes();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "OmniGraffle is a popular design tool used in the field of Architecture & Design. It is known for its versatile features that allow users to create precise diagrams, flowcharts, wireframes, and more. OmniGraffle provides a user-friendly interface and a wide range of tools to aid in the design process.",
+          "codeSnippet": "OmniGraffle is widely used by architects and designers for creating detailed floor plans and visual representations of architectural designs. Its drag-and-drop functionality and customizable stencils make it a preferred choice for professionals in the industry.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Adobe Premiere Pro is a professional video editing software used by filmmakers, video editors, and content creators to edit and produce high-quality videos. It offers a wide range of features such as timeline-based editing, multi-camera editing, color correction tools, audio editing capabilities, and integration with other Adobe Creative Cloud applications.",
+          "codeSnippet": "import adobe.premiere.pro\n\nproject = adobe.premiere.pro.createProject('MyVideoProject')\nsequence = project.createNewSequence('Sequence1')\nclip = project.importVideoClip('myvideo.mp4')\nsequence.addClip(clip)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Moqups is a web-based design tool used for creating wireframes, mockups, and prototypes for websites and applications. It offers a user-friendly interface with drag-and-drop functionality, making it easy to design and collaborate on projects. Moqups provides a wide range of design elements, such as shapes, icons, and templates, to help users create professional-looking designs quickly and efficiently. It is a popular choice among designers and teams for its versatility and ease of use in the design process.",
+          "codeSnippet": "const moqups = new DesignTool('Moqups');\nmoqups.createWireframes();\nmoqups.addShapes();\nmoqups.collaborateProjects();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Adobe After Effects is a powerful software used for creating motion graphics, visual effects, and animations. It is widely used in the field of architecture and design to enhance presentations, create dynamic visual elements, and bring designs to life. With its extensive features and tools, Adobe After Effects allows designers to add motion to their designs, create stunning effects, and produce professional-quality videos.",
+          "codeSnippet": "import ae from 'adobe-after-effects';\n\nconst designAnimation = () => {\n  ae.createComposition();\n  ae.addKeyframes();\n  ae.applyEffects();\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Substance Painter is a powerful 3D painting software that is widely used by architects and designers to create high-quality textures and materials for their 3D models. It offers a range of tools and features for painting, texturing, and rendering 3D assets, making it a valuable tool for professionals in the architecture and design industry.",
+          "codeSnippet": "const substancePainter = require('substance-painter');\n\nconst model = substancePainter.createModel();\nmodel.setTexture('brick_texture.jpg');\nmodel.paint();\nmodel.render();",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "KeyShot is a popular real-time 3D rendering software that is commonly used in the field of architecture and design. It allows users to create high-quality, photorealistic renderings of their 3D models quickly and easily.",
+          "codeSnippet": "KeyShot is known for its user-friendly interface and powerful rendering capabilities. With KeyShot, designers can easily apply materials, textures, lighting, and camera effects to their models to create stunning visualizations.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Draw.io is a free online tool for creating diagrams and flowcharts. It offers a user-friendly interface with a wide range of shapes and elements to design various types of diagrams such as organizational charts, network diagrams, and more. Draw.io allows users to collaborate in real-time, import/export files in different formats, and save diagrams locally or in cloud storage.",
+          "codeSnippet": "const drawio = require('drawio');\n\nconst diagram = new drawio.Diagram();\ndiagram.addShape('rectangle', { x: 100, y: 100, width: 200, height: 100 });\ndiagram.addShape('circle', { x: 300, y: 200, radius: 50 });\n\ndiagram.connectShapes('rectangle', 'circle');\n\ndiagram.export('diagram.png');",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Framer is a design tool used by designers and developers to create interactive prototypes for web and mobile applications. It allows users to design, prototype, and collaborate all in one tool.",
+          "codeSnippet": "import { Frame, useAnimation } from 'framer';\n\nconst MyComponent = () => {\n  const controls = useAnimation();\n\n  const handleAnimation = async () => {\n    await controls.start({ opacity: 0, scale: 0.5 });\n    await controls.start({ opacity: 1, scale: 1 });\n  };\n\n  return (\n    <Frame onClick={handleAnimation} whileHover={{ scale: 1.1 }}>\n      Click me!\n    </Frame>\n  );\n};"
+        },
+        {
+          "text": "Introduction to Design Tools in Architecture & Design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular Design Tools used in Architecture & Design",
+          "example": "AutoCAD, SketchUp, Revit, Adobe Creative Suite",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Using Design Tools in Architecture & Design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Integration of Design Tools in Architectural Workflows",
+          "example": "Using AutoCAD for drafting and SketchUp for 3D modeling",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Collaboration Features in Design Tools",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Customization Options in Design Tools",
+          "example": "Creating custom templates in Revit",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

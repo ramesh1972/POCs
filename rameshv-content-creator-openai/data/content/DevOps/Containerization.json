@@ -1,0 +1,35 @@
+{
+  "category": "Containerization",
+  "topics": [
+    {
+      "topic": "Docker Images",
+      "topic_no": 38,
+      "contents": [
+        {
+          "text": "Introduction to Docker Images",
+          "codeSnippet": "Docker images are read-only templates that contain a set of instructions for creating a container. They are used to package up an application and its dependencies into a single unit that can be easily shared and run on any Docker-enabled environment."
+        },
+        {
+          "text": "Creating Docker Images",
+          "codeSnippet": "To create a Docker image, you write a Dockerfile which specifies the instructions needed to build the image. This file typically includes commands to install dependencies, copy files, and set up the environment for the application."
+        },
+        {
+          "text": "Pulling Docker Images",
+          "codeSnippet": "You can pull Docker images from a registry using the 'docker pull' command. This command downloads the image from the registry to your local machine so that you can use it to create containers."
+        },
+        {
+          "text": "Listing Docker Images",
+          "codeSnippet": "To list the Docker images on your system, you can use the 'docker images' command. This will display a list of all the images that are currently stored on your machine."
+        },
+        {
+          "text": "Tagging Docker Images",
+          "codeSnippet": "You can tag a Docker image using the 'docker tag' command. This allows you to give the image a specific name and optionally a tag, which can be useful for versioning and organizing your images."
+        },
+        {
+          "text": "Pushing Docker Images to a Registry",
+          "codeSnippet": "To push a Docker image to a registry, you use the 'docker push' command. This command uploads the image from your local machine to the specified registry, making it available for others to pull and use."
+        }
+      ]
+    }
+  ]
+}

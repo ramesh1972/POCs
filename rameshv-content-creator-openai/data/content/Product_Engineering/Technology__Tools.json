@@ -1,0 +1,89 @@
+{
+  "category": "Technology & Tools",
+  "topics": [
+    {
+      "topic": "Software Tools Proficiency",
+      "topic_no": 93,
+      "contents": [
+        {
+          "text": "Mastery of tools like JIRA, Confluence, MS Visio, etc., used in business analysis tasks",
+          "codeSnippet": "import jira from 'jira';\nimport confluence from 'confluence';\nimport msVisio from 'msVisio';\n\nfunction performBusinessAnalysis() {\n    jira.analyze();\n    confluence.summarize();\n    msVisio.visualize();\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Understanding the importance of software tools proficiency in product engineering."
+        },
+        {
+          "text": "Examples of commonly used software tools in product engineering include CAD software, project management tools, version control systems, and simulation software."
+        },
+        {
+          "text": "Demonstrating proficiency in CAD software for creating detailed product designs."
+        },
+        {
+          "text": "Code snippet: function createProductDesign() { // Code for creating product design }",
+          "codeSnippet": "function createProductDesign() { // Code for creating product design }",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Utilizing project management tools to track progress and manage tasks effectively."
+        },
+        {
+          "text": "Code snippet: const taskManager = new ProjectManager(); // Initialize project management tool",
+          "codeSnippet": "const taskManager = new ProjectManager(); // Initialize project management tool",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Version control systems like Git are essential for collaboration and tracking changes in product development."
+        },
+        {
+          "text": "Code snippet: git commit -m 'Add new feature' // Commit changes to the repository",
+          "codeSnippet": "git commit -m 'Add new feature' // Commit changes to the repository",
+          "codeLanguage": "Shell"
+        },
+        {
+          "text": "Using simulation software to test product designs and analyze performance under different conditions."
+        },
+        {
+          "text": "Code snippet: simulateProductPerformance(productDesign) // Run simulation for product performance",
+          "codeSnippet": "simulateProductPerformance(productDesign) // Run simulation for product performance",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    },
+    {
+      "topic": "Technical Liaison",
+      "topic_no": 182,
+      "contents": [
+        {
+          "text": "Bridging the gap between non-technical stakeholders and the technical team is crucial for successful product engineering. A technical liaison plays a key role in facilitating communication and understanding between these two groups. By translating complex technical concepts into layman's terms and vice versa, the technical liaison ensures that everyone is on the same page and working towards common goals.",
+          "codeSnippet": "function communicateWithStakeholders(message) { \n    // Code to communicate with non-technical stakeholders \n} \n\nfunction translateTechnicalJargon(jargon) { \n    // Code to translate technical terms for non-technical stakeholders \n} \n\nfunction bridgeGap() { \n    // Code to bridge the gap between non-technical stakeholders and the technical team \n}"
+        },
+        {
+          "text": "Definition of Technical Liaison in Product Engineering",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Responsibilities of a Technical Liaison in Product Engineering",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Skills Required for a Technical Liaison in Product Engineering",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Importance of Communication Skills for a Technical Liaison",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Collaboration with Cross-functional Teams as a Technical Liaison",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

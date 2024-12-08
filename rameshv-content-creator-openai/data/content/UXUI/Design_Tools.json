@@ -1,0 +1,714 @@
+{
+  "category": "Design Tools",
+  "topics": [
+    {
+      "topic": "Adobe XD",
+      "topic_no": 8,
+      "contents": [
+        {
+          "text": "Introduction to Adobe XD",
+          "example": "Creating wireframes and prototypes",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of Adobe XD",
+          "example": "Artboards, Repeat Grids, and Prototyping tools",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating artboards in Adobe XD",
+          "example": "Setting up multiple artboards for different screen sizes",
+          "codeSnippet": "var artboard = new Artboard();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Using Repeat Grids in Adobe XD",
+          "example": "Quickly duplicating elements like cards or lists",
+          "codeSnippet": "var repeatGrid = new RepeatGrid();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Prototyping in Adobe XD",
+          "example": "Linking artboards to create interactive prototypes",
+          "codeSnippet": "var prototype = new Prototype();",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    },
+    {
+      "topic": "Figma",
+      "topic_no": 81,
+      "contents": [
+        {
+          "text": "Introduction to Figma",
+          "example": "",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key features of Figma for UX/UI design",
+          "example": "",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating artboards and frames in Figma",
+          "example": "",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using components and styles in Figma",
+          "example": "",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Collaborating with team members in Figma",
+          "example": "",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Prototyping in Figma for interactive designs",
+          "example": "",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exporting assets and designs from Figma",
+          "example": "",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Sketch",
+      "topic_no": 131,
+      "contents": [
+        {
+          "text": "Introduction to Sketch",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating artboards in Sketch",
+          "codeSnippet": "let artboard = new Artboard();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Using layers and groups in Sketch",
+          "codeSnippet": "let layer = new Layer();\nlet group = new Group();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Working with symbols in Sketch",
+          "codeSnippet": "let symbol = new Symbol();",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Utilizing plugins in Sketch",
+          "codeSnippet": "const plugin = require('plugin-name');",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Exporting assets in Sketch",
+          "codeSnippet": "exportAssets();",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    },
+    {
+      "topic": "InVision",
+      "topic_no": 178,
+      "contents": [
+        {
+          "text": "InVision is a popular design tool used by UX/UI designers for creating interactive prototypes and collaborating with team members.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "InVision allows designers to create clickable prototypes that simulate the user experience of a website or application.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "InVision provides features like drag-and-drop functionality, real-time collaboration, and interactive animations to enhance the design process.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Designers can easily share their InVision prototypes with stakeholders for feedback and review.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "InVision integrates with popular design tools like Sketch and Adobe XD, allowing for seamless workflow between design and prototyping.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Zeplin",
+      "topic_no": 232,
+      "contents": [
+        {
+          "text": "Zeplin is a design collaboration tool that allows designers and developers to work together on projects.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It helps streamline the handoff process by providing a platform for designers to share design files with developers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Designers can upload their designs to Zeplin, where developers can inspect and extract assets, measurements, and code snippets.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Zeplin supports various design file formats such as Sketch, Adobe XD, and Figma.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Developers can access design specifications, color codes, font styles, and export assets directly from Zeplin.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Marvel",
+      "topic_no": 361,
+      "contents": [
+        {
+          "text": "Marvel is a popular design tool used by UX/UI designers to create interactive prototypes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It allows designers to create wireframes, mockups, and prototypes with ease.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Marvel offers a user-friendly interface that simplifies the design process.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Designers can collaborate in real-time using Marvel, making it a great tool for team projects.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Proto.io",
+      "topic_no": 451,
+      "contents": [
+        {
+          "text": "Proto.io is a popular prototyping tool used for creating interactive prototypes for web and mobile applications."
+        },
+        {
+          "text": "It allows designers to create wireframes, mockups, and interactive prototypes without writing any code."
+        },
+        {
+          "text": "Proto.io offers a drag-and-drop interface, making it easy to design and prototype user interfaces."
+        },
+        {
+          "text": "Designers can simulate user interactions, transitions, and animations to create a realistic user experience."
+        },
+        {
+          "text": "Proto.io provides a variety of pre-built UI components and templates to speed up the design process."
+        },
+        {
+          "text": "Users can test their prototypes on different devices and share them with stakeholders for feedback."
+        },
+        {
+          "text": "Proto.io integrates with popular design tools like Sketch and Adobe XD for a seamless design workflow."
+        },
+        {
+          "text": "Designers can collaborate in real-time and gather feedback from team members using Proto.io's collaboration features."
+        },
+        {
+          "text": "Proto.io offers a range of interactive gestures and touch events to create realistic prototypes."
+        },
+        {
+          "text": "Users can preview their prototypes on actual devices using the Proto.io mobile app."
+        },
+        {
+          "text": "Proto.io allows designers to create responsive prototypes that adapt to different screen sizes."
+        },
+        {
+          "text": "Designers can create user flows and interactive prototypes to demonstrate the functionality of their designs."
+        },
+        {
+          "text": "Proto.io provides detailed analytics to track user interactions and gather insights for improving the design."
+        },
+        {
+          "text": "Users can export their prototypes in various formats, including HTML, CSS, and JavaScript for development purposes."
+        },
+        {
+          "text": "Proto.io offers a user-friendly interface with powerful features for designing and prototyping UX/UI experiences."
+        }
+      ]
+    },
+    {
+      "topic": "Flinto",
+      "topic_no": 488,
+      "contents": [
+        {
+          "text": "Flinto is a prototyping tool used for creating interactive prototypes for mobile and web applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Flinto allows designers to create animated transitions and micro-interactions to visualize the user experience.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Flinto offers a simple drag-and-drop interface for designing prototypes without the need for coding.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Flinto supports gesture-based interactions, making it easy to simulate touch gestures like swiping and tapping.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Flinto provides a preview feature that allows designers to test their prototypes on actual devices for a more realistic user experience.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Origami Studio",
+      "topic_no": 511,
+      "contents": [
+        {
+          "text": "Origami Studio is a prototyping tool created by Facebook for designing interactive prototypes for web and mobile applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It allows designers to create complex animations and interactions without writing code, making it a powerful tool for UX/UI designers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Origami Studio provides a visual interface for designing user interfaces and interactions, enabling designers to quickly iterate on their designs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Designers can create interactive prototypes by connecting different layers and elements in Origami Studio, simulating user interactions and animations.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Origami Studio offers a range of built-in components and interactions that designers can use to create realistic prototypes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Designers can preview their prototypes in real-time on mobile devices using the Origami Live app, allowing for quick feedback and testing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Origami Studio integrates seamlessly with other design tools and platforms, making it a versatile tool for UX/UI designers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Principle",
+      "topic_no": 539,
+      "contents": [
+        {
+          "text": "Understanding the principle of consistency in UX/UI design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Applying the principle of hierarchy to guide users through a design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing the principle of affordance to make interactive elements intuitive",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Leveraging the principle of feedback to provide users with system responses",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Incorporating the principle of simplicity to enhance user experience",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Adobe Photoshop",
+      "topic_no": 569,
+      "contents": [
+        {
+          "text": "Introduction to Adobe Photoshop",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the Photoshop Interface",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Working with Layers in Photoshop",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Selection Tools in Photoshop",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Applying Filters and Effects in Photoshop",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Working with Text and Typography in Photoshop",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating Shapes and Vector Graphics in Photoshop",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding Color Modes and Color Correction in Photoshop",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exporting and Saving Images in Photoshop",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Adobe Illustrator",
+      "topic_no": 599,
+      "contents": [
+        {
+          "text": "Introduction to Adobe Illustrator",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the Illustrator Interface",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating Shapes and Paths in Illustrator",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Working with Layers and Groups",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using the Pen Tool for Precision Drawing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Applying Colors and Gradients to Objects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Working with Text and Typography in Illustrator",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating and Editing Symbols",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Effects and Filters to Enhance Designs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exporting Assets for Web and Mobile",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Adobe After Effects",
+      "topic_no": 628,
+      "contents": [
+        {
+          "text": "Introduction to Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the interface and workspace in Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating animations and motion graphics in Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using keyframes and animation presets in Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Working with layers and compositions in Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Applying effects and plugins in Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Utilizing masks and mattes for advanced effects in Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating and animating text in Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Importing and working with assets in Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Rendering and exporting projects in Adobe After Effects",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Adobe Premiere Pro",
+      "topic_no": 640,
+      "contents": [
+        {
+          "text": "Introduction to Adobe Premiere Pro",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the user interface of Adobe Premiere Pro",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Importing media files into Adobe Premiere Pro",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a new project in Adobe Premiere Pro",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Editing video clips in Adobe Premiere Pro",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Applying transitions and effects in Adobe Premiere Pro",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Working with audio in Adobe Premiere Pro",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exporting a video project in Adobe Premiere Pro",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Adobe Lightroom",
+      "topic_no": 661,
+      "contents": [
+        {
+          "text": "Introduction to Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the user interface of Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Importing photos into Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Organizing and managing photos using Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Applying edits and adjustments to photos in Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using presets and filters in Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exporting photos from Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating and managing collections in Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Utilizing the Develop module for advanced photo editing in Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the importance of metadata in Adobe Lightroom",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Adobe InDesign",
+      "topic_no": 683,
+      "contents": [
+        {
+          "text": "Introduction to Adobe InDesign",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the Interface and Tools in Adobe InDesign",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating and Managing Text in Adobe InDesign",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Working with Images and Graphics in Adobe InDesign",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Layers and Master Pages in Adobe InDesign",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating Interactive PDFs and Digital Publications in Adobe InDesign",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Adobe Dreamweaver",
+      "topic_no": 704,
+      "contents": [
+        {
+          "text": "Introduction to Adobe Dreamweaver",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the Dreamweaver Interface",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creating a New Project in Dreamweaver",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Designing and Prototyping in Dreamweaver",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using CSS in Dreamweaver for UI Design",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Responsive Design in Dreamweaver",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Integrating JavaScript in Dreamweaver for UX",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Collaboration and Version Control in Dreamweaver",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

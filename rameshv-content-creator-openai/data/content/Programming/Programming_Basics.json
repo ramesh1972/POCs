@@ -1,0 +1,257 @@
+{
+  "category": "Programming Basics",
+  "topics": [
+    {
+      "topic": "Coding - Guidelines",
+      "topic_no": 161,
+      "contents": [
+        {
+          "text": "Performance in coding refers to the efficiency and speed of a program's execution. It involves optimizing code to reduce resource usage and improve overall responsiveness.",
+          "codeSnippet": "void exampleFunction() {\n  // Code that needs to be optimized for performance\n}"
+        },
+        {
+          "text": "Validations are checks performed on user input to ensure that the data is accurate and meets specified criteria. In programming, validations are commonly used to prevent errors and improve the overall quality of the software.",
+          "codeSnippet": "if (input.length < 5) {\n  console.log('Input must be at least 5 characters long');\n}"
+        },
+        {
+          "text": "Problem solving in coding involves breaking down complex problems into smaller, more manageable parts and systematically finding solutions for each part. It often requires logical thinking, creativity, and attention to detail.",
+          "codeSnippet": "function findMax(arr) {\n  let max = arr[0];\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] > max) {\n      max = arr[i];\n    }\n  }\n  return max;\n}"
+        },
+        {
+          "text": "Boundary cases are specific scenarios in programming where the input data is at the extreme edge of what the program is designed to handle. These cases are important to test as they can reveal potential issues or bugs in the code.",
+          "codeSnippet": "if (x >= 0 && x <= 100) {\n    // code to handle x within the range of 0 to 100\n}"
+        },
+        {
+          "text": "In the topic 'Coding - Guidelines' under the category 'Programming Basics' in the subject of 'Programming', one of the 'Must haves' is following consistent naming conventions for variables, functions, and classes.",
+          "codeSnippet": "function calculateTotalPrice(itemPrice, quantity) { \n   return itemPrice * quantity; \n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Idempotency/de-duplication refers to the property of an operation where applying it multiple times has the same effect as applying it once. In programming, this concept is often used to ensure that a specific action, such as creating a resource or updating a record, can be safely retried without causing unintended side effects or duplicate entries.",
+          "codeSnippet": "function createResource(resource) {\n  // Check if the resource already exists\n  if (resource does not exist) {\n    // Create the resource\n  }\n}"
+        },
+        {
+          "text": "Performance & scalability in coding guidelines for Programming Basics in Programming focuses on optimizing code efficiency and ensuring that the software can handle increased workloads without compromising performance.",
+          "codeSnippet": "function calculateSum(arr) {\n    let sum = 0;\n    for (let i = 0; i < arr.length; i++) {\n        sum += arr[i];\n    }\n    return sum;\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Naming conventions are a set of rules for choosing the names of variables, functions, classes, and other elements in your code. Consistent naming conventions make your code more readable and maintainable.",
+          "codeSnippet": "function calculateTotalPrice(itemPrice, quantity) { \n    return itemPrice * quantity; \n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Telemetry is the process of collecting and transmitting data from remote sources for monitoring and analysis. In coding guidelines, telemetry is often used to gather information about the performance and behavior of software applications in real-time.",
+          "codeSnippet": "const telemetryData = { cpuUsage: 80, memoryUsage: 60, responseTime: 100 };",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "A Customer First Approach in coding guidelines emphasizes prioritizing the needs and satisfaction of the end-users when developing software. This involves understanding the requirements of the customers, gathering feedback, and ensuring that the software meets their expectations.",
+          "codeSnippet": "def greet_customer(customer_name):\n    return f'Hello, {customer_name}! Welcome to our service.'\n\ncustomer = 'John'\nprint(greet_customer(customer))"
+        },
+        {
+          "text": "Error handling in programming involves implementing mechanisms to gracefully manage and respond to errors or exceptions that may occur during the execution of a program. This includes identifying potential errors, anticipating them, and creating strategies to handle them effectively to prevent the program from crashing or producing unexpected results.",
+          "codeSnippet": "try {\n    // code that may throw an error\n} catch (Exception e) {\n    // handle the error, log it, or perform necessary actions\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Self-reliant/healing systems in coding guidelines refer to creating programs that are robust and can recover from errors or failures without external intervention. This involves designing code that can handle unexpected situations gracefully and continue to function correctly.",
+          "codeSnippet": "try {\n    // code that may throw an exception\n} catch (Exception e) {\n    // handle the exception or recover from it\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "App Insights is a tool provided by Microsoft for monitoring and analyzing the performance and usage of applications. It helps developers track application usage, diagnose issues, and gain insights into user behavior.",
+          "codeSnippet": "const appInsights = require('applicationinsights');\nappInsights.setup('YOUR_INSTRUMENTATION_KEY').start();",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Action Response Messages provide feedback or information to users based on their interactions with a system or application. These messages are commonly used to inform users about the outcome of their actions, such as successful completion of a task, errors encountered, or warnings.",
+          "codeSnippet": "function displayMessage(message) { console.log(message); }",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Critical or rational thinking in coding involves analyzing problems, evaluating different solutions, and making informed decisions based on logic and reasoning. It is essential for writing efficient and effective code, as well as for debugging and troubleshooting issues.",
+          "codeSnippet": "if (condition) {\n  // code block\n} else {\n  // alternative code block\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Exception handling is a programming concept that deals with how to handle errors or exceptional situations that may occur during the execution of a program. It allows developers to gracefully manage and recover from unexpected issues, preventing the program from crashing.",
+          "codeSnippet": "try {\n    // code that may throw an exception\n} catch (Exception e) {\n    // handle the exception\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Fault tolerance and auto recovery are important concepts in programming that focus on the system's ability to continue functioning properly in the event of failures or errors. Fault tolerance refers to the system's ability to continue operating even when one or more components fail, ensuring that the system remains available and responsive. Auto recovery involves mechanisms that automatically detect and recover from failures, reducing downtime and maintaining system reliability.",
+          "codeSnippet": "try {\n    // Code that may cause an exception\n} catch (Exception e) {\n    // Handle the exception and recover\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Transactional scope in programming refers to the boundaries within which a series of operations are treated as a single unit of work that must either fully complete or fully fail. This ensures data integrity and consistency by allowing for atomicity, consistency, isolation, and durability (ACID properties) in database transactions.",
+          "codeSnippet": "try {\n    // Begin transaction\n    connection.beginTransaction();\n    // Perform multiple database operations\n    connection.query('INSERT INTO table1 VALUES (value1)');\n    connection.query('UPDATE table2 SET column1 = value2 WHERE condition');\n    // Commit transaction if all operations succeed\n    connection.commit();\n} catch (error) {\n    // Rollback transaction if any operation fails\n    connection.rollback();\n    console.error('Transaction failed:', error);\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Data Structures & Algorithms are fundamental concepts in computer science that involve organizing and managing data efficiently to perform operations effectively. Data structures refer to the way data is organized and stored, while algorithms are step-by-step procedures for solving problems and performing tasks.",
+          "codeSnippet": "void bubbleSort(int arr[], int n) { \n    for (int i = 0; i < n-1; i++) \n        for (int j = 0; j < n-i-1; j++) \n            if (arr[j] > arr[j+1]) \n                swap(&arr[j], &arr[j+1]); \n}"
+        },
+        {
+          "text": "Configurability in coding refers to the ability to adjust or modify the behavior of a program or system without changing its core code. This can be achieved by using configuration files, settings, or parameters that can be easily modified to customize the functionality of the software.",
+          "codeSnippet": "public class AppConfig {\n    private boolean featureEnabled;\n    private int maxConnections;\n    \n    public boolean isFeatureEnabled() {\n        return featureEnabled;\n    }\n    \n    public void setFeatureEnabled(boolean featureEnabled) {\n        this.featureEnabled = featureEnabled;\n    }\n    \n    public int getMaxConnections() {\n        return maxConnections;\n    }\n    \n    public void setMaxConnections(int maxConnections) {\n        this.maxConnections = maxConnections;\n    }\n}"
+        },
+        {
+          "text": "Logging is the process of recording events, messages, or data during the execution of a program to help track and troubleshoot issues. It is an essential practice in software development to monitor the behavior of an application and diagnose problems.",
+          "codeSnippet": "import logging\n\nlogging.basicConfig(filename='example.log', level=logging.DEBUG)\nlogging.debug('This is a debug message')\nlogging.info('This is an info message')\nlogging.warning('This is a warning message')\nlogging.error('This is an error message')\nlogging.critical('This is a critical message')",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Multi-threading/concurrency support in programming involves the ability to execute multiple threads or processes concurrently to improve performance and efficiency. This is particularly important in applications that require handling multiple tasks simultaneously.",
+          "codeSnippet": "Here is a simple example in Java demonstrating the use of multi-threading to perform tasks concurrently:\n\n```java\npublic class MultiThreadingExample {\n    public static void main(String[] args) {\n        Thread thread1 = new Thread(() -> {\n            System.out.println(\"Thread 1 is running...\");\n        });\n        Thread thread2 = new Thread(() -> {\n            System.out.println(\"Thread 2 is running...\");\n        });\n        thread1.start();\n        thread2.start();\n    }\n}\n```",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "The content 'security/encryption/hashing' in the topic 'Coding - Guidelines' under the category 'Programming Basics' in the subject of 'Programming' covers best practices for securing data through encryption and hashing techniques. It includes guidelines on implementing secure encryption algorithms, utilizing hashing functions for data integrity, and ensuring data confidentiality through proper security measures.",
+          "codeSnippet": "const crypto = require('crypto');\n\n// Encrypting data using AES encryption algorithm\nconst encryptData = (data, key) => {\n    const cipher = crypto.createCipher('aes-256-cbc', key);\n    let encryptedData = cipher.update(data, 'utf8', 'hex');\n    encryptedData += cipher.final('hex');\n    return encryptedData;\n};\n\n// Hashing data using SHA-256 hashing algorithm\nconst hashData = (data) => {\n    const hash = crypto.createHash('sha256');\n    hash.update(data);\n    return hash.digest('hex');\n};",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Use consistent naming conventions for variables, functions, and classes.",
+          "codeSnippet": "int numberOfStudents = 10;\nvoid displayMessage() {\n    cout << \"Hello, World!\";\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Follow a consistent indentation style to improve code readability.",
+          "codeSnippet": "for (int i = 0; i < 5; i++) {\n    cout << i << endl;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Limit the length of a single function to improve code maintainability.",
+          "codeSnippet": "void calculateSum(int a, int b) {\n    int sum = a + b;\n    cout << \"Sum is: \" << sum;\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Comment your code to explain complex logic or algorithms.",
+          "codeSnippet": "// This function calculates the factorial of a number\nint factorial(int n) {\n    if (n <= 1) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Avoid using magic numbers in your code; use constants or enums instead.",
+          "codeSnippet": "const int MAX_SIZE = 100;\nfor (int i = 0; i < MAX_SIZE; i++) {\n    // Do something\n}",
+          "codeLanguage": "C++"
+        }
+      ]
+    },
+    {
+      "topic": "Design/Coding - NFRs",
+      "topic_no": 344,
+      "contents": [
+        {
+          "text": "Data Integrity refers to the accuracy and consistency of data throughout its entire lifecycle. It ensures that data remains unchanged and reliable, maintaining its quality and reliability.",
+          "codeSnippet": "public class DataIntegrityChecker {\n    public boolean checkDataIntegrity(String data) {\n        // Implement data integrity checks here\n        return true;\n    }\n}"
+        },
+        {
+          "text": "Disaster Recovery is a crucial aspect of software development that involves creating and implementing strategies to recover data and systems in the event of a catastrophic failure or disruption.",
+          "codeSnippet": "try {\n    // Code to attempt data recovery\n} catch (Exception e) {\n    // Code to handle the exception and initiate recovery process\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Maintainability refers to the ease with which a software system can be maintained or updated over time. It is an important non-functional requirement in software development that focuses on ensuring that the codebase is easy to understand, modify, and extend.",
+          "codeSnippet": "public class Calculator {\n    public int add(int a, int b) {\n        return a + b;\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Availability in the context of Design/Coding - NFRs refers to the ability of a system or application to remain operational and accessible to users, typically measured as a percentage of uptime. It is an important non-functional requirement that ensures the reliability and performance of the software.",
+          "codeSnippet": "public class AvailabilityChecker {\n    public boolean checkAvailability() {\n        // Check system availability logic here\n        return true;\n    }\n}"
+        },
+        {
+          "text": "Scalability in software design refers to the ability of a system to handle an increasing amount of work or its potential to accommodate growth. It involves designing a system in a way that allows it to easily adapt and expand to support larger loads without compromising performance or user experience.",
+          "codeSnippet": "public class ExampleClass {\n    public static void main(String[] args) {\n        // Code implementation for a scalable system\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Fault tolerant & Auto recovery in the context of Design/Coding - NFRs in the category of Programming Basics in the subject of Programming refers to the ability of a system to continue functioning properly in the event of failures or errors. Fault tolerance ensures that the system can withstand and recover from unexpected issues without causing complete system failure. Auto recovery mechanisms automatically detect and address failures, restoring the system to a stable state without manual intervention.",
+          "codeSnippet": "try {\n    // Code that may cause an error\n} catch (Exception e) {\n    // Handle the exception and recover\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Configurability in software design refers to the ability to adjust or modify the behavior of a system without changing its core code. This allows for flexibility and customization to meet specific requirements or preferences.",
+          "codeSnippet": "public class AppConfig {\n    private boolean featureEnabled;\n\n    public void setFeatureEnabled(boolean enabled) {\n        this.featureEnabled = enabled;\n    }\n\n    public boolean isFeatureEnabled() {\n        return featureEnabled;\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Performance in programming refers to how efficiently a program executes its tasks, such as how quickly it runs, how much memory it uses, and how responsive it is to user interactions. When designing and coding software, it is essential to consider performance as a non-functional requirement (NFR) to ensure that the application performs optimally under various conditions.",
+          "codeSnippet": "int main() {\n    // Code snippet to calculate the execution time of a program\n    clock_t start, end;\n    double cpu_time_used;\n    start = clock();\n    // Code to be measured for performance\n    end = clock();\n    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;\n    printf(\"Execution time: %f seconds\\n\", cpu_time_used);\n    return 0;\n}",
+          "codeLanguage": "C"
+        },
+        {
+          "text": "Non-Functional Requirements (NFRs) are the criteria that specify how a system should behave, rather than what it should do.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common categories of NFRs include performance, security, reliability, scalability, maintainability, and usability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Performance NFRs define the system's responsiveness, throughput, and resource usage under various conditions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of a performance NFR is ensuring that the system responds to user actions within 2 seconds.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Security NFRs focus on protecting the system from unauthorized access, data breaches, and other security threats.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of a security NFR is implementing encryption for sensitive data stored in the system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Reliability NFRs ensure that the system operates consistently and reliably without unexpected failures.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of a reliability NFR is designing the system to handle a high volume of concurrent users without crashing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Scalability NFRs address the system's ability to handle increased workload by adding resources or nodes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of a scalability NFR is designing the system to support a tenfold increase in users without performance degradation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Maintainability NFRs focus on making the system easy to maintain, update, and enhance over time.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of a maintainability NFR is writing clear and well-documented code to facilitate future modifications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Usability NFRs ensure that the system is user-friendly, intuitive, and easy to use for its intended users.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "An example of a usability NFR is conducting user testing to gather feedback on the system's interface.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

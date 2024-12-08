@@ -1,0 +1,6155 @@
+{
+  "data": [
+    {
+      "subject": "Operating Systems",
+      "categories": [
+        {
+          "category": "Kernel",
+          "topics": [
+            {
+              "topic": "Process Management",
+              "contents": []
+            },
+            {
+              "topic": "Memory Management",
+              "contents": []
+            },
+            {
+              "topic": "File System",
+              "contents": []
+            },
+            {
+              "topic": "Device Management",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "File System",
+          "topics": [
+            {
+              "topic": "File System Structure",
+              "contents": []
+            },
+            {
+              "topic": "File Operations",
+              "contents": []
+            },
+            {
+              "topic": "File System Implementation",
+              "contents": []
+            },
+            {
+              "topic": "File System Security",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Process Management",
+          "topics": [
+            {
+              "topic": "Process States",
+              "contents": []
+            },
+            {
+              "topic": "Process Scheduling",
+              "contents": []
+            },
+            {
+              "topic": "Inter-Process Communication",
+              "contents": []
+            },
+            {
+              "topic": "Process Synchronization",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Memory Management",
+          "topics": [
+            {
+              "topic": "Memory Allocation",
+              "contents": []
+            },
+            {
+              "topic": "Virtual Memory",
+              "contents": []
+            },
+            {
+              "topic": "Page Replacement Algorithms",
+              "contents": []
+            },
+            {
+              "topic": "Memory Protection",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Device Management",
+          "topics": [
+            {
+              "topic": "Device Drivers",
+              "contents": []
+            },
+            {
+              "topic": "I/O Operations",
+              "contents": []
+            },
+            {
+              "topic": "Interrupt Handling",
+              "contents": []
+            },
+            {
+              "topic": "Device Controllers",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Networking",
+          "topics": [
+            {
+              "topic": "OSI Model",
+              "contents": []
+            },
+            {
+              "topic": "TCP/IP Protocol Suite",
+              "contents": []
+            },
+            {
+              "topic": "IPv4 and IPv6 Addressing",
+              "contents": []
+            },
+            {
+              "topic": "Routing Protocols",
+              "contents": []
+            },
+            {
+              "topic": "Network Devices",
+              "contents": []
+            },
+            {
+              "topic": "LANs, WANs, and MANs",
+              "contents": []
+            },
+            {
+              "topic": "Wireless Networks",
+              "contents": []
+            },
+            {
+              "topic": "Network Security",
+              "contents": []
+            },
+            {
+              "topic": "Network Administration",
+              "contents": []
+            },
+            {
+              "topic": "Virtual Private Networks (VPNs)",
+              "contents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Programming Languages",
+      "categories": [
+        {
+          "category": "Java",
+          "topics": [
+            {
+              "topic": "Introduction to Java",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types",
+              "contents": []
+            },
+            {
+              "topic": "Operators and Expressions",
+              "contents": []
+            },
+            {
+              "topic": "Control Flow Statements",
+              "contents": []
+            },
+            {
+              "topic": "Arrays and Strings",
+              "contents": []
+            },
+            {
+              "topic": "Methods and Functions",
+              "contents": []
+            },
+            {
+              "topic": "Object-Oriented Programming",
+              "contents": []
+            },
+            {
+              "topic": "Classes and Objects",
+              "contents": []
+            },
+            {
+              "topic": "Inheritance and Polymorphism",
+              "contents": []
+            },
+            {
+              "topic": "Abstract Classes and Interfaces",
+              "contents": []
+            },
+            {
+              "topic": "Exception Handling",
+              "contents": []
+            },
+            {
+              "topic": "File Handling",
+              "contents": []
+            },
+            {
+              "topic": "Generics",
+              "contents": []
+            },
+            {
+              "topic": "Collections Framework",
+              "contents": []
+            },
+            {
+              "topic": "Concurrency",
+              "contents": []
+            },
+            {
+              "topic": "JavaFX GUI Programming",
+              "contents": []
+            },
+            {
+              "topic": "Lambda Expressions and Streams",
+              "contents": []
+            },
+            {
+              "topic": "Annotations and Reflection",
+              "contents": []
+            },
+            {
+              "topic": "Networking in Java",
+              "contents": []
+            },
+            {
+              "topic": "Database Connectivity with JDBC",
+              "contents": []
+            },
+            {
+              "topic": "Servlets and JSP",
+              "contents": []
+            },
+            {
+              "topic": "Spring Framework Basics",
+              "contents": []
+            },
+            {
+              "topic": "Spring Boot Fundamentals",
+              "contents": []
+            },
+            {
+              "topic": "Hibernate ORM",
+              "contents": []
+            },
+            {
+              "topic": "RESTful Web Services",
+              "contents": []
+            },
+            {
+              "topic": "Microservices Architecture",
+              "contents": []
+            },
+            {
+              "topic": "JUnit and Unit Testing",
+              "contents": []
+            },
+            {
+              "topic": "Mockito and Test Doubles",
+              "contents": []
+            },
+            {
+              "topic": "Design Patterns",
+              "contents": []
+            },
+            {
+              "topic": "Java 8 Features",
+              "contents": []
+            },
+            {
+              "topic": "Java 9+ Features",
+              "contents": []
+            },
+            {
+              "topic": "Java Performance Tuning",
+              "contents": []
+            },
+            {
+              "topic": "Java Security",
+              "contents": []
+            },
+            {
+              "topic": "Java Native Interface (JNI)",
+              "contents": []
+            },
+            {
+              "topic": "Java Reflection API",
+              "contents": []
+            },
+            {
+              "topic": "Working with XML and JSON in Java",
+              "contents": []
+            },
+            {
+              "topic": "Java Persistence API (JPA)",
+              "contents": []
+            },
+            {
+              "topic": "Java EE Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Java Memory Management",
+              "contents": []
+            },
+            {
+              "topic": "Java Internationalization",
+              "contents": []
+            },
+            {
+              "topic": "Java Remote Method Invocation (RMI)",
+              "contents": []
+            },
+            {
+              "topic": "Java Server Faces (JSF)",
+              "contents": []
+            },
+            {
+              "topic": "Java Security API (JAAS)",
+              "contents": []
+            },
+            {
+              "topic": "Java Authentication and Authorization Service (JAAAS)",
+              "contents": []
+            },
+            {
+              "topic": "Java Enterprise Integration Patterns (JEP)",
+              "contents": []
+            },
+            {
+              "topic": "Java Message Service (JMS)",
+              "contents": []
+            },
+            {
+              "topic": "Java Naming and Directory Interface (JNDI)",
+              "contents": []
+            },
+            {
+              "topic": "Java API for XML-Based Web Services (JAX-WS)",
+              "contents": []
+            },
+            {
+              "topic": "Java Architecture for XML Binding (JAXB)",
+              "contents": []
+            },
+            {
+              "topic": "JavaMail API",
+              "contents": []
+            },
+            {
+              "topic": "Java WebSocket API",
+              "contents": []
+            },
+            {
+              "topic": "Java Transaction API (JTA)",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "JavaScript",
+          "topics": [
+            {
+              "topic": "Introduction to JavaScript",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types",
+              "contents": []
+            },
+            {
+              "topic": "Operators and Expressions",
+              "contents": []
+            },
+            {
+              "topic": "Control Flow (if, else, switch)",
+              "contents": []
+            },
+            {
+              "topic": "Loops (for, while, do-while)",
+              "contents": []
+            },
+            {
+              "topic": "Functions",
+              "contents": []
+            },
+            {
+              "topic": "Arrays",
+              "contents": []
+            },
+            {
+              "topic": "Objects",
+              "contents": []
+            },
+            {
+              "topic": "Scope and Closures",
+              "contents": []
+            },
+            {
+              "topic": "DOM Manipulation",
+              "contents": []
+            },
+            {
+              "topic": "Events and Event Handling",
+              "contents": []
+            },
+            {
+              "topic": "Error Handling (try-catch)",
+              "contents": []
+            },
+            {
+              "topic": "ES6 Features (let, const, arrow functions)",
+              "contents": []
+            },
+            {
+              "topic": "Template Literals",
+              "contents": []
+            },
+            {
+              "topic": "Destructuring",
+              "contents": []
+            },
+            {
+              "topic": "Spread and Rest Operators",
+              "contents": []
+            },
+            {
+              "topic": "Modules and Imports/Exports",
+              "contents": []
+            },
+            {
+              "topic": "Promises and Async/Await",
+              "contents": []
+            },
+            {
+              "topic": "AJAX and Fetch API",
+              "contents": []
+            },
+            {
+              "topic": "LocalStorage and SessionStorage",
+              "contents": []
+            },
+            {
+              "topic": "Regular Expressions",
+              "contents": []
+            },
+            {
+              "topic": "ES6+ Array Methods (map, filter, reduce)",
+              "contents": []
+            },
+            {
+              "topic": "Functional Programming Concepts",
+              "contents": []
+            },
+            {
+              "topic": "Object-oriented Programming in JavaScript",
+              "contents": []
+            },
+            {
+              "topic": "Testing in JavaScript (Jest, Mocha, Chai)",
+              "contents": []
+            },
+            {
+              "topic": "Debugging JavaScript",
+              "contents": []
+            },
+            {
+              "topic": "TypeScript Fundamentals",
+              "contents": []
+            },
+            {
+              "topic": "React.js Fundamentals",
+              "contents": []
+            },
+            {
+              "topic": "Vue.js Fundamentals",
+              "contents": []
+            },
+            {
+              "topic": "Node.js Basics",
+              "contents": []
+            },
+            {
+              "topic": "Express.js Basics",
+              "contents": []
+            },
+            {
+              "topic": "RESTful APIs with Node.js and Express",
+              "contents": []
+            },
+            {
+              "topic": "Database Interaction with Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Authentication and Authorization in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Security Best Practices in JavaScript",
+              "contents": []
+            },
+            {
+              "topic": "Performance Optimization in JavaScript",
+              "contents": []
+            },
+            {
+              "topic": "Package Managers (npm, yarn)",
+              "contents": []
+            },
+            {
+              "topic": "Webpack and Module Bundlers",
+              "contents": []
+            },
+            {
+              "topic": "Building and Deploying JavaScript Applications",
+              "contents": []
+            },
+            {
+              "topic": "Version Control with Git and GitHub",
+              "contents": []
+            },
+            {
+              "topic": "Continuous Integration and Deployment (CI/CD)",
+              "contents": []
+            },
+            {
+              "topic": "JavaScript Frameworks Comparison",
+              "contents": []
+            },
+            {
+              "topic": "JavaScript Design Patterns",
+              "contents": []
+            },
+            {
+              "topic": "JavaScript Build Tools (Grunt, Gulp)",
+              "contents": []
+            },
+            {
+              "topic": "Progressive Web Apps (PWA)",
+              "contents": []
+            },
+            {
+              "topic": "GraphQL Fundamentals",
+              "contents": []
+            },
+            {
+              "topic": "Server-side Rendering with JavaScript",
+              "contents": []
+            },
+            {
+              "topic": "Web Security with JavaScript",
+              "contents": []
+            },
+            {
+              "topic": "JavaScript Data Structures and Algorithms",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "CSharp",
+          "topics": [
+            {
+              "topic": "Introduction to C# Programming",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types in C#",
+              "contents": []
+            },
+            {
+              "topic": "Operators and Expressions",
+              "contents": []
+            },
+            {
+              "topic": "Control Flow Statements (if, else, switch)",
+              "contents": []
+            },
+            {
+              "topic": "Loops in C# (for, while, do-while)",
+              "contents": []
+            },
+            {
+              "topic": "Arrays and Collections",
+              "contents": []
+            },
+            {
+              "topic": "Methods and Functions",
+              "contents": []
+            },
+            {
+              "topic": "Object-Oriented Programming Basics",
+              "contents": []
+            },
+            {
+              "topic": "Classes and Objects",
+              "contents": []
+            },
+            {
+              "topic": "Inheritance and Polymorphism",
+              "contents": []
+            },
+            {
+              "topic": "Interfaces and Abstract Classes",
+              "contents": []
+            },
+            {
+              "topic": "Exception Handling",
+              "contents": []
+            },
+            {
+              "topic": "File Handling in C#",
+              "contents": []
+            },
+            {
+              "topic": "Delegates and Events",
+              "contents": []
+            },
+            {
+              "topic": "Generics in C#",
+              "contents": []
+            },
+            {
+              "topic": "LINQ (Language Integrated Query)",
+              "contents": []
+            },
+            {
+              "topic": "Asynchronous Programming with async/await",
+              "contents": []
+            },
+            {
+              "topic": "Entity Framework Basics",
+              "contents": []
+            },
+            {
+              "topic": "Working with Databases in C#",
+              "contents": []
+            },
+            {
+              "topic": "ASP.NET Core Basics",
+              "contents": []
+            },
+            {
+              "topic": "Building Web Applications with ASP.NET Core",
+              "contents": []
+            },
+            {
+              "topic": "ASP.NET Core MVC",
+              "contents": []
+            },
+            {
+              "topic": "Dependency Injection in ASP.NET Core",
+              "contents": []
+            },
+            {
+              "topic": "ASP.NET Core Web API",
+              "contents": []
+            },
+            {
+              "topic": "Unit Testing in C#",
+              "contents": []
+            },
+            {
+              "topic": "Integration Testing with NUnit",
+              "contents": []
+            },
+            {
+              "topic": "Debugging Techniques in C#",
+              "contents": []
+            },
+            {
+              "topic": "Performance Optimization in C#",
+              "contents": []
+            },
+            {
+              "topic": "Security Best Practices in C#",
+              "contents": []
+            },
+            {
+              "topic": "Working with JSON in C#",
+              "contents": []
+            },
+            {
+              "topic": "Working with XML in C#",
+              "contents": []
+            },
+            {
+              "topic": "C# Design Patterns",
+              "contents": []
+            },
+            {
+              "topic": "Logging and Error Handling in C#",
+              "contents": []
+            },
+            {
+              "topic": "Advanced C# Features",
+              "contents": []
+            },
+            {
+              "topic": "Multithreading and Parallel Programming",
+              "contents": []
+            },
+            {
+              "topic": "Interoperability with COM and Win32 APIs",
+              "contents": []
+            },
+            {
+              "topic": "C# for Game Development",
+              "contents": []
+            },
+            {
+              "topic": "C# for Mobile App Development",
+              "contents": []
+            },
+            {
+              "topic": "C# for IoT (Internet of Things)",
+              "contents": []
+            },
+            {
+              "topic": "C# for Data Science",
+              "contents": []
+            },
+            {
+              "topic": "C# for Machine Learning",
+              "contents": []
+            },
+            {
+              "topic": "C# for Blockchain Development",
+              "contents": []
+            },
+            {
+              "topic": "C# for Cloud Computing (Azure, AWS, GCP)",
+              "contents": []
+            },
+            {
+              "topic": "C# for Web Scraping and Automation",
+              "contents": []
+            },
+            {
+              "topic": "C# for Desktop Application Development",
+              "contents": []
+            },
+            {
+              "topic": "C# for Web Services and APIs",
+              "contents": []
+            },
+            {
+              "topic": "C# for GUI Development (WinForms, WPF, UWP)",
+              "contents": []
+            },
+            {
+              "topic": "C# for Networking and Socket Programming",
+              "contents": []
+            },
+            {
+              "topic": "C# for Microservices Architecture",
+              "contents": []
+            },
+            {
+              "topic": "C# for Cross-Platform Development",
+              "contents": []
+            },
+            {
+              "topic": "C# for Augmented Reality (AR) and Virtual Reality (VR)",
+              "contents": []
+            },
+            {
+              "topic": "C# for Artificial Intelligence (AI)",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Visual Basic",
+          "topics": [
+            {
+              "topic": "Introduction to Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Operators and Expressions in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Control Structures in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Procedures and Functions in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Arrays in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Object-Oriented Programming Concepts in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Classes and Objects in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Inheritance and Polymorphism in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Exception Handling in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "File Handling in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Database Connectivity with Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "GUI Development in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Event Handling in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Advanced GUI Components in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Web Development with Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Asynchronous Programming in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Multithreading in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Debugging Techniques in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Error Handling in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Custom Controls in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Graphics Programming in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "COM Interoperability in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Deployment and Distribution in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Security in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Performance Optimization in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Advanced Topics in Visual Basic",
+              "contents": []
+            },
+            {
+              "topic": "Best Practices in Visual Basic Programming",
+              "contents": []
+            },
+            {
+              "topic": "Project Development in Visual Basic",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Python",
+          "topics": [
+            {
+              "topic": "Introduction to Python",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types in Python",
+              "contents": []
+            },
+            {
+              "topic": "Operators and Expressions in Python",
+              "contents": []
+            },
+            {
+              "topic": "Control Flow Statements in Python",
+              "contents": []
+            },
+            {
+              "topic": "Functions in Python",
+              "contents": []
+            },
+            {
+              "topic": "Data Structures in Python (Lists, Tuples, Sets, Dictionaries)",
+              "contents": []
+            },
+            {
+              "topic": "File Handling in Python",
+              "contents": []
+            },
+            {
+              "topic": "Modules and Packages in Python",
+              "contents": []
+            },
+            {
+              "topic": "Object-Oriented Programming (OOP) in Python",
+              "contents": []
+            },
+            {
+              "topic": "Exception Handling in Python",
+              "contents": []
+            },
+            {
+              "topic": "Regular Expressions in Python",
+              "contents": []
+            },
+            {
+              "topic": "Working with Dates and Times in Python",
+              "contents": []
+            },
+            {
+              "topic": "Generators and Iterators in Python",
+              "contents": []
+            },
+            {
+              "topic": "Decorators and Context Managers in Python",
+              "contents": []
+            },
+            {
+              "topic": "Lambda Functions and Higher-Order Functions in Python",
+              "contents": []
+            },
+            {
+              "topic": "Debugging and Testing in Python",
+              "contents": []
+            },
+            {
+              "topic": "Concurrency and Parallelism in Python",
+              "contents": []
+            },
+            {
+              "topic": "Web Development with Python (Flask, Django)",
+              "contents": []
+            },
+            {
+              "topic": "Database Access with Python (SQLAlchemy, SQLite)",
+              "contents": []
+            },
+            {
+              "topic": "Data Science Libraries in Python (NumPy, Pandas, Matplotlib)",
+              "contents": []
+            },
+            {
+              "topic": "Machine Learning with Python (Scikit-learn, TensorFlow, Keras)",
+              "contents": []
+            },
+            {
+              "topic": "Natural Language Processing (NLP) with Python (NLTK, SpaCy)",
+              "contents": []
+            },
+            {
+              "topic": "Web Scraping with Python (Beautiful Soup, Scrapy)",
+              "contents": []
+            },
+            {
+              "topic": "GUI Development with Python (Tkinter, PyQt)",
+              "contents": []
+            },
+            {
+              "topic": "Asynchronous Programming in Python (asyncio)",
+              "contents": []
+            },
+            {
+              "topic": "Network Programming with Python (socket, requests)",
+              "contents": []
+            },
+            {
+              "topic": "Distributed Computing with Python (Celery, Dask)",
+              "contents": []
+            },
+            {
+              "topic": "Cryptography in Python (cryptography)",
+              "contents": []
+            },
+            {
+              "topic": "Web APIs with Python (Flask-Restful, FastAPI)",
+              "contents": []
+            },
+            {
+              "topic": "Deployment and DevOps with Python (Docker, Kubernetes)",
+              "contents": []
+            },
+            {
+              "topic": "Testing in Python (unittest, pytest)",
+              "contents": []
+            },
+            {
+              "topic": "Code Quality and Best Practices in Python",
+              "contents": []
+            },
+            {
+              "topic": "Python for Automation (Selenium, PyAutoGUI)",
+              "contents": []
+            },
+            {
+              "topic": "Game Development with Python (Pygame)",
+              "contents": []
+            },
+            {
+              "topic": "Websockets and Real-Time Applications in Python",
+              "contents": []
+            },
+            {
+              "topic": "Web Assembly (WASM) with Python",
+              "contents": []
+            },
+            {
+              "topic": "Python for Scientific Computing (SciPy, SymPy)",
+              "contents": []
+            },
+            {
+              "topic": "Data Visualization with Python (Seaborn, Plotly)",
+              "contents": []
+            },
+            {
+              "topic": "Interfacing with Hardware (Raspberry Pi, Arduino) using Python",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "PHP",
+          "topics": [
+            {
+              "topic": "Introduction to PHP",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Operators and Expressions in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Control Structures in PHP (if, else, elseif, switch)",
+              "contents": []
+            },
+            {
+              "topic": "Loops in PHP (for, while, do-while)",
+              "contents": []
+            },
+            {
+              "topic": "Functions in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Arrays in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Strings in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Working with Forms in PHP",
+              "contents": []
+            },
+            {
+              "topic": "File Handling in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Error Handling in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Object-Oriented Programming in PHP (Classes and Objects)",
+              "contents": []
+            },
+            {
+              "topic": "Inheritance and Polymorphism in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Exception Handling in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Working with Databases in PHP (MySQL, PostgreSQL, etc.)",
+              "contents": []
+            },
+            {
+              "topic": "Sessions and Cookies in PHP",
+              "contents": []
+            },
+            {
+              "topic": "Working with XML and JSON in PHP",
+              "contents": []
+            },
+            {
+              "topic": "PHP Security Best Practices",
+              "contents": []
+            },
+            {
+              "topic": "Web Services and APIs in PHP",
+              "contents": []
+            },
+            {
+              "topic": "PHP Frameworks (e.g., Laravel, Symfony, CodeIgniter)",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Perl",
+          "topics": [
+            { "topic": "Introduction to Perl", "contents": [] },
+            { "topic": "Variables and Data Types in Perl", "contents": [] },
+            { "topic": "Operators and Expressions in Perl", "contents": [] },
+            { "topic": "Control Structures in Perl", "contents": [] },
+            { "topic": "Arrays in Perl", "contents": [] },
+            { "topic": "Hashes in Perl", "contents": [] },
+            { "topic": "Subroutines in Perl", "contents": [] },
+            { "topic": "Regular Expressions in Perl", "contents": [] },
+            { "topic": "File Handling in Perl", "contents": [] },
+            { "topic": "Error Handling in Perl", "contents": [] },
+            { "topic": "Modules and Packages in Perl", "contents": [] },
+            { "topic": "Object-Oriented Programming in Perl", "contents": [] },
+            { "topic": "Database Connectivity in Perl", "contents": [] },
+            { "topic": "Working with CGI in Perl", "contents": [] },
+            { "topic": "Web Development with Perl", "contents": [] },
+            { "topic": "Network Programming in Perl", "contents": [] },
+            {
+              "topic": "Concurrency and Multithreading in Perl",
+              "contents": []
+            },
+            { "topic": "Debugging Techniques in Perl", "contents": [] },
+            { "topic": "Testing and Test Automation in Perl", "contents": [] },
+            { "topic": "Best Practices in Perl Programming", "contents": [] }
+          ]
+        },
+        {
+          "category": "CPlusPlus",
+          "topics": [
+            { "topic": "Introduction to C++ Programming", "contents": [] },
+            { "topic": "Basic Syntax and Data Types in C++", "contents": [] },
+            { "topic": "Variables and Constants in C++", "contents": [] },
+            { "topic": "Operators in C++", "contents": [] },
+            {
+              "topic": "Control Structures: Selection Statements",
+              "contents": []
+            },
+            {
+              "topic": "Control Structures: Iteration Statements",
+              "contents": []
+            },
+            { "topic": "Functions and Procedures in C++", "contents": [] },
+            { "topic": "Arrays and Strings in C++", "contents": [] },
+            { "topic": "Pointers and References in C++", "contents": [] },
+            { "topic": "Memory Management in C++", "contents": [] },
+            {
+              "topic": "Object-Oriented Programming (OOP) Concepts",
+              "contents": []
+            },
+            { "topic": "Classes and Objects in C++", "contents": [] },
+            { "topic": "Constructors and Destructors in C++", "contents": [] },
+            { "topic": "Inheritance and Polymorphism in C++", "contents": [] },
+            { "topic": "Operator Overloading in C++", "contents": [] },
+            {
+              "topic": "Templates and Generic Programming in C++",
+              "contents": []
+            },
+            { "topic": "Exception Handling in C++", "contents": [] },
+            { "topic": "File Handling in C++", "contents": [] },
+            {
+              "topic": "STL (Standard Template Library) in C++",
+              "contents": []
+            },
+            { "topic": "Smart Pointers in C++", "contents": [] },
+            {
+              "topic": "Concurrency in C++ (Threading and Multithreading)",
+              "contents": []
+            },
+            { "topic": "Lambda Expressions in C++", "contents": [] },
+            { "topic": "C++11 Features", "contents": [] },
+            { "topic": "C++14 Features", "contents": [] },
+            { "topic": "C++17 Features", "contents": [] },
+            { "topic": "C++20 Features", "contents": [] },
+            { "topic": "Debugging Techniques in C++", "contents": [] },
+            { "topic": "Optimization Techniques in C++", "contents": [] },
+            { "topic": "Best Practices in C++ Programming", "contents": [] },
+            { "topic": "Software Design Principles in C++", "contents": [] },
+            { "topic": "Design Patterns in C++", "contents": [] },
+            { "topic": "Unit Testing in C++", "contents": [] },
+            {
+              "topic": "Memory Leak Detection and Prevention in C++",
+              "contents": []
+            },
+            {
+              "topic": "C++ Style Guides and Coding Standards",
+              "contents": []
+            },
+            { "topic": "Cross-Platform Development with C++", "contents": [] },
+            { "topic": "Game Development with C++", "contents": [] },
+            { "topic": "Graphics Programming with C++", "contents": [] },
+            {
+              "topic": "Embedded Systems Programming with C++",
+              "contents": []
+            },
+            {
+              "topic": "Networking and Socket Programming in C++",
+              "contents": []
+            },
+            {
+              "topic": "GUI Development with C++ (e.g., Qt, wxWidgets)",
+              "contents": []
+            },
+            {
+              "topic": "Web Development with C++ (e.g., CGI, Wt)",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "C",
+          "topics": [
+            {
+              "topic": "Introduction to C Programming",
+              "contents": []
+            },
+            {
+              "topic": "Basic Syntax and Structure of C",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types in C",
+              "contents": []
+            },
+            {
+              "topic": "Operators in C",
+              "contents": []
+            },
+            {
+              "topic": "Control Structures: if, else, and switch",
+              "contents": []
+            },
+            {
+              "topic": "Loops: for, while, and do-while",
+              "contents": []
+            },
+            {
+              "topic": "Arrays and Strings in C",
+              "contents": []
+            },
+            {
+              "topic": "Functions and Scope in C",
+              "contents": []
+            },
+            {
+              "topic": "Pointers and Dynamic Memory Allocation",
+              "contents": []
+            },
+            {
+              "topic": "Structures and Unions in C",
+              "contents": []
+            },
+            {
+              "topic": "File Handling in C",
+              "contents": []
+            },
+            {
+              "topic": "Preprocessor Directives in C",
+              "contents": []
+            },
+            {
+              "topic": "Error Handling and Debugging Techniques",
+              "contents": []
+            },
+            {
+              "topic": "Memory Management and Optimization in C",
+              "contents": []
+            },
+            {
+              "topic": "Bitwise Operations in C",
+              "contents": []
+            },
+            {
+              "topic": "Advanced Data Structures: Linked Lists, Stacks, and Queues",
+              "contents": []
+            },
+            {
+              "topic": "Recursion and Recursive Algorithms",
+              "contents": []
+            },
+            {
+              "topic": "Dynamic Data Structures: Trees and Graphs",
+              "contents": []
+            },
+            {
+              "topic": "Multi-file Programming and Modularization",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to C Standard Library Functions",
+              "contents": []
+            },
+            {
+              "topic": "Command-line Arguments and Environment Variables",
+              "contents": []
+            },
+            {
+              "topic": "Interacting with the Operating System: System Calls",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to Low-Level Programming in C",
+              "contents": []
+            },
+            {
+              "topic": "Concurrency and Parallelism in C",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to C99 and C11 Standards",
+              "contents": []
+            },
+            {
+              "topic": "Memory-Mapped I/O and Hardware Interaction",
+              "contents": []
+            },
+            {
+              "topic": "Interfacing with Hardware: GPIO, UART, SPI, and I2C",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to Embedded C Programming",
+              "contents": []
+            },
+            {
+              "topic": "Real-time Systems and Programming in C",
+              "contents": []
+            },
+            {
+              "topic": "Secure Coding Practices in C",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to C Debugging Tools: gdb and Valgrind",
+              "contents": []
+            },
+            {
+              "topic": "Code Optimization Techniques in C",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to Network Programming in C",
+              "contents": []
+            },
+            {
+              "topic": "Event-Driven Programming with Callbacks in C",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to GUI Programming in C: Using GTK+",
+              "contents": []
+            },
+            {
+              "topic": "Creating Libraries and Static/Dynamic Linking in C",
+              "contents": []
+            },
+            {
+              "topic": "Using Makefiles for Building C Projects",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to CMake for Cross-Platform Build Automation",
+              "contents": []
+            },
+            {
+              "topic": "Debugging Memory Leaks and Buffer Overflows in C",
+              "contents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Shell Scripting",
+      "categories": [
+        {
+          "category": "Bash Scripting",
+          "topics": [
+            {
+              "topic": "Introduction to Bash Scripting",
+              "contents": []
+            },
+            {
+              "topic": "Bash Commands and Syntax",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types in Bash",
+              "contents": []
+            },
+            {
+              "topic": "Conditional Statements in Bash",
+              "contents": []
+            },
+            {
+              "topic": "Looping Structures in Bash",
+              "contents": []
+            },
+            {
+              "topic": "Functions and Subroutines in Bash",
+              "contents": []
+            },
+            {
+              "topic": "File Handling in Bash",
+              "contents": []
+            },
+            {
+              "topic": "Error Handling in Bash",
+              "contents": []
+            },
+            {
+              "topic": "Advanced Bash Scripting Techniques",
+              "contents": []
+            },
+            {
+              "topic": "Best Practices for Bash Scripting",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "sh Scripting",
+          "topics": [
+            {
+              "topic": "Introduction to sh Scripting",
+              "contents": []
+            },
+            {
+              "topic": "sh Commands and Syntax",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types in sh",
+              "contents": []
+            },
+            {
+              "topic": "Conditional Statements in sh",
+              "contents": []
+            },
+            {
+              "topic": "Looping Structures in sh",
+              "contents": []
+            },
+            {
+              "topic": "Functions and Subroutines in sh",
+              "contents": []
+            },
+            {
+              "topic": "File Handling in sh",
+              "contents": []
+            },
+            {
+              "topic": "Error Handling in sh",
+              "contents": []
+            },
+            {
+              "topic": "Advanced sh Scripting Techniques",
+              "contents": []
+            },
+            {
+              "topic": "Best Practices for sh Scripting",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "cmd Scripting",
+          "topics": [
+            {
+              "topic": "Introduction to cmd Scripting",
+              "contents": []
+            },
+            {
+              "topic": "cmd Commands and Syntax",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types in cmd",
+              "contents": []
+            },
+            {
+              "topic": "Conditional Statements in cmd",
+              "contents": []
+            },
+            {
+              "topic": "Looping Structures in cmd",
+              "contents": []
+            },
+            {
+              "topic": "Functions and Subroutines in cmd",
+              "contents": []
+            },
+            {
+              "topic": "File Handling in cmd",
+              "contents": []
+            },
+            {
+              "topic": "Error Handling in cmd",
+              "contents": []
+            },
+            {
+              "topic": "Advanced cmd Scripting Techniques",
+              "contents": []
+            },
+            {
+              "topic": "Best Practices for cmd Scripting",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "PowerShell Scripting",
+          "topics": [
+            {
+              "topic": "Introduction to PowerShell Scripting",
+              "contents": []
+            },
+            {
+              "topic": "PowerShell Commands and Syntax",
+              "contents": []
+            },
+            {
+              "topic": "Variables and Data Types in PowerShell",
+              "contents": []
+            },
+            {
+              "topic": "Conditional Statements in PowerShell",
+              "contents": []
+            },
+            {
+              "topic": "Looping Structures in PowerShell",
+              "contents": []
+            },
+            {
+              "topic": "Functions and Subroutines in PowerShell",
+              "contents": []
+            },
+            {
+              "topic": "File Handling in PowerShell",
+              "contents": []
+            },
+            {
+              "topic": "Error Handling in PowerShell",
+              "contents": []
+            },
+            {
+              "topic": "Advanced PowerShell Scripting Techniques",
+              "contents": []
+            },
+            {
+              "topic": "Best Practices for PowerShell Scripting",
+              "contents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Programming",
+      "categories": [
+        {
+          "category": "Programming Basics",
+          "topics": [
+            {
+              "topic": "Coding - Guidelines",
+              "contents": [
+                "Customer First Approach",
+                "Problem solving",
+                "Critical or rational thinking",
+                "Data Structures & Algorithms",
+                "Boundary cases",
+                "Validations",
+                "Action Response Messages",
+                "Error handling",
+                "Exception Handling",
+                "Performance",
+                "Logging",
+                "App Insights",
+                "Telemetry",
+                "Naming Conventions",
+                "Must haves",
+                "configurability",
+                "multi-threading/concurrency support",
+                "transactional scope",
+                "performance & scalability",
+                "fault tolerance & auto recovery",
+                "self reliant/healing systems",
+                "security/encryption/hashing",
+                "idempotency/de-dupe"
+              ]
+            },
+            {
+              "topic": "Design/Coding - NFRs",
+              "contents": [
+                "Performance",
+                "Scalability",
+                "Configurability",
+                "Data Integrity",
+                "Maintainability",
+                "Fault tolerant & Auto recovery",
+                "Availability",
+                "Disaster Recovery"
+              ]
+            },
+            {
+              "topic": "Code Reviews",
+              "contents": [
+                "Readability",
+                "Representation of Design - Structural",
+                "Correctness in logic",
+                "Usage of Core Concepts related to the tech stack",
+                "Pull Request",
+                "Peer Code Reviews"
+              ]
+            },
+            {
+              "topic": "Code Quality",
+              "contents": [
+                "Code Coverage",
+                "Unit Test Cases",
+                "Integration Test Cases",
+                "Functional Test Cases",
+                "Performance Test Cases",
+                "Security Test Cases",
+                "Code Complexity",
+                "Code Duplication",
+                "Code Smells",
+                "Code Refactoring",
+                "Code Review",
+                "Code Analysis",
+                "Code Profiling",
+                "Code Optimization",
+                "Code Security",
+                "Code Scalability",
+                "Code Maintainability",
+                "Code Reliability",
+                "Code Reusability"
+              ]
+            },
+            {
+              "topic": "Code Optimization",
+              "contents": [
+                "Performance",
+                "Scalability",
+                "Reliability",
+                "Maintainability",
+                "Fault tolerant & Auto recovery",
+                "Availability",
+                "Disaster Recovery"
+              ]
+            },
+            {
+              "topic": "Code Refactoring",
+              "contents": [
+                "Performance",
+                "Scalability",
+                "Reliability",
+                "Maintainability",
+                "Fault tolerant & Auto recovery",
+                "Availability",
+                "Disaster Recovery"
+              ]
+            },
+            {
+              "topic": "Code Profiling",
+              "contents": [
+                "Performance",
+                "Scalability",
+                "Reliability",
+                "Maintainability",
+                "Fault tolerant & Auto recovery",
+                "Availability",
+                "Disaster Recovery"
+              ]
+            },
+            {
+              "topic": "Code Security",
+              "contents": [
+                "Performance",
+                "Scalability",
+                "Reliability",
+                "Maintainability",
+                "Fault tolerant & Auto recovery",
+                "Availability",
+                "Disaster Recovery"
+              ]
+            },
+            {
+              "topic": "Code Scalability",
+              "contents": [
+                "Performance",
+                "Scalability",
+                "Reliability",
+                "Maintainability",
+                "Fault tolerant & Auto recovery",
+                "Availability",
+                "Disaster Recovery"
+              ]
+            },
+            {
+              "topic": "Code Maintainability",
+              "contents": [
+                "Performance",
+                "Scalability",
+                "Reliability",
+                "Maintainability",
+                "Fault tolerant & Auto recovery",
+                "Availability",
+                "Disaster Recovery"
+              ]
+            },
+            {
+              "topic": "Code Reliability",
+              "contents": [
+                "Performance",
+                "Scalability",
+                "Reliability",
+                "Maintainability",
+                "Fault tolerant & Auto recovery",
+                "Availability",
+                "Disaster Recovery"
+              ]
+            },
+            {
+              "topic": "Code Reusability",
+              "contents": [
+                "Performance",
+                "Scalability",
+                "Reliability",
+                "Maintainability",
+                "Fault tolerant & Auto recovery",
+                "Availability",
+                "Disaster Recovery"
+              ]
+            },
+            {
+              "topic": "Coding Best Practices",
+              "contents": [
+                "Coding Standards",
+                "Code Conventions",
+                "Code Reusability",
+                "Code Maintainability",
+                "Code Readability",
+                "Code Complexity",
+                "Code Duplication",
+                "Code Smells",
+                "Code Refactoring",
+                "Code Review",
+                "Code Analysis",
+                "Code Profiling",
+                "Code Optimization",
+                "Code Security",
+                "Code Scalability",
+                "Code Maintainability",
+                "Code Reliability",
+                "Code Reusability"
+              ]
+            },
+            {
+              "topic": "Naming Conventions",
+              "contents": [
+                "Package names",
+                "Class names",
+                "Interface names",
+                "Method names",
+                "Variable names",
+                "Constant names",
+                "Enum names",
+                "Annotation names",
+                "Exception names",
+                "Parameter names",
+                "Local variable names",
+                "Field names",
+                "Static variable names",
+                "Instance variable names",
+                "Global variable names"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Data Structures & Algorithms",
+          "topics": [
+            {
+              "topic": "Data Structures",
+              "contents": [
+                "Arrays",
+                "Linked Lists",
+                "Stacks",
+                "Queues",
+                "Trees",
+                "Graphs",
+                "Hash Tables"
+              ]
+            },
+            {
+              "topic": "Algorithms",
+              "contents": [
+                "Searching",
+                "Sorting",
+                "Dynamic Programming",
+                "Greedy Algorithms",
+                "Divide and Conquer",
+                "Backtracking",
+                "Branch and Bound",
+                "All algorithms related to the data structures"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Performance Optimization",
+          "topics": [
+            {
+              "topic": "UI Layer",
+              "contents": [
+                "Measuring metrics – FCP, LCP, TTI etc.",
+                "Treeshaking",
+                "Dead code splitting",
+                "Chunking",
+                "Uglify, minify",
+                "gzip"
+              ]
+            },
+            {
+              "topic": "Service Layer",
+              "contents": [
+                "Tech Design principles",
+                "OOPs",
+                "SOLID",
+                "IoC/DI",
+                "Design patterns",
+                "Custom DS & Algos"
+              ]
+            },
+            {
+              "topic": "Data Layer",
+              "contents": [
+                "Normalizations",
+                "Query Optimization techniques",
+                "DB logs/caching recycling",
+                "Shedding/Purging"
+              ]
+            },
+            {
+              "topic": "Infrastructure",
+              "contents": [
+                "Docker swarms",
+                "Orchestration – Kubernetes",
+                "Auto-scaling",
+                "Dedicated instances"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Architecture & Design",
+      "categories": [
+        {
+          "category": "Architecture & Design",
+          "topics": [
+            {
+              "topic": "Evolution of Architectures & Systems",
+              "contents": []
+            },
+            {
+              "topic": "Architecture - An Introduction",
+              "contents": []
+            },
+            {
+              "topic": "Apps Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Information Architecture",
+              "contents": []
+            },
+            {
+              "topic": "System Components",
+              "contents": []
+            },
+            {
+              "topic": "System Packages",
+              "contents": []
+            },
+            {
+              "topic": "Data Architecture",
+              "contents": []
+            },
+            {
+              "topic": "System Multi-Tenant Architecture",
+              "contents": []
+            },
+            {
+              "topic": "System Multi-Instance Architecture",
+              "contents": []
+            },
+            {
+              "topic": "System Infrastructure Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Use Case Specific Architectures",
+              "contents": []
+            },
+            {
+              "topic": "Cloud native architecture",
+              "contents": []
+            },
+            {
+              "topic": "AI Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Microservices Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Monolithic Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Service-Oriented Architecture (SOA)",
+              "contents": []
+            },
+            {
+              "topic": "Event-Driven Architecture (EDA)",
+              "contents": []
+            },
+            {
+              "topic": "Layered Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Component-Based Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Serverless Architecture",
+              "contents": []
+            },
+            {
+              "topic": "N-Tier Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Event Sourcing Architecture",
+              "contents": []
+            },
+            {
+              "topic": "CQRS (Command Query Responsibility Segregation) Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Hexagonal Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Space-Based Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Data-Centric Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Pipeline Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Repository Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Clean Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Onion Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Event-Driven Microservices Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Resource-Oriented Architecture (ROA)",
+              "contents": []
+            },
+            {
+              "topic": "Distributed Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Streaming Architecture",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Tech Design - Guidelines",
+          "topics": [
+            {
+              "topic": "Design Considerations",
+              "contents": []
+            },
+            {
+              "topic": "Architecture Patterns",
+              "contents": []
+            },
+            {
+              "topic": "Object Oriented Analysis, Design and Programming",
+              "contents": []
+            },
+            {
+              "topic": "IOC & Dependency Injection",
+              "contents": []
+            },
+            {
+              "topic": "APIs Design",
+              "contents": []
+            },
+            {
+              "topic": "Relational Database Design",
+              "contents": []
+            },
+            {
+              "topic": "NFRs",
+              "contents": []
+            },
+            {
+              "topic": "Diagramming",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Design Patterns",
+          "topics": [
+            {
+              "topic": "Design Patterns",
+              "contents": [
+                "Creational",
+                "Structural",
+                "Behavioral",
+                "Concurrency",
+                "Architectural"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Design Principles",
+          "topics": [
+            {
+              "topic": "Design Principles",
+              "contents": [
+                "SOLID",
+                "DRY",
+                "KISS",
+                "YAGNI",
+                "Cohesion",
+                "Coupling",
+                "Encapsulation",
+                "Abstraction",
+                "Inheritance",
+                "Polymorphism",
+                "Composition",
+                "Delegation",
+                "Encapsulation",
+                "Open-Closed",
+                "Liskov Substitution",
+                "Interface Segregation",
+                "Dependency Inversion"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Design Anti-Patterns",
+          "topics": [
+            {
+              "topic": "Design Anti-Patterns",
+              "contents": [
+                "God Object",
+                "Spaghetti Code",
+                "Circular Dependency",
+                "Magic Numbers",
+                "Magic Strings",
+                "Hard Coding",
+                "Dead Code",
+                "Code Duplication",
+                "Code Smells",
+                "Memory Leaks",
+                "Resource Leaks",
+                "Thread Leaks",
+                "Connection Leaks",
+                "File Leaks",
+                "Resource Starvation",
+                "Resource Contention",
+                "Resource Exhaustion",
+                "Resource Deadlocks"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Design Tools",
+          "topics": [
+            {
+              "topic": "Design Tools",
+              "contents": [
+                "UML",
+                "ERD",
+                "Visio",
+                "Lucidchart",
+                "Draw.io",
+                "Creately",
+                "Gliffy",
+                "Edraw Max",
+                "SmartDraw",
+                "OmniGraffle",
+                "Cacoo",
+                "Visme",
+                "Canva",
+                "Adobe XD",
+                "Sketch",
+                "Figma",
+                "InVision",
+                "Axure RP",
+                "Balsamiq",
+                "Moqups",
+                "MockFlow",
+                "Justinmind",
+                "Proto.io",
+                "Flinto",
+                "Marvel",
+                "Origami Studio",
+                "Principle",
+                "Framer",
+                "Framer X",
+                "Adobe After Effects",
+                "Adobe Premiere Pro",
+                "Final Cut Pro",
+                "Blender",
+                "Maya",
+                "3ds Max",
+                "Cinema 4D",
+                "ZBrush",
+                "Substance Painter",
+                "Substance Designer",
+                "Marmoset Toolbag",
+                "KeyShot",
+                "V-Ray",
+                "Arnold",
+                "Redshift",
+                "Octane Render",
+                "Corona Renderer",
+                "Maxwell Render"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Design - NFRs",
+          "topics": [
+            {
+              "topic": "Performance",
+              "contents": []
+            },
+            {
+              "topic": "Scalability",
+              "contents": []
+            },
+            {
+              "topic": "Configurability",
+              "contents": []
+            },
+            {
+              "topic": "Data Integrity",
+              "contents": []
+            },
+            {
+              "topic": "Maintainability",
+              "contents": []
+            },
+            {
+              "topic": "Fault tolerant & Auto recovery",
+              "contents": []
+            },
+            {
+              "topic": "Availability",
+              "contents": []
+            },
+            {
+              "topic": "Disaster Recovery",
+              "contents": []
+            },
+            {
+              "topic": "Reliability",
+              "contents": []
+            },
+            {
+              "topic": "Security",
+              "contents": []
+            },
+            {
+              "topic": "Usability",
+              "contents": []
+            },
+            {
+              "topic": "Interoperability",
+              "contents": []
+            },
+            {
+              "topic": "Accessibility",
+              "contents": []
+            },
+            {
+              "topic": "Auditability",
+              "contents": []
+            },
+            {
+              "topic": "Regulatory Compliance",
+              "contents": []
+            },
+            {
+              "topic": "Resource Utilization",
+              "contents": []
+            },
+            {
+              "topic": "Adaptability",
+              "contents": []
+            },
+            {
+              "topic": "Cost-effectiveness",
+              "contents": []
+            },
+            {
+              "topic": "Environmental Sustainability",
+              "contents": []
+            },
+            {
+              "topic": "Legal Compliance",
+              "contents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Technologies",
+      "categories": [
+        {
+          "category": "JS Frameworks",
+          "topics": [
+            {
+              "topic": "JS Frameworks - Angular/React/VueJS",
+              "contents": [
+                "Scaffolding",
+                "CLI",
+                "Folder/File Structure",
+                "Components Structuring Principles",
+                "Typescript",
+                "SFC",
+                "CDN",
+                "Directives",
+                "Page Life Cycle",
+                "Events",
+                "Virtual DOM",
+                "Reactivity",
+                "Props",
+                "State Management",
+                "Store",
+                "refs",
+                "Slots",
+                "Routing",
+                "Web Site Vs SPA",
+                "Style & Class Binding",
+                "Webpack Configuration",
+                "NPM Packages",
+                "Naming Conventions",
+                "Performance"
+              ]
+            }
+          ]
+        },
+
+        {
+          "category": "DOTNET",
+          "topics": [
+            {
+              "topic": ".NET Basics",
+              "contents": []
+            },
+            {
+              "topic": ".NET Core",
+              "contents": []
+            },
+            {
+              "topic": ".NET 5",
+              "contents": []
+            },
+            {
+              "topic": ".NET 6",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to .NET Framework",
+              "contents": []
+            },
+            {
+              "topic": "Understanding .NET Types and Assemblies",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to .NET Framework Libraries",
+              "contents": []
+            },
+            {
+              "topic": "File I/O and Streams in .NET",
+              "contents": []
+            },
+            {
+              "topic": "Working with Collections in .NET",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to LINQ",
+              "contents": []
+            },
+            {
+              "topic": "Asynchronous Programming in .NET",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to Windows Forms Applications",
+              "contents": []
+            },
+            {
+              "topic": "Building User Interfaces with WPF",
+              "contents": []
+            },
+            {
+              "topic": "Data Access with ADO.NET",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to Entity Framework",
+              "contents": []
+            },
+            {
+              "topic": "Working with Data in Entity Framework",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to ASP.NET Core",
+              "contents": []
+            },
+            {
+              "topic": "Building Web APIs with ASP.NET Core",
+              "contents": []
+            },
+            {
+              "topic": "Developing Single-Page Applications with ASP.NET Core and Angular",
+              "contents": []
+            },
+            {
+              "topic": "Authentication and Authorization in ASP.NET Core",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to Blazor",
+              "contents": []
+            },
+            {
+              "topic": "Building Desktop Applications with WPF",
+              "contents": []
+            },
+            {
+              "topic": "Windows Communication Foundation (WCF)",
+              "contents": []
+            },
+            {
+              "topic": "Unit Testing in .NET",
+              "contents": []
+            },
+            {
+              "topic": "Integration Testing with NUnit and Moq",
+              "contents": []
+            },
+            {
+              "topic": "Performance Tuning and Optimization in .NET",
+              "contents": []
+            },
+            {
+              "topic": "Continuous Integration and Deployment (CI/CD) in .NET",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to Microservices Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Building Microservices with .NET Core",
+              "contents": []
+            },
+            {
+              "topic": "Containerization with Docker for .NET Applications",
+              "contents": []
+            },
+            {
+              "topic": "Serverless Computing with Azure Functions",
+              "contents": []
+            },
+            {
+              "topic": "Implementing Real-Time Communication with SignalR",
+              "contents": []
+            },
+            {
+              "topic": "Developing Cross-Platform Mobile Apps with Xamarin",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to .NET Core CLI",
+              "contents": []
+            },
+            {
+              "topic": "Creating .NET Core Console Applications",
+              "contents": []
+            },
+            {
+              "topic": "Working with NuGet Packages in .NET Core",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to .NET Core MVC",
+              "contents": []
+            },
+            {
+              "topic": "Building RESTful APIs with .NET Core",
+              "contents": []
+            },
+            {
+              "topic": "Authentication and Authorization in .NET Core",
+              "contents": []
+            },
+            {
+              "topic": "Deploying .NET Core Applications with Docker",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to Entity Framework Core",
+              "contents": []
+            },
+            {
+              "topic": "Working with Databases in Entity Framework Core",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to ASP.NET Core Razor Pages",
+              "contents": []
+            },
+            {
+              "topic": "Building CRUD Applications with ASP.NET Core Razor Pages",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to ASP.NET Core Web API",
+              "contents": []
+            },
+            {
+              "topic": "Creating RESTful Services with ASP.NET Core Web API",
+              "contents": []
+            },
+            {
+              "topic": "Securing ASP.NET Core Web APIs",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to .NET Core Dependency Injection",
+              "contents": []
+            },
+            {
+              "topic": "Implementing Dependency Injection in .NET Core Applications",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to .NET Core Configuration",
+              "contents": []
+            },
+            {
+              "topic": "Working with Configuration Files in .NET Core",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to .NET Core Logging",
+              "contents": []
+            },
+            {
+              "topic": "Logging in .NET Core Applications",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to .NET Core Middleware",
+              "contents": []
+            },
+            {
+              "topic": "Creating Custom Middleware in .NET Core",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to .NET Core Health Checks",
+              "contents": []
+            },
+            {
+              "topic": "Implementing Health Checks in .NET Core Applications",
+              "contents": []
+            },
+            {
+              "topic": "Introduction to ASP.NET Core Identity",
+              "contents": []
+            },
+            {
+              "topic": "User Authentication and Authorization with ASP.NET Core Identity",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "NodeJs",
+          "topics": [
+            {
+              "topic": "Introduction to Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Setting Up Node.js Environment",
+              "contents": []
+            },
+            {
+              "topic": "Node.js Modules and npm",
+              "contents": []
+            },
+            {
+              "topic": "Node.js Basics: Event Loop and Asynchronous Programming",
+              "contents": []
+            },
+            {
+              "topic": "Working with Files and Streams in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "HTTP Module in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Express.js Framework",
+              "contents": []
+            },
+            {
+              "topic": "Routing in Express.js",
+              "contents": []
+            },
+            {
+              "topic": "Middleware in Express.js",
+              "contents": []
+            },
+            {
+              "topic": "Template Engines in Express.js",
+              "contents": []
+            },
+            {
+              "topic": "Working with Databases in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Authentication and Authorization in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Error Handling in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Debugging Node.js Applications",
+              "contents": []
+            },
+            {
+              "topic": "Unit Testing in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "RESTful APIs with Node.js",
+              "contents": []
+            },
+            {
+              "topic": "WebSocket Programming in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Building Real-Time Applications with Socket.IO",
+              "contents": []
+            },
+            {
+              "topic": "Security Best Practices in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Performance Optimization in Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Scalability in Node.js Applications",
+              "contents": []
+            },
+            {
+              "topic": "Microservices Architecture with Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Dockerizing Node.js Applications",
+              "contents": []
+            },
+            {
+              "topic": "Serverless Computing with Node.js",
+              "contents": []
+            },
+            {
+              "topic": "GraphQL and Apollo Server with Node.js",
+              "contents": []
+            },
+            {
+              "topic": "Real-Time Data Processing with Node.js and Kafka",
+              "contents": []
+            },
+            {
+              "topic": "Building REST APIs with Nest.js",
+              "contents": []
+            },
+            {
+              "topic": "Building GraphQL APIs with Prisma and Nexus",
+              "contents": []
+            },
+            {
+              "topic": "Building Desktop Applications with Electron.js",
+              "contents": []
+            },
+            {
+              "topic": "Unit Testing APIs with Jest",
+              "contents": []
+            },
+            {
+              "topic": "End-to-End Testing with Cypress",
+              "contents": []
+            },
+            {
+              "topic": "Continuous Integration and Deployment (CI/CD) for Node.js Applications",
+              "contents": []
+            },
+            {
+              "topic": "Monitoring and Logging in Node.js Applications",
+              "contents": []
+            },
+            {
+              "topic": "Working with Micro Frontends in Node.js Applications",
+              "contents": []
+            },
+            {
+              "topic": "Server-Side Rendering (SSR) with Next.js",
+              "contents": []
+            },
+            {
+              "topic": "Authentication with OAuth 2.0 in Node.js Applications",
+              "contents": []
+            },
+            {
+              "topic": "Building APIs with LoopBack 4 Framework",
+              "contents": []
+            },
+            {
+              "topic": "Real-Time Collaboration with WebRTC in Node.js Applications",
+              "contents": []
+            },
+            {
+              "topic": "Deploying Node.js Applications on Kubernetes",
+              "contents": []
+            },
+            {
+              "topic": "Building GraphQL APIs with Apollo Server",
+              "contents": []
+            },
+            {
+              "topic": "Caching Strategies in Node.js Applications",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Java Springboot",
+          "topics": [
+            {
+              "topic": "Introduction to Java Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Setting up a Springboot project",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Annotations and Configuration",
+              "contents": []
+            },
+            {
+              "topic": "Dependency Injection in Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Springboot RESTful Web Services",
+              "contents": []
+            },
+            {
+              "topic": "Spring Data JPA with Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Spring Security in Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Testing Springboot Applications",
+              "contents": []
+            },
+            {
+              "topic": "Logging and Debugging in Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Handling Exceptions in Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Actuator for Monitoring",
+              "contents": []
+            },
+            {
+              "topic": "Deploying Springboot Applications",
+              "contents": []
+            },
+            {
+              "topic": "Microservices Architecture with Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud for Distributed Systems",
+              "contents": []
+            },
+            {
+              "topic": "Springboot and Docker",
+              "contents": []
+            },
+            {
+              "topic": "Springboot with MongoDB",
+              "contents": []
+            },
+            {
+              "topic": "Springboot with MySQL",
+              "contents": []
+            },
+            {
+              "topic": "Springboot with Hibernate",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Integration with Angular/React/Vue",
+              "contents": []
+            },
+            {
+              "topic": "Building REST APIs with Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Consuming RESTful Services in Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Profiles and Environments",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Caching",
+              "contents": []
+            },
+            {
+              "topic": "Springboot with Apache Kafka",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Messaging with RabbitMQ",
+              "contents": []
+            },
+            {
+              "topic": "Securing Springboot Microservices",
+              "contents": []
+            },
+            {
+              "topic": "Springboot with OAuth2",
+              "contents": []
+            },
+            {
+              "topic": "Asynchronous Processing in Springboot",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Testing with JUnit and Mockito",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Error Handling",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Logging with Log4j and SLF4J",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Performance Tuning",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Deployment Strategies",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Monitoring and Metrics",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Continuous Integration and Deployment",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Reactive Programming",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Websockets",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Admin Dashboard",
+              "contents": []
+            },
+            {
+              "topic": "Springboot GraphQL APIs",
+              "contents": []
+            },
+            {
+              "topic": "Springboot Security Best Practices",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Java Spring Cloud",
+          "topics": [
+            {
+              "topic": "Introduction to Spring Cloud",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Config Server",
+              "contents": []
+            },
+            {
+              "topic": "Service Discovery with Eureka",
+              "contents": []
+            },
+            {
+              "topic": "Client-Side Load Balancing with Ribbon",
+              "contents": []
+            },
+            {
+              "topic": "Circuit Breaker with Hystrix",
+              "contents": []
+            },
+            {
+              "topic": "API Gateway with Zuul",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Stream",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Task",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Security",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Sleuth",
+              "contents": []
+            },
+            {
+              "topic": "Distributed Tracing with Zipkin",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Contract",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Kubernetes",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Config Server with Git",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Bus",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Task Scheduling",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Data Flow",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Function",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Stream Kafka",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Contract Stub Runner",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Security OAuth",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Load Balancer",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Bus Kafka",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Vault",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Stream RabbitMQ",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Netflix",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Service Registry Consul",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Security SSO",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Consul",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Task Batch",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud OpenFeign",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Load Balancer",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Sleuth with ELK Stack",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Contract WireMock",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Gateway",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Data Flow for Kubernetes",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Kubernetes Config",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Config Server with Vault",
+              "contents": []
+            },
+            {
+              "topic": "Spring Cloud Sleuth with Zipkin",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "PHP – Laravel",
+          "topics": [
+            {
+              "topic": "Laravel Basics"
+            },
+            {
+              "topic": "Laravel Routing"
+            },
+            {
+              "topic": "Laravel Middleware"
+            },
+            {
+              "topic": "Laravel Controllers"
+            },
+            {
+              "topic": "Laravel Blade Templating"
+            },
+            {
+              "topic": "Laravel Eloquent ORM Basics"
+            },
+            {
+              "topic": "Laravel Authentication"
+            },
+            {
+              "topic": "Laravel Validation"
+            },
+            {
+              "topic": "Laravel Queues"
+            },
+            {
+              "topic": "Laravel Events and Listeners"
+            },
+            {
+              "topic": "Laravel Policies and Gates"
+            },
+            {
+              "topic": "Laravel Localization"
+            },
+            {
+              "topic": "Laravel Notifications"
+            },
+            {
+              "topic": "Laravel Task Scheduling"
+            },
+            {
+              "topic": "Laravel File Storage"
+            }
+          ]
+        },
+        {
+          "category": "NodeJS - server",
+          "topics": [
+            {
+              "topic": "Node.js Basics"
+            },
+            {
+              "topic": "NPM (Node Package Manager)"
+            },
+            {
+              "topic": "Express.js Basics"
+            },
+            {
+              "topic": "Express Middleware"
+            },
+            {
+              "topic": "Express Routing"
+            },
+            {
+              "topic": "Node.js File System"
+            },
+            {
+              "topic": "Node.js Events"
+            },
+            {
+              "topic": "Node.js Streams"
+            },
+            {
+              "topic": "Node.js Buffers"
+            },
+            {
+              "topic": "Node.js Modules"
+            },
+            {
+              "topic": "Node.js Debugging"
+            },
+            {
+              "topic": "Node.js Error Handling"
+            },
+            {
+              "topic": "Node.js RESTful APIs"
+            },
+            {
+              "topic": "Node.js Websockets"
+            },
+            {
+              "topic": "Node.js Security Best Practices"
+            }
+          ]
+        },
+        {
+          "category": "ASP.NET Web API",
+          "topics": [
+            {
+              "topic": "ASP.NET Web API Basics"
+            },
+            {
+              "topic": "RESTful API Design"
+            },
+            {
+              "topic": "Routing in Web API"
+            },
+            {
+              "topic": "Model Binding in Web API"
+            },
+            {
+              "topic": "Input Validation in Web API"
+            },
+            {
+              "topic": "Authentication and Authorization in Web API"
+            },
+            {
+              "topic": "Media Formatters in Web API"
+            },
+            {
+              "topic": "Error Handling in Web API"
+            },
+            {
+              "topic": "Versioning in Web API"
+            },
+            {
+              "topic": "Unit Testing Web API"
+            },
+            {
+              "topic": "Integration Testing Web API"
+            },
+            {
+              "topic": "Documenting Web APIs with Swagger"
+            },
+            {
+              "topic": "CORS (Cross-Origin Resource Sharing)"
+            },
+            {
+              "topic": "ASP.NET Web API Filters"
+            },
+            {
+              "topic": "Implementing HATEOAS in Web API"
+            }
+          ]
+        },
+        {
+          "category": "ASP.NET MVC Controllers",
+          "topics": [
+            {
+              "topic": "MVC Pattern"
+            },
+            {
+              "topic": "Model Binding"
+            },
+            {
+              "topic": "Action Filters"
+            },
+            {
+              "topic": "Razor View Engine"
+            },
+            {
+              "topic": "Partial Views"
+            },
+            {
+              "topic": "Routing in MVC"
+            },
+            {
+              "topic": "Action Results"
+            },
+            {
+              "topic": "Dependency Injection in MVC"
+            },
+            {
+              "topic": "Filters in MVC"
+            },
+            {
+              "topic": "Areas in MVC"
+            },
+            {
+              "topic": "Attribute Routing in MVC"
+            },
+            {
+              "topic": "Model Validation"
+            },
+            {
+              "topic": "Custom Model Binders"
+            },
+            {
+              "topic": "Custom Action Results"
+            },
+            {
+              "topic": "Global Exception Handling"
+            }
+          ]
+        },
+        {
+          "category": "ASP.NET Core 6",
+          "topics": [
+            {
+              "topic": "ASP.NET Core Basics"
+            },
+            {
+              "topic": "ASP.NET Core MVC"
+            },
+            {
+              "topic": "Razor Pages in ASP.NET Core"
+            },
+            {
+              "topic": "Entity Framework Core Basics"
+            },
+            {
+              "topic": "ASP.NET Core Web API"
+            },
+            {
+              "topic": "Middleware in ASP.NET Core"
+            },
+            {
+              "topic": "Dependency Injection in ASP.NET Core"
+            },
+            {
+              "topic": "ASP.NET Core Authentication"
+            },
+            {
+              "topic": "ASP.NET Core Authorization"
+            },
+            {
+              "topic": "ASP.NET Core Identity"
+            },
+            {
+              "topic": "ASP.NET Core SignalR"
+            },
+            {
+              "topic": "Blazor Basics"
+            },
+            {
+              "topic": "Server-Side Blazor"
+            },
+            {
+              "topic": "Client-Side Blazor"
+            },
+            {
+              "topic": "Health Checks in ASP.NET Core"
+            }
+          ]
+        },
+        {
+          "category": "UI Layer",
+          "topics": [
+            {
+              "topic": "Web Development",
+              "contents": []
+            },
+            {
+              "topic": "HTML",
+              "contents": []
+            },
+            {
+              "topic": "CSS",
+              "contents": []
+            },
+            {
+              "topic": "ASP.NET MVC",
+              "contents": []
+            },
+            {
+              "topic": "Razor Pages",
+              "contents": []
+            },
+            {
+              "topic": "Razor Views",
+              "contents": []
+            },
+            {
+              "topic": "Angular",
+              "contents": []
+            },
+            {
+              "topic": "React",
+              "contents": []
+            },
+            {
+              "topic": "Vue",
+              "contents": []
+            },
+            {
+              "topic": "PWA",
+              "contents": []
+            },
+            {
+              "topic": "Flutter",
+              "contents": []
+            },
+            {
+              "topic": "Xamarin",
+              "contents": []
+            },
+            {
+              "topic": "React Native",
+              "contents": []
+            },
+            {
+              "topic": "MAUI – Microsoft application UI",
+              "contents": []
+            },
+            {
+              "topic": "UI - Performance Measurement",
+              "contents": []
+            },
+            {
+              "topic": "UI - Accessibility",
+              "contents": []
+            },
+            {
+              "topic": "UI - Internationalization",
+              "contents": []
+            },
+            {
+              "topic": "UI - Theming",
+              "contents": []
+            },
+            {
+              "topic": "UI - Responsive Design",
+              "contents": []
+            },
+            {
+              "topic": "UI - Cross Browser Compatibility",
+              "contents": []
+            },
+            {
+              "topic": "UI - Cross Device Compatibility",
+              "contents": []
+            },
+            {
+              "topic": "UI - Cross Platform Compatibility",
+              "contents": []
+            },
+            {
+              "topic": "UI - Progressive Web Apps",
+              "contents": []
+            },
+            {
+              "topic": "UI - Single Page Applications",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Components",
+              "contents": []
+            },
+            {
+              "topic": "UI - Micro Frontends",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Assembly",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Workers",
+              "contents": []
+            },
+            {
+              "topic": "UI - Service Workers",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Sockets",
+              "contents": []
+            },
+            {
+              "topic": "UI - WebRTC",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Storage",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Notifications",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Speech",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Audio",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Animation",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web Graphics",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web VR",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web AR",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web GL",
+              "contents": []
+            },
+            {
+              "topic": "UI - Web 3D",
+              "contents": []
+            },
+            {
+              "topic": "Bootstrap",
+              "contents": []
+            },
+            {
+              "topic": "Materialize CSS",
+              "contents": []
+            },
+            {
+              "topic": "Semantic UI",
+              "contents": []
+            },
+            {
+              "topic": "Foundation",
+              "contents": []
+            },
+            {
+              "topic": "Bulma",
+              "contents": []
+            },
+            {
+              "topic": "Tailwind CSS",
+              "contents": []
+            },
+            {
+              "topic": "UIKit",
+              "contents": []
+            },
+            {
+              "topic": "Ant Design",
+              "contents": []
+            },
+            {
+              "topic": "Chakra UI",
+              "contents": []
+            },
+            {
+              "topic": "Material-UI",
+              "contents": []
+            },
+            {
+              "topic": "Vuetify",
+              "contents": []
+            },
+            {
+              "topic": "Quasar Framework",
+              "contents": []
+            },
+            {
+              "topic": "PrimeVue",
+              "contents": []
+            },
+            {
+              "topic": "React Bootstrap",
+              "contents": []
+            },
+            {
+              "topic": "Semantic UI React",
+              "contents": []
+            },
+            {
+              "topic": "Grommet",
+              "contents": []
+            },
+            {
+              "topic": "Evergreen",
+              "contents": []
+            },
+            {
+              "topic": "Carbon Design System",
+              "contents": []
+            },
+            {
+              "topic": "Shards",
+              "contents": []
+            },
+            {
+              "topic": "UIKit for Web",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Data Layer",
+          "topics": [
+            {
+              "topic": "RDBMS",
+              "contents": [
+                "Relational Schema Design",
+                "BCNF Normalization Techniques",
+                "Stored Procedure Concepts",
+                "Views, Functions, Triggers",
+                "Database Optimization",
+                "Query Optimization"
+              ]
+            },
+            {
+              "topic": "NoSQL",
+              "contents": []
+            },
+            {
+              "topic": "Big Data",
+              "contents": []
+            },
+            {
+              "topic": "Data Warehouse",
+              "contents": []
+            },
+            {
+              "topic": "Data Lake",
+              "contents": []
+            },
+            {
+              "topic": "Redis",
+              "contents": []
+            },
+            {
+              "topic": "InMemory",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Cloud Layer",
+          "topics": [
+            {
+              "topic": "Azure/AWS/GCP – Introduction",
+              "contents": []
+            },
+            {
+              "topic": "Compute",
+              "contents": []
+            },
+            {
+              "topic": "Storage",
+              "contents": []
+            },
+            {
+              "topic": "Cognitive Services",
+              "contents": []
+            },
+            {
+              "topic": "ML/AI",
+              "contents": []
+            },
+            {
+              "topic": "Workflow Services",
+              "contents": []
+            },
+            {
+              "topic": "Serverless architect",
+              "contents": []
+            },
+            {
+              "topic": "Log Analytics & Monitor",
+              "contents": []
+            },
+            {
+              "topic": "Other Managed Services",
+              "contents": []
+            },
+            {
+              "topic": "Cloud native architecture",
+              "contents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Cloud Service Providers",
+      "categories": [
+        {
+          "category": "Azure",
+          "topics": [
+            {
+              "topic": "Introduction to Azure Cloud Services",
+              "contents": []
+            },
+            {
+              "topic": "Creating an Azure Account",
+              "contents": []
+            },
+            {
+              "topic": "Azure Portal Overview",
+              "contents": []
+            },
+            {
+              "topic": "Azure Resource Groups",
+              "contents": []
+            },
+            {
+              "topic": "Azure Virtual Machines",
+              "contents": []
+            },
+            {
+              "topic": "Azure Storage Accounts",
+              "contents": []
+            },
+            {
+              "topic": "Azure Networking",
+              "contents": []
+            },
+            {
+              "topic": "Azure App Service",
+              "contents": []
+            },
+            {
+              "topic": "Azure Functions",
+              "contents": []
+            },
+            {
+              "topic": "Azure SQL Database",
+              "contents": []
+            },
+            {
+              "topic": "Azure DevOps",
+              "contents": []
+            },
+            {
+              "topic": "Azure Active Directory",
+              "contents": []
+            },
+            {
+              "topic": "Azure Security Center",
+              "contents": []
+            },
+            {
+              "topic": "Azure Key Vault",
+              "contents": []
+            },
+            {
+              "topic": "Azure Kubernetes Service (AKS)",
+              "contents": []
+            },
+            {
+              "topic": "Azure Monitor",
+              "contents": []
+            },
+            {
+              "topic": "Azure Logic Apps",
+              "contents": []
+            },
+            {
+              "topic": "Azure Cosmos DB",
+              "contents": []
+            },
+            {
+              "topic": "Azure Machine Learning",
+              "contents": []
+            },
+            {
+              "topic": "Azure Cognitive Services",
+              "contents": []
+            },
+            {
+              "topic": "Azure IoT Hub",
+              "contents": []
+            },
+            {
+              "topic": "Azure Databricks",
+              "contents": []
+            },
+            {
+              "topic": "Azure Data Lake",
+              "contents": []
+            },
+            {
+              "topic": "Azure Event Hubs",
+              "contents": []
+            },
+            {
+              "topic": "Azure Data Factory",
+              "contents": []
+            },
+            {
+              "topic": "Azure Synapse Analytics",
+              "contents": []
+            },
+            {
+              "topic": "Azure Blob Storage",
+              "contents": []
+            },
+            {
+              "topic": "Azure CDN",
+              "contents": []
+            },
+            {
+              "topic": "Azure API Management",
+              "contents": []
+            },
+            {
+              "topic": "Azure Backup",
+              "contents": []
+            },
+            {
+              "topic": "Azure Site Recovery",
+              "contents": []
+            },
+            {
+              "topic": "Azure Traffic Manager",
+              "contents": []
+            },
+            {
+              "topic": "Azure Cost Management",
+              "contents": []
+            },
+            {
+              "topic": "Azure Policy",
+              "contents": []
+            },
+            {
+              "topic": "Azure Governance",
+              "contents": []
+            },
+            {
+              "topic": "Azure Identity",
+              "contents": []
+            },
+            {
+              "topic": "Azure Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Azure Certification Paths",
+              "contents": []
+            },
+            {
+              "topic": "Azure Cloud Adoption Framework",
+              "contents": []
+            },
+            {
+              "topic": "Azure Best Practices",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "AWS",
+          "topics": [
+            {
+              "topic": "Introduction to AWS Cloud Services",
+              "contents": []
+            },
+            {
+              "topic": "Creating an AWS Account",
+              "contents": []
+            },
+            {
+              "topic": "AWS Management Console",
+              "contents": []
+            },
+            {
+              "topic": "AWS Identity and Access Management (IAM)",
+              "contents": []
+            },
+            {
+              "topic": "AWS EC2 (Elastic Compute Cloud)",
+              "contents": []
+            },
+            {
+              "topic": "AWS S3 (Simple Storage Service)",
+              "contents": []
+            },
+            {
+              "topic": "AWS RDS (Relational Database Service)",
+              "contents": []
+            },
+            {
+              "topic": "AWS VPC (Virtual Private Cloud)",
+              "contents": []
+            },
+            {
+              "topic": "AWS Lambda",
+              "contents": []
+            },
+            {
+              "topic": "AWS CloudFormation",
+              "contents": []
+            },
+            {
+              "topic": "AWS CloudWatch",
+              "contents": []
+            },
+            {
+              "topic": "AWS CloudTrail",
+              "contents": []
+            },
+            {
+              "topic": "AWS Route 53",
+              "contents": []
+            },
+            {
+              "topic": "AWS SNS (Simple Notification Service)",
+              "contents": []
+            },
+            {
+              "topic": "AWS SQS (Simple Queue Service)",
+              "contents": []
+            },
+            {
+              "topic": "AWS DynamoDB",
+              "contents": []
+            },
+            {
+              "topic": "AWS Kinesis",
+              "contents": []
+            },
+            {
+              "topic": "AWS Redshift",
+              "contents": []
+            },
+            {
+              "topic": "AWS Elastic Beanstalk",
+              "contents": []
+            },
+            {
+              "topic": "AWS API Gateway",
+              "contents": []
+            },
+            {
+              "topic": "AWS Cognito",
+              "contents": []
+            },
+            {
+              "topic": "AWS CloudFront",
+              "contents": []
+            },
+            {
+              "topic": "AWS Glacier",
+              "contents": []
+            },
+            {
+              "topic": "AWS Snowball",
+              "contents": []
+            },
+            {
+              "topic": "AWS Snowmobile",
+              "contents": []
+            },
+            {
+              "topic": "AWS Storage Gateway",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "GCP",
+          "topics": [
+            {
+              "topic": "Introduction to GCP Cloud Services",
+              "contents": []
+            },
+            {
+              "topic": "Creating a GCP Account",
+              "contents": []
+            },
+            {
+              "topic": "GCP Console Overview",
+              "contents": []
+            },
+            {
+              "topic": "GCP IAM (Identity and Access Management)",
+              "contents": []
+            },
+            {
+              "topic": "GCP Compute Engine",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Storage",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud SQL",
+              "contents": []
+            },
+            {
+              "topic": "GCP VPC (Virtual Private Cloud)",
+              "contents": []
+            },
+            {
+              "topic": "GCP App Engine",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Functions",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Deployment Manager",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Monitoring",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Logging",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Pub/Sub",
+              "contents": []
+            },
+            {
+              "topic": "GCP BigQuery",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Datastore",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Spanner",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Bigtable",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud CDN",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Identity-Aware Proxy",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Armor",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Security Scanner",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Key Management Service",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Data Loss Prevention",
+              "contents": []
+            },
+            {
+              "topic": "GCP Cloud Security Command Center"
+            }
+          ]
+        },
+        {
+          "category": "Cloud Native Architecture",
+          "topics": [
+            {
+              "topic": "Introduction to Cloud Native Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Microservices",
+              "contents": []
+            },
+            {
+              "topic": "Serverless Computing",
+              "contents": []
+            },
+            {
+              "topic": "Containers",
+              "contents": []
+            },
+            {
+              "topic": "DevOps",
+              "contents": []
+            },
+            {
+              "topic": "CI/CD",
+              "contents": []
+            },
+            {
+              "topic": "Kubernetes",
+              "contents": []
+            },
+            {
+              "topic": "Service Mesh",
+              "contents": []
+            },
+            {
+              "topic": "API Gateway",
+              "contents": []
+            },
+            {
+              "topic": "Event-Driven Architecture",
+              "contents": []
+            },
+            {
+              "topic": "Data Streaming",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Databases",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Storage",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Networking",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Security",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Observability",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Monitoring",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Logging",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Tracing",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Alerting",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Metrics",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Dashboards",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Automation",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Cost Management",
+              "contents": []
+            },
+            {
+              "topic": "Cloud-Native Best Practices",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Hetzner Cloud",
+          "topics": [
+            {
+              "topic": "Introduction to Hetzner Cloud",
+              "contents": []
+            },
+            {
+              "topic": "Creating an Account on Hetzner Cloud",
+              "contents": []
+            },
+            {
+              "topic": "Navigating the Hetzner Cloud Console",
+              "contents": []
+            },
+            {
+              "topic": "Creating and Managing Virtual Servers (VPS)",
+              "contents": []
+            },
+            {
+              "topic": "Understanding and Managing Storage Volumes",
+              "contents": []
+            },
+            {
+              "topic": "Setting up SSH Key Authentication",
+              "contents": []
+            },
+            {
+              "topic": "Working with Snapshots and Backups",
+              "contents": []
+            },
+            {
+              "topic": "Networking Basics in Hetzner Cloud",
+              "contents": []
+            },
+            {
+              "topic": "Configuring Firewall Rules",
+              "contents": []
+            },
+            {
+              "topic": "Load Balancing and High Availability",
+              "contents": []
+            },
+            {
+              "topic": "Using Hetzner Cloud APIs for Automation",
+              "contents": []
+            },
+            {
+              "topic": "Deploying Containers with Hetzner Kubernetes",
+              "contents": []
+            },
+            {
+              "topic": "Monitoring and Alerting with Hetzner Cloud Metrics",
+              "contents": []
+            },
+            {
+              "topic": "Implementing Infrastructure as Code (IaC) with Hetzner",
+              "contents": []
+            },
+            {
+              "topic": "Advanced Networking Concepts in Hetzner",
+              "contents": []
+            },
+            {
+              "topic": "Optimizing Performance and Cost Management",
+              "contents": []
+            },
+            {
+              "topic": "Securing Hetzner Cloud Deployments",
+              "contents": []
+            },
+            {
+              "topic": "Managing Databases on Hetzner Cloud",
+              "contents": []
+            },
+            {
+              "topic": "Implementing Continuous Integration/Continuous Deployment (CI/CD)",
+              "contents": []
+            },
+            {
+              "topic": "Exploring Hetzner Cloud Marketplace for Additional Services",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "DigitalOcean",
+          "topics": [
+            {
+              "topic": "Introduction to Digital Ocean",
+              "contents": []
+            },
+            {
+              "topic": "Creating an Account and Setting Up Billing",
+              "contents": []
+            },
+            {
+              "topic": "Creating and Managing Droplets",
+              "contents": []
+            },
+            {
+              "topic": "Working with Digital Ocean Spaces for Object Storage",
+              "contents": []
+            },
+            {
+              "topic": "Configuring DNS Settings with Digital Ocean",
+              "contents": []
+            },
+            {
+              "topic": "Deploying Applications with Digital Ocean App Platform",
+              "contents": []
+            },
+            {
+              "topic": "Implementing Load Balancers",
+              "contents": []
+            },
+            {
+              "topic": "Networking and Security Groups",
+              "contents": []
+            },
+            {
+              "topic": "Automating Infrastructure with Digital Ocean API and Terraform",
+              "contents": []
+            },
+            {
+              "topic": "Monitoring and Alerts",
+              "contents": []
+            },
+            {
+              "topic": "Scaling Applications on Digital Ocean",
+              "contents": []
+            },
+            {
+              "topic": "High Availability and Disaster Recovery",
+              "contents": []
+            },
+            {
+              "topic": "Advanced Networking with VPCs and Private Networking",
+              "contents": []
+            },
+            {
+              "topic": "Implementing Kubernetes on Digital Ocean",
+              "contents": []
+            },
+            {
+              "topic": "Optimizing Performance and Cost Management",
+              "contents": []
+            },
+            {
+              "topic": "Data Management with Digital Ocean Databases",
+              "contents": []
+            },
+            {
+              "topic": "Working with Digital Ocean Managed Services",
+              "contents": []
+            },
+            {
+              "topic": "Implementing CI/CD Pipelines with Digital Ocean",
+              "contents": []
+            },
+            {
+              "topic": "Securing Applications and Data on Digital Ocean",
+              "contents": []
+            },
+            {
+              "topic": "Best Practices for Infrastructure Management on Digital Ocean",
+              "contents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "AI/ML",
+      "categories": [
+        {
+          "category": "AI",
+          "topics": [
+            {
+              "topic_no": 1,
+              "topic": "NLP",
+              "contents": ["Browse products"]
+            },
+            {
+              "topic_no": 2,
+              "topic": "NER",
+              "contents": []
+            },
+            {
+              "topic_no": 4,
+              "topic": "ANI",
+              "contents": []
+            },
+            {
+              "topic_no": 5,
+              "topic": "Generative AI (10+ Topics)",
+              "contents": []
+            },
+            {
+              "topic_no": 6,
+              "topic": "AGI",
+              "contents": []
+            },
+            {
+              "topic_no": 8,
+              "topic": "Use Cases",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Computer Vision",
+          "topics": [
+            {
+              "topic": "Introduction to Computer Vision",
+              "contents": []
+            },
+            {
+              "topic": "Image Processing Techniques",
+              "contents": []
+            },
+            {
+              "topic": "Feature Extraction and Descriptors",
+              "contents": []
+            },
+            {
+              "topic": "Edge Detection",
+              "contents": []
+            },
+            {
+              "topic": "Image Filtering and Enhancement",
+              "contents": []
+            },
+            {
+              "topic": "Object Detection",
+              "contents": []
+            },
+            {
+              "topic": "Object Tracking",
+              "contents": []
+            },
+            {
+              "topic": "Semantic Segmentation",
+              "contents": []
+            },
+            {
+              "topic": "Instance Segmentation",
+              "contents": []
+            },
+            {
+              "topic": "Optical Flow",
+              "contents": []
+            },
+            {
+              "topic": "Deep Learning for Computer Vision",
+              "contents": []
+            },
+            {
+              "topic": "Convolutional Neural Networks (CNNs)",
+              "contents": []
+            },
+            {
+              "topic": "Transfer Learning in Computer Vision",
+              "contents": []
+            },
+            {
+              "topic": "Generative Adversarial Networks (GANs) for Image Generation",
+              "contents": []
+            },
+            {
+              "topic": "Object Recognition",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Machine Learning",
+          "topics": [
+            {
+              "topic": "Introduction to Machine Learning",
+              "contents": []
+            },
+            {
+              "topic": "Supervised Learning",
+              "contents": []
+            },
+            {
+              "topic": "Unsupervised Learning",
+              "contents": []
+            },
+            {
+              "topic": "Regression Analysis",
+              "contents": []
+            },
+            {
+              "topic": "Classification Algorithms",
+              "contents": []
+            },
+            {
+              "topic": "Clustering Techniques",
+              "contents": []
+            },
+            {
+              "topic": "Dimensionality Reduction",
+              "contents": []
+            },
+            {
+              "topic": "Model Evaluation and Selection",
+              "contents": []
+            },
+            {
+              "topic": "Hyperparameter Tuning",
+              "contents": []
+            },
+            {
+              "topic": "Ensemble Learning Methods",
+              "contents": []
+            },
+            {
+              "topic": "Deep Learning Fundamentals",
+              "contents": []
+            },
+            {
+              "topic": "Recurrent Neural Networks (RNNs)",
+              "contents": []
+            },
+            {
+              "topic": "Convolutional Neural Networks (CNNs)",
+              "contents": []
+            },
+            {
+              "topic": "Generative Models",
+              "contents": []
+            },
+            {
+              "topic": "Transfer Learning",
+              "contents": []
+            },
+            {
+              "topic": "AutoML",
+              "contents": []
+            },
+            {
+              "topic": "Time Series Analysis",
+              "contents": []
+            },
+            {
+              "topic": "Anomaly Detection",
+              "contents": []
+            },
+            {
+              "topic": "Natural Language Processing (NLP)",
+              "contents": []
+            },
+            {
+              "topic": "Graphical Models",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "ML Operations",
+          "topics": [
+            {
+              "topic_no": 17,
+              "topic": "Data",
+              "contents": []
+            },
+            {
+              "topic_no": 18,
+              "topic": "Algorithms",
+              "contents": []
+            },
+            {
+              "topic_no": 19,
+              "topic": "Training",
+              "contents": []
+            },
+            {
+              "topic_no": 20,
+              "topic": "Learning",
+              "contents": []
+            },
+            {
+              "topic_no": 21,
+              "topic": "Model",
+              "contents": []
+            },
+            {
+              "topic_no": 22,
+              "topic": "Evaluation",
+              "contents": []
+            },
+            {
+              "topic_no": 23,
+              "topic": "MLOps",
+              "contents": []
+            },
+            {
+              "topic_no": 24,
+              "topic": "Methods",
+              "contents": []
+            },
+            {
+              "topic_no": 25,
+              "topic": "Use Cases",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Data Science",
+          "topics": [
+            {
+              "topic_no": 9,
+              "topic": "Data Planning and Strategy",
+              "contents": []
+            },
+            {
+              "topic_no": 10,
+              "topic": "Data Mining",
+              "contents": []
+            },
+            {
+              "topic_no": 11,
+              "topic": "Data Engineering",
+              "contents": []
+            },
+            {
+              "topic_no": 12,
+              "topic": "Data Analysis & Models",
+              "contents": []
+            },
+            {
+              "topic_no": 13,
+              "topic": "Data Visualization & Operationalization",
+              "contents": []
+            },
+            {
+              "topic_no": 14,
+              "topic": "Data Governance and Compliance",
+              "contents": []
+            },
+            {
+              "topic_no": 16,
+              "topic": "Use Cases",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Important Pythong Packages",
+          "topics": [
+            {
+              "topic": "NumPy",
+              "contents": []
+            },
+            {
+              "topic": "Pandas",
+              "contents": []
+            },
+            {
+              "topic": "Matplotlib",
+              "contents": []
+            },
+            {
+              "topic": "Seaborn",
+              "contents": []
+            },
+            {
+              "topic": "Scikit-learn",
+              "contents": []
+            },
+            {
+              "topic": "TensorFlow",
+              "contents": []
+            },
+            {
+              "topic": "PyTorch",
+              "contents": []
+            },
+            {
+              "topic": "Keras",
+              "contents": []
+            },
+            {
+              "topic": "NLTK (Natural Language Toolkit)",
+              "contents": []
+            },
+            {
+              "topic": "SpaCy",
+              "contents": []
+            },
+            {
+              "topic": "Gensim",
+              "contents": []
+            },
+            {
+              "topic": "OpenCV",
+              "contents": []
+            },
+            {
+              "topic": "Beautiful Soup",
+              "contents": []
+            },
+            {
+              "topic": "Scrapy",
+              "contents": []
+            },
+            {
+              "topic": "Statsmodels",
+              "contents": []
+            },
+            {
+              "topic": "SciPy",
+              "contents": []
+            },
+            {
+              "topic": "NLTK (Natural Language Toolkit)",
+              "contents": []
+            },
+            {
+              "topic": "TextBlob",
+              "contents": []
+            },
+            {
+              "topic": "GPT (Generative Pre-trained Transformer)",
+              "contents": []
+            },
+            {
+              "topic": "BERT (Bidirectional Encoder Representations from Transformers)",
+              "contents": []
+            },
+            {
+              "topic": "XGBoost",
+              "contents": []
+            },
+            {
+              "topic": "LightGBM",
+              "contents": []
+            },
+            {
+              "topic": "CatBoost",
+              "contents": []
+            },
+            {
+              "topic": "Prophet",
+              "contents": []
+            },
+            {
+              "topic": "PySpark",
+              "contents": []
+            },
+            {
+              "topic": "FastText",
+              "contents": []
+            },
+            {
+              "topic": "Hugging Face Transformers",
+              "contents": []
+            },
+            {
+              "topic": "Dask",
+              "contents": []
+            },
+            {
+              "topic": "AllenNLP",
+              "contents": []
+            },
+            {
+              "topic": "Scikit-image",
+              "contents": []
+            },
+            {
+              "topic": "Yellowbrick",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Prompt Engineering",
+          "topics": [
+            {
+              "topic_no": 26,
+              "topic": "Basics of Prompting",
+              "contents": []
+            },
+            {
+              "topic_no": 27,
+              "topic": "Prompt Design Principles",
+              "contents": []
+            },
+            {
+              "topic_no": 28,
+              "topic": "Advanced Prompt Techniques",
+              "contents": []
+            },
+            {
+              "topic_no": 29,
+              "topic": "Evaluation Metrics",
+              "contents": []
+            },
+            {
+              "topic_no": 30,
+              "topic": "Bias and Fairness",
+              "contents": []
+            },
+            {
+              "topic_no": 31,
+              "topic": "Domain-Specific Prompting",
+              "contents": []
+            },
+            {
+              "topic_no": 32,
+              "topic": "Interactive Prompting",
+              "contents": []
+            },
+            {
+              "topic_no": 33,
+              "topic": "Prompting for Creativity",
+              "contents": []
+            },
+            {
+              "topic_no": 34,
+              "topic": "Prompting for Knowledge Retrieval",
+              "contents": []
+            },
+            {
+              "topic_no": 35,
+              "topic": "Feedback Loops and Reinforcement",
+              "contents": []
+            },
+            {
+              "topic_no": 36,
+              "topic": "Automated Prompt Generation",
+              "contents": []
+            },
+            {
+              "topic_no": 37,
+              "topic": "Prompt Libraries and Repositories",
+              "contents": []
+            },
+            {
+              "topic_no": 38,
+              "topic": "Ethical Considerations",
+              "contents": []
+            },
+            {
+              "topic_no": 39,
+              "topic": "Challenges and Limitations",
+              "contents": []
+            },
+            {
+              "topic_no": 40,
+              "topic": "Future Directions",
+              "contents": []
+            },
+            {
+              "topic_no": 41,
+              "topic": "Case Studies",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Prompting Techniques",
+          "topics": [
+            {
+              "topic": "Zero Shot Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Few Shot Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Chain of Thought Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Self-consistency Prompting",
+              "contents": []
+            },
+            {
+              "topic": "General Knowledge Prompting",
+              "contents": []
+            },
+            {
+              "topic": "One-Shot Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Multi-Turn Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Dynamic Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Conversational Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Template-Based Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Adaptive Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Guided Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Structured Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Prompting with Constraints",
+              "contents": []
+            },
+            {
+              "topic": "Generative Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Semantic Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Contextual Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Adaptive Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Multi-turn Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Prompting for Creative Writing",
+              "contents": []
+            },
+            {
+              "topic": "Prompting for Poetry Generation",
+              "contents": []
+            },
+            {
+              "topic": "Dialog Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Narrative Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Collaborative Prompting",
+              "contents": []
+            },
+            {
+              "topic": "Prompting for Code Generation",
+              "contents": []
+            },
+            {
+              "topic": "Prompting for Music Composition",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Programming Prompts",
+          "topics": [
+            {
+              "topic_no": 42,
+              "topic": "LangChain",
+              "contents": ["Coding assignments"]
+            },
+            {
+              "topic_no": 43,
+              "topic": "AutoGPT",
+              "contents": ["Coding assignments"]
+            },
+            {
+              "topic_no": 44,
+              "topic": "GPTEngineer",
+              "contents": ["Coding assignments"]
+            },
+            {
+              "topic_no": 45,
+              "topic": "MetaGPT",
+              "contents": ["Coding assignments"]
+            },
+            {
+              "topic_no": 46,
+              "topic": "Conversational AI",
+              "contents": ["Coding assignments"]
+            },
+            {
+              "topic_no": 47,
+              "topic": "ChatBOT Integrations",
+              "contents": ["Coding assignments"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "UX/UI",
+      "categories": [
+        {
+          "category": "Design Concepts",
+          "topics": [
+            {
+              "topic_no": 1,
+              "topic": "UX/UI Design",
+              "contents": []
+            },
+            {
+              "topic_no": 2,
+              "topic": "Customer Empathy",
+              "contents": []
+            },
+            {
+              "topic_no": 3,
+              "topic": "Visual Designs",
+              "contents": []
+            },
+            {
+              "topic_no": 4,
+              "topic": "Interaction",
+              "contents": []
+            },
+            {
+              "topic_no": 5,
+              "topic": "Flow",
+              "contents": []
+            },
+            {
+              "topic_no": 6,
+              "topic": "Micro Features",
+              "contents": []
+            },
+            {
+              "topic_no": 7,
+              "topic": "UI Development",
+              "contents": []
+            },
+            {
+              "topic_no": 8,
+              "topic": "Layouts",
+              "contents": []
+            },
+            {
+              "topic_no": 9,
+              "topic": "Templates",
+              "contents": []
+            },
+            {
+              "topic_no": 10,
+              "topic": "Themes",
+              "contents": []
+            },
+            {
+              "topic_no": 11,
+              "topic": "Angular/React/Vue Components",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "UI Design Principles",
+          "topics": [
+            {
+              "topic_no": 1,
+              "topic": "Color Theory",
+              "contents": []
+            },
+            {
+              "topic_no": 2,
+              "topic": "Typography",
+              "contents": []
+            },
+            {
+              "topic_no": 3,
+              "topic": "Layout",
+              "contents": []
+            },
+            {
+              "topic_no": 4,
+              "topic": "Visual Hierarchy",
+              "contents": []
+            },
+            {
+              "topic_no": 5,
+              "topic": "Grid Systems",
+              "contents": []
+            },
+            {
+              "topic_no": 6,
+              "topic": "Spacing",
+              "contents": []
+            },
+            {
+              "topic_no": 7,
+              "topic": "Consistency",
+              "contents": []
+            },
+            {
+              "topic_no": 8,
+              "topic": "Accessibility",
+              "contents": []
+            },
+            {
+              "topic_no": 9,
+              "topic": "Responsive Design",
+              "contents": []
+            },
+            {
+              "topic_no": 10,
+              "topic": "User Research",
+              "contents": []
+            },
+            {
+              "topic_no": 11,
+              "topic": "Wireframing",
+              "contents": []
+            },
+            {
+              "topic_no": 12,
+              "topic": "Prototyping",
+              "contents": []
+            },
+            {
+              "topic_no": 13,
+              "topic": "User Testing",
+              "contents": []
+            },
+            {
+              "topic_no": 14,
+              "topic": "Design Systems",
+              "contents": []
+            },
+            {
+              "topic_no": 15,
+              "topic": "Design Tools",
+              "contents": []
+            },
+            {
+              "topic": "Cosmetic Aspects of UI",
+              "contents": [
+                "Adherence to a single Theme",
+                "Check Words",
+                "Spellings",
+                "Grammar",
+                "Punctuation",
+                "Choice of words",
+                "Casing of words",
+                "Meanings of Phrases/Sentences",
+                "Spacing of Words",
+                "Font & Color",
+                "Check Data Types",
+                "Date & Time format",
+                "Currency format",
+                "Check Alignments of Controls",
+                "Check Spacing, Padding, Margin",
+                "Check Hint Texts",
+                "Check Validation Messages",
+                "Check Response Messages on CTAs",
+                "Check Navigations",
+                "Nav Bar",
+                "Breadcrumbs",
+                "Check Content on Notifications – Email, SMS and WhatsApp"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Design Tools",
+          "topics": [
+            {
+              "topic_no": 12,
+              "topic": "Adobe XD",
+              "contents": []
+            },
+            {
+              "topic_no": 13,
+              "topic": "Figma",
+              "contents": []
+            },
+            {
+              "topic_no": 14,
+              "topic": "Sketch",
+              "contents": []
+            },
+            {
+              "topic_no": 15,
+              "topic": "InVision",
+              "contents": []
+            },
+            {
+              "topic_no": 16,
+              "topic": "Zeplin",
+              "contents": []
+            },
+            {
+              "topic_no": 17,
+              "topic": "Marvel",
+              "contents": []
+            },
+            {
+              "topic_no": 18,
+              "topic": "Balsamiq",
+              "contents": []
+            },
+            {
+              "topic_no": 19,
+              "topic": "Axure",
+              "contents": []
+            },
+            {
+              "topic_no": 20,
+              "topic": "Proto.io",
+              "contents": []
+            },
+            {
+              "topic_no": 21,
+              "topic": "Flinto",
+              "contents": []
+            },
+            {
+              "topic_no": 22,
+              "topic": "Origami Studio",
+              "contents": []
+            },
+            {
+              "topic_no": 23,
+              "topic": "Principle",
+              "contents": []
+            },
+            {
+              "topic_no": 24,
+              "topic": "Adobe Photoshop",
+              "contents": []
+            },
+            {
+              "topic_no": 25,
+              "topic": "Adobe Illustrator",
+              "contents": []
+            },
+            {
+              "topic_no": 26,
+              "topic": "Adobe After Effects",
+              "contents": []
+            },
+            {
+              "topic_no": 27,
+              "topic": "Adobe Premiere Pro",
+              "contents": []
+            },
+            {
+              "topic_no": 28,
+              "topic": "Adobe Lightroom",
+              "contents": []
+            },
+            {
+              "topic_no": 29,
+              "topic": "Adobe InDesign",
+              "contents": []
+            },
+            {
+              "topic_no": 30,
+              "topic": "Adobe Dreamweaver",
+              "contents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "QA",
+      "categories": [
+        {
+          "category": "Testing Methodologies",
+          "topics": [
+            {
+              "topic_no": 1,
+              "topic": "Blackbox Testing",
+              "contents": []
+            },
+            {
+              "topic_no": 2,
+              "topic": "White Box Testing",
+              "contents": []
+            },
+            {
+              "topic_no": 3,
+              "topic": "System, Integration Testing",
+              "contents": []
+            },
+            {
+              "topic_no": 4,
+              "topic": "Regression Testing",
+              "contents": []
+            },
+            {
+              "topic_no": 5,
+              "topic": "Smoke Tests",
+              "contents": []
+            },
+            {
+              "topic_no": 6,
+              "topic": "Sanity Test",
+              "contents": []
+            },
+            {
+              "topic_no": 7,
+              "topic": "A/B Testing",
+              "contents": []
+            },
+            {
+              "topic_no": 2,
+              "topic": "Test Strategy",
+              "contents": [
+                "Test Cases Plan",
+                "Test Suite",
+                "Test Cases",
+                "Test Data",
+                "Test Reports"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Testing Tools",
+          "topics": [
+            {
+              "topic": "Bugzilla",
+              "contents": []
+            },
+            {
+              "topic": "TestRail",
+              "contents": []
+            },
+            {
+              "topic": "Zephyr",
+              "contents": []
+            },
+            {
+              "topic": "HP ALM",
+              "contents": []
+            },
+            {
+              "topic": "JMeter",
+              "contents": []
+            },
+            {
+              "topic": "LoadRunner",
+              "contents": []
+            },
+            {
+              "topic": "Selenium",
+              "contents": []
+            },
+            {
+              "topic": "Appium",
+              "contents": []
+            },
+            {
+              "topic": "TestComplete",
+              "contents": []
+            },
+            {
+              "topic": "Katalon Studio",
+              "contents": []
+            },
+            {
+              "topic": "Postman",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "QA Automation",
+          "topics": [
+            {
+              "topic_no": 3,
+              "topic": "QA Automation Basics",
+              "contents": [
+                "QA Automation Strategy",
+                "QA Automation Framework",
+                "Regression Testing triggered in CI/CD",
+                "Performance Testing",
+                "Load Testing"
+              ]
+            },
+            {
+              "topic_no": 4,
+              "topic": "Framework – Evaluation/Homegrown",
+              "contents": [
+                "Does it come with a Framework?",
+                "- Repository of Test Cases",
+                "- Repository of Test Data that can be applied on the Test Cases",
+                "- Version Control",
+                "- Workflow",
+                "- Scheduling",
+                "Test Results Dashboard",
+                "- Detailed Test Results",
+                "- With screenshots of the pages",
+                "Where is the Framework Stored? Instancy cloud or 3rd Party vendor Cloud",
+                "Basic Use Cases. Should support,",
+                "- Regression Testing",
+                "- Performance Testing",
+                "- Load Testing (Bulk requests)",
+                "Advanced Use Cases",
+                "- Can it handle Dynamically changing pages?",
+                "- Can we modify the test code?",
+                "- Can we integrate custom Scripts?",
+                "- Can we replay the Test recording?",
+                "- Email of Failed tests?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "DevOps",
+      "categories": [
+        {
+          "category": "CI/CD",
+          "topics": [
+            {
+              "topic_no": 1,
+              "topic": "CI/CD",
+              "contents": [
+                "CI/CD Concepts",
+                "Build, Backup, Deploy, Run",
+                "Continuous Delivery"
+              ]
+            },
+            {
+              "topic_no": 2,
+              "topic": "Jenkins",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Containerization",
+          "topics": [
+            {
+              "topic_no": 0,
+              "topic": "Docker Images",
+              "contents": []
+            },
+            {
+              "topic_no": 0,
+              "topic": "Kubernetes Services",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Asset Management",
+          "topics": [
+            {
+              "topic_no": 3,
+              "topic": "Asset Inventory",
+              "contents": []
+            },
+            {
+              "topic_no": 4,
+              "topic": "Cost Control",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Configuration Management",
+          "topics": [
+            {
+              "topic_no": 5,
+              "topic": "Unified Configuration",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Advanced Concepts",
+          "topics": [
+            {
+              "topic_no": 6,
+              "topic": "Ansible",
+              "contents": []
+            },
+            {
+              "topic_no": 7,
+              "topic": "Terraform",
+              "contents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Security",
+      "categories": [
+        {
+          "category": "Secure Coding",
+          "topics": [
+            {
+              "topic_no": 1,
+              "topic": "Secure Coding",
+              "contents": []
+            },
+            {
+              "topic_no": 2,
+              "topic": "OWASP Top 10",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Security Testing",
+          "topics": [
+            {
+              "topic_no": 3,
+              "topic": "Security Testing",
+              "contents": []
+            },
+            {
+              "topic_no": 4,
+              "topic": "Penetration Testing",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Compliance",
+          "topics": [
+            {
+              "topic_no": 5,
+              "topic": "GDPR",
+              "contents": []
+            },
+            {
+              "topic_no": 6,
+              "topic": "HIPAA",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Security Operations",
+          "topics": [
+            {
+              "topic_no": 7,
+              "topic": "Incident Response",
+              "contents": []
+            },
+            {
+              "topic_no": 8,
+              "topic": "Security Monitoring",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Identity and Access Management",
+          "topics": [
+            {
+              "topic_no": 9,
+              "topic": "IAM",
+              "contents": []
+            },
+            {
+              "topic_no": 10,
+              "topic": "SSO",
+              "contents": []
+            },
+            {
+              "topic_no": 11,
+              "topic": "MFA",
+              "contents": []
+            },
+            {
+              "topic_no": 12,
+              "topic": "RBAC",
+              "contents": []
+            },
+            {
+              "topic_no": 13,
+              "topic": "ABAC",
+              "contents": []
+            },
+            {
+              "topic_no": 14,
+              "topic": "PAM",
+              "contents": []
+            },
+            {
+              "topic_no": 15,
+              "topic": "CIAM",
+              "contents": []
+            },
+            {
+              "topic_no": 16,
+              "topic": "IDaaS",
+              "contents": []
+            },
+            {
+              "topic_no": 17,
+              "topic": "IAMaaS",
+              "contents": []
+            },
+            {
+              "topic_no": 18,
+              "topic": "IAM for Cloud",
+              "contents": []
+            },
+            {
+              "topic_no": 19,
+              "topic": "IAM for Mobile",
+              "contents": []
+            },
+            {
+              "topic_no": 20,
+              "topic": "IAM for IoT",
+              "contents": []
+            },
+            {
+              "topic_no": 21,
+              "topic": "IAM for Blockchain",
+              "contents": []
+            },
+            {
+              "topic_no": 22,
+              "topic": "IAM for AI/ML",
+              "contents": []
+            },
+            {
+              "topic_no": 23,
+              "topic": "IAM for RPA",
+              "contents": []
+            },
+            {
+              "topic_no": 24,
+              "topic": "IAM for Quantum Computing",
+              "contents": []
+            },
+            {
+              "topic_no": 25,
+              "topic": "IAM for Edge Computing",
+              "contents": []
+            },
+            {
+              "topic_no": 26,
+              "topic": "IAM for 5G",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Security Architecture",
+          "topics": [
+            {
+              "topic_no": 27,
+              "topic": "Zero Trust",
+              "contents": []
+            },
+            {
+              "topic_no": 28,
+              "topic": "Secure SDLC",
+              "contents": []
+            },
+            {
+              "topic_no": 29,
+              "topic": "Secure DevOps",
+              "contents": []
+            },
+            {
+              "topic_no": 30,
+              "topic": "Secure Cloud",
+              "contents": []
+            },
+            {
+              "topic_no": 31,
+              "topic": "Secure IoT",
+              "contents": []
+            },
+            {
+              "topic_no": 32,
+              "topic": "Secure AI/ML",
+              "contents": []
+            },
+            {
+              "topic_no": 33,
+              "topic": "Secure RPA",
+              "contents": []
+            },
+            {
+              "topic_no": 34,
+              "topic": "Secure Quantum Computing",
+              "contents": []
+            },
+            {
+              "topic_no": 35,
+              "topic": "Secure Edge Computing",
+              "contents": []
+            },
+            {
+              "topic_no": 36,
+              "topic": "Secure 5G",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Security Engineering",
+          "topics": [
+            {
+              "topic_no": 37,
+              "topic": "Secure Coding",
+              "contents": []
+            },
+            {
+              "topic_no": 38,
+              "topic": "Secure Testing",
+              "contents": []
+            },
+            {
+              "topic_no": 39,
+              "topic": "Secure Deployment",
+              "contents": []
+            },
+            {
+              "topic_no": 40,
+              "topic": "Secure Operations",
+              "contents": []
+            },
+            {
+              "topic_no": 41,
+              "topic": "Secure Monitoring",
+              "contents": []
+            },
+            {
+              "topic_no": 42,
+              "topic": "Secure Incident Response",
+              "contents": []
+            },
+            {
+              "topic_no": 43,
+              "topic": "Secure Governance",
+              "contents": []
+            },
+            {
+              "topic_no": 44,
+              "topic": "Secure Compliance",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Security Operations",
+          "topics": [
+            {
+              "topic_no": 45,
+              "topic": "Security Monitoring",
+              "contents": []
+            },
+            {
+              "topic_no": 46,
+              "topic": "Security Incident Response",
+              "contents": []
+            },
+            {
+              "topic_no": 47,
+              "topic": "Security Governance",
+              "contents": []
+            },
+            {
+              "topic_no": 48,
+              "topic": "Security Compliance",
+              "contents": []
+            }
+          ]
+        },
+        {
+          "category": "Security Compliance",
+          "topics": [
+            {
+              "topic_no": 49,
+              "topic": "GDPR",
+              "contents": []
+            },
+            {
+              "topic_no": 50,
+              "topic": "HIPAA",
+              "contents": []
+            },
+            {
+              "topic_no": 51,
+              "topic": "PCI DSS",
+              "contents": []
+            },
+            {
+              "topic_no": 52,
+              "topic": "ISO 27001",
+              "contents": []
+            },
+            {
+              "topic_no": 53,
+              "topic": "NIST",
+              "contents": []
+            },
+            {
+              "topic_no": 54,
+              "topic": "SOC 2",
+              "contents": []
+            },
+            {
+              "topic_no": 55,
+              "topic": "FISMA",
+              "contents": []
+            },
+            {
+              "topic_no": 56,
+              "topic": "COBIT",
+              "contents": []
+            },
+            {
+              "topic_no": 57,
+              "topic": "ITIL",
+              "contents": []
+            },
+            {
+              "topic_no": 58,
+              "topic": "CIS",
+              "contents": []
+            },
+            {
+              "topic_no": 59,
+              "topic": "CSA",
+              "contents": []
+            },
+            {
+              "topic_no": 60,
+              "topic": "CMMC",
+              "contents": []
+            },
+            {
+              "topic_no": 61,
+              "topic": "CISQ",
+              "contents": []
+            },
+            {
+              "topic_no": 62,
+              "topic": "CMMI",
+              "contents": []
+            },
+            {
+              "topic_no": 63,
+              "topic": "ITAM",
+              "contents": []
+            },
+            {
+              "topic_no": 64,
+              "topic": "ITSM",
+              "contents": []
+            },
+            {
+              "topic_no": 65,
+              "topic": "ITOM",
+              "contents": []
+            },
+            {
+              "topic_no": 66,
+              "topic": "ITFM",
+              "contents": []
+            },
+            {
+              "topic_no": 67,
+              "topic": "ITBM",
+              "contents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Product Engineering",
+      "categories": [
+        {
+          "category": "Requirements Management",
+          "topics": [
+            {
+              "topic_no": 1,
+              "topic": "Elicitation",
+              "contents": [
+                "Gathering detailed requirements from stakeholders to understand project objectives and needs"
+              ]
+            },
+            {
+              "topic_no": 2,
+              "topic": "Documentation",
+              "contents": [
+                "Creating clear, concise, and comprehensive requirement documents for the development team"
+              ]
+            },
+            {
+              "topic_no": 3,
+              "topic": "Validation",
+              "contents": [
+                "Ensuring that the documented requirements match the actual needs of the stakeholders"
+              ]
+            },
+            {
+              "topic_no": 4,
+              "topic": "Traceability",
+              "contents": [
+                "Tracking requirements throughout the project lifecycle to ensure they are met in the final product"
+              ]
+            },
+            {
+              "topic_no": 5,
+              "topic": "Prioritization",
+              "contents": [
+                "Determining the order in which requirements should be addressed based on importance and dependencies"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Stakeholder Management",
+          "topics": [
+            {
+              "topic_no": 6,
+              "topic": "Identification",
+              "contents": [
+                "Recognizing all parties affected by the project and their interests"
+              ]
+            },
+            {
+              "topic_no": 7,
+              "topic": "Communication",
+              "contents": [
+                "Keeping stakeholders informed about project progress, changes, and other relevant information"
+              ]
+            },
+            {
+              "topic_no": 8,
+              "topic": "Relationship Building",
+              "contents": [
+                "Establishing and maintaining positive relationships with stakeholders to ensure smooth project execution"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Solution Assessment and Validation",
+          "topics": [
+            {
+              "topic_no": 9,
+              "topic": "Feasibility Analysis",
+              "contents": [
+                "Evaluating the practicality of proposed solutions in terms of technical, financial, and operational aspects"
+              ]
+            },
+            {
+              "topic_no": 10,
+              "topic": "Solution Validation",
+              "contents": [
+                "Ensuring that the developed solution meets the requirements and solves the business problem"
+              ]
+            },
+            {
+              "topic_no": 11,
+              "topic": "Gap Analysis",
+              "contents": [
+                "Identifying differences between the current state and the desired state of a system or process"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Business Process Modeling",
+          "topics": [
+            {
+              "topic_no": 12,
+              "topic": "Process Mapping",
+              "contents": [
+                "Creating visual representations of business processes to understand and analyze their flow"
+              ]
+            },
+            {
+              "topic_no": 13,
+              "topic": "Process Improvement",
+              "contents": [
+                "Identifying inefficiencies in processes and proposing enhancements"
+              ]
+            },
+            {
+              "topic_no": 14,
+              "topic": "Use Case Development",
+              "contents": [
+                "Describing interactions between users and systems to achieve specific goals"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Data Analysis",
+          "topics": [
+            {
+              "topic_no": 15,
+              "topic": "Data Gathering",
+              "contents": ["Collecting relevant data for analysis"]
+            },
+            {
+              "topic_no": 16,
+              "topic": "Data Modeling",
+              "contents": [
+                "Creating representations of data structures and relationships"
+              ]
+            },
+            {
+              "topic_no": 17,
+              "topic": "Data Validation",
+              "contents": [
+                "Ensuring that data is accurate, consistent, and usable"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Technology & Tools",
+          "topics": [
+            {
+              "topic_no": 18,
+              "topic": "Software Tools Proficiency",
+              "contents": [
+                "Mastery of tools like JIRA, Confluence, MS Visio, etc., used in business analysis tasks"
+              ]
+            },
+            {
+              "topic_no": 19,
+              "topic": "Technical Liaison",
+              "contents": [
+                "Bridging the gap between non-technical stakeholders and the technical team"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Risk Management",
+          "topics": [
+            {
+              "topic_no": 20,
+              "topic": "Risk Identification",
+              "contents": [
+                "Recognizing potential threats to the project's success"
+              ]
+            },
+            {
+              "topic_no": 21,
+              "topic": "Risk Assessment",
+              "contents": [
+                "Evaluating the potential impact and likelihood of identified risks"
+              ]
+            },
+            {
+              "topic_no": 22,
+              "topic": "Risk Mitigation",
+              "contents": ["Proposing strategies to reduce or eliminate risks"]
+            }
+          ]
+        },
+        {
+          "category": "Change Management",
+          "topics": [
+            {
+              "topic_no": 23,
+              "topic": "Change Request Management",
+              "contents": [
+                "Handling requests for changes in the project after the initial requirements have been set"
+              ]
+            },
+            {
+              "topic_no": 24,
+              "topic": "Impact Analysis",
+              "contents": [
+                "Assessing the potential effects of proposed changes on the project"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Organizational Competencies",
+      "categories": [
+        {
+          "category": "Org. Culture",
+          "topics": [
+            {
+              "topic_no": 1,
+              "topic": "Techno-Functional Culture",
+              "contents": [
+                "Culture Triumphs Strategy",
+                "Identify individual strength",
+                "Assign work wrt to the strengths",
+                "Next 2/3 steps – encourage to upskill while on the job",
+                "More of coding vs process/meetings/documents – make coding as a interesting/fun activity",
+                "Encourage ownership/accountability - Delegate other work"
+              ]
+            },
+            {
+              "topic_no": 2,
+              "topic": "Personal Development",
+              "contents": [
+                "Communication & Collaboration",
+                "Time Adherence",
+                "Professionalism",
+                "Competencies – Upskilling"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Management",
+          "topics": [
+            {
+              "topic_no": 3,
+              "topic": "Management",
+              "contents": [
+                "Project Management",
+                "People Management",
+                "Release Management",
+                "Process Improvements – priority on automation",
+                "Decision Making",
+                "Delegate work",
+                "Team Roadmap"
+              ]
+            },
+            {
+              "topic_no": 4,
+              "topic": "People Management",
+              "contents": [
+                "Not all are same",
+                "Understand individual strengths & weaknesses",
+                "Build on strengths",
+                "Coach/Mentor/hand hold on the weaknesses",
+                "Make relevant - connect the business/product/customer outcomes to all individuals",
+                "Internal Training - Short burst sessions",
+                "Motivation vs De-motivation (do not put down & in front of people)",
+                "Introduce new tech, tools - remove fear to learn & expand"
+              ]
+            },
+            {
+              "topic_no": 5,
+              "topic": "Process",
+              "contents": [
+                "Agile Methodology",
+                "JIRA & Azure DevOps",
+                "Other Internal Processes"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Product Team",
+          "topics": [
+            {
+              "topic_no": 6,
+              "topic": "Product Management",
+              "contents": [
+                "Product Roadmap",
+                "UX/UI",
+                "Feature Specification",
+                "Scenarios Document"
+              ]
+            },
+            {
+              "topic_no": 7,
+              "topic": "Metrics",
+              "contents": [
+                "Business Metrics",
+                "Core Product Metrics",
+                "Metric Driven Feature Discovery",
+                "Basic Knowledge of SQL and Database Schemas"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "category": "Bash Scripting",
+  "topics": [
+    {
+      "topic": "Introduction to Bash Scripting",
+      "topic_no": 54,
+      "contents": [
+        {
+          "text": "What is Bash Scripting?",
+          "codeSnippet": "Bash scripting is a way to automate tasks and interact with the operating system using the Bash shell. It involves writing a series of commands in a plain text file that can be executed by the Bash interpreter."
+        },
+        {
+          "text": "Why use Bash Scripting?",
+          "codeSnippet": "Bash scripting is useful for automating repetitive tasks, managing system configurations, and creating complex workflows. It can save time and effort by streamlining processes."
+        },
+        {
+          "text": "Basic Syntax of a Bash Script",
+          "codeSnippet": "A Bash script typically starts with a shebang line (#!/bin/bash) to specify the interpreter. It then includes commands, comments, variables, loops, conditionals, and functions."
+        },
+        {
+          "text": "Variables in Bash Scripting",
+          "codeSnippet": "Variables in Bash are used to store data for later use. They can be assigned values using the syntax variable_name=value and accessed using $variable_name."
+        },
+        {
+          "text": "Conditional Statements in Bash",
+          "codeSnippet": "Conditional statements in Bash, such as if-else and case statements, allow you to make decisions in your scripts based on certain conditions."
+        },
+        {
+          "text": "Loops in Bash Scripting",
+          "codeSnippet": "Loops like for, while, and until are used in Bash scripting to iterate over a set of values or perform repetitive tasks until a condition is met."
+        },
+        {
+          "text": "Functions in Bash Scripting",
+          "codeSnippet": "Functions in Bash allow you to group a set of commands together and execute them multiple times within a script. They help in organizing and reusing code."
+        },
+        {
+          "text": "Input and Output in Bash",
+          "codeSnippet": "Bash scripts can take input from users or files and produce output to the terminal or files. This interaction makes scripts more dynamic and versatile."
+        },
+        {
+          "text": "Error Handling in Bash",
+          "codeSnippet": "Error handling in Bash involves checking for errors during script execution and responding appropriately, such as displaying error messages or exiting the script."
+        },
+        {
+          "text": "Best Practices for Bash Scripting",
+          "codeSnippet": "Some best practices for Bash scripting include using descriptive variable names, commenting your code, testing scripts thoroughly, and following consistent coding conventions."
+        }
+      ]
+    },
+    {
+      "topic": "Variables and Data Types in Bash",
+      "topic_no": 189,
+      "contents": [
+        {
+          "text": "Variables in Bash are used to store data values.",
+          "codeSnippet": "variable_name=value",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Bash supports different data types such as strings, integers, and arrays.",
+          "codeSnippet": "string_var=\"Hello World\"\nint_var=42\narray_var=(apple orange banana)",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "To access the value of a variable in Bash, you need to use the $ symbol before the variable name.",
+          "codeSnippet": "echo $variable_name",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "You can also perform arithmetic operations on integer variables in Bash.",
+          "codeSnippet": "result=$((5 + 3))\necho $result",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Conditional Statements in Bash",
+      "topic_no": 265,
+      "contents": [
+        {
+          "text": "Conditional statements in Bash are used to make decisions in a script based on certain conditions.",
+          "codeSnippet": "if [ condition ]; then\n    # code to be executed if condition is true\nfi\n\nif [ condition ]; then\n    # code to be executed if condition is true\nelse\n    # code to be executed if condition is false\nfi\n\nif [ condition1 ] && [ condition2 ]; then\n    # code to be executed if both conditions are true\nfi\n\nif [ condition1 ] || [ condition2 ]; then\n    # code to be executed if either condition1 or condition2 is true\nfi"
+        },
+        {
+          "text": "The 'if' statement is used to check a condition and execute a block of code if the condition is true.",
+          "codeSnippet": "if [ $var -eq 10 ]; then\n    echo \"Variable is equal to 10\"\nfi"
+        },
+        {
+          "text": "The 'if-else' statement is used to execute one block of code if the condition is true and another block if the condition is false.",
+          "codeSnippet": "if [ $var -gt 0 ]; then\n    echo \"Variable is greater than 0\"\nelse\n    echo \"Variable is less than or equal to 0\"\nfi"
+        },
+        {
+          "text": "The 'if-elif-else' statement is used to check multiple conditions in sequence.",
+          "codeSnippet": "if [ $var -gt 0 ]; then\n    echo \"Variable is greater than 0\"\nelif [ $var -eq 0 ]; then\n    echo \"Variable is equal to 0\"\nelse\n    echo \"Variable is less than 0\"\nfi"
+        }
+      ]
+    },
+    {
+      "topic": "Looping Structures in Bash",
+      "topic_no": 338,
+      "contents": [
+        {
+          "text": "A loop in Bash allows you to execute a set of commands repeatedly until a certain condition is met.",
+          "codeSnippet": "for i in {1..5}; do\n    echo $i\n done",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "The 'for' loop is commonly used in Bash scripting to iterate over a sequence of values.",
+          "codeSnippet": "for item in apples bananas oranges; do\n    echo $item\n done",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "The 'while' loop in Bash executes a set of commands as long as a specified condition is true.",
+          "codeSnippet": "counter=0\nwhile [ $counter -lt 5 ]; do\n    echo $counter\n    ((counter++))\ndone",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "The 'until' loop in Bash is similar to the 'while' loop but continues until a specified condition becomes true.",
+          "codeSnippet": "counter=0\nuntil [ $counter -ge 5 ]; do\n    echo $counter\n    ((counter++))\ndone",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "You can use the 'break' statement in a loop to exit the loop prematurely based on a certain condition.",
+          "codeSnippet": "for i in {1..10}; do\n    if [ $i -eq 5 ]; then\n        break\n    fi\n    echo $i\n done",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "The 'continue' statement in a loop allows you to skip the remaining commands in the current iteration and proceed to the next one.",
+          "codeSnippet": "for i in {1..5}; do\n    if [ $i -eq 3 ]; then\n        continue\n    fi\n    echo $i\n done",
+          "codeLanguage": "bash"
+        }
+      ]
+    },
+    {
+      "topic": "Functions and Subroutines in Bash",
+      "topic_no": 366,
+      "contents": [
+        {
+          "text": "Functions in Bash allow you to group a set of commands together to perform a specific task. They can be defined and called within a Bash script.",
+          "codeSnippet": "function_name() {\n    # commands to be executed\n}\n\n# Call the function\nfunction_name"
+        },
+        {
+          "text": "Subroutines in Bash are similar to functions but are typically used to perform a specific task within a function.",
+          "codeSnippet": "function_name() {\n    subroutine_name() {\n        # commands to be executed\n    }\n\n    # Call the subroutine\n    subroutine_name\n}"
+        }
+      ]
+    },
+    {
+      "topic": "File Handling in Bash",
+      "topic_no": 412,
+      "contents": [
+        {
+          "text": "Introduction to File Handling in Bash",
+          "codeSnippet": "File handling in Bash allows you to read, write, and manipulate files using various commands and tools.",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Checking if a File Exists",
+          "codeSnippet": "if [ -f file.txt ]; then\n    echo \"File exists\"\nfi",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Creating a New File",
+          "codeSnippet": "touch newfile.txt",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Writing to a File",
+          "codeSnippet": "echo \"Hello, World!\" > output.txt",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Reading from a File",
+          "codeSnippet": "while IFS= read -r line; do\n    echo $line\ndone < input.txt",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Appending to a File",
+          "codeSnippet": "echo \"Appended text\" >> file.txt",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Copying a File",
+          "codeSnippet": "cp source.txt destination.txt",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Moving/Renaming a File",
+          "codeSnippet": "mv oldfile.txt newfile.txt",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Deleting a File",
+          "codeSnippet": "rm file.txt",
+          "codeLanguage": "bash"
+        }
+      ]
+    }
+  ]
+}

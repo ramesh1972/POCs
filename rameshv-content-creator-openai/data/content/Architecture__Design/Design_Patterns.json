@@ -1,0 +1,99 @@
+{
+  "category": "Design Patterns",
+  "topics": [
+    {
+      "topic": "Design Patterns",
+      "topic_no": 251,
+      "contents": [
+        {
+          "text": "Behavioral design patterns focus on how objects communicate and interact with each other to achieve a specific behavior or functionality. These patterns help in defining the communication between objects and make the design more flexible and reusable.",
+          "codeSnippet": "One example of a behavioral design pattern is the Observer pattern. In this pattern, an object (subject) maintains a list of its dependents (observers) and notifies them of any state changes, allowing the observers to update automatically.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Creational design patterns deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by controlling the object creation process.",
+          "codeSnippet": "public class Singleton {\n    private static Singleton instance;\n\n    private Singleton() {}\n\n    public static Singleton getInstance() {\n        if (instance == null) {\n            instance = new Singleton();\n        }\n        return instance;\n    }\n}"
+        },
+        {
+          "text": "Architectural design patterns are reusable solutions to common problems that occur in software design. They help in organizing code in a structured and efficient manner, making it easier to understand, maintain, and scale.",
+          "codeSnippet": "public class Singleton { private static Singleton instance; private Singleton() {} public static Singleton getInstance() { if (instance == null) { instance = new Singleton(); } return instance; } }",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Concurrency is the ability of a system to handle multiple tasks or processes simultaneously.",
+          "codeSnippet": "public class ConcurrencyExample {\n    public static void main(String[] args) {\n        Thread thread1 = new Thread(() -> {\n            System.out.println(\"Task 1 is running\");\n        });\n        Thread thread2 = new Thread(() -> {\n            System.out.println(\"Task 2 is running\");\n        });\n        thread1.start();\n        thread2.start();\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Structural design patterns focus on how objects and classes can be combined to form larger structures while keeping these structures flexible and efficient. These patterns help in organizing and managing relationships between different components.",
+          "codeSnippet": "public interface Shape {\n    void draw();\n}\n\npublic class Circle implements Shape {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing Circle\");\n    }\n}\n\npublic class Square implements Shape {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing Square\");\n    }\n}\n\npublic class ShapeDecorator implements Shape {\n    protected Shape decoratedShape;\n\n    public ShapeDecorator(Shape decoratedShape) {\n        this.decoratedShape = decoratedShape;\n    }\n\n    @Override\n    public void draw() {\n        decoratedShape.draw();\n    }\n}\n\npublic class RedShapeDecorator extends ShapeDecorator {\n    public RedShapeDecorator(Shape decoratedShape) {\n        super(decoratedShape);\n    }\n\n    @Override\n    public void draw() {\n        decoratedShape.draw();\n        setRedBorder(decoratedShape);\n    }\n\n    private void setRedBorder(Shape decoratedShape) {\n        System.out.println(\"Border Color: Red\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Shape circle = new Circle();\n        Shape redCircle = new RedShapeDecorator(new Circle());\n        Shape redSquare = new RedShapeDecorator(new Square());\n\n        circle.draw();\n        redCircle.draw();\n        redSquare.draw();\n    }\n}"
+        },
+        {
+          "text": "What are Design Patterns?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Creational Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Structural Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Behavioral Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Using Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Reusability",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Flexibility",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Maintainability",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Singleton Pattern",
+          "codeSnippet": "class Singleton {\n  private static Singleton instance;\n  private Singleton() {}\n  public static Singleton getInstance() {\n    if (instance == null) {\n      instance = new Singleton();\n    }\n    return instance;\n  }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "2. Factory Method Pattern",
+          "codeSnippet": "interface Product {\n  void create();\n}\nclass ConcreteProduct implements Product {\n  public void create() {\n    System.out.println(\"Creating Concrete Product\");\n  }\n}\nclass Factory {\n  public Product createProduct() {\n    return new ConcreteProduct();\n  }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "3. Observer Pattern",
+          "codeSnippet": "interface Observer {\n  void update(String message);\n}\nclass ConcreteObserver implements Observer {\n  public void update(String message) {\n    System.out.println(\"Received message: \" + message);\n  }\n}\nclass Subject {\n  private List<Observer> observers = new ArrayList<>();\n  public void addObserver(Observer observer) {\n    observers.add(observer);\n  }\n  public void notifyObservers(String message) {\n    for (Observer observer : observers) {\n      observer.update(message);\n    }\n  }\n}",
+          "codeLanguage": "java"
+        }
+      ]
+    }
+  ]
+}

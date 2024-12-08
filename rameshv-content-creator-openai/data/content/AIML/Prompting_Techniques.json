@@ -1,0 +1,613 @@
+{
+  "category": "Prompting Techniques",
+  "topics": [
+    {
+      "topic": "Zero Shot Prompting",
+      "topic_no": 15,
+      "contents": [
+        {
+          "text": "Zero Shot Prompting is a technique in natural language processing where a model is prompted with a task description and a set of instructions, without any specific training data for that task.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique allows AI models to perform tasks they were not explicitly trained for by leveraging their general understanding of language and concepts.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Zero Shot Prompting can be useful in scenarios where obtaining labeled training data for a specific task is difficult or time-consuming.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In Zero Shot Prompting, the model is expected to generate outputs based on the provided prompt and instructions, even if it has not seen similar examples during training.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Few Shot Prompting",
+      "topic_no": 106,
+      "contents": [
+        {
+          "text": "Few Shot Prompting is a technique used in AI/ML to generate prompts for few-shot learning tasks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Few Shot Prompting involves providing a few examples of a task to an AI model and asking it to generalize to similar tasks.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique helps in training AI models with limited data by leveraging pre-trained language models.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Few Shot Prompting can be used in various NLP tasks such as text classification, question answering, and text generation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To implement Few Shot Prompting, one can use libraries like Hugging Face Transformers in Python.",
+          "codeSnippet": "from transformers import pipeline\n\nprompt = 'Translate the following text into French: Hello, how are you?'\nmodel = pipeline('translation_en_to_fr')\nresult = model(prompt)",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Chain of Thought Prompting",
+      "topic_no": 139,
+      "contents": [
+        {
+          "text": "Chain of Thought Prompting is a technique used in AI/ML to guide the thought process of a machine learning model by providing a series of prompts or cues.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique helps the model generate more coherent and relevant outputs by steering its decision-making process through a predefined chain of prompts.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Chain of Thought Prompting can be implemented in natural language processing tasks to improve the quality of text generation or completion.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Self-consistency Prompting",
+      "topic_no": 184,
+      "contents": [
+        {
+          "text": "Self-consistency prompting is a technique used in AI/ML to ensure that a model's predictions are consistent with its own previous predictions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique involves prompting a model with its own previous outputs as input to encourage consistency in its predictions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Self-consistency prompting can help improve the robustness and coherence of a model's predictions over time.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "General Knowledge Prompting",
+      "topic_no": 240,
+      "contents": [
+        {
+          "text": "Prompting is a technique used in AI/ML to guide the model towards generating desired outputs."
+        },
+        {
+          "text": "Prompting helps in providing context and constraints to the model, influencing its decision-making process."
+        },
+        {
+          "text": "Prompting can be used to steer the model towards generating specific types of responses or outputs."
+        },
+        {
+          "text": "Prompting can be achieved through various methods such as providing initial input, using conditional statements, or incorporating predefined templates."
+        },
+        {
+          "text": "Prompting techniques can be applied in natural language processing tasks, image recognition, and other machine learning applications."
+        },
+        {
+          "text": "Prompting can improve the performance and accuracy of AI models by guiding them towards desired outcomes."
+        },
+        {
+          "text": "Prompting is a valuable tool in fine-tuning AI models and ensuring they produce relevant and coherent outputs."
+        },
+        {
+          "text": "Prompting techniques are essential for controlling the behavior and output of AI systems in real-world applications."
+        }
+      ]
+    },
+    {
+      "topic": "One-Shot Prompting",
+      "topic_no": 283,
+      "contents": [
+        {
+          "text": "One-Shot Prompting is a technique used in AI/ML to generate outputs based on a single prompt or input.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique is particularly useful in scenarios where only limited information is available for generating responses or outputs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One-Shot Prompting can be implemented using pre-trained language models like GPT-3 or T5.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In One-Shot Prompting, the model is provided with a single prompt or input, and it generates the corresponding output without the need for additional context or information.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Multi-Turn Prompting",
+      "topic_no": 316,
+      "contents": [
+        {
+          "text": "Multi-Turn Prompting is a technique used in AI/ML to generate responses that involve multiple interactions or turns between the model and the user.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique allows the model to maintain context across multiple exchanges, enabling more coherent and relevant responses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Multi-Turn Prompting is commonly used in chatbots, question-answering systems, and dialogue generation models.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a chatbot scenario, Multi-Turn Prompting helps the model understand the conversation flow and provide accurate responses based on the context of the dialogue.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Multi-Turn Prompting involves designing prompts that guide the model through a series of interactions to generate a coherent response.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Dynamic Prompting",
+      "topic_no": 352,
+      "contents": [
+        {
+          "text": "Dynamic Prompting is a technique used in AI/ML to adjust the prompts or questions based on the user's responses or behavior.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique allows the system to provide more relevant prompts to the user, leading to better engagement and more accurate responses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Dynamic Prompting can be implemented using algorithms that analyze user input and adjust the prompts accordingly.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "For example, in a chatbot application, Dynamic Prompting can be used to ask follow-up questions based on the user's previous responses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a recommendation system, Dynamic Prompting can adjust the suggestions based on the user's browsing history or preferences.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Conversational Prompting",
+      "topic_no": 391,
+      "contents": [
+        {
+          "text": "Conversational prompting is a technique used in AI/ML to engage users in a dialogue or conversation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Conversational prompting can be implemented using chatbots or virtual assistants to interact with users in a natural language.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Prompting techniques in conversational AI involve asking open-ended questions to encourage users to provide more information.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Conversational prompting can be personalized based on user preferences and historical interactions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In AI/ML, conversational prompting can be enhanced using natural language processing (NLP) to understand user inputs better.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Template-Based Prompting",
+      "topic_no": 406,
+      "contents": [
+        {
+          "text": "Template-Based Prompting is a technique used in AI/ML to generate prompts based on predefined templates."
+        },
+        {
+          "text": "It helps in standardizing the prompts generated for training models and ensures consistency in the data provided to the model."
+        },
+        {
+          "text": "For example, a template for sentiment analysis could be 'I feel [positive/negative/neutral] about [topic].'"
+        },
+        {
+          "codeSnippet": "template = 'I feel [positive/negative/neutral] about [topic]'"
+        },
+        {
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Structured Prompting",
+      "topic_no": 442,
+      "contents": [
+        {
+          "text": "Structured Prompting is a technique used in AI/ML to guide the learning process by providing specific cues or hints to the model.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique helps the model to focus on relevant information and make more accurate predictions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Structured Prompting can be implemented by providing structured input data or by using predefined templates to guide the model's learning process.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One common application of Structured Prompting is in natural language processing tasks where prompts are used to guide the generation of text.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Generative Prompting",
+      "topic_no": 477,
+      "contents": [
+        {
+          "text": "Generative Prompting is a technique used in AI/ML to generate text or other types of data by providing a prompt or starting point for the model to continue from."
+        },
+        {
+          "text": "One example of Generative Prompting is using a language model to generate a new text based on a given prompt."
+        },
+        {
+          "text": "Code snippet for using Generative Prompting in Python with Hugging Face's Transformers library: \n\nfrom transformers import GPT2LMHeadModel, GPT2Tokenizer\n\ntokenizer = GPT2Tokenizer.from_pretrained('gpt2')\nmodel = GPT2LMHeadModel.from_pretrained('gpt2')\n\nprompt_text = 'Once upon a time'\ninput_ids = tokenizer.encode(prompt_text, return_tensors='pt')\noutput = model.generate(input_ids, max_length=100, num_return_sequences=1, pad_token_id=tokenizer.eos_token_id)\noutput_text = tokenizer.decode(output[0], skip_special_tokens=True)\nprint(output_text)\n",
+          "codeLanguage": "python"
+        }
+      ]
+    },
+    {
+      "topic": "Semantic Prompting",
+      "topic_no": 507,
+      "contents": [
+        {
+          "text": "Semantic prompting is a technique used in AI/ML to provide more contextually relevant prompts to improve model performance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Semantic prompting involves using natural language prompts that are semantically related to the task at hand, helping the model better understand the desired output.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Semantic prompting can be used in various AI/ML tasks such as text generation, question answering, and image captioning to guide the model towards generating more accurate and relevant outputs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One common approach to semantic prompting is to provide the model with prompts that contain specific keywords or phrases related to the desired output, helping the model focus on the relevant information.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In semantic prompting, the prompts are designed to guide the model towards generating outputs that align with the user's intentions, leading to more precise and contextually appropriate results.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Contextual Prompting",
+      "topic_no": 536,
+      "contents": [
+        {
+          "text": "Contextual prompting is a technique used in AI/ML to provide relevant prompts or suggestions based on the context of the user's current task or situation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique is commonly used in chatbots to offer helpful responses or guide users through a conversation based on the ongoing dialogue.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Contextual prompting can enhance user experience by anticipating user needs and providing timely assistance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Adaptive Prompting",
+      "topic_no": 556,
+      "contents": [
+        {
+          "text": "Adaptive prompting is a technique used in AI/ML to dynamically adjust the level of assistance provided to a user based on their interactions and performance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Adaptive prompting can be implemented in chatbots to tailor responses based on user input and engagement levels.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In AI/ML, adaptive prompting algorithms can adapt to user preferences and learning styles to enhance the overall user experience.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Multi-turn Prompting",
+      "topic_no": 576,
+      "contents": [
+        {
+          "text": "Multi-turn Prompting is a technique used in AI/ML to generate a series of prompts and responses to guide a model towards a specific outcome.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "This technique involves providing context and information in multiple steps to help the model make more informed decisions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Multi-turn Prompting can be useful in scenarios where a single prompt is not sufficient to achieve the desired result.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In multi-turn prompting, each prompt-response pair builds on the previous one, allowing for a more nuanced understanding of the task at hand.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Prompting for Creative Writing",
+      "topic_no": 597,
+      "contents": [
+        {
+          "text": "Introduction to Prompting for Creative Writing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the Importance of Prompts in Creative Writing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Different Types of Prompts for Creative Writing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using AI to Generate Writing Prompts",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Prompting Techniques in AI/ML Models",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Prompting for Poetry Generation",
+      "topic_no": 615,
+      "contents": [
+        {
+          "text": "Prompting for poetry generation involves providing a starting point or theme to an AI model to generate poetic text.",
+          "codeSnippet": "prompt = 'The stars shine brightly in the sky'",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "One common technique for prompting in poetry generation is to use specific keywords or phrases that evoke certain emotions or imagery.",
+          "codeSnippet": "prompt = 'In the depths of the forest, whispers of ancient trees'",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Another effective prompting technique is to provide a structured format or rhyme scheme for the generated poetry.",
+          "codeSnippet": "prompt = 'Roses are red, violets are blue'",
+          "codeLanguage": "Python"
+        }
+      ]
+    },
+    {
+      "topic": "Dialog Prompting",
+      "topic_no": 637,
+      "contents": [
+        {
+          "text": "Dialog Prompting is a technique used in AI/ML to engage users in a conversation by asking questions or providing prompts to gather information or guide the conversation flow."
+        },
+        {
+          "text": "Dialog Prompting can be used in chatbots, virtual assistants, recommendation systems, and other AI applications to interact with users in a more natural and engaging way."
+        },
+        {
+          "text": "Dialog Prompting helps in improving user engagement and satisfaction by providing personalized responses and guiding users through a conversation."
+        },
+        {
+          "text": "Dialog Prompting can be implemented using various techniques such as rule-based systems, machine learning models, or a combination of both."
+        },
+        {
+          "text": "In a chatbot scenario, Dialog Prompting can involve asking the user for specific information, providing options for the user to choose from, or suggesting next steps in the conversation."
+        },
+        {
+          "text": "Dialog Prompting is essential for creating interactive and user-friendly AI applications that can effectively communicate with users and fulfill their needs."
+        },
+        {
+          "text": "Implementing Dialog Prompting requires designing effective prompts, handling user responses, and managing the conversation flow to provide a seamless user experience."
+        },
+        {
+          "text": "Dialog Prompting techniques can be customized based on the specific use case and the type of interaction required with the user."
+        },
+        {
+          "text": "Dialog Prompting plays a crucial role in enhancing the conversational capabilities of AI systems and making them more intuitive and user-centric."
+        }
+      ]
+    },
+    {
+      "topic": "Narrative Prompting",
+      "topic_no": 665,
+      "contents": [
+        {
+          "text": "Narrative prompting is a technique used in AI/ML to generate text based on a given prompt or context."
+        },
+        {
+          "text": "It involves providing a starting sentence or phrase to an AI model, which then continues the narrative based on the input."
+        },
+        {
+          "text": "This technique is commonly used in natural language processing tasks such as text generation, story writing, and dialogue generation."
+        },
+        {
+          "text": "Narrative prompting can be implemented using various AI models such as GPT-3, BERT, and LSTM."
+        },
+        {
+          "text": "Developers can fine-tune these models on specific datasets to generate more coherent and contextually relevant narratives."
+        },
+        {
+          "text": "One of the key advantages of narrative prompting is its ability to generate creative and engaging content based on a given prompt."
+        },
+        {
+          "text": "By adjusting the length and complexity of the prompt, developers can control the output generated by the AI model."
+        },
+        {
+          "text": "Narrative prompting can be used in various applications such as chatbots, content generation, and virtual storytelling experiences."
+        }
+      ]
+    },
+    {
+      "topic": "Collaborative Prompting",
+      "topic_no": 678,
+      "contents": [
+        {
+          "text": "Collaborative prompting is a technique used in AI/ML where multiple models work together to generate predictions or outputs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Collaborative prompting can improve the accuracy and robustness of AI models by leveraging diverse perspectives and expertise.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In collaborative prompting, different models can prompt each other to generate more accurate predictions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Prompting for Code Generation",
+      "topic_no": 690,
+      "contents": [
+        {
+          "text": "Prompting for code generation involves providing specific instructions or suggestions to an AI model to generate code based on a given task or problem statement.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "One common prompting technique is to provide a natural language description of the desired code functionality or structure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Another approach is to provide input-output examples or test cases to guide the AI model in generating the code.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Prompting can also involve specifying constraints or requirements that the generated code must satisfy.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Prompting for Music Composition",
+      "topic_no": 712,
+      "contents": [
+        {
+          "text": "Prompting for music composition involves providing specific instructions or cues to guide the AI/ML model in generating musical pieces."
+        },
+        {
+          "text": "One technique is to prompt the model with a starting melody or chord progression to influence the direction of the composition."
+        },
+        {
+          "text": "Another approach is to use keywords or themes to prompt the model to generate music that aligns with a particular mood or style."
+        },
+        {
+          "text": "Prompting can also involve specifying constraints such as tempo, key signature, or instrumentation to tailor the generated music."
+        },
+        {
+          "text": "In AI/ML music composition, prompts can be used to steer the model towards creating original compositions that meet specific criteria or objectives."
+        },
+        {
+          "text": "Prompting techniques help in shaping the output of the AI/ML model, allowing composers to have more control over the generated music."
+        },
+        {
+          "text": "Code snippet: \n\nmodel.generate(prompt='Starting melody: C E G C', max_length=100)"
+        },
+        {
+          "text": "Code snippet: \n\nmodel.generate(prompt='Theme: melancholic piano', max_length=150)"
+        },
+        {
+          "text": "Code snippet: \n\nmodel.generate(prompt='Constraints: Tempo=120 BPM, Key=C Major', max_length=120)"
+        },
+        {
+          "text": "Code snippet: \n\nmodel.generate(prompt='Keywords: upbeat, electronic, energetic', max_length=130)"
+        }
+      ]
+    }
+  ]
+}

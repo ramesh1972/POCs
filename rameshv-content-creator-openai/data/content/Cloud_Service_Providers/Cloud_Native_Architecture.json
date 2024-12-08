@@ -1,0 +1,914 @@
+{
+  "category": "Cloud Native Architecture",
+  "topics": [
+    {
+      "topic": "Introduction to Cloud Native Architecture",
+      "topic_no": 48,
+      "contents": [
+        {
+          "text": "Cloud Native Architecture is an approach to building and running applications that fully exploit the advantages of the cloud computing delivery model.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "It utilizes cloud services and technologies to design, develop, deploy, and manage applications, allowing for scalability, flexibility, and resilience.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Cloud Native Architecture promotes the use of microservices, containers, and orchestration tools to create modular and scalable applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular cloud service providers that support Cloud Native Architecture include Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS offers services like Amazon Elastic Kubernetes Service (EKS) and AWS Fargate for container orchestration and management in a cloud-native environment.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Microsoft Azure provides Azure Kubernetes Service (AKS) for deploying, managing, and scaling containerized applications using Kubernetes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Google Cloud Platform offers Google Kubernetes Engine (GKE) for running and managing Kubernetes clusters in a cloud-native architecture.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Microservices",
+      "topic_no": 126,
+      "contents": [
+        {
+          "text": "Introduction to Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Advantages of Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Characteristics of Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Challenges of Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Microservices Architecture Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Microservices on Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Microservices Deployment Strategies",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Monitoring and Scaling Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Security Considerations for Microservices",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Serverless Computing",
+      "topic_no": 192,
+      "contents": [
+        {
+          "text": "Serverless Computing is a cloud computing model where a cloud provider automatically manages the infrastructure needed to run and scale applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Serverless Computing allows developers to focus on writing code without worrying about server management, scaling, or maintenance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Serverless Computing is event-driven, meaning functions are triggered by specific events or requests.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular cloud service providers offering serverless computing services include AWS Lambda, Azure Functions, and Google Cloud Functions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "AWS Lambda is a serverless computing service provided by Amazon Web Services.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Azure Functions is Microsoft's serverless computing offering within the Azure cloud platform.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Google Cloud Functions is Google's serverless compute service that runs code in response to events.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Containers",
+      "topic_no": 270,
+      "contents": [
+        {
+          "text": "Containers are lightweight, portable, and self-sufficient units that package an application and its dependencies for easy deployment across different environments.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Containers provide an isolated environment for running applications, ensuring that they run consistently regardless of the underlying infrastructure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Containerization allows developers to build, ship, and run applications more efficiently by encapsulating them in containers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular containerization technologies include Docker, Kubernetes, and containerd.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Cloud service providers like AWS, Google Cloud Platform, and Microsoft Azure offer container services to help users manage and orchestrate containers at scale.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Containers are commonly used in cloud-native architectures to enable microservices-based applications that can be easily scaled and managed.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "DevOps",
+      "topic_no": 312,
+      "contents": [
+        {
+          "text": "Introduction to DevOps in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key principles of DevOps in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing CI/CD pipelines with Cloud Service Providers",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Infrastructure as Code (IaC) in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Containerization and Orchestration tools in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Monitoring and Logging in a Cloud Native DevOps environment",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "CI/CD",
+      "topic_no": 372,
+      "contents": [
+        {
+          "text": "Continuous Integration/Continuous Deployment (CI/CD) is a software development practice where code changes are automatically built, tested, and deployed frequently.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CI/CD pipelines automate the process of integrating code changes, running tests, and deploying applications to production environments.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Cloud Native Architecture emphasizes the use of CI/CD pipelines to enable rapid and reliable software delivery in cloud environments.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular cloud service providers like AWS, Azure, and Google Cloud offer tools and services to support CI/CD workflows.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In AWS, CodePipeline and CodeBuild are commonly used services for setting up CI/CD pipelines.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Azure DevOps provides a comprehensive set of tools for implementing CI/CD pipelines and managing the software development lifecycle.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Google Cloud offers Cloud Build and Cloud Source Repositories for building and deploying applications using CI/CD practices.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Kubernetes",
+      "topic_no": 453,
+      "contents": [
+        {
+          "text": "Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kubernetes allows users to easily deploy, scale, and manage containerized applications in a cloud-native environment.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kubernetes provides features such as automatic scaling, self-healing, service discovery, and load balancing for containerized applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kubernetes can run on various cloud service providers like AWS, Google Cloud Platform, Microsoft Azure, and others.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kubernetes abstracts the underlying infrastructure, allowing developers to focus on building and deploying applications without worrying about the underlying infrastructure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kubernetes uses declarative configuration files (YAML or JSON) to define the desired state of applications and infrastructure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kubernetes architecture consists of master nodes that control the cluster and worker nodes that run the applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kubernetes provides a powerful API that allows users to interact with the cluster and manage resources programmatically.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kubernetes supports various deployment strategies like rolling updates, blue-green deployments, and canary releases for seamless application updates.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Kubernetes offers built-in monitoring and logging capabilities to help users track the performance and health of their applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Service Mesh",
+      "topic_no": 487,
+      "contents": [
+        {
+          "text": "Service Mesh is a dedicated infrastructure layer for handling service-to-service communication within a microservices architecture.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Service Mesh provides functionalities like service discovery, load balancing, encryption, authentication, and observability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular Service Mesh solutions include Istio, Linkerd, and Consul Connect.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Service Mesh helps in offloading common networking concerns from the application code, making it more resilient and secure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Service Mesh can be deployed as a sidecar proxy alongside each service instance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "API Gateway",
+      "topic_no": 519,
+      "contents": [
+        {
+          "text": "API Gateway is a service that allows developers to create, publish, maintain, monitor, and secure APIs at any scale.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "API Gateway acts as a single entry point for clients to access multiple backend services and APIs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "API Gateway can handle tasks such as request routing, authentication, rate limiting, caching, and response transformation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "API Gateway helps in decoupling client applications from backend services, providing flexibility and scalability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In a cloud-native architecture, API Gateway is often used to manage and secure communication between microservices.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Cloud service providers like AWS, Azure, and Google Cloud offer API Gateway services as part of their cloud offerings.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "API Gateway can be configured to handle different types of requests, such as REST, GraphQL, SOAP, and WebSocket.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Developers can define API Gateway endpoints, methods, and integrations through configuration or code.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Event-Driven Architecture",
+      "topic_no": 545,
+      "contents": [
+        {
+          "text": "Event-Driven Architecture is a design pattern in which the production, detection, consumption, and reaction to events are central to the architecture.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Events are generated by producers and consumed by consumers. Producers and consumers are decoupled, allowing for flexibility and scalability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Event-Driven Architecture enables asynchronous communication between services, improving responsiveness and decoupling components.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Cloud Native Architecture leverages Event-Driven Architecture to build scalable, resilient, and loosely coupled systems in the cloud environment.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Cloud Service Providers like AWS, Azure, and Google Cloud offer services that support Event-Driven Architecture, such as AWS Lambda, Azure Event Grid, and Google Cloud Pub/Sub.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Data Streaming",
+      "topic_no": 591,
+      "contents": [
+        {
+          "text": "Data streaming is a method of transferring data continuously in small, manageable chunks rather than in a single, large batch.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data streaming allows for real-time data processing and analysis, enabling organizations to make faster decisions based on up-to-date information.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data streaming is commonly used in cloud-native architectures to handle large volumes of data efficiently and in a scalable manner.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular cloud service providers like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform offer data streaming services such as Amazon Kinesis, Azure Stream Analytics, and Google Cloud Dataflow.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Data streaming can be implemented using various technologies such as Apache Kafka, Apache Flink, and Apache Spark Streaming.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Databases",
+      "topic_no": 604,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Databases"
+        },
+        {
+          "text": "Characteristics of Cloud-Native Databases"
+        },
+        {
+          "text": "Examples of Cloud-Native Databases: Amazon Aurora, Google Cloud Spanner, Azure Cosmos DB"
+        },
+        {
+          "text": "Advantages of Cloud-Native Databases"
+        },
+        {
+          "text": "Challenges of Cloud-Native Databases"
+        },
+        {
+          "text": "Best Practices for Implementing Cloud-Native Databases"
+        },
+        {
+          "text": "Security Considerations for Cloud-Native Databases"
+        },
+        {
+          "text": "Scalability and Performance in Cloud-Native Databases"
+        },
+        {
+          "text": "Monitoring and Management of Cloud-Native Databases"
+        },
+        {
+          "text": "Integration of Cloud-Native Databases with Microservices Architecture"
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Storage",
+      "topic_no": 621,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Storage",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Features of Cloud-Native Storage",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Cloud-Native Storage",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Cloud-Native Storage Solutions from Cloud Service Providers",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Cloud-Native Storage in Cloud-Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Networking",
+      "topic_no": 643,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Networking",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Concepts in Cloud-Native Networking such as Service Discovery, Load Balancing, and Network Security",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Comparison of Traditional Networking with Cloud-Native Networking",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Networking Challenges in Cloud-Native Architectures",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Networking Solutions provided by Cloud Service Providers like AWS, Azure, and Google Cloud Platform",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Security",
+      "topic_no": 658,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Security",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Principles of Cloud-Native Security",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Zero Trust Security in Cloud-Native Architectures",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Container Security Best Practices in Cloud-Native Environments",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Securing Microservices Communication in Cloud-Native Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using Service Mesh for Enhanced Security in Cloud-Native Deployments",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Observability",
+      "topic_no": 699,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Observability",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Components of Cloud-Native Observability",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Metrics Collection in Cloud-Native Applications",
+          "codeSnippet": "import io.micrometer.core.instrument.MeterRegistry;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.RestController;\n\n@RestController\npublic class MetricsController {\n\n    @Autowired\n    private MeterRegistry meterRegistry;\n\n    @GetMapping(\"/api/metrics\")\n    public String getMetrics() {\n        meterRegistry.counter(\"custom.metrics.counter\").increment();\n        return \"Metrics collected\";\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Implementing Logging in Cloud-Native Applications",
+          "codeSnippet": "const winston = require('winston');\n\nconst logger = winston.createLogger({\n    level: 'info',\n    format: winston.format.json(),\n    transports: [\n        new winston.transports.Console(),\n        new winston.transports.File({ filename: 'combined.log' })\n    ]\n});\n\nlogger.info('This is an informational log message');",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Implementing Tracing in Cloud-Native Applications",
+          "codeSnippet": "const { initTracer } = require('jaeger-client');\n\nconst config = {\n    serviceName: 'my-service',\n    sampler: {\n        type: 'const',\n        param: 1\n    },\n    reporter: {\n        logSpans: true\n    }\n};\n\nconst options = {};\nconst tracer = initTracer(config, options);",
+          "codeLanguage": "JavaScript"
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Monitoring",
+      "topic_no": 710,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Monitoring",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Concepts in Cloud-Native Monitoring",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Observability in Cloud-Native Applications",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular Tools and Technologies for Cloud-Native Monitoring",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Cloud-Native Monitoring",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Logging",
+      "topic_no": 720,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Logging",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Cloud-Native Logging",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Components of Cloud-Native Logging",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Logging Tools and Services",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Cloud-Native Logging",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Tracing",
+      "topic_no": 751,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Tracing",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Cloud-Native Tracing in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Cloud-Native Tracing with OpenTelemetry",
+          "codeSnippet": "import io.opentelemetry.api.trace.Tracer;\nimport io.opentelemetry.api.trace.Span;\nimport io.opentelemetry.api.trace.TracerProvider;\nimport io.opentelemetry.api.trace.TracerProviderBuilder;\n\nTracerProvider tracerProvider = TracerProviderBuilder.builder().build();\nTracer tracer = tracerProvider.get(\"myTracer\");\nSpan span = tracer.spanBuilder(\"mySpan\").startSpan();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Using Cloud-Native Tracing Tools like Jaeger or Zipkin",
+          "codeSnippet": "import io.jaegertracing.Configuration;\nimport io.jaegertracing.internal.JaegerTracer;\n\nConfiguration configuration = new Configuration(\"myService\");\nJaegerTracer tracer = configuration.getTracer();\ntracer.buildSpan(\"mySpan\").start();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Best Practices for Cloud-Native Tracing in Cloud Service Providers",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Alerting",
+      "topic_no": 765,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Alerting",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Concepts of Cloud-Native Alerting",
+          "example": "Setting up alert rules based on metrics and thresholds",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Cloud-Native Alerting",
+          "example": "Automated alert notifications to relevant teams",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Cloud-Native Alerting with Prometheus and Grafana",
+          "example": "Creating alert rules in Prometheus and visualizing alerts in Grafana",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Cloud-Native Alerting",
+          "example": "Regularly review and update alerting configurations",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Metrics",
+      "topic_no": 779,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Metrics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Metrics to Monitor in a Cloud-Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Resource Utilization Metrics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Performance Metrics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Availability Metrics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Scalability Metrics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Tools and Services for Monitoring Cloud-Native Metrics",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Dashboards",
+      "topic_no": 791,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Dashboards",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Features of Cloud-Native Dashboards",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Metrics and KPIs monitored in Cloud-Native Dashboards",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular Tools and Platforms for Creating Cloud-Native Dashboards",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Designing and Implementing Cloud-Native Dashboards",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Automation",
+      "topic_no": 808,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Automation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Cloud-Native Automation in Cloud Native Architecture",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Components of Cloud-Native Automation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Infrastructure as Code (IaC)",
+          "codeSnippet": "provider \"aws\" { \n  region = \"us-west-2\" \n}",
+          "codeLanguage": "HCL"
+        },
+        {
+          "text": "2. Continuous Integration/Continuous Deployment (CI/CD)",
+          "codeSnippet": "pipeline { \n  agent any \n  stages { \n    stage('Build') { \n      steps { \n        sh 'mvn clean package' \n      } \n    } \n    stage('Deploy') { \n      steps { \n        sh 'kubectl apply -f deployment.yaml' \n      } \n    } \n  } \n}",
+          "codeLanguage": "Groovy"
+        },
+        {
+          "text": "3. Monitoring and Logging",
+          "codeSnippet": "apiVersion: v1 \nkind: Pod \nmetadata: \n  name: myapp \n  labels: \n    app: myapp \n    tier: frontend \nspec: \n  containers: \n  - name: myapp \n    image: myapp:latest",
+          "codeLanguage": "YAML"
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Cost Management",
+      "topic_no": 821,
+      "contents": [
+        {
+          "text": "Introduction to Cloud-Native Cost Management",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Key Principles of Cloud-Native Cost Management",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Tagging Strategies for Cost Allocation",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Leveraging Auto-Scaling and Serverless Architectures for Cost Optimization",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Monitoring and Analyzing Cloud Costs in Real-Time",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Utilizing Cost Management Tools Provided by Cloud Service Providers",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Cloud-Native Best Practices",
+      "topic_no": 833,
+      "contents": [
+        {
+          "text": "Use containerization for application deployment to ensure consistency and portability across different environments.",
+          "codeSnippet": "docker run -d -p 80:80 nginx",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Implement microservices architecture to break down applications into smaller, independently deployable services.",
+          "codeSnippet": "public class ProductService { ... }",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Leverage serverless computing for event-driven and scalable workloads, reducing operational overhead and costs.",
+          "codeSnippet": "exports.handler = async (event) => { ... }",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Utilize Infrastructure as Code (IaC) tools like Terraform or CloudFormation to automate provisioning and management of cloud resources.",
+          "codeSnippet": "resource \"aws_instance\" \"example\" { ... }",
+          "codeLanguage": "hcl"
+        },
+        {
+          "text": "Implement continuous integration and continuous deployment (CI/CD) pipelines to automate testing, building, and deployment processes.",
+          "codeSnippet": "stages { ... }",
+          "codeLanguage": "yaml"
+        }
+      ]
+    }
+  ]
+}

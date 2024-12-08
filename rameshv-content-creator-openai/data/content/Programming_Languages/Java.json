@@ -1,0 +1,1605 @@
+{
+  "category": "Java",
+  "topics": [
+    {
+      "topic": "Introduction to Java",
+      "topic_no": 41,
+      "contents": [
+        {
+          "text": "Java is a high-level, object-oriented programming language that is platform-independent.",
+          "codeSnippet": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Java programs are compiled into bytecode that can run on any Java Virtual Machine (JVM).",
+          "codeSnippet": "javac HelloWorld.java",
+          "codeLanguage": "bash"
+        },
+        {
+          "text": "Java has a rich standard library that provides support for various functionalities.",
+          "codeSnippet": "import java.util.ArrayList;",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Java supports multithreading, allowing multiple threads to run concurrently within a single program.",
+          "codeSnippet": "Thread thread = new Thread(() -> {\n    System.out.println(\"Thread is running...\");\n});\nthread.start();",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Java uses a syntax similar to C++, making it easy for developers to transition between the two languages.",
+          "codeSnippet": "int x = 5;\nif (x > 0) {\n    System.out.println(\"Positive number\");\n}",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Variables and Data Types",
+      "topic_no": 75,
+      "contents": [
+        {
+          "text": "Variables in Java are used to store data values.",
+          "codeSnippet": "int num = 10;"
+        },
+        {
+          "text": "Java supports different data types such as int, double, boolean, and String.",
+          "codeSnippet": "double price = 19.99;"
+        },
+        {
+          "text": "Variables must be declared with a specific data type before they can be used.",
+          "codeSnippet": "boolean isTrue = true;"
+        }
+      ]
+    },
+    {
+      "topic": "Operators and Expressions",
+      "topic_no": 195,
+      "contents": [
+        {
+          "text": "Operators in Java are symbols that perform operations on variables and values.",
+          "codeSnippet": "int x = 10;\nint y = 5;\nint sum = x + y;\nSystem.out.println(sum);",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Arithmetic operators in Java include addition (+), subtraction (-), multiplication (*), division (/), and modulus (%).",
+          "codeSnippet": "int x = 10;\nint y = 3;\nint result = x % y;\nSystem.out.println(result);",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Comparison operators in Java are used to compare two values.",
+          "codeSnippet": "int a = 5;\nint b = 3;\nboolean isEqual = (a == b);\nSystem.out.println(isEqual);",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Logical operators in Java include AND (&&), OR (||), and NOT (!).",
+          "codeSnippet": "boolean x = true;\nboolean y = false;\nboolean result = x && y;\nSystem.out.println(result);",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Bitwise operators in Java perform operations on individual bits of binary numbers.",
+          "codeSnippet": "int a = 5;\nint b = 3;\nint result = a & b;\nSystem.out.println(result);",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Assignment operators in Java are used to assign values to variables.",
+          "codeSnippet": "int x = 10;\nx += 5;\nSystem.out.println(x);",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Control Flow Statements",
+      "topic_no": 339,
+      "contents": [
+        {
+          "text": "Control Flow Statements in Java allow you to control the flow of execution in a program based on certain conditions.",
+          "codeSnippet": "if (condition) {\n    // code block to be executed if the condition is true\n} else {\n    // code block to be executed if the condition is false\n}"
+        },
+        {
+          "text": "The 'if' statement is used to execute a block of code only if a specified condition is true.",
+          "codeSnippet": "if (x > 5) {\n    System.out.println(\"x is greater than 5\");\n}"
+        },
+        {
+          "text": "The 'else' statement is used to execute a block of code if the same condition is false.",
+          "codeSnippet": "if (x > 5) {\n    System.out.println(\"x is greater than 5\");\n} else {\n    System.out.println(\"x is not greater than 5\");\n}"
+        },
+        {
+          "text": "The 'else if' statement is used to specify a new condition if the first condition is false.",
+          "codeSnippet": "if (x > 5) {\n    System.out.println(\"x is greater than 5\");\n} else if (x == 5) {\n    System.out.println(\"x is equal to 5\");\n} else {\n    System.out.println(\"x is less than 5\");\n}"
+        },
+        {
+          "text": "The 'switch' statement allows a variable to be tested for equality against a list of values.",
+          "codeSnippet": "int day = 4;\nswitch (day) {\n    case 1:\n        System.out.println(\"Monday\");\n        break;\n    case 2:\n        System.out.println(\"Tuesday\");\n        break;\n    default:\n        System.out.println(\"Invalid day\");\n}"
+        },
+        {
+          "text": "The 'while' loop executes a block of code as long as a specified condition is true.",
+          "codeSnippet": "int i = 0;\nwhile (i < 5) {\n    System.out.println(i);\n    i++;\n}"
+        },
+        {
+          "text": "The 'do-while' loop is similar to the 'while' loop, but the block of code is executed at least once before the condition is tested.",
+          "codeSnippet": "int i = 0;\ndo {\n    System.out.println(i);\n    i++;\n} while (i < 5);"
+        },
+        {
+          "text": "The 'for' loop is used to iterate a block of code a specific number of times.",
+          "codeSnippet": "for (int i = 0; i < 5; i++) {\n    System.out.println(i);\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Arrays and Strings",
+      "topic_no": 395,
+      "contents": [
+        {
+          "text": "An array is a data structure that stores a collection of elements of the same data type in contiguous memory locations.",
+          "codeSnippet": "int[] numbers = new int[5];"
+        },
+        {
+          "text": "In Java, arrays are zero-indexed, meaning the first element is at index 0.",
+          "codeSnippet": "int firstElement = numbers[0];"
+        },
+        {
+          "text": "Arrays in Java can be initialized using an array initializer or by specifying the size of the array.",
+          "codeSnippet": "int[] numbers = {1, 2, 3, 4, 5};"
+        },
+        {
+          "text": "Strings in Java are objects that represent sequences of characters.",
+          "codeSnippet": "String str = \"Hello, World!\";"
+        },
+        {
+          "text": "Strings in Java are immutable, meaning their values cannot be changed once they are created.",
+          "codeSnippet": "String newStr = str.concat(\" Welcome!\");"
+        },
+        {
+          "text": "Java provides many built-in methods for manipulating strings, such as substring, length, and indexOf.",
+          "codeSnippet": "int strLength = str.length();"
+        }
+      ]
+    },
+    {
+      "topic": "Methods and Functions",
+      "topic_no": 420,
+      "contents": [
+        {
+          "text": "Methods in Java are blocks of code that perform a specific task. They are defined within a class and can be called to execute the code inside them.",
+          "codeSnippet": "public void greet() {\n    System.out.println(\"Hello, World!\");\n}"
+        },
+        {
+          "text": "Functions in Java are similar to methods but are defined outside of classes. They are used to break down a program into smaller, modular pieces.",
+          "codeSnippet": "public static void main(String[] args) {\n    System.out.println(\"Hello, World!\");\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Object-Oriented Programming",
+      "topic_no": 484,
+      "contents": [
+        {
+          "text": "Object-Oriented Programming (OOP) is a programming paradigm based on the concept of objects, which can contain data in the form of fields (attributes or properties) and code in the form of procedures (methods).",
+          "codeSnippet": ""
+        },
+        {
+          "text": "In Java, everything is an object, which means all code is written within classes and objects. Classes define the properties and behaviors of objects, while objects are instances of classes.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Encapsulation is a fundamental OOP concept that involves bundling the data (attributes) and methods (functions) that operate on the data into a single unit known as a class. This helps in data hiding and abstraction.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Inheritance allows a class (subclass or derived class) to inherit attributes and methods from another class (superclass or base class). This promotes code reusability and establishes an 'is-a' relationship between classes.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Polymorphism enables objects to be treated as instances of their parent class, allowing methods to be called on objects of different classes through a common interface. This promotes flexibility and extensibility in code design.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Abstraction focuses on hiding the implementation details of a class and only showing the necessary features to the outside world. Abstract classes and interfaces are key components of abstraction in Java.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "A class is a blueprint for creating objects, defining attributes (fields) and behaviors (methods) that all objects of that class will have. Objects are instances of classes created using the 'new' keyword.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "In Java, the 'extends' keyword is used to implement inheritance, where a subclass inherits properties and behaviors from a superclass. The 'super' keyword is used to refer to the superclass constructor or methods.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Polymorphism in Java can be achieved through method overloading (having multiple methods with the same name but different parameters) and method overriding (redefining a method in a subclass with the same signature as the superclass).",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Interfaces in Java define a contract for classes to implement, specifying a set of methods that implementing classes must define. Interfaces enable multiple inheritance and are used to achieve abstraction and polymorphism.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Classes and Objects",
+      "topic_no": 513,
+      "contents": [
+        {
+          "text": "Classes are blueprints for objects in Java.",
+          "codeSnippet": "public class Car {\n    private String color;\n    private int speed;\n\n    public void drive() {\n        System.out.println(\"Car is driving...\");\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Objects are instances of classes in Java.",
+          "codeSnippet": "Car myCar = new Car();",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Classes can have attributes (fields) and methods.",
+          "codeSnippet": "public class Person {\n    private String name;\n    private int age;\n\n    public void greet() {\n        System.out.println(\"Hello, my name is \" + name);\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Objects can interact with each other by invoking methods.",
+          "codeSnippet": "Person person1 = new Person();\nPerson person2 = new Person();\nperson1.setName(\"Alice\");\nperson2.setName(\"Bob\");\nperson1.greet();\nperson2.greet();",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Inheritance and Polymorphism",
+      "topic_no": 546,
+      "contents": [
+        {
+          "content": "Inheritance is a mechanism in Java where a new class inherits properties and behaviors from an existing class. The existing class is referred to as the superclass, while the new class is known as the subclass.",
+          "codeSnippet": "class Animal {\n    void eat() {\n        System.out.println(\"Animal is eating\");\n    }\n}\nclass Dog extends Animal {\n    void bark() {\n        System.out.println(\"Dog is barking\");\n    }\n}\n\nDog myDog = new Dog();\nmyDog.eat();\nmyDog.bark();",
+          "codeLanguage": "java"
+        },
+        {
+          "content": "Polymorphism in Java allows objects to be treated as instances of their superclass, enabling methods to be called on objects of different classes through a common interface.",
+          "codeSnippet": "interface Shape {\n    void draw();\n}\nclass Circle implements Shape {\n    public void draw() {\n        System.out.println(\"Drawing Circle\");\n    }\n}\nclass Square implements Shape {\n    public void draw() {\n        System.out.println(\"Drawing Square\");\n    }\n}\n\nShape myShape = new Circle();\nmyShape.draw();",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Abstract Classes and Interfaces",
+      "topic_no": 568,
+      "contents": [
+        {
+          "text": "Abstract Classes",
+          "codeSnippet": "public abstract class Shape {\n    public abstract void draw();\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Interfaces",
+          "codeSnippet": "public interface Drawable {\n    void draw();\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Differences between Abstract Classes and Interfaces",
+          "codeSnippet": "Abstract classes can have constructors, member variables, and methods with implementations, while interfaces cannot have any of these.",
+          "codeLanguage": "text"
+        },
+        {
+          "text": "When to use Abstract Classes",
+          "codeSnippet": "Use abstract classes when you want to provide a common base implementation for all the subclasses.",
+          "codeLanguage": "text"
+        },
+        {
+          "text": "When to use Interfaces",
+          "codeSnippet": "Use interfaces when you want to define a contract for classes to implement without specifying the implementation details.",
+          "codeLanguage": "text"
+        }
+      ]
+    },
+    {
+      "topic": "Exception Handling",
+      "topic_no": 605,
+      "contents": [
+        {
+          "content": "Exception handling is a mechanism to handle runtime errors and maintain the flow of the program.",
+          "codeSnippet": "try {\n    // code that may throw an exception\n} catch (Exception e) {\n    // handle the exception\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "content": "In Java, exceptions are objects that are instances of classes derived from the Throwable class.",
+          "codeSnippet": "try {\n    // code that may throw an exception\n} catch (ExceptionType e) {\n    // handle the exception\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "content": "The try block contains the code that may throw an exception, and the catch block handles the exception.",
+          "codeSnippet": "try {\n    // code that may throw an exception\n} catch (Exception e) {\n    // handle the exception\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "content": "Multiple catch blocks can be used to handle different types of exceptions.",
+          "codeSnippet": "try {\n    // code that may throw an exception\n} catch (ExceptionType1 e) {\n    // handle the exception\n} catch (ExceptionType2 e) {\n    // handle another type of exception\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "content": "The finally block is used to execute code that should always run, regardless of whether an exception is thrown or not.",
+          "codeSnippet": "try {\n    // code that may throw an exception\n} catch (Exception e) {\n    // handle the exception\n} finally {\n    // code that always runs\n}",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "File Handling",
+      "topic_no": 649,
+      "contents": [
+        {
+          "text": "File Handling in Java allows us to read from and write to files on the system.",
+          "codeSnippet": "try (FileInputStream fileInputStream = new FileInputStream(\"input.txt\");\n     FileOutputStream fileOutputStream = new FileOutputStream(\"output.txt\")) {\n    int data;\n    while ((data = fileInputStream.read()) != -1) {\n        fileOutputStream.write(data);\n    }\n} catch (IOException e) {\n    e.printStackTrace();\n}"
+        },
+        {
+          "text": "To read from a file in Java, we can use FileReader and BufferedReader classes.",
+          "codeSnippet": "try (BufferedReader reader = new BufferedReader(new FileReader(\"input.txt\"))) {\n    String line;\n    while ((line = reader.readLine()) != null) {\n        System.out.println(line);\n    }\n} catch (IOException e) {\n    e.printStackTrace();\n}"
+        },
+        {
+          "text": "To write to a file in Java, we can use FileWriter and BufferedWriter classes.",
+          "codeSnippet": "try (BufferedWriter writer = new BufferedWriter(new FileWriter(\"output.txt\"))) {\n    writer.write(\"Hello, World!\");\n} catch (IOException e) {\n    e.printStackTrace();\n}"
+        },
+        {
+          "text": "Java provides the java.nio.file package for more advanced file operations like moving, copying, and deleting files.",
+          "codeSnippet": "Path source = Paths.get(\"source.txt\");\nPath target = Paths.get(\"target.txt\");\ntry {\n    Files.move(source, target, StandardCopyOption.REPLACE_EXISTING);\n} catch (IOException e) {\n    e.printStackTrace();\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Generics",
+      "topic_no": 679,
+      "contents": [
+        {
+          "text": "Generics in Java allow you to create classes, interfaces, and methods that operate on data types as parameters.",
+          "codeSnippet": "public class Box<T> {\n    private T value;\n\n    public T getValue() {\n        return value;\n    }\n\n    public void setValue(T value) {\n        this.value = value;\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Generics provide compile-time type safety by allowing you to specify the type of objects that a generic class can work with.",
+          "codeSnippet": "Box<Integer> integerBox = new Box<>();\nintegerBox.setValue(10);\nint value = integerBox.getValue();",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Generics help in reducing the need for casting and provide cleaner code by eliminating the need for repetitive code.",
+          "codeSnippet": "List<String> stringList = new ArrayList<>();\nstringList.add(\"Hello, World!\");\nString message = stringList.get(0);",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Collections Framework",
+      "topic_no": 719,
+      "contents": [
+        {
+          "text": "The Collections Framework in Java provides a unified architecture for representing and manipulating collections of objects.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The core interfaces of the Collections Framework include List, Set, Queue, and Map.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "List interface allows for ordered collections that may contain duplicate elements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: ArrayList and LinkedList are classes that implement the List interface.",
+          "codeSnippet": "List<String> list = new ArrayList<>();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Set interface represents a collection that does not allow duplicate elements.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: HashSet and TreeSet are classes that implement the Set interface.",
+          "codeSnippet": "Set<String> set = new HashSet<>();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Queue interface models a first-in, first-out (FIFO) data structure.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: LinkedList and PriorityQueue are classes that implement the Queue interface.",
+          "codeSnippet": "Queue<String> queue = new LinkedList<>();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Map interface represents a mapping between keys and values, where each key is unique.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: HashMap and TreeMap are classes that implement the Map interface.",
+          "codeSnippet": "Map<String, Integer> map = new HashMap<>();",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "The Collections class provides utility methods for operating on collections.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example: Collections.sort(list) can be used to sort a List in ascending order.",
+          "codeSnippet": "Collections.sort(list);",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Concurrency",
+      "topic_no": 754,
+      "contents": [
+        {
+          "text": "Concurrency in Java allows multiple tasks to be executed simultaneously.",
+          "codeSnippet": "public class MyThread extends Thread {\n    public void run() {\n        // code to be executed concurrently\n    }\n}\n\nMyThread thread1 = new MyThread();\nMyThread thread2 = new MyThread();\nthread1.start();\nthread2.start();",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Java provides several ways to achieve concurrency, such as using threads, executors, and synchronized blocks.",
+          "codeSnippet": "public class MyRunnable implements Runnable {\n    public void run() {\n        // code to be executed concurrently\n    }\n}\n\nMyRunnable myRunnable = new MyRunnable();\nThread thread = new Thread(myRunnable);\nthread.start();",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Concurrency in Java can lead to race conditions and thread interference if not properly managed.",
+          "codeSnippet": "public class Counter {\n    private int count = 0;\n\n    public synchronized void increment() {\n        count++;\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Java provides the synchronized keyword to ensure that only one thread can access a method or block at a time.",
+          "codeSnippet": "public synchronized void synchronizedMethod() {\n    // code that needs to be synchronized\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Java's java.util.concurrent package offers higher-level concurrency utilities to simplify concurrent programming.",
+          "codeSnippet": "ExecutorService executor = Executors.newFixedThreadPool(5);\nexecutor.submit(() -> {\n    // code to be executed concurrently\n});",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "JavaFX GUI Programming",
+      "topic_no": 775,
+      "contents": [
+        {
+          "text": "JavaFX is a set of graphics and media packages that enables developers to design, create, test, debug, and deploy rich client applications that operate consistently across diverse platforms.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "JavaFX provides a powerful Java-based UI platform capable of handling large-scale data-driven business applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "JavaFX applications are written in the Java programming language and can run on various devices that support Java.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "JavaFX GUI programming involves creating user interfaces using JavaFX's rich set of controls and layout containers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "JavaFX applications can be styled using CSS to achieve a customized look and feel.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "JavaFX provides support for multimedia elements such as audio, video, and images.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "JavaFX applications can be deployed as standalone applications or as applets within a web browser.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "JavaFX includes a comprehensive set of APIs for handling events, animations, and effects to enhance the user experience.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "JavaFX applications can be developed using an integrated development environment (IDE) such as IntelliJ IDEA or Eclipse.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Lambda Expressions and Streams",
+      "topic_no": 782,
+      "contents": [
+        {
+          "text": "Lambda Expressions in Java",
+          "codeSnippet": "Runnable runnable = () -> { System.out.println(\"This is a lambda expression\"); };",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Streams in Java",
+          "codeSnippet": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nint sum = numbers.stream().reduce(0, Integer::sum);",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Annotations and Reflection",
+      "topic_no": 801,
+      "contents": [
+        {
+          "text": "Annotations in Java are a form of metadata that provide data about a program that is not part of the program itself.",
+          "codeSnippet": "@Override\npublic void someMethod() {\n    // Method implementation\n}"
+        },
+        {
+          "text": "Annotations can be used to provide information to the compiler to detect errors or suppress warnings.",
+          "codeSnippet": "@SuppressWarnings(\"unchecked\")\npublic void someMethod() {\n    // Method implementation\n}"
+        },
+        {
+          "text": "Reflection in Java allows you to inspect and modify classes, interfaces, fields, and methods at runtime.",
+          "codeSnippet": "Class<?> clazz = SomeClass.class;\nMethod method = clazz.getMethod(\"someMethod\");\nObject instance = clazz.newInstance();\nmethod.invoke(instance);"
+        },
+        {
+          "text": "Reflection can be used to access private fields or methods that are not accessible through normal means.",
+          "codeSnippet": "Field privateField = SomeClass.class.getDeclaredField(\"privateField\");\nprivateField.setAccessible(true);\nObject value = privateField.get(instance);"
+        }
+      ]
+    },
+    {
+      "topic": "Networking in Java",
+      "topic_no": 818,
+      "contents": [
+        {
+          "text": "Networking in Java involves the use of classes and interfaces from the java.net package to establish connections and communicate over a network.",
+          "codeSnippet": "import java.net.*;\n\npublic class NetworkExample {\n    public static void main(String[] args) {\n        try {\n            URL url = new URL(\"https://www.example.com\");\n            HttpURLConnection connection = (HttpURLConnection) url.openConnection();\n            connection.setRequestMethod(\"GET\");\n            int responseCode = connection.getResponseCode();\n            System.out.println(\"Response Code: \" + responseCode);\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n}"
+        },
+        {
+          "text": "To establish a TCP connection in Java, you can use the Socket class from the java.net package.",
+          "codeSnippet": "import java.net.*;\nimport java.io.*;\n\npublic class TCPClient {\n    public static void main(String[] args) {\n        try {\n            Socket socket = new Socket(\"localhost\", 8080);\n            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);\n            out.println(\"Hello, Server!\");\n            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));\n            String response = in.readLine();\n            System.out.println(\"Server Response: \" + response);\n            socket.close();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Database Connectivity with JDBC",
+      "topic_no": 832,
+      "contents": [
+        {
+          "text": "JDBC (Java Database Connectivity) is an API that allows Java programs to interact with databases.",
+          "codeSnippet": "import java.sql.Connection;\nimport java.sql.DriverManager;\nimport java.sql.SQLException;"
+        },
+        {
+          "text": "To establish a connection to a database using JDBC, you need to load the database driver and create a connection object.",
+          "codeSnippet": "Class.forName(\"com.mysql.jdbc.Driver\");\nConnection connection = DriverManager.getConnection(\"jdbc:mysql://localhost:3306/mydatabase\", \"username\", \"password\");"
+        },
+        {
+          "text": "Once the connection is established, you can create and execute SQL statements to interact with the database.",
+          "codeSnippet": "Statement statement = connection.createStatement();\nResultSet resultSet = statement.executeQuery(\"SELECT * FROM users\");"
+        },
+        {
+          "text": "JDBC provides interfaces like Connection, Statement, and ResultSet to work with databases in Java.",
+          "codeSnippet": "Connection connection = DriverManager.getConnection(\"jdbc:mysql://localhost:3306/mydatabase\", \"username\", \"password\");\nStatement statement = connection.createStatement();"
+        },
+        {
+          "text": "Handling exceptions is important when working with JDBC to manage errors that may occur during database operations.",
+          "codeSnippet": "try {\n    // JDBC code that may throw SQLException\n} catch (SQLException e) {\n    e.printStackTrace();\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Servlets and JSP",
+      "topic_no": 846,
+      "contents": [
+        {
+          "text": "Servlets are Java classes that handle HTTP requests and responses. They are used to create dynamic web applications.",
+          "codeSnippet": "public class MyServlet extends HttpServlet { \n \t protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { \n \t \t // Servlet logic here \n \t } \n }",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JSP (JavaServer Pages) is a technology used to create dynamic web pages. It allows embedding Java code within HTML pages.",
+          "codeSnippet": "<%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\" pageEncoding=\"UTF-8\" %>\n<html>\n<head>\n<title>My JSP Page</title>\n</head>\n<body>\n<%\n // Java code here\n%>\n</body>\n</html>",
+          "codeLanguage": "jsp"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Framework Basics",
+      "topic_no": 861,
+      "contents": [
+        {
+          "text": "Introduction to Spring Framework",
+          "codeSnippet": "Spring is a powerful and lightweight open-source framework for building Java applications. It provides comprehensive infrastructure support and helps in creating loosely coupled and easily testable applications.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Dependency Injection in Spring",
+          "codeSnippet": "@Autowired annotation is used for dependency injection in Spring. It allows Spring to resolve and inject collaborating beans into your bean.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Inversion of Control (IoC) in Spring",
+          "codeSnippet": "In Spring, IoC is implemented through Dependency Injection. It helps in decoupling the execution of a task from its implementation.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Spring Bean Configuration",
+          "codeSnippet": "Beans in Spring are Java objects that are managed by the Spring IoC container. They are defined in the Spring configuration file (XML or Java-based configuration).",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Spring MVC Architecture",
+          "codeSnippet": "Spring MVC is a web framework built on top of the Spring IoC container. It follows the Model-View-Controller design pattern for developing web applications.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "AOP in Spring",
+          "codeSnippet": "Aspect-Oriented Programming (AOP) in Spring allows separating cross-cutting concerns from the main application logic. It helps in achieving modularity and maintainability.",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Boot Fundamentals",
+      "topic_no": 878,
+      "contents": [
+        {
+          "text": "Introduction to Spring Boot",
+          "codeSnippet": "Spring Boot is a framework that simplifies the development of Java applications by providing a set of tools and conventions for building production-ready applications quickly.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Creating a Simple Spring Boot Application",
+          "codeSnippet": "@SpringBootApplication\npublic class DemoApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(DemoApplication.class, args);\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Dependency Management with Spring Boot",
+          "codeSnippet": "Spring Boot uses Maven or Gradle for dependency management. Dependencies are defined in the pom.xml file for Maven or build.gradle for Gradle.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Auto-Configuration in Spring Boot",
+          "codeSnippet": "Spring Boot provides auto-configuration, which automatically configures the application based on the dependencies present in the classpath.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Spring Boot Starters",
+          "codeSnippet": "Spring Boot starters are a set of convenient dependency descriptors that you can include in your application to get a set of dependencies and auto-configuration for a specific purpose.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Embedded Servers in Spring Boot",
+          "codeSnippet": "Spring Boot includes embedded servers like Tomcat, Jetty, or Undertow, allowing you to run your application as a standalone JAR file without needing to deploy it to a separate server.",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Hibernate ORM",
+      "topic_no": 893,
+      "contents": [
+        {
+          "text": "Hibernate ORM is an object-relational mapping framework for the Java programming language.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "It provides a framework for mapping an object-oriented domain model to a traditional relational database.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Hibernate ORM eliminates the need for most of the data access code that developers usually have to write.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "It allows developers to work with objects and classes rather than tables and SQL.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Hibernate ORM supports inheritance, associations, and collections.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "It provides a powerful query language called HQL (Hibernate Query Language) for querying databases.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Hibernate ORM can be integrated with various Java EE frameworks like Spring.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        }
+      ]
+    },
+    {
+      "topic": "RESTful Web Services",
+      "topic_no": 904,
+      "contents": [
+        {
+          "content": "RESTful Web Services are a way of building and designing web services using the principles of REST (Representational State Transfer).",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "RESTful Web Services use standard HTTP methods like GET, POST, PUT, DELETE to perform operations on resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "In Java, RESTful Web Services can be implemented using libraries like JAX-RS (Java API for RESTful Web Services) which provides annotations to define resources and methods.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "An example of defining a RESTful resource in Java using JAX-RS annotations:",
+          "codeSnippet": "@Path(\"/users\")\npublic class UserResource {\n\n    @GET\n    @Path(\"/{id}\")\n    public User getUser(@PathParam(\"id\") int id) {\n        // Get user logic\n    }\n\n    @POST\n    public Response createUser(User user) {\n        // Create user logic\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "content": "RESTful Web Services follow the principle of statelessness, where each request from a client to the server must contain all the information needed to understand the request.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Microservices Architecture",
+      "topic_no": 917,
+      "contents": [
+        {
+          "text": "Microservices Architecture is an architectural style that structures an application as a collection of loosely coupled services.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Microservices communicate with each other through APIs, typically using lightweight protocols like HTTP or messaging queues.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Each microservice in a Microservices Architecture is responsible for a specific business function and can be developed, deployed, and scaled independently.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Microservices Architecture promotes flexibility, scalability, and resilience in software development.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In Java, Microservices are often implemented using frameworks like Spring Boot or Dropwizard.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Microservices in Java can be deployed in containers like Docker and orchestrated using tools like Kubernetes.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Microservices in Java involves breaking down a monolithic application into smaller, independent services.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Microservices in Java can communicate with each other using RESTful APIs or messaging systems like Kafka.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "JUnit and Unit Testing",
+      "topic_no": 929,
+      "contents": [
+        {
+          "text": "JUnit is a popular Java testing framework used for writing and running unit tests.",
+          "codeSnippet": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.assertEquals;\n\npublic class MyUnitTest {\n\n    @Test\n    public void testAddition() {\n        int result = 2 + 2;\n        assertEquals(4, result);\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Unit testing is a software testing method where individual units or components of a software are tested in isolation.",
+          "codeSnippet": "public class Calculator {\n\n    public int add(int a, int b) {\n        return a + b;\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "JUnit provides annotations such as @Test to mark methods as test methods.",
+          "codeSnippet": "@Test\npublic void testSubtraction() {\n    Calculator calculator = new Calculator();\n    int result = calculator.subtract(5, 3);\n    assertEquals(2, result);\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Unit tests should be independent, isolated, and repeatable to ensure reliable testing.",
+          "codeSnippet": "public class CalculatorTest {\n\n    @Test\n    public void testMultiplication() {\n        Calculator calculator = new Calculator();\n        int result = calculator.multiply(2, 3);\n        assertEquals(6, result);\n    }\n}",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Mockito and Test Doubles",
+      "topic_no": 941,
+      "contents": [
+        {
+          "text": "Introduction to Mockito and Test Doubles",
+          "codeSnippet": "Mockito is a popular Java framework that allows for the creation of test doubles, which are objects that simulate the behavior of real objects in a controlled manner. Test doubles help isolate the code under test and make it easier to write unit tests.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Types of Test Doubles",
+          "codeSnippet": "There are several types of test doubles, including mocks, stubs, spies, and fakes. Each type serves a different purpose in testing and can be used based on the specific requirements of the test scenario.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Creating Mock Objects with Mockito",
+          "codeSnippet": "Mockito provides a simple and intuitive API for creating mock objects. Mock objects are used to simulate the behavior of real objects and can be configured to return specific values or throw exceptions when certain methods are called.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Verifying Interactions with Mock Objects",
+          "codeSnippet": "One of the key features of Mockito is the ability to verify interactions with mock objects. This allows you to ensure that specific methods were called with the expected arguments and in the correct order during the test execution.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Using Test Doubles to Improve Test Isolation",
+          "codeSnippet": "By using test doubles such as mocks and stubs, you can improve the isolation of your unit tests. Test doubles help eliminate dependencies on external systems or components, making it easier to focus on testing the specific behavior of the code.",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Design Patterns",
+      "topic_no": 965,
+      "contents": [
+        {
+          "text": "What are Design Patterns?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Creational Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Singleton Pattern",
+          "codeSnippet": "public class Singleton {\n    private static Singleton instance;\n\n    private Singleton() {}\n\n    public static Singleton getInstance() {\n        if (instance == null) {\n            instance = new Singleton();\n        }\n        return instance;\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Factory Method Pattern",
+          "codeSnippet": "public interface Shape {\n    void draw();\n}\n\npublic class Circle implements Shape {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing Circle\");\n    }\n}\n\npublic class Square implements Shape {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing Square\");\n    }\n}\n\npublic class ShapeFactory {\n    public Shape createShape(String shapeType) {\n        if (shapeType.equalsIgnoreCase(\"circle\")) {\n            return new Circle();\n        } else if (shapeType.equalsIgnoreCase(\"square\")) {\n            return new Square();\n        }\n        return null;\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Structural Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Adapter Pattern",
+          "codeSnippet": "public interface Target {\n    void request();\n}\n\npublic class Adaptee {\n    public void specificRequest() {\n        System.out.println(\"Specific Request\");\n    }\n}\n\npublic class Adapter implements Target {\n    private Adaptee adaptee;\n\n    public Adapter(Adaptee adaptee) {\n        this.adaptee = adaptee;\n    }\n\n    @Override\n    public void request() {\n        adaptee.specificRequest();\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Decorator Pattern",
+          "codeSnippet": "public interface Shape {\n    void draw();\n}\n\npublic class Circle implements Shape {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing Circle\");\n    }\n}\n\npublic abstract class ShapeDecorator implements Shape {\n    protected Shape decoratedShape;\n\n    public ShapeDecorator(Shape decoratedShape) {\n        this.decoratedShape = decoratedShape;\n    }\n\n    public void draw() {\n        decoratedShape.draw();\n    }\n}\n\npublic class RedShapeDecorator extends ShapeDecorator {\n    public RedShapeDecorator(Shape decoratedShape) {\n        super(decoratedShape);\n    }\n\n    @Override\n    public void draw() {\n        decoratedShape.draw();\n        setRedBorder(decoratedShape);\n    }\n\n    private void setRedBorder(Shape decoratedShape) {\n        System.out.println(\"Border Color: Red\");\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Behavioral Design Patterns",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Observer Pattern",
+          "codeSnippet": "import java.util.ArrayList;\nimport java.util.List;\n\npublic interface Observer {\n    void update(String message);\n}\n\npublic class ConcreteObserver implements Observer {\n    private String name;\n\n    public ConcreteObserver(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void update(String message) {\n        System.out.println(name + \" received message: \" + message);\n    }\n}\n\npublic interface Subject {\n    void registerObserver(Observer observer);\n    void removeObserver(Observer observer);\n    void notifyObservers(String message);\n}\n\npublic class ConcreteSubject implements Subject {\n    private List<Observer> observers = new ArrayList<>();\n\n    @Override\n    public void registerObserver(Observer observer) {\n        observers.add(observer);\n    }\n\n    @Override\n    public void removeObserver(Observer observer) {\n        observers.remove(observer);\n    }\n\n    @Override\n    public void notifyObservers(String message) {\n        for (Observer observer : observers) {\n            observer.update(message);\n        }\n    }\n}",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Java 8 Features",
+      "topic_no": 977,
+      "contents": [
+        {
+          "text": "Lambda Expressions",
+          "codeSnippet": "Runnable runnable = () -> { System.out.println(\"Hello, World!\"); };"
+        },
+        {
+          "text": "Functional Interfaces",
+          "codeSnippet": "public interface Calculator { int calculate(int a, int b); }"
+        },
+        {
+          "text": "Method References",
+          "codeSnippet": "List<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\nnames.forEach(System.out::println);"
+        },
+        {
+          "text": "Stream API",
+          "codeSnippet": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nint sum = numbers.stream().filter(n -> n % 2 == 0).mapToInt(n -> n * 2).sum();"
+        },
+        {
+          "text": "Default Methods",
+          "codeSnippet": "public interface Vehicle {\n    default void start() {\n        System.out.println(\"Vehicle started\");\n    }\n}"
+        },
+        {
+          "text": "Optional Class",
+          "codeSnippet": "Optional<String> optional = Optional.ofNullable(null);\nString value = optional.orElse(\"Default Value\");"
+        },
+        {
+          "text": "Date and Time API",
+          "codeSnippet": "LocalDateTime now = LocalDateTime.now();\nDateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm:ss\");\nString formattedDateTime = now.format(formatter);"
+        }
+      ]
+    },
+    {
+      "topic": "Java 9+ Features",
+      "topic_no": 989,
+      "contents": [
+        {
+          "text": "Module System (Jigsaw)",
+          "codeSnippet": "module com.example.myapp {\n    requires java.base;\n    requires java.sql;\n    exports com.example.mypackage;\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JShell (Java Shell)",
+          "codeSnippet": "jshell> int x = 5;\n|  created variable x : int = 5\njshell> x * x;\n$1 ==> 25"
+        },
+        {
+          "text": "Private Methods in Interfaces",
+          "codeSnippet": "public interface MyInterface {\n    private void myPrivateMethod() {\n        // implementation\n    }\n}"
+        },
+        {
+          "text": "Stream API Enhancements",
+          "codeSnippet": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nint sum = numbers.stream()\n    .takeWhile(n -> n < 4)\n    .mapToInt(Integer::intValue)\n    .sum();"
+        },
+        {
+          "text": "Try-With-Resources Enhancements",
+          "codeSnippet": "try (BufferedReader br = new BufferedReader(new FileReader(\"file.txt\"))) {\n    String line;\n    while ((line = br.readLine()) != null) {\n        System.out.println(line);\n    }\n}"
+        },
+        {
+          "text": "Diamond Operator for Anonymous Classes",
+          "codeSnippet": "List<String> list = new ArrayList<>() {\n    {\n        add(\"Java\");\n        add(\"9+\");\n    }\n};"
+        }
+      ]
+    },
+    {
+      "topic": "Java Performance Tuning",
+      "topic_no": 998,
+      "contents": [
+        {
+          "text": "Java Performance Tuning is the process of optimizing the performance of Java applications to make them run faster and more efficiently.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Profiling tools like JProfiler, VisualVM, and YourKit can be used to identify performance bottlenecks in Java applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Optimizing database queries, reducing object creation, and minimizing garbage collection can help improve Java application performance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Using efficient data structures and algorithms can significantly impact the performance of Java applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Caching frequently accessed data can reduce the load on the system and improve Java application performance.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Avoiding unnecessary synchronization and using thread-safe collections can enhance the performance of multi-threaded Java applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Java Security",
+      "topic_no": 1016,
+      "contents": [
+        {
+          "text": "Java Security Overview",
+          "codeSnippet": "Java provides a robust security model that includes features such as authentication, authorization, and encryption to protect applications from security threats.",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Authentication in Java Security",
+          "codeSnippet": "Authentication in Java involves verifying the identity of users or systems accessing an application. This can be achieved using mechanisms like username/password authentication, token-based authentication, or certificate-based authentication.",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Authorization in Java Security",
+          "codeSnippet": "Authorization in Java determines what actions users or systems are allowed to perform within an application. This is typically managed through roles and permissions assigned to users.",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Secure Coding Practices in Java",
+          "codeSnippet": "Secure coding practices in Java involve techniques such as input validation, output encoding, proper error handling, and avoiding common security vulnerabilities like SQL injection and cross-site scripting (XSS).",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Encryption and Decryption in Java",
+          "codeSnippet": "Java provides APIs for encryption and decryption to secure sensitive data. Common cryptographic algorithms like AES and RSA can be used for data encryption in Java applications.",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Secure Communication in Java",
+          "codeSnippet": "Secure communication in Java can be achieved using protocols like HTTPS for web applications or SSL/TLS for network communication. This ensures data integrity and confidentiality during transmission.",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Java Native Interface (JNI)",
+      "topic_no": 1027,
+      "contents": [
+        {
+          "text": "Java Native Interface (JNI) allows Java code to interact with code written in other languages, such as C or C++. It provides a way for Java applications to make use of native code libraries.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "JNI is used when developers need to access platform-specific features or when they want to reuse existing native code libraries in their Java applications.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "To use JNI, developers need to create a Java class that contains native methods declared with the 'native' keyword. These methods are implemented in native code.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Developers can load native libraries using the System.loadLibrary() method in Java. This method loads the native library specified by the argument.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "When calling native methods in Java, developers need to ensure that the method signatures match the native implementations in the C/C++ code.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "JNI provides a bridge between the Java Virtual Machine (JVM) and the native code, allowing Java applications to access native functionality.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Java Reflection API",
+      "topic_no": 1035,
+      "contents": [
+        {
+          "text": "Java Reflection API allows you to inspect or modify the behavior of methods, fields, and classes at runtime.",
+          "codeSnippet": "Class<?> myClass = MyClass.class;\nMethod myMethod = myClass.getDeclaredMethod(\"myMethod\");\nmyMethod.invoke(new MyClass());",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Using Java Reflection API, you can access private methods, fields, and constructors that are otherwise inaccessible.",
+          "codeSnippet": "Field privateField = MyClass.class.getDeclaredField(\"privateField\");\nprivateField.setAccessible(true);\nprivateField.get(new MyClass());",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Java Reflection API is commonly used in frameworks like Spring and Hibernate for dependency injection and object-relational mapping.",
+          "codeSnippet": "Class<?> myClass = Class.forName(\"com.example.MyClass\");\nObject myObject = myClass.getDeclaredConstructor().newInstance();",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Working with XML and JSON in Java",
+      "topic_no": 1053,
+      "contents": [
+        {
+          "text": "XML (eXtensible Markup Language) and JSON (JavaScript Object Notation) are two popular data interchange formats used in Java programming.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "XML is a markup language that defines rules for encoding documents in a format that is both human-readable and machine-readable.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "JSON is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In Java, you can work with XML using libraries like DOM (Document Object Model) and SAX (Simple API for XML).",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Here is an example of parsing an XML file using DOM in Java:",
+          "codeSnippet": "try {\n    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();\n    DocumentBuilder builder = factory.newDocumentBuilder();\n    Document document = builder.parse(new File(\"example.xml\"));\n} catch (Exception e) {\n    e.printStackTrace();\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "In Java, you can work with JSON using libraries like Jackson, Gson, or org.json.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Here is an example of parsing a JSON string using Jackson in Java:",
+          "codeSnippet": "ObjectMapper objectMapper = new ObjectMapper();\ntry {\n    Map<String, Object> jsonMap = objectMapper.readValue(jsonString, new TypeReference<Map<String, Object>>() {});\n} catch (IOException e) {\n    e.printStackTrace();\n}",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Java Persistence API (JPA)",
+      "topic_no": 1062,
+      "contents": [
+        {
+          "text": "Java Persistence API (JPA) is a Java specification for accessing, persisting, and managing data between Java objects and a relational database.",
+          "codeSnippet": "import javax.persistence.EntityManager;\nimport javax.persistence.Persistence;",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JPA provides a set of annotations to map Java classes to database tables and define the relationships between them.",
+          "codeSnippet": "@Entity\n@Table(name = \"users\")\npublic class User { ... }",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Entities in JPA represent the objects that are stored in the database. Each entity is associated with a table in the database.",
+          "codeSnippet": "@Id\n@GeneratedValue(strategy = GenerationType.IDENTITY)\nprivate Long id;",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JPA supports various types of relationships between entities such as One-to-One, One-to-Many, Many-to-One, and Many-to-Many.",
+          "codeSnippet": "@OneToOne\n@JoinColumn(name = \"address_id\")\nprivate Address address;",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JPQL (Java Persistence Query Language) is a query language similar to SQL but operates on entities and their attributes rather than tables and columns.",
+          "codeSnippet": "TypedQuery<User> query = entityManager.createQuery(\"SELECT u FROM User u WHERE u.age > 18\", User.class);",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Java EE Architecture",
+      "topic_no": 1070,
+      "contents": [
+        {
+          "text": "Java EE Architecture is a framework for developing enterprise-level applications using Java programming language.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Java EE Architecture consists of various components such as Java Servlets, JavaServer Pages (JSP), Enterprise JavaBeans (EJB), Java Message Service (JMS), Java Naming and Directory Interface (JNDI), and Java Transaction API (JTA).",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Java EE Architecture follows a multi-tiered architecture with presentation, business logic, and data access layers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Java EE Architecture promotes the use of design patterns such as Model-View-Controller (MVC) and Dependency Injection to enhance modularity and maintainability.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Java EE Architecture supports scalability, security, and transaction management for enterprise applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Java Memory Management",
+      "topic_no": 1076,
+      "contents": [
+        {
+          "text": "Java Memory Management involves the allocation and deallocation of memory in a Java program.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Java uses the Java Virtual Machine (JVM) to manage memory allocation and deallocation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Java memory is divided into different regions such as Young Generation, Old Generation, and Permanent Generation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Garbage Collection is the process of automatically freeing up memory by deallocating objects that are no longer in use.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Java provides automatic memory management through the use of garbage collection.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Memory leaks can occur in Java if objects are not properly deallocated.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Java memory management can be optimized by tuning the JVM parameters.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Java Remote Method Invocation (RMI)",
+      "topic_no": 1090,
+      "contents": [
+        {
+          "text": "Java Remote Method Invocation (RMI) allows an object to invoke methods on an object running in another JVM. It enables communication between different Java Virtual Machines (JVMs) over a network.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "RMI uses stubs and skeletons to facilitate communication between the client and server. The stub on the client side acts as a proxy for the remote object, while the skeleton on the server side handles incoming requests and forwards them to the actual object.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To create an RMI application, you need to define the remote interface, implement the remote object, create the server, and create the client that accesses the remote object.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Example of defining a remote interface in Java:",
+          "codeSnippet": "public interface MyRemoteInterface extends Remote {\n    public String sayHello() throws RemoteException;\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Example of implementing the remote object in Java:",
+          "codeSnippet": "public class MyRemoteObject extends UnicastRemoteObject implements MyRemoteInterface {\n    public MyRemoteObject() throws RemoteException {\n    }\n    public String sayHello() throws RemoteException {\n        return \"Hello, World!\";\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Example of creating the server in Java:",
+          "codeSnippet": "public class MyRMIServer {\n    public static void main(String[] args) {\n        try {\n            MyRemoteObject remoteObject = new MyRemoteObject();\n            Naming.rebind(\"MyRemoteObject\", remoteObject);\n            System.out.println(\"Server is running...\");\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Example of creating the client in Java:",
+          "codeSnippet": "public class MyRMIClient {\n    public static void main(String[] args) {\n        try {\n            MyRemoteInterface remoteObject = (MyRemoteInterface) Naming.lookup(\"rmi://localhost/MyRemoteObject\");\n            System.out.println(remoteObject.sayHello());\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n}",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Java Server Faces (JSF)",
+      "topic_no": 1096,
+      "contents": [
+        {
+          "text": "Java Server Faces (JSF) is a Java-based web application framework used to simplify the development of user interfaces for Java EE applications."
+        },
+        {
+          "text": "JSF provides a component-based architecture where UI components are represented by classes in Java."
+        },
+        {
+          "text": "JSF applications are built using Facelets, which is an XHTML-based view declaration language."
+        },
+        {
+          "text": "Managed beans in JSF are Java classes that contain the application logic and are managed by the JSF framework."
+        },
+        {
+          "text": "JSF supports various lifecycle phases such as Restore View, Apply Request Values, Process Validations, Update Model Values, Invoke Application, and Render Response."
+        },
+        {
+          "text": "JSF provides built-in validation and conversion mechanisms for form input data."
+        },
+        {
+          "text": "JSF allows for easy integration with other Java EE technologies such as EJBs, JPA, and CDI."
+        },
+        {
+          "text": "JSF supports internationalization and localization for building multilingual applications."
+        },
+        {
+          "text": "JSF can be extended through custom components and libraries to enhance functionality."
+        },
+        {
+          "text": "JSF is a mature and widely used framework in the Java community for building enterprise web applications."
+        }
+      ]
+    },
+    {
+      "topic": "Java Security API (JAAS)",
+      "topic_no": 1098,
+      "contents": [
+        {
+          "text": "Java Security API (JAAS) provides a way for applications to securely authenticate and authorize users.",
+          "codeSnippet": "LoginContext lc = new LoginContext(\"Sample\", new SampleCallbackHandler());\ntry {\n    lc.login();\n    // Authentication successful\n} catch (LoginException e) {\n    // Authentication failed\n}"
+        },
+        {
+          "text": "JAAS allows applications to define and enforce access control policies.",
+          "codeSnippet": "Subject subject = lc.getSubject();\nif (subject != null) {\n    // Perform authorization checks based on the subject\n}"
+        },
+        {
+          "text": "JAAS supports pluggable authentication modules (LoginModules) for flexibility in authentication mechanisms.",
+          "codeSnippet": "public class SampleLoginModule implements LoginModule {\n    // Implementation of the LoginModule interface\n}"
+        },
+        {
+          "text": "JAAS can be integrated with various authentication mechanisms such as LDAP, Kerberos, and custom authentication providers.",
+          "codeSnippet": "LoginContext lc = new LoginContext(\"Sample\", new SampleCallbackHandler());\n// Configure the LoginContext with appropriate LoginModules\nlc.login();"
+        }
+      ]
+    },
+    {
+      "topic": "Java Authentication and Authorization Service (JAAAS)",
+      "topic_no": 1102,
+      "contents": [
+        {
+          "text": "Java Authentication and Authorization Service (JAAS) is a Java security framework that enables developers to implement user authentication and authorization in their applications.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "JAAS provides a set of APIs and modules that allow developers to secure their Java applications by defining and enforcing access control policies.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "JAAS uses a pluggable architecture, allowing developers to use different authentication mechanisms and authorization policies based on their requirements.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "To implement authentication with JAAS, developers need to define login modules that handle the authentication process, such as validating user credentials.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "An example of defining a login module in JAAS for username and password authentication:",
+          "codeSnippet": "public class CustomLoginModule implements LoginModule {\\n    // Implementation of login module methods\\n}"
+        },
+        {
+          "text": "To implement authorization with JAAS, developers need to define policy files that specify the permissions granted to different users or roles.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "An example of defining a policy file in JAAS to grant permission to a specific role:",
+          "codeSnippet": "grant codeBase \"file:/path/to/application.jar\" {\\n    permission java.security.AllPermission;\\n}"
+        },
+        {
+          "text": "JAAS can be integrated with various authentication mechanisms such as LDAP, Kerberos, and custom authentication providers to authenticate users in Java applications.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "By using JAAS, developers can enforce fine-grained access control policies in their Java applications, ensuring that only authorized users can perform specific actions.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Java Enterprise Integration Patterns (JEP)",
+      "topic_no": 1105,
+      "contents": [
+        {
+          "text": "Java Enterprise Integration Patterns (JEP) are design patterns that provide solutions for integrating various enterprise applications and systems.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Some common JEPs include Message Channel, Message Router, Message Filter, and Message Translator.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Message Channel is a JEP that provides a way for different parts of a system to communicate with each other through messages.",
+          "codeSnippet": "MessageChannel channel = new MessageChannel();"
+        },
+        {
+          "text": "Message Router is a JEP that routes messages from one component to another based on certain criteria.",
+          "codeSnippet": "MessageRouter router = new MessageRouter();"
+        },
+        {
+          "text": "Message Filter is a JEP that filters messages based on specific conditions before passing them to the next component.",
+          "codeSnippet": "MessageFilter filter = new MessageFilter();"
+        },
+        {
+          "text": "Message Translator is a JEP that translates messages from one format to another to ensure compatibility between systems.",
+          "codeSnippet": "MessageTranslator translator = new MessageTranslator();"
+        }
+      ]
+    },
+    {
+      "topic": "Java Message Service (JMS)",
+      "topic_no": 1109,
+      "contents": [
+        {
+          "text": "Java Message Service (JMS) is an API that allows applications to create, send, receive, and read messages asynchronously.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "JMS is a part of the Java Platform, Enterprise Edition (Java EE) and is commonly used for communication between different components of a distributed application.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "JMS supports two messaging models: point-to-point (queues) and publish/subscribe (topics).",
+          "codeSnippet": ""
+        },
+        {
+          "text": "To use JMS in Java, you need to create a ConnectionFactory, Connection, Session, and MessageProducer or MessageConsumer.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Here is an example of sending a message using JMS:",
+          "codeSnippet": "ConnectionFactory factory = new ActiveMQConnectionFactory(\"tcp://localhost:61616\");\nConnection connection = factory.createConnection();\nSession session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);\nDestination destination = session.createQueue(\"myQueue\");\nMessageProducer producer = session.createProducer(destination);\nTextMessage message = session.createTextMessage(\"Hello, World!\");\nproducer.send(message);"
+        },
+        {
+          "text": "And here is an example of receiving a message using JMS:",
+          "codeSnippet": "ConnectionFactory factory = new ActiveMQConnectionFactory(\"tcp://localhost:61616\");\nConnection connection = factory.createConnection();\nSession session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);\nDestination destination = session.createQueue(\"myQueue\");\nMessageConsumer consumer = session.createConsumer(destination);\nconnection.start();\nTextMessage message = (TextMessage) consumer.receive();\nSystem.out.println(\"Received message: \" + message.getText());"
+        }
+      ]
+    },
+    {
+      "topic": "Java Naming and Directory Interface (JNDI)",
+      "topic_no": 1112,
+      "contents": [
+        {
+          "text": "Java Naming and Directory Interface (JNDI) is an API that provides naming and directory functionality to Java applications.",
+          "codeSnippet": "InitialContext ctx = new InitialContext();",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JNDI allows Java applications to access naming and directory services like LDAP, DNS, and RMI registry.",
+          "codeSnippet": "Context envContext = (Context) ctx.lookup(\"java:/comp/env\");",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JNDI is commonly used in Java EE applications to look up resources like database connections and JMS queues.",
+          "codeSnippet": "DataSource ds = (DataSource) envContext.lookup(\"jdbc/myDB\");",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Java API for XML-Based Web Services (JAX-WS)",
+      "topic_no": 1115,
+      "contents": [
+        {
+          "text": "JAX-WS is a Java API for creating and consuming SOAP web services.",
+          "codeSnippet": "import javax.jws.WebService;\nimport javax.jws.WebMethod;\nimport javax.jws.WebParam;\n\n@WebService\npublic class HelloWorld {\n    @WebMethod\n    public String sayHello(@WebParam(name = \"name\") String name) {\n        return \"Hello, \" + name + \"!\";\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JAX-WS provides annotations like @WebService and @WebMethod to define web services and their operations.",
+          "codeSnippet": "@WebService\npublic class HelloWorld {\n    @WebMethod\n    public String sayHello(String name) {\n        return \"Hello, \" + name + \"!\";\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JAX-WS allows developers to create both client and server components for web services.",
+          "codeSnippet": "import javax.xml.ws.Service;\nimport java.net.URL;\n\nURL url = new URL(\"http://localhost:8080/HelloWorld?wsdl\");\nQName qname = new QName(\"http://example.com/\", \"HelloWorld\");\nService service = Service.create(url, qname);",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JAX-WS supports both synchronous and asynchronous communication between web services.",
+          "codeSnippet": "import javax.xml.ws.AsyncHandler;\nimport javax.xml.ws.Response;\n\nResponse<String> response = port.sayHelloAsync(\"Alice\");\nresponse.get();",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Java Architecture for XML Binding (JAXB)",
+      "topic_no": 1118,
+      "contents": [
+        {
+          "text": "Java Architecture for XML Binding (JAXB) is a Java technology that provides an easy way to map Java classes to XML representations and vice versa.",
+          "codeSnippet": "JAXBContext jaxbContext = JAXBContext.newInstance(MyClass.class);"
+        },
+        {
+          "text": "JAXB allows developers to annotate Java classes with XML metadata to define how the Java objects should be represented in XML.",
+          "codeSnippet": "@XmlRootElement\npublic class MyClass { \n    @XmlElement\n    private String name; \n}"
+        },
+        {
+          "text": "JAXB provides marshalling and unmarshalling capabilities, allowing Java objects to be converted to XML and vice versa.",
+          "codeSnippet": "MyClass obj = new MyClass();\nobj.setName(\"John\");\nMarshaller marshaller = jaxbContext.createMarshaller();\nmarshaller.marshal(obj, System.out);"
+        },
+        {
+          "text": "JAXB simplifies the process of working with XML in Java applications by handling the conversion between Java objects and XML data.",
+          "codeSnippet": "Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();\nMyClass newObj = (MyClass) unmarshaller.unmarshal(new File(\"data.xml\"));"
+        }
+      ]
+    },
+    {
+      "topic": "JavaMail API",
+      "topic_no": 1124,
+      "contents": [
+        {
+          "text": "JavaMail API is a Java library used for sending and receiving email via SMTP, POP3, and IMAP protocols.",
+          "codeSnippet": "import javax.mail.*;\nimport javax.mail.internet.*;\nimport java.util.Properties;\n\npublic class EmailSender {\n    public static void main(String[] args) {\n        // Create properties object\n        Properties properties = new Properties();\n        properties.put(\"mail.smtp.host\", \"smtp.example.com\");\n        // Create a Session object\n        Session session = Session.getInstance(properties, null);\n        try {\n            // Create a MimeMessage object\n            MimeMessage message = new MimeMessage(session);\n            message.setFrom(new InternetAddress(\"sender@example.com\"));\n            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(\"recipient@example.com\"));\n            message.setSubject(\"Test Email\");\n            message.setText(\"This is a test email\");\n            // Send the message\n            Transport.send(message);\n            System.out.println(\"Email sent successfully.\");\n        } catch (MessagingException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JavaMail API provides classes like Session, Message, Transport, and Store to handle email operations.",
+          "codeSnippet": "Properties properties = new Properties();\nproperties.put(\"mail.smtp.host\", \"smtp.example.com\");\nSession session = Session.getInstance(properties, null);\nMimeMessage message = new MimeMessage(session);\nmessage.setFrom(new InternetAddress(\"sender@example.com\"));\nmessage.setRecipients(Message.RecipientType.TO, InternetAddress.parse(\"recipient@example.com\"));\nmessage.setSubject(\"Test Email\");\nmessage.setText(\"This is a test email\");\nTransport.send(message);",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JavaMail API supports sending emails using SMTP protocol.",
+          "codeSnippet": "properties.put(\"mail.smtp.host\", \"smtp.example.com\");",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "JavaMail API can be used to receive emails using POP3 and IMAP protocols.",
+          "codeSnippet": "properties.put(\"mail.store.protocol\", \"pop3\");\nStore store = session.getStore(\"pop3\");\nstore.connect(\"pop.example.com\", \"username\", \"password\");",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Java WebSocket API",
+      "topic_no": 1128,
+      "contents": [
+        {
+          "text": "Java WebSocket API is a part of the Java EE platform that enables two-way communication between client and server over a single, long-lived connection.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "WebSocket allows for full-duplex communication, meaning both the client and server can send data independently at the same time.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To use the Java WebSocket API, you need to create endpoint classes that extend javax.websocket.Endpoint.",
+          "codeSnippet": "import javax.websocket.Endpoint;",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "You can handle incoming WebSocket messages by implementing the onMessage method in your endpoint class.",
+          "codeSnippet": "public void onMessage(Session session, String message) { }",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "To send messages to connected WebSocket clients, you can use the javax.websocket.Session object.",
+          "codeSnippet": "session.getBasicRemote().sendText(\"Hello, client!\");",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Java WebSocket API supports annotations like @ServerEndpoint and @OnMessage to simplify WebSocket endpoint creation.",
+          "codeSnippet": "@ServerEndpoint(\"/chat\")",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Java Transaction API (JTA)",
+      "topic_no": 1132,
+      "contents": [
+        {
+          "content": "Java Transaction API (JTA) is a Java Enterprise Edition (Java EE) API that allows developers to manage distributed transactions in Java applications.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "JTA provides a standard interface for demarcating transactions, committing or rolling back transactions, and coordinating transactions across multiple resources.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "JTA is commonly used in Java EE applications that require multiple resources to participate in a single transaction, ensuring data consistency and integrity.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "JTA is often used in conjunction with Java Persistence API (JPA) for managing transactions in database operations.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "content": "To use JTA in a Java application, developers typically configure a JTA-compliant transaction manager provided by the Java EE application server.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

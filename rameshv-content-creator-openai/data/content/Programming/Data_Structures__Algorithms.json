@@ -1,0 +1,190 @@
+{
+  "category": "Data Structures & Algorithms",
+  "topics": [
+    {
+      "topic": "Data Structures",
+      "topic_no": 142,
+      "contents": [
+        {
+          "text": "Arrays are a fundamental data structure in programming that store a collection of elements of the same data type in contiguous memory locations. They are used to store and manipulate a fixed-size sequential collection of elements.",
+          "codeSnippet": "int[] numbers = new int[5];\nnumbers[0] = 10;\nnumbers[1] = 20;\nnumbers[2] = 30;\nnumbers[3] = 40;\nnumbers[4] = 50;"
+        },
+        {
+          "text": "Linked Lists are a fundamental data structure in computer science, used to store a collection of elements where each element points to the next one in the sequence.",
+          "codeSnippet": "class Node {\n    constructor(data) {\n        this.data = data;\n        this.next = null;\n    }\n}\n\nclass LinkedList {\n    constructor() {\n        this.head = null;\n    }\n\n    addNode(data) {\n        const newNode = new Node(data);\n        if (!this.head) {\n            this.head = newNode;\n        } else {\n            let current = this.head;\n            while (current.next) {\n                current = current.next;\n            }\n            current.next = newNode;\n        }\n    }\n}",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Graphs are a data structure that consist of a set of vertices (nodes) connected by edges. They are used to represent relationships between different entities.",
+          "codeSnippet": "class Graph {\n  constructor() {\n    this.vertices = [];\n    this.edges = {};\n  }\n\n  addVertex(vertex) {\n    this.vertices.push(vertex);\n    this.edges[vertex] = [];\n  }\n\n  addEdge(vertex1, vertex2) {\n    this.edges[vertex1].push(vertex2);\n    this.edges[vertex2].push(vertex1);\n  }\n}"
+        },
+        {
+          "text": "Trees are a fundamental data structure in computer science that are used to store hierarchical data. They consist of nodes connected by edges, where each node can have zero or more children nodes.",
+          "codeSnippet": "class Node {\n    constructor(value) {\n        this.value = value;\n        this.children = [];\n    }\n}\n\nclass Tree {\n    constructor() {\n        this.root = null;\n    }\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "Stacks are a fundamental data structure in computer science that follows the Last In, First Out (LIFO) principle. This means that the last element added to the stack is the first one to be removed. Stacks are commonly used in programming for tasks such as function call management, expression evaluation, and undo mechanisms.",
+          "codeSnippet": "class Stack {\n  constructor() {\n    this.items = [];\n  }\n\n  push(element) {\n    this.items.push(element);\n  }\n\n  pop() {\n    if (this.isEmpty())\n      return 'Underflow';\n    return this.items.pop();\n  }\n\n  peek() {\n    return this.items[this.items.length - 1];\n  }\n\n  isEmpty() {\n    return this.items.length === 0;\n  }\n}\n\nconst stack = new Stack();\nstack.push(1);\nstack.push(2);\nstack.push(3);\nconsole.log(stack.pop()); // Output: 3",
+          "codeLanguage": "javascript"
+        },
+        {
+          "text": "Queues are a type of data structure in programming that stores and manages a collection of elements in a specific order. They follow the First In, First Out (FIFO) principle, where the element that is added first is the one that is removed first.",
+          "codeSnippet": "Queue<Integer> queue = new LinkedList<>();\nqueue.add(5);\nqueue.add(10);\nint firstElement = queue.poll();\nSystem.out.println(firstElement);",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Hash Tables are a data structure that store key-value pairs. They use a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. This allows for efficient retrieval, insertion, and deletion of data.",
+          "codeSnippet": "HashMap<String, Integer> map = new HashMap<>();\nmap.put(\"apple\", 5);\nmap.put(\"banana\", 10);\nint value = map.get(\"apple\");\nSystem.out.println(value);",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Introduction to Data Structures",
+          "codeSnippet": "Data structures are a way of organizing and storing data in a computer so that it can be accessed and modified efficiently. They define the relationship between the data, operations that can be performed on the data, and the algorithms used for these operations."
+        },
+        {
+          "text": "Types of Data Structures",
+          "codeSnippet": "There are two main types of data structures: primitive data structures and non-primitive data structures. Primitive data structures are basic data types like integers and characters, while non-primitive data structures are more complex and include arrays, linked lists, stacks, queues, trees, graphs, etc."
+        },
+        {
+          "text": "Arrays",
+          "codeSnippet": "Arrays are a collection of elements stored in contiguous memory locations. Each element can be accessed using an index. Arrays have a fixed size and are suitable for storing elements of the same data type."
+        },
+        {
+          "text": "Linked Lists",
+          "codeSnippet": "Linked lists are a linear data structure where elements are stored in nodes. Each node contains data and a reference to the next node in the sequence. Linked lists can be singly linked, doubly linked, or circular."
+        },
+        {
+          "text": "Stacks",
+          "codeSnippet": "A stack is a data structure that follows the Last In, First Out (LIFO) principle. Elements are added and removed from the top of the stack. Common operations on a stack include push (add element) and pop (remove element)."
+        },
+        {
+          "text": "Queues",
+          "codeSnippet": "A queue is a data structure that follows the First In, First Out (FIFO) principle. Elements are added at the rear and removed from the front of the queue. Common operations on a queue include enqueue (add element) and dequeue (remove element)."
+        },
+        {
+          "text": "Trees",
+          "codeSnippet": "Trees are hierarchical data structures consisting of nodes connected by edges. The top node is called the root, and each node can have children nodes. Trees are used in various algorithms like binary search trees, AVL trees, etc."
+        },
+        {
+          "text": "Graphs",
+          "codeSnippet": "Graphs are non-linear data structures consisting of nodes (vertices) connected by edges. They are used to represent networks and relationships between entities. Graphs can be directed or undirected."
+        }
+      ]
+    },
+    {
+      "topic": "Algorithms",
+      "topic_no": 305,
+      "contents": [
+        {
+          "text": "Searching in algorithms involves finding a specific item or element within a collection of data. It is a fundamental operation in computer science and is used in various applications to locate information efficiently.",
+          "codeSnippet": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Dynamic Programming is a method for solving complex problems by breaking them down into simpler subproblems. It involves storing the results of subproblems to avoid redundant calculations, leading to more efficient solutions.",
+          "codeSnippet": "def fibonacci(n):\n    fib = [0, 1]\n    for i in range(2, n+1):\n        fib.append(fib[i-1] + fib[i-2])\n    return fib[n]"
+        },
+        {
+          "text": "Sorting is the process of arranging elements in a specific order, typically in ascending or descending order, based on certain criteria. It is a fundamental concept in computer science and is essential for efficiently organizing and retrieving data.",
+          "codeSnippet": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n\narr = [64, 34, 25, 12, 22, 11, 90]\nbubble_sort(arr)\nprint('Sorted array:', arr)",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Branch and Bound is a method used in combinatorial optimization problems to find the optimal solution. It works by exploring all possible solutions in a systematic way, keeping track of the best solution found so far and using it to prune the search space.",
+          "codeSnippet": "Here is a simple implementation of Branch and Bound in Python:\n\n```python\nimport heapq\n\ndef branch_and_bound(graph, start):\n    queue = [(0, start)]\n    while queue:\n        cost, node = heapq.heappop(queue)\n        if node not in visited:\n            visited.add(node)\n            if node == goal:\n                return cost\n            for neighbor, weight in graph[node].items():\n                heapq.heappush(queue, (cost + weight, neighbor))\n    return float('inf')\n```",
+          "codeLanguage": "python"
+        },
+        {
+          "text": "The content 'All algorithms related to the data structures' in the topic 'Algorithms' covers various algorithms that are specifically designed to work efficiently with different data structures such as arrays, linked lists, trees, graphs, and more. These algorithms are essential for manipulating and organizing data in a way that optimizes performance and resource utilization.",
+          "codeSnippet": "void bubbleSort(int arr[], int n) { for (int i = 0; i < n-1; i++) { for (int j = 0; j < n-i-1; j++) { if (arr[j] > arr[j+1]) { int temp = arr[j]; arr[j] = arr[j+1]; arr[j+1] = temp; } } } }",
+          "codeLanguage": "C++"
+        },
+        {
+          "text": "Backtracking is a technique used in algorithms to solve problems by trying to build a solution incrementally, one piece at a time, removing solutions that fail to satisfy the constraints of the problem. It is a systematic way to explore all possible configurations in a search space to find the correct solution.",
+          "codeSnippet": "function backtracking(problem) {\n  if (isSolution(problem)) {\n    return problem;\n  }\n  for (let option of generateOptions(problem)) {\n    if (isValid(option)) {\n      applyOption(problem, option);\n      let result = backtracking(problem);\n      if (result !== null) {\n        return result;\n      }\n      undoOption(problem, option);\n    }\n  }\n  return null;\n}"
+        },
+        {
+          "text": "Divide and Conquer is a popular algorithm design paradigm in computer science. It involves breaking down a problem into smaller, more manageable subproblems, solving them independently, and then combining their solutions to solve the original problem. This approach is often used in algorithms for sorting, searching, and optimization.",
+          "codeSnippet": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    return merge(left, right)\ndef merge(left, right):\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result",
+          "codeLanguage": "Python"
+        },
+        {
+          "text": "Greedy Algorithms are a class of algorithms that make the locally optimal choice at each stage with the hope of finding a global optimum solution. They are used in various optimization problems where we need to make a series of decisions.",
+          "codeSnippet": "function knapsack(weights, values, capacity) {\n  let n = weights.length;\n  let totalValue = 0;\n  let remainingCapacity = capacity;\n  let ratios = [];\n\n  for (let i = 0; i < n; i++) {\n    ratios.push({\n      index: i,\n      ratio: values[i] / weights[i]\n    });\n  }\n\n  ratios.sort((a, b) => b.ratio - a.ratio);\n\n  for (let i = 0; i < n; i++) {\n    let index = ratios[i].index;\n    let weight = weights[index];\n    let value = values[index];\n\n    if (weight <= remainingCapacity) {\n      totalValue += value;\n      remainingCapacity -= weight;\n    } else {\n      totalValue += (remainingCapacity / weight) * value;\n      break;\n    }\n  }\n\n  return totalValue;\n}",
+          "codeLanguage": "JavaScript"
+        },
+        {
+          "text": "What are Algorithms?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of Algorithms",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Sorting Algorithms",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Searching Algorithms",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Graph Algorithms",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Dynamic Programming",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Common Algorithmic Techniques",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Divide and Conquer",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Greedy Algorithms",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "3. Recursion",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "4. Backtracking",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Algorithm Complexity",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "1. Time Complexity",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "2. Space Complexity",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    }
+  ]
+}

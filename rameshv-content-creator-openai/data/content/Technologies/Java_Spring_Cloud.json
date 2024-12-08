@@ -1,0 +1,1200 @@
+{
+  "category": "Java Spring Cloud",
+  "topics": [
+    {
+      "topic": "Introduction to Spring Cloud",
+      "topic_no": 49,
+      "contents": [
+        {
+          "text": "Spring Cloud is a set of tools and frameworks for building cloud-native applications in Java.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud provides a variety of features such as service discovery, circuit breakers, and distributed configuration.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud integrates with popular cloud platforms like AWS, Azure, and Google Cloud.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Config allows you to externalize your application configuration in a centralized server.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Netflix provides integration with Netflix OSS components like Eureka for service discovery and Hystrix for circuit breakers.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Stream simplifies the development of event-driven microservices by providing a framework for building message-driven systems.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Sleuth offers distributed tracing capabilities to track and monitor requests across microservices.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Config Server",
+      "topic_no": 191,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Config Server",
+          "codeSnippet": "Spring Cloud Config Server is a centralized configuration server that allows you to manage and serve configuration settings for distributed applications. It provides a way to externalize configuration properties from your codebase, making it easier to manage configurations across different environments and services.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Spring Cloud Config Server",
+          "codeSnippet": "To set up a Spring Cloud Config Server, you need to create a Spring Boot application and include the necessary dependencies for Spring Cloud Config. You also need to configure the server to point to a Git repository or a local file system where the configuration files are stored.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating Configuration Files",
+          "codeSnippet": "In Spring Cloud Config Server, configuration files are typically stored in a Git repository or a local file system. These files can be in various formats such as YAML, JSON, or properties files. Each application can have its own configuration file, which can be accessed by the application using the Config Server.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Accessing Configuration Properties",
+          "codeSnippet": "Applications can access configuration properties from the Spring Cloud Config Server by specifying the application name and the profile they are running in. The Config Server serves the appropriate configuration properties based on the application name and profile, allowing applications to retrieve their configurations dynamically.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Refreshing Configuration Properties",
+          "codeSnippet": "Spring Cloud Config Server supports dynamic configuration updates through property refresh. When a configuration property is updated in the external configuration source (e.g., Git repository), applications can trigger a refresh request to fetch the updated properties without restarting the application.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Service Discovery with Eureka",
+      "topic_no": 230,
+      "contents": [
+        {
+          "text": "Introduction to Eureka",
+          "codeSnippet": "EurekaServerApplication.java",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Setting up Eureka Server",
+          "codeSnippet": "application.properties",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Registering a Service with Eureka Client",
+          "codeSnippet": "EurekaClientApplication.java",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Configuring Eureka Client",
+          "codeSnippet": "bootstrap.properties",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Using Eureka for Service Discovery",
+          "codeSnippet": "RestTemplateConfig.java",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Client-Side Load Balancing with Ribbon",
+      "topic_no": 300,
+      "contents": [
+        {
+          "text": "Introduction to Ribbon in Java Spring Cloud",
+          "codeSnippet": "Ribbon is a client-side load balancer that works with Spring Cloud to provide client-side load balancing. It allows you to distribute incoming network traffic across multiple servers to improve reliability and scalability.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Setting up Ribbon in a Java Spring Cloud project",
+          "codeSnippet": "@SpringBootApplication\n@EnableEurekaClient\n@EnableFeignClients\npublic class RibbonApplication {\n\n    public static void main(String[] args) {\n        SpringApplication.run(RibbonApplication.class, args);\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Defining a Ribbon client in Java Spring Cloud",
+          "codeSnippet": "@FeignClient(name = \"service-name\")\npublic interface MyServiceClient {\n\n    @RequestMapping(method = RequestMethod.GET, value = \"/endpoint\")\n    String getEndpoint();\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Using Ribbon with Feign in Java Spring Cloud",
+          "codeSnippet": "MyServiceClient client = Feign.builder()\n        .client(RibbonClient.create())\n        .target(MyServiceClient.class, \"http://service-name\");",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Circuit Breaker with Hystrix",
+      "topic_no": 389,
+      "contents": [
+        {
+          "text": "Introduction to Circuit Breaker with Hystrix in Java Spring Cloud"
+        },
+        {
+          "text": "Circuit Breaker pattern is used to handle faults and latency issues in distributed systems."
+        },
+        {
+          "text": "Hystrix is a library that provides an implementation of the Circuit Breaker pattern in Java Spring Cloud."
+        },
+        {
+          "text": "Hystrix helps in preventing cascading failures and provides fallback mechanisms."
+        },
+        {
+          "text": "Implementing Circuit Breaker with Hystrix in Java Spring Cloud"
+        },
+        {
+          "text": "To use Hystrix in a Java Spring Cloud application, you need to add the Hystrix dependency in your pom.xml file."
+        },
+        {
+          "text": "Example of adding Hystrix dependency in pom.xml:"
+        },
+        {
+          "codeSnippet": "<dependency>\n    <groupId>org.springframework.cloud</groupId>\n    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>\n</dependency>",
+          "codeLanguage": "xml"
+        },
+        {
+          "text": "Annotate the method that needs to be protected by the Circuit Breaker with @HystrixCommand annotation."
+        },
+        {
+          "text": "Example of using @HystrixCommand annotation:"
+        },
+        {
+          "codeSnippet": "@HystrixCommand(fallbackMethod = \"fallbackMethod\")\npublic String methodToProtect() {\n    // Method logic here\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Define the fallback method that will be called when the circuit is open."
+        },
+        {
+          "text": "Example of defining a fallback method:"
+        },
+        {
+          "codeSnippet": "public String fallbackMethod() {\n    return \"Fallback response\";\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Configuring Circuit Breaker properties in Java Spring Cloud"
+        },
+        {
+          "text": "You can configure various properties of the Circuit Breaker in the application.properties or application.yml file."
+        },
+        {
+          "text": "Example of configuring Circuit Breaker properties in application.properties:"
+        },
+        {
+          "codeSnippet": "hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=5000",
+          "codeLanguage": "properties"
+        },
+        {
+          "text": "Testing Circuit Breaker with Hystrix in Java Spring Cloud"
+        },
+        {
+          "text": "To test the Circuit Breaker behavior, you can simulate failures or delays in the method being protected."
+        },
+        {
+          "text": "Monitor the Circuit Breaker dashboard to visualize the state transitions and metrics."
+        },
+        {
+          "text": "Conclusion"
+        },
+        {
+          "text": "Circuit Breaker with Hystrix is a powerful tool for building resilient and fault-tolerant microservices in Java Spring Cloud."
+        }
+      ]
+    },
+    {
+      "topic": "API Gateway with Zuul",
+      "topic_no": 447,
+      "contents": [
+        {
+          "text": "API Gateway is a server that acts as an API front-end, receiving API requests, enforcing throttling and security, and routing requests to the appropriate backend service.",
+          "codeSnippet": "No code snippet available for this concept.",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Zuul is a JVM-based router and server-side load balancer from Netflix. It is a dynamic routing and filtering system that can be used for microservices.",
+          "codeSnippet": "No code snippet available for this concept.",
+          "codeLanguage": ""
+        },
+        {
+          "text": "In Java Spring Cloud, Zuul is commonly used as an API Gateway to manage all the requests from clients and route them to the appropriate microservices.",
+          "codeSnippet": "No code snippet available for this concept.",
+          "codeLanguage": ""
+        },
+        {
+          "text": "To implement API Gateway with Zuul in Java Spring Cloud, you need to include the Zuul dependency in your project's pom.xml file.",
+          "codeSnippet": "<dependency>\n    <groupId>org.springframework.cloud</groupId>\n    <artifactId>spring-cloud-starter-netflix-zuul</artifactId>\n</dependency>",
+          "codeLanguage": "xml"
+        },
+        {
+          "text": "You can configure Zuul routes in your application.properties or application.yml file to define how requests should be forwarded to the backend services.",
+          "codeSnippet": "zuul.routes.myService.url=http://localhost:8081\nzuul.routes.myService.path=/my-service/**",
+          "codeLanguage": "properties"
+        },
+        {
+          "text": "Filters in Zuul can be used for pre-processing requests, post-processing responses, routing, error handling, etc., providing a way to implement cross-cutting concerns.",
+          "codeSnippet": "No code snippet available for this concept.",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Stream",
+      "topic_no": 468,
+      "contents": [
+        {
+          "text": "Spring Cloud Stream is a framework for building highly scalable event-driven microservices",
+          "codeSnippet": "dependencies {\n    implementation 'org.springframework.cloud:spring-cloud-starter-stream-kafka'\n}"
+        },
+        {
+          "text": "Spring Cloud Stream provides abstractions and support for common messaging middleware",
+          "codeSnippet": "@EnableBinding(Processor.class)\npublic class MyProcessor {\n\n    @StreamListener(Processor.INPUT)\n    @SendTo(Processor.OUTPUT)\n    public String process(String input) {\n        return input.toUpperCase();\n    }\n}"
+        },
+        {
+          "text": "Spring Cloud Stream simplifies the development of event-driven microservices",
+          "codeSnippet": "spring:\n  cloud:\n    stream:\n      bindings:\n        myInput:\n          destination: input-topic\n          group: myGroup\n        myOutput:\n          destination: output-topic"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Task",
+      "topic_no": 498,
+      "contents": [
+        {
+          "text": "Spring Cloud Task is a framework for building short-lived microservices in Java Spring Cloud.",
+          "codeSnippet": "Spring Cloud Task allows developers to create standalone Spring Boot applications that can be executed on demand.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Spring Cloud Task provides features for task scheduling, monitoring, and execution.",
+          "codeSnippet": "Spring Cloud Task applications can be launched and managed using Spring Cloud Data Flow or standalone executables.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Spring Cloud Task supports the development of batch processing applications in a cloud-native environment.",
+          "codeSnippet": "@EnableTask annotation is used to enable Spring Cloud Task in a Spring Boot application.",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Security",
+      "topic_no": 538,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Security",
+          "codeSnippet": "Spring Cloud Security provides a set of tools for securing Spring Cloud applications. It integrates with Spring Security to provide authentication and authorization mechanisms for microservices.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Configuring Spring Cloud Security",
+          "codeSnippet": "@EnableWebSecurity\npublic class SecurityConfig extends WebSecurityConfigurerAdapter {\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n        http.authorizeRequests().anyRequest().authenticated().and().httpBasic();\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Securing Microservices with Spring Cloud Security",
+          "codeSnippet": "spring:\n  security:\n    user:\n      name: user\n      password: password\n    basic:\n      enabled: true",
+          "codeLanguage": "YAML"
+        },
+        {
+          "text": "Implementing OAuth2 with Spring Cloud Security",
+          "codeSnippet": "@EnableOAuth2Sso\npublic class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n        http.authorizeRequests().antMatchers(\"/secure/**\").authenticated().anyRequest().permitAll();\n    }\n}",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Sleuth",
+      "topic_no": 563,
+      "contents": [
+        {
+          "text": "Spring Cloud Sleuth is a distributed tracing solution for microservices applications.",
+          "codeSnippet": "dependencies {\n    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'\n}"
+        },
+        {
+          "text": "It provides a unique trace ID for each request that enters the system, allowing you to trace the flow of requests through multiple microservices.",
+          "codeSnippet": "@SpringBootApplication\n@EnableDiscoveryClient\n@EnableSleuth\npublic class Application {\n    public static void main(String[] args) {\n        SpringApplication.run(Application.class, args);\n    }\n}"
+        },
+        {
+          "text": "Spring Cloud Sleuth integrates seamlessly with other Spring Cloud components like Zipkin for centralized tracing.",
+          "codeSnippet": "spring:\n  zipkin:\n    base-url: http://zipkin-server:9411\n  sleuth:\n    sampler:\n      probability: 1.0"
+        }
+      ]
+    },
+    {
+      "topic": "Distributed Tracing with Zipkin",
+      "topic_no": 588,
+      "contents": [
+        {
+          "text": "Introduction to Distributed Tracing with Zipkin",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up Zipkin in a Java Spring Cloud Application",
+          "codeSnippet": "dependencies {\n    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'\n}",
+          "codeLanguage": "groovy"
+        },
+        {
+          "text": "Configuring Zipkin to Trace Requests in Java Spring Cloud",
+          "codeSnippet": "@Bean\npublic Sampler defaultSampler() {\n    return Sampler.ALWAYS_SAMPLE;\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Instrumenting Microservices for Distributed Tracing with Zipkin",
+          "codeSnippet": "@Autowired\nprivate Tracer tracer;",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Creating and Viewing Traces in Zipkin UI",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Contract",
+      "topic_no": 630,
+      "contents": [
+        {
+          "text": "Spring Cloud Contract is a project that helps in testing and verifying interactions between microservices in a distributed system.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Contract allows you to define contracts for your RESTful APIs using Groovy or YAML DSL.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Contracts in Spring Cloud Contract specify the request and response formats, headers, status codes, and more for API interactions.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Contract generates stubs for the producer and tests for the consumer based on the defined contracts.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "The stubs created by Spring Cloud Contract can be used by the consumer to simulate the producer's behavior during testing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Contract supports various testing frameworks like JUnit and TestNG for integration with existing test suites.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Contract can be integrated with Spring Cloud Gateway to validate API contracts at the gateway level.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Kubernetes",
+      "topic_no": 647,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Kubernetes",
+          "codeSnippet": "Spring Cloud Kubernetes provides a seamless integration between Spring Cloud and Kubernetes, allowing developers to easily deploy and manage Spring Cloud applications on Kubernetes clusters.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Setting up Spring Cloud Kubernetes",
+          "codeSnippet": "@SpringBootApplication\n@EnableDiscoveryClient\npublic class MySpringBootApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MySpringBootApplication.class, args);\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Configuring Kubernetes Service Discovery in Spring Cloud",
+          "codeSnippet": "spring:\n  cloud:\n    kubernetes:\n      discovery:\n        enabled: true",
+          "codeLanguage": "YAML"
+        },
+        {
+          "text": "Using Kubernetes ConfigMaps in Spring Cloud",
+          "codeSnippet": "@Value(\"${my.config.value}\")\nprivate String configValue;",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Deploying a Spring Cloud Application on Kubernetes",
+          "codeSnippet": "kubectl apply -f deployment.yaml",
+          "codeLanguage": "Shell"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Config Server with Git",
+      "topic_no": 682,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Config Server with Git",
+          "codeSnippet": "Spring Cloud Config Server is a centralized configuration server that allows you to manage and serve configuration properties for distributed applications. By integrating Git as the backend repository, you can store and version control your application configurations in a Git repository.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Spring Cloud Config Server with Git",
+          "codeSnippet": "To set up a Spring Cloud Config Server with Git, you need to include the necessary dependencies in your Spring Boot project, configure the application properties to point to your Git repository, and annotate your main application class with @EnableConfigServer.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Configuring Spring Cloud Config Server to use Git repository",
+          "codeSnippet": "@EnableConfigServer\n@SpringBootApplication\npublic class ConfigServerApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(ConfigServerApplication.class, args);\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Accessing configuration properties from Spring Cloud Config Server",
+          "codeSnippet": "To access configuration properties from the Spring Cloud Config Server, you can use the @Value annotation in your Spring Boot application to inject the properties from the Config Server.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Refreshing configuration properties in Spring Cloud Config Server",
+          "codeSnippet": "Spring Cloud Config Server supports dynamic property refresh. By sending a POST request to the /actuator/refresh endpoint of your application, the Config Server will fetch the latest configuration from the Git repository and update the properties without restarting the application.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Bus",
+      "topic_no": 693,
+      "contents": [
+        {
+          "text": "Spring Cloud Bus is a lightweight event bus that allows microservices to communicate with each other by propagating state changes.",
+          "codeSnippet": "Spring Cloud Bus can be used to broadcast configuration changes or other management information to all connected microservices.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Spring Cloud Bus uses Spring Cloud Stream to connect microservices and Spring Boot Actuator to refresh the configuration of microservices.",
+          "codeSnippet": "@SpringBootApplication\n@EnableEurekaClient\n@EnableConfigServer\npublic class ConfigServiceApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(ConfigServiceApplication.class, args);\n    }\n}",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Task Scheduling",
+      "topic_no": 721,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Task Scheduling"
+        },
+        {
+          "text": "Spring Cloud Task Scheduling allows developers to schedule tasks to run at specific times or intervals."
+        },
+        {
+          "text": "Developers can use Spring's @Scheduled annotation to define task scheduling in their applications."
+        },
+        {
+          "text": "The @Scheduled annotation can be used with methods that should be executed at a specific time or interval."
+        },
+        {
+          "text": "Tasks can be scheduled to run at fixed rates, delays, or cron expressions using @Scheduled annotation."
+        },
+        {
+          "text": "Example: Scheduling a task to run every 5 seconds using @Scheduled annotation."
+        },
+        {
+          "codeSnippet": "@Scheduled(fixedRate = 5000)\npublic void runTask() {\n    // Task logic here\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Spring Cloud Task Scheduling supports cron expressions for more complex scheduling requirements."
+        },
+        {
+          "text": "Developers can use cron expressions with @Scheduled annotation to define custom task schedules."
+        },
+        {
+          "text": "Example: Scheduling a task using a cron expression to run every day at 8 AM."
+        },
+        {
+          "codeSnippet": "@Scheduled(cron = \"0 0 8 * * ?\")\npublic void runDailyTask() {\n    // Task logic here\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Spring Cloud Task Scheduling provides flexibility in defining task execution times and intervals."
+        },
+        {
+          "text": "Developers can configure task scheduling properties in application.properties or application.yml files."
+        },
+        {
+          "text": "Tasks can be scheduled dynamically based on external triggers or events in the application."
+        },
+        {
+          "text": "Spring Cloud Task Scheduling simplifies the implementation of recurring tasks and background jobs in Java applications."
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Data Flow",
+      "topic_no": 736,
+      "contents": [
+        {
+          "text": "Spring Cloud Data Flow is a cloud-native toolkit for building data integration and real-time data processing pipelines.",
+          "codeSnippet": "Spring Cloud Data Flow enables developers to create, deploy, and manage data pipelines in a scalable and flexible manner.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "It provides a set of tools for composing and orchestrating microservices into data pipelines.",
+          "codeSnippet": "Spring Cloud Data Flow supports various data processing frameworks such as Apache Spark, Apache Flink, and more.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Spring Cloud Data Flow simplifies the development of complex data processing applications by providing a unified platform for managing data pipelines.",
+          "codeSnippet": "Developers can use Spring Cloud Data Flow to easily deploy and monitor data pipelines in a distributed environment.",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Stream Kafka",
+      "topic_no": 794,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Stream Kafka",
+          "codeSnippet": "Spring Cloud Stream is a framework for building highly scalable event-driven microservices connected with shared messaging systems. Kafka is a distributed event streaming platform that is commonly used for building real-time data pipelines and streaming applications. Spring Cloud Stream Kafka provides seamless integration between Spring Cloud Stream and Apache Kafka, allowing developers to easily build and deploy event-driven applications.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Spring Cloud Stream Kafka Binder",
+          "codeSnippet": "To use Kafka with Spring Cloud Stream, you need to configure the Kafka binder in your application. This involves adding the necessary dependencies in your project's build file and configuring the binder properties in the application.yml or application.properties file.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating a Kafka Producer in Spring Cloud Stream",
+          "codeSnippet": "@EnableBinding(Source.class)\npublic class KafkaProducer {\n\n    @Autowired\n    private Source source;\n\n    public void sendMessage(String message) {\n        source.output().send(MessageBuilder.withPayload(message).build());\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Creating a Kafka Consumer in Spring Cloud Stream",
+          "codeSnippet": "@EnableBinding(Sink.class)\npublic class KafkaConsumer {\n\n    @StreamListener(Sink.INPUT)\n    public void receiveMessage(String message) {\n        System.out.println(\"Received message: \" + message);\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Configuring Consumer Groups in Spring Cloud Stream Kafka",
+          "codeSnippet": "Consumer groups allow multiple instances of a consumer application to work together to consume messages from a Kafka topic. In Spring Cloud Stream Kafka, you can configure consumer groups by setting the 'spring.cloud.stream.bindings.input.group' property in the application configuration.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Contract Stub Runner",
+      "topic_no": 813,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Contract Stub Runner",
+          "codeSnippet": "Spring Cloud Contract Stub Runner is a testing tool that allows you to run contract stubs in your local environment to simulate interactions with external services. It helps in testing microservices by providing a way to verify that the contracts between services are met."
+        },
+        {
+          "text": "Setting up Spring Cloud Contract Stub Runner",
+          "codeSnippet": "To set up Spring Cloud Contract Stub Runner, you need to include the necessary dependencies in your project's build file. You can configure the Stub Runner in your test setup to download and run the contract stubs during testing."
+        },
+        {
+          "text": "Defining Contract Stubs",
+          "codeSnippet": "Contract stubs are defined using the Spring Cloud Contract DSL (Domain Specific Language). You can specify the request and response mappings in the contract stub to define the expected interactions with the external service."
+        },
+        {
+          "text": "Running Contract Stubs with Stub Runner",
+          "codeSnippet": "You can run the contract stubs using the Stub Runner server or as a standalone application. The Stub Runner will download the contract stubs and start a local server to simulate the behavior of the external service."
+        },
+        {
+          "text": "Verifying Contracts with Stub Runner",
+          "codeSnippet": "Spring Cloud Contract Stub Runner provides tools to verify that the contracts defined in the contract stubs are met during testing. It helps in ensuring that the communication between microservices is consistent and reliable."
+        },
+        {
+          "text": "Benefits of Using Spring Cloud Contract Stub Runner",
+          "codeSnippet": "Using Spring Cloud Contract Stub Runner can improve the efficiency and reliability of testing microservices. It allows for better contract testing and helps in detecting issues early in the development process."
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Security OAuth",
+      "topic_no": 828,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Security OAuth",
+          "codeSnippet": ""
+        },
+        {
+          "text": "OAuth2 Overview and Concepts",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Configuring OAuth2 Client in Spring Boot Application",
+          "codeSnippet": "security.oauth2.client.client-id=clientId\nsecurity.oauth2.client.client-secret=clientSecret\nsecurity.oauth2.client.access-token-uri=accessTokenUri\nsecurity.oauth2.client.user-authorization-uri=userAuthorizationUri\nsecurity.oauth2.client.scope=scope"
+        },
+        {
+          "text": "Configuring OAuth2 Resource Server in Spring Boot Application",
+          "codeSnippet": "security.oauth2.resource.id=resourceId\nsecurity.oauth2.resource.jwt.key-uri=keyUri"
+        },
+        {
+          "text": "Securing Endpoints with OAuth2 in Spring Cloud",
+          "codeSnippet": "@EnableResourceServer\n@Configuration\npublic class ResourceServerConfig extends ResourceServerConfigurerAdapter {\n    @Override\n    public void configure(HttpSecurity http) throws Exception {\n        http.authorizeRequests().antMatchers(\"/api/**\").authenticated();\n    }\n}"
+        },
+        {
+          "text": "Customizing OAuth2 Configuration in Spring Cloud",
+          "codeSnippet": "@Configuration\n@EnableAuthorizationServer\npublic class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {\n    @Override\n    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {\n        clients.inMemory().withClient(\"clientId\").secret(\"clientSecret\").authorizedGrantTypes(\"authorization_code\").scopes(\"read\", \"write\");\n    }\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Load Balancer",
+      "topic_no": 841,
+      "contents": [
+        {
+          "text": "Spring Cloud Load Balancer is a client-side load balancer that allows you to distribute incoming requests to multiple instances of a service.",
+          "codeSnippet": "implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "It provides a simple and flexible way to define load balancing strategies and integrates seamlessly with Spring Cloud applications.",
+          "codeSnippet": "@LoadBalancer",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Spring Cloud Load Balancer supports various load balancing algorithms such as Round Robin, Weighted Response Time, and more.",
+          "codeSnippet": "@Bean\npublic ServiceInstanceListSupplier serviceInstanceListSupplier(DiscoveryClient discoveryClient) {\n    return ServiceInstanceListSupplier.builder()\n            .withDiscoveryClient(discoveryClient)\n            .withSameInstancePreference()\n            .build();\n}",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Bus Kafka",
+      "topic_no": 859,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Bus Kafka",
+          "codeSnippet": "Spring Cloud Bus Kafka is a lightweight event bus implemented with Apache Kafka. It allows microservices in a Spring Cloud application to communicate and coordinate with each other by using a distributed message broker like Kafka.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Setting up Spring Cloud Bus Kafka in a Java Spring Cloud project",
+          "codeSnippet": "To integrate Spring Cloud Bus Kafka in a Java Spring Cloud project, you need to add the necessary dependencies in your pom.xml or build.gradle file and configure the application properties to connect to the Kafka broker.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Creating a Spring Cloud Bus Kafka producer",
+          "codeSnippet": "Here is an example of a Spring Cloud Bus Kafka producer that sends messages to a Kafka topic:",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Creating a Spring Cloud Bus Kafka consumer",
+          "codeSnippet": "Here is an example of a Spring Cloud Bus Kafka consumer that listens for messages on a Kafka topic:",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Implementing message broadcasting with Spring Cloud Bus Kafka",
+          "codeSnippet": "You can use Spring Cloud Bus Kafka to broadcast messages to multiple microservices in a Spring Cloud application. This can be achieved by publishing messages to a shared Kafka topic that all the microservices are subscribed to.",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Vault",
+      "topic_no": 872,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Vault",
+          "codeSnippet": "Spring Cloud Vault provides seamless integration between Spring applications and HashiCorp Vault, a tool for securely managing secrets and sensitive data.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Configuring Spring Cloud Vault",
+          "codeSnippet": "@Configuration\n@EnableConfigurationProperties(VaultProperties.class)\npublic class VaultConfiguration {\n\n    @Bean\n    public VaultEndpoint vaultEndpoint() {\n        return VaultEndpoint.create(\"http://localhost:8200\");\n    }\n\n    @Bean\n    public VaultTemplate vaultTemplate(VaultEndpoint vaultEndpoint) {\n        return new VaultTemplate(vaultEndpoint, new TokenAuthentication(\"my-root-token\"));\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Using Vault Secrets in Spring Cloud",
+          "codeSnippet": "VaultKeyValueOperations keyValueOperations = vaultTemplate.opsForKeyValue(\"my-secrets\", KeyValueBackend.KV_1);\nSecrets secrets = keyValueOperations.get(\"my-secret\", Secrets.class);",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Refreshing Vault Token in Spring Cloud",
+          "codeSnippet": "VaultTokenSupplier tokenSupplier = () -> new TokenAuthentication(\"my-new-token\");\nvaultTemplate.setTokenSupplier(tokenSupplier);",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Stream RabbitMQ",
+      "topic_no": 899,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Stream RabbitMQ",
+          "codeSnippet": "Spring Cloud Stream is a framework for building highly scalable event-driven microservices connected with shared messaging systems. RabbitMQ is a popular message broker that supports multiple messaging protocols. Spring Cloud Stream RabbitMQ binder allows seamless integration between Spring Cloud Stream and RabbitMQ.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Setting up Spring Cloud Stream RabbitMQ in a Java Spring Cloud project",
+          "codeSnippet": "@SpringBootApplication\n@EnableBinding(MyProcessor.class)\npublic class MyApplication {\n\n    public static void main(String[] args) {\n        SpringApplication.run(MyApplication.class, args);\n    }\n\n    interface MyProcessor {\n        @Input\n        SubscribableChannel input();\n\n        @Output\n        MessageChannel output();\n    }",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Creating a Producer in Spring Cloud Stream RabbitMQ",
+          "codeSnippet": "@Service\npublic class MyProducer {\n\n    @Autowired\n    private MyProcessor myProcessor;\n\n    public void sendMessage(String message) {\n        myProcessor.output().send(MessageBuilder.withPayload(message).build());\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Creating a Consumer in Spring Cloud Stream RabbitMQ",
+          "codeSnippet": "@Service\n@EnableBinding(MyProcessor.class)\npublic class MyConsumer {\n\n    @StreamListener(MyProcessor.INPUT)\n    public void handleMessage(String message) {\n        System.out.println(\"Received message: \" + message);\n    }\n}",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Netflix",
+      "topic_no": 914,
+      "contents": [
+        {
+          "text": "Spring Cloud Netflix is a set of libraries that integrate Netflix OSS technologies into Spring Boot applications.",
+          "codeSnippet": "dependencies {\n    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'\n    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'\n}"
+        },
+        {
+          "text": "Eureka is a service registry and discovery server that allows microservices to register themselves and discover other services.",
+          "codeSnippet": "@EnableEurekaClient\n@SpringBootApplication\npublic class Application {\n    public static void main(String[] args) {\n        SpringApplication.run(Application.class, args);\n    }\n}"
+        },
+        {
+          "text": "Ribbon is a client-side load balancer that works well with Eureka for client-side load balancing.",
+          "codeSnippet": "@LoadBalanced\n@Bean\npublic RestTemplate restTemplate() {\n    return new RestTemplate();\n}"
+        },
+        {
+          "text": "Hystrix provides circuit breaker patterns to prevent cascading failures and enable resilience in distributed systems.",
+          "codeSnippet": "@HystrixCommand(fallbackMethod = \"fallbackMethod\")\npublic String serviceCall() {\n    // Service call logic\n}"
+        },
+        {
+          "text": "Zuul is an API gateway that provides dynamic routing, monitoring, resiliency, security, and more.",
+          "codeSnippet": "@EnableZuulProxy\n@SpringBootApplication\npublic class Application {\n    public static void main(String[] args) {\n        SpringApplication.run(Application.class, args);\n    }\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Service Registry Consul",
+      "topic_no": 930,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Service Registry Consul",
+          "codeSnippet": "Spring Cloud Consul is a part of the Spring Cloud project that provides integration with Consul, a distributed service discovery and configuration management tool. It allows services to register themselves and discover other services using Consul's service registry.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Spring Cloud Service Registry Consul in a Java Spring Cloud Application",
+          "codeSnippet": "To use Consul as the service registry in a Java Spring Cloud application, you need to include the 'spring-cloud-starter-consul-discovery' dependency in your project's build file. Additionally, you need to configure the Consul server address in your application properties file.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Registering a Service with Spring Cloud Service Registry Consul",
+          "codeSnippet": "@EnableDiscoveryClient annotation is used to enable service registration and discovery with Consul in a Spring Boot application. You can annotate your main application class with @EnableDiscoveryClient to register the service with the Consul server.",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Discovering Services with Spring Cloud Service Registry Consul",
+          "codeSnippet": "To discover services registered with Consul, you can use the DiscoveryClient interface provided by Spring Cloud. By injecting DiscoveryClient into your service, you can retrieve information about other services registered with Consul.",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Implementing Service Health Checks with Spring Cloud Service Registry Consul",
+          "codeSnippet": "Consul allows you to define health checks for your services. By implementing health checks, Consul can monitor the health of your services and take appropriate actions if a service becomes unhealthy. You can configure health checks in your application properties file.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Security SSO",
+      "topic_no": 951,
+      "contents": [
+        {
+          "text": "Spring Cloud Security SSO provides a seamless way to implement Single Sign-On (SSO) in Java Spring Cloud applications.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "SSO allows users to authenticate once and access multiple applications without the need to log in again.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "Spring Cloud Security SSO integrates with popular identity providers like Okta, Auth0, and Keycloak.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "To enable SSO in a Java Spring Cloud application, you can use Spring Security OAuth2 and configure it to work with your chosen identity provider.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "An example configuration for enabling SSO with Okta in a Spring Cloud application:",
+          "codeSnippet": "@Configuration\n@EnableWebSecurity\npublic class SecurityConfig extends WebSecurityConfigurerAdapter {\n\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n        http\n            .authorizeRequests()\n            .anyRequest().authenticated()\n            .and()\n            .oauth2Login();\n    }\n\n    @Bean\n    public ClientRegistrationRepository clientRegistrationRepository() {\n        return new InMemoryClientRegistrationRepository(this.oktaClientRegistration());\n    }\n\n    private ClientRegistration oktaClientRegistration() {\n        return ClientRegistration.withRegistrationId(\"okta\")\n            .clientId(\"your-okta-client-id\")\n            .clientSecret(\"your-okta-client-secret\")\n            .clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)\n            .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)\n            .redirectUriTemplate(\"{baseUrl}/login/oauth2/code/{registrationId}\")\n            .scope(\"openid\", \"profile\", \"email\")\n            .authorizationUri(\"https://your-okta-domain/oauth2/default/v1/authorize\")\n            .tokenUri(\"https://your-okta-domain/oauth2/default/v1/token\")\n            .userInfoUri(\"https://your-okta-domain/oauth2/default/v1/userinfo\")\n            .userNameAttributeName(IdTokenClaimNames.SUB)\n            .clientName(\"Okta\")\n            .build();\n    }\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Consul",
+      "topic_no": 961,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Consul",
+          "codeSnippet": "Spring Cloud Consul is a part of the Spring Cloud project that provides seamless integration with Consul, a distributed service discovery and configuration management tool. It allows microservices to register themselves, discover other services, and store configuration properties in Consul.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Setting up Spring Cloud Consul in a Java Spring Boot Application",
+          "codeSnippet": "@SpringBootApplication\n@EnableDiscoveryClient\npublic class MyApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApplication.class, args);\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Registering a Service with Spring Cloud Consul",
+          "codeSnippet": "spring.application.name=my-service\nspring.cloud.consul.host=localhost\nspring.cloud.consul.port=8500",
+          "codeLanguage": "properties"
+        },
+        {
+          "text": "Discovering Services with Spring Cloud Consul",
+          "codeSnippet": "RestTemplate restTemplate = new RestTemplate();\nServiceInstance instance = loadBalancer.choose(\"my-service\");\nURI targetUrl = URI.create(instance.getUri().toString() + \"/endpoint\");\nString response = restTemplate.getForObject(targetUrl, String.class);",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Using Configuration Properties from Consul in Spring Cloud",
+          "codeSnippet": "@Value(\"${my.property}\")\nprivate String myProperty;",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Task Batch",
+      "topic_no": 971,
+      "contents": [
+        {
+          "text": "Spring Cloud Task Batch is a framework within Spring Cloud that provides support for creating batch applications.",
+          "codeSnippet": "dependencies {\n    implementation 'org.springframework.cloud:spring-cloud-starter-task'\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Spring Cloud Task Batch allows developers to build and run short-lived microservices that perform batch processing tasks.",
+          "codeSnippet": "@EnableTask\n@SpringBootApplication\npublic class MyBatchApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MyBatchApplication.class, args);\n    }\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Spring Cloud Task Batch provides features such as task execution, task scheduling, and task monitoring.",
+          "codeSnippet": "import org.springframework.cloud.task.configuration.EnableTask;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\nimport org.springframework.boot.SpringApplication;\n@EnableTask\n@SpringBootApplication\npublic class MyBatchApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MyBatchApplication.class, args);\n    }\n}",
+          "codeLanguage": "java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud OpenFeign",
+      "topic_no": 981,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud OpenFeign",
+          "codeSnippet": "Spring Cloud OpenFeign is a declarative web service client that makes writing HTTP clients easier. It integrates with Spring Cloud and allows developers to make API calls as if they were making local method calls.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Creating a Feign Client Interface",
+          "codeSnippet": "@FeignClient(name = \"example-service\")\npublic interface ExampleFeignClient {\n\n    @GetMapping(\"/example\")\n    String getExample();\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Using Feign Client in a Spring Boot Application",
+          "codeSnippet": "@Autowired\nprivate ExampleFeignClient exampleFeignClient;\n\npublic void callExampleService() {\n    String response = exampleFeignClient.getExample();\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Feign Client with Request Mapping",
+          "codeSnippet": "@FeignClient(name = \"example-service\")\npublic interface ExampleFeignClient {\n\n    @RequestMapping(method = RequestMethod.GET, value = \"/example\")\n    String getExample();\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Feign Client Error Handling",
+          "codeSnippet": "Feign provides mechanisms for error handling, such as using custom error decoders or fallback methods to handle exceptions when calling a service fails.",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Load Balancer",
+      "topic_no": 991,
+      "contents": [
+        {
+          "text": "Spring Cloud Load Balancer is a client-side load balancer that provides a simple and flexible way to load balance requests to multiple instances of a service.",
+          "codeSnippet": "dependencies {\n    implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "It is part of the Spring Cloud project and is designed to work seamlessly with other Spring Cloud components.",
+          "codeSnippet": "@LoadBalancer\n@Bean\npublic WebClient.Builder loadBalancedWebClientBuilder() {\n    return WebClient.builder();\n}",
+          "codeLanguage": "java"
+        },
+        {
+          "text": "Spring Cloud Load Balancer uses a pluggable strategy for choosing the next server for each request.",
+          "codeSnippet": "spring:\n  cloud:\n    loadbalancer:\n      ribbon:\n        enabled: false",
+          "codeLanguage": "yaml"
+        },
+        {
+          "text": "It supports different load balancing algorithms such as Round Robin, Weighted Response Time, and more.",
+          "codeSnippet": "spring:\n  cloud:\n    loadbalancer:\n      ribbon:\n        NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule",
+          "codeLanguage": "yaml"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Sleuth with ELK Stack",
+      "topic_no": 1002,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Sleuth with ELK Stack",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Sleuth: Overview",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "ELK Stack: Overview",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Setting up Spring Cloud Sleuth with ELK Stack",
+          "codeSnippet": "dependencies {\n    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'\n}\n",
+          "codeLanguage": "Groovy"
+        },
+        {
+          "text": "Configuring Spring Cloud Sleuth for Logging with ELK Stack",
+          "codeSnippet": "@SpringBootApplication\n@EnableElasticsearchRepositories\npublic class Application {\n    public static void main(String[] args) {\n        SpringApplication.run(Application.class, args);\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Using Spring Cloud Sleuth with ELK Stack for Distributed Tracing",
+          "codeSnippet": "import org.springframework.cloud.sleuth.annotation.NewSpan;\nimport org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.RestController;\n\n@RestController\npublic class MyController {\n    @NewSpan\n    @GetMapping(\"/hello\")\n    public String hello() {\n        return \"Hello, World!\";\n    }\n}",
+          "codeLanguage": "Java"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Contract WireMock",
+      "topic_no": 1009,
+      "contents": [
+        {
+          "text": "Spring Cloud Contract WireMock is a tool that helps in testing interactions between microservices by simulating HTTP-based API responses.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "WireMock is a standalone mock server for HTTP-based APIs that can be used to simulate responses from external services during testing.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Contract WireMock can be integrated with Spring Cloud Contract to define and verify contracts between microservices.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "WireMock allows developers to stub HTTP requests and define custom responses, making it easier to test microservices in isolation.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Spring Cloud Contract WireMock supports defining contract stubs using Groovy DSL or YAML files.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Developers can use WireMock to set up dynamic responses, simulate error scenarios, and test edge cases in their microservices architecture.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Gateway",
+      "topic_no": 1019,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Gateway",
+          "codeSnippet": "Spring Cloud Gateway is a lightweight, open-source gateway built on top of Spring Framework and Spring Boot. It provides a simple and effective way to route requests, apply filters, and manage traffic in a microservices architecture.",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Setting up Spring Cloud Gateway in a Spring Boot application",
+          "codeSnippet": "@SpringBootApplication\n@EnableEurekaClient\n@EnableZuulProxy\npublic class GatewayServiceApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(GatewayServiceApplication.class, args);\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Creating a Route in Spring Cloud Gateway",
+          "codeSnippet": "routes:\n  - id: example_route\n    uri: http://example.com\n    predicates:\n      - Path=/example/**",
+          "codeLanguage": "YAML"
+        },
+        {
+          "text": "Applying Filters in Spring Cloud Gateway",
+          "codeSnippet": "filters:\n  - AddRequestHeader=X-Request-Foo, Bar",
+          "codeLanguage": "YAML"
+        },
+        {
+          "text": "Configuring Load Balancing in Spring Cloud Gateway",
+          "codeSnippet": "routes:\n  - id: example_route\n    uri: lb://example-service\n    predicates:\n      - Path=/example/**",
+          "codeLanguage": "YAML"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Data Flow for Kubernetes",
+      "topic_no": 1029,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Data Flow for Kubernetes",
+          "codeSnippet": "Spring Cloud Data Flow for Kubernetes is a toolkit for building data integration and real-time data processing pipelines on Kubernetes.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Key Features of Spring Cloud Data Flow for Kubernetes",
+          "codeSnippet": "1. Scalability and flexibility\n2. Streamlined deployment on Kubernetes\n3. Integration with various data sources and sinks\n4. Monitoring and management capabilities",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Setting up Spring Cloud Data Flow for Kubernetes",
+          "codeSnippet": "To set up Spring Cloud Data Flow for Kubernetes, you need to deploy the necessary components such as Skipper, Data Flow Server, and the required data processing applications on your Kubernetes cluster.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Creating Data Pipelines with Spring Cloud Data Flow for Kubernetes",
+          "codeSnippet": "You can create data pipelines by defining stream and task applications using Spring Cloud Data Flow DSL and deploying them on Kubernetes.",
+          "codeLanguage": "plaintext"
+        },
+        {
+          "text": "Monitoring and Managing Data Pipelines",
+          "codeSnippet": "Spring Cloud Data Flow for Kubernetes provides monitoring and management capabilities through its dashboard and APIs, allowing you to monitor and manage your data pipelines effectively.",
+          "codeLanguage": "plaintext"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Kubernetes Config",
+      "topic_no": 1036,
+      "contents": [
+        {
+          "text": "Spring Cloud Kubernetes Config is a module in Spring Cloud that provides integration with Kubernetes ConfigMaps and Secrets for managing application configuration in a Kubernetes environment.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "It allows Spring Boot applications to consume configuration properties from ConfigMaps and Secrets stored in Kubernetes, enabling dynamic configuration updates without requiring application restarts.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "To use Spring Cloud Kubernetes Config, you need to add the appropriate dependencies to your Spring Boot project, such as spring-cloud-starter-kubernetes-config.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "You can configure your Spring Boot application to fetch configuration properties from ConfigMaps or Secrets by specifying the property source in your application.properties or application.yml file.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "An example of configuring Spring Cloud Kubernetes Config in your Spring Boot application:",
+          "codeSnippet": "@SpringBootApplication\n@EnableDiscoveryClient\npublic class MyApp {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApp.class, args);\n    }\n}"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Config Server with Vault",
+      "topic_no": 1047,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Config Server with Vault",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Spring Cloud Config Server allows you to store and manage configuration properties for your applications in a centralized manner.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Vault is a tool for securely storing and accessing sensitive data, such as passwords and API keys.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Integrating Spring Cloud Config Server with Vault provides a secure way to manage and retrieve sensitive configuration properties for your applications.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Setting up Spring Cloud Config Server with Vault",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "To set up Spring Cloud Config Server with Vault, you need to configure the Vault server and integrate it with your Spring Cloud Config Server.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "You can use Spring Cloud Vault to interact with Vault from your Spring Boot application.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Configuring Spring Cloud Config Server to use Vault as a backend",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "In your Spring Cloud Config Server application, you can configure it to use Vault as a backend for storing and retrieving configuration properties.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "You can specify the Vault server details and authentication method in the application.properties or application.yml file.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Accessing sensitive configuration properties from Vault in your Spring Boot application",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Once you have configured Spring Cloud Config Server with Vault, you can access sensitive configuration properties securely in your Spring Boot application.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "You can use the @Value annotation or the Environment object to retrieve configuration properties from Vault in your application code.",
+          "codeSnippet": "N/A",
+          "codeLanguage": "N/A"
+        }
+      ]
+    },
+    {
+      "topic": "Spring Cloud Sleuth with Zipkin",
+      "topic_no": 1054,
+      "contents": [
+        {
+          "text": "Introduction to Spring Cloud Sleuth and Zipkin",
+          "codeSnippet": "Spring Cloud Sleuth is a distributed tracing solution for microservices built on top of Spring Cloud. It provides a way to trace requests as they flow through a distributed system. Zipkin is a distributed tracing system that helps gather timing data needed to troubleshoot latency problems in microservice architectures.",
+          "codeLanguage": "N/A"
+        },
+        {
+          "text": "Setting up Spring Cloud Sleuth with Zipkin in a Java Spring Cloud application",
+          "codeSnippet": "@SpringBootApplication\n@EnableEurekaClient\n@EnableFeignClients\n@EnableZuulProxy\n@EnableSleuth\n@EnableZipkin\npublic class MyApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApplication.class, args);\n    }\n}",
+          "codeLanguage": "Java"
+        },
+        {
+          "text": "Configuring Spring Cloud Sleuth to send traces to Zipkin server",
+          "codeSnippet": "spring.zipkin.baseUrl=http://localhost:9411\nspring.sleuth.sampler.probability=1.0",
+          "codeLanguage": "Properties"
+        },
+        {
+          "text": "Using Spring Cloud Sleuth to trace requests in a Java Spring Cloud microservice",
+          "codeSnippet": "@Autowired\nprivate Tracer tracer;\n\npublic void myMethod() {\n    Span newSpan = tracer.nextSpan().name(\"mySpan\").start();\n    try {\n        // Perform some operation\n    } finally {\n        newSpan.finish();\n    }\n}",
+          "codeLanguage": "Java"
+        }
+      ]
+    }
+  ]
+}

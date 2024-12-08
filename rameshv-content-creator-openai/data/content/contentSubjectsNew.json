@@ -1,0 +1,427 @@
+{
+  "topics_count": 1183,
+  "subjects": [
+    {
+      "subject": "DevOps",
+      "categories": [
+        {
+          "category": "Configuration Management",
+          "fileName": "data/content/DevOps/Configuration_Management.json"
+        },
+        {
+          "category": "Asset Management",
+          "fileName": "data/content/DevOps/Asset_Management.json"
+        },
+        {
+          "category": "Advanced Concepts",
+          "fileName": "data/content/DevOps/Advanced_Concepts.json"
+        },
+        {
+          "category": "CI/CD",
+          "fileName": "data/content/DevOps/CICD.json"
+        },
+        {
+          "category": "Containerization",
+          "fileName": "data/content/DevOps/Containerization.json"
+        }
+      ]
+    },
+    {
+      "subject": "Organizational Competencies",
+      "categories": [
+        {
+          "category": "Org. Culture",
+          "fileName": "data/content/Organizational_Competencies/Org_Culture.json"
+        },
+        {
+          "category": "Product Team",
+          "fileName": "data/content/Organizational_Competencies/Product_Team.json"
+        },
+        {
+          "category": "Management",
+          "fileName": "data/content/Organizational_Competencies/Management.json"
+        }
+      ]
+    },
+    {
+      "subject": "Product Engineering",
+      "categories": [
+        {
+          "category": "Change Management",
+          "fileName": "data/content/Product_Engineering/Change_Management.json"
+        },
+        {
+          "category": "Technology & Tools",
+          "fileName": "data/content/Product_Engineering/Technology__Tools.json"
+        },
+        {
+          "category": "Business Process Modeling",
+          "fileName": "data/content/Product_Engineering/Business_Process_Modeling.json"
+        },
+        {
+          "category": "Risk Management",
+          "fileName": "data/content/Product_Engineering/Risk_Management.json"
+        },
+        {
+          "category": "Solution Assessment and Validation",
+          "fileName": "data/content/Product_Engineering/Solution_Assessment_and_Validation.json"
+        },
+        {
+          "category": "Stakeholder Management",
+          "fileName": "data/content/Product_Engineering/Stakeholder_Management.json"
+        },
+        {
+          "category": "Data Analysis",
+          "fileName": "data/content/Product_Engineering/Data_Analysis.json"
+        },
+        {
+          "category": "Requirements Management",
+          "fileName": "data/content/Product_Engineering/Requirements_Management.json"
+        }
+      ]
+    },
+    {
+      "subject": "Programming",
+      "categories": [
+        {
+          "category": "Data Structures & Algorithms",
+          "fileName": "data/content/Programming/Data_Structures__Algorithms.json"
+        },
+        {
+          "category": "Performance Optimization",
+          "fileName": "data/content/Programming/Performance_Optimization.json"
+        },
+        {
+          "category": "Programming Basics",
+          "fileName": "data/content/Programming/Programming_Basics.json"
+        }
+      ]
+    },
+    {
+      "subject": "QA",
+      "categories": [
+        {
+          "category": "QA Automation",
+          "fileName": "data/content/QA/QA_Automation.json"
+        },
+        {
+          "category": "Testing Methodologies",
+          "fileName": "data/content/QA/Testing_Methodologies.json"
+        },
+        {
+          "category": "Testing Tools",
+          "fileName": "data/content/QA/Testing_Tools.json"
+        }
+      ]
+    },
+    {
+      "subject": "Operating Systems",
+      "categories": [
+        {
+          "category": "Process Management",
+          "fileName": "data/content/Operating_Systems/Process_Management.json"
+        },
+        {
+          "category": "Memory Management",
+          "fileName": "data/content/Operating_Systems/Memory_Management.json"
+        },
+        {
+          "category": "Device Management",
+          "fileName": "data/content/Operating_Systems/Device_Management.json"
+        },
+        {
+          "category": "Kernel",
+          "fileName": "data/content/Operating_Systems/Kernel.json"
+        },
+        {
+          "category": "File System",
+          "fileName": "data/content/Operating_Systems/File_System.json"
+        },
+        {
+          "category": "Networking",
+          "fileName": "data/content/Operating_Systems/Networking.json"
+        }
+      ]
+    },
+    {
+      "subject": "Shell Scripting",
+      "categories": [
+        {
+          "category": "Bash Scripting",
+          "fileName": "data/content/Shell_Scripting/Bash_Scripting.json"
+        },
+        {
+          "category": "PowerShell Scripting",
+          "fileName": "data/content/Shell_Scripting/PowerShell_Scripting.json"
+        },
+        {
+          "category": "cmd Scripting",
+          "fileName": "data/content/Shell_Scripting/cmd_Scripting.json"
+        },
+        {
+          "category": "sh Scripting",
+          "fileName": "data/content/Shell_Scripting/sh_Scripting.json"
+        }
+      ]
+    },
+    {
+      "subject": "Security",
+      "categories": [
+        {
+          "category": "Security Operations",
+          "fileName": "data/content/Security/Security_Operations.json"
+        },
+        {
+          "category": "Compliance",
+          "fileName": "data/content/Security/Compliance.json"
+        },
+        {
+          "category": "Security Testing",
+          "fileName": "data/content/Security/Security_Testing.json"
+        },
+        {
+          "category": "Security Operations",
+          "fileName": "data/content/Security/Security_Operations.json"
+        },
+        {
+          "category": "Secure Coding",
+          "fileName": "data/content/Security/Secure_Coding.json"
+        },
+        {
+          "category": "Security Engineering",
+          "fileName": "data/content/Security/Security_Engineering.json"
+        },
+        {
+          "category": "Security Architecture",
+          "fileName": "data/content/Security/Security_Architecture.json"
+        },
+        {
+          "category": "Security Compliance",
+          "fileName": "data/content/Security/Security_Compliance.json"
+        },
+        {
+          "category": "Identity and Access Management",
+          "fileName": "data/content/Security/Identity_and_Access_Management.json"
+        }
+      ]
+    },
+    {
+      "subject": "UX/UI",
+      "categories": [
+        {
+          "category": "Design Concepts",
+          "fileName": "data/content/UXUI/Design_Concepts.json"
+        },
+        {
+          "category": "UI Design Principles",
+          "fileName": "data/content/UXUI/UI_Design_Principles.json"
+        },
+        {
+          "category": "Design Tools",
+          "fileName": "data/content/UXUI/Design_Tools.json"
+        }
+      ]
+    },
+    {
+      "subject": "Architecture & Design",
+      "categories": [
+        {
+          "category": "Design Principles",
+          "fileName": "data/content/Architecture__Design/Design_Principles.json"
+        },
+        {
+          "category": "Design Tools",
+          "fileName": "data/content/Architecture__Design/Design_Tools.json"
+        },
+        {
+          "category": "Design Anti-Patterns",
+          "fileName": "data/content/Architecture__Design/Design_AntiPatterns.json"
+        },
+        {
+          "category": "Design Patterns",
+          "fileName": "data/content/Architecture__Design/Design_Patterns.json"
+        },
+        {
+          "category": "Tech Design - Guidelines",
+          "fileName": "data/content/Architecture__Design/Tech_Design__Guidelines.json"
+        },
+        {
+          "category": "Design - NFRs",
+          "fileName": "data/content/Architecture__Design/Design__NFRs.json"
+        },
+        {
+          "category": "Architecture & Design",
+          "fileName": "data/content/Architecture__Design/Architecture__Design.json"
+        }
+      ]
+    },
+    {
+      "subject": "AI/ML",
+      "categories": [
+        {
+          "category": "Data Science",
+          "fileName": "data/content/AIML/Data_Science.json"
+        },
+        {
+          "category": "AI",
+          "fileName": "data/content/AIML/AI.json"
+        },
+        {
+          "category": "Programming Prompts",
+          "fileName": "data/content/AIML/Programming_Prompts.json"
+        },
+        {
+          "category": "Prompt Engineering",
+          "fileName": "data/content/AIML/Prompt_Engineering.json"
+        },
+        {
+          "category": "ML Operations",
+          "fileName": "data/content/AIML/ML_Operations.json"
+        },
+        {
+          "category": "Prompting Techniques",
+          "fileName": "data/content/AIML/Prompting_Techniques.json"
+        },
+        {
+          "category": "Computer Vision",
+          "fileName": "data/content/AIML/Computer_Vision.json"
+        },
+        {
+          "category": "Machine Learning",
+          "fileName": "data/content/AIML/Machine_Learning.json"
+        },
+        {
+          "category": "Important Pythong Packages",
+          "fileName": "data/content/AIML/Important_Pythong_Packages.json"
+        }
+      ]
+    },
+    {
+      "subject": "Cloud Service Providers",
+      "categories": [
+        {
+          "category": "Hetzner Cloud",
+          "fileName": "data/content/Cloud_Service_Providers/Hetzner_Cloud.json"
+        },
+        {
+          "category": "GCP",
+          "fileName": "data/content/Cloud_Service_Providers/GCP.json"
+        },
+        {
+          "category": "DigitalOcean",
+          "fileName": "data/content/Cloud_Service_Providers/DigitalOcean.json"
+        },
+        {
+          "category": "Cloud Native Architecture",
+          "fileName": "data/content/Cloud_Service_Providers/Cloud_Native_Architecture.json"
+        },
+        {
+          "category": "AWS",
+          "fileName": "data/content/Cloud_Service_Providers/AWS.json"
+        },
+        {
+          "category": "Azure",
+          "fileName": "data/content/Cloud_Service_Providers/Azure.json"
+        }
+      ]
+    },
+    {
+      "subject": "Programming Languages",
+      "categories": [
+        {
+          "category": "Perl",
+          "fileName": "data/content/Programming_Languages/Perl.json"
+        },
+        {
+          "category": "PHP",
+          "fileName": "data/content/Programming_Languages/PHP.json"
+        },
+        {
+          "category": "Visual Basic",
+          "fileName": "data/content/Programming_Languages/Visual_Basic.json"
+        },
+        {
+          "category": "C",
+          "fileName": "data/content/Programming_Languages/C.json"
+        },
+        {
+          "category": "CPlusPlus",
+          "fileName": "data/content/Programming_Languages/CPlusPlus.json"
+        },
+        {
+          "category": "Python",
+          "fileName": "data/content/Programming_Languages/Python.json"
+        },
+        {
+          "category": "Java",
+          "fileName": "data/content/Programming_Languages/Java.json"
+        },
+        {
+          "category": "CSharp",
+          "fileName": "data/content/Programming_Languages/CSharp.json"
+        },
+        {
+          "category": "JavaScript",
+          "fileName": "data/content/Programming_Languages/JavaScript.json"
+        }
+      ]
+    },
+    {
+      "subject": "Technologies",
+      "categories": [
+        {
+          "category": "JS Frameworks",
+          "fileName": "data/content/Technologies/JS_Frameworks.json"
+        },
+        {
+          "category": "Data Layer",
+          "fileName": "data/content/Technologies/Data_Layer.json"
+        },
+        {
+          "category": "Cloud Layer",
+          "fileName": "data/content/Technologies/Cloud_Layer.json"
+        },
+        {
+          "category": "ASP.NET MVC Controllers",
+          "fileName": "data/content/Technologies/ASPNET_MVC_Controllers.json"
+        },
+        {
+          "category": "NodeJS - server",
+          "fileName": "data/content/Technologies/NodeJS__server.json"
+        },
+        {
+          "category": "ASP.NET Core 6",
+          "fileName": "data/content/Technologies/ASPNET_Core_6.json"
+        },
+        {
+          "category": "Java Spring Cloud",
+          "fileName": "data/content/Technologies/Java_Spring_Cloud.json"
+        },
+        {
+          "category": "Java Springboot",
+          "fileName": "data/content/Technologies/Java_Springboot.json"
+        },
+        {
+          "category": "NodeJs",
+          "fileName": "data/content/Technologies/NodeJs.json"
+        },
+        {
+          "category": "UI Layer",
+          "fileName": "data/content/Technologies/UI_Layer.json"
+        },
+        {
+          "category": "DOTNET",
+          "fileName": "data/content/Technologies/DOTNET.json"
+        },
+        {
+          "category": "ASP.NET Web API",
+          "fileName": "data/content/Technologies/ASPNET_Web_API.json"
+        },
+        {
+          "category": "PHP – Laravel",
+          "fileName": "data/content/Technologies/PHP__Laravel.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "category": "CI/CD",
+  "topics": [
+    {
+      "topic": "CI/CD",
+      "topic_no": 78,
+      "contents": [
+        {
+          "text": "Build, Backup, Deploy, Run",
+          "codeSnippet": "pipeline { \n  agent any \n  stages { \n    stage('Build') { \n      steps { \n        // Build your application here \n      } \n    } \n    stage('Backup') { \n      steps { \n        // Backup your application here \n      } \n    } \n    stage('Deploy') { \n      steps { \n        // Deploy your application here \n      } \n    } \n    stage('Run') { \n      steps { \n        // Run your application here \n      } \n    } \n  } \n}",
+          "codeLanguage": "Groovy"
+        },
+        {
+          "text": "Continuous Delivery is a software development practice where code changes are automatically built, tested, and deployed to production environments. It aims to deliver code changes to customers as quickly and efficiently as possible.",
+          "codeSnippet": "pipeline {\n    agent any\n    stages {\n        stage('Build') {\n            steps {\n                // Build the project\n            }\n        }\n        stage('Test') {\n            steps {\n                // Run automated tests\n            }\n        }\n        stage('Deploy') {\n            steps {\n                // Deploy to production\n            }\n        }\n    }\n}",
+          "codeLanguage": "Groovy"
+        },
+        {
+          "text": "CI/CD Concepts cover the practices and principles of Continuous Integration and Continuous Deployment in the field of DevOps. It involves automating the process of integrating code changes, testing them, and deploying them to production environments in a rapid and reliable manner.",
+          "codeSnippet": "pipeline {\n    agent any\n    stages {\n        stage('Build') {\n            steps {\n                sh 'mvn clean package'\n            }\n        }\n        stage('Test') {\n            steps {\n                sh 'mvn test'\n            }\n        }\n        stage('Deploy') {\n            steps {\n                sh 'kubectl apply -f deployment.yaml'\n            }\n        }\n    }\n}",
+          "codeLanguage": "Groovy"
+        },
+        {
+          "text": "CI/CD stands for Continuous Integration/Continuous Deployment.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CI/CD is a set of practices and tools that enable development teams to deliver code changes more frequently and reliably.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Continuous Integration (CI) is the practice of automatically testing and integrating code changes into a shared repository multiple times a day.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Continuous Deployment (CD) is the practice of automatically deploying code changes to production or staging environments after passing automated tests.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CI/CD pipelines automate the process of building, testing, and deploying code changes, ensuring consistency and efficiency in software delivery.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Popular CI/CD tools include Jenkins, GitLab CI/CD, CircleCI, and Travis CI.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "CI/CD helps teams to detect and fix integration errors early in the development process, leading to higher code quality and faster delivery.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Jenkins",
+      "topic_no": 166,
+      "contents": [
+        {
+          "text": "What is Jenkins?",
+          "codeSnippet": "Jenkins is an open-source automation server that helps automate the non-human part of the software development process, with continuous integration and facilitating technical aspects of continuous delivery."
+        },
+        {
+          "text": "Why is Jenkins important in CI/CD?",
+          "codeSnippet": "Jenkins plays a crucial role in CI/CD pipelines by automating the build, test, and deployment processes, enabling teams to deliver software more frequently and reliably."
+        },
+        {
+          "text": "How does Jenkins work?",
+          "codeSnippet": "Jenkins works by pulling code from repositories, building and testing the code, and then deploying it to the target environment based on predefined workflows."
+        },
+        {
+          "text": "What are the key features of Jenkins?",
+          "codeSnippet": "Key features of Jenkins include easy installation, extensive plugin support, distributed builds, and the ability to configure pipelines as code."
+        },
+        {
+          "text": "What is a Jenkins pipeline?",
+          "codeSnippet": "A Jenkins pipeline is a set of automated steps that define the software delivery process, allowing for the creation of complex workflows as code."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "category": "Prompt Engineering",
+  "topics": [
+    {
+      "topic": "Basics of Prompting",
+      "topic_no": 2,
+      "contents": [
+        {
+          "text": "Introduction to Prompting in AI/ML",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "What is Prompt Engineering?",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Benefits of Using Prompts in AI/ML",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of Prompts in AI/ML",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to Construct Effective Prompts",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best Practices for Prompting in AI/ML",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Prompt Design Principles",
+      "topic_no": 59,
+      "contents": [
+        {
+          "text": "1. Clarity and Simplicity: Prompts should be clear, concise, and easy to understand for users.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "2. Contextual Relevance: Prompts should be relevant to the user's current task or context to provide meaningful assistance.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "3. Personalization: Prompts can be personalized based on user preferences or behavior to enhance user experience.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "4. Responsiveness: Prompt systems should respond promptly to user inputs or requests to maintain engagement.",
+          "codeSnippet": ""
+        },
+        {
+          "text": "5. Consistency: Prompts should follow a consistent design language and style to create a cohesive user experience.",
+          "codeSnippet": ""
+        }
+      ]
+    },
+    {
+      "topic": "Advanced Prompt Techniques",
+      "topic_no": 113,
+      "contents": [
+        {
+          "text": "Introduction to Advanced Prompt Techniques in Prompt Engineering for AI/ML"
+        },
+        {
+          "text": "Understanding the importance of advanced prompt techniques in improving model performance"
+        },
+        {
+          "text": "Implementing advanced prompt techniques such as prefix tuning and prompt engineering for better AI/ML model results",
+          "codeSnippet": "model = GPT2LMHeadModel.from_pretrained('gpt2')"
+        },
+        {
+          "text": "Exploring the use of advanced prompt techniques to fine-tune language models for specific tasks"
+        },
+        {
+          "text": "Utilizing advanced prompt techniques to generate more accurate and contextually relevant AI/ML outputs",
+          "codeSnippet": "tokenizer = GPT2Tokenizer.from_pretrained('gpt2')"
+        },
+        {
+          "text": "Applying advanced prompt techniques to enhance the capabilities of AI/ML models in various domains"
+        },
+        {
+          "text": "Experimenting with advanced prompt techniques to optimize model inputs and outputs for better performance"
+        }
+      ]
+    },
+    {
+      "topic": "Evaluation Metrics",
+      "topic_no": 194,
+      "contents": [
+        {
+          "text": "Accuracy: Measures the proportion of true positive and true negative predictions out of all predictions made.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Precision: Measures the proportion of true positive predictions out of all positive predictions made.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Recall: Measures the proportion of true positive predictions out of all actual positive instances.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "F1 Score: Harmonic mean of precision and recall, provides a balance between the two metrics.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Mean Squared Error (MSE): Measures the average of the squares of the errors or the difference between predicted and actual values.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Root Mean Squared Error (RMSE): Square root of the MSE, provides the error in the same units as the target variable.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        },
+        {
+          "text": "Confusion Matrix: A table that summarizes the performance of a classification model, showing the counts of true positive, true negative, false positive, and false negative predictions.",
+          "codeSnippet": null,
+          "codeLanguage": null
+        }
+      ]
+    },
+    {
+      "topic": "Bias and Fairness",
+      "topic_no": 239,
+      "contents": [
+        {
+          "text": "Understanding Bias in AI/ML",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Types of Bias in AI/ML",
+          "example": "Gender bias in a facial recognition system",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Mitigating Bias in AI/ML",
+          "example": "Using balanced datasets to reduce bias",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Evaluating Fairness in AI/ML Models",
+          "example": "Assessing the impact of a loan approval model on different demographic groups",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Fairness Metrics in AI/ML",
+          "example": "Calculating disparate impact in hiring algorithms",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Domain-Specific Prompting",
+      "topic_no": 277,
+      "contents": [
+        {
+          "text": "Domain-Specific Prompting is a technique used in Prompt Engineering to tailor prompts for specific domains or tasks."
+        },
+        {
+          "text": "For example, in a medical domain, prompts can be customized to generate relevant text for medical reports or diagnoses."
+        },
+        {
+          "text": "To implement Domain-Specific Prompting, one can create specialized prompt templates that are fine-tuned for the desired domain."
+        },
+        {
+          "text": "These templates can include domain-specific keywords or phrases to guide the AI model in generating accurate outputs."
+        },
+        {
+          "text": "Code snippet: \n\nprompt = 'Medical report:'\noutput = model.generate(prompt, max_length=100)"
+        },
+        {
+          "text": "Code Language: Python"
+        }
+      ]
+    },
+    {
+      "topic": "Interactive Prompting",
+      "topic_no": 308,
+      "contents": [
+        {
+          "text": "Interactive prompting is a technique used in AI/ML to engage users in a dialogue-like manner to gather information or provide recommendations."
+        },
+        {
+          "text": "It involves presenting users with prompts or questions and dynamically adjusting subsequent prompts based on user responses."
+        },
+        {
+          "text": "Interactive prompting can be used in chatbots, recommendation systems, and data collection applications."
+        },
+        {
+          "text": "It allows for a more personalized and tailored user experience by adapting to user input in real-time."
+        },
+        {
+          "text": "Interactive prompting can improve user engagement and satisfaction by providing a more conversational interaction."
+        },
+        {
+          "text": "In AI/ML, interactive prompting is often implemented using natural language processing techniques to understand and generate responses."
+        },
+        {
+          "text": "Interactive prompting can also be used for active learning, where the system asks users for labels or feedback to improve model performance."
+        }
+      ]
+    },
+    {
+      "topic": "Prompting for Creativity",
+      "topic_no": 333,
+      "contents": [
+        {
+          "text": "Introduction to Prompt Engineering in AI/ML",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the Importance of Prompting for Creativity in AI/ML models",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Different Techniques for Prompting Creativity in AI/ML models",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Exploring the Role of GPT-3 in Prompt Engineering for Creativity",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Implementing Prompt Engineering Strategies for Creative AI/ML Outputs",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Prompting for Knowledge Retrieval",
+      "topic_no": 364,
+      "contents": [
+        {
+          "text": "Introduction to Prompt Engineering in AI/ML",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Understanding the concept of Prompting for Knowledge Retrieval",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Different types of prompts used for knowledge retrieval in AI/ML",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "How to design effective prompts for knowledge retrieval tasks",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Best practices for creating prompts to improve knowledge retrieval accuracy",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Future Directions",
+      "topic_no": 424,
+      "contents": [
+        {
+          "text": "Future Directions in AI/ML include advancements in deep learning models such as Transformers and GANs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        },
+        {
+          "text": "Research in Prompt Engineering aims to improve the efficiency and effectiveness of AI/ML models by providing better context and guidance for generating outputs.",
+          "codeSnippet": "",
+          "codeLanguage": ""
+        }
+      ]
+    },
+    {
+      "topic": "Case Studies",
+      "topic_no": 446,
+      "contents": [
+        {
+          "text": "Introduction to Case Studies in AI/ML for Prompt Engineering"
+        },
+        {
+          "text": "Importance of Case Studies in AI/ML for Prompt Engineering"
+        },
+        {
+          "text": "Real-world Applications of Case Studies in AI/ML for Prompt Engineering"
+        },
+        {
+          "text": "Best Practices for Conducting Case Studies in AI/ML for Prompt Engineering"
+        },
+        {
+          "text": "Steps to Create and Analyze Case Studies in AI/ML for Prompt Engineering"
+        },
+        {
+          "text": "Utilizing Case Studies to Improve AI/ML Models in Prompt Engineering"
+        },
+        {
+          "text": "Challenges Faced in Implementing Case Studies in AI/ML for Prompt Engineering"
+        },
+        {
+          "text": "Future Trends and Innovations in Case Studies for AI/ML in Prompt Engineering"
+        }
+      ]
+    }
+  ]
+}
