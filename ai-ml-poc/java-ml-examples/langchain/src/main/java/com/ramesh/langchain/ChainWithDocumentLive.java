@@ -25,7 +25,7 @@ import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
 public class ChainWithDocumentLive {
 
 	// Open AI Key and Chat GPT Model to use
-	public static String OPENAI_API_KEY = "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";
+	public static String OPENAI_API_KEY = "";
 	public static String OPENAI_MODEL = "gpt-3.5-turbo";
 
     public static void main(String[] args) {
