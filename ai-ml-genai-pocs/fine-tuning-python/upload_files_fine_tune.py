@@ -7,10 +7,6 @@ import signal
 import datetime
 from openai import OpenAI
 
-
-
-API_KEY = "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"
-
 # embedding model parameters	
 GPT_MODEL = "gpt-4-turbo"
 
