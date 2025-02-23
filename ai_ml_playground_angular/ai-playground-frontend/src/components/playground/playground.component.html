@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Script Playground</h2>
+
+  <button *ngFor="let project of projects" (click)="executeScript(project)">
+    {{ project }}
+  </button>
+
+  <h3>Output</h3>
+  <pre>{{ output }}</pre>
+</div>

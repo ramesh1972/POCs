@@ -1,0 +1,12 @@
+.user-tile-container {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.1;
+    color: #333;
+    padding: 20px;  
+    text-align: left;
+    border: 3px dashed blue;
+    background-color: aqua;
+  }
+  

@@ -1,0 +1,36 @@
+.common-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.common-header {
+  width: fit-content;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.migration-notes .title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.list {
+  margin-left: 20px;
+}
+
+.code-block {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.section {
+  margin-bottom: 20px;
+}

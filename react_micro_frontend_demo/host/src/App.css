@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 20px;
+}
+
+.nav {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 3px solid #aaa;
+}
+
+.nav li {
+  margin-right: -6px;
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+  z-index: 1;
+}
+
+.nav a.active {
+  display: block;
+  border-color: #ccc #ccc #aaa;
+  background-color: lightgreen;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.nav a.inactive {
+  display: block;
+  z-index: 1;
+}
+
+
+.content{
+  display: flex;
+  height: calc(100vh - 160px);
+}
+.content > *{
+  flex:1 50%;
+}
+
+.footer-container{
+  position: fixed;
+  bottom: 0;
+  height:100px;
+  width: 100%;
+}

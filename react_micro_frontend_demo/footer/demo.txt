@@ -1,0 +1,16 @@
+1) Demo of MFE host application & contained MFE applications
+2) Demo of a Shared MFE application that contains
+    a) shared components (like AboutComponent)
+    b) shared styles (like the yellow title headers in each MFE)
+    c) shared assets (like images)
+    d) shared javascript functions (like dateUtils.js, pathUtils.js)
+3) Demo of Loading a Svelte MFE application within the React Host MFE application
+
+4) Demo of Static & Lazy Loading of MFEs
+5) Demo of Lazy Loading a Specific Component (e.g AboutComponent) from another MFE application (e.g. Shared MFE application)
+
+6) Demo of a Global store using "redux-micro-frontend" npm package from Microsoft. This enables sharing of,
+    a) a global store
+    b) local store, local to a particular MFE application and accesed as partner stores in other MFE applcations
+    c) real-time store state changes. Reactive stores. e.g. when a user is added in UserManagement commponent in UserManagment MFE application, the DashBoard MFE Component in the host MFE application automatically receives updates to users
+    d) demo of accesing store data on load of a component in SPA scenarios of component mounting/unmounting by listening to the whole store object for changes

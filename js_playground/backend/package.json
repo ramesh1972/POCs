@@ -1,0 +1,16 @@
+{
+  "name": "js-playground-backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Self-hosted JavaScript Playground Backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.4.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
