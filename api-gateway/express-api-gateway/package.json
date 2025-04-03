@@ -1,5 +1,5 @@
 {
-  "name": "my-poc-gateway",
+  "name": "express-api-gateway",
   "description": "Express Gateway Instance Bootstraped from Command Line",
   "repository": {},
   "license": "UNLICENSED",
@@ -7,5 +7,8 @@
   "main": "server.js",
   "dependencies": {
     "express-gateway": "^1.16.11"
+  },
+  "scripts": {
+    "start": "express-gateway start"
   }
 }
