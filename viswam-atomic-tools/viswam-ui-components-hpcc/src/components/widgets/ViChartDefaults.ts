@@ -1,0 +1,27 @@
+import type { ChartType } from "./ViChartWidget";
+
+export const defaultChartData: Record<ChartType, { columns?: string[]; data?: unknown[][] | number[] | number }> = {
+    area: { columns: ["X", "Y"], data: [[1, 10], [2, 20], [3, 15]] },
+    bar: { columns: ["Category", "Value"], data: [["A", 10], ["B", 20], ["C", 15]] },
+    bubble: { columns: ["X", "Y", "Size"], data: [[1, 10, 5], [2, 20, 10], [3, 15, 8]] },
+    bullet: { columns: ["Title", "Subtitle", "Rangemax", "Actual", "Target"], data: [["Revenue", "US$, in thousands", 300, 270, 250]] },
+    column: { columns: ["Category", "Value"], data: [["A", 10], ["B", 20], ["C", 15]] },
+    contour: { columns: ["X", "Y", "Z"], data: [[1, 1, 10], [2, 2, 20], [3, 3, 15]] },
+    gantt: { columns: ["Task", "Start", "End"], data: [["Task 1", "2023-01-01", "2023-01-10"]] },
+    gauge: { columns: ["Value"], data: [75] },
+    halfpie: { columns: ["Category", "Value"], data: [["A", 10], ["B", 20], ["C", 15]] },
+    heat: { columns: ["X", "Y", "Value"], data: [[1, 1, 10], [2, 2, 20], [3, 3, 15]] },
+    hexbin: { columns: ["X", "Y"], data: [[1, 1], [2, 2], [3, 3]] },
+    line: { columns: ["X", "Y"], data: [[1, 10], [2, 20], [3, 15]] },
+    pie: { columns: ["Category", "Value"], data: [["A", 10], ["B", 20], ["C", 15]] },
+    quarterpie: { columns: ["Category", "Value"], data: [["A", 10], ["B", 20], ["C", 15]] },
+    quartilecandlestick: { columns: ["Category", "Low", "Q1", "Median", "Q3", "High"], data: [["A", 5, 10, 15, 20, 25]] },
+    radar: { columns: ["Category", "Value"], data: [["A", 10], ["B", 20], ["C", 15]] },
+    radialbar: { columns: ["Category", "Value"], data: [["A", 10], ["B", 20], ["C", 15]] },
+    scatter: { columns: ["X", "Y"], data: [[1, 10], [2, 20], [3, 15]] },
+    statchart: { columns: ["Category", "Value"], data: [["A", 10], ["B", 20], ["C", 15]] },
+    step: { columns: ["X", "Y"], data: [[1, 10], [2, 20], [3, 15]] },
+    summary: { columns: ["Category", "Value"], data: [["A", 10], ["B", 20], ["C", 15]] },
+    wordcloud: { columns: ["Word", "Weight"], data: [["React", 10], ["Vite", 8], ["HPCC", 6]] },
+    xyaxis: { columns: ["X", "Y"], data: [[1, 10], [2, 20], [3, 15]] },
+};
