@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" style="height: 100%;">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+  <link rel="manifest" href="./manifest.json">
+
+  <title>web-component-designer-demo</title>
+
+  <script type="esms-options">
+    {
+      "shimMode": true
+    }
+  </script>
+  <script src="./node_modules/es-module-shims/dist/es-module-shims.js"></script>
+  <script>
+    const importMap = {
+      imports: {
+        "jquery": "./node_modules/jquery/dist/jquery.min.js",
+        "jquery.fancytree": "./node_modules/jquery.fancytree/dist/jquery.fancytree-all-deps.min.js",
+        "jquery.fancytree/": "./node_modules/jquery.fancytree/",
+        "monaco-editor/": "./node_modules/monaco-editor/",
+        "monaco-editor": "./node_modules/monaco-editor/esm/vs/editor/editor.main.js",
+        "@node-projects/web-component-designer": "./node_modules/@node-projects/web-component-designer/dist/index.js",
+        "@node-projects/web-component-designer/": "./node_modules/@node-projects/web-component-designer/",
+        "@adobe/css-tools": "./node_modules/@adobe/css-tools/dist/index.mjs",
+        "dock-spawn-ts/": "./node_modules/dock-spawn-ts/",
+        "@node-projects/base-custom-webcomponent/": "./node_modules/@node-projects/base-custom-webcomponent/",
+        "@node-projects/base-custom-webcomponent": "./node_modules/@node-projects/base-custom-webcomponent/dist/index.js",
+        "@node-projects/lean-he-esm/": "./node_modules/@node-projects/lean-he-esm/",
+        "codemirror/": "./node_modules/codemirror/",
+        "@node-projects/node-html-parser-esm": "./node_modules/@node-projects/node-html-parser-esm/dist/index.js",
+        "@node-projects/web-component-designer-htmlparserservice-nodehtmlparser": "./node_modules/@node-projects/web-component-designer-htmlparserservice-nodehtmlparser/dist/service/htmlParserService/NodeHtmlParserService.js",
+        "@node-projects/web-component-designer-htmlparserservice-nodehtmlparser/": "./node_modules/@node-projects/web-component-designer-htmlparserservice-nodehtmlparser/",
+        "@node-projects/web-component-designer-codeview-monaco": "./node_modules/@node-projects/web-component-designer-codeview-monaco/dist/widgets/codeView/code-view-monaco.js",
+        "@node-projects/web-component-designer-codeview-monaco/": "./node_modules/@node-projects/web-component-designer-codeview-monaco/",
+        "@node-projects/web-component-designer-codeview-ace": "./node_modules/@node-projects/web-component-designer-codeview-ace/dist/widgets/codeView/code-view-ace.js",
+        "@node-projects/web-component-designer-codeview-ace/": "./node_modules/@node-projects/web-component-designer-codeview-ace/",
+        "@node-projects/web-component-designer-texteditextension-stylo": "./node_modules/@node-projects/web-component-designer-texteditextension-stylo/dist/index.js",
+        "@node-projects/web-component-designer-texteditextension-stylo/": "./node_modules/@node-projects/web-component-designer-texteditextension-stylo/",
+        "@node-projects/web-component-designer-stylesheetservice-css-tools": "./node_modules/@node-projects/web-component-designer-stylesheetservice-css-tools/dist/service/stylesheetservice/CssToolsStylesheetService.js",
+        "@node-projects/web-component-designer-stylesheetservice-css-tools/": "./node_modules/@node-projects/web-component-designer-stylesheetservice-css-tools/",
+        "@node-projects/web-component-designer-widgets-fancytree": "./node_modules/@node-projects/web-component-designer-widgets-fancytree/dist/index.js",
+        "@node-projects/web-component-designer-widgets-fancytree/": "./node_modules/@node-projects/web-component-designer-widgets-fancytree/",
+        "@node-projects/web-component-designer-widgets-wunderbaum": "./node_modules/@node-projects/web-component-designer-widgets-wunderbaum/dist/index.js",
+        "@node-projects/web-component-designer-widgets-wunderbaum/": "./node_modules/@node-projects/web-component-designer-widgets-wunderbaum/",
+        "wunderbaum": "./node_modules/wunderbaum/dist/wunderbaum.esm.min.js",
+        "wunderbaum/": "./node_modules/wunderbaum/",
+      }
+    };
+    //@ts-ignore
+    importShim.addImportMap(importMap);
+  </script>
+
+  <link rel="stylesheet" href="./node_modules/dock-spawn-ts/lib/css/dock-manager-context-menu.css">
+
+  <!-- Drag/Drop support on touch devices -->
+  <link rel="stylesheet" href="./node_modules/mobile-drag-drop/default.css">
+  <script src="./node_modules/mobile-drag-drop/index.js"></script>
+  <script>
+    MobileDragDrop.polyfill({
+      forceApply: !!(navigator.maxTouchPoints && navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome'))
+    });
+  </script>
+
+  <!-- if you use Moacco Editor -->
+  <script src="./node_modules/monaco-editor/min/vs/loader.js"></script>
+  <script>
+    require.config({ paths: { 'vs': 'node_modules/monaco-editor/min/vs', 'vs/css': { disabled: true } } });
+    require(['vs/editor/editor.main'], () => {
+      monaco.editor.setTheme('vs-dark');
+    });    
+  </script>
+
+  <!-- if you use ACE Editor -->
+  <!--
+  <script src="./node_modules/ace-builds/src-min-noconflict/ace.js"></script>
+  <script src="./node_modules/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
+  -->
+
+  <!-- if you use Code Mirror Editor -->
+  <!--
+  <script src="./node_modules/codemirror/lib/codemirror.js"></script>
+  <script src="./node_modules/codemirror/mode/xml/xml.js"></script>
+  -->
+
+  <script type="module">
+    importShim('dock-spawn-ts/lib/js/webcomponent/DockSpawnTsWebcomponent.js');
+    importShim('./node_modules/@node-projects/web-component-designer/dist/index.js');
+    importShim('./dist/appShell.js');
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', 'Noto', sans-serif;
+      line-height: 1.5;
+      background-color: white;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    .lds-facebook {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: calc(50% - 40px);
+      top: calc(50% - 40px);
+    }
+
+    .lds-facebook div {
+      animation-duration: 1s !important;
+      animation-iteration-count: infinite !important;
+      display: inline-block;
+      position: absolute;
+      left: 8px;
+      width: 16px;
+      background: black;
+      animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+
+    .lds-facebook div:nth-child(1) {
+      left: 8px;
+      animation-delay: -0.24s;
+    }
+
+    .lds-facebook div:nth-child(2) {
+      left: 32px;
+      animation-delay: -0.12s;
+    }
+
+    .lds-facebook div:nth-child(3) {
+      left: 56px;
+      animation-delay: 0;
+    }
+
+    .tool-button[disabled]>div {
+      opacity: 0.2;
+    }
+
+    .tool-button>div {
+      width: 100%;
+      height: 100%;
+    }
+
+    @keyframes lds-facebook {
+      0% {
+        top: 8px;
+        height: 64px;
+      }
+
+      50%,
+      100% {
+        top: 24px;
+        height: 32px;
+      }
+    }
+  </style>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    nav {
+      background: rgb(44, 46, 53);
+      display: flex;
+      height: 38px;
+      padding: 5px;
+      gap: 0;
+      color: #98a1a8;
+    }
+
+    nav div {
+      display: flex;
+      align-items: center;
+      font-family: monospace;
+    }
+
+    nav button {
+      border: none;
+      background: transparent;
+    }
+
+    /* https://codepen.io/sosuke/pen/Pjoqqp - css filter generator */
+    nav button img {
+      height: 24px;
+      filter: invert(68%) sepia(15%) saturate(133%) hue-rotate(169deg) brightness(91%) contrast(91%);
+    }
+
+    nav button[disabled] img {
+      filter: invert(38%) sepia(1%) saturate(0%) hue-rotate(211deg) brightness(94%) contrast(85%);
+    }
+
+    nav button:not([disabled]) img:hover {
+      filter: invert(100%) sepia(2%) saturate(7432%) hue-rotate(100deg) brightness(112%) contrast(94%);
+    }
+
+    nav button:not([disabled]) img:active {
+      filter: invert(41%) sepia(92%) saturate(1090%) hue-rotate(335deg) brightness(99%) contrast(93%);
+    }
+  </style>
+</head>
+
+<body style="height: 100%;">
+  <nav>
+    <button data-command="new" title="new"><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/file.svg"></button>
+    <button data-command="save" title="save" disabled><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/save.svg"></button>
+    <div style="margin-left: 30px;">
+      web-component-designer
+    </div>
+    <button style="margin-left: 30px;" data-command="paste" title="paste" disabled><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/paste.svg"></button>
+    <button data-command="cut" title="cut" disabled><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/cut.svg"></button>
+    <button data-command="copy" title="copy" disabled><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/copy.svg"></button>
+    <button data-command="delete" title="delete" disabled><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/delete.svg"></button>
+    <button ondragstart="return false;" style="margin-left: 10px;" data-command="undo" disabled title="click and hold to see the undo list"><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/undo.svg"></button>
+    <button ondragstart="return false;" data-command="redo" disabled title="click and hold to see the redo list"><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/redo.svg"></button>
+    <button style="margin-left: 10px;" data-command="screenshot"><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/screenshot.svg"></button>
+    <button style="margin-left: 10px;" data-command="github"><img
+        src="./node_modules/@node-projects/web-component-designer/assets/icons/github.svg"></button>
+  </nav>
+  <node-projects-app-shell id="shell" style="height: calc(100% - 38px); width: 100%; position: absolute;">
+  </node-projects-app-shell>
+  <div id="load"
+    style="position: absolute; width: 100%; height: 100%; z-index: 9999999999; top: 0; left: 0; background: white;">
+    <div class="lds-facebook">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</body>
+
+<script>
+  window.onload = () => {
+    document.getElementById('load').style.display = 'none';
+  }
+</script>
+
+</html>
