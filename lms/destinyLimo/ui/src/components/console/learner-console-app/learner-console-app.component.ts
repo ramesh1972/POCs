@@ -11,7 +11,7 @@ import { LearnerDefaultLayoutComponent } from './layout';
   selector: 'app-learner-console-root',
   template: '<app-learner-dashboard></app-learner-dashboard>',
   standalone: true,
-  imports: [RouterOutlet, LearnerDefaultLayoutComponent]
+  imports: [LearnerDefaultLayoutComponent]
 })
 export class LearnerConsoleAppComponent implements OnInit {
   title = 'Destiny Limo LMS - Learner\'s Console';

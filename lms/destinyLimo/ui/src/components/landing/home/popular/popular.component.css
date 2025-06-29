@@ -13,18 +13,39 @@
     row-gap: normal;
 }
 
+
+.spaced-item {
+    margin-bottom: 20px;
+    /* Adjust the value as needed */
+}
+
+
 .cat-card {
-    width: 30%;
+    display: flex;
+    flex-direction: column;
     width: 300px;
     height: 200px;
     background-color: rgb(182, 239, 182, .7);
     border: 6px white solid;
     border-radius: 10px;
-      box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px 2px;
+    row-gap: 20px;
+    justify-content: flex-start;
+    padding: 12px;
 }
 
-.spaced-item {
-    margin-bottom: 20px; /* Adjust the value as needed */
+.popular-card-title {
+    font-size: 18px;
+    color: black;
+    -webkit-text-emphasis: blue;
+    text-emphasis: blue;
+}
+
+.popular-card-body {
+    position: relative;
+    text-wrap: wrap;
+    text-wrap-mode: wrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 800px) {

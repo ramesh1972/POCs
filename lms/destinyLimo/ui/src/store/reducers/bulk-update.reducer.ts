@@ -1,7 +1,6 @@
 // // import the interface
 import { createReducer, on } from '@ngrx/store';
 
-import { Content } from '../models/Content';
 import { BulkUpdateState } from '../states/bulk-update.state';
 import { bulkUpdate_Success, bulkUpdate_Failure } from '../actions/bulk-update.action';
 

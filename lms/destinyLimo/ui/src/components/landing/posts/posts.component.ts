@@ -23,7 +23,8 @@ import { invokeContentFetchAPI, contentFetchAPI_Success, invokeContentCreateAPI,
 import { selectContents, selectPosts } from '@src/store/selectors/content.selector';
 
 import { Content } from '@src/store/models/Content';
-
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
+import { ContentType } from '@src/components/common/contenttype.enum';
 @Component({
   selector: 'app-posts',
   standalone: true,
@@ -39,7 +40,7 @@ import { Content } from '@src/store/models/Content';
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
   }
 
   posts: any[] = [];
@@ -48,7 +49,7 @@ export class PostsComponent {
   ngOnInit() {
 
     this.store.select(selectContents).subscribe((content) => {
-      this.posts = content.filter((c) => c.content_type_id === 6);
+      this.posts = content.filter((c) => c.content_type_id === ContentType.Post);
 
       console.log('proceses ', this.posts);
     });

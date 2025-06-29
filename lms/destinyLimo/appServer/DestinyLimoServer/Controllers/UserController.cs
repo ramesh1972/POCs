@@ -1,14 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DestinyLimoServer.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper; // Add this line to import the IMapper interface
 using DestinyLimoServer.DTOs.RequestDTOs;
-using DestinyLimoServer.DTOs.ResponseDTOs;
 using DestinyLimoServer.Models;
-using Org.BouncyCastle.Crypto.Prng;
 using DestinyLimoServer.Common.Uploader;
 using Newtonsoft.Json;
 using System.Net;
@@ -211,8 +205,8 @@ namespace DestinyLimoServer.Controllers
 
             // get only the drivers 
             // TODO: make it more generic for any role
-            int driverRoleId = 2;
-            usersDto = usersDto.Where(x => x.Roles!.Any(y => y.role_id == driverRoleId));
+            int studenttRoleId = 6;
+            usersDto = usersDto.Where(x => x.Roles!.Any(y => y.role_id == studenttRoleId));
             return APIR.SuccessResponse("Users Fetched Successfully.", usersDto);
         }
 

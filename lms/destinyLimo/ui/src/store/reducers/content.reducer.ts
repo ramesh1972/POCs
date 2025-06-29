@@ -1,7 +1,6 @@
 // // import the interface
 import { createReducer, on } from '@ngrx/store';
 
-import { Content } from '../models/Content';
 import { ContentState } from '../states/content.state';
 import { contentCreateAPI_Failure, contentCreateAPI_Success, contentFetchAPI_Failure, contentFetchAPI_Success, deleteContentAPI_Success } from '../actions/content.action';
 import { ApiResponseState } from '../states/api.response.state';
@@ -23,6 +22,7 @@ export const initialState: ContentState = {
 export const contentReducer = createReducer(
   initialState,
   on(contentFetchAPI_Success, (state, { allContent }) => {
+    console.log("all content2", allContent);
     return { ...state, content: allContent };
   }),
 

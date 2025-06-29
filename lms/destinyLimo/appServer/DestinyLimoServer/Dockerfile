@@ -21,4 +21,16 @@ RUN dotnet publish "DestinyLimoServer.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+
+# Create the uploads directory with subfolder if it doesn't exist
+RUN mkdir -p /home/chordify-services/lms-poc/prod/appServer/DestinyLimoServer/uploads/destiny-uploads
+
+# Set the correct permissions and ownership (replace 'appuser' with your actual runtime user)
+RUN chown -R ubuntu:ubuntu /home/chordify-services/lms-poc/prod/appServer/DestinyLimoServer/uploads/destiny-uploads && \
+    chmod -R 755 /home/chordify-services/lms-poc/prod/appServer/DestinyLimoServer/uploads/destiny-uploads
+
+# Declare the uploads folder as a volume
+VOLUME ["/home/chordify-services/lms-poc/prod/appServer/DestinyLimoServer/uploads/destiny-uploads"]
+
+# Start the application
 ENTRYPOINT ["dotnet", "DestinyLimoServer.dll"]

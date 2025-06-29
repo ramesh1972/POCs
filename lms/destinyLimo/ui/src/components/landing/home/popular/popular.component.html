@@ -3,18 +3,13 @@
     <div class="section_title text-center">
         <h1>Popular Course Categories</h1>
     </div>
-    
+
     <div class="popular_cats_container">
         <!-- Popular Course Item -->
         <div *ngFor="let category of categories" class="spaced-item">
-
-            <div class="card">
-                <div class="card-body text-center cat-card">
-                    <div class="card-title"
-                        style="font-size:18px;margin-top: 20px;color:black;-webkit-text-emphasis:blue;text-emphasis: blue;">
-                        {{category.category_name.toUpperCase()}}</div>
-                    <div class="card-text" style="margin-top: 10px;">{{category.category_description}}</div>
-                </div>
+            <div class="card-body text-center cat-card">
+                <div class="card-title popular-card-title">{{category.category_name.toUpperCase()}}</div>
+                <div class="card-text popular-card-body">{{category.category_description}}</div>
             </div>
         </div>
     </div>

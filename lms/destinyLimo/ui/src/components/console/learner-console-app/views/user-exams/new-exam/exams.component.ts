@@ -11,15 +11,16 @@ import { CardModule } from '@coreui/angular';
 import { FormModule, FormCheckComponent } from '@coreui/angular';
 import { ButtonDirective } from '@coreui/angular';
 import { ButtonGroupComponent } from '@coreui/angular';
-import { ReactiveFormsModule, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { ReactiveFormsModule, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { FormCheckLabelDirective } from '@coreui/angular';
 
-import { AccordianParentComponent } from '@src/components/common/components/accordian-parent/accordian-parent.component';
 import { selectMaterialCategorys } from '@src/store/selectors/material.selector';
 import { UserExamAnswer } from '@src/store/models/UserExamAnswer';
-import { createUserExamSuccess, invokeUserExamCreateAPI, invokeSubmitUserExamAPI, invokeUserExamsForUserFetchAPI, UserExamsForUserFetchAPI_Success, invokeUserExamByIdFetchAPI, UserExamByIdFetchAPI_Success, invokeExamByIdFetchAPI, ExamFetchById_Success } from '@src/store/actions/exam.action';
+import { createUserExamSuccess, invokeUserExamCreateAPI, invokeSubmitUserExamAPI, invokeUserExamsForUserFetchAPI, UserExamsForUserFetchAPI_Success, invokeExamByIdFetchAPI, ExamFetchById_Success } from '@src/store/actions/exam.action';
 import { UserExamAnswersComponent } from '../exams/exam/user-exam-answers.component';
 import { UserExam } from '@src/store/models/Exam';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
+import { selectLoggedInUser } from '@src/store/selectors/user.selector';
 
 @Component({
   selector: 'app-exams',
@@ -31,20 +32,18 @@ import { UserExam } from '@src/store/models/Exam';
     CardModule,
     FormModule,
     DropdownModule,
-    AccordianParentComponent,
     UserExamAnswersComponent],
   templateUrl: './exams.component.html',
   styleUrl: './exams.component.css'
 })
 export class ExamsComponent {
-  newExams?: UserExam[] = [];
-
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService) {
   }
 
   formRadio1 = new UntypedFormGroup({
     radio1: new UntypedFormControl('All')
   });
+
 
   setRadioValue(value: string): void {
     this.formRadio1.setValue({ radio1: value });
@@ -66,6 +65,10 @@ export class ExamsComponent {
     console.log('filteredMCQs', this.filteredMCQs);
   }
 
+  newExams?: UserExam[] = [];
+  loggedInUser: any;
+  loggedInUserRole: number | undefined;
+
   categories: any[] = [];
   examQuestions: any[] = [];
   newExam: any = {};
@@ -79,7 +82,18 @@ export class ExamsComponent {
   ngOnInit() {
 
     console.log("onint in exams component");
+    this.store.select(selectLoggedInUser).subscribe((user: any) => {
+      console.log('exam console User:', user);
+      this.loggedInUser = user;
+
+      if (user && user.roles && user.roles.length > 0) {
+        console.log('console User Role:', user.roles[0].role_id);
+        this.loggedInUserRole = user.roles[0].role_id;  
+      }
+    });
+
     // set data
+
     console.log("material fetch dispatched");
     this.store.select(selectMaterialCategorys).subscribe((data: any) => {
       console.log('cats fetched', data);
@@ -99,7 +113,7 @@ export class ExamsComponent {
 
   loadUnansweredExams() {
     // set data
-    this.store.dispatch(invokeUserExamsForUserFetchAPI({ userId: 2 }));
+    this.store.dispatch(invokeUserExamsForUserFetchAPI({ userId: this.loggedInUser.userId }));
     this.actions$.pipe(
       ofType(UserExamsForUserFetchAPI_Success),
       take(1)
@@ -151,7 +165,7 @@ export class ExamsComponent {
     this.examQuestions = [];
     this.filteredMCQs = [];
 
-    this.store.dispatch(invokeUserExamCreateAPI({ userId: 2 }));
+    this.store.dispatch(invokeUserExamCreateAPI({ userId: this.loggedInUser.userId }));
 
     this.actions$.pipe(
       ofType(createUserExamSuccess),
@@ -279,9 +293,9 @@ export class ExamsComponent {
 
     console.log("examid:", newExam.examId);
     const i: number = this.newExams?.findIndex((exam: any) => exam.examId == newExam.examId)!;
-    console.log("exam index", i );
+    console.log("exam index", i);
     if (i >= 0)
-       this.newExams?.splice(i, 1);
+      this.newExams?.splice(i, 1);
 
     console.log("new newExams", this.newExams);
   }

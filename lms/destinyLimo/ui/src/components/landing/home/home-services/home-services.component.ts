@@ -5,6 +5,7 @@ import {Store} from '@ngrx/store';
 
 import { Content } from '../../../../store/models/Content';
 import { selectContents } from '../../../../store/selectors/content.selector';
+import { ContentType } from '@src/components/common/contenttype.enum';
 
 @Component({
   selector: 'app-home-services',
@@ -22,7 +23,7 @@ export class HomeServicesComponent {
     console.log('Home services component initialized');
 
     this.store.select(selectContents).subscribe((contents) => {
-      this.services = contents.filter((content) => content.content_type_id === 2);
+      this.services = contents.filter((content) => content.content_type_id === ContentType.Service);
 
       if (this.services.length === 0) {
         this.services = [];

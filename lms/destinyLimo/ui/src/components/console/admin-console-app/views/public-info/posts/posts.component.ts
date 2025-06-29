@@ -1,17 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormsModule
 } from '@angular/forms';
-import {
-  AccordionButtonDirective,
-  AccordionComponent,
-  AccordionItemComponent,
-  TemplateIdDirective,
-  FormCheckComponent
-} from '@coreui/angular';
 
-import { ButtonDirective, FormModule } from '@coreui/angular';
+import { FormModule } from '@coreui/angular';
 
 import { Store } from '@ngrx/store';
 import { take } from 'rxjs/operators';
@@ -19,27 +12,21 @@ import { Actions, ofType } from '@ngrx/effects';
 
 import { AccordianParentComponent } from '../../../../../common/components/accordian-parent/accordian-parent.component';
 
-import { invokeContentFetchAPI, contentFetchAPI_Success, invokeContentCreateAPI, invokeUpdateContentAPI, invokeDeleteContentAPI } from '@src/store/actions/content.action';
+import { invokeContentFetchAPI, contentFetchAPI_Success, invokeContentCreateAPI, invokeUpdateContentAPI } from '@src/store/actions/content.action';
 import { selectPosts } from '@src/store/selectors/content.selector';
-
-import { Content } from '@src/store/models/Content';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
+import { ContentType } from '@src/components/common/contenttype.enum';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
   imports: [
-    CommonModule, FormsModule, FormModule, FormCheckComponent, AccordianParentComponent,
-    AccordionComponent,
-    AccordionItemComponent,
-    TemplateIdDirective,
-    AccordionButtonDirective,
-    ButtonDirective
-  ],
+    CommonModule, FormsModule, FormModule, AccordianParentComponent],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
   }
 
   posts: any[] = [];
@@ -84,8 +71,8 @@ export class PostsComponent {
     this.posts.unshift({
       title: 'Post Title',
       description: '',
-      content_type_id: 6,
-      adding: true,
+      content_type_id: ContentType.Post,
+      adding: true, 
       editing: false,
       is_active: true,
       is_public: true,
@@ -158,7 +145,7 @@ export class PostsComponent {
     if (this.posts[i].adding) {
       this.posts.splice(i, 1);
     }
-    
+
     this.posts[i].editing = false;
     this.posts[i].adding = false;
   }

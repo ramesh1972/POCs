@@ -3,37 +3,32 @@ import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Actions, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 
-import { ButtonDirective, WidgetModule } from '@coreui/angular';
+import { ButtonDirective } from '@coreui/angular';
 import { FormCheckLabelDirective } from '@coreui/angular';
 import { ButtonGroupComponent } from '@coreui/angular';
-import { ReactiveFormsModule, UntypedFormBuilder } from '@angular/forms';
-import { FormCheckComponent } from '@coreui/angular';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import * as VTable from '@visactor/vtable';
 import { DataGridComponentHelper } from '@src/components/common/components/grid-parent/data-grid.helper';
-import { invokeUserExamsFetchAPI, UserExamsFetchAPI_Success } from '@src/store/actions/exam.action';
-import { selectUsers } from '@src/store/selectors/user.selector';
 import { take } from 'rxjs';
-import { invokeUserProfilesFetchAPI, UserProfilesFetchAPI_Success } from '@src/store/actions/user-profile.action';
 import { CommonModule } from '@angular/common';
 import { invokeUsersFetchAPI, UsersFetchAPI_Success } from '@src/store/actions/user.action';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { pad } from 'lodash-es';
 import { FilePaths } from '@src/components/common/file-paths';
-
+import {MessageSnackBarService} from '@src/common/utils/message-snackbar.service';
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [CommonModule, FormCheckComponent, ButtonDirective, FormCheckLabelDirective,
+  imports: [CommonModule, ButtonDirective, FormCheckLabelDirective,
     ButtonGroupComponent, ReactiveFormsModule, UserProfileComponent],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
 export class UsersComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   formRadio1 = new UntypedFormGroup({
@@ -236,8 +231,8 @@ export class UsersComponent {
 
           const avatar = new VTable.CustomLayout.Image({
             src: record["userProfile"]["avatar"],
-            width: 40,
-            height: 40,
+            width: 36,
+            height: 36,
             cornerRadius: 20,
           });
 
@@ -352,7 +347,7 @@ export class UsersComponent {
         autoWrapText: true,
         color: 'black',
         textBaseline: "top",
-        lineHeight: 50,
+        lineHeight: 80,
       },
       headerStyle: {
         bgColor: '#a881e1',

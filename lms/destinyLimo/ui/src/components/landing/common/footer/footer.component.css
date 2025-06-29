@@ -1,9 +1,80 @@
 .footer {
     background-color: black;
-    margin-top: -110px;
+    margin-top: 0px;
 }
 
 .newsletter {
     background-color: black;
     padding: 50px 0;
+}
+
+.footer_contact {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer_contact_icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer_contact_details {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.footer_contact_location {
+    margin-bottom: 15px;
+}
+
+.footer_contact_location h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #007bff;
+    /* Optional: Add a color for headings */
+}
+
+.footer_contact_location p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #a10015;
+    /* Deep red color */
+    color: #ffffff;
+    /* White text */
+    text-decoration: none;
+    border-radius: 24px;
+    padding: 10px 20px;
+    font-family: 'General Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #8b0012;
+    /* Slightly darker red on hover */
+    transform: scale(1.05);
+    /* Slight zoom effect */
+}
+
+.button-text {
+    line-height: 1.2;
+}
+
+.contact-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: space-around;
+    align-items: anchor-center;
+    height: 30px;
 }

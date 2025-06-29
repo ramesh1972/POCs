@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { environment } from '../../environments/environment';
+import { ApiResponse } from '../models/ApiResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { environment } from '../../environments/environment';
 export class BulkUpdateService {
   constructor(private _http: HttpClient) { }
 
-  bulkUpdate(tableName: string, actions: any[], uploads: any[]): Observable<boolean> {
+  bulkUpdate(tableName: string, actions: any[], uploads: any[]): Observable<ApiResponse> {
     console.log("bulkUpdate", tableName, actions, uploads);
 
     // convert to form data
@@ -25,6 +26,6 @@ export class BulkUpdateService {
     });
 
 
-    return this._http.post<boolean>(environment.baseURL + "bulkUpdate/" + tableName, formData);
+    return this._http.post<ApiResponse>(environment.baseURL + "bulkUpdate/" + tableName, formData);
   }
 }

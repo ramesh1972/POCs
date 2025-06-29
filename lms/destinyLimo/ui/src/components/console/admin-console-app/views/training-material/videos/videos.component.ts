@@ -18,6 +18,7 @@ import { BorderDirective } from '@coreui/angular';
 import { environment } from '@src/environments/environment';
 import { DataGridDropDownEditor } from '@src/components/common/components/grid-parent/data-grid-drop-down.editor';
 import { FilePaths } from '@src/components/common/file-paths';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
 
 @Component({
   selector: 'app-videos',
@@ -27,9 +28,9 @@ import { FilePaths } from '@src/components/common/file-paths';
   styleUrl: './videos.component.css'
 })
 export class VideosComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   dataGridHelper?: DataGridComponentHelper;

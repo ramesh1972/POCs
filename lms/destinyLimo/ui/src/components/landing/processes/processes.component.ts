@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { ContentType } from '@src/components/common/contenttype.enum';
 import { Content } from '@src/store/models/Content';
 import { selectContents } from '@src/store/selectors/content.selector';
 
@@ -20,7 +21,7 @@ export class ProcessesComponent {
     console.log('proceses component initialized');
 
     this.store.select(selectContents).subscribe((content) => {
-      this.processes = content.filter((c) => c.content_type_id === 3);
+      this.processes = content.filter((c) => c.content_type_id === ContentType.Process);
 
       console.log('proceses ', this.processes);
     });

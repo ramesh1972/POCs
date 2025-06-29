@@ -2,6 +2,7 @@ import { createFeatureSelector, createSelector } from '@ngrx/store';
 
 import { ContentState } from '../states/content.state';
 import { Content } from '../models/Content';
+import { ContentType } from '@src/components/common/contenttype.enum';
 
 export const contentFeatureKey = 'content';
 
@@ -19,20 +20,20 @@ export const selectContentById = (contentId: number) => createSelector(
 
 export const selectServices = createSelector(
   selectContents,
-  (content: Content[])  => content.filter(item => item.content_type_id === 2)
+  (content: Content[])  => content.filter(item => item.content_type_id === ContentType.Service)
 );
 
 export const selectProcesses = createSelector(
   selectContents,
-  (content: Content[])  => content.filter(item => item.content_type_id === 3)
+  (content: Content[])  => content.filter(item => item.content_type_id === ContentType.Process)
 );
 
 export const selectPosts = createSelector(
   selectContentState,
-  (state:ContentState) => state.content.filter(item => item.content_type_id === 6)
+  (state:ContentState) => state.content.filter(item => item.content_type_id === ContentType.Post)
 );
 
 export const selectFAQs = createSelector(
   selectContentState,
-  (state:ContentState) => state.content.filter(item => item.content_type_id === 7)
+  (state:ContentState) => state.content.filter(item => item.content_type_id === ContentType.FAQ)
 );

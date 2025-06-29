@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { take } from 'rxjs/operators';
 import { Actions, ofType } from '@ngrx/effects';
 
@@ -7,10 +7,10 @@ import * as VTable from '@visactor/vtable';
 import { InputEditor, TextAreaEditor } from '@visactor/vtable-editors';
 
 import { invokeMaterialCategoryFetchAPI, materialCategoryFetchAPI_Success } from '@src/store/actions/material.action';
-import { selectMaterialCategorys } from '@src/store/selectors/material.selector';
 
 import { GridParentComponent } from '@src/components/common/components/grid-parent/grid-parent.component';
 import { DataGridComponentHelper } from '@src/components/common/components/grid-parent/data-grid.helper';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
 
 @Component({
   selector: 'app-categories',
@@ -21,9 +21,9 @@ import { DataGridComponentHelper } from '@src/components/common/components/grid-
 })
 export class CategoriesComponent {
 
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   dataGridHelper?: DataGridComponentHelper;

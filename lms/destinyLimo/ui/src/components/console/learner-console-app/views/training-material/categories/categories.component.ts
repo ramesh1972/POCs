@@ -11,6 +11,7 @@ import { selectMaterialCategorys } from '@src/store/selectors/material.selector'
 
 import { GridParentComponent } from '@src/components/common/components/grid-parent/grid-parent.component';
 import { DataGridComponentHelper } from '@src/components/common/components/grid-parent/data-grid.helper';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
 
 @Component({
   selector: 'app-categories',
@@ -21,9 +22,9 @@ import { DataGridComponentHelper } from '@src/components/common/components/grid-
 })
 export class CategoriesComponent {
 
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   dataGridHelper?: DataGridComponentHelper;

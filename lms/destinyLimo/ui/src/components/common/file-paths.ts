@@ -26,6 +26,8 @@ export class FilePaths {
             return `${this.FilesURL}/${this.FileServePath}/${this.ProfilePicture}/default-avatar.jpg`;
         }
 
-        return `${this.FilesURL}/${this.FileServePath}/${this.ProfilePicture}/${avatar}`;
+        const path2 =  `${this.FilesURL}/${this.FileServePath}/${this.ProfilePicture}/${avatar}`;
+        console.log("Avatar path: ", path2);
+        return path2;
     }
 }

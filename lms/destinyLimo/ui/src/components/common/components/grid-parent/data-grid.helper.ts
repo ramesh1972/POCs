@@ -1,14 +1,17 @@
 import * as VTable from '@visactor/vtable';
 import { SearchComponent } from '@visactor/vtable-search';
 import { Store } from '@ngrx/store';
-import { bulkUpdate } from '@src/store/actions/bulk-update.action';
+import { bulkUpdate, bulkUpdate_Failure, bulkUpdate_Success } from '@src/store/actions/bulk-update.action';
 
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
+import { Actions, ofType } from '@ngrx/effects';
+import { take } from 'rxjs';
 export class DataGridComponentHelper {
 
-    constructor(compRef: any, private readonly store: Store) {
+    constructor(compRef: any, private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService) {
         this.compRef = compRef;
-    }
 
+    }
     compRef?: any;
     editHandlers: any = [];
     table?: VTable.ListTable;
@@ -313,6 +316,21 @@ export class DataGridComponentHelper {
             console.log('onSaveRecords dispatching bulk update');
             this.store?.dispatch(bulkUpdate({ tableName: this.tableName, allActionRecords: this.dataChanges, allFileUploads: this.filesToBeUploaded }));
             console.log('onSaveRecords dispatched bulk update');
+
+            this.actions$.pipe(
+                ofType(bulkUpdate_Success),
+                take(1)).subscribe((data: any) => {
+                    console.log('bulk update success', data);
+                    this.messageService.showMessage("Successfully Updated", 'success', 5000);
+                });
+
+                this.actions$.pipe(
+                    ofType(bulkUpdate_Failure),
+                    take(1)).subscribe((data: any) => {
+                        console.log('bulk update failure', data);
+                        this.messageService.showMessage("Failed to Updates", 'error', 5000);
+                    }); 
+                    
         }
         else
             console.warn('store not set');

@@ -1,5 +1,5 @@
 <div class="home">
-    <c-carousel style="height: 100vh; width: 100vw;">
+    <c-carousel style="height: 100vh; width: 100vw;" [interval]="2500">
         <c-carousel-indicators></c-carousel-indicators>
         <c-carousel-inner>
             <c-carousel-item *ngFor="let slide of slides">
@@ -21,7 +21,7 @@
             <div class="row">
 
                 <div class="col-lg-4 hero_box_col">
-                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                    <div class="hero_box d-flex flex-row align-items-center justify-content-start" routerLink="/home/courses">
                         <img src="/images/services/earth-globe.svg" class="svg" alt="">
                         <div class="hero_box_content">
                             <h2 class="hero_box_title">Online Courses</h2>
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="col-lg-4 hero_box_col">
-                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                    <div class="hero_box d-flex flex-row align-items-center justify-content-start" routerLink="/home/courses">
                         <img src="/images/services/videos.svg" class="svg" alt="">
                         <div class="hero_box_content">
                             <h2 class="hero_box_title">Video Library</h2>
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="col-lg-4 hero_box_col">
-                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                    <div class="hero_box d-flex flex-row align-items-center justify-content-start" routerLink="/home/courses">
                         <img src="/images/services/exam-outline.svg" class="svg" alt="">
                         <div class="hero_box_content">
                             <h2 class="hero_box_title">Exams</h2>

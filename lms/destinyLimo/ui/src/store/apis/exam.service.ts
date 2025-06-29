@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { environment } from '../../environments/environment';
-import { UserExam }  from '../models/Exam';
-import { UserExamAnswer } from '../models/UserExamAnswer';
+import { ApiResponse }  from '../models/ApiResponse';
+import { UserExam } from '../models/Exam';
 
 @Injectable({
   providedIn: 'root'
@@ -12,38 +12,38 @@ import { UserExamAnswer } from '../models/UserExamAnswer';
 export class ExamService {
   constructor(private _http: HttpClient) { }
 
-  getExams(onlyExamsNotStarted: boolean = false): Observable<UserExam[]> {
+  getExams(onlyExamsNotStarted: boolean = false): Observable<ApiResponse> {
     console.log("Exam service :", environment.baseURL);
-    return this._http.get<UserExam[]>(environment.baseURL + "Exam/" + onlyExamsNotStarted);
+    return this._http.get<ApiResponse>(environment.baseURL + "Exam/" + onlyExamsNotStarted);
   }
 
-  getExamsForUser(userId: number): Observable<UserExam[]> {
+  getExamsForUser(userId: number): Observable<ApiResponse> {
     console.log("Exam service :", environment.baseURL);
-    return this._http.get<UserExam[]>(environment.baseURL + "Exam/user/" + userId);
+    return this._http.get<ApiResponse>(environment.baseURL + "Exam/user/" + userId);
   }
 
-  getUserExamsByExamId(examId: number): Observable<UserExamAnswer[]> {
+  getUserExamsByExamId(examId: number): Observable<ApiResponse> {
     console.log("Exam service :", environment.baseURL);
-    return this._http.get<UserExamAnswer[]>(environment.baseURL + "exam/answers/" + examId);
+    return this._http.get<ApiResponse>(environment.baseURL + "exam/answers/" + examId);
   }
 
-  getUserExamByExamId(examId: number): Observable<UserExam> {
+  getUserExamByExamId(examId: number): Observable<ApiResponse> {
     console.log("Exam service :", environment.baseURL);
-    return this._http.get<UserExam>(environment.baseURL + "exam/questions/" + examId);
+    return this._http.get<ApiResponse>(environment.baseURL + "exam/questions/" + examId);
   }
 
-  submitExam(exam: UserExam): Observable<any> {
+  submitExam(exam: UserExam): Observable<ApiResponse> {
     console.log("Exam service :", exam);
-    return this._http.put(environment.baseURL + "Exam", exam);
+    return this._http.put<ApiResponse>(environment.baseURL + "Exam", exam);
   }
 
-  createExam(userId: number): Observable<any> {
+  createExam(userId: number): Observable<ApiResponse> {
     console.log("Exam service :", userId);
-    return this._http.post(environment.baseURL + "Exam/" + userId, null);
+    return this._http.post<ApiResponse>(environment.baseURL + "Exam/" + userId, null);
   }
 
-  createExamByAdmin(userId: number): Observable<any> {
+  createExamByAdmin(userId: number): Observable<ApiResponse> {
     console.log("Exam service :", userId);
-    return this._http.post(environment.baseURL + "Exam/admin/" + userId, null);
+    return this._http.post<ApiResponse>(environment.baseURL + "Exam/admin/" + userId, null);
   }
 }

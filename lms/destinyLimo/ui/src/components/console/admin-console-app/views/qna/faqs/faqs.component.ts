@@ -18,6 +18,7 @@ import { UserAskedQuestion } from '@src/store/models/UserAskedQuestion';
 import { GridParentComponent } from '../../../../../common/components/grid-parent/grid-parent.component';
 import { UserProfile } from '@src/store/models/UserProfile';
 import { FilePaths } from '@src/components/common/file-paths';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
 
 @Component({
   selector: 'app-faqs',
@@ -27,9 +28,9 @@ import { FilePaths } from '@src/components/common/file-paths';
   styleUrl: './faqs.component.scss'
 })
 export class FAQsComponent {
-  constructor(private readonly store: Store, private actions$: Actions, private readonly formBuilder: UntypedFormBuilder) {
+  constructor(private readonly store: Store, private actions$: Actions, private readonly formBuilder: UntypedFormBuilder, private messageService: MessageSnackBarService) {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   formRadio1 = new UntypedFormGroup({

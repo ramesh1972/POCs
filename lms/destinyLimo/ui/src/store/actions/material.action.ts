@@ -14,8 +14,14 @@ export const invokeMaterialCategoryFetchAPI = createAction(
 
 export const materialCategoryFetchAPI_Success = createAction(
   '[MaterialCategory API] Fetch API Success',
-  props<{ allMaterialCategory: MaterialCategory[] }>()
+  props<{ msg: string, allMaterialCategory: MaterialCategory[] }>()
 );
+
+export const materialCategoryFetchAPI_Failure = createAction(
+  '[MaterialCategory  API] Fetch API Failure',
+  props<{ error: string, data: any }>()
+);
+
 
 // fetch TrainingMaterial
 export const invokeMaterialFetchAPI = createAction(
@@ -25,6 +31,11 @@ export const invokeMaterialFetchAPI = createAction(
 export const materialFetchAPI_Success = createAction(
   '[Material API] Fetch API Success',
   props<{ allMaterials: TrainingMaterial[] }>()
+);
+
+export const materialFetchAPI_Failure = createAction(
+  '[Material  API] Fetch API Failure',
+  props<{ error: string, data: any }>()
 );
 
 // fetch MaterialFile
@@ -38,6 +49,16 @@ export const materialFileFetchAPI_Success = createAction(
   props<{ allMaterialFiles: MaterialFile[] }>()
 );
 
+export const materialFileFetchAPI_Failure = createAction(
+  '[MaterialFile API] Fetch API Failure',
+  props<{ error: string, data: any }>()
+);
+
+export const invokeMaterialFile_CreateAPI = createAction(
+  '[MaterialFile API] Invoke MaterialFile Create API',
+  props<{ materialFile: MaterialFile }>()
+);
+
 // fetch MaterialText
 export const invokeMaterialTextFetchAPI = createAction(
   '[MaterialText API] Invoke MaterialText Fetch API',
@@ -47,6 +68,11 @@ export const invokeMaterialTextFetchAPI = createAction(
 export const materialTextFetchAPI_Success = createAction(
   '[MaterialText API] Fetch API Success',
   props<{ allMaterialTexts: MaterialText[] }>()
+);
+
+export const materialTextFetchAPI_Failure = createAction(
+  '[MaterialText API] Fetch API Failure',
+  props<{ error: string, data: any }>()
 );
 
 export const invokeMaterialText_CreateAPI = createAction(
@@ -59,7 +85,8 @@ export const materialText_CreateAPI_Success = createAction(
   props<{ materialText: any }>()
 );
 
-export const invokeMaterialText_CreateAPI_Failure = createAction(
+
+export const materialText_CreateAPI_Failure = createAction(
   '[MaterialText API] Create API Failure',
   props<{ error: any }>()
 );
@@ -74,7 +101,7 @@ export const materialText_UpdateAPI_Success = createAction(
   props<{ materialText: MaterialText }>()
 );
 
-export const invokeMaterialText_UpdateAPI_Failure = createAction(
+export const materialText_UpdateAPI_Failure = createAction(
   '[MaterialText API] Update API Failure',
   props<{ error: any }>()
 );
@@ -89,7 +116,7 @@ export const materialText_DeleteAPI_Success = createAction(
   props<{ success: boolean }>()
 );
 
-export const invokeMaterialText_DeleteAPI_Failure = createAction(
+export const materialText_DeleteAPI_Failure = createAction(
   '[MaterialText API] Delete API Failure',
   props<{ error: any }>()
 );
@@ -106,6 +133,11 @@ export const materialVideoFetchAPI_Success = createAction(
   props<{ allMaterialVideos: MaterialVideo[] }>()
 );
 
+export const materialVideoFetchAPI_Failure = createAction(
+  '[MaterialVideo API] Fetch API Failure',
+  props<{ error: string, data: any }>()
+);
+
 // fetch MaterialMCQ
 export const invokeMaterialMCQFetchAPI = createAction(
   '[MaterialMCQ API] Invoke MaterialMCQ Fetch API',
@@ -115,6 +147,11 @@ export const invokeMaterialMCQFetchAPI = createAction(
 export const materialMCQFetchAPI_Success = createAction(
   '[MaterialMCQ API] Fetch API Success',
   props<{ allMaterialMCQs: MaterialMCQ[] }>()
+);
+
+export const materialMCQFetchAPI_Failure = createAction(
+  '[MaterialMCQ API] Fetch API Failure',
+  props<{ error: string, data: any }>()
 );
 
 export const invokeMaterialMCQ_CreateAPI = createAction(
@@ -127,6 +164,11 @@ export const materialMCQ_CreateAPI_Success = createAction(
   props<{ materialMCQ: MaterialMCQ }>()
 );
 
+export const materialMCQ_CreateAPI_Failure = createAction(
+  '[MaterialMCQ API] Create API Failure',
+  props<{ error: any }>()
+);
+
 export const invokeMaterialMCQ_UpdateAPI = createAction(
   '[MaterialMCQ API] Invoke MaterialMCQ Update API',
   props<{ materialMCQ: MaterialMCQ }>()
@@ -137,6 +179,11 @@ export const materialMCQ_UpdateAPI_Success = createAction(
   props<{ materialMCQ: MaterialMCQ }>()
 );
 
+export const materialMCQ_UpdateAPI_Failure = createAction(
+  '[MaterialMCQ API] Update API Failure',
+  props<{ error: any }>()
+);
+
 export const invokeMaterialMCQ_DeleteAPI = createAction(
   '[MaterialMCQ API] Invoke MaterialMCQ Delete API',
   props<{ material_id: number }>()
@@ -145,6 +192,11 @@ export const invokeMaterialMCQ_DeleteAPI = createAction(
 export const materialMCQ_DeleteAPI_Success = createAction(
   '[MaterialMCQ API] Delete API Success',
   props<{ success: boolean }>()
+);
+
+export const materialMCQ_DeleteAPI_Failure = createAction(
+  '[MaterialMCQ API] Delete API Failure',
+  props<{ error: any }>()
 );
 
 

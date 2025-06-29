@@ -4,8 +4,9 @@
             <div class="nopadding">
                 <div class="posts-container">
                     <h2>Read through our popular Blogs</h2>
-                    <c-accordion [alwaysOpen]="true" >
-                        <c-accordion-item #item="cAccordionItem" [visible]="item.visible" *ngFor="let post of posts; let i = index">
+                    <c-accordion [alwaysOpen]="true">
+                        <c-accordion-item #item="cAccordionItem" [visible]="item.visible"
+                            *ngFor="let post of posts; let i = index">
                             <ng-template cTemplateId="accordionHeaderTemplate">
                                 <button (click)="item.toggleItem()" [collapsed]="!item.visible" cAccordionButton>
                                     {{ post.title }}
@@ -13,9 +14,10 @@
                             </ng-template>
                             <ng-template cTemplateId="accordionBodyTemplate">
                                 <div class="acc-body-container">
-                                    <div
-                                        style="padding:10px;background-image:url('/images/backgrounds/background1.jpg');background-blend-mode: color-dodge;">
-                                        {{post.description}}
+                                    <div class="blog-content">
+                                        <p *ngFor="let paragraph of post.description.split('\n')">
+                                            {{ paragraph }}
+                                        </p>
                                     </div>
                                 </div>
                             </ng-template>

@@ -33,7 +33,7 @@ export const selectUserProfileById = (userId: number) => createSelector(
 
 export const selectUserProfileByUserName = (userName: string) => createSelector(
   selectUserState,
-  (state: UserProfileState) => state.allUserProfiles.find(userProfile => userProfile.username === userName)
+  (state: UserProfileState) => state.allUserProfiles.find(userProfile => userProfile.firstName === userName)
 );
 
 export const selectUserProfileByEmail = (email: string) => createSelector(

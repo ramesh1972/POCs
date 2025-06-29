@@ -7,7 +7,6 @@ import {
   ContainerComponent,
   DropdownComponent,
   DropdownDividerDirective,
-  DropdownHeaderDirective,
   DropdownItemDirective,
   DropdownMenuDirective,
   DropdownToggleDirective,
@@ -16,13 +15,11 @@ import {
   HeaderTogglerDirective,
   NavItemComponent,
   NavLinkDirective,
-  ProgressBarDirective,
-  ProgressComponent,
   SidebarToggleDirective,
   TextColorDirective,
   ThemeDirective
 } from '@coreui/angular';
-import { NgStyle, NgTemplateOutlet } from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
 import { IconDirective } from '@coreui/icons-angular';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -36,7 +33,7 @@ import { logoutUser } from '@src/store/actions/user.action';
   selector: 'app-admin-default-header',
   templateUrl: './default-header.component.html',
   standalone: true,
-  imports: [ContainerComponent, HeaderTogglerDirective, SidebarToggleDirective, IconDirective, HeaderNavComponent, NavItemComponent, NavLinkDirective, RouterLink, RouterLinkActive, NgTemplateOutlet, BreadcrumbRouterComponent, ThemeDirective, DropdownComponent, DropdownToggleDirective, TextColorDirective, AvatarComponent, DropdownMenuDirective, DropdownHeaderDirective, DropdownItemDirective, BadgeComponent, DropdownDividerDirective, ProgressBarDirective, ProgressComponent, NgStyle]
+  imports: [ContainerComponent, HeaderTogglerDirective, SidebarToggleDirective, IconDirective, HeaderNavComponent, NavItemComponent, NavLinkDirective, RouterLink, RouterLinkActive, NgTemplateOutlet, BreadcrumbRouterComponent, ThemeDirective, DropdownComponent, DropdownToggleDirective, TextColorDirective, AvatarComponent, DropdownMenuDirective, DropdownItemDirective, BadgeComponent, DropdownDividerDirective]
 })
 export class AdminDefaultHeaderComponent extends HeaderComponent {
 

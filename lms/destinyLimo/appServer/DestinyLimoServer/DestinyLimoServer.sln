@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DestinyLimoServer", "DestinyLimoServer.csproj", "{075B70A7-77D2-78B5-F84E-E3024335873D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{075B70A7-77D2-78B5-F84E-E3024335873D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075B70A7-77D2-78B5-F84E-E3024335873D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075B70A7-77D2-78B5-F84E-E3024335873D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075B70A7-77D2-78B5-F84E-E3024335873D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F50F602C-85E2-4E0C-B052-5AFB9EE6FA20}
+	EndGlobalSection
+EndGlobal

@@ -1,26 +1,23 @@
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
-import { filter, take } from 'rxjs/operators';
+import { Store } from '@ngrx/store';
+import { take } from 'rxjs/operators';
 import { Actions, ofType } from '@ngrx/effects';
 import { CommonModule } from '@angular/common';
 
-import { CardModule, ButtonDirective, GridModule, BorderDirective, ButtonGroupComponent, FormCheckLabelDirective } from '@coreui/angular';
+import { CardModule, ButtonDirective, GridModule, ButtonGroupComponent, FormCheckLabelDirective } from '@coreui/angular';
 import { ReactiveFormsModule, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
-import { environment } from '@src/environments/environment';
 
 import { MaterialCategory } from '@src/store/models/MaterialCategory';
 import { invokeMaterialCategoryFetchAPI, invokeMaterialFileFetchAPI, materialCategoryFetchAPI_Success, materialFileFetchAPI_Success } from '@src/store/actions/material.action';
-import { selectMaterialCategorys, selectMaterialFiles } from '@src/store/selectors/material.selector';
 import { MaterialFile } from '@src/store/models/MaterialFile';
 import { FilePaths } from '@src/components/common/file-paths';
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [CommonModule, CardModule, GridModule, ButtonDirective, BorderDirective,
-    ButtonGroupComponent, FormCheckLabelDirective, ReactiveFormsModule
-  ],
+  imports: [CommonModule, CardModule, GridModule, ButtonDirective,
+    ButtonGroupComponent, FormCheckLabelDirective, ReactiveFormsModule],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })

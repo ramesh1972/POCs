@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
-import { RouterLinkActive } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
 
 import { Store } from '@ngrx/store';
@@ -12,21 +9,18 @@ import { iconSubset } from '../components/console/icons/icon-subset';
 
 import { LandingComponent } from '@src/components/landing/landing.component';
 import { ConsoleComponent } from '../components/console/console.component';
-import { AdminDefaultLayoutComponent } from '../components/console/admin-console-app/layout';
-import { LearnerDefaultLayoutComponent } from '../components/console/learner-console-app/layout';
 
 import { invokeContentFetchAPI } from '../store/actions/content.action';
 import { invokeMaterialCategoryFetchAPI } from '../store/actions/material.action';
 import { VisibilityService } from '@src/components/common/VisibilityService';
 import { AuthenticateUser_Success, invokeAuthenticateUser } from '@src/store/actions/user.action';
 import { Actions, ofType } from '@ngrx/effects';
-import { selectMaterialCategorys } from '@src/store/selectors/material.selector';
 import { take } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, RouterLink, RouterLinkActive, LandingComponent, ConsoleComponent, AdminDefaultLayoutComponent, LearnerDefaultLayoutComponent],
+  imports: [CommonModule, LandingComponent, ConsoleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

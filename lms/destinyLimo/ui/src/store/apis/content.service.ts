@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 
 import { environment } from '../../environments/environment';
 import { Content } from '../models/Content';
-import { ApiResponseState } from '../states/api.response.state';
 import { ApiResponse } from '../models/ApiResponse';
 
 @Injectable({

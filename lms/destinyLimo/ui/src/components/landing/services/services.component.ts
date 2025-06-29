@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { Content } from '@src/store/models/Content';
 import { selectContents } from '@src/store/selectors/content.selector';
+import { ContentType } from '@src/components/common/contenttype.enum';
 
 @Component({
   selector: 'app-services',
@@ -20,7 +21,7 @@ export class ServicesComponent {
     console.log('services component initialized');
 
     this.store.select(selectContents).subscribe((content) => {
-      this.services = content.filter((c) => c.content_type_id === 2);
+      this.services = content.filter((c) => c.content_type_id === ContentType.Service);
 
       console.log('services ', this.services);
     });

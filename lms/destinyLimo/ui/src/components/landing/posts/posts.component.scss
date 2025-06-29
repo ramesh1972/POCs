@@ -16,3 +16,19 @@
   flex-direction: column;
   width: 100%;
 }
+
+.blog-content {
+  padding: 15px;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content p {
+  margin-bottom: 15px;
+  text-align: justify;
+  word-wrap: break-word;
+}

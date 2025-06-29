@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { select, Store, Action } from '@ngrx/store';
-import { catchError, map, mergeMap, switchMap, withLatestFrom } from 'rxjs/operators';
-import { Observable, throwError } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { catchError, map, mergeMap, switchMap } from 'rxjs/operators';
+import { Observable, of, throwError } from 'rxjs';
 
 import { UserExam } from '../models/Exam';
 import { ExamService } from '../apis/exam.service';
 
-import { invokeUserExamsFetchAPI, UserExamsFetchAPI_Success, invokeUserExamsForUserFetchAPI, UserExamsForUserFetchAPI_Success, invokeUserExamByIdFetchAPI, UserExamByIdFetchAPI_Success, invokeUserExamCreateAPI, createUserExamSuccess, invokeSubmitUserExamAPI, ExamFetchById_Success, invokeExamByIdFetchAPI, invokeCreateUserExamByAdmin, createUserExamSuccessByAdmin } from '../actions/exam.action';
+import { invokeUserExamsFetchAPI, UserExamsFetchAPI_Success, invokeUserExamsForUserFetchAPI, UserExamsForUserFetchAPI_Success, invokeUserExamByIdFetchAPI, UserExamByIdFetchAPI_Success, invokeUserExamCreateAPI, createUserExamSuccess, invokeSubmitUserExamAPI, ExamFetchById_Success, invokeExamByIdFetchAPI, invokeCreateUserExamByAdmin, createUserExamSuccessByAdmin, UserExamsFetchAPI_Failure, createUserExamFailure, createUserExamByAdmin_Failure, submitUserExam_Success, submitUserExam_Failure } from '../actions/exam.action';
 import { UserExamAnswer } from '../models/UserExamAnswer';
+import { ApiResponse } from '../models/ApiResponse';
 
 @Injectable()
 export class ExamEffect {
@@ -24,10 +25,16 @@ export class ExamEffect {
       mergeMap((action) => {
         return this.UserExamService
           .getExams(action.onlyExamsNotStarted)
-          .pipe(map((data: UserExam[]) => UserExamsFetchAPI_Success({ allExams: data as UserExam[] }))
-          );
-      }));
-  });
+          .pipe(map((response: ApiResponse) => UserExamsFetchAPI_Success({ allExams: response.data as UserExam[] })),
+          catchError((error: any) => {
+            console.error('error fetching exams', error);
+            return of(UserExamsFetchAPI_Failure({ error: error.message, data: error.data }));
+          })
+        );
+      }
+    ));
+  }
+  );
 
   loadAllUserExamForUser$ = createEffect(() => {
     return this.actions$.pipe(
@@ -35,9 +42,15 @@ export class ExamEffect {
       mergeMap((action) => {
         return this.UserExamService
           .getExamsForUser(action.userId)
-          .pipe(map((data: UserExam[]) => UserExamsForUserFetchAPI_Success({ allUserExams: data as UserExam[] }))
-          );
-      }));
+          .pipe(map((response: ApiResponse) => UserExamsForUserFetchAPI_Success({ allUserExams: response.data as UserExam[] })),
+          catchError((error: any) => {
+            console.error('error fetching exams for user', error);
+            return of(UserExamsFetchAPI_Failure({ error: error.message, data: error.data }));
+          }
+          )
+        );
+      }
+    ));
   });
 
   loadUserExamById$ = createEffect(() => {
@@ -46,7 +59,11 @@ export class ExamEffect {
       mergeMap((action) => {
         return this.UserExamService
           .getUserExamByExamId(action.examId)
-          .pipe(map((data: UserExam) => ExamFetchById_Success({ newExam: data as UserExam }))
+          .pipe(map((response: ApiResponse) => ExamFetchById_Success({ newExam: response.data as UserExam })),
+          catchError((error: any) => {
+            console.error('error fetching exam by id', error);
+            return throwError(() => error);
+          })    
           );
       }));
   });
@@ -57,7 +74,11 @@ export class ExamEffect {
       mergeMap((action) => {
         return this.UserExamService
           .getUserExamsByExamId(action.examId)
-          .pipe(map((data: UserExamAnswer[]) => UserExamByIdFetchAPI_Success({ examAnswers: data as UserExamAnswer[] }))
+          .pipe(map((response: ApiResponse) => UserExamByIdFetchAPI_Success({ examAnswers: response.data as UserExamAnswer[] })),
+          catchError((error: any) => {
+            console.error('error fetching exam answers', error);
+            return of(UserExamsFetchAPI_Failure({ error: error.message, data: error.data }));
+          })  
           );
       }));
   });
@@ -69,17 +90,17 @@ export class ExamEffect {
         return this.UserExamService
           .submitExam(action.exam)
           .pipe(
-            map(() => {
-              console.log('UserExam updated');
-              return { type: 'UPDATE_UserExam_SUCCESS' } as Action<string>;
-            }),
+            map((response: ApiResponse) => {
+              console.log('exam submitted', response);
+              return submitUserExam_Success({ exam: response.data as UserExam });
+            }
+            ),
             catchError((error: any) => {
-              console.error('error updating UserExam', error);
-              return throwError(error);
+              console.error('error submitting exam', error);
+              return of(submitUserExam_Failure({ error: error.message, data: error.data }));
             })
           );
-      })
-    );
+      }));
   });
 
   createUserExam$ = createEffect(() => {
@@ -88,7 +109,11 @@ export class ExamEffect {
       switchMap(action => {
         return this.UserExamService
           .createExam(action.userId)
-          .pipe(map((data: UserExam) => createUserExamSuccess({ newExam: data as UserExam }))
+          .pipe(map((response: ApiResponse) => createUserExamSuccess({ newExam: response.data as UserExam })),
+          catchError((error: any) => {
+            console.error('error creating exam', error);
+            return of(createUserExamFailure({ error: error.message, data: error.data }));
+          })
           );
       }));
   });
@@ -99,7 +124,11 @@ export class ExamEffect {
       switchMap(action => {
         return this.UserExamService
           .createExamByAdmin(action.userId)
-          .pipe(map((data: UserExam) => createUserExamSuccessByAdmin({ newExam: data as UserExam }))
+          .pipe(map((response: ApiResponse) => createUserExamSuccessByAdmin({ newExam: response.data as UserExam })),
+          catchError((error: any) => {
+            console.error('error creating exam by admin', error);
+            return of(createUserExamByAdmin_Failure({ error: error.message, data: error.data }));
+          })
           );
       }));
   });

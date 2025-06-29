@@ -223,7 +223,7 @@ namespace DestinyLimoServer.Controllers
                 return APIR.ErrorResponse(HttpStatusCode.NotFound, "No material found.");
             }
 
-            return APIR.SuccessResponse("Material Categores Fetched Successfully.", categoryDTOs);
+            return categoryDTOs;
         }
 
         // CUD operations on MaterialText

@@ -3,7 +3,7 @@
     padding: 20px;
     background-color: #f9f9f9;
     padding-top: 140px;
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 .main-container {
@@ -32,37 +32,42 @@
 /* The overlay text */
 .overlay-text-title {
     position: relative;
-    padding: 6px;
+    padding: 8px;
     color: black;
-    text-align: left;
+    text-align: center;
     text-wrap: wrap;
-    height: 50px;
+    height: 60px;
     max-height: 100px;
-    margin-top: -3px;
-    background-color: rgb(195 225 209 / 100%);
+    background-color: rgba(236, 246, 67, 0.7);
     overflow: hidden;
     font-size: 15px;
+    font-weight: 500;
+    color: black;
+    font-variant: small-caps;
+    margin-bottom: 0px;
+
 }
 
 .overlay-text-title em {
     font-size: 15px;
     font-weight: bold;
     overflow: scroll;
+
 }
 
 .overlay-text {
     position: relative;
-    background-color: rgba(255, 255, 0, .7);
-    padding: 6px;
-    color: blue;
-    border-radius: 6px;
-
+    background-color: rgba(236, 246, 67, 0.4);
+    padding: 4px;
+    color: rgb(37, 10, 10);
+    border-radius: 4px;
+    font-family: Roboto, sans-serif;
     width: fit-content;
     align-self: end;
-    font-size: 14px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    transform: translateY(+30%);
-    box-shadow: inset 1px 1px 12px 2px rgb(255, 155, 120, .35)
+    font-size: 12px;
+    z-index: 105;
+    border: 3px solid lightblue;
+    transform: translateY(+25%);
 }
 
 .overlay-file-image {
@@ -72,4 +77,57 @@
     height: 48px;
     transform: translate(-225%, +175%);
     z-index: 99;
+}
+
+.popular-card-body {
+    position: relative;
+    height: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-wrap-mode: wrap;
+    background-color: white;
+    padding: 10px;
+}
+
+.video-container {
+    /* box-shadow: none; */
+    height: 152px;
+    padding: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.mcq_question {
+    position: relative;
+    padding: 0px;
+    color: rgb(37, 10, 10);
+    font-family: Roboto, sans-serif;
+    width: fit-content;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.mcq_container {
+    row-gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-card-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.popular-card-body::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.popular-card-body::-webkit-scrollbar-track {
+    background-color: blue;
+}
+
+.card-title {
+    margin-top: 0px;
 }

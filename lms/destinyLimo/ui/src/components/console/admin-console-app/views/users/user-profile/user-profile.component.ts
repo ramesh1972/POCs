@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IconDirective } from '@coreui/icons-angular';
-import { ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective } from '@coreui/angular';
-import { UserProfile } from '@src/store/models/UserProfile';
+import { ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, FormDirective, InputGroupComponent, ButtonDirective } from '@coreui/angular';
 import { CommonModule } from '@angular/common';
 import { User } from '@src/store/models/User';
 import { FormsModule } from '@angular/forms';
@@ -9,14 +8,13 @@ import { Store } from '@ngrx/store';
 import { Actions, ofType } from '@ngrx/effects';
 import { approveRejectUser, approveRejectUser_Success, lockUser, lockUser_Success } from '@src/store/actions/user.action';
 import { selectLoggedInUser } from '@src/store/selectors/user.selector';
-import { FilePaths } from '@src/components/common/file-paths';
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, IconDirective, FormControlDirective, ButtonDirective]
+  imports: [CommonModule, FormsModule, ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, FormDirective, InputGroupComponent, IconDirective, ButtonDirective]
 })
 export class UserProfileComponent {
 

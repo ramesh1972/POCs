@@ -16,6 +16,7 @@ import { DataGridFileUploadEditor } from '@src/components/common/components/grid
 import { DataGridDropDownEditor } from '@src/components/common/components/grid-parent/data-grid-drop-down.editor';
 
 import { FilePaths } from '@src/components/common/file-paths';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
 
 @Component({
   selector: 'app-courses',
@@ -25,9 +26,9 @@ import { FilePaths } from '@src/components/common/file-paths';
   styleUrl: './courses.component.css'
 })
 export class CoursesComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   dataGridHelper?: DataGridComponentHelper;

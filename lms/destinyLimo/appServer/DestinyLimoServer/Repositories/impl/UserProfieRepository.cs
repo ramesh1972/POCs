@@ -11,12 +11,11 @@ namespace DestinyLimoServer.Repositories.impl
         public async Task<IEnumerable<UserProfile>> GetUsers(bool inactive = true, bool is_deleted = false) 
         {
             var connection = CreateConnection();
-            var condition = inactive ? "is_deleted = @is_deleted" : "is_active = true AND is_deleted = @is_deleted";
+            //var condition = inactive ? "is_deleted = @is_deleted" : "is_deleted = @is_deleted";
 
-            var sql = "SELECT * FROM user_profiles T1 INNER JOIN users T2 ON T1.user_id = T2.user_id" + 
-            " WHERE " + condition;
+            var sql = "SELECT * FROM user_profiles T1 INNER JOIN users T2 ON T1.user_id = T2.user_id";
 
-            var users = await connection.QueryAsync<UserProfile>(sql, new { is_deleted = is_deleted });
+            var users = await connection.QueryAsync<UserProfile>(sql);
             return users;
         }
 

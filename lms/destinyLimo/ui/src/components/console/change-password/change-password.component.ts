@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { IconDirective } from '@coreui/icons-angular';
-import { ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective, FormLabelDirective, FormFeedbackComponent } from '@coreui/angular';
+import { ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective, FormFeedbackComponent } from '@coreui/angular';
 import { RegisterFormValidationService } from '../../landing/home-register/register.validation.service';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { Actions, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
-import { changePassword, resetPassword, resetPassword_Failure, resetPassword_Success } from '@src/store/actions/user.action';
+import { resetPassword, resetPassword_Failure, resetPassword_Success } from '@src/store/actions/user.action';
 import { take } from 'rxjs';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 
 export class PasswordValidators {
   static confirmPassword(control: AbstractControl): ValidationErrors | null {
@@ -29,19 +27,15 @@ export class PasswordValidators {
     styleUrls: ['./change-password.component.scss'],
     standalone: true,
     providers: [RegisterFormValidationService],
-    imports: [CommonModule, ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, IconDirective, FormControlDirective, ButtonDirective,  FormFeedbackComponent, FormLabelDirective,
+    imports: [CommonModule, ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective,  FormFeedbackComponent,
       FormDirective,
     InputGroupComponent,
     InputGroupTextDirective,
-    IconDirective,
     FormControlDirective,
     ButtonDirective,
 
     FormFeedbackComponent,
-    FormLabelDirective,
     ReactiveFormsModule,
-    RouterLink, 
-    RouterLinkActive
     ]
 })
 export class ChangePasswordComponent {

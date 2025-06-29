@@ -16,6 +16,7 @@ import { invokeMaterialMCQFetchAPI, materialMCQ_CreateAPI_Success, materialMCQ_D
 import { invokeMaterialMCQ_CreateAPI, invokeMaterialMCQ_UpdateAPI, invokeMaterialMCQ_DeleteAPI } from '@src/store/actions/material.action';
 import { selectMaterialCategorys, selectMaterialMCQs } from '@src/store/selectors/material.selector';
 import { MaterialMCQ } from '@src/store/models/MaterialMCQ';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
 
 @Component({
   selector: 'app-exams',
@@ -31,7 +32,7 @@ import { MaterialMCQ } from '@src/store/models/MaterialMCQ';
   styleUrl: './exams.component.css'
 })
 export class ExamsComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
   }
 
   categories: any[] = [];

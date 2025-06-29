@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
-import { filter, take } from 'rxjs/operators';
+import { Store } from '@ngrx/store';
+import { take } from 'rxjs/operators';
 import { Actions, ofType } from '@ngrx/effects';
 import { CommonModule } from '@angular/common';
 
 // CoreUI Modules
-import { ButtonModule, DropdownModule } from '@coreui/angular';
 import { FormModule, FormCheckComponent } from '@coreui/angular';
-
+import {MessageSnackBarService} from '@src/common/utils/message-snackbar.service';
 import {
   AccordionButtonDirective,
   AccordionComponent,
@@ -15,28 +14,25 @@ import {
   TemplateIdDirective,
 
 } from '@coreui/angular';
-import { CardModule, ButtonDirective, GridModule, BorderDirective, ButtonGroupComponent, FormCheckLabelDirective } from '@coreui/angular';
+import { CardModule, GridModule } from '@coreui/angular';
 import { MaterialCategory } from '@src/store/models/MaterialCategory';
 import { invokeMaterialCategoryFetchAPI, invokeMaterialFileFetchAPI, invokeMaterialMCQFetchAPI, invokeMaterialVideoFetchAPI, materialCategoryFetchAPI_Success, materialFileFetchAPI_Success, materialMCQFetchAPI_Success, materialVideoFetchAPI_Success } from '@src/store/actions/material.action';
-import { selectMaterialCategorys, selectMaterialFiles, selectMaterialMCQs, selectMaterialVideos } from '@src/store/selectors/material.selector';
 import { FilePaths } from '@src/components/common/file-paths';
 
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [CommonModule, CardModule, GridModule, ButtonDirective, BorderDirective, CommonModule, FormModule, FormCheckComponent, ButtonDirective,
+  imports: [CommonModule, CardModule, GridModule, CommonModule, FormModule, FormCheckComponent,
     AccordionComponent,
     AccordionItemComponent,
     TemplateIdDirective,
-    AccordionButtonDirective,
-    ButtonDirective
-  ],
+    AccordionButtonDirective],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })
 export class CoursesComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
   }
 
   categories: MaterialCategory[] = [];
@@ -108,8 +104,8 @@ export class CoursesComponent {
       ofType(materialMCQFetchAPI_Success),
       take(1)
     ).subscribe((data: any) => {
-        console.log("cats ", this.categories);
-        console.log('material fetched', data);
+        console.log("mcqs cats ", this.categories);
+        console.log('material fetched mcqs', data);
 
         const mcqs = data.allMaterialMCQs.map((mcq: any) => {
           console.log("mat cat", mcq.material_category_id);

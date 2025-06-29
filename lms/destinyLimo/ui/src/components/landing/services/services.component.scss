@@ -9,6 +9,7 @@
 .services-list {
     list-style-type: none;
     padding: 0;
+
 }
 
 .service-item {
@@ -17,7 +18,10 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.8s;
+    border: 1px solid lightskyblue;
+    margin-bottom: 20px;
+    height: 150px;
 }
 
 .service-item:hover {

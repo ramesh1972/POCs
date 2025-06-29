@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
-import { filter, max, take } from 'rxjs/operators';
+import { Store } from '@ngrx/store';
+import { take } from 'rxjs/operators';
 import { Actions, ofType } from '@ngrx/effects';
 import { CommonModule } from '@angular/common';
 
@@ -8,22 +8,17 @@ import * as VTable from '@visactor/vtable';
 import { ButtonDirective } from '@coreui/angular';
 import { FormCheckLabelDirective } from '@coreui/angular';
 import { ButtonGroupComponent } from '@coreui/angular';
-import { ReactiveFormsModule, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
-import { FormCheckComponent } from '@coreui/angular';
+import { ReactiveFormsModule, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
-import { invokeMaterialMCQFetchAPI, materialMCQFetchAPI_Success } from '@src/store/actions/material.action';
-import { selectMaterialCategorys, selectMaterialMCQs } from '@src/store/selectors/material.selector';
 
 import { invokeUserProfilesFetchAPI, UserProfilesFetchAPI_Success } from '@src/store/actions/user-profile.action';
 import { createUserExamSuccessByAdmin, invokeCreateUserExamByAdmin, invokeUserExamsFetchAPI, UserExamsFetchAPI_Success } from '@src/store/actions/exam.action';
-import { selectUserExamsById } from '@src/store/selectors/exam.selector';
 
-import { invokeUserExamByIdFetchAPI, UserExamByIdFetchAPI_Success } from '@src/store/actions/exam.action';
-import { selectExamAnswers } from '@src/store/selectors/exam.selector';
 
 import { DataGridComponentHelper } from '@src/components/common/components/grid-parent/data-grid.helper';
 import { UserProfile } from '@src/store/models/UserProfile';
 import { FilePaths } from '@src/components/common/file-paths';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
 
 interface UserExamsInfo {
   user: UserProfile,
@@ -34,15 +29,15 @@ interface UserExamsInfo {
 @Component({
   selector: 'app-user-exams',
   standalone: true,
-  imports: [CommonModule, FormCheckComponent, ButtonDirective, FormCheckLabelDirective,
+  imports: [CommonModule, ButtonDirective, FormCheckLabelDirective,
     ButtonGroupComponent, ReactiveFormsModule,],
   templateUrl: './new-exams.component.html',
   styleUrl: './new-exams.component.css'
 })
 export class NewExamsComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   formRadio1 = new UntypedFormGroup({

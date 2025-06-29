@@ -8,20 +8,15 @@ import {
   ReactiveFormsModule,
   ValidationErrors,
   Validators,
-  FormsModule, FormControl
-} from '@angular/forms';
+  FormsModule} from '@angular/forms';
 
-import { IconDirective } from '@coreui/icons-angular';
 
-import { ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective } from '@coreui/angular';
+import { ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective } from '@coreui/angular';
 import {
-  ButtonGroupComponent,
-  ColDirective,
   FormCheckComponent,
   FormCheckInputDirective,
   FormCheckLabelDirective,
   FormFeedbackComponent,
-  FormLabelDirective,
 } from '@coreui/angular';
 
 import { RegisterFormValidationService } from './register.validation.service';
@@ -70,20 +65,15 @@ export class NoSpaceValidator {
     ColComponent,
     TextColorDirective,
     CardComponent,
-    CardBodyComponent,
     FormDirective,
     InputGroupComponent,
     InputGroupTextDirective,
-    IconDirective,
     FormControlDirective,
     ButtonDirective,
-    ButtonGroupComponent,
-    ColDirective,
     FormCheckComponent,
     FormCheckInputDirective,
     FormCheckLabelDirective,
-    FormFeedbackComponent,
-    FormLabelDirective],
+    FormFeedbackComponent],
   providers: [RegisterFormValidationService],
   templateUrl: './home-register.component.html',
   styleUrl: './home-register.component.css'

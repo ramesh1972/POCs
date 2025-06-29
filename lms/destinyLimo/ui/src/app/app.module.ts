@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
@@ -42,10 +43,11 @@ import { userProfileReducer } from '@src/store/reducers/user-profile.reducer';
 import { UserProfileEffect } from '@src/store/effects/user-profile.effect';
 
 import { ConsoleComponent } from '@src/components/console/console.component';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
 
 @NgModule({
     declarations: [],
-    imports: [AppRoutingModule, CommonModule, BrowserModule,
+    imports: [AppRoutingModule, CommonModule, BrowserModule, ToastrModule.forRoot(),
         StoreModule.forRoot({}),
         StoreModule.forFeature('content', contentReducer),
         EffectsModule.forRoot([]),
@@ -67,6 +69,7 @@ import { ConsoleComponent } from '@src/components/console/console.component';
     ],
     providers: [
         provideHttpClient(withInterceptorsFromDi()),
+        MessageSnackBarService,
         { provide: HTTP_INTERCEPTORS, useClass: MyHttpInterceptor, multi: true }
         /* ,
         provideRouter(routes,

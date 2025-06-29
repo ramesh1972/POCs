@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { ContentType } from '@src/components/common/contenttype.enum';
 import { Content } from '@src/store/models/Content';
 import { selectContents } from '@src/store/selectors/content.selector';
 
@@ -21,7 +22,7 @@ export class FAQsComponent {
     console.log('faqs component initialized');
 
     this.store.select(selectContents).subscribe((content) => {
-      this.faqs = content.filter((c) => c.content_type_id === 7);
+      this.faqs = content.filter((c) => c.content_type_id === ContentType.FAQ);
 
       console.log('faqs ', this.faqs);
 

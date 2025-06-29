@@ -1,29 +1,28 @@
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { take } from 'rxjs/operators';
 import { Actions, ofType } from '@ngrx/effects';
 import { CommonModule } from '@angular/common';
 
-import { CardModule, ButtonDirective, GridModule, BorderDirective, ButtonGroupComponent, FormCheckLabelDirective } from '@coreui/angular';
-import { ReactiveFormsModule, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { CardModule, ButtonDirective, GridModule, ButtonGroupComponent, FormCheckLabelDirective } from '@coreui/angular';
+import { ReactiveFormsModule, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 import { MaterialCategory } from '@src/store/models/MaterialCategory';
 import { invokeMaterialCategoryFetchAPI, materialCategoryFetchAPI_Success, invokeMaterialVideoFetchAPI, materialVideoFetchAPI_Success } from '@src/store/actions/material.action';
-import { selectMaterialCategorys, selectMaterialVideos } from '@src/store/selectors/material.selector';
 import { MaterialVideo } from '@src/store/models/MaterialVideo';
 import { FilePaths } from '@src/components/common/file-paths';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
 
 @Component({
   selector: 'app-videos',
   standalone: true,
-  imports: [CommonModule, CardModule, GridModule, ButtonDirective, BorderDirective,
-    ButtonGroupComponent, FormCheckLabelDirective, ReactiveFormsModule
-  ],
+  imports: [CommonModule, CardModule, GridModule, ButtonDirective,
+    ButtonGroupComponent, FormCheckLabelDirective, ReactiveFormsModule],
   templateUrl: './videos.component.html',
   styleUrl: './videos.component.css'
 })
 export class VideosComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
     // setup the data grid helper
   }
 

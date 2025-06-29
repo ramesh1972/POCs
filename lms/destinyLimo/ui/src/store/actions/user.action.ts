@@ -1,7 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
 import { User } from '../models/User';
-import { UserProfile } from '../models/UserProfile';
 
 
 // auth, login, registration, change password

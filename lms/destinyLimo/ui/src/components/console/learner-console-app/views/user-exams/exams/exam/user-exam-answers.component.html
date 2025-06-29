@@ -31,7 +31,7 @@
                 <c-card-header class="title_header">
                     <span class="card-title title-description">{{
                         answer.description }}</span>
-                    <span class="card-title title-category">Category:
+                    <span class="card-title title-category"><strong>Category:</strong>
                         {{answer.category_name}}</span>
                 </c-card-header>
 
@@ -46,6 +46,7 @@
                         <span *ngIf="!answer.is_correctly_answered" class="card-title result-text"
                             style="background-color: red;color:white;">You
                             got it Wrong</span>
+
 
                     </div>
                 </c-card-header>

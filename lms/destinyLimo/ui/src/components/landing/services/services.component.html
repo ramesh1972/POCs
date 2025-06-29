@@ -1,4 +1,4 @@
-<div class="register"  style="margin-bottom: 120px;">
+<div class="register" style="margin-bottom: 120px;">
 
     <div class="container-fluid">
 
@@ -9,8 +9,18 @@
                     <h2>Our Amazing Services</h2>
                     <ul class="services-list">
                         <li class="service-item" *ngFor="let service of services; let i = index;">
-                            <h3>{{service.title}}</h3>
-                            <p>{{service.description}}</p>
+                            <div
+                                class="service_item text-left d-flex flex-column align-items-center justify-content-start">
+                                <div class="icon_container d-flex flex-row justify-content-center"
+                                    style="margin-left: -10px;">
+                                    <img src="/images/services/earth-globe.svg" alt="">
+                                    <h3
+                                        style="text-align: center;vertical-align: middle;padding-left: 10px;margin-top: 5px;">
+                                        {{service.title}}</h3>
+                                </div>
+
+                                <p style="text-align: center;">{{service.description}}</p>
+                            </div>
                         </li>
                     </ul>
                 </div>

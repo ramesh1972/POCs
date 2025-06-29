@@ -13,6 +13,12 @@ export const UserProfilesFetchAPI_Success = createAction(
   props<{ allUserProfiles: UserProfile[] }>()
 );
 
+export const UserProfilesFetchAPI_Failure = createAction(
+  '[UserProfile API] Fetch API Failure',
+  props<{ error: string, data: any }>()
+);
+
+
 export const invokeUserProfileFetchAPI = createAction(
   '[UserProfile API] Invoke UserProfile Fetch API',
   props<{ userId: number }>()
@@ -22,6 +28,12 @@ export const UserProfileFetchAPI_Success = createAction(
   '[UserProfile API] Fetch API Success',
   props<{ userProfile: UserProfile }>()
 );
+
+export const UserProfileFetchAPI_Failure = createAction(
+  '[UserProfile API] Fetch API Failure',
+  props<{ error: string, data: any }>()
+);
+
 
 // modify
 export const invokeUserProfileUpdateAPI = createAction(
@@ -38,6 +50,8 @@ export const UserProfileUpdateAPI_Failure = createAction(
   '[UserProfile API] Update API Failure',
   props<{ error: any }>()
 );
+
+
 
 export const invokeUserProfileDeleteAPI = createAction(
   '[UserProfile API] Invoke Delete UserProfile API',

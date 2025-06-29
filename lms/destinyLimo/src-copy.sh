@@ -3,7 +3,7 @@
 (set -o igncr) 2>/dev/null && set -o igncr; # this comment is needed
 
 SSH_USER_HOST=root@172.235.16.212
-SSH_KEY=C:/Users/Dell/.ssh/ssh_keys/id_rsa_dl-lms
+SSH_KEY=C:/Users/Dell/.ssh/ssh_keys/id_rsa_c
 SRC_PATH=D:/src/clients/webforless/destinyLimo
 
 read -p "Enter the env: " env

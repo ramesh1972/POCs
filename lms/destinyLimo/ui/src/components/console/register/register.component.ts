@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import { IconDirective } from '@coreui/icons-angular';
-import { ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective, ButtonGroupComponent, ColDirective, FormCheckComponent, FormCheckInputDirective, FormCheckLabelDirective, FormFeedbackComponent, FormLabelDirective } from '@coreui/angular';
+import { ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective, FormFeedbackComponent } from '@coreui/angular';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { RegisterFormValidationService } from '../../landing/home-register/register.validation.service';
 import { Actions, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
-import { PasswordValidators } from '@src/components/forgot-password/forgot-password.component';
-import { User } from '@src/store/models/User';
 import resizeImage from '@src/common/utils/imageUtils';
 import { selectLoggedInUser } from '@src/store/selectors/user.selector';
 import { FilePaths } from '@src/components/common/file-paths';
@@ -19,28 +16,19 @@ import { updateUser, updateUser_Failure, updateUser_Success } from '@src/store/a
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
   standalone: true,
-  imports: [ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, IconDirective, FormControlDirective, ButtonDirective,
+  imports: [ContainerComponent, RowComponent, ColComponent, TextColorDirective, CardComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective,
     CommonModule, FormsModule, ReactiveFormsModule,
     ContainerComponent,
     RowComponent,
     ColComponent,
     TextColorDirective,
     CardComponent,
-    CardBodyComponent,
     FormDirective,
     InputGroupComponent,
     InputGroupTextDirective,
-    IconDirective,
     FormControlDirective,
     ButtonDirective,
-    ButtonGroupComponent,
-    ColDirective,
-    FormCheckComponent,
-    FormCheckInputDirective,
-    FormCheckLabelDirective,
-    FormFeedbackComponent,
-    FormLabelDirective
-  ],
+    FormFeedbackComponent],
   providers: [RegisterFormValidationService]
 })
 export class RegisterComponent {
@@ -63,7 +51,7 @@ export class RegisterComponent {
     this.store.select(selectLoggedInUser).subscribe((user: any) => {
       console.log('User', user);
       this.currentUser = {...user};
-      this.currentUser.userProfile = {...this.currentUser.userProfile} || {};
+      this.currentUser.userProfile = {...(this.currentUser.userProfile ?? {})};
 
       const formattedDob = user?.userProfile?.dob ? new Date(user.userProfile.dob).toISOString().split('T')[0] : '';
       console.log('User  DOB', formattedDob);
@@ -103,9 +91,9 @@ export class RegisterComponent {
         email: ['', [Validators.required, Validators.email]],
         mobile: ['', [Validators.required]],
         address: ['', [Validators.required]],
-        license: ['', [Validators.required]],
-        issueDate: [null, [Validators.required]],
-        expiryDate: [null, [Validators.required]]
+        license: ['', []],
+        issueDate: [null, []],
+        expiryDate: [null, []]
       }
     );
     this.formControls = Object.keys(this.registerForm.controls);
@@ -161,9 +149,9 @@ export class RegisterComponent {
         avatar: this.registerForm.value.avatar || this.currentUser.userProfile.avatar,
         phoneNumber: this.registerForm.value.mobile,
         address: this.registerForm.value.address,
-        licenseNumber: this.registerForm.value.license,
-        licenseIssueDate: this.registerForm.value.issueDate,
-        licenseExpiryDate: this.registerForm.value.expiryDate,
+        // licenseNumber: this.registerForm.value.license,
+        // licenseIssueDate: this.registerForm.value.issueDate,
+        // licenseExpiryDate: this.registerForm.value.expiryDate,
       };
 
       // get only the file name from the path

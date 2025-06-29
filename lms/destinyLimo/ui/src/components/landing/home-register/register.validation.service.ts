@@ -65,7 +65,7 @@ export class RegisterFormValidationService {
                 required: 'Password confirmation is required',
                 passwordMismatch: 'Passwords must match'
             },
-            license: {
+/*             license: {
                 required: 'License is required'
             },
             issueDate: {
@@ -74,7 +74,7 @@ export class RegisterFormValidationService {
             expiryDate: {
                 required: 'Expiry date is required'
             },
-            accept: {
+ */            accept: {
                 requiredTrue: 'You have to accept our Terms and Conditions'
             }
         };

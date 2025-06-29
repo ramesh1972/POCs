@@ -1,10 +1,10 @@
-<div class="register"  style="margin-bottom: 120px;">
+<div class="register" style="margin-bottom: 120px;">
     <div class="container-fluid">
         <div class="row row-eq-height">
             <div class="nopadding">
                 <div class="courses-container">
-                    <h2 >View some of our Sample Courses</h2>
-                    <div class="main-container" >
+                    <h2>View some of our Sample Courses</h2>
+                    <div class="main-container">
                         <h1 class="sub-title" style="text-align: start;margin-top: 20px;">FILES</h1>
                         <div class="row" style="margin-top:-50px;row-gap: 20px;justify-content: center;">
 
@@ -12,7 +12,7 @@
                                 <img [src]="fileTypeIcon(file.file_name)" alt="File Type Icon" width="48" height="48"
                                     class="mr-2" class="overlay-file-image">
                                 <div
-                                    style="display: flex;flex-direction: row;justify-content: flex-end;  align-self: end;width:100%;z-index: 101;padding-right:10px;">
+                                    style="display: flex;flex-direction: row;justify-content: flex-start;  align-self: start;width:100%;z-index: 101;padding-right:10px;">
                                     <h6 cCardSubtitle class="mb-2" class="overlay-text"
                                         style="background-color:lightgrey;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
                                         Category&nbsp;
@@ -22,17 +22,17 @@
                                         {{ file.category_name }}
                                     </h6>
                                 </div>
-                                <c-card class="mb-3"
-                                    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);background-color:rgb(195 225 209 / 70%);">
+                                <c-card class="mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
 
+                                    <c-card-header>
                                     <img [cCardImg] src="./images/backgrounds/courses.jpg"
-                                        style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
-
+                                        style="margin-top:10px;border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
+                                    </c-card-header>
                                     <span cCardTitle class="overlay-text-title">{{file.title}}</span>
 
-                                    <c-card-body class="card-body-container"
-                                        style="background-color: white; overflow: scroll;">
-                                        <p class="card-text" style="text-align:left">{{ file.description }}</p>
+                                    <c-card-body class="card-body-container popular-card-body">
+                                        <p class="card-text" style="text-align:left;height: 100px;padding:3px">{{
+                                            file.description }}</p>
                                     </c-card-body>
 
                                     <c-card-footer style="background-color: rgba(236, 246, 67, 0.7);">
@@ -49,11 +49,12 @@
                             </div>
                         </div>
                         <div class="main-container">
-                            <h1 class="sub-title"  style="text-align: start;margin-top: 40px;">VIDEOS</h1>
+                            <h1 class="sub-title" style="text-align: start;margin-top: 40px;">VIDEOS</h1>
                             <div class="row" style="row-gap: 20px; justify-content: center;">
-                                <div class="col-md-4" *ngFor="let video of videos" style="width: 330px;height: fit-content;">
+                                <div class="col-md-4" *ngFor="let video of videos"
+                                    style="width: 330px;height: fit-content;">
                                     <div
-                                        style="display: flex;flex-direction: row;justify-content: flex-end;  align-self: end;width:100%;z-index: 101;padding-right:10px;">
+                                        style="display: flex;flex-direction: row;justify-content: flex-start;  align-self: start;width:100%;z-index: 101;padding-right:10px;">
                                         <h6 cCardSubtitle class="mb-2" class="overlay-text"
                                             style="background-color: rgb(195 225 209 / 100%);;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
                                             Category&nbsp;
@@ -63,18 +64,16 @@
                                             {{ video.category_name }}
                                         </h6>
                                     </div>
-                                    <c-card class="mb-3"
-                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);background-color: rgb(195 225 209 / 70%);">
+                                    <c-card class="mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
                                         <img [cCardImg] src="./images/backgrounds/courses.jpg"
-                                            style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
+                                            style="margin-top:10px;border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
 
                                         <span cCardTitle class="overlay-text-title">{{video.title}}</span>
 
 
 
-                                        <c-card-body class="card-body-container"
-                                            style="height: 180px;padding:0px;margin-bottom: 0px;">
-                                            <video width="100%" controls height="174">
+                                        <c-card-body class="card-body-container video-container">
+                                            <video width="100%" controls height="auto">
                                                 <source [src]="video.url" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
@@ -86,41 +85,67 @@
 
                     </div>
                     <div class="main-container">
-                        <h1 class="sub-title"  style="text-align: start;margin-top: 40px;">MCQs</h1>
+                        <h1 class="sub-title" style="text-align: start;margin-top: 40px;">MCQs</h1>
                         <div class="row" style="row-gap: 20px">
-                            <c-accordion [alwaysOpen]="true">
+                            <c-accordion [alwaysOpen]="true" class="mcq_container">
                                 <c-accordion-item #item="cAccordionItem" [visible]="item.visible"
                                     *ngFor="let mcq of mcqs; let i = index">
                                     <ng-template cTemplateId="accordionHeaderTemplate">
                                         <button (click)="item.toggleItem()" [collapsed]="!item.visible"
-                                            cAccordionButton>
-                                            {{ mcq.title }}
+                                            cAccordionButton style="border: 1px solid lightgray;">
+                                            <div style="display: flex; flex-direction: row; flex-wrap: wrap; 
+                                                justify-content: left; align-items: center; width: 100%; column-gap: 12px;min-height: 40px;">
+                                                <div cCardSubtitle class="mb-2" class="mcq_question">
+                                                    <strong>Question:&nbsp;</strong>
+                                                    {{ mcq.title }}
+                                                </div>
+                                                <div
+                                                    style="display: flex;flex-direction: row;margin-top:-22px;justify-content: flex-end;  z-index: 101;padding-right:10px;">
+                                                    <h6 cCardSubtitle class="mb-2" class="overlay-text"
+                                                        style="background-color: rgb(195 225 209 / 100%);;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
+                                                        Category&nbsp;
+                                                    </h6>
+                                                    <h6 cCardSubtitle class="mb-2" class="overlay-text"
+                                                        style="border-bottom-left-radius: 0px;border-top-left-radius: 0px;">
+                                                        {{ mcq.category_name }}
+                                                    </h6>
+                                                </div>
+                                            </div>
+
                                         </button>
                                     </ng-template>
                                     <ng-template cTemplateId="accordionBodyTemplate">
-                                        <c-card style="border: 1px solid black; text-align: start;">
+                                        <c-card style="text-align: start;">
                                             <c-card-body
                                                 style="background-color: white;padding: 6px;padding-top: 16px;align-items: start;">
                                                 <div class="form-check">
                                                     <c-form-check [switch]="true">
                                                         <input cFormCheckInput id="answer_1" type="checkbox"
                                                             [checked]="mcq.correct_1" disabled>
-                                                        <label cFormCheckLabel for="answer_1" style="opacity: 1;font-weight: 500;">{{ mcq.answer_1 }}</label>
+                                                        <label cFormCheckLabel for="answer_1"
+                                                            style="opacity: 1;font-weight: 500;">{{ mcq.answer_1
+                                                            }}</label>
                                                     </c-form-check>
                                                     <c-form-check [switch]="true">
                                                         <input cFormCheckInput id="answer_2" type="checkbox"
                                                             [checked]="mcq.correct_2" disabled>
-                                                        <label cFormCheckLabel for="answer_2" style="opacity: 1;font-weight: 500;">{{ mcq.answer_2 }}</label>
+                                                        <label cFormCheckLabel for="answer_2"
+                                                            style="opacity: 1;font-weight: 500;">{{ mcq.answer_2
+                                                            }}</label>
                                                     </c-form-check>
                                                     <c-form-check [switch]="true">
                                                         <input cFormCheckInput id="answer_3" type="checkbox"
                                                             [checked]="mcq.correct_3" disabled>
-                                                        <label cFormCheckLabel for="answer_3" style="opacity: 1;font-weight: 500;">{{ mcq.answer_3 }}</label>
+                                                        <label cFormCheckLabel for="answer_3"
+                                                            style="opacity: 1;font-weight: 500;">{{ mcq.answer_3
+                                                            }}</label>
                                                     </c-form-check>
                                                     <c-form-check [switch]="true">
                                                         <input cFormCheckInput id="answer_4" type="checkbox"
                                                             [checked]="mcq.correct_4" disabled>
-                                                        <label cFormCheckLabel for="answer_4" style="opacity: 1;font-weight: 500;">{{ mcq.answer_4 }}</label>
+                                                        <label cFormCheckLabel for="answer_4"
+                                                            style="opacity: 1;font-weight: 500;">{{ mcq.answer_4
+                                                            }}</label>
                                                     </c-form-check>
                                                 </div>
                                             </c-card-body>

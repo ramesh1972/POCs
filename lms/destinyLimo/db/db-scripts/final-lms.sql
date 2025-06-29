@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `destiny-limo-db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `destiny-limo-db`;
+CREATE DATABASE  IF NOT EXISTS `lms-pedagogy-db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `lms-pedagogy-db`;
 -- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
 --
--- Host: 172.235.16.212    Database: destiny-limo-db
+-- Host: 172.235.16.212    Database: lms-pedagogy-db
 -- ------------------------------------------------------
 -- Server version	8.0.39-0ubuntu0.24.04.2
 

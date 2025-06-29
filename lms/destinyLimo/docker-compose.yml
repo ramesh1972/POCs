@@ -9,20 +9,23 @@ services:
       - "5293:5293"
     network_mode: "host"
     volumes:
-      - /var/clients/webforless/destiny-limo/prod/uploads:/uploads
+      - /home/chordify-services/lms-poc/prod/appServer/DestinyLimoServer/uploads/destiny-uploads
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
     deploy:
-      restart_policy:
-      condition: any
+      restart_policy: 
+        condition: any
 
   angular-app:
     build:
       context: ./ui
       dockerfile: Dockerfile
-      restart: unless-stopped
+    deploy:
+      restart_policy: 
+        condition: any
     ports:
       - "9080:9080"
-    deploy:
-      restart_policy:
-        condition: any
+
+networks:
+  default:
+    name: my-lms-network

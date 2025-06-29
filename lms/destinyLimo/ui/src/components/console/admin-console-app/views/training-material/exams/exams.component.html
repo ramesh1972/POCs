@@ -7,11 +7,10 @@
         <div *ngIf="!(mcq.editing || mcq.adding)">
             <c-card style="border: 2px solid blue">
                 <c-card-header class="title_header">
-                  <span class="card-title" style="width:calc(100% - 300px);margin-bottom: 35px;font-size:16px;overflow: hidden;text-wrap: wrap;height: 100%;">{{
+                    <span class="card-title title-description">{{
                         mcq.description }}</span>
-                    <span class="card-title"
-                        style="width:300px;margin-bottom: 60px;text-align:right;font-size:16px"><strong>Category:</strong>
-                        {{mcq.category_name}}</span><br />
+                    <span class="card-title title-category"><strong>Category</strong>:
+                        {{mcq.category_name}}</span>
                 </c-card-header>
 
                 <c-card-header>
@@ -52,15 +51,16 @@
             <c-card style="border: 2px solid blue;z-index: 9;">
                 <c-card-header class="title_header" style="background-color: rgba(208, 208, 49, .2)">
 
-                    <div class="card-title" style="width:calc(100% - 400px);margin-bottom: 55px;font-size:16px">
-                        <c-input-group class="mb-3" style="font-size:16px;margin-top:15px">
+
+                    <div class="title-description">
+                        <c-input-group class="mb-3" style="font-size:16px">
                             <span cInputGroupText>Description</span>
-                            <input aria-label="Description" cFormControl placeholder="Description"
-                                [ngModel]="mcq.description" (ngModelChange)="mcq.description = $event" />
+                            <textarea aria-label="Description" cFormControl placeholder="Description" style="height:120px"
+                                [ngModel]="mcq.description" (ngModelChange)="mcq.description = $event">{mcq.description}</textarea>
                         </c-input-group>
                     </div>
-                    <div class="title-header" >
-                        <c-input-group style="width:400px;text-align:right;font-size:16px;padding:4px;justify-content: end;">
+                    <div class="title-category">
+                        <c-input-group>
                             <span cInputGroupText>Category</span>
                             <c-dropdown
                                 style="font-size:16px;z-index: 999;max-height: 350px;">

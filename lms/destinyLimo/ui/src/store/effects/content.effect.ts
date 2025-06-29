@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { select, Store, Action } from '@ngrx/store';
-import { catchError, map, mergeMap, switchMap, withLatestFrom } from 'rxjs/operators';
-import { Observable, of, throwError } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { catchError, map, mergeMap, switchMap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
 
 import { Content } from '../models/Content';
 import { ContentService } from '../apis/content.service';
 
 import { invokeContentFetchAPI, contentFetchAPI_Success, invokeContentCreateAPI, invokeUpdateContentAPI, invokeDeleteContentAPI, contentFetchAPI_Failure, updateContentAPI_Success, updateContentAPI_Failure, contentCreateAPI_Success, contentCreateAPI_Failure, deleteContentAPI_Success, deleteContentAPI_Failure } from '../actions/content.action';
 import { ApiResponse } from '../models/ApiResponse';
-import { data } from '@visactor/vtable';
 
 
 @Injectable()

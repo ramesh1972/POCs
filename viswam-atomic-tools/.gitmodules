@@ -1,0 +1,3 @@
+[submodule "code-scribe-masterpiece-submodule"]
+	path = code-scribe-masterpiece-submodule
+	url = https://github.com/ramesh1972/code-scribe-masterpiece.git

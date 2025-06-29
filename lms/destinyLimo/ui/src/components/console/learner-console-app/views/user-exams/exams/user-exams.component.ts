@@ -22,6 +22,9 @@ import { UserExam } from '@src/store/models/Exam';
 import { AlignDirective } from '@coreui/angular';
 import { cilAlignCenter } from '@coreui/icons';
 
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
+import { selectLoggedInUser } from '@src/store/selectors/user.selector';
+
 @Component({
   selector: 'app-user-exams',
   standalone: true,
@@ -30,9 +33,9 @@ import { cilAlignCenter } from '@coreui/icons';
   styleUrl: './user-exams.component.css'
 })
 export class UserExamsComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService) {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   dataGridHelper?: DataGridComponentHelper;
@@ -43,10 +46,23 @@ export class UserExamsComponent {
   categories: any[] = [];
   mcqs: any[] = [];
   examAnswers: any[] = [];
-  currentExam: any = {};
+  currentExam: any = {};    
+
+  loggedInUser: any;
+  loggedInUserRole: number | undefined;
 
   ngOnInit() {
     console.log('file component initialized');
+
+    this.store.select(selectLoggedInUser).subscribe((user: any) => {
+      console.log('console User:', user);
+      this.loggedInUser = user;
+
+      if (user && user.roles && user.roles.length > 0) {
+        console.log('console User Role:', user.roles[0].role_id);
+        this.loggedInUserRole = user.roles[0].role_id;
+      }
+    });
 
     this.dataGridHelper?.setTableInfo('user_exams', "exam_id", false);
 
@@ -91,7 +107,7 @@ export class UserExamsComponent {
     });
 
     // set data
-    this.store.dispatch(invokeUserExamsForUserFetchAPI({ userId: 2 }));
+    this.store.dispatch(invokeUserExamsForUserFetchAPI({ userId:this.loggedInUser.userId }));
     this.actions$.pipe(
       ofType(UserExamsForUserFetchAPI_Success),
       take(1)

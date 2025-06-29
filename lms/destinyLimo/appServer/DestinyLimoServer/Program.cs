@@ -114,6 +114,12 @@ var fileserverPath = configuration.GetSection("Uploads").GetValue<string>("FileS
 Console.WriteLine($"Upload path: {uploadPath}");
 Console.WriteLine($"File server path: {fileserverPath}");
 
+if (!Directory.Exists(uploadPath))
+{
+    Directory.CreateDirectory(uploadPath);
+    Console.WriteLine($"Created directory: {uploadPath}");
+}
+
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(uploadPath),

@@ -14,6 +14,8 @@ import { DataGridComponentHelper } from '@src/components/common/components/grid-
 import { invokeUserQuestionCreateAPI, invokeUserQuestionDeleteAPI, invokeUserQuestionsForUserFetchAPI, UserQuestionsForUserFetchAPI_Success } from '@src/store/actions/user-question.action';
 import { UserAskedQuestion } from '@src/store/models/UserAskedQuestion';
 import { selectQuestion } from '@src/store/selectors/user-question.selector';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
+import { selectLoggedInUser } from '@src/store/selectors/user.selector';
 
 @Component({
   selector: 'app-faqs',
@@ -23,9 +25,9 @@ import { selectQuestion } from '@src/store/selectors/user-question.selector';
   styleUrl: './faqs.component.scss'
 })
 export class FAQsComponent {
-  constructor(private readonly store: Store, private actions$: Actions, private readonly formBuilder: UntypedFormBuilder) {
+  constructor(private readonly store: Store, private actions$: Actions, private readonly formBuilder: UntypedFormBuilder, private messageService: MessageSnackBarService) {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   formRadio1 = new UntypedFormGroup({
@@ -39,14 +41,20 @@ export class FAQsComponent {
       this.dataGridHelper?.table?.updateFilterRules([]);
     }
     else if (value === 'Answered') {
-      this.dataGridHelper?.table?.updateFilterRules([{ filterFunc: (record: Record<string, any>) => { 
-        console.log('record', record);
-        return record['answer'] !== null; } }]);
+      this.dataGridHelper?.table?.updateFilterRules([{
+        filterFunc: (record: Record<string, any>) => {
+          console.log('record', record);
+          return record['answer'] !== null;
+        }
+      }]);
     }
     else if (value === 'Unanswered') {
-      this.dataGridHelper?.table?.updateFilterRules([{ filterFunc: (record: Record<string, any>) => { 
-        console.log('record not answered', record['answer']);
-        return record['answer'] === null; } }]);
+      this.dataGridHelper?.table?.updateFilterRules([{
+        filterFunc: (record: Record<string, any>) => {
+          console.log('record not answered', record['answer']);
+          return record['answer'] === null;
+        }
+      }]);
     }
   }
 
@@ -58,9 +66,21 @@ export class FAQsComponent {
   newQuestion = false;
   newQuestionText = '';
   newQ: UserAskedQuestion | undefined;
+  loggedInUser: any;
+  loggedInUserRole: number | undefined;
 
-  ngOnInit() {
+    ngOnInit() {
     console.log('faq component initialized');
+
+  this.store.select(selectLoggedInUser).subscribe((user: any) => {
+    console.log('console User:', user);
+    this.loggedInUser = user;
+
+    if (user && user.roles && user.roles.length > 0) {
+      console.log('console User Role:', user.roles[0].role_id);
+      this.loggedInUserRole = user.roles[0].role_id;
+    }
+  });
 
     // set content table info
     const defaultColumns = [
@@ -73,7 +93,7 @@ export class FAQsComponent {
     this.dataGridHelper?.setColumns(this.getColDefs());
 
     // set data
-    this.store.dispatch(invokeUserQuestionsForUserFetchAPI({ userId: 2 }));
+    this.store.dispatch(invokeUserQuestionsForUserFetchAPI({ userId: this.loggedInUser.userId }));
 
     // Wait for the action to complete
     this.actions$.pipe(
@@ -187,7 +207,7 @@ export class FAQsComponent {
         scrollSliderCornerRadius: 6,
         hoverOn: false,
         barToSide: false,
-        width:16,
+        width: 16,
       },
       defaultStyle: {
         borderLineWidth: .6,

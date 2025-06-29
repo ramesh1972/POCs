@@ -10,6 +10,8 @@ import { invokeContentFetchAPI, contentFetchAPI_Success } from '@src/store/actio
 import { selectServices } from '@src/store/selectors/content.selector';
 import { GridParentComponent } from '../../../../../common/components/grid-parent/grid-parent.component';
 import { DataGridComponentHelper } from '@src/components/common/components/grid-parent/data-grid.helper';
+import { MessageSnackBarService } from '@src/common/utils/message-snackbar.service';
+import { ContentType } from '@src/components/common/contenttype.enum';
 
 @Component({
   selector: 'app-services',
@@ -19,9 +21,9 @@ import { DataGridComponentHelper } from '@src/components/common/components/grid-
   styleUrl: './services.component.scss'
 })
 export class ServicesComponent {
-  constructor(private readonly store: Store, private actions$: Actions) {
+  constructor(private readonly store: Store, private actions$: Actions, private messageService: MessageSnackBarService)  {
     // setup the data grid helper
-    this.dataGridHelper = new DataGridComponentHelper(this, this.store);
+    this.dataGridHelper = new DataGridComponentHelper(this, this.store, this.actions$, this.messageService);
   }
 
   dataGridHelper?: DataGridComponentHelper;
@@ -34,7 +36,7 @@ export class ServicesComponent {
 
     // set content table info
     const defaultColumns = [
-      { colName: "content_type_id", defaultValue: "2" },
+      { colName: "content_type_id", defaultValue: ContentType.Service },
       { colName: "is_public", defaultValue: "true" },
       { colName: "is_active", defaultValue: "true" },
       { colName: "is_deleted", defaultValue: "false" }
